@@ -1,0 +1,261 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 23/Sep/2022 09:43:07AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Fri Sep 23 09:43:14 EDT 2022
+Creating test case for Row #       : 1116
+Short Desc                         : Modify  specific-provider msgs/resend same channel (Post-Login)
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Modify messages to specific providers and resend via same channel - Post-Login
+Expected Results                   : Message shall be saved and available in POSC(Modified message is viewable by specific people sent to)
+Test Case ID for Row 1116          : 41976
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41976
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41976
+Finished at                        : Fri Sep 23 09:43:18 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:18 EDT 2022
+Creating test case for Row #       : 1117
+Short Desc                         : Modify  specific-provider msgs/resend same channel (Letter)
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Modify messages to specific providers and resend via same channel - Letter
+Expected Results                   : Message shall be saved and available in POSC(Modified message is viewable by subaccount users of those providers)
+Test Case ID for Row 1117          : 41977
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41977
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41977
+Finished at                        : Fri Sep 23 09:43:21 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:21 EDT 2022
+Creating test case for Row #       : 1118
+Short Desc                         : Modify msgs to provider types / resend via same channel - Report
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Modify messages to provider types and resend via same channel - Report
+Expected Results                   : Message shall be saved and available in POSC(Modified message is viewable by provider-types sent to)(Modified message is viewable by subaccount users of those provider-types)
+Test Case ID for Row 1118          : 41978
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41978
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41978
+Finished at                        : Fri Sep 23 09:43:25 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:25 EDT 2022
+Creating test case for Row #       : 1119
+Short Desc                         : Modify msgs to provider types and resend via diff. channel
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Modify messages to provider types and resend via diff. channel
+Expected Results                   : Message shall be saved and available in POSC(Modified message is viewable by provider-types sent to)(Modified message is viewable by subaccount users of those provider-types)
+Test Case ID for Row 1119          : 41979
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41979
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41979
+Finished at                        : Fri Sep 23 09:43:30 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:30 EDT 2022
+Creating test case for Row #       : 1120
+Short Desc                         : Does View Broadcast Msgs panel have label -only 50  msgs appear?
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Portal Panels
+Long Desc                          : Does View Broadcast Messages panel have label about only 50 messages will appear?
+Expected Results                   : Panel shows "(Up to 50 of the most recent active messages will be available.)"
+Test Case ID for Row 1120          : 41980
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41980
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41980
+Finished at                        : Fri Sep 23 09:43:34 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:34 EDT 2022
+Creating test case for Row #       : 1121
+Short Desc                         : POSC User with >  50 msgs only sees 50 of them
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Portal Panels
+Long Desc                          : Send more than 50 messages to one POSC User. Then log in as that user and see if only 50 messages displayed (to enhance message performance)
+Expected Results                   : 50 of the most recent active messages will be available.
+Test Case ID for Row 1121          : 41981
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41981
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41981
+Finished at                        : Fri Sep 23 09:43:38 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:38 EDT 2022
+Creating test case for Row #       : 1122
+Short Desc                         : Search previously issued msgs back last 30 calendar days
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Search previously issued messages back through the last 30 calendar days
+Expected Results                   : Message found
+Test Case ID for Row 1122          : 41982
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41982
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41982
+Finished at                        : Fri Sep 23 09:43:41 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:41 EDT 2022
+Creating test case for Row #       : 1123
+Short Desc                         : Search previously issued msgs - without entering criteria
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Search previously issued messages - without entering any criteria
+Expected Results                   : Search results will be based in the last 90 days of available messages
+Test Case ID for Row 1123          : 41983
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41983
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41983
+Finished at                        : Fri Sep 23 09:43:45 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:45 EDT 2022
+Creating test case for Row #       : 1124
+Short Desc                         : Search issued msgs in range within last 90 days
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Search previously issued messages - in a range of messages by providing a date from and a date to, within last 90 calendar days before date searching
+Expected Results                   : Message(s) found
+Test Case ID for Row 1124          : 41984
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41984
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41984
+Finished at                        : Fri Sep 23 09:43:49 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:49 EDT 2022
+Creating test case for Row #       : 1125
+Short Desc                         : Search issued msgs in range past last 90 days
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Search previously issued messages - in a range of messages by providing a date from and a date to, > 90 calendar days at any given date
+Expected Results                   : Unable to search with this range
+Test Case ID for Row 1125          : 41985
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41985
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41985
+Finished at                        : Fri Sep 23 09:43:52 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:52 EDT 2022
+Creating test case for Row #       : 1126
+Short Desc                         : Send msg with priority 1
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Send msg with priority 1
+Expected Results                   : Message shall be saved and available in POSC(Provider see's correct priority on Message)
+Test Case ID for Row 1126          : 41986
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41986
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41986
+Finished at                        : Fri Sep 23 09:43:56 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:43:56 EDT 2022
+Creating test case for Row #       : 1127
+Short Desc                         : Send msg with priority 2
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Send msg with priority 2
+Expected Results                   : Message shall be saved and available in POSC(Provider see's correct priority on Message)
+Test Case ID for Row 1127          : 41987
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41987
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41987
+Finished at                        : Fri Sep 23 09:44:00 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:44:00 EDT 2022
+Creating test case for Row #       : 1128
+Short Desc                         : Send msg with priority 3 (default value)
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Send msg with priority 3 (default value)
+Expected Results                   : Message shall be saved and available in POSC(Provider see's correct priority on Message)
+Test Case ID for Row 1128          : 41988
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41988
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41988
+Finished at                        : Fri Sep 23 09:44:04 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:44:04 EDT 2022
+Creating test case for Row #       : 1129
+Short Desc                         : Send msg with priority 4
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Send msg with priority 4
+Expected Results                   : Message shall be saved and available in POSC(Provider see's correct priority on Message)
+Test Case ID for Row 1129          : 41989
+Associated Req ID                  : 36029.01.001

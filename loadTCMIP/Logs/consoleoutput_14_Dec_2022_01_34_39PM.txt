@@ -1,0 +1,86 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Dec/2022 01:34:39PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 78
+****************************************************
+Started at                         : Wed Dec 14 13:34:45 EST 2022
+Creating test case for Row #       : 1273
+Short Desc                         : Positive execution for procMMQ
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Positive execution for procMMQ, both the input and output directories are valid
+Expected Results                   : Job runs as expected.
+Test Case ID for Row 1273          : 42301
+Associated Req ID                  : 99999.02.01
+Requirement linked for test case   : 42301
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42301
+Finished at                        : Wed Dec 14 13:34:48 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 13:34:48 EST 2022
+Creating test case for Row #       : 1274
+Short Desc                         : Negative execution for procMMQ given a bad input directory
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Negative execution for procMMQ given a bad input directory, add invalid character into a valid input directory
+Expected Results                   : Job fails as expected. The message:<BR>ERROR: Invalid Directory [%s] specified in environment variable dd_MMQ_REQ <BR>should be written with return code -1.
+Test Case ID for Row 1274          : 42302
+Associated Req ID                  : 99999.02.01
+Requirement linked for test case   : 42302
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42302
+Finished at                        : Wed Dec 14 13:34:52 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 13:34:52 EST 2022
+Creating test case for Row #       : 1275
+Short Desc                         : Negative execution for procMMQ given a bad output directory
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Negative execution for procMMQ given a bad output directory by adding an invalid character in output directory name
+Expected Results                   : Job fails as expected. The message:<BR>ERROR: Invalid Directory [%s] specified in environment variable dd_MMQ_RESP <BR>should be written with return code -1.
+Test Case ID for Row 1275          : 42303
+Associated Req ID                  : 99999.02.01
+Requirement linked for test case   : 42303
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42303
+Finished at                        : Wed Dec 14 13:34:55 EST 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Dec/2022 01:35:11PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

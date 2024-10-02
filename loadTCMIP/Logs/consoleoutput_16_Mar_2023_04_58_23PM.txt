@@ -1,0 +1,40 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 16/Mar/2023 04:58:23PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+MIP Username                       : rvattumi
+User Name                          : rvattumilli
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) wi_type, trim(a.id_req) id_req, f.nam req_type, f.sak_req_type sak_req_type from rvattumi.load_tc a, co_participant b, co c, co_type d, requirement e, requirement_type f where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 16
+Query Execution Time(ms)           : 96
+
+****************************************************
+                  NO DATA THIS RUN                  
+****************************************************
+
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 16/Mar/2023 04:58:32PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

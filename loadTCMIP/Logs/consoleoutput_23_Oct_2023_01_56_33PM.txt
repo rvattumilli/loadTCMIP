@@ -1,0 +1,408 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 23/Oct/2023 01:56:33PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.DAYS_TO_RESET_PWD > 2
+Query Execution Time(ms)           : 85
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 135
+Total No.of Rows fetched           : 13
+*****************************************************************
+Started at                         : Mon Oct 23 13:56:41 EDT 2023
+Creating test case for Row #       : 4626
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 63
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 480
+Validation status                  : PASS
+Short Desc                         : Agency hierarchy for dte_birth: New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with agency  no. 1 with a valid value for dte_birth then update the field with agency no. 2  and then agency no 3 and so on.  2. Create a new member with agency  no. 2 with the field then update the field with agency no. 3  and then agency no 4 so on.  **(Continue with rest of the agencies from the hierarchy) Hierarchy for dte_birth 1. MHO, HIX 2. PAC 3. SSA 4. DTA, HCF, DMH 5. DYS 6. DSS
+Expected Results                   : 1. New member will have field in demo_table for agency no. 1 and all the subsequent agencies will not be able to modify that and thus the value of higher agency in T_RE_ADDL_DEMO table will remain unchanged.  2.  New member will have field in demo_table for agency no. 2 and all the subsequent agencies will not be able to modify that and thus the value of higher agency in T_RE_ADDL_DEMO table will remain unchanged.  ** (Verify that lower agency is not changing the values) 3. Note- Check the audit;  time stamp, Source Agency that updated the field and values updated should be stored for audit purposes
+Test Case ID for Row 4626          : 46679
+Query Execution Time(ms)           : 72
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.01.001
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46679
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46679
+Finished at                        : Mon Oct 23 13:56:46 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:56:46 EDT 2023
+Creating test case for Row #       : 4627
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 487
+Validation status                  : PASS
+Short Desc                         : Agency hierarchy for dte_birth: Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Find an existing member with space for the field from MHO then update the field with PAC Find an existing member with a value for the field from SSA then update withDTA
+Expected Results                   : Will see in unit test to see how the existing field will look like in addl_demo table.
+Test Case ID for Row 4627          : 46680
+Query Execution Time(ms)           : 62
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.01.001
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46680
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46680
+Finished at                        : Mon Oct 23 13:56:50 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:56:50 EDT 2023
+Creating test case for Row #       : 4628
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 451
+Validation status                  : PASS
+Short Desc                         : Agency hierarchy for cde_sex; New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with agency  no. 1  with a valid value for cde_sex, then update the field with agency no. 2  and then agency no 3 and so on.  2. Create a new member with agency  no. 2 with the field then update the field with agency no. 3  and then agency no 4 so on.  **(Continue with rest of the agencies from the hierarchy) Hierarchy for cde_sex 1. MHO, HIX 2. PAC 3. SSA 4. DYS 5. DMH, DSS, DTA, HCF
+Expected Results                   : 1. New member will have field in demo_table for agency no. 1 and all the subsequent agencies will not be able to modify that and thus the value of higher agency in T_RE_ADDL_DEMO table will remain unchanged.  2.  New member will have field in demo_table for agency no. 2 and all the subsequent agencies will not be able to modify that and thus the value of higher agency in T_RE_ADDL_DEMO table will remain unchanged.  ** (Verify that lower agency is not changing the values)
+Test Case ID for Row 4628          : 46681
+Query Execution Time(ms)           : 87
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.02.001
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46681
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46681
+Finished at                        : Mon Oct 23 13:56:55 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:56:55 EDT 2023
+Creating test case for Row #       : 4629
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 55
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 561
+Validation status                  : PASS
+Short Desc                         : Agency hierarchy forcde_sex: Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Find an existing member with space for the field from agency  no. 1 then update the field with agency no. 2
+Expected Results                   : Will see in unit test to see how the existing field will look like in addl_demo table.
+Test Case ID for Row 4629          : 46682
+Query Execution Time(ms)           : 71
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.02.001
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46682
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46682
+Finished at                        : Mon Oct 23 13:57:01 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:57:01 EDT 2023
+Creating test case for Row #       : 4630
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.07.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 52
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 532
+Validation status                  : PASS
+Short Desc                         : Agency hierarchy for cde_disability_stat: New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with HIX with valid value for cde_disability_stat then update the field with DTA. 2.Update the same member with MHO
+Expected Results                   : 1. New member will have field in demo_table for agency no. 1 and DTA will not be able to modify that and thus the value of higher agency in T_RE_ADDL_DEMO table will remain unchanged.  2. MHO will be able to update the field. 3. Note- Check the audit;  time stamp, Source Agency that updated the field and values updated should be stored for audit purposes
+Test Case ID for Row 4630          : 46683
+Query Execution Time(ms)           : 75
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.07.001
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46683
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46683
+Finished at                        : Mon Oct 23 13:57:05 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:57:05 EDT 2023
+Creating test case for Row #       : 4631
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.07.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 48
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 585
+Validation status                  : PASS
+Short Desc                         : Agency hierarchy for cde_disability_stat: Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Find an existing member with space for  cde_disability_stat from MHO then update the field with DTA.
+Expected Results                   : Will see in unit test to see how the existing field will look like in addl_demo table.
+Test Case ID for Row 4631          : 46684
+Query Execution Time(ms)           : 87
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.07.001
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46684
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46684
+Finished at                        : Mon Oct 23 13:57:11 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:57:11 EDT 2023
+Creating test case for Row #       : 4632
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.09.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 516
+Validation status                  : PASS
+Short Desc                         : Agency hierarchy for num_phone_day
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with HIX/MHO with valid value for num_phone_day then update the field with SSA. 2. Create a new member with SSA  valid value for num_phone_day and then update the same field with DTA Note: The following agency hierarchy shall be used for the purpose of updating num_phone_day field. 1. MHO, HIX 2. SSA 3. DTA
+Expected Results                   : 1. New member will have field in demo_table forHIX/MHO and SSA will not be able to modify that and thus the value of HIX/MHO in T_RE_ADDL_DEMO table will remain unchanged.  2. DTA will not be able to update the num_phone_day. 3. Note- Check the audit;  time stamp, Source Agency that updated the field and values updated should be stored for audit purposes
+Test Case ID for Row 4632          : 46685
+Query Execution Time(ms)           : 70
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.09.001
+Query Execution Time(ms)           : 50
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46685
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46685
+Finished at                        : Mon Oct 23 13:57:15 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:57:15 EDT 2023
+Creating test case for Row #       : 4633
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.09.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 516
+Validation status                  : PASS
+Short Desc                         : Agency hierarchy for num_phone_day: Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Find an existing member with space for num_phone_day from HIX then update the field with SSA
+Expected Results                   : Will see in unit test to see how the existing field will look like in addl_demo table.
+Test Case ID for Row 4633          : 46686
+Query Execution Time(ms)           : 64
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.09.001
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46686
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46686
+Finished at                        : Mon Oct 23 13:57:20 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:57:20 EDT 2023
+Creating test case for Row #       : 4634
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.09.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 52
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 535
+Validation status                  : PASS
+Short Desc                         : Update existing warning message 2351
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send XML txn from DSS for num_phone day
+Expected Results                   : Validate the warning message, "Agency is not authorized to submit data in this field: num_phone_day" and no updates should be made in the database.
+Test Case ID for Row 4634          : 46687
+Query Execution Time(ms)           : 82
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.09.005
+Query Execution Time(ms)           : 84
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46687
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46687
+Finished at                        : Mon Oct 23 13:57:25 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:57:25 EDT 2023
+Creating test case for Row #       : 4635
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.09.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 494
+Validation status                  : PASS
+Short Desc                         : Agency not authorized: num_phone_day
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Warning message 2351- "Agency is not authorized to submit data in this field: num_phone_day" should be posted when agency that's not on hierarchy list attempts to update the num_phone_day for new or existing members. <BR><BR>Hierarchy:<BR>1. MHO, HIX<BR>2. SSA<BR>3. DTA
+Expected Results                   : Warning message 2351- "Agency is not authorized to submit data in this field: num_phone_day" should be posted when agency that's not on hierarchy list attempts to update the num_phone_day for new or existing members. <BR><BR>Hierarchy:<BR>1. MHO, HIX<BR>2. SSA<BR>3. DTA
+Test Case ID for Row 4635          : 46688
+Query Execution Time(ms)           : 80
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.09.010
+Query Execution Time(ms)           : 41
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46688
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46688
+Finished at                        : Mon Oct 23 13:57:29 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:57:29 EDT 2023
+Creating test case for Row #       : 4636
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.15.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 533
+Validation status                  : PASS
+Short Desc                         : No updates for mailing addr when warning is posted
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : 1. Create a new member or update existing member with the field mailing address fileds with the agency not part of the below hierarchy list. Hierarchy for mailing address fields: mail_adr_street_1, mail _adr_street_2, mail _adr_city, mail_adr_state, mail _adr_zip_code, mail_adr_zip_code_4: 1. DSS 2. MHO, HIX 3. SSA 4. DTA 5. DYS
+Expected Results                   : When warning message "Agency is not authorized to update mailing address" is posted, no updates should be made to the mailing address fields.
+Test Case ID for Row 4636          : 46689
+Query Execution Time(ms)           : 79
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.15.010
+Query Execution Time(ms)           : 58
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46689
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46689
+Finished at                        : Mon Oct 23 13:57:34 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:57:34 EDT 2023
+Creating test case for Row #       : 4637
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.16.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 55
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 601
+Validation status                  : PASS
+Short Desc                         : No updates for indv premium when warning is posted
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : 1. Create a new member or update existing member with the field amt_indv_prem with the agency not part of the below hierarchy list. Hierarchy for amt_indv_prem: 1. MHO 2. HIX
+Expected Results                   : When warning message "Agency is not authorized to submit data in this field: amt_indv_prem" is posted, no updates should be made to the field.
+Test Case ID for Row 4637          : 46690
+Query Execution Time(ms)           : 65
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.16.010
+Query Execution Time(ms)           : 43
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46690
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46690
+Finished at                        : Mon Oct 23 13:57:39 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 13:57:39 EDT 2023
+Creating test case for Row #       : 4638
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.17.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 51
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 532
+Validation status                  : PASS
+Short Desc                         : Agency not authorized: pct_income_fpl
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : 1. Create a new member or update existing member with the field pct_income_fpl with the agency not part of the below hierarchy list. Hierarchy for pct_income_fpl: 1. MHO 2. HIX
+Expected Results                   : Post the following warning message "Agency is not authorized to submit data in this field: pct_income_fpl" if source agency that's not part of the hierarchy list attempts to update FPL percentage for new or existing members.
+Test Case ID for Row 4638          : 46691
+Query Execution Time(ms)           : 84
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.17.005
+Query Execution Time(ms)           : 52
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46691
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Screenshot Path                    : C:\Users\RVattumilli\eclipse2-workspace\loadTCMIP\Screenshots\
+no such element: Unable to locate element: {"method":"xpath","selector":"//input[contains(@name,'TbName')]"}
+  (Session info: chrome=118.0.5993.89)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b0cbd4ff9ceebc0bb385deda04e76db6, findElement {using=xpath, value=//input[contains(@name,'TbName')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.89, chrome: {chromedriverVersion: 118.0.5993.88 (1d05652f52a5..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1545}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:1545/devtool..., se:cdpVersion: 118.0.5993.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b0cbd4ff9ceebc0bb385deda04e76db6

@@ -1,0 +1,2066 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 23/May/2024 09:54:24AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Total No.of Columns fetched        : 6
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 240
+Total No.of Rows fetched           : 81
+*****************************************************************
+Started at                         : Thu May 23 09:54:33 EDT 2024
+Creating test case for Row #       : 5205
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 488
+TC Validation status               : PASS
+Short Desc                         : New fields and values for Print Type
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : Verify a new table "T_CDE_COMM_PRINT " exists in MMIS database
+Expected Results                   : The table "T_CDE_COMM_PRINT" should exist in MMIS database with below all new values and descriptions.  Field name: cde_print_type  Value: REG Description: Regular  Value: LRG Description: Large Print  Value: BRAILLE Description: Braille 
+Test Case ID for Row 5205          : 47311
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47311
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47311
+Finished at                        : Thu May 23 09:54:37 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:54:37 EDT 2024
+Creating test case for Row #       : 5206
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 472
+TC Validation status               : PASS
+Short Desc                         : DB print type agency Lower, Transaction agency Higher
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a SSA member with any cde_print_type field.  2)Upload xml file for the same member from MHO or HIX with the same print type as DB.  3)Upload xml file for the same member from MHO or HIX with the different print type stored in DB.
+Expected Results                   : 1) Member created with cde_print_type stored in t_re_communication table, cde_agency_print stored as SSA.   2)No changes to  cde_print_type and cde_agency_print updated to MHO or HIX.  3) cde_print_type is updated to incoming transaction in  t_re_communication  and cde_agency_print stored as MHO or HIX.   Check a_t_re_communication for the changes.
+Test Case ID for Row 5206          : 47312
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47312
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47312
+Finished at                        : Thu May 23 09:54:42 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:54:42 EDT 2024
+Creating test case for Row #       : 5207
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 426
+TC Validation status               : PASS
+Short Desc                         : DB print type agency Higher, Transaction agency Lower
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a MHO or HIX member with any cde_print_type field.  2)Upload xml file for the same member from SSA with the same print type as DB.  3)Upload xml file for the same member from SSA with the different print type stored in DB.
+Expected Results                   : 1) Member created with cde_print_type stored in t_re_communication table, cde_agency_print stored as MHO or HIX.   2)No changes to  cde_print_type and cde_agency_print.  3) No changes to  cde_print_type and cde_agency_print.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5207          : 47313
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47313
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47313
+Finished at                        : Thu May 23 09:54:46 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:54:46 EDT 2024
+Creating test case for Row #       : 5208
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 443
+TC Validation status               : PASS
+Short Desc                         : DB print type agency Higher and transaction agency at same level
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a MHO member with any cde_print_type field.  2)Upload xml file for the same member from MHO with the same print type as DB.  3)Upload xml file for the same member from HIX with the same print type as DB.  4)Upload xml file for the same member from HIX with the different print type stored in DB.  5)Upload xml file for the same member from MHO with the different print type stored in DB.
+Expected Results                   : 1) Member created with cde_print_type stored in t_re_communication table, cde_agency_print stored as MHO.  2)No changes to  cde_print_type and cde_agency_print.   3)No changes to  cde_print_type and cde_agency_print updated to HIX.  4)cde_print_type is updated to incoming transaction in  t_re_communication  and no changes to cde_agency_print.  5)cde_print_type is updated to incoming transaction in  t_re_communication  and cde_agency_print stored as MHO.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5208          : 47314
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47314
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47314
+Finished at                        : Thu May 23 09:54:50 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:54:50 EDT 2024
+Creating test case for Row #       : 5209
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 465
+TC Validation status               : PASS
+Short Desc                         : Invalid print type- New Member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : Create a new member from MHO, HIX or SSA with an invalid cde_print_type value.
+Expected Results                   : The following warning message is received "Print type is invalid" and member created with  cde_print_type stored as "Reg" and cde_agency_print as blank.
+Test Case ID for Row 5209          : 47315
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47315
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47315
+Finished at                        : Thu May 23 09:54:55 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:54:55 EDT 2024
+Creating test case for Row #       : 5210
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 459
+TC Validation status               : PASS
+Short Desc                         : Invalid Print type- existing mem with data from inactive agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from MHO, HIX or SSA with valid cde_print_type value.  2)Search for the same member on the base app and close the open eligibility segment with a past date and any closing reason.  3)Upload xml file for the same member with an invalid cde_print_type value with different valid cde_agency_print than stored in t_re_communication table.
+Expected Results                   : 1) Member created with cde_print_type stored in t_re_communication table, cde_agency_print stored as MHO, HIX or SSA .  2) Check T_re_elig table updated with the end date and closing reason.  3)The following warning message is received "Print type is invalid" and cde_print_type stored as "Reg" and cde_agency_print as blank.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5210          : 47316
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47316
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47316
+Finished at                        : Thu May 23 09:54:59 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:54:59 EDT 2024
+Creating test case for Row #       : 5211
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 444
+TC Validation status               : PASS
+Short Desc                         : Invalid Print type- existing mem with data from active agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from SSA with valid cde_print_type value.  2)Upload xml file for the same member with an invalid cde_print_type value from HIX or MHO.
+Expected Results                   : 1) Member created with cde_print_type stored in t_re_communication table, cde_agency_print stored as SSA .  2) The following warning message is received "Print type is invalid" and No changes to t_re_communication table.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5211          : 47317
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47317
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47317
+Finished at                        : Thu May 23 09:55:04 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:04 EDT 2024
+Creating test case for Row #       : 5212
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 438
+TC Validation status               : PASS
+Short Desc                         : No data in DB, No print type segment
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : Create a new member from all agencies without print type segment in xml.
+Expected Results                   : All member created should have  cde_print_type stored as default value "Reg" and cde_agency_print as blank.
+Test Case ID for Row 5212          : 47318
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.015
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47318
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47318
+Finished at                        : Thu May 23 09:55:08 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:08 EDT 2024
+Creating test case for Row #       : 5213
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 447
+TC Validation status               : PASS
+Short Desc                         : existing print type in DB, No print type segment
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from HIX, MHO or SSA with any print type data.  2) Upload xml file for the same member from a non authorized agency for print type without member print type segment.
+Expected Results                   : 1) Member created with cde_print_type stored in t_re_communication table, cde_agency_print stored as MHO, HIX or SSA .  2) No changes to t_re_communication table
+Test Case ID for Row 5213          : 47319
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.015
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47319
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47319
+Finished at                        : Thu May 23 09:55:12 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:12 EDT 2024
+Creating test case for Row #       : 5214
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 432
+TC Validation status               : PASS
+Short Desc                         : Actv mem, exst prnt typ BRAILLE, In txn no prnt typ sgmnt &cat14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from SSA with BRAILLE print type.  2) Upload xml file for the same member from SSA with open ended aidcat 14 and without  print type segment.
+Expected Results                   : 1) Member created with cde_print_type as BRAILLE stored in t_re_communication table, cde_agency_print stored as SSA.  2)No changes to t_re_communication table.  Check t_re_elig and  a_t_re_communication tables
+Test Case ID for Row 5214          : 47320
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47320
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47320
+Finished at                        : Thu May 23 09:55:16 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:16 EDT 2024
+Creating test case for Row #       : 5215
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 458
+TC Validation status               : PASS
+Short Desc                         : Actve mem, exst prnt typ REG, In txn no print typ sgmnt & cat14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from SSA with REG print type   2) Upload xml file for the same member from SSA with open ended aidcat 14 and without  print type segment.
+Expected Results                   : 1) Member created with cde_print_type as REG stored in t_re_communication table, cde_agency_print stored as SSA   2)cde_print_type updated to default value LRG and cde_agency_print stored as blank in  t_re_communication.  Check t_re_elig and  a_t_re_communication tables
+Test Case ID for Row 5215          : 47321
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47321
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47321
+Finished at                        : Thu May 23 09:55:21 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:21 EDT 2024
+Creating test case for Row #       : 5216
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 433
+TC Validation status               : PASS
+Short Desc                         : Actve mem, exst prnt typ LRG, In txn no print typ sgmnt & cat14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from SSA with LRG print type.  2) Upload xml file for the same member from SSA with open ended aidcat 14 and without  print type segment.
+Expected Results                   : 1) Member created with cde_print_type as LRG stored in t_re_communication table, cde_agency_print stored as SSA.  2)No changes to  t_re_communication table.  Check t_re_elig and  a_t_re_communication tables
+Test Case ID for Row 5216          : 47322
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47322
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47322
+Finished at                        : Thu May 23 09:55:25 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:25 EDT 2024
+Creating test case for Row #       : 5217
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 472
+TC Validation status               : PASS
+Short Desc                         : Active aidcat 14, No print type segment -New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : Create a new member from SSA with open ended aidcat 14 and  without  print type segment in xml.
+Expected Results                   : Member created with default  cde_print_type LRG and cde_agency_print stored as blank.
+Test Case ID for Row 5217          : 47323
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47323
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47323
+Finished at                        : Thu May 23 09:55:29 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:29 EDT 2024
+Creating test case for Row #       : 5218
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 417
+TC Validation status               : PASS
+Short Desc                         : Inactve cat14, exst print type BRAILLE, In txn print typ
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from HIX with cde_print_type as BRAILLE and open ended aidcat 14.  2)Search for the same member on the base app and close the open eligibility segment with a past date and any closing reason.  3)Upload xml for the same member from MHO with REG cde_print_type    4)Upload xml for the same member from SSA with LRG cde_print_type    5)Upload xml for the same member from HIX(same agency as DB) with BRAILLE cde_print_type   6) Upload xml for the same member from MHO with BRAILLE cde_print_type
+Expected Results                   : 1)Member created with BRAILLE cde_print_type, and cde_agency_print  HIX.  2) Check T_re_elig table updated with the end date and closing reason.  3)No change in T_re_communication table.  4)No change in T_re_communication table.  5)No change in T_re_communication table  6)No changes to cde_print_type  and cde_agency_print stored as MHO.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5218          : 47324
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47324
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47324
+Finished at                        : Thu May 23 09:55:34 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:34 EDT 2024
+Creating test case for Row #       : 5219
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 434
+TC Validation status               : PASS
+Short Desc                         : Inactve mem, exst print type BRAILLE, In txn print typ & cat 14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from HIX or MHO or SSA with closed eligibility and cde_print_type as BRAILLE .  2)Upload xml for the same member from SSA with aidcat 14 and REG cde_print_type .  3)Upload xml for the same member from SSA with aidcat 14 and LRG cde_print_type .  4)Upload xml for the same member from SSA with aidcat 14 and BRAILLE cde_print_type .  5)Take another existing SSA member with cde_print_type as BRAILLE in DB and update the same member from SSA with aidcat 14 and BRAILLE cde_print_type .
+Expected Results                   : 1) Member created with closed eligibility,  BRAILLE cde_print_type, and cde_agency_print  HIX or MHO or SSA. Check T_re_elig table.  2)No changes to t_re_communication table.  3)No changes to t_re_communication table.  4)cde_print_type remains same and cde_agency_print is updated to incoming transaction(SSA).    5)No changes to t_re_communication.   Check a_t_re_communication for the changes.
+Test Case ID for Row 5219          : 47325
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47325
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47325
+Finished at                        : Thu May 23 09:55:38 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:38 EDT 2024
+Creating test case for Row #       : 5220
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 436
+TC Validation status               : PASS
+Short Desc                         : Inactive mem, exst print typ REG, In txn print typ & cat 14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from HIX or MHO or SSA with closed eligibility and cde_print_type as REG .  2)Upload xml for the same member from SSA withaidcat 14 and REG cde_print_type .  3)Check another existing HIX or MHO or SSA member with cde_print_type as REG in DB and update the same member from SSA with aidcat 14 and LRG cde_print_type .  4)Check another existing HIX or MHO or SSA member with cde_print_type as REG in DB and update the same member from SSA with aidcat 14 and BRAILLE cde_print_type .  5)Check another existing HIX or MHO or SSA member with cde_print_type as REG in DB and update the same member from DTA with aidcat 14 and BRAILLE or LRG or REG cde_print_type .
+Expected Results                   : 1)Member created with closed eligibility, REG cde_print_type, and cde_agency_print  HIX or MHO or SSA. Check T_re_elig table.  2)cde_print_type updated to default value LRG and cde_agency_print stored as blank in  t_re_communication.  3)cde_print_type and cde_agency_print are updated to incoming transaction.    4)cde_print_type and cde_agency_print are updated to incoming transaction.  5)cde_print_type updated to default value LRG and cde_agency_print stored as blank in  t_re_communication.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5220          : 47326
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47326
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47326
+Finished at                        : Thu May 23 09:55:43 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:43 EDT 2024
+Creating test case for Row #       : 5221
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 534
+TC Validation status               : PASS
+Short Desc                         : Inactive mem, exst print typ LRG, In txn print typ & cat 14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from HIX or MHO or SSA with closed eligibility and cde_print_type as LRG .  2)Upload xml for the same member from SSA with aidcat 14 and REG cde_print_type .  3)Check another existing HIX or MHO or SSA member with cde_print_type as LRG in DB and update the same member from SSA with aidcat 14 and LRG cde_print_type .  4)Check another existing HIX or MHO or SSA member with cde_print_type as LRG in DB and update  the same member from SSA with aidcat 14 and BRAILLE cde_print_type .
+Expected Results                   : 1)Member created with closed eligibility, LRG cde_print_type, and cde_agency_print  HIX or MHO or SSA.Check T_re_elig table.  2)cde_print_type updated to default value LRG and cde_agency_print stored as blank in  t_re_communication.  3)cde_print_type remains same and cde_agency_print is updated to incoming transaction.  4)cde_print_type and cde_agency_print are updated to incoming transaction t_re_communication.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5221          : 47327
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47327
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47327
+Finished at                        : Thu May 23 09:55:48 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:48 EDT 2024
+Creating test case for Row #       : 5222
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 1420
+TC Validation status               : PASS
+Short Desc                         : Actve mem, exst print typ BRAILLE, In txn has print typ & cat 14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from HIX or MHO with open eligibility and cde_print_type as BRAILLE.  2)Upload xml for the same member from SSA with aidcat 14 and REG cde_print_type .  3)Upload xml for the same member from SSA  with aidcat 14 and LRG cde_print_type.  4)Upload xml for the same member from SSA with aidcat 14 and BRAILLE cde_print_type.
+Expected Results                   : 1) Member created with BRAILLE cde_print_type, and cde_agency_print  HIX or MHO.  2)No changes to t_re_communication table.  3)No changes to t_re_communication table.  4)No changes to t_re_communication table.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5222          : 47328
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47328
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47328
+Finished at                        : Thu May 23 09:55:53 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:53 EDT 2024
+Creating test case for Row #       : 5223
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 1294
+TC Validation status               : PASS
+Short Desc                         : Actve mem, exst print typ REG, In txn has print typ & cat 14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from HIX or MHO with open eligibility and cde_print_type as REG.  2)Upload xml for the same member from SSA with aidcat 14 and REG cde_print_type .  3)Check another existing HIX or MHO member with cde_print_type as REG in DB and update the same member from SSA with aidcat 14 and LRG cde_print_type.  4)Check another existing HIX or MHO member with cde_print_type as REG in DB and update the same member from SSA with aidcat 14 and BRAILLE cde_print_type.  5)Check another existing HIX or MHO member with cde_print_type as REG in DB and update the same member from DTA with aidcat 14 and BRAILLE or LRG or REG cde_print_type .
+Expected Results                   : 1) Member created with REG cde_print_type, and cde_agency_print  HIX or MHO.  2)cde_print_type updated to default value LRG and cde_agency_print stored as blank in  t_re_communication.  3)cde_print_type and cde_agency_print is updated to incoming transaction.  4)cde_print_type and cde_agency_print is updated to incoming transaction.  5)cde_print_type updated to default value LRG and cde_agency_print stored as blank in  t_re_communication.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5223          : 47329
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47329
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47329
+Finished at                        : Thu May 23 09:55:59 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:55:59 EDT 2024
+Creating test case for Row #       : 5224
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 461
+TC Validation status               : PASS
+Short Desc                         : Actve mem, exst print typ LRG, In txn has print typ & cat 14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from HIX or MHO with open eligibility and cde_print_type as LRG.  2)Upload xml for the same member from SSA with aidcat 14 and REG cde_print_type .  3)Upload xml for the same member from SSA  with aidcat 14 and LRG cde_print_type.  4)Check another existing HIX or MHO member with cde_print_type as LRG in DB and update the same member from SSA with aidcat 14 and BRAILLE cde_print_type.
+Expected Results                   : 1) Member created with LRG cde_print_type, and cde_agency_print  HIX or MHO.  2)No changes to t_re_communication table.  3)No changes to cde_print_type and cde_agency_print is updated to incoming transaction.  4)cde_print_type and cde_agency_print are updated to incoming transaction.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5224          : 47330
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47330
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47330
+Finished at                        : Thu May 23 09:56:03 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:03 EDT 2024
+Creating test case for Row #       : 5225
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 437
+TC Validation status               : PASS
+Short Desc                         : Active cat 14, exst print typ BRAILLE & In txn print type
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a SSA member with open aid cat 14 and cde_print_type as BRAILLE.  2)Upload xml file for the same member from MHO with the same print type as DB.  3)Upload xml file for the same member from MHO or HIX and cde_print_type as REG.  4)Upload xml file for the same member from MHO or HIX and cde_print_type as LRG.
+Expected Results                   : 1) Member created with BRAILLE cde_print_type,  SSA cde_agency_print  and, with open aid cat 14.  2)No changes to  cde_print_type and cde_agency_print updated to MHO.  3)No changes to t_re_communication table.  4)No changes to t_re_communication table.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5225          : 47331
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47331
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47331
+Finished at                        : Thu May 23 09:56:08 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:08 EDT 2024
+Creating test case for Row #       : 5226
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 449
+TC Validation status               : PASS
+Short Desc                         : Actve cat 14, exst print type BRAILLE, In txn print typ & cat 14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from SSA with cde_print_type as BRAILLE and open ended aidcat 14.  2)Upload xml for the same member from SSA  with aidcat 14 and LRG cde_print_type.    3)Upload xml for the same member from SSA with with aidcat 14 and REG cde_print_type.
+Expected Results                   : 1)Member created with BRAILLE cde_print_type, and cde_agency_print  SSA.  2)No changes to t_re_communication table.  3)No changes to t_re_communication table  Check a_t_re_communication for the changes.
+Test Case ID for Row 5226          : 47332
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47332
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47332
+Finished at                        : Thu May 23 09:56:12 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:12 EDT 2024
+Creating test case for Row #       : 5227
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 551
+TC Validation status               : PASS
+Short Desc                         : Actve cat 14, exst print type LRG, In txn print typ & cat 14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from SSA with cde_print_type as LRG and open ended aidcat 14.  2) Upload xml for the same member from SSA with aidcat 14 and REG cde_print_type.    3)Upload xml for the same member from SSA with aidcat 14 and BRAILLE cde_print_type.
+Expected Results                   : 1)Member created with LRG cde_print_type, and cde_agency_print  SSA.  2)No changes to t_re_communication table.  3)cde_print_type and cde_agency_print are updated to incoming transaction.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5227          : 47333
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47333
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47333
+Finished at                        : Thu May 23 09:56:17 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:17 EDT 2024
+Creating test case for Row #       : 5228
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 428
+TC Validation status               : PASS
+Short Desc                         : Actve cat 14, exst print type REG, In Txn print type and cat 14
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from SSA with cde_print_type as REG and open ended aidcat 14.  2)Upload xml for the same member from SSA with aidcat 14 and LRG cde_print_type.    3) Check another existing SSA member with active aidcat 14 and cde_print_type as REG in DB and update the same member from SSA with aidcat 14 and BRAILLE cde_print_type.
+Expected Results                   : 1)Member created with LRG cde_print_type, and cde_agency_print  as blank.  2)cde_print_type and cde_agency_print are updated to incoming transaction.  3)cde_print_type and cde_agency_print are updated to incoming transaction.  Check a_t_re_communication for the changes.
+Test Case ID for Row 5228          : 47334
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47334
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47334
+Finished at                        : Thu May 23 09:56:21 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:21 EDT 2024
+Creating test case for Row #       : 5229
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 474
+TC Validation status               : PASS
+Short Desc                         : Active aidcat 14 and Print type - New Member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : Batch
+Long Desc                          : 1)Create a new member from SSA with cde_print_type as REG and open ended aidcat 14.  2)Create a new member from SSA with cde_print_type as LRG and open ended aidcat 14.  3)Create a new member from SSA with cde_print_type as BRAILLE and open ended aidcat 14.
+Expected Results                   : 1)Member created with cde_print_type Stored as LRG default value  and cde_agency_print stored as blank.  2)Member created with cde_print_type stored as LRG and cde_agency_print as SSA.  3)Member created with cde_print_type stored as BRAILLE and cde_agency_print as SSA.
+Test Case ID for Row 5229          : 47335
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.01.020
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47335
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47335
+Finished at                        : Thu May 23 09:56:25 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:25 EDT 2024
+Creating test case for Row #       : 5230
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 455
+TC Validation status               : PASS
+Short Desc                         : New fields and values for Communication Pref
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Query T_CDE_COMM_PREF
+Expected Results                   : Table exists with all new values and descriptions.  Value: PAPER Description: Paper  Value: EMAIL Description: Paperless-email  Value: TEXT\SMS Description: Paperless-text 
+Test Case ID for Row 5230          : 47336
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47336
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47336
+Finished at                        : Thu May 23 09:56:30 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:30 EDT 2024
+Creating test case for Row #       : 5231
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 427
+TC Validation status               : PASS
+Short Desc                         : DB comm pref from higher, txn comm pref from lower
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create HIX member with Communication Preference as Paper with any print type.  2) Upload xml file for the same member from MHO with the same communication preference and print type as DB.  3) Upload xml file for the same member from HIX with communication preference as Email with valid email address and with any print type.  4) Upload xml file for the same member from SSA with the different communication preference and print type than what's stored in the DB.  5) Upload xml file for the same member from HIX with communication preference as Text\SMS with valid num_cell_phone and with any print type.  6) Upload xml file for the same member from MHO with the different communication preference and print type than what's stored in the DB.
+Expected Results                   : 1) Member created with cde_communication_pref stored as paper and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as HIX. No email or num_cell_phone stored.  2) No changes to cde_communication_pref value or cde_agency_pref. cde_agency_print updated to MHO.   3) cde_communication_pref in t_re_communication updated to Email, email address from txn inserted, print type matches transaction print type, cde_agency_print & cde_agency_pref stored as HIX.  4) No changes to DB  5) cde_communication_pref in t_re_communication updated to Text\SMS, num_cell_phone from txn inserted, print type matches transaction print type, cde_agency_print & cde_agency_pref stored as HIX. Previously stored email address is removed from t_re_communication table.  6) No changes to cde_communication_pref value or cde_agency_pref. Print type updated to match transaction value and cde_agency_print updated to MHO.
+Test Case ID for Row 5231          : 47337
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47337
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47337
+Finished at                        : Thu May 23 09:56:34 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:34 EDT 2024
+Creating test case for Row #       : 5232
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 437
+TC Validation status               : PASS
+Short Desc                         : DB paper from lower, txn from higher w/ same comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Paper with any print type.  2) Upload xml file for same member from HIX with same communication preference, same print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as paper and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No email or num_cell_phone stored.  2) cde_communication_pref and cde_print_type remains the same, cde_agency for both fields updated to HIX.
+Test Case ID for Row 5232          : 47338
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47338
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47338
+Finished at                        : Thu May 23 09:56:39 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:39 EDT 2024
+Creating test case for Row #       : 5233
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 418
+TC Validation status               : PASS
+Short Desc                         : DB paper from lower, txn from higher w/ diff comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Paper with any print type.  2) Upload xml file for same member from HIX with different communication preference, different print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as paper and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No email or num_cell_phone stored.  2) cde_communication_pref and cde_print_type matches tansaction value, cde_agency for both fields updated to HIX. If communication pref updated to Email, then email address should be inserted as well. If communication pref updated to Text\SMS, then num_cell_phone should be inserted as well.
+Test Case ID for Row 5233          : 47339
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47339
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47339
+Finished at                        : Thu May 23 09:56:43 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:43 EDT 2024
+Creating test case for Row #       : 5234
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 446
+TC Validation status               : PASS
+Short Desc                         : DB email from lower, txn from higher w/ same comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create SSA member with Communication Preference as Email with email address and any print type.  2) Upload xml file for same member from HIX with same communication preference, different print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as email, txn email address stored and cde_print_type matches txn value in t_re_communication table, cde_agency for both fields stored as SSA.   2) No change to cde_communication_pref value or email address and cde_print_type matches tansaction value, cde_agency for both fields updated to HIX.
+Test Case ID for Row 5234          : 47340
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47340
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47340
+Finished at                        : Thu May 23 09:56:48 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:48 EDT 2024
+Creating test case for Row #       : 5235
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 448
+TC Validation status               : PASS
+Short Desc                         : DB email from lower, txn higher w/ same comm pref, diff email
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create SSA member with Communication Preference as Email with email address and any print type.  2) Upload xml file for same member from HIX with same communication preference, different email address, same print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as email, txn email address stored and cde_print_type matches txn value in t_re_communication table, cde_agency for both fields stored as SSA.   2) No change to cde_communication_pref value,  email address updated to reflect txn email address and no change to cde_print_type value, cde_agency for both fields updated to HIX.
+Test Case ID for Row 5235          : 47341
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47341
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47341
+Finished at                        : Thu May 23 09:56:52 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:52 EDT 2024
+Creating test case for Row #       : 5236
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 725
+TC Validation status               : PASS
+Short Desc                         : DB email from lower, txn from higher w/ diff comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as email with emaill adress and any print type.  2) Upload xml file for same member from HIX with different communication preference, different print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as email, txn email address stored and cde_print_type matches txn value in t_re_communication table, cde_agency for both fields stored as MHO.   2) cde_communication_pref and cde_print_type matches tansaction value, cde_agency for both fields updated to HIX. If communication pref updated to Text\SMS, then num_cell_phone should be inserted as well and previously stored email address should be removed. If communication pref updated to paper, previously stored email address should be removed.
+Test Case ID for Row 5236          : 47342
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47342
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47342
+Finished at                        : Thu May 23 09:56:57 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:56:57 EDT 2024
+Creating test case for Row #       : 5237
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 443
+TC Validation status               : PASS
+Short Desc                         : DB text from lower, txn from higher w/ same comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Text\SMS with cell phone number and any print type.  2) Upload xml file for same member from HIX with same communication preference, cell phone number and print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as Text\SMS, txn cell phone number stored and cde_print_type matches txn value in t_re_communication table, cde_agency for both fields stored as MHO.   2) No change to cde_communication_pref value or cell phone number or cde_print_type, cde_agency for both fields updated to HIX.
+Test Case ID for Row 5237          : 47343
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47343
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47343
+Finished at                        : Thu May 23 09:57:01 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:01 EDT 2024
+Creating test case for Row #       : 5238
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 448
+TC Validation status               : PASS
+Short Desc                         : DB text from lower, txn higher w/ same comm pref, diff cell
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Text\SMS with cell phone number and any print type.  2) Upload xml file for same member from HIX with same communication preference, different cell phone number and different print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as Text\SMS, txn cell phone number stored and cde_print_type matches txn value in t_re_communication table, cde_agency for both fields stored as MHO.   2) No change to cde_communication_pref value, txn cell phone number and cde_print_type updated to match txn values, cde_agency for both fields updated to HIX.
+Test Case ID for Row 5238          : 47344
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47344
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47344
+Finished at                        : Thu May 23 09:57:05 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:05 EDT 2024
+Creating test case for Row #       : 5239
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 436
+TC Validation status               : PASS
+Short Desc                         : DB text from lower, txn from higher w/ diff comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create SSA member with Communication Preference as Text\SMS with cell phone number and any print type.  2) Upload xml file for same member from HIX with different communication preference, same print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as Text\SMS, txn cell phone number stored and cde_print_type matches txn value in t_re_communication table, cde_agency for both fields stored as SSA.   2) Cde_communication_pref value updated to match txn value, no change to cde_print_type value, cde_agency for both fields updated to HIX. If communication pref updated to Email, then txn email address should be inserted and previously stored cell phone number should be removed. If communication pref updated to paper, previously stored cell phone number should be removed.
+Test Case ID for Row 5239          : 47345
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47345
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47345
+Finished at                        : Thu May 23 09:57:10 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:10 EDT 2024
+Creating test case for Row #       : 5240
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 461
+TC Validation status               : PASS
+Short Desc                         : DB has Paper, txn from same level w/ same comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create SSA member with Communication Preference as Paper with any print type.  2) Upload xml file for same member from MHO with same communication preference, same print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as paper and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as SSA. No email or num_cell_phone stored.  2) cde_communication_pref and cde_print_type matches tansaction value , cde_agency_pref and cde_agency_print updated to MHO.
+Test Case ID for Row 5240          : 47346
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47346
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47346
+Finished at                        : Thu May 23 09:57:14 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:14 EDT 2024
+Creating test case for Row #       : 5241
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 456
+TC Validation status               : PASS
+Short Desc                         : DB has Paper, txn from same level w/ diff comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Paper with any print type.  2) Upload xml file for same member from SSA with different communication preference and print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as paper and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No email or num_cell_phone stored.  2) cde_communication_pref matches tansaction value and cde_agency updated to SSA. No changes to print type value or cde_agency. If communication pref updated to Text\SMS, then num_cell_phone should be inserted as well. If communication pref updated to Email, then email address should be inserted as well.
+Test Case ID for Row 5241          : 47347
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47347
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47347
+Finished at                        : Thu May 23 09:57:19 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:19 EDT 2024
+Creating test case for Row #       : 5242
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 429
+TC Validation status               : PASS
+Short Desc                         : DB has email, txn from same level w/ same comm pref and email
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Email with any print type.  2) Upload xml file for the same member from SSA with the same communication preference and email address, different print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as email with email address and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No  num_cell_phone should be stored.  2) No change to cde_communication_pref value or email address, communication preference agency updated to SSA. No changes to print type value or agency.
+Test Case ID for Row 5242          : 47348
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47348
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47348
+Finished at                        : Thu May 23 09:57:23 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:23 EDT 2024
+Creating test case for Row #       : 5243
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 455
+TC Validation status               : PASS
+Short Desc                         : DB has email, txn from same level w/ same comm pref, diff email
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Email with any print type.  2) Upload xml file for the same member from SSA with the same communication preference, different email address and same print type as DB.
+Expected Results                   : 1) Member created with cde_communication_pref stored as email with email address and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No  num_cell_phone should be stored.  2) No change to cde_communication_pref value, email address updated to match txn value and cde_agency updated to SSA. No changes to print type value or agency.
+Test Case ID for Row 5243          : 47349
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47349
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47349
+Finished at                        : Thu May 23 09:57:27 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:27 EDT 2024
+Creating test case for Row #       : 5244
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 442
+TC Validation status               : PASS
+Short Desc                         : DB has email, txn from same level w/ diff comm pref than DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create SSA member with Communication Preference as Email with any print type.  2) Upload xml file for the same member from MHO with different communication preference than DB and same print type.
+Expected Results                   : 1) Member created with cde_communication_pref stored as email with email address and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as SSA. No  num_cell_phone should be stored.  2) Cde_communication_pref updated to match txn value. No changes to print type value , cde_agency_pref and cde_agency_print udpated to MHO.  If communication pref updated to Text\SMS, then num_cell_phone should be inserted as well. Previously stored email address should be removed.
+Test Case ID for Row 5244          : 47350
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47350
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47350
+Finished at                        : Thu May 23 09:57:31 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:31 EDT 2024
+Creating test case for Row #       : 5245
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 443
+TC Validation status               : PASS
+Short Desc                         : DB has Text, txn from same level w/ same comm pref and cell
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create SSA member with Communication Preference as Text with any print type.  2) Upload xml file for the same member from MHO with the same communication preference and cell phone, different print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as Text\SMS with num_cell_phone and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as SSA. No email address should be stored.  2) No changes to cde_communication_pref value or num_cell_phone, cde_print_type updated to match txn value in t_re_communication table, cde_agency for both fields updated to MHO
+Test Case ID for Row 5245          : 47351
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47351
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47351
+Finished at                        : Thu May 23 09:57:36 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:36 EDT 2024
+Creating test case for Row #       : 5246
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 444
+TC Validation status               : PASS
+Short Desc                         : DB has Text, txn from same level w/ same comm pref, diff cell
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Text with any print type.  2) Upload xml file for the same member from SSA with the same communication preference and different cell phone and print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as Text\SMS with num_cell_phone and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No email address should be stored.  2) No changes to cde_communication_pref value, num_cell_phone updated to match txn cell phone and cde_agency_pref updated to SSA. No changes to cde_print_type value or agency in t_re_communication table.
+Test Case ID for Row 5246          : 47352
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47352
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47352
+Finished at                        : Thu May 23 09:57:40 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:40 EDT 2024
+Creating test case for Row #       : 5247
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 435
+TC Validation status               : PASS
+Short Desc                         : DB has Text, txn from same level w/ diff comm pref than DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Text with any print type.  2) Upload xml file for the same member from SSA with different communication preference, same print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as Text\SMS with num_cell_phone and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No email address should be stored.  2) Cde_communication_pref updated to match txn value. No changes to print type value , cde_agency_pref and cde_agency_print udpated to SSA.  If communication pref updated to Email, then email address should be inserted as well. Previously stored cell phone number should be removed.
+Test Case ID for Row 5247          : 47353
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47353
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47353
+Finished at                        : Thu May 23 09:57:44 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:44 EDT 2024
+Creating test case for Row #       : 5248
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 457
+TC Validation status               : PASS
+Short Desc                         : DB has Paper, txn from same agency w/ same comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Paper with any print type.  2) Upload xml file for the same member from MHO with same communication preference, different print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as paper and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No email or num_cell_phone stored.  2) No changes to cde_communication_pref value or agency, cde_print type value updated to match txn value and no changes to cde_agency_pref or cde_agency_print.
+Test Case ID for Row 5248          : 47354
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47354
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47354
+Finished at                        : Thu May 23 09:57:49 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:49 EDT 2024
+Creating test case for Row #       : 5249
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 430
+TC Validation status               : PASS
+Short Desc                         : DB has Paper, txn from same agency w/ diff comm pref as DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create HIX member with Communication Preference as Paper with any print type.  2) Upload xml file for the same member from HIX with different communication preference and print type than DB
+Expected Results                   : 1) Member created with cde_communication_pref stored as paper and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as HIX. No email or num_cell_phone stored.  2) cde_communication_pref matches tansaction value and cde_agency_pref updated to SSA. No changes to print type value or cde_agency_print. If communication pref updated to Text\SMS, then num_cell_phone should be inserted as well. If communication pref updated to Email, then email address should be inserted as well.
+Test Case ID for Row 5249          : 47355
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47355
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47355
+Finished at                        : Thu May 23 09:57:53 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:53 EDT 2024
+Creating test case for Row #       : 5250
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 435
+TC Validation status               : PASS
+Short Desc                         : DB has email, txn from same agency w/ same comm pref and email
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create SSA member with Communication Preference as Email with email address and any print type.  2) Upload xml file for the same member from SSA with the same communication preference, email address and print type.
+Expected Results                   : 1) Member created with cde_communication_pref stored as email with email address and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as SSA. No  num_cell_phone should be stored.  2) No changes should be made to t_re_communication table. No records added to a_t_re_communication table.
+Test Case ID for Row 5250          : 47356
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47356
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47356
+Finished at                        : Thu May 23 09:57:57 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:57:57 EDT 2024
+Creating test case for Row #       : 5251
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 447
+TC Validation status               : PASS
+Short Desc                         : DB has email, txn from same agency w/ same comm pref, diff email
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create HIX member with Communication Preference as Email with email address and any print type.  2) Upload xml file for the same member from HIX with the same communication preference, different email and same print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as email, email address and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as HIX. No num_cell_phone stored.  2) No changes to cde_communication_pref or cde_print type. Email updated to match txn email address, cde_agency_print & cde_agency_pref stored as HIX.
+Test Case ID for Row 5251          : 47357
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47357
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47357
+Finished at                        : Thu May 23 09:58:02 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:02 EDT 2024
+Creating test case for Row #       : 5252
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 436
+TC Validation status               : PASS
+Short Desc                         : DB has email, txn from same agency w/ diff comm pref than DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Email with email address and any print type.  2) Upload xml file for the same member from MHO with a different communication preference than DB, and same print type.
+Expected Results                   : 1) Member created with cde_communication_pref stored as email, email address and cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No num_cell_phone stored.  2) Cde_communication_pref matches tansaction value and no changes to cde_agency_pref, cde_ print_type value or cde_agency_print. If cde_communication_pref updated to Text\SMS, then num_cell_phone should be inserted as well. Previously stored email address should be removed.
+Test Case ID for Row 5252          : 47358
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47358
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47358
+Finished at                        : Thu May 23 09:58:06 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:06 EDT 2024
+Creating test case for Row #       : 5253
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 435
+TC Validation status               : PASS
+Short Desc                         : DB has Text, txn from same agency w/ same comm pref and cell
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create SSA member with Communication Preference as Text with cell phone number and any print type.  2) Upload xml file for the same member from SSA with same communication preference, cell phone number and print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as Text\SMS with num_cell_phone,  cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as SSA. No email address stored.  2) No changes to t_re_communication table
+Test Case ID for Row 5253          : 47359
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47359
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47359
+Finished at                        : Thu May 23 09:58:10 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:10 EDT 2024
+Creating test case for Row #       : 5254
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 422
+TC Validation status               : PASS
+Short Desc                         : DB has Text, txn from same agency w/ same comm pref, diff cell
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create MHO member with Communication Preference as Text with cell phone number and any print type.  2) Upload xml file for the same member from MHO with same communication preference, different cell phone number and print type
+Expected Results                   : 1) Member created with cde_communication_pref stored as Text\SMS with num_cell_phone,  cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as MHO. No email address stored.  2) No changes to cde_communication_pref, num_cell_phone and cde_print_type updated to match txn value, cde_agency_print & cde_agency_pref stored as MHO. No email address stored.
+Test Case ID for Row 5254          : 47360
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47360
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47360
+Finished at                        : Thu May 23 09:58:15 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:15 EDT 2024
+Creating test case for Row #       : 5255
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 474
+TC Validation status               : PASS
+Short Desc                         : DB has Text, txn from same agency w/ diff comm pref than DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create HIX member with Communication Preference as Text with cell phone number and any print type.  2) Upload xml file for the same member from HIX with different communication preference and print type than DB
+Expected Results                   : 1) Member created with cde_communication_pref stored as Text\SMS with num_cell_phone,  cde_print_type matches txn value in t_re_communication table, cde_agency_print & cde_agency_pref stored as HIX. No email address stored.  2) Cde_communication_pref and cde_print_type matches tansaction value and no changes to cde_agency_pref or cde_agency_print. If cde_communication_pref updated to Email, then email address should be inserted as well. Previously stored num_cell_phone should be removed.
+Test Case ID for Row 5255          : 47361
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47361
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47361
+Finished at                        : Thu May 23 09:58:19 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:19 EDT 2024
+Creating test case for Row #       : 5256
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 431
+TC Validation status               : PASS
+Short Desc                         : Invalid Communication Preference- new mem
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Create a new member from MHO, HIX or SSA with an invalid cde_communication_pref value.
+Expected Results                   : Member created with cde_communication_pref stored as Paper and cde_agency_pref is blank. No num_cell_phone or email address stored for member in t_re_communication table.
+Test Case ID for Row 5256          : 47362
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47362
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47362
+Finished at                        : Thu May 23 09:58:23 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:23 EDT 2024
+Creating test case for Row #       : 5257
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 430
+TC Validation status               : PASS
+Short Desc                         : Invalid Comm Pref- existing mem w/ data from inactive agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from MHO, HIX or SSA with cde_communication_pref as TEXT\SMS or EMAIL. If TEXT\SMS, inlcude valid num_cell_phone. If EMAIL, include email address  2) Search for member on the base app and close the open eligibility segment with a past date and any closing reason.  3) Upload xml file for the same member with an invalid cde_communication_pref value from a different valid cde_agency_pref than stored in t_re_communication table.
+Expected Results                   : 1) Member created and all data in t_re_communication matches txn.  2) T_re_elig updated with the end date and closing reason.  3) Cde_communication_pref updated to Paper and cde_agency_pref updated to blank.
+Test Case ID for Row 5257          : 47363
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47363
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47363
+Finished at                        : Thu May 23 09:58:29 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:29 EDT 2024
+Creating test case for Row #       : 5258
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 426
+TC Validation status               : PASS
+Short Desc                         : Invalid Comm Pref- existing mem w/ data from active agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from SSA with cde_communication_pref as TEXT\SMS or EMAIL. If TEXT\SMS, inlcude valid num_cell_phone. If EMAIL, include email address  2) Upload xml file for the same member with an invalid cde_communication_pref value from a HIX.
+Expected Results                   : 1) Member created and all data in t_re_communication matches txn.  2) No changes to t_re_communication table
+Test Case ID for Row 5258          : 47364
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47364
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47364
+Finished at                        : Thu May 23 09:58:33 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:33 EDT 2024
+Creating test case for Row #       : 5259
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 430
+TC Validation status               : PASS
+Short Desc                         : No communication preference segment, no data in DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Create new members from ALL agencies without Member Communication Preference segment in xml
+Expected Results                   : All member created should have cde_communication_pref defaulted to Paper, cde_print_type defaulted to Reg, cde_agency_print and cde_agency_pref should be blank
+Test Case ID for Row 5259          : 47365
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.015
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47365
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47365
+Finished at                        : Thu May 23 09:58:37 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:37 EDT 2024
+Creating test case for Row #       : 5260
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 423
+TC Validation status               : PASS
+Short Desc                         : No communication preference segment, existing data in DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from HIX, MHO or SSA with any communication preference data.  2) Upload xml file for the same member from a non authorized agency for communication preference without member communication preference segment.
+Expected Results                   : 1) Member created and all data in t_re_communication matches txn.  2) No changes to t_re_communication table
+Test Case ID for Row 5260          : 47366
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.02.015
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47366
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47366
+Finished at                        : Thu May 23 09:58:41 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:41 EDT 2024
+Creating test case for Row #       : 5261
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 423
+TC Validation status               : PASS
+Short Desc                         : Email address required when comm pref is EMAIL
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member from HIX or MHO with email in Member Demographics segment, cde_communication_pref as EMAIL and a different email address than email used in Member Demographics segment.  2) Upload xml file for the same member from HIX or MHO with cde_communication_pref as EMAIL and NO Email attribute.
+Expected Results                   : 1) Member created successfully with email address in t_re_communication matching email address in Member Communication Preference segment of txn.  2) No changes to data in t_re_communication table. Warning message "Member Communication Preference Email address is missing or invalid" should be triggered.
+Test Case ID for Row 5261          : 47367
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47367
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47367
+Finished at                        : Thu May 23 09:58:46 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:46 EDT 2024
+Creating test case for Row #       : 5262
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 438
+TC Validation status               : PASS
+Short Desc                         : Comm pref for existing member pre 37519
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Find an existing member in the DB with no data in t_re_communication, has email address in t_re_email_addr table.  1) Upload xml file for the same member from MHO or HIX with member demographic email the same as email stored in t_re_email_addr table, commuication preference as EMAIL and email address different than email stored in t_re_email_addr table.
+Expected Results                   : 1) Record inserted in t_re_communication table with cde_communication_pref as EMAIL, email address matching txn member communication preference email and cde_agency_pref matching txn agency. No change to email address stored in t_re_email_addr table. Email displayed on Member Information panel matches email in t_re_email_addr table. Email address displayed in Member Communication Preference/Accommodation panel matches email address stored in t_re_communication table.
+Test Case ID for Row 5262          : 47368
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47368
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47368
+Finished at                        : Thu May 23 09:58:50 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:50 EDT 2024
+Creating test case for Row #       : 5263
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 454
+TC Validation status               : PASS
+Short Desc                         : Invalid accommodation/ New Member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : 1) Create a new member  transaction  from HIX with all invalid accommodation values     2) Create a new member transaction from MHO/SSA with  some valid accommodation
+Expected Results                   : 1)  No udpates/ record is inserted into database.All invalid accommodations will be ignored. Warning: " Accommodation is invalid" will be seen for all invalid accomodations.  2)New record is inserted into DB with only valid accommodations, invalid ones are ignored.Warning: " Accommodation is invalid" will be seen for all invalid accomodations.
+Test Case ID for Row 5263          : 47369
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.05.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47369
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47369
+Finished at                        : Thu May 23 09:58:54 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:54 EDT 2024
+Creating test case for Row #       : 5264
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 471
+TC Validation status               : PASS
+Short Desc                         : Invalid Accommodation /Existing Member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : 1) Existin Member has accomodations from HIX. Send transaction for the same member from HIX with no valid accomodations  2) Existin Member has accomodations from HIX. Send transaction with same valid accomodations as DB  from HIX.  3) Existin Member has accomodations from HIX. Send transaction with same valid accomodations as DB  from MHO.  4) Existin Member has accomodations from SSA.. Send transaction with all different  valid accomodations from SSA.
+Expected Results                   : 1) No updates to the accomodations record in the DB. No blank record inserted.  2) No udpates to the accomodations records in the DB.   3) only agency gets udpated   4) All accomodations values in DB are replaced with incoming values.
+Test Case ID for Row 5264          : 47370
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.05.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47370
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47370
+Finished at                        : Thu May 23 09:58:59 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:58:59 EDT 2024
+Creating test case for Row #       : 5265
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 458
+TC Validation status               : PASS
+Short Desc                         : Invalid Agecy sending accomodations
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : 1) Exsiting Member has accomodations from HIX. Send transaction for the same member with valida accomodation from "DTA"   2) Create a new member transaction from DTA with  some valid accommodation
+Expected Results                   : 1)Warning: "Agency not authorized to send member accommodation data" will be sent. T_RE_ACCOMMODATION will remain the same.  2)No record is inserted into T_RE_ACCOMODATIONs table.
+Test Case ID for Row 5265          : 47371
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.06.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47371
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47371
+Finished at                        : Thu May 23 09:59:03 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:03 EDT 2024
+Creating test case for Row #       : 5266
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 449
+TC Validation status               : PASS
+Short Desc                         : Accommodation audit is being updated.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Show accommodation audit is being updated for  transactons updates to T_RE_ACCOMODATIONs table
+Expected Results                   : A_T_RE_ACCOMMODATION table is udpated
+Test Case ID for Row 5266          : 47372
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.06.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47372
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47372
+Finished at                        : Thu May 23 09:59:07 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:07 EDT 2024
+Creating test case for Row #       : 5267
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 450
+TC Validation status               : PASS
+Short Desc                         : Elig Check for Mem Comm
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : Batch
+Long Desc                          : 1. Take the member having active benefit segment associated with the source agency which was last updated and update the fields cde_print_type,cde_communication_pref email ,num_cell_phone,cde_accommodation and it should follow the Hierarchy check and update the fields(Level 1: MHO/HIX, Level 2: SSA).  2. Take the member having inactive benefit segment associated with the source agency which was last updated and update the fields cde_print_type,cde_communication_pref email ,num_cell_phone,cde_accommodation and it should not follow the Hierarchy check and update the fields sent.
+Expected Results                   : 1. Data fields will get updated by following the Hierarchy level. 2. Data fields will get updated without the Hierarchy level check.
+Test Case ID for Row 5267          : 47373
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.06.015
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47373
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47373
+Finished at                        : Thu May 23 09:59:11 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:11 EDT 2024
+Creating test case for Row #       : 5268
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 466
+TC Validation status               : PASS
+Short Desc                         : Mem Comm pref and accom panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : Batch
+Long Desc                          : Check the Member Communication preference and Accomdation panel in the Member maintenance in Base with the following data elements and compare against T_RE_COMMUNICATION and T_RE_ACCOMDATION Tables in DB.  - Print type: (value stored in DB) - Communication preference: (value stored in DB) - Email from Member Communication Preference segment IF communication preference is "EMAIL" - Cell phone number from Member Communication Preference segment IF communication preference is "TEXT\SMS" - Written language: (same value as Language Written on Member Information panel) - Accommodation(s)- Display all (up to 9) accommodation values and descriptions stored in DB.
+Expected Results                   : Member Communication preference and Accomdation panel in the Member maintenance in Base with data elements will display and successfully validate against the  T_RE_COMMUNICATION and T_RE_ACCOMDATION Tables in DB for all members.
+Test Case ID for Row 5268          : 47374
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.07.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47374
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47374
+Finished at                        : Thu May 23 09:59:16 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:16 EDT 2024
+Creating test case for Row #       : 5269
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 443
+TC Validation status               : PASS
+Short Desc                         : Help(Mem Comm pref and accom  panel)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : Batch
+Long Desc                          : The HELP field text should display for the Member Communication preference and Accomdation panel and verify the following fields.  Print type: Member's notice print type Communication preference: Member's preferred method to receive notices Email: Email address where member has requested to receive electronic notifications Cell phone: Cell phone number where member has requested to receive electronic notifications Written language: Member's preferred written language Accommodation: Member's accommodation(s) requests 
+Expected Results                   : The HELP Field Text should display successfully for the Member Communication preference and Accomdation panel in Base.
+Test Case ID for Row 5269          : 47375
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.07.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47375
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47375
+Finished at                        : Thu May 23 09:59:20 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:20 EDT 2024
+Creating test case for Row #       : 5270
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 427
+TC Validation status               : PASS
+Short Desc                         : 1. Mem Comm & Accom seg for new
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : Batch
+Long Desc                          : 1. Add Member Communication preference  and Accomdation segment and create a new member, verify with DB. Case1: valid data Case2: Invalid data 2. Add Member Communication preference and Accomdation segment for the existing member, verify with DB. Case1: valid data Case2: Invalid data 3. In the Member Communication preference  and Accomdation segment, remove the Email and Num_cell_phone fields. 4. In the Member Communication preference  and Accomdation segment, remove the cde_print_type and cde_communication_pref fields, with keeping the other fields.
+Expected Results                   : 1. New member created successfully for Case 1 and not created for Case 2. 2. Changes made to existing member for Case 1 and no changes to Case 2.  3. There would be a Schema error. 4. There would be a Schema error.
+Test Case ID for Row 5270          : 47376
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.08.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47376
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47376
+Finished at                        : Thu May 23 09:59:24 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:24 EDT 2024
+Creating test case for Row #       : 5271
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 430
+TC Validation status               : PASS
+Short Desc                         : New member with email communication preference having email segment present
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a new member or update existing member with cde_communication_pref as "EMAIL" where  a) email attribute is missing  b) email value is missing  c) email value is invalid
+Expected Results                   : Receive following warning message  "Member Communication Preference Email address is missing or invalid"
+Test Case ID for Row 5271          : 47377
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.03.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47377
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47377
+Finished at                        : Thu May 23 09:59:29 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:29 EDT 2024
+Creating test case for Row #       : 5272
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 433
+TC Validation status               : PASS
+Short Desc                         : New member with NON-email communication preference not having email segment present
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a new member or update existing member with cde_communication_pref as "TEXT\SMS" without email segment
+Expected Results                   : Valid or invalid member communication preference email received should be ignored
+Test Case ID for Row 5272          : 47378
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.03.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47378
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47378
+Finished at                        : Thu May 23 09:59:33 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:33 EDT 2024
+Creating test case for Row #       : 5273
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 444
+TC Validation status               : PASS
+Short Desc                         : New member with NON-email communication preference not having email segment present
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a new member or update existing member with cde_communication_pref as "TEXT\SMS" with email segment
+Expected Results                   : Valid or invalid member communication preference email received should be ignored
+Test Case ID for Row 5273          : 47379
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.03.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47379
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47379
+Finished at                        : Thu May 23 09:59:37 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:37 EDT 2024
+Creating test case for Row #       : 5274
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 433
+TC Validation status               : PASS
+Short Desc                         : Existing member (without active benefits) with email communication preference and not having email segment present.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Update existing member (without open eligibility)  with cde_communication_pref as "EMAIL" without email segment
+Expected Results                   : Default Communication Preference "PAPER" is stored in T_RE_COMMUNICATION table
+Test Case ID for Row 5274          : 47380
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.03.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47380
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47380
+Finished at                        : Thu May 23 09:59:41 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:41 EDT 2024
+Creating test case for Row #       : 5275
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 446
+TC Validation status               : PASS
+Short Desc                         : Existing member (with active benefits) with email communication preference and not having email segment present.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Update existing member (with open eligibility)  with cde_communication_pref as "EMAIL" without email segment
+Expected Results                   : No updates made to the  T_RE_COMMUNICATION table
+Test Case ID for Row 5275          : 47381
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.03.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47381
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47381
+Finished at                        : Thu May 23 09:59:45 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:45 EDT 2024
+Creating test case for Row #       : 5276
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 709
+TC Validation status               : PASS
+Short Desc                         : New member with TEXT\SMS communication preference having num_cell_phone segment present
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a new member or update existing member with cde_communication_pref as "TEXT\SMS" with valid values for num_cell_phone
+Expected Results                   : Valid values for num_cell_phone gets stored in T_RE_COMMUNICATION table that is different than num_cell_phone in member demographics segment stored in table.
+Test Case ID for Row 5276          : 47382
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.04.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47382
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47382
+Finished at                        : Thu May 23 09:59:50 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:50 EDT 2024
+Creating test case for Row #       : 5277
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 447
+TC Validation status               : PASS
+Short Desc                         : New member with TEXT\SMS communication preference having num_cell_phone segment present
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a new member or update existing member with cde_communication_pref as "TEXT\SMS" where  a) num_cell_phone attribute is missing  b) num_cell_phone value is missing  c) num_cell_phone value is invalid
+Expected Results                   : Receive following warning message  "Member Communication Preference Phone number is missing"
+Test Case ID for Row 5277          : 47383
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.04.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47383
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47383
+Finished at                        : Thu May 23 09:59:54 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:54 EDT 2024
+Creating test case for Row #       : 5278
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 461
+TC Validation status               : PASS
+Short Desc                         : New member with non-TEXT/SMS communication preference not having num_cell_phone segment present
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a new member or update existing member with cde_communication_pref as "EMAIL" without num_cell_phone segment
+Expected Results                   : Valid or invalid member communication preference num_cell_phone received should be ignored
+Test Case ID for Row 5278          : 47384
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.04.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47384
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47384
+Finished at                        : Thu May 23 09:59:58 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 09:59:58 EDT 2024
+Creating test case for Row #       : 5279
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 454
+TC Validation status               : PASS
+Short Desc                         : New member with non-TEXT\SMS communication preference having num_cell_phone segment present
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a new member or update existing member with cde_communication_pref as "EMAIL" with num_cell_phone segment
+Expected Results                   : Valid or invalid member communication preference email received should be ignored.
+Test Case ID for Row 5279          : 47385
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.04.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47385
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47385
+Finished at                        : Thu May 23 10:00:02 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 10:00:02 EDT 2024
+Creating test case for Row #       : 5280
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 441
+TC Validation status               : PASS
+Short Desc                         : Existing member (without active benefits) with TEXT/SMS communication preference and not having num_cell_phone segment present.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Update existing member (without open eligibility)  with cde_communication_pref as "TEXT/SMS" without num_cell_phone segment
+Expected Results                   : Default Communication Preference "PAPER" is stored in T_RE_COMMUNICATION table
+Test Case ID for Row 5280          : 47386
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.04.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47386
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47386
+Finished at                        : Thu May 23 10:00:07 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 10:00:07 EDT 2024
+Creating test case for Row #       : 5281
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 731
+TC Validation status               : PASS
+Short Desc                         : Existing member (with active benefits) with TEXT/SMS communication preference and not having num_cell_phone segment present.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Update existing member (with open eligibility)  with cde_communication_pref as "TEXT/SMS" without num_cell_phone segment
+Expected Results                   : No updates made to the  T_RE_COMMUNICATION table
+Test Case ID for Row 5281          : 47387
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.04.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47387
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47387
+Finished at                        : Thu May 23 10:00:11 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 10:00:11 EDT 2024
+Creating test case for Row #       : 5282
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 468
+TC Validation status               : PASS
+Short Desc                         : Accommodation field, valid values and value descriptions
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Ensure all accommodation values are set to database.  Field name: cde_accommodation  Value: ASL Description: American Sign Language (ASL) interpreter  Value: ALD Description: Assistive listening device  Value: CART Description: Communication Access Real-time Translations (CART)  Value: LRG Description: Large print publications  Value: BRAILLE Description: Publications in braille  Value: TTY Description: Text telephone (TDD/TTY)  Value: VRS Description: Video Relay Service (VRS)  Value: EFORMAT Description: Publications in electronic format  Value: OTHER Description: Other  Value: NONE Description: No accommodation requested 
+Expected Results                   : Valid values will be placed in T_RE_ACCOMMODATION.
+Test Case ID for Row 5282          : 47388
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.05.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47388
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47388
+Finished at                        : Thu May 23 10:00:16 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 10:00:16 EDT 2024
+Creating test case for Row #       : 5283
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 497
+TC Validation status               : PASS
+Short Desc                         : cde_accommodation hierarchy
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a new member with agency SSA with cde_accommodation value and then update the field with with MHO or HIX.  The following agency hierarchy shall be used for the purpose of updating cde_accommodation value(s).   1. MHO, HIX 2. SSA
+Expected Results                   : If, 1) All accommodations are the same: Agency gets updated.  2) Accommodations are different: Replace all accommodation values and Agency will match transaction.  3) Transaction has no valid nor any accommodations: Do not update or insert blank records.
+Test Case ID for Row 5283          : 47389
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.05.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47389
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47389
+Finished at                        : Thu May 23 10:00:20 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 10:00:20 EDT 2024
+Creating test case for Row #       : 5284
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 445
+TC Validation status               : PASS
+Short Desc                         : cde_accommodation hierarchy
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a member with active eligibility with agency MHO or HIX with cde_accommodation and then update the field with agency SSA.  The following agency hierarchy shall be used for the purpose of updating cde_accommodation value(s).   1. MHO, HIX 2. SSA
+Expected Results                   : Record in T_RE_ACCOMMODATION will remain the same.
+Test Case ID for Row 5284          : 47390
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.05.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47390
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47390
+Finished at                        : Thu May 23 10:00:25 EDT 2024
+*****************************************************************
+Started at                         : Thu May 23 10:00:25 EDT 2024
+Creating test case for Row #       : 5285
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 427
+TC Validation status               : PASS
+Short Desc                         : cde_accommodation hierarchy
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : Create a new member with agency MHO or HIX with cde_accommodation value and then update the field with with MHO or HIX.  The following agency hierarchy shall be used for the purpose of updating cde_accommodation value(s).   1. MHO, HIX 2. SSA
+Expected Results                   : If,  1) All accommodations are the same and same agency: No change.  2) All accommodations are the same and different but same level agency: Agency gets updated.  3) Accommodations are different and same agency: Replace all accommodation values and Agency will remain the same.  Transaction has no valid nor any accommodations: Do not update or insert blank records. Accommodations are different and different but same level agency: Replace all accommodation values and Agency will match transaction.
+Test Case ID for Row 5285          : 47391
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37519.05.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47391
+Notebook                           : 2024 July CNS Release
+Business Function                  : 2024 July CNS Release
+Notebook/BF linked for test case   : 47391
+Finished at                        : Thu May 23 10:00:29 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 23/May/2024 10:00:30AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

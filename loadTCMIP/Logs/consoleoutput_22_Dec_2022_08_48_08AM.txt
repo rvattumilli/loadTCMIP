@@ -1,0 +1,37 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 22/Dec/2022 08:48:08AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 59
+
+****************************************************
+                  NO DATA THIS RUN                  
+****************************************************
+
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 22/Dec/2022 08:48:14AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

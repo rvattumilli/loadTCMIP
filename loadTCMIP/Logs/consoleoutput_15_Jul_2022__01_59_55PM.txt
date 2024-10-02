@@ -1,0 +1,187 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 15/Jul/2022 01:59:55PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Fri Jul 15 14:00:07 EDT 2022
+Creating test case for Row #       : 939
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Pay ICO Capition; Elig for Entire Month
+Long Desc                          : Pay ICO Capitation if the member is enrolled for the entire month
+Expected Results                   : ICO Capitaiton is paid
+Grouping                           : MC CAPITATION
+Associated iWI/Defect/CO           : 36074
+Associated iWI Type                : Defect
+Associated Req ID                  : 36074.01.001
+Test Case ID for Row 939           : 41630
+Requirement linked for test case   : 41630
+Notebook/BF linked for test case   : 41630
+Finished at                        : Fri Jul 15 14:00:16 EDT 2022
+****************************************************
+Started at                         : Fri Jul 15 14:00:16 EDT 2022
+Creating test case for Row #       : 940
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Pay ICO Capition; Elig for Part of Month
+Long Desc                          : Pay ICO Capitation if the member is enrolled for the part of the month
+Expected Results                   : ICO Capitaiton is paid
+Grouping                           : MC CAPITATION
+Associated iWI/Defect/CO           : 36074
+Associated iWI Type                : Defect
+Associated Req ID                  : 36074.01.001
+Test Case ID for Row 940           : 41631
+Requirement linked for test case   : 41631
+Notebook/BF linked for test case   : 41631
+Finished at                        : Fri Jul 15 14:00:24 EDT 2022
+****************************************************
+Started at                         : Fri Jul 15 14:00:24 EDT 2022
+Creating test case for Row #       : 941
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Pay ICO Capition; Elig for one day of Month
+Long Desc                          : Pay ICO Capitation if the member is enrolled for one day of the month
+Expected Results                   : ICO Capitaiton is paid
+Grouping                           : MC CAPITATION
+Associated iWI/Defect/CO           : 36074
+Associated iWI Type                : Defect
+Associated Req ID                  : 36074.01.001
+Test Case ID for Row 941           : 41632
+Requirement linked for test case   : 41632
+Notebook/BF linked for test case   : 41632
+Finished at                        : Fri Jul 15 14:00:34 EDT 2022
+****************************************************
+Started at                         : Fri Jul 15 14:00:34 EDT 2022
+Creating test case for Row #       : 942
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Pay ICO Capition; Elig for one day of Month with special condition
+Long Desc                          : Pay ICO Capitation if the member is enrolled for one day of the month
+Expected Results                   : ICO Capitaiton is paid
+Grouping                           : MC CAPITATION
+Associated iWI/Defect/CO           : 36074
+Associated iWI Type                : Defect
+Associated Req ID                  : 36074.01.001
+Test Case ID for Row 942           : 41633
+Requirement linked for test case   : 41633
+Notebook/BF linked for test case   : 41633
+Finished at                        : Fri Jul 15 14:00:42 EDT 2022
+****************************************************
+Started at                         : Fri Jul 15 14:00:42 EDT 2022
+Creating test case for Row #       : 943
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Pay ICO Recon; Elig for Entire Month
+Long Desc                          : Pay ICO Recon if the member is enrolled for the entire month
+Expected Results                   : ICO Recon is paid
+Grouping                           : MC CAPITATION
+Associated iWI/Defect/CO           : 36074
+Associated iWI Type                : Defect
+Associated Req ID                  : 36074.01.001
+Test Case ID for Row 943           : 41634
+Requirement linked for test case   : 41634
+Notebook/BF linked for test case   : 41634
+Finished at                        : Fri Jul 15 14:00:50 EDT 2022
+****************************************************
+Started at                         : Fri Jul 15 14:00:50 EDT 2022
+Creating test case for Row #       : 944
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Pay ICO Recon; Elig for Part of Month
+Long Desc                          : Pay ICO Recon if the member is enrolled for the part of the month
+Expected Results                   : ICO Recon is paid
+Grouping                           : MC CAPITATION
+Associated iWI/Defect/CO           : 36074
+Associated iWI Type                : Defect
+Associated Req ID                  : 36074.01.001
+Test Case ID for Row 944           : 41635
+Requirement linked for test case   : 41635
+Notebook/BF linked for test case   : 41635
+Finished at                        : Fri Jul 15 14:00:58 EDT 2022
+****************************************************
+Started at                         : Fri Jul 15 14:00:58 EDT 2022
+Creating test case for Row #       : 945
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Pay ICO Recon; Elig for one day of Month
+Long Desc                          : Pay ICO Recon if the member is enrolled for the part of the month
+Expected Results                   : ICO Recon is paid
+Grouping                           : MC CAPITATION
+Associated iWI/Defect/CO           : 36074
+Associated iWI Type                : Defect
+Associated Req ID                  : 36074.01.001
+Test Case ID for Row 945           : 41636
+Requirement linked for test case   : 41636
+Notebook/BF linked for test case   : 41636
+Finished at                        : Fri Jul 15 14:01:06 EDT 2022
+****************************************************
+Started at                         : Fri Jul 15 14:01:06 EDT 2022
+Creating test case for Row #       : 946
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Pay ICO Recon; Elig for one day of Month with special condition
+Long Desc                          : Pay ICO Recon if the member is enrolled for the part of the month
+Expected Results                   : ICO Recon is paid
+Grouping                           : MC CAPITATION
+Associated iWI/Defect/CO           : 36074
+Associated iWI Type                : Defect
+Associated Req ID                  : 36074.01.001
+Test Case ID for Row 946           : 41637
+Requirement linked for test case   : 41637
+Notebook/BF linked for test case   : 41637
+Finished at                        : Fri Jul 15 14:01:14 EDT 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 15/Jul/2022 02:01:18PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

@@ -1,0 +1,154 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 29/Sep/2023 10:35:31AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.DAYS_TO_RESET_PWD > 2
+Query Execution Time(ms)           : 51
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 338
+Total No.of Rows fetched           : 4
+*****************************************************************
+Started at                         : Fri Sep 29 10:35:39 EDT 2023
+Creating test case for Row #       : 4612
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37140.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 427
+Validation status                  : PASS
+Short Desc                         : Asmnt 4 after disch date
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send sig change 4 for a discharged member after the discharge date
+Expected Results                   : LOC row will not be accepted and will be Pending.
+Test Case ID for Row 4612          : 46603
+Query Execution Time(ms)           : 63
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37140.01.001
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46603
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46603
+Finished at                        : Fri Sep 29 10:35:43 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 29 10:35:43 EDT 2023
+Creating test case for Row #       : 4613
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37140.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 480
+Validation status                  : PASS
+Short Desc                         : History the seg after disc dte
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Chose a member that has a mds record  after the discharge date. Example,  member has , 01/01/23-04/30/2023 05/01/2023-07/30/2023 send in discharge asmnt of 04/27/2023
+Expected Results                   : date will change from 01/01/2023-04/27/2023 05/01/2023-07/30/2023 will be marked history
+Test Case ID for Row 4613          : 46604
+Query Execution Time(ms)           : 51
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37140.01.001
+Query Execution Time(ms)           : 29
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46604
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46604
+Finished at                        : Fri Sep 29 10:35:47 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 29 10:35:47 EDT 2023
+Creating test case for Row #       : 4614
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37140.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 413
+Validation status                  : PASS
+Short Desc                         : SC-1 trumps MDS asmnt
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Member has discharge asmnt (10) and a different discharge date via SC-1. Send in asmnt type 04. Example, 01/01/2023-04/30/2023  send in discharge asmnt of 04/27/2023 change the discharge via ui as 04/28/2023 send in asmnt type 4 with ard date 03/15/2023
+Expected Results                   : discharge via ui as 04/28/2023 will take precedence and will be displayed as  01/01/2023-03/14/2015 03/15/2023-04/28/2023
+Test Case ID for Row 4614          : 46605
+Query Execution Time(ms)           : 66
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37140.01.001
+Query Execution Time(ms)           : 22
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46605
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46605
+Finished at                        : Fri Sep 29 10:35:52 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 29 10:35:52 EDT 2023
+Creating test case for Row #       : 4615
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37140.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 387
+Validation status                  : PASS
+Short Desc                         : Reg: Asmnt 11 not affected
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send in asmnt 11 and then asmnt 2 after
+Expected Results                   : Asmnt 2 should be inserted
+Test Case ID for Row 4615          : 46606
+Query Execution Time(ms)           : 66
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37140.01.001
+Query Execution Time(ms)           : 24
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46606
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46606
+Finished at                        : Fri Sep 29 10:35:56 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 29/Sep/2023 10:35:56AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

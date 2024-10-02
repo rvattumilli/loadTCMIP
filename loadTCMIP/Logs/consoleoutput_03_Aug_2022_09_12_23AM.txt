@@ -1,0 +1,251 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 03/Aug/2022 09:12:23AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Wed Aug 03 09:12:32 EDT 2022
+Creating test case for Row #       : 1081
+Short Desc                         : New MID generated when new matching criteria conditions are met
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member does not exist in MMIS. Incoming transaction from DSS, with no MID, cde_cat_care="ADP".
+Expected Results                   : New MID shall be generated after new MID matching criteria check is performed.
+Test Case ID for Row 1081          : 41839
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41839
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41839
+Finished at                        : Wed Aug 03 09:12:38 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:12:38 EDT 2022
+Creating test case for Row #       : 1082
+Short Desc                         : New MID generated for ADP when existing DSS MID w/SSN is not ADP
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member has existing active MID in MMIS with agency as DSS, cde_cat_care="FOS" and SSN. Incoming transaction from DSS where id_medicaid is blank and and cde_cat_care ="ADP", same FN, LN, DOB, gender and ZIP as existing MID.
+Expected Results                   : New MID shall be generated after new MID matching criteria check is performed.
+Test Case ID for Row 1082          : 41840
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41840
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41840
+Finished at                        : Wed Aug 03 09:12:42 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:12:42 EDT 2022
+Creating test case for Row #       : 1083
+Short Desc                         : New MID for ADP when existing DSS MID has no SSN and not ADP
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member has existing active MID in MMIS with agency as DSS, cde_cat_care="FOS" and no SSN. Incoming transaction from DSS where id_medicaid is blank and and cde_cat_care ="ADP", same FN, LN, DOB, gender and ZIP as existing MID.
+Expected Results                   : New MID shall be generated after new MID matching criteria check is performed.
+Test Case ID for Row 1083          : 41841
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41841
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41841
+Finished at                        : Wed Aug 03 09:12:45 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:12:45 EDT 2022
+Creating test case for Row #       : 1084
+Short Desc                         : No new MID generated for existing DSS ADP member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member already has active MID with agency as DSS and cde_dat_care="ADP". Incoming transaction from DSS with existing id_medicaid and cde_cat_care ="ADP".
+Expected Results                   : No new MID generated after new MID matching criteria check is performed. System finds existing MID with matching MIDs
+Test Case ID for Row 1084          : 41842
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41842
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41842
+Finished at                        : Wed Aug 03 09:12:49 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:12:49 EDT 2022
+Creating test case for Row #       : 1085
+Short Desc                         : No new MID generated for existing DSS non ADP member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member has existing active MID with agency as DSS, cde_cat_care="GRD". Incoming transaction from DSS where id_medicaid is blank, cde_cat_care="FOS" and same FN, LN, id_other.
+Expected Results                   : No new MID generated after new MID matching criteria check is performed. System finds existing MID with matching FN, LN, id_other and id_source.
+Test Case ID for Row 1085          : 41843
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41843
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41843
+Finished at                        : Wed Aug 03 09:12:53 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:12:53 EDT 2022
+Creating test case for Row #       : 1086
+Short Desc                         : No new MID generated, matched based on existing criteria
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member already exists with active MID with agency source MHO. Incoming transaction from DTA, id_medicaid is blank, no cde_cat_care, same FN, LN, SSN & DOB as existing MID.
+Expected Results                   : No new MID generated after new MID matching criteria check is performed. System finds existing MID with matching FN, LN, SSN and DOB.
+Test Case ID for Row 1086          : 41844
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41844
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41844
+Finished at                        : Wed Aug 03 09:12:56 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:12:56 EDT 2022
+Creating test case for Row #       : 1087
+Short Desc                         : No new MID generated, matched based on existing criteria
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member already exists with active MID with agency source SSA. Incoming transaction from HIX, id_medicaid is blank, same FN, LN, SSN, MM DD of DOB, different YYYY.
+Expected Results                   : No new MID generated after new MID matching criteria check is performed. System finds existing MID with matching FN, LN, SSN and 2 out of 3 DOB components
+Test Case ID for Row 1087          : 41845
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41845
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41845
+Finished at                        : Wed Aug 03 09:13:00 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:13:00 EDT 2022
+Creating test case for Row #       : 1088
+Short Desc                         : No new MID generated, matched based on existing criteria
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member already exists with active MID with agency source DTA. Incoming transaction from DYS, id_medicaid is blank, same first initial of FN, same LN, SSN, DOB and gender as existing MID.
+Expected Results                   : No new MID generated after new MID matching criteria check is performed. System finds existing MID with matching first initial of FN, LN, SSN, DOB and gender
+Test Case ID for Row 1088          : 41846
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41846
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41846
+Finished at                        : Wed Aug 03 09:13:03 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:13:03 EDT 2022
+Creating test case for Row #       : 1089
+Short Desc                         : No new MID generated, matched based on existing criteria
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member already exists with active MID with agency source DMH. Incoming transaction from HIX, id_medicaid is blank, same first 4 letters of FN, LN, Gender, YYYY and MM of DOB, different DD
+Expected Results                   : No new MID generated after new MID matching criteria check is performed. System finds existing MID with matching first 4 letters of FN, LN, Gender and 2 out of 3 DOB components
+Test Case ID for Row 1089          : 41847
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41847
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41847
+Finished at                        : Wed Aug 03 09:13:06 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:13:06 EDT 2022
+Creating test case for Row #       : 1090
+Short Desc                         : No new MID generated, matched based on existing criteria
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member already exists with active MID with SSN and agency source DSS. Incoming transaction from DTA, id_medicaid is blank, same SSN, Gender, DOB and first initial of FN as existing MID.
+Expected Results                   : No new MID generated after new MID matching criteria check is performed. System finds existing MID with matching SSN, Gender, DOB and first initial of FN.
+Test Case ID for Row 1090          : 41848
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41848
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41848
+Finished at                        : Wed Aug 03 09:13:10 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:13:10 EDT 2022
+Creating test case for Row #       : 1091
+Short Desc                         : No new MID generaged with new or existing match criteria, MDM call
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Incoming transaction from DSS, id_medicaid is blank, cde_cat_care="FOS". No match found per existing matching criteria combinations with id_medicaid, id_other, id_source, FN, LN, DOB, SSN, Gender & Zip
+Expected Results                   : After performing new and existing matching criteria checks with no matches found, system makes call to MDM. MDM does not return match, MMIS generates new MID
+Test Case ID for Row 1091          : 41849
+Associated Req ID                  : 36011.01.001
+Requirement linked for test case   : 41849
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41849
+Finished at                        : Wed Aug 03 09:13:14 EDT 2022
+****************************************************
+Started at                         : Wed Aug 03 09:13:14 EDT 2022
+Creating test case for Row #       : 1092
+Short Desc                         : New matching criteria will be 1st step of matching process
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Member has existing active MID in MMIS with agency as HIX. Incoming transaction from DSS, id_medicaid is blank, cde_cat_care="ADP", same FN, LN, DOB, Gender and Zip as existing MID
+Expected Results                   : New MID shall be generated after new MID matching criteria check is performed. System should not match existing MID with same FN, LN, DOB, Gender and Zip.
+Test Case ID for Row 1092          : 41850
+Associated Req ID                  : 36011.01.002
+Requirement linked for test case   : 41850
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41850
+Finished at                        : Wed Aug 03 09:13:17 EDT 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 03/Aug/2022 09:13:17AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

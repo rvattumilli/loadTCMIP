@@ -1,0 +1,250 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 13/Aug/2021 11:43:32AM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Started at: Fri Aug 13 11:43:40 EDT 2021
+Creating test case for TC Row : 593
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "NF" - Mbr Exempt
+Long Desc                     : "Member with who has any of the below level of care = NF - Nursing Facility 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 593      : 40476
+Notebook/Business function linked for test case 40476
+Work item linked for test case 40476
+Finished at: Fri Aug 13 11:43:57 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:43:57 EDT 2021
+Creating test case for TC Row : 594
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4H" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4H - Mmq Score <= 30. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 594      : 40477
+Notebook/Business function linked for test case 40477
+Work item linked for test case 40477
+Finished at: Fri Aug 13 11:44:14 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:44:14 EDT 2021
+Creating test case for TC Row : 595
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4J" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4J - Mmq Score 30.1 - 85.0. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 595      : 40478
+Notebook/Business function linked for test case 40478
+Work item linked for test case 40478
+Finished at: Fri Aug 13 11:44:31 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:44:31 EDT 2021
+Creating test case for TC Row : 596
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4K" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4K - Mmq Score 85.1 - 110.0. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 596      : 40479
+Notebook/Business function linked for test case 40479
+Work item linked for test case 40479
+Finished at: Fri Aug 13 11:44:48 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:44:48 EDT 2021
+Creating test case for TC Row : 597
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4L" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4L - Mmq Score 110.1 - 140.0. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 597      : 40480
+Notebook/Business function linked for test case 40480
+Work item linked for test case 40480
+Finished at: Fri Aug 13 11:45:05 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:45:05 EDT 2021
+Creating test case for TC Row : 598
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4M" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4M - Mmq Score 140.1 - 170.0. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 598      : 40481
+Notebook/Business function linked for test case 40481
+Work item linked for test case 40481
+Finished at: Fri Aug 13 11:45:21 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:45:21 EDT 2021
+Creating test case for TC Row : 599
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4N" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4N - Mmq Score 170.1 - 200.0. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 599      : 40482
+Notebook/Business function linked for test case 40482
+Work item linked for test case 40482
+Finished at: Fri Aug 13 11:45:38 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:45:38 EDT 2021
+Creating test case for TC Row : 600
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4P" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4P - Mmq Score 200.1 - 225.0. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 600      : 40483
+Notebook/Business function linked for test case 40483
+Work item linked for test case 40483
+Finished at: Fri Aug 13 11:45:55 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:45:55 EDT 2021
+Creating test case for TC Row : 601
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4R" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4R - Mmq Score 225.1 - 245.0. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 601      : 40484
+Notebook/Business function linked for test case 40484
+Work item linked for test case 40484
+Finished at: Fri Aug 13 11:46:12 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:46:12 EDT 2021
+Creating test case for TC Row : 602
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4S" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4S - Mmq Score 245.1 - 270.0. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 602      : 40485
+Notebook/Business function linked for test case 40485
+Work item linked for test case 40485
+Finished at: Fri Aug 13 11:46:29 EDT 2021
+************************************************************************
+Started at: Fri Aug 13 11:46:29 EDT 2021
+Creating test case for TC Row : 603
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Non Exempt Mbr  - LOC "4T" - Mbr Exempt
+Long Desc                     : "Member with who has level of care = 4T - Mmq Score 270.1 And Greater. 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : After the 370 job runs, member is exempt.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 603      : 40486
+Notebook/Business function linked for test case 40486
+Work item linked for test case 40486
+Finished at: Fri Aug 13 11:46:45 EDT 2021
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 13/Aug/2021 11:46:46AM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

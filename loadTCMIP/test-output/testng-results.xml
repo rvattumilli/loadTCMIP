@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-27T12:18:34 EDT" name="LoadTCMIP" finished-at="2024-09-27T12:18:51 EDT" duration-ms="17037">
+    <groups>
+    </groups>
+    <test started-at="2024-09-27T12:18:34 EDT" name="Load TC in MIP" finished-at="2024-09-27T12:18:51 EDT" duration-ms="17037">
+      <class name="loadTCMIP.LoadTCMIP">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:loadTCMIP.LoadTCMIP@27462a88]" started-at="2024-09-27T12:18:34 EDT" name="beforeSuite" finished-at="2024-09-27T12:18:34 EDT" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String,boolean,java.lang.String)[pri:0, instance:loadTCMIP.LoadTCMIP@27462a88]" started-at="2024-09-27T12:18:34 EDT" name="beforeTest" finished-at="2024-09-27T12:18:40 EDT" duration-ms="5857" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[09/17/2024]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="enterTC()[pri:0, instance:loadTCMIP.LoadTCMIP@27462a88]" started-at="2024-09-27T12:18:40 EDT" name="enterTC" finished-at="2024-09-27T12:18:51 EDT" duration-ms="10689" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterTC -->
+        <test-method is-config="true" signature="afterTest(boolean)[pri:0, instance:loadTCMIP.LoadTCMIP@27462a88]" started-at="2024-09-27T12:18:51 EDT" name="afterTest" finished-at="2024-09-27T12:18:51 EDT" duration-ms="472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:loadTCMIP.LoadTCMIP@27462a88]" started-at="2024-09-27T12:18:51 EDT" name="afterSuite" finished-at="2024-09-27T12:18:51 EDT" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- loadTCMIP.LoadTCMIP -->
+    </test> <!-- Load TC in MIP -->
+  </suite> <!-- LoadTCMIP -->
+</testng-results>

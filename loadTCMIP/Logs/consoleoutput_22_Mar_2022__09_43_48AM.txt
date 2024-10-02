@@ -1,0 +1,175 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 22/Mar/2022 09:43:48AM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+***************************************************
+Started at                         : Tue Mar 22 09:43:58 EDT 2022
+Creating test case for TC Row      : 902
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Active member with > 0 copay amount
+Long Desc                          : During Member linking process, update T_RE_COPAY_TRACKING with 0 copay amount in active MID if the MID to be inactive has 0 for the current tracking period.
+Expected Results                   : The current tracking period will be updated to 0 for Tracking Record.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35181
+Associated WI Type                 : Work Item
+Test Case ID for Row 902           : 41275
+Notebook/BF linked for test case   : 41275
+Work item/CO linked for test case  : 41275
+Finished at                        : Tue Mar 22 09:44:15 EDT 2022
+***************************************************
+Started at                         : Tue Mar 22 09:44:15 EDT 2022
+Creating test case for TC Row      : 903
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Active member with > 0 copay amount for current tracking record
+Long Desc                          : During Member linking process, update T_RE_COPAY_TRACKING with 0 copay amount in active MID if the MID to be inactive has 0 for the current tracking period. It should not update the historical/past records.
+Expected Results                   : Only the current tracking period will be updated to 0 for Tracking Record.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35181
+Associated WI Type                 : Work Item
+Test Case ID for Row 903           : 41276
+Notebook/BF linked for test case   : 41276
+Work item/CO linked for test case  : 41276
+Finished at                        : Tue Mar 22 09:44:31 EDT 2022
+***************************************************
+Started at                         : Tue Mar 22 09:44:31 EDT 2022
+Creating test case for TC Row      : 904
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Acitve member with > 0 copay amount and same agency
+Long Desc                          : During member linking process, if the members have Same agency affiliation and with same dates where the active has non-zero amount and the inactive MID has 0 copay amount, Update T_RE_COPAY_TRACKING table so that the Active MID is updated with the lowest copay cap amount, even if the lowest amount is 0
+Expected Results                   : The active record will be updated to zero, both tracking and segment records.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35181
+Associated WI Type                 : Work Item
+Test Case ID for Row 904           : 41277
+Notebook/BF linked for test case   : 41277
+Work item/CO linked for test case  : 41277
+Finished at                        : Tue Mar 22 09:44:47 EDT 2022
+***************************************************
+Started at                         : Tue Mar 22 09:44:47 EDT 2022
+Creating test case for TC Row      : 905
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Acitve member with 0 copay amount
+Long Desc                          : During member linking process, if the members have Same agency affiliation and with same dates where the active has zero amount and the inactive MID has non-zero copay amount, data should retain on Active MID
+Expected Results                   : No changes for active record in tracking and segment records.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35181
+Associated WI Type                 : Work Item
+Test Case ID for Row 905           : 41278
+Notebook/BF linked for test case   : 41278
+Work item/CO linked for test case  : 41278
+Finished at                        : Tue Mar 22 09:45:03 EDT 2022
+***************************************************
+Started at                         : Tue Mar 22 09:45:03 EDT 2022
+Creating test case for TC Row      : 906
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Active and Inactive member's different copay amount
+Long Desc                          : During member linking process, if the members have different agency affiliation and different Copay Cap amount with overlapping Copay Cap Start Dates (Same tracking period), Update T_RE_COPAY_TRACKING table so that the Active MID is updated with the lowest copay cap amount, even if the lowest amount is 0
+Expected Results                   : Tracking record will have the smallest amount between the two and a new segment record would be inserted for the active member.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35181
+Associated WI Type                 : Work Item
+Test Case ID for Row 906           : 41279
+Notebook/BF linked for test case   : 41279
+Work item/CO linked for test case  : 41279
+Finished at                        : Tue Mar 22 09:45:20 EDT 2022
+***************************************************
+Started at                         : Tue Mar 22 09:45:20 EDT 2022
+Creating test case for TC Row      : 907
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Active member with no current tracking period
+Long Desc                          : During member linking process, if the members have Different agency affiliation and different Copay Cap amount with Copay Cap Start Dates that do not overlap (Different tracking period), Update T_RE_COPAY_TRACKING table so that the data gets carried from inactive MID to active, even if the lowest amount on inactive MID is 0
+Expected Results                   : Add the non-overlapping segment records to active member.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35181
+Associated WI Type                 : Work Item
+Test Case ID for Row 907           : 41280
+Notebook/BF linked for test case   : 41280
+Work item/CO linked for test case  : 41280
+Finished at                        : Tue Mar 22 09:45:36 EDT 2022
+***************************************************
+Started at                         : Tue Mar 22 09:45:36 EDT 2022
+Creating test case for TC Row      : 908
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Link with multiple members
+Long Desc                          : During member linking process, if the multiple members (more than two members) have different agency affiliation and different Copay Cap amount with overlapping Copay Cap Start Dates (Same tracking period), Update T_RE_COPAY_TRACKING table so that the Active MID is updated with the lowest copay cap amount, even if the lowest amount is 0
+Expected Results                   : Update the active tracking and segment records with the smallest amount.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35181
+Associated WI Type                 : Work Item
+Test Case ID for Row 908           : 41281
+Notebook/BF linked for test case   : 41281
+Work item/CO linked for test case  : 41281
+Finished at                        : Tue Mar 22 09:45:55 EDT 2022
+***************************************************
+Started at                         : Tue Mar 22 09:45:55 EDT 2022
+Creating test case for TC Row      : 909
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Inactive member with exempt for current tracking period
+Long Desc                          : Inactive MID is exempt and active is not.  Then run ELGJD370 to show BRE process the active MID new data.
+Expected Results                   : The active members new data will lead to ELGJD370 (Daily BRE) to update the active MIDs tracking record to exempt.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35181
+Associated WI Type                 : Work Item
+Test Case ID for Row 909           : 41282
+Notebook/BF linked for test case   : 41282
+Work item/CO linked for test case  : 41282
+Finished at                        : Tue Mar 22 09:46:11 EDT 2022
+***************************************************
+Logged out
+***************************************************
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 22/Mar/2022 09:46:12AM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

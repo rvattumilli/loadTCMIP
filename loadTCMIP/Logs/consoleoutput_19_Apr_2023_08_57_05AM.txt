@@ -1,0 +1,1137 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 19/Apr/2023 08:57:05AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 54
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+MIP Username                       : rvattumi
+User Name                          : rvattumilli
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) wi_type, trim(a.id_req) id_req, f.nam req_type, f.sak_req_type from rvattumi.load_tc a, co_participant b, co c, co_type d, requirement e, requirement_type f where c.sak_csr = a.wi_test_case and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and d.sak_csr_type = c.sak_csr_type and e.sak_req_type = f.sak_req_type and trim(a.id_req) = trim(e.id_req) and testcase_id is null order by tc_row asc
+No.of Cols                         : 16
+Query Execution Time(ms)           : 146
+Total No.of Rows                   : 44
+****************************************************
+Started at                         : Wed Apr 19 08:57:14 EDT 2023
+Creating test case for Row #       : 1852
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 54
+Validation Time(ms)                : 536
+Validation status                  : PASS
+Short Desc                         : MCO/ACO/MBHP Date Range Parms
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 01/01/2020 - 12/31/2022
+Expected Results                   : Parms are correctly set
+Test Case ID for Row 1852          : 43117
+Query Execution Time(ms)           : 61
+Requirement ID                     : 36054.01.002
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43117
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43117
+Finished at                        : Wed Apr 19 08:57:19 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:19 EDT 2023
+Creating test case for Row #       : 1853
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 521
+Validation status                  : PASS
+Short Desc                         : SCO/PACE Date Range Parms
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 01/01/2016 - 12/31/2021
+Expected Results                   : Parms are correctly set
+Test Case ID for Row 1853          : 43118
+Query Execution Time(ms)           : 61
+Requirement ID                     : 36054.01.002
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43118
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43118
+Finished at                        : Wed Apr 19 08:57:23 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:23 EDT 2023
+Creating test case for Row #       : 1854
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 566
+Validation status                  : PASS
+Short Desc                         : ICO Date Range Parms
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 01/01/2018 - 12/31/2022
+Expected Results                   : Parms are correctly set
+Test Case ID for Row 1854          : 43119
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36054.01.002
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43119
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43119
+Finished at                        : Wed Apr 19 08:57:27 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:27 EDT 2023
+Creating test case for Row #       : 1855
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 513
+Validation status                  : PASS
+Short Desc                         : Programs to Recoup
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Recoup Programs MSTD, MSTDA, MFAS, CRPLS, CRPLA, MSKSC, ACOB, SCO, ICO, CBHI1
+Expected Results                   : Parms are correctly set
+Test Case ID for Row 1855          : 43120
+Query Execution Time(ms)           : 79
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43120
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43120
+Finished at                        : Wed Apr 19 08:57:30 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:30 EDT 2023
+Creating test case for Row #       : 1856
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 559
+Validation status                  : PASS
+Short Desc                         : Programs to not Recoup
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Don't Recoup Programs MFASA, BH, CPBH, CBHI2, PACE
+Expected Results                   : Parms are correctly set
+Test Case ID for Row 1856          : 43121
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43121
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43121
+Finished at                        : Wed Apr 19 08:57:34 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:34 EDT 2023
+Creating test case for Row #       : 1857
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 499
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD MSTD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100011173356 has SoT DOD 04/28/2020
+Expected Results                   : Months 05/2020 and 06/2020 are recouped.  Month 04/2020 is not recouped.  Appears on the Activity Report.
+Test Case ID for Row 1857          : 43122
+Query Execution Time(ms)           : 61
+Requirement ID                     : 36054.01.004
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43122
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43122
+Finished at                        : Wed Apr 19 08:57:38 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:38 EDT 2023
+Creating test case for Row #       : 1858
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 543
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD MSTDA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100004334262 has SoT DOD 12/17/2020
+Expected Results                   : Months 01/2021, 02/2021 and 03/2021 are recouped.  Month 12/2020 is not recouped.  Appears on the Activity Report
+Test Case ID for Row 1858          : 43123
+Query Execution Time(ms)           : 84
+Requirement ID                     : 36054.01.004
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43123
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43123
+Finished at                        : Wed Apr 19 08:57:42 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:42 EDT 2023
+Creating test case for Row #       : 1859
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 524
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD MFAS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100220007122 has SoT DOD 03/03/2021
+Expected Results                   : Month 05/2021 is recouped.  Month 04/2021 partial split MFAS is recouped and reported on the Activity Report. Month 04/2021 partial split MFASA is not recouped.
+Test Case ID for Row 1859          : 43124
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43124
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43124
+Finished at                        : Wed Apr 19 08:57:47 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:47 EDT 2023
+Creating test case for Row #       : 1860
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 519
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD CRPLS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100010811766 has SoT DOD 04/22/2022
+Expected Results                   : Month 05/2022 and 06/2022 are recouped.  Month 04/2022 is not recouped.  Appears on Activity Report.
+Test Case ID for Row 1860          : 43125
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36054.01.004
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43125
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43125
+Finished at                        : Wed Apr 19 08:57:51 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:51 EDT 2023
+Creating test case for Row #       : 1861
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 521
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD CRPLA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100007341728 has SoT DOD 10/04/2021
+Expected Results                   : Months 11/2021, 12/2021, 01/2022, 02/2022 are recouped.  Month 10/2021 is not recouped. Appears on Activity Report.
+Test Case ID for Row 1861          : 43126
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36054.01.004
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43126
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43126
+Finished at                        : Wed Apr 19 08:57:55 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:55 EDT 2023
+Creating test case for Row #       : 1862
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 506
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD MSKSC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100226366035 has SoT DOD 03/14/2021
+Expected Results                   : Months 04/2021, 05/2021are recouped.  Month 03/2021 is not recouped. Appears on Activity Report.
+Test Case ID for Row 1862          : 43127
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36054.01.004
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43127
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43127
+Finished at                        : Wed Apr 19 08:57:59 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:57:59 EDT 2023
+Creating test case for Row #       : 1863
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 571
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD ACOB
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100003968722 has SoT DOD 09/19/2020
+Expected Results                   : Month 10/2020 ACOB is recouped.  Month 10/2020 CPBH is not recouped.  Appears on Activity Report.
+Test Case ID for Row 1863          : 43128
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43128
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43128
+Finished at                        : Wed Apr 19 08:58:03 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:03 EDT 2023
+Creating test case for Row #       : 1864
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 497
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD SCO
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100004331219 has Sot DOD 04/06/2020
+Expected Results                   : Month 05/2020 and 06/2020 are recouped.  Month 04/2020 is not recouped.  Appears on Activity Report.
+Test Case ID for Row 1864          : 43129
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36054.01.004
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43129
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43129
+Finished at                        : Wed Apr 19 08:58:07 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:07 EDT 2023
+Creating test case for Row #       : 1865
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 497
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD ICO
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100032769067 has SoT DOD 03/18/2020
+Expected Results                   : Month 04/2020, 05/2020, 06/2020 are recouped.  Month 03/2020 is not recouped.  Appears on Activity Report.
+Test Case ID for Row 1865          : 43130
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36054.01.004
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43130
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43130
+Finished at                        : Wed Apr 19 08:58:11 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:11 EDT 2023
+Creating test case for Row #       : 1866
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 480
+Validation status                  : PASS
+Short Desc                         : Valid SoT DOD CBHI1
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100032383381 has SoT DOD 2/18/2022
+Expected Results                   : Months 03/2022, 04/2022 are recouped.  Month 02/2022 is not recouped.  Appears on Activity Report.
+Test Case ID for Row 1866          : 43131
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36054.01.004
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43131
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43131
+Finished at                        : Wed Apr 19 08:58:15 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:15 EDT 2023
+Creating test case for Row #       : 1867
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.006') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 507
+Validation status                  : PASS
+Short Desc                         : Inactive SoT DOD MSTDA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100228531511 HAS SoT DOD 10/10/2022
+Expected Results                   : No months are recouped.  Member is Inactive and all pmts are previously recouped.
+Test Case ID for Row 1867          : 43132
+Query Execution Time(ms)           : 72
+Requirement ID                     : 36054.01.006
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43132
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43132
+Finished at                        : Wed Apr 19 08:58:19 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:19 EDT 2023
+Creating test case for Row #       : 1868
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.006') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 515
+Validation status                  : PASS
+Short Desc                         : Inactive SoT DOD CRPLS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100214141382 has no DOD but receives SoT DOD 07/02/2022.
+Expected Results                   : No months are recouped.  Member has pmts for 08/2022 and 09/2022 but member is Inactive so no recoups are made.
+Test Case ID for Row 1868          : 43133
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36054.01.006
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43133
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43133
+Finished at                        : Wed Apr 19 08:58:22 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:22 EDT 2023
+Creating test case for Row #       : 1869
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.006') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 514
+Validation status                  : PASS
+Short Desc                         : Inactive SoT DOD ACOB
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100228808811 has no DOD but receives SoT DOD 08/08/2022
+Expected Results                   : No months are recouped.  Member has pmts for 09/2022 and 10/2022 but member is Inactive so no recoups are made.
+Test Case ID for Row 1869          : 43134
+Query Execution Time(ms)           : 71
+Requirement ID                     : 36054.01.006
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43134
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43134
+Finished at                        : Wed Apr 19 08:58:26 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:26 EDT 2023
+Creating test case for Row #       : 1870
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 516
+Validation status                  : PASS
+Short Desc                         : Excluded program MFASA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100032966721 has SoT DOD 01/14/2022
+Expected Results                   : No months are recouped.  Member has a program excluded from SoT DOD processing
+Test Case ID for Row 1870          : 43135
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43135
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43135
+Finished at                        : Wed Apr 19 08:58:30 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:30 EDT 2023
+Creating test case for Row #       : 1871
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 545
+Validation status                  : PASS
+Short Desc                         : Excluded program BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100002576328 has SoT DOD 05/13/2020
+Expected Results                   : Months 06/2020, 07/2020, 08/2020 are not recouped for BH, but are recouped for ACOB. Month 05/2020 is not recouped for ACOB. ACOB appears on Activity Report.
+Test Case ID for Row 1871          : 43136
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43136
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43136
+Finished at                        : Wed Apr 19 08:58:34 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:34 EDT 2023
+Creating test case for Row #       : 1872
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 488
+Validation status                  : PASS
+Short Desc                         : Excluded program CPBH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100007733379 has SoT DOD 09/08/2022
+Expected Results                   : Months 10/2022, 11/2022 are not recouped for CPBH, but are recouped for ACOB.  Month 09/2022 is not recouped for ACOB.  ACOB appears on Activity Report.
+Test Case ID for Row 1872          : 43137
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43137
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43137
+Finished at                        : Wed Apr 19 08:58:38 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:38 EDT 2023
+Creating test case for Row #       : 1873
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 499
+Validation status                  : PASS
+Short Desc                         : Excluded program CBHI2
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100216476828 has SoT DOD 03/13/2022
+Expected Results                   : No months are recouped.  Member has a program excluded from SoT DOD processing
+Test Case ID for Row 1873          : 43138
+Query Execution Time(ms)           : 73
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43138
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43138
+Finished at                        : Wed Apr 19 08:58:42 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:42 EDT 2023
+Creating test case for Row #       : 1874
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 515
+Validation status                  : PASS
+Short Desc                         : Excluded program PACE.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100024569591 has SoT DOD 03/05/2021
+Expected Results                   : No months are recouped.  Member has a program excluded from SoT DOD processing
+Test Case ID for Row 1874          : 43139
+Query Execution Time(ms)           : 87
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43139
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43139
+Finished at                        : Wed Apr 19 08:58:46 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:46 EDT 2023
+Creating test case for Row #       : 1875
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 627
+Validation status                  : PASS
+Short Desc                         : Excluded program BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100226089173  BH Only has SoT DOD 08/27/2021
+Expected Results                   : No months are recouped.  Member has a program excluded from SoT DOD processing
+Test Case ID for Row 1875          : 43140
+Query Execution Time(ms)           : 135
+Requirement ID                     : 36054.01.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43140
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43140
+Finished at                        : Wed Apr 19 08:58:50 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:50 EDT 2023
+Creating test case for Row #       : 1876
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 63
+Validation Time(ms)                : 816
+Validation status                  : PASS
+Short Desc                         : ACOB member with excluded dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100228565031 has SoT DOD 11/10/22.
+Expected Results                   : Month 12/2022 ACOB is recouped.  Month 12/2022 excluded program BH is not recouped. Month 11/2022 is not recouped.  No months in 2023 are recouped because 2023 is outside the date parm range.  ACOB 2023 pmts appear on UnRecouped Payments Report.
+Test Case ID for Row 1876          : 43141
+Query Execution Time(ms)           : 83
+Requirement ID                     : 36054.01.002
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43141
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43141
+Finished at                        : Wed Apr 19 08:58:55 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:55 EDT 2023
+Creating test case for Row #       : 1877
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 574
+Validation status                  : PASS
+Short Desc                         : MSTDA member with excluded dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100052959911 has SoT DOD 01/10/2923
+Expected Results                   : No months in 2023 are recouped because 2023 is outside the date parm range.  MSTD 2023 pmts appear on UnRecouped Payments Report.
+Test Case ID for Row 1877          : 43142
+Query Execution Time(ms)           : 70
+Requirement ID                     : 36054.01.002
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43142
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43142
+Finished at                        : Wed Apr 19 08:58:59 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:58:59 EDT 2023
+Creating test case for Row #       : 1878
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 535
+Validation status                  : PASS
+Short Desc                         : ICO member with excluded dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100012493861 has SoT DOD 11/14/2022
+Expected Results                   : Month 12/2022 is recouped.  Month 11/2022 is not recouped.  No months in 2023 are recouped because 2023 is outside the date parm range.  ICO 2023 pmts appear on UnRecouped Payments Report.
+Test Case ID for Row 1878          : 43143
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36054.01.002
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43143
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43143
+Finished at                        : Wed Apr 19 08:59:03 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:03 EDT 2023
+Creating test case for Row #       : 1879
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 495
+Validation status                  : PASS
+Short Desc                         : SCO member with excluded dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100007204231  has SoT DOD 12/28/2021
+Expected Results                   : No months are recouped.  SoT DOD month 12/2021 is not recouped.  Months 01/2022 and 02/2022 are not recouped because they are outside the date parm range.  SCO 2022 pmts appear on UnRecouped Payments Report
+Test Case ID for Row 1879          : 43144
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36054.01.002
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43144
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43144
+Finished at                        : Wed Apr 19 08:59:07 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:07 EDT 2023
+Creating test case for Row #       : 1880
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 526
+Validation status                  : PASS
+Short Desc                         : SoT DOD recouped pmts have a unique Cap Reason Code identifier
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify all ids from test file with SoT DOD recoupments
+Expected Results                   : All SoT DOD recouped adjustments in test file have unique cap reason code
+Test Case ID for Row 1880          : 43145
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36054.01.011
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43145
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43145
+Finished at                        : Wed Apr 19 08:59:11 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:11 EDT 2023
+Creating test case for Row #       : 1881
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 535
+Validation status                  : PASS
+Short Desc                         : Process SoT DOD test file before a  MCO/ACO/BH Recon run.  Then APPROVE adjustments so that they are picked up in the MCO/ACO/BH recon run.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : APPROVE SoT DOD adjustments.
+Expected Results                   : All SoT DOD adjustments are APPROVED.
+Test Case ID for Row 1881          : 43146
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36054.01.001
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43146
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43146
+Finished at                        : Wed Apr 19 08:59:14 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:14 EDT 2023
+Creating test case for Row #       : 1882
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 920
+Validation status                  : PASS
+Short Desc                         : Run an MCO/ACO/BH recon cycle.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify SoT DOD adjusments are included in regular adjustments
+Expected Results                   : All SoT DOD adjustments are included in regular adjustments
+Test Case ID for Row 1882          : 43147
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36054.01.001
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43147
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43147
+Finished at                        : Wed Apr 19 08:59:19 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:19 EDT 2023
+Creating test case for Row #       : 1883
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 515
+Validation status                  : PASS
+Short Desc                         : Run an MCO/ACO/BH cap cycle.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify SoT DOD adjusments are included in cap pmts
+Expected Results                   : All SoT DOD adjusments are included in cap pmts
+Test Case ID for Row 1883          : 43148
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36054.01.001
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43148
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43148
+Finished at                        : Wed Apr 19 08:59:23 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:23 EDT 2023
+Creating test case for Row #       : 1884
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 510
+Validation status                  : PASS
+Short Desc                         : Process SoT DOD test file before a  SCO/PACE cap cycle run.  Then APPROVE adjustments so that they are picked up in the SCO/PACE cap cycle.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify SoT DOD SCO/PACE adjusments are created.
+Expected Results                   : All SoT DOD adjusments are created.
+Test Case ID for Row 1884          : 43149
+Query Execution Time(ms)           : 65
+Requirement ID                     : 36054.01.001
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43149
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43149
+Finished at                        : Wed Apr 19 08:59:27 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:27 EDT 2023
+Creating test case for Row #       : 1885
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 537
+Validation status                  : PASS
+Short Desc                         : Run a SCO/PACE cap cycle.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify SoT DOD adjusments are included in cap pmts
+Expected Results                   : All SoT DOD adjusments are included in cap pmts
+Test Case ID for Row 1885          : 43150
+Query Execution Time(ms)           : 75
+Requirement ID                     : 36054.01.001
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43150
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43150
+Finished at                        : Wed Apr 19 08:59:31 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:31 EDT 2023
+Creating test case for Row #       : 1886
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 49
+Validation Time(ms)                : 579
+Validation status                  : PASS
+Short Desc                         : Process SoT DOD test file before an ICO cap cycle run.  Then APPROVE adjustments so that they are picked up in the ICO cap cycle.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify SoT DOD ICO adjustments are created.
+Expected Results                   : All SoT DOD ICO adjustments are created
+Test Case ID for Row 1886          : 43151
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36054.01.001
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43151
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43151
+Finished at                        : Wed Apr 19 08:59:35 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:35 EDT 2023
+Creating test case for Row #       : 1887
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 520
+Validation status                  : PASS
+Short Desc                         : Run an ICO cap cycle.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify SoT DOD adjusments are included in cap pmts
+Expected Results                   : All SoT DOD adjusments are included in cap pmts
+Test Case ID for Row 1887          : 43152
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36054.01.001
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43152
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43152
+Finished at                        : Wed Apr 19 08:59:38 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:38 EDT 2023
+Creating test case for Row #       : 1888
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.012') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 501
+Validation status                  : PASS
+Short Desc                         : Run a MC financial cycle for MCO/ACO/BH, SCO/PACE, ICO cap pmts
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify finance/MMARS processes SoT DOD adjustments and sends back data needed for 820s
+Expected Results                   : All SoT DOD adjustments are picked up and processed by finance/MMATS
+Test Case ID for Row 1888          : 43153
+Query Execution Time(ms)           : 78
+Requirement ID                     : 36054.01.012
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43153
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43153
+Finished at                        : Wed Apr 19 08:59:42 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:42 EDT 2023
+Creating test case for Row #       : 1889
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.013') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 485
+Validation status                  : PASS
+Short Desc                         : Run 820s for MCO/ACO/BH, SCO/PACE, ICO cap pmts
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify 820s are successfully created for all plans and downloads to plan POSC accounts
+Expected Results                   : All plans have successful 820s created and downloaded to plan POSC accounts
+Test Case ID for Row 1889          : 43154
+Query Execution Time(ms)           : 70
+Requirement ID                     : 36054.01.013
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43154
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43154
+Finished at                        : Wed Apr 19 08:59:46 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:46 EDT 2023
+Creating test case for Row #       : 1890
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 504
+Validation status                  : PASS
+Short Desc                         : New SoT DOD field
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Verify SoT DOD are stored in a new field, separate from field dte_death on t_re_base.
+Expected Results                   : All SoT DODs are stored in a new field
+Test Case ID for Row 1890          : 43155
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36054.02.001
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 43155
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43155
+Finished at                        : Wed Apr 19 08:59:50 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:50 EDT 2023
+Creating test case for Row #       : 1891
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.02.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 517
+Validation status                  : PASS
+Short Desc                         : Invalid SoT DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Three members, in any of the included assignment plans, have an invalid Sot DOD
+Expected Results                   : Process captures the invalid SoT DOD date, does not write to the new field or create any adjustments, writes error to Error Report.
+Test Case ID for Row 1891          : 43156
+Query Execution Time(ms)           : 70
+Requirement ID                     : 36054.02.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43156
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43156
+Finished at                        : Wed Apr 19 08:59:54 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:54 EDT 2023
+Creating test case for Row #       : 1892
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.02.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 524
+Validation status                  : PASS
+Short Desc                         : Invalid Member ID
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Three members, in any of the included assignment plans, have an invalid member id
+Expected Results                   : Process captures the invalid member id, does not write to the new field or create any adjustments, writes error to Error Report.
+Test Case ID for Row 1892          : 43157
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36054.02.003
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43157
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43157
+Finished at                        : Wed Apr 19 08:59:58 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 08:59:58 EDT 2023
+Creating test case for Row #       : 1893
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.007') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Validation Time(ms)                : 533
+Validation status                  : PASS
+Short Desc                         : MSTDA member with previously recouped pmts
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100004266415 has SoT DOD 01/27/2022
+Expected Results                   : Month 03/2022 is not recouped as it has already been recouped.
+Test Case ID for Row 1893          : 43158
+Query Execution Time(ms)           : 75
+Requirement ID                     : 36054.01.007
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43158
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43158
+Finished at                        : Wed Apr 19 09:00:03 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 09:00:03 EDT 2023
+Creating test case for Row #       : 1894
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.007') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 518
+Validation status                  : PASS
+Short Desc                         : SCO member with previously recouped pmts
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100019309119 has SoT DOD 04/19/2020
+Expected Results                   : Month 06/2020 is not recouped as it has already been recouped
+Test Case ID for Row 1894          : 43159
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36054.01.007
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43159
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43159
+Finished at                        : Wed Apr 19 09:00:07 EDT 2023
+****************************************************
+Started at                         : Wed Apr 19 09:00:07 EDT 2023
+Creating test case for Row #       : 1895
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36054.01.007') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'PostDeathCapitationRecoupment') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 531
+Validation status                  : PASS
+Short Desc                         : ICO member with previously recouped pmts
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : 100036695698 has SoT DOD 02/23/2022
+Expected Results                   : Month 05/2022 is not recouped as it has already been recouped.
+Test Case ID for Row 1895          : 43160
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36054.01.007
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43160
+Notebook                           : PostDeathCapitationRecoupment
+Business Function                  : PostDeathCapitationRecoupment
+Notebook/BF linked for test case   : 43160
+Finished at                        : Wed Apr 19 09:00:11 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 19/Apr/2023 09:00:12AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

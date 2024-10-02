@@ -1,0 +1,139 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 21/Jun/2023 10:58:13AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 79
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' '), tc_row, trim(d.dsc) wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 100
+Total No.of Rows                   : 4
+****************************************************
+Started at                         : Wed Jun 21 10:58:22 EDT 2023
+Creating test case for Row #       : 2209
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.056') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 53
+Validation Time(ms)                : 485
+Validation status                  : PASS
+Short Desc                         : LOC table for Special assignment DCR
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DCR
+Long Desc                          : Create special assignment DCR for 9/1/23 and/or 10/1/23
+Expected Results                   : 9/1/23 file used t_re_loc. 10/1/23 file uses t_re_mds_loc
+Test Case ID for Row 2209          : 43706
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36269.01.056
+Query Execution Time(ms)           : 38
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43706
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43706
+Finished at                        : Wed Jun 21 10:58:27 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 10:58:27 EDT 2023
+Creating test case for Row #       : 2210
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.056') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 520
+Validation status                  : PASS
+Short Desc                         : LOC table for ICO passive wave DCR
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DCR
+Long Desc                          : Create ICO passive wave DCR for 9/1/23 and/or 10/1/23
+Expected Results                   : 9/1/23 file used t_re_loc. 10/1/23 file uses t_re_mds_loc
+Test Case ID for Row 2210          : 43707
+Query Execution Time(ms)           : 68
+Requirement ID                     : 36269.01.056
+Query Execution Time(ms)           : 40
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43707
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43707
+Finished at                        : Wed Jun 21 10:58:31 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 10:58:31 EDT 2023
+Creating test case for Row #       : 2211
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.056') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 510
+Validation status                  : PASS
+Short Desc                         : LOC table for ICO regular wave DCR
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DCR
+Long Desc                          : Create ICO regualar wave DCR for 9/1/23 and/or 10/1/23
+Expected Results                   : 9/1/23 file used t_re_loc. 10/1/23 file uses t_re_mds_loc
+Test Case ID for Row 2211          : 43708
+Query Execution Time(ms)           : 97
+Requirement ID                     : 36269.01.056
+Query Execution Time(ms)           : 57
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43708
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43708
+Finished at                        : Wed Jun 21 10:58:37 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 10:58:37 EDT 2023
+Creating test case for Row #       : 2212
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.056') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 520
+Validation status                  : PASS
+Short Desc                         : LOC table for Opt Out -SCO Pass Wave DCR
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DCR
+Long Desc                          : Create Opt Out -SCO Passive Wave DCR for 9/1/23 and/or 10/1/23
+Expected Results                   : 9/1/23 file used t_re_loc. 10/1/23 file uses t_re_mds_loc
+Test Case ID for Row 2212          : 43709
+Query Execution Time(ms)           : 82
+Requirement ID                     : 36269.01.056
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43709
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43709
+Finished at                        : Wed Jun 21 10:58:42 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 21/Jun/2023 10:58:42AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

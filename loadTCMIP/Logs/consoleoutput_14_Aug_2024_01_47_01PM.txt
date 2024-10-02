@@ -1,0 +1,96 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Aug/2024 01:47:01PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 344
+Total No.of Rows fetched           : 8
+*****************************************************************
+Started at                         : Wed Aug 14 13:47:14 EDT 2024
+Creating test case for Row #       : 5442
+Requirement                        : 37806.01.015     
+Requirement Validation             : Verify Requirement ID for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 13:47:15 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:47:15 EDT 2024
+Creating test case for Row #       : 5443
+Requirement                        : 37806.01.030    
+Requirement Validation             : Verify Requirement ID for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 13:47:16 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:47:16 EDT 2024
+Creating test case for Row #       : 5444
+Requirement                        : 37806.01.050     
+Requirement Validation             : Verify Requirement ID for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 13:47:17 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:47:17 EDT 2024
+Creating test case for Row #       : 5445
+Requirement                        : 37806.01.065     
+Requirement Validation             : Verify Requirement ID for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 13:47:17 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:47:17 EDT 2024
+Creating test case for Row #       : 5446
+Requirement                        : 37806.01.080     
+Requirement Validation             : Verify Requirement ID for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 13:47:18 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:47:18 EDT 2024
+Creating test case for Row #       : 5447
+Requirement                        : 37806.01.095     
+Requirement Validation             : Verify Requirement ID for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 13:47:19 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:47:19 EDT 2024
+Creating test case for Row #       : 5448
+Requirement                        : 37806.01.110     
+Requirement Validation             : Verify Requirement ID for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 13:47:20 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:47:20 EDT 2024
+Creating test case for Row #       : 5449
+Requirement                        : 37806.02.005     
+Requirement Validation             : Verify Requirement ID for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 13:47:20 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Aug/2024 01:47:21PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

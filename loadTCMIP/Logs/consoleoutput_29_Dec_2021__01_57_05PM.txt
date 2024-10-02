@@ -1,0 +1,895 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 29/Dec/2021 01:57:05PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+***************************************************
+Started at: Wed Dec 29 13:57:15 EST 2021
+Creating test case for TC Row : 753
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 834 for manually historied member
+Long Desc                     : Manually history member's active MC assignemnt and verify 834 for the member next day.
+Expected Results              : Verify 834 reports entity that historied MC assignment plan at REF02 where REF01 is DX.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35627
+Associated WI Type            : Defect
+Test Case ID for Row 753      : 40850
+Notebook/Business function linked for test case 40850
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:57:22 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:57:22 EST 2021
+Creating test case for TC Row : 754
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 834 for member historied by Ineligibles
+Long Desc                     : Ineligibles histories member's active MC assignment and verify 834 for the member next day.
+Expected Results              : Verify 834 reports entity that historied MC assignment plan at REF02 where REF01 is DX.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35627
+Associated WI Type            : Defect
+Test Case ID for Row 754      : 40851
+Notebook/Business function linked for test case 40851
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:57:29 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:57:29 EST 2021
+Creating test case for TC Row : 755
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 834 for member historied by Mass  xfer job
+Long Desc                     : Mass xfer job histories member's MC assignment and verify 834 for the member next day.
+Expected Results              : Verify 834 reports entity that historied MC assignment plan at REF02 where REF01 is DX.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35627
+Associated WI Type            : Defect
+Test Case ID for Row 755      : 40852
+Notebook/Business function linked for test case 40852
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:57:35 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:57:35 EST 2021
+Creating test case for TC Row : 756
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Transfer member with future MC assignment to diff MC assignment
+Long Desc                     : Transfer member with future MC assignment to diff MC assignment and verify 834 for the member next day.
+Expected Results              : Verify 834 reports entity that historied MC assignment plan at REF02 where REF01 is DX.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35627
+Associated WI Type            : Defect
+Test Case ID for Row 756      : 40853
+Notebook/Business function linked for test case 40853
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:57:42 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:57:42 EST 2021
+Creating test case for TC Row : 757
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 834 for manually historied member
+Long Desc                     : Manually history membe'rs active DNTL assignemnt and verify 834 for the member next day.
+Expected Results              : Verify 834 reports entity that historied MC assignment plan at REF02 where REF01 is DX.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35627
+Associated WI Type            : Defect
+Test Case ID for Row 757      : 40854
+Notebook/Business function linked for test case 40854
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:57:49 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:57:49 EST 2021
+Creating test case for TC Row : 758
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 834 for member historied by Ineligibles
+Long Desc                     : Ineligibles histories member's active DNTL assignment and verify 834 for the member next day.
+Expected Results              : Verify 834 reports entity that historied MC assignment plan at REF02 where REF01 is DX.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35627
+Associated WI Type            : Defect
+Test Case ID for Row 758      : 40855
+Notebook/Business function linked for test case 40855
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:57:56 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:57:56 EST 2021
+Creating test case for TC Row : 759
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Transfer member with future MC assignment to diff MC assignment
+Long Desc                     : Transfer member with future DNTL assignment to diff DNTL assignment and verify 834 for the member next day.
+Expected Results              : Verify 834 reports entity that historied MC assignment plan at REF02 where REF01 is DX.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35627
+Associated WI Type            : Defect
+Test Case ID for Row 759      : 40856
+Notebook/Business function linked for test case 40856
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:58:03 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:58:03 EST 2021
+Creating test case for TC Row : 760
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with overlapping diff PCC
+Long Desc                     : Mass Xfer: Member has an assignment for the disenrolling PCCP provider and also has a future dated assignment for a different PMP and the assignments overlap by one day.
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 760      : 40857
+Notebook/Business function linked for test case 40857
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:58:10 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:58:10 EST 2021
+Creating test case for TC Row : 761
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with not overlapping diff PCC
+Long Desc                     : Mass Xfer: Member has an assignment for the disenrolling PCCP provider and also has a future dated assignment for a different PCC PMP that doesn?t overlap.
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 761      : 40858
+Notebook/Business function linked for test case 40858
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:58:17 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:58:17 EST 2021
+Creating test case for TC Row : 762
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with not overlapping diff CPPCC
+Long Desc                     : Mass Xfer: Member has an assignment for the disenrolling CPPCC provider and also has a future dated assignment for a different CPPCC PMP that doesn?t overlap.
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 762      : 40859
+Notebook/Business function linked for test case 40859
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:58:23 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:58:23 EST 2021
+Creating test case for TC Row : 763
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with overlapping same PCC
+Long Desc                     : Mass Xfer: Member has an assignment for the disenrolling PCCP provider and also has a future dated assignment for the same PMP that overlaps.
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 763      : 40860
+Notebook/Business function linked for test case 40860
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:58:30 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:58:30 EST 2021
+Creating test case for TC Row : 764
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with not overlapping same CPPCC
+Long Desc                     : Mass Xfer: FROM PMP (CPPCC1) and Future FROM PMP (CPPCC1) do not have an overlapping assignment date.
+Expected Results              : Member is processed normally and transferred to TO PMP.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 764      : 40861
+Notebook/Business function linked for test case 40861
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:58:37 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:58:37 EST 2021
+Creating test case for TC Row : 765
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with not overlapping same PCC
+Long Desc                     : Mass Xfer: Member has an assignment for the disenrolling PCCP provider and also has a future dated assignment for the same PMP that doesn?t overlap.
+Expected Results              : Member is processed normally and transferred to TO PMP.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 765      : 40862
+Notebook/Business function linked for test case 40862
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:58:44 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:58:44 EST 2021
+Creating test case for TC Row : 766
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with overlapping diff PCC
+Long Desc                     : Mass disenroll: Member has an assignment for the disenrolling PCCP provider and also has a future dated assignment for a different PMP and the assignments overlap by 1 day
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 766      : 40863
+Notebook/Business function linked for test case 40863
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:58:51 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:58:51 EST 2021
+Creating test case for TC Row : 767
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with not overlapping diff PCC
+Long Desc                     : Mass disenroll: Member has an assignment for the disenrolling PCCP provider and also has a future dated assignment for a different PMP that doesn?t overlap.
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 767      : 40864
+Notebook/Business function linked for test case 40864
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:58:58 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:58:58 EST 2021
+Creating test case for TC Row : 768
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with not overlapping diff CPPCC
+Long Desc                     : Mass disenroll: Member has an assignment for the disenrolling CPPCC provider and also has a future dated assignment for a different PMP that doesn?t overlap.
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 768      : 40865
+Notebook/Business function linked for test case 40865
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:59:05 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:59:05 EST 2021
+Creating test case for TC Row : 769
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with overlapping same PCC
+Long Desc                     : Mass disenroll: Member has an assignment for the disenrolling PCCP provider and also has a future dated assignment for the same PMP that overlaps.
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 769      : 40866
+Notebook/Business function linked for test case 40866
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:59:12 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:59:12 EST 2021
+Creating test case for TC Row : 770
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with not overlapping same CPPCC
+Long Desc                     : Mass disenroll: FROM PMP (CPPCC1) and Future FROM PMP (CPPCC1) do not have an overlapping assignment date.
+Expected Results              : Member is processed normally and transferred to TO PMP.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 770      : 40867
+Notebook/Business function linked for test case 40867
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:59:19 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:59:19 EST 2021
+Creating test case for TC Row : 771
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with not overlapping same PCC
+Long Desc                     : Mass disenroll: Member has an assignment for the disenrolling PCCP provider and also has a future dated assignment for the same PMP that doesn?t overlap.
+Expected Results              : Member is processed normally and transferred to TO PMP.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 771      : 40868
+Notebook/Business function linked for test case 40868
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:59:26 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:59:26 EST 2021
+Creating test case for TC Row : 772
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with multiple overlapping same PCCP
+Long Desc                     : Mass xfer: Member has an assignment for the disenrolling PCCP provider and also has future dated multiple assignments for the same PMP that overlap.
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT" only once.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 772      : 40869
+Notebook/Business function linked for test case 40869
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:59:32 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:59:32 EST 2021
+Creating test case for TC Row : 773
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with overlapping same PCCP
+Long Desc                     : Mass xfer: Member has an assignment for the disenrolling PCCP provider and also has future dated assignment for the same PMP that overlap and has future dated assignment for the same PMP that does not overlap.
+Expected Results              : Member is sent to error report with error reason "FUTURE DATED ACTIVE ASSIGNMENT" and MSTDA is created for no-overlapping last assignment.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 773      : 40870
+Notebook/Business function linked for test case 40870
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:59:39 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:59:39 EST 2021
+Creating test case for TC Row : 774
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with overlapping same PCCP and not overlapping diff PCCP
+Long Desc                     : Mass xfer: Member has an assignment for the disenrolling PCCP provider and also has a future dated assignment for the same PMP that overlaps. Member also has an assignment for the disenrolling PCCP provider and also has a future dated assignment for a different PMP that does not overlap.
+Expected Results              : Member is sent to error report only once after first assignment with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 774      : 40871
+Notebook/Business function linked for test case 40871
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:59:46 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:59:46 EST 2021
+Creating test case for TC Row : 775
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with future overlapping diff PCCP
+Long Desc                     : Mass xfer: Member has a future disenrolling PCCP assignment and also has an assignment for a different PMP that overlaps.  The overlap occurs after the disenrollment date.
+Expected Results              : Member is sent to error report after first assignment with error reason "FUTURE DATED ACTIVE ASSIGNMENT".
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 775      : 40872
+Notebook/Business function linked for test case 40872
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 13:59:53 EST 2021
+***************************************************
+Started at: Wed Dec 29 13:59:53 EST 2021
+Creating test case for TC Row : 776
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from MSTDA1 to MSTDA2
+Long Desc                     : Mass xfer: Member with Community partner BHCP that requires ACO/MCO. TO provider and CommP provider are not affiliated on the assign eff date for the TO provider.  CommP provider has a zero future panel size.
+Expected Results              : From PMP and CommP assignments end dated. Potential and transfer record created. Job displays warning message that future panel size may be zero but does not abend.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 776      : 40873
+Notebook/Business function linked for test case 40873
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:00:00 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:00:00 EST 2021
+Creating test case for TC Row : 777
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with PCC and CP
+Long Desc                     : Mass xfer: Member has an future assignment for the disenrolling PCCP provider and also has a CommP assignment that ends on CommP start date. Start date on PCCP assignment > Disenrollment date on mass xfer.
+Expected Results              : Member is processed normally and transferred to TO PMP.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 777      : 40874
+Notebook/Business function linked for test case 40874
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:00:07 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:00:07 EST 2021
+Creating test case for TC Row : 778
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member with PCC and CP
+Long Desc                     : Mass xfer: Member has an future end dated assignment for the disenrolling PCCP provider and also has an CommP that starts on PCCP end date. Future end date on PCCP assignment > Disenrollment date on mass xfer.
+Expected Results              : Member is processed normally and transferred to TO PMP.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35461
+Associated WI Type            : Defect
+Test Case ID for Row 778      : 40875
+Notebook/Business function linked for test case 40875
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:00:14 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:00:14 EST 2021
+Creating test case for TC Row : 779
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD ACOA
+Long Desc                     : Member is enrolled in Non-STD assignment (MFASA) starting in the past open ended with a PCP starts in the past before richer Aid Cat starts open ended and receives richer STD Disabled (MSTDA) retro Aid Cat.
+Expected Results              : Non-STD assignment (MFASA) and PCP is disenrolled one day before richer Aid Cat Starts. STD Disabled (MSTDA) assignment and PCP is created starting on Aid Cat effective date open ended.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 779      : 40876
+Notebook/Business function linked for test case 40876
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:00:21 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:00:21 EST 2021
+Creating test case for TC Row : 780
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD ACOA
+Long Desc                     : Member is enrolled in Non-STD assignment (MFASA) starting in the past open ended with a PCP starts in the past before richer Aid Cat starts open ended and receives richer STD Disabled (MSTDA) retro Aid Cat. The ACOA provider has no affiliation with PCP provider on STD Disabled elig effective date.
+Expected Results              : Non-STD assignment (MFASA) and PCP is disenrolled one day before richer Aid Cat Starts. STD Disabled (MSTDA) assignment is created starting on Aid Cat effective date open ended. PCP is NOT transferred.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 780      : 40877
+Notebook/Business function linked for test case 40877
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:00:29 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:00:29 EST 2021
+Creating test case for TC Row : 781
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD ACOA
+Long Desc                     : Member is enrolled in Non-STD assignment (MFASA) starting in the past open ended and receives richer STD Disabled (MSTDA) retro Aid Cat. Member doesn't have any active PCP record.
+Expected Results              : Non-STD assignment (MFASA) is disenrolled one day before STD disabled Aid Cat Starts. STD Disabled (MSTDA) assignment is created starting on Aid Cat effective date open ended. No PCP record is created.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 781      : 40878
+Notebook/Business function linked for test case 40878
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:00:36 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:00:36 EST 2021
+Creating test case for TC Row : 782
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended with a PCP starts in the past before richer Aid Cat starts open ended and receives richer STD Disabled (MSTD) retro Aid Cat.
+Expected Results              : Non-STD assignment (MFAS) and PCP is disenrolled one day before richer Aid Cat Starts. STD Disabled (MSTD) assignment and PCP is created starting on Aid Cat effective date open ended.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 782      : 40879
+Notebook/Business function linked for test case 40879
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:00:43 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:00:43 EST 2021
+Creating test case for TC Row : 783
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended with a PCP starts in the past before richer Aid Cat starts open ended and receives richer STD Disabled (MSTD) retro Aid Cat. The MCO  provider has no affiliation with PCP provider on STD Disabled elig effective date.
+Expected Results              : Non-STD assignment (MFAS) and PCP is disenrolled one day before richer Aid Cat Starts. STD Disabled (MSTD) assignment is created starting on Aid Cat effective date open ended. PCP is NOT transferred.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 783      : 40880
+Notebook/Business function linked for test case 40880
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:00:50 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:00:50 EST 2021
+Creating test case for TC Row : 784
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat. Member doesn't have any active PCP record.
+Expected Results              : Non-STD assignment (MFAS) is disenrolled one day before STD disabled Aid Cat Starts. STD Disabled (MSTD) assignment is created starting on Aid Cat effective date open ended. No PCP record is created.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 784      : 40881
+Notebook/Business function linked for test case 40881
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:00:57 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:00:57 EST 2021
+Creating test case for TC Row : 785
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD ACOA with multiple PCPs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFASA) starting in the past open ended and receives richer STD Disabled (MSTDA) retro Aid Cat with PCP1 starts in the past ended in the future and PCP2 starts in the future open ended.
+Expected Results              : Non-STD assignment (MFASA) is disenrolled one day before Aid Cat Start. PCP1 is disenrolled one day before Aid Cat start and PCP2 is historied. STD Disabled (MSTDA) assignment is created starting on STD disabled Aid Cat effective date. PCP1 is created starting on STD disabled Aid cat effective date and original PCP1 end date. PCP2 is created with same information as MFASA PCP2.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 785      : 40882
+Notebook/Business function linked for test case 40882
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:01:04 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:01:04 EST 2021
+Creating test case for TC Row : 786
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD ACOA with multiple PCPs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFASA) starting in the past open ended and receives richer STD Disabled (MSTDA) retro Aid Cat with PCP1 starts in the past ended in the future and PCP2 starts in the future open ended. The ACOA provider has no affiliation with  PCP1 and PCP2 providers on STD Disabled elig effective date.
+Expected Results              : STD Disabled (MSTDA) assignment is created starting on STD disabled Aid Cat effective date. No PCP records are created.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 786      : 40883
+Notebook/Business function linked for test case 40883
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:01:11 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:01:11 EST 2021
+Creating test case for TC Row : 787
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD ACOA with multiple PCPs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFASA) starting in the past open ended and receives richer STD Disabled (MSTDA) retro Aid Cat with PCP1 ends one day before richer MC Aid Cat starts and PCP2 starts when richer MC Aid Cats starts to open ended.
+Expected Results              : Non-STD assignment (MFASA) is disenrolled one day before Aid Cat Start. PCP1 is NOT disenrolled and PCP2 is historied. STD Disabled (MSTDA) assignment is created starting on richer Aid Cat effective date. PCP record is created with same information as PCP2 with dates.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 787      : 40884
+Notebook/Business function linked for test case 40884
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:01:18 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:01:18 EST 2021
+Creating test case for TC Row : 788
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD ACOA with multiple PCPs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFASA) starting in the past open ended and receives richer STD Disabled (MSTDA) retro Aid Cat with PCP1 ends one day before richer MC Aid Cat starts and PCP2 starts when richer MC Aid Cats starts to open ended. The ACO/MCO provider has no affiliation with PCP1 and PCP2 providers on STD Disabled elig effective date.
+Expected Results              : Non-STD assignment (MFASA) is disenrolled one day before Aid Cat Start. PCP1 is NOT disenrolled and PCP2 is historied. STD Disabled (MSTDA) assignment is created starting on Aid Cat effective date. No PCP records are created.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 788      : 40885
+Notebook/Business function linked for test case 40885
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:01:25 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:01:25 EST 2021
+Creating test case for TC Row : 789
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with multiple PCPs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat with PCP1 starts in the past ended in the future and PCP2 starts in the future open ended.
+Expected Results              : Non-STD assignment (MFAS) is disenrolled one day before Aid Cat Start. PCP1 is disenrolled one day before Aid Cat start and PCP2 is historied. STD Disabled (MSTD) assignment is created starting on STD disabled Aid Cat effective date. PCP1 is created starting on STD disabled Aid cat effective date and original PCP1 end date. PCP2 is created with same information as MFAS PCP2.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 789      : 40886
+Notebook/Business function linked for test case 40886
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:01:32 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:01:32 EST 2021
+Creating test case for TC Row : 790
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with multiple PCPs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat with PCP1 starts in the past ended in the future and PCP2 starts in the future open ended. The MCO provider has no affiliation with  PCP1 and PCP2 providers on STD Disabled elig effective date.
+Expected Results              : STD Disabled (MSTD) assignment is created starting on STD disabled Aid Cat effective date. No PCP records are created.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 790      : 40887
+Notebook/Business function linked for test case 40887
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:01:39 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:01:39 EST 2021
+Creating test case for TC Row : 791
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with multiple PCPs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat with PCP1 ends one day before richer MC Aid Cat starts and PCP2 starts when richer MC Aid Cats starts to open ended.
+Expected Results              : Non-STD assignment (MFAS) is disenrolled one day before Aid Cat Start. PCP1 is NOT disenrolled and PCP2 is historied. STD Disabled (MSTD) assignment is created starting on richer Aid Cat effective date. PCP record is created with same information as PCP2 with dates.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 791      : 40888
+Notebook/Business function linked for test case 40888
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:01:46 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:01:46 EST 2021
+Creating test case for TC Row : 792
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with multiple PCPs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat with PCP1 ends one day before richer MC Aid Cat starts and PCP2 starts when richer MC Aid Cats starts to open ended. The ACO/MCO provider has no affiliation with PCP1 and PCP2 providers on STD Disabled elig effective date.
+Expected Results              : Non-STD assignment (MFAS) is disenrolled one day before Aid Cat Start. PCP1 is NOT disenrolled and PCP2 is historied. STD Disabled (MSTD) assignment is created starting on Aid Cat effective date. No PCP records are created.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 792      : 40889
+Notebook/Business function linked for test case 40889
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:01:53 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:01:53 EST 2021
+Creating test case for TC Row : 793
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with multiple PCPs and ACOCs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat with PCP1 starting in the past ended in the future and ACOC1 starting in the past ended in the future. PCP2 staring in the future open ended and ACOC2 starting in the future open ended.
+Expected Results              : Non-STD assignment (MFAS) is disenrolled one day before richer Aid Cat Start. PCP1 and ACOC1 are disenrolled one day before richer Aid Cat Start. PCP2 and ACOC2 are historied. STD Disabled (MSTD) assignment is created starting on Aid Cat effective date. PCP record is created with same information as PCP1 with dates. ACOC record is created with same information as ACOC1 with dates. A second PCP record is created with same information as PCP2 with dates. A second ACOC record is created with same information as ACOC2 with dates.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 793      : 40890
+Notebook/Business function linked for test case 40890
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:02:01 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:02:01 EST 2021
+Creating test case for TC Row : 794
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with multiple PCPs and ACOCs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat with PCP1 starting in the past ended in the future and ACOC1 starting in the past ended in the future. PCP2 staring in the future open ended and ACOC2 starting in the future open ended. PCP1/ACOC1 record has no affiliation with MCO provider. PCP2/ACOC2 record has no affiliation with MCO provider on richer elig eff date.
+Expected Results              : Non-STD assignment (MFAS) is disenrolled one day before richer Aid Cat Start. PCP1 and ACOC1 are disenrolled one day before richer Aid Cat Start. PCP2 and ACOC2 are historied. STD Disabled (MSTD) assignment is created starting on richer Aid Cat effective date. PCP1/ACOC1 records are not created. PCP2/ACOC2 records are not created.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 794      : 40891
+Notebook/Business function linked for test case 40891
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:02:08 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:02:08 EST 2021
+Creating test case for TC Row : 795
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with multiple PCPs and ACOCs
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat with PCP1 starting in the past ended in the future and ACOC1 starting in the past ended in the future. PCP2 staring in the future open ended and ACOC2 starting in the future open ended. PCP record has affiliation with MCO provider and ACOC record has no affiliation with MCO provider on richer elig eff date.
+Expected Results              : Non-STD assignment (MFAS) is disenrolled one day before richer Aid Cat Start. PCP1 and ACOC1 are disenrolled one day before richer Aid Cat Start. PCP2 and ACOC2 are historied. STD Disabled (MSTD) assignment is created starting on Aid Cat effective date. PCP1/ACOC1 record is created with same information as PCP1 with dates. PCP2 record is created with same information as PCP2 with dates. ACOC2 record is not created.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 795      : 40892
+Notebook/Business function linked for test case 40892
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:02:15 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:02:15 EST 2021
+Creating test case for TC Row : 796
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with future ACOC
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat with PCP starting in the past open ended and ACOC start after richer Aid Cat effective date.
+Expected Results              : Non-STD assignment (MFAS) is disenrolled one day before richer Aid Cat Starts. PCP record is disenrolled and ACOC record is historied. STD Disabled (MSTD) assignment is created starting on Aid Cat effective date open ended. PCP record is created with same information as PCP with dates . ACOC record is created with same information as ACOC with dates.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 796      : 40893
+Notebook/Business function linked for test case 40893
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:02:22 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:02:22 EST 2021
+Creating test case for TC Row : 797
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with PCP and no ACOC
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) retro Aid Cat with PCP starts in the past before richer Aid Cat starts open ended and ACOC provider is affiliated to both PCP and MCO.
+Expected Results              : Non-STD assignment (MFAS) is disenrolled one day before richer Aid Cat Starts. PCP1 is disenrolled one day before richer Aid Cat starts. STD Disabled (MSTD) assignment is created starting on richer Aid Cat effective date open ended. PCP record is created with same information as PCP1 with dates. ACOC record is created.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 797      : 40894
+Notebook/Business function linked for test case 40894
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:02:29 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:02:29 EST 2021
+Creating test case for TC Row : 798
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD ACOA with STD Disable future Aid Cat.
+Long Desc                     : Member is enrolled in Non-STD assignment (MFASA) starting in the past open ended and receives richer STD Disabled (MSTDA) future Aid Cat with PCP starting in the past before richer Aid Cat starts open ended.
+Expected Results              : Non-STD assignment (MFASA) is NOT disenrolled due MC Aid Cat starts in the future, to get the better MC Aid Cat the cycle date should be between richer MC Aid Cat dates.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 798      : 40895
+Notebook/Business function linked for test case 40895
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:02:36 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:02:36 EST 2021
+Creating test case for TC Row : 799
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD MCO with STD Disable future Aid Cat.
+Long Desc                     : Member is enrolled in Non-STD assignment (MFAS) starting in the past open ended and receives richer STD Disabled (MSTD) future Aid Cat with PCP starting in the past before richer Aid Cat starts open ended.
+Expected Results              : Non-STD assignment (MFAS) is NOT disenrolled due MC Aid Cat starts in the future, to get the better MC Aid Cat the cycle date should be between richer MC Aid Cat dates.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 799      : 40896
+Notebook/Business function linked for test case 40896
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:02:43 EST 2021
+***************************************************
+Started at: Wed Dec 29 14:02:43 EST 2021
+Creating test case for TC Row : 800
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Member enrolled in non-STD ACOA with PCP.
+Long Desc                     : Member is enrolled in Non-STD (MFASA) starting in the past open ended with PCP starting in the past and receives richer STD disabled (MSTDA) aid cat with effective date which covers MFASA assignment.
+Expected Results              : Non-STD assignment (MFASA) is historied. PCP is also historied. STD Disabled (MSTDA) assignment is created with MFASA effective date and PCP is created same as historied PCP dates.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 34327
+Associated WI Type            : Defect
+Test Case ID for Row 800      : 40897
+Notebook/Business function linked for test case 40897
+Requested item to link is Defect. So, skipping linking test cases step.
+Finished at: Wed Dec 29 14:02:50 EST 2021
+***************************************************
+Logged out
+***************************************************
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 29/Dec/2021 02:02:51PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

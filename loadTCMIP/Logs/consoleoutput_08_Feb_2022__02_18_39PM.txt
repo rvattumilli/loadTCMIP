@@ -1,0 +1,193 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 08/Feb/2022 02:18:39PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+***************************************************
+Started at                         : Tue Feb 08 14:18:53 EST 2022
+Creating test case for TC Row      : 893
+Notebook                           : ProjectCY22-2
+Business Function                  : ProjectCY22-2
+SAK Participant                    : 180
+Env                                : I
+Subsystem                          : Pre-Admission Screening
+Short Desc                         : Add a new Comment on POSC
+Long Desc                          : On the POSC create a new PAS and add a provider comment
+Expected Results                   : Comment is visible on Base app
+Grouping                           : PAS
+Associated WI/Defect/CO            : 35637
+Associated WI Type                 : Change Order
+Test Case ID for Row 893           : 41206
+Notebook/BF linked for test case   : 41206
+Work item/CO linked for test case  : 41206
+Finished at                        : Tue Feb 08 14:19:09 EST 2022
+***************************************************
+Started at                         : Tue Feb 08 14:19:09 EST 2022
+Creating test case for TC Row      : 894
+Notebook                           : ProjectCY22-2
+Business Function                  : ProjectCY22-2
+SAK Participant                    : 180
+Env                                : I
+Subsystem                          : Pre-Admission Screening
+Short Desc                         : Add a new comment on Base App
+Long Desc                          : On the Base App add a new PAS and add a provider comment
+Expected Results                   : Comment is visible on POSC
+Grouping                           : PAS
+Associated WI/Defect/CO            : 35637
+Associated WI Type                 : Change Order
+Test Case ID for Row 894           : 41207
+Notebook/BF linked for test case   : 41207
+Work item/CO linked for test case  : 41207
+Finished at                        : Tue Feb 08 14:19:26 EST 2022
+***************************************************
+Started at                         : Tue Feb 08 14:19:26 EST 2022
+Creating test case for TC Row      : 895
+Notebook                           : ProjectCY22-2
+Business Function                  : ProjectCY22-2
+SAK Participant                    : 180
+Env                                : I
+Subsystem                          : Pre-Admission Screening
+Short Desc                         : Add to existing comment on POSC
+Long Desc                          : On the POSC  respond to an existing comment by adding new text
+Expected Results                   : Addition is visible on Base App
+Grouping                           : PAS
+Associated WI/Defect/CO            : 35637
+Associated WI Type                 : Change Order
+Test Case ID for Row 895           : 41208
+Notebook/BF linked for test case   : 41208
+Work item/CO linked for test case  : 41208
+Finished at                        : Tue Feb 08 14:19:42 EST 2022
+***************************************************
+Started at                         : Tue Feb 08 14:19:42 EST 2022
+Creating test case for TC Row      : 896
+Notebook                           : ProjectCY22-2
+Business Function                  : ProjectCY22-2
+SAK Participant                    : 180
+Env                                : I
+Subsystem                          : Pre-Admission Screening
+Short Desc                         : Add to existing comment on Base
+Long Desc                          : On the Base App respond to an existing comment by adding new text
+Expected Results                   : Addition is visible on POSC
+Grouping                           : PAS
+Associated WI/Defect/CO            : 35637
+Associated WI Type                 : Change Order
+Test Case ID for Row 896           : 41209
+Notebook/BF linked for test case   : 41209
+Work item/CO linked for test case  : 41209
+Finished at                        : Tue Feb 08 14:19:58 EST 2022
+***************************************************
+Started at                         : Tue Feb 08 14:19:58 EST 2022
+Creating test case for TC Row      : 897
+Notebook                           : ProjectCY22-2
+Business Function                  : ProjectCY22-2
+SAK Participant                    : 180
+Env                                : I
+Subsystem                          : Pre-Admission Screening
+Short Desc                         : Create new second comment on Base
+Long Desc                          : On the Base App add a brand new second provider comment
+Expected Results                   : Only second comment visible on POSC
+Grouping                           : PAS
+Associated WI/Defect/CO            : 35637
+Associated WI Type                 : Change Order
+Test Case ID for Row 897           : 41210
+Notebook/BF linked for test case   : 41210
+Work item/CO linked for test case  : 41210
+Finished at                        : Tue Feb 08 14:20:15 EST 2022
+***************************************************
+Started at                         : Tue Feb 08 14:20:15 EST 2022
+Creating test case for TC Row      : 898
+Notebook                           : ProjectCY22-2
+Business Function                  : ProjectCY22-2
+SAK Participant                    : 180
+Env                                : I
+Subsystem                          : Pre-Admission Screening
+Short Desc                         : Append to second comment on POSC
+Long Desc                          : On the POSC add new text to a seond provider comment that was created on the Base
+Expected Results                   : Appended comment visible on base
+Grouping                           : PAS
+Associated WI/Defect/CO            : 35637
+Associated WI Type                 : Change Order
+Test Case ID for Row 898           : 41211
+Notebook/BF linked for test case   : 41211
+Work item/CO linked for test case  : 41211
+Finished at                        : Tue Feb 08 14:20:32 EST 2022
+***************************************************
+Started at                         : Tue Feb 08 14:20:32 EST 2022
+Creating test case for TC Row      : 899
+Notebook                           : ProjectCY22-2
+Business Function                  : ProjectCY22-2
+SAK Participant                    : 180
+Env                                : I
+Subsystem                          : Pre-Admission Screening
+Short Desc                         : POSC Messages written with different statuses
+Long Desc                          : Test the ability to write a Provider comment when the PAS request is in all the different statuses.
+Expected Results                   : POSC Messages only written when status is in Ready for Review
+Grouping                           : PAS
+Associated WI/Defect/CO            : 35637
+Associated WI Type                 : Change Order
+Test Case ID for Row 899           : 41212
+Notebook/BF linked for test case   : 41212
+Work item/CO linked for test case  : 41212
+Finished at                        : Tue Feb 08 14:20:49 EST 2022
+***************************************************
+Started at                         : Tue Feb 08 14:20:49 EST 2022
+Creating test case for TC Row      : 900
+Notebook                           : ProjectCY22-2
+Business Function                  : ProjectCY22-2
+SAK Participant                    : 180
+Env                                : I
+Subsystem                          : Pre-Admission Screening
+Short Desc                         : Base messages written with dirrent statuses 
+Long Desc                          : Test the ability to add or append a provider comment when the PAS is in a variety of statuses
+Expected Results                   : Base messages can be written in every status
+Grouping                           : PAS
+Associated WI/Defect/CO            : 35637
+Associated WI Type                 : Change Order
+Test Case ID for Row 900           : 41213
+Notebook/BF linked for test case   : 41213
+Work item/CO linked for test case  : 41213
+Finished at                        : Tue Feb 08 14:21:06 EST 2022
+***************************************************
+Started at                         : Tue Feb 08 14:21:06 EST 2022
+Creating test case for TC Row      : 901
+Notebook                           : ProjectCY22-2
+Business Function                  : ProjectCY22-2
+SAK Participant                    : 180
+Env                                : I
+Subsystem                          : Pre-Admission Screening
+Short Desc                         : Create notices
+Long Desc                          : Adjudicate a PAS and request a Notice to see what external messages are on it
+Expected Results                   : Messages with type C do not appear on notices
+Grouping                           : PAS
+Associated WI/Defect/CO            : 35637
+Associated WI Type                 : Change Order
+Test Case ID for Row 901           : 41214
+Notebook/BF linked for test case   : 41214
+Work item/CO linked for test case  : 41214
+Finished at                        : Tue Feb 08 14:21:22 EST 2022
+***************************************************
+Logged out
+***************************************************
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 08/Feb/2022 02:21:22PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

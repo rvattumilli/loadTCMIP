@@ -1,0 +1,182 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 08/Aug/2024 11:42:21AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Query Execution Time(ms)           : 59
+Total No.of Columns fetched        : 6
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 234
+Total No.of Rows fetched           : 5
+*****************************************************************
+Started at                         : Thu Aug 08 11:42:30 EDT 2024
+Creating test case for Row #       : 5391
+Query Execution Time(ms)           : 50
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 464
+TC Validation status               : PASS
+Short Desc                         : CARES members with NO paid claims
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select members with existing CARES assignment plan where they do not have claim payments in 6 months during the enrollment period with T2023 procedure code.
+Expected Results                   : Members should NOT be disenrolled from CARES assignment plan. The CARES assignment plan should remain as is.
+Test Case ID for Row 5391          : 47647
+Query Execution Time(ms)           : 68
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37988.01.005
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47647
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47647
+Finished at                        : Thu Aug 08 11:42:34 EDT 2024
+*****************************************************************
+Started at                         : Thu Aug 08 11:42:34 EDT 2024
+Creating test case for Row #       : 5392
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 454
+TC Validation status               : PASS
+Short Desc                         : ICC members with NO paid claims
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select members with existing ICC assignment plan where they do not have claim payments in 6 months during the enrollment period with T2023 procedure code.
+Expected Results                   : Members should NOT be disenrolled from ICC assignment plan. The ICC assignment plan should remain as is.
+Test Case ID for Row 5392          : 47648
+Query Execution Time(ms)           : 68
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37988.01.005
+Query Execution Time(ms)           : 29
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47648
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47648
+Finished at                        : Thu Aug 08 11:42:38 EDT 2024
+*****************************************************************
+Started at                         : Thu Aug 08 11:42:38 EDT 2024
+Creating test case for Row #       : 5393
+Query Execution Time(ms)           : 42
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 466
+TC Validation status               : PASS
+Short Desc                         : CARES/ICC member - DOD.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select members with CARES/ICC assignment plan with DOD present.
+Expected Results                   : Members should be disenrolled from CARES/ICC upon receving DOD data.
+Test Case ID for Row 5393          : 47649
+Query Execution Time(ms)           : 66
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37988.02.005
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 47649
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47649
+Finished at                        : Thu Aug 08 11:42:43 EDT 2024
+*****************************************************************
+Started at                         : Thu Aug 08 11:42:43 EDT 2024
+Creating test case for Row #       : 5394
+Query Execution Time(ms)           : 58
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 481
+TC Validation status               : PASS
+Short Desc                         : CARES/ICC member - Loss of Eligiblity
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select members with CARES/ICC assignment plan where they lost eligbility.
+Expected Results                   : Members should be disenrolled from CARES/ICC once they lost eligibility.
+Test Case ID for Row 5394          : 47650
+Query Execution Time(ms)           : 70
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37988.02.005
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 47650
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47650
+Finished at                        : Thu Aug 08 11:42:47 EDT 2024
+*****************************************************************
+Started at                         : Thu Aug 08 11:42:47 EDT 2024
+Creating test case for Row #       : 5395
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 435
+TC Validation status               : PASS
+Short Desc                         : CARES/ICC member - Over 21+
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select members with CARES/ICC assignment plan where the members are over 21.
+Expected Results                   : Members should be disenrolled from CARES/ICC  assignment plan with an end date a day before Birthday.
+Test Case ID for Row 5395          : 47651
+Query Execution Time(ms)           : 71
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37988.02.005
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 2
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 47651
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47651
+Finished at                        : Thu Aug 08 11:42:51 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 08/Aug/2024 11:42:52AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

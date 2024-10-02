@@ -1,0 +1,66 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 12/Aug/2021 05:30:15PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Creating test case for TC Row : 573
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Exempt - Aid cat close - Mbr stay Exempt
+Long Desc                     : "Find existing member who is exempt due to aid cat and end the enrollment via UI or XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is still exempt."
+Expected Results              : "Find existing member who is exempt due to aid cat and end the enrollment via UI or XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is still exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 573      : 40439
+Notebook/Business function linked for test case 40439
+Work item linked for test case 40439
+************************************************************************
+Creating test case for TC Row : 574
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Exempt - Remove Preg Flag - Mbr stay Exempt
+Long Desc                     : "Find existing member who is exempt due to Pregnancy. Send Xml to Remove the Pregnancy flag in the middle of the month. 
+ 
+1. Xml without Pregnancy Indicator  
+2. Xml with Pregnancy Indicator = Blank  
+3. XML with Pregnancy Indiactor = Blank and DTE_PREGNANCY_END (current Month) 
+4. XML with Pregnancy Indiactor = Blank and DTE_PREGNANCY_END (Future Month) 
+ 
+Verify after the 370 job runs, member is still exempt."
+Expected Results              : "Find existing member who is exempt due to Pregnancy. Send Xml to Remove the Pregnancy flag in the middle of the month. 
+ 
+1. Xml without Pregnancy Indicator  
+2. Xml with Pregnancy Indicator = Blank  
+3. XML with Pregnancy Indiactor = Blank and DTE_PREGNANCY_END (current Month) 
+4. XML with Pregnancy Indiactor = Blank and DTE_PREGNANCY_END (Future Month) 
+ 
+Verify after the 370 job runs, member is still exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 574      : 40440
+************************************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 0, Failures: 1, Skips: 0
+Configuration Failures: 1, Skips: 2
+===============================================
+

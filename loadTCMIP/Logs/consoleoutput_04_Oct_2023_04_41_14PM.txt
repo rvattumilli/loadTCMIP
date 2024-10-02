@@ -1,0 +1,268 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 04/Oct/2023 04:41:14PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.DAYS_TO_RESET_PWD > 2
+Query Execution Time(ms)           : 117
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 121
+Total No.of Rows fetched           : 10
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:22 EDT 2023
+Creating test case for Row #       : 4616
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Prior Auth') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 434
+Validation status                  : PASS
+Short Desc                         : PAUJD002
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PAUJD002 - Generates unsolicited 278 responses" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PAUJD002 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4616          : 46610
+Query Execution Time(ms)           : 63
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46610
+Finished at                        : Wed Oct 04 16:41:25 EDT 2023
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:25 EDT 2023
+Creating test case for Row #       : 4617
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Prior Auth') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 441
+Validation status                  : PASS
+Short Desc                         : PAUJD003
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PAUJD003 - Updates the SA Cycle date parameter" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PAUJD003 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4617          : 46611
+Query Execution Time(ms)           : 62
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46611
+Finished at                        : Wed Oct 04 16:41:28 EDT 2023
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:28 EDT 2023
+Creating test case for Row #       : 4618
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Prior Auth') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : PAUJD001
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PAUJD001 - Request PA Notices" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PAUJD001 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4618          : 46612
+Query Execution Time(ms)           : 68
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46612
+Finished at                        : Wed Oct 04 16:41:31 EDT 2023
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:31 EDT 2023
+Creating test case for Row #       : 4619
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Prior Auth') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 424
+Validation status                  : PASS
+Short Desc                         : PAUJD278
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PAUJD278 - PA 278 Batch Processing" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PAUJD278 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4619          : 46613
+Query Execution Time(ms)           : 61
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46613
+Finished at                        : Wed Oct 04 16:41:34 EDT 2023
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:34 EDT 2023
+Creating test case for Row #       : 4620
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Pre-Admission Screening') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 508
+Validation status                  : PASS
+Short Desc                         : PASJD001
+Env                                : M
+Subsystem                          : Pre-Admission Screening
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PASJD001 - Request PAS Notices" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PASJD001 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4620          : 46614
+Query Execution Time(ms)           : 62
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46614
+Finished at                        : Wed Oct 04 16:41:37 EDT 2023
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:37 EDT 2023
+Creating test case for Row #       : 4621
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Pre-Admission Screening') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 434
+Validation status                  : PASS
+Short Desc                         : PASJD002
+Env                                : M
+Subsystem                          : Pre-Admission Screening
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PASJD002 - Reset the Mass PRO transaction statuses" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PASJD002 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4621          : 46615
+Query Execution Time(ms)           : 70
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46615
+Finished at                        : Wed Oct 04 16:41:40 EDT 2023
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:40 EDT 2023
+Creating test case for Row #       : 4622
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Prior Auth') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 469
+Validation status                  : PASS
+Short Desc                         : PAUJD008
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PAUJD008 - Prior Authorization Nightly Reports" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PAUJD008 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4622          : 46616
+Query Execution Time(ms)           : 59
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46616
+Finished at                        : Wed Oct 04 16:41:43 EDT 2023
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:43 EDT 2023
+Creating test case for Row #       : 4623
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Prior Auth') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 436
+Validation status                  : PASS
+Short Desc                         : PAUJD300
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PAUJD300 - PT1 Outbound Inteface Job" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PAUJD300 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4623          : 46617
+Query Execution Time(ms)           : 59
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46617
+Finished at                        : Wed Oct 04 16:41:46 EDT 2023
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:46 EDT 2023
+Creating test case for Row #       : 4624
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Prior Auth') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 490
+Validation status                  : PASS
+Short Desc                         : paupdSplit.pl
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: paupdSplit.pl - PT1 Outbound File Split Job" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job paupdSplit.pl runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4624          : 46618
+Query Execution Time(ms)           : 62
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46618
+Finished at                        : Wed Oct 04 16:41:49 EDT 2023
+*****************************************************************
+Started at                         : Wed Oct 04 16:41:49 EDT 2023
+Creating test case for Row #       : 4625
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Prior Auth') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 443
+Validation status                  : PASS
+Short Desc                         : PAUJD070
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PAUJD070 - NetReveal PA Daily Changes Extract" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PAUJD070 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 4625          : 46619
+Query Execution Time(ms)           : 73
+Total No.of Columns fetched        : 1
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 46619
+Finished at                        : Wed Oct 04 16:41:52 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 04/Oct/2023 04:41:53PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

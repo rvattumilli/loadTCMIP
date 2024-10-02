@@ -1,0 +1,178 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 10/Jan/2024 03:59:45PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2
+Query Execution Time(ms)           : 72
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 140
+Total No.of Rows fetched           : 14
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:53 EST 2024
+Creating test case for Row #       : 4660
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 50
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:53 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:53 EST 2024
+Creating test case for Row #       : 4661
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.01.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:53 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:53 EST 2024
+Creating test case for Row #       : 4662
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.01.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:54 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:54 EST 2024
+Creating test case for Row #       : 4663
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:54 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:54 EST 2024
+Creating test case for Row #       : 4664
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:55 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:55 EST 2024
+Creating test case for Row #       : 4665
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:55 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:55 EST 2024
+Creating test case for Row #       : 4666
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:56 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:56 EST 2024
+Creating test case for Row #       : 4667
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:56 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:56 EST 2024
+Creating test case for Row #       : 4668
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:56 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:56 EST 2024
+Creating test case for Row #       : 4669
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:57 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:57 EST 2024
+Creating test case for Row #       : 4670
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:57 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:57 EST 2024
+Creating test case for Row #       : 4671
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.040') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:58 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:58 EST 2024
+Creating test case for Row #       : 4672
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.051') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:58 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 15:59:58 EST 2024
+Creating test case for Row #       : 4673
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.03.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Total No.of Columns fetched        : 5
+Grouping                           : Interfaces
+Grouping Validation                : Verify Grouping for the Test case
+Validation status                  : FAIL
+Finished at                        : Wed Jan 10 15:59:59 EST 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 10/Jan/2024 03:59:59PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

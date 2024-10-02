@@ -1,0 +1,243 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 07/Sep/2023 04:46:45PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 73
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 153
+Total No.of Rows                   : 8
+*****************************************************************
+Started at                         : Thu Sep 07 16:46:53 EDT 2023
+Creating test case for Row #       : 4270
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36037.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 463
+Validation status                  : PASS
+Short Desc                         : Member lost&regained elig for same benefit plan on same day
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Step 1 - Find member currently enrolled in CP (BHCP/LTSS) who lost (Z1) and regained eligibility on the same day (within 90 days from cycle date).Step 2 - Day 1  - Close the member's manged care aid cat (Ex: 40) with future date.Step 3 - Day 1 - Member is disenrolled from ACO/MCO and CP after Ineligibles job is complete.Step 4 - Day 1 - Member regains eligibility with no gap in eligibility to same benefit plan on same day after Ineligibles job is complete.Step 5 - Day 1 - MGDJD100 (auto assignment) runs and member is not re-enrolled to ACO/MCO.Step 6 - Day 1 - MGDJD320 (CP re enrollment) runs and member is not re-enrolled to CP.Step 7 - Day 3 -  Verify member is re-enrolled to the previous ACO/MCO assignment plan and PID/SL after MGDJD100 is complete on day 3.Step 8 - Day 4 - Verify member is re-enrolled to the previous CP Program and PID/SL after MGDJD320 is complete on day4.On 08/28:08/ 01/2023-------ACO/MCO-------8/30/202308/ 01/2023-------CP----------------8/30/2023On 08/30:08/31/2023-------ACO/MCO-------12/31/2299On 08/31:08/31/2023-------CP----------------12/31/2299
+Expected Results                   : Verify MGDJD320 doesn't abend and member is re-enrolled to previous CP plan and PIDSL with no gap and effective date is same as ACO/MCO.
+Test Case ID for Row 4270          : 46134
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36037.01.001
+Query Execution Time(ms)           : 335
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46134
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46134
+Finished at                        : Thu Sep 07 16:46:59 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 16:46:59 EDT 2023
+Creating test case for Row #       : 4271
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36037.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 478
+Validation status                  : PASS
+Short Desc                         : Member lost & regained elig for diff benefit plan on same day
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Step 1  - Find member currently enrolled in CP (BHCP/LTSS) who lost (Z1) and regained eligibility on the same day (within 90 days from cycle date).Step 2 - Day 1  - Close the member's manged care aid cat (Ex: 40) with future date.Step 3 - Day 1 - Member is disenrolled from ACO/MCO and CP after Ineligibles job is complete.Step 4 - Day 1 - Member regains eligibility to different benefit plan (Careplus/FADC) with no gap in eligibility on same day after Ineligibles is complete.Step 5 - Day 1 - MGDJD100 (auto assignment ) runs and member is not re-enrolled to ACO/MCO.Step 6 - Day 1 - MGDJD320 (CP re enrollment) runs and member is not re-enrolled to CP.Step 7 - Verify member is re-enrolled to ACO/MCO with gap after weekly MC cycle.Step 8 - Member is not re-enrolled to CP as ACO/MCO is re-enrolled with gap and CP re-enrollment fails due to gap in ACO/MCO enrollments.On 08/28:08/ 01/2023-------ACO/MCO-------8/30/202308/ 01/2023-------CP----------------8/30/2023On 09/01:09/02/2023-------ACO/MCO-------12/31/2299No CP re-enrollment due to defect 36049
+Expected Results                   : Verify MGDJD320 doesn't abend and member is not re-enrolled to previous CP plan and PIDSL.
+Test Case ID for Row 4271          : 46135
+Query Execution Time(ms)           : 73
+Requirement ID                     : 36037.01.001
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46135
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46135
+Finished at                        : Thu Sep 07 16:47:03 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 16:47:03 EDT 2023
+Creating test case for Row #       : 4272
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36037.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 438
+Validation status                  : PASS
+Short Desc                         : Member lost & regained elig for diff benefit plan on same day
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Step 1  - Find member currently enrolled in CP (CSA/ACCS1/PACC1) who lost (Z1) and regained eligibility on the same day (within 90 days from cycle date).Step 2 - Day 1  - Close the member's manged care aid cat (Ex: 40) with current date.Step 3 - Day 1 - Member is disenrolled from CP after Ineligibles job is complete.Step 4 - Day 1 - Member regains eligibility to different benefit plan (Careplus/FADC) with no gap in eligibility on same day after Ineligibles job is complete.Step 5 - Day 1 - MGDJD320 (CP re enrollment) runs and member is not re-enrolled to CP.Step 6 - Day 3 - Verify member is re-enrolled to the previous CP program with same PID/SL  after MGDJD320 is complete on day2.On 08/28:08/ 01/2023-------CP----------------8/28/2023On 08/29:08/29/2023-------CP-------12/31/2299
+Expected Results                   : Verify MGDJD320 doesn't abend and member is re-enrolled to previous CP plan and PIDSL with no gap.
+Test Case ID for Row 4272          : 46136
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36037.01.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46136
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46136
+Finished at                        : Thu Sep 07 16:47:08 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 16:47:08 EDT 2023
+Creating test case for Row #       : 4273
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36037.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 467
+Validation status                  : PASS
+Short Desc                         : Member lost & regained elig for same benefit plan on same day
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Step 1  - Find member currently enrolled in CP (CSA/ACCS1/PACC1) who lost (Z1) and regained eligibility on the same day (within 90 days from cycle date).Step 2 - Day 1  - Close the member's manged care aid cat with future date.Step 3 - Day 1 - Member is disenrolled from CP after Ineligibles job is complete.Step 4 - Day 1 - Member regains eligibility to same benefit plan (STD/Careplus/FADC) with no gap in eligibility on same day after Ineligibles job is complete.Step 5 - Day 1 - MGDJD320 (CP re enrollment) runs and member is not re-enrolled to CP.Step 6 - Day 4 - Verify member is re-enrolled to the previous CP program with same PID/SL after MGDJD320 is complete on day 3.On 08/28:08/ 01/2023-------CP----------------8/29/2023On 08/30:08/30/2023-------CP-------12/31/2299
+Expected Results                   : Verify MGDJD320 doesn't abend and member is re-enrolled to previous CP plan and PIDSL with no gap.
+Test Case ID for Row 4273          : 46137
+Query Execution Time(ms)           : 72
+Requirement ID                     : 36037.01.001
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46137
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46137
+Finished at                        : Thu Sep 07 16:47:13 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 16:47:13 EDT 2023
+Creating test case for Row #       : 4274
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36037.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 442
+Validation status                  : PASS
+Short Desc                         : Member lost & regained elig for same benefit plan on same day
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Step 1  - Find member currently enrolled in CP (ACCS2/PACC2) who lost (Z1) and regained eligibility on the same day (within 90 days from cycle date).Step 2 - Day 1  - Close the member's non-manged care aid cat with current date.Step 3 - Day 1 - Member is disenrolled from CP after Ineligibles job is complete.Step 4 - Day 1 - Member regains eligibility to same benefit plan with no gap in eligibility on same day after Ineligibles job is complete.Step 5 - Day 1 - MGDJD320 (CP re enrollment) runs and member is not re-enrolled to CP.Step 6 - Day 3 - Verify member is re-enrolled to the previous CP with same PID/SL and program after MGDJD320 is complete on day2.On 08/28:08/ 01/2023-------CP----------------8/28/2023On 08/29:08/29/2023-------CP-------12/31/2299
+Expected Results                   : Verify MGDJD320 doesn't abend and member is re-enrolled to previous CP plan and PIDSL with no gap.
+Test Case ID for Row 4274          : 46138
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36037.01.001
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46138
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46138
+Finished at                        : Thu Sep 07 16:47:17 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 16:47:17 EDT 2023
+Creating test case for Row #       : 4275
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36037.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 479
+Validation status                  : PASS
+Short Desc                         : Member lost & regained elig for diff benefit plan on same day
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Step 1  - Find member currently enrolled in CP (ACCS2/PACC2) who lost (Z1) and regained eligibility on the same day (within 90 days from cycle date).Step 2 - Day 1  - Close the member's non-manged care aid cat with retro date.Step 3 - Day 1 - Member is disenrolled from CP after Ineligibles job is complete.Step 4 - Day 1 - Member regains eligibility to diff non-managed care benefit plan with no gap in eligibility on same day after Ineligibles job is complete.Step 5 - Day 1 - MGDJD320 (CP re enrollment) runs and member is not re-enrolled to CP.Step 6 - Day 3 - Verify member is re-enrolled to the previous CP with same PID/SL and program after MGDJD320 is complete on day2.On 08/28:08/ 01/2023-------CP----------------8/27/2023On 08/29:08/28/2023-------CP-------12/31/2299
+Expected Results                   : Verify MGDJD320 doesn't abend and member is re-enrolled to previous CP plan and PIDSL with no gap.
+Test Case ID for Row 4275          : 46139
+Query Execution Time(ms)           : 156
+Requirement ID                     : 36037.01.001
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46139
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46139
+Finished at                        : Thu Sep 07 16:47:22 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 16:47:22 EDT 2023
+Creating test case for Row #       : 4276
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36037.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 465
+Validation status                  : PASS
+Short Desc                         : Member lost & regained elig for same/diff benefit plan on same day
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Step 1 - Find member currently enrolled in CP (CSA/ACCS1/PACC1) who lost (Z1) and regained eligibility on same day but within 90 days from cycle date.Step 2 - Day 1  - Close the member's aid cat (Ex: 40) with current date.Step 3 - Day 1 - Member is disenrolled from CP after Ineligibles job is complete.Step 4 - Day 1 - Member regains eligibility to same/diff benefit plan with no gap in eligibility on same day.Step 5 - Day 2 - After MGDJD320 is complete, verify member is re-enrolled to latest previous CP plan with start date = latest CP end date + 1 day.On 08/28 before MGDJD150 ran:07/ 01/2023-------ACCS1----------------08/15/202308/16/2023-------ACCS1----------------12/31/2299On 08/28 after MGDJD150 ran:07/ 01/2023-------ACCS1----------------08/15/202308/16/2023-------ACCS1----------------08/28/2023On 08/29:08/29/2023-------ACCS1----------------12/31/2299
+Expected Results                   : Verify MGDJD320 doesn't abend and member is re-enrolled to previous CP plan and PIDSL with no gap.
+Test Case ID for Row 4276          : 46140
+Query Execution Time(ms)           : 76
+Requirement ID                     : 36037.01.002
+Query Execution Time(ms)           : 39
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46140
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46140
+Finished at                        : Thu Sep 07 16:47:27 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 16:47:27 EDT 2023
+Creating test case for Row #       : 4277
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36037.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 460
+Validation status                  : PASS
+Short Desc                         : Member with multiple CPs in last 90 days
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Step 1 - Find member currently enrolled in CP (CSA/ACCS1/PACC1). Member also has different CP with Z1 stop code in last 90 days.Step 2 - Day 1  - Close the member's aid cat (Ex: 40) with current date.Step 3 - Day 1 - Member is disenrolled from CP after Ineligibles job is complete.Step 4 - Day 1 - Member regains eligibility to same/diff benefit plan with no gap in eligibility on same day.Step 5 - Day 2 - After MGDJD320 is complete, verify member is re-enrolled to latest previous CP plan with start date = latest CP end date + 1 day.On 08/28 before MGDJD150 ran:07/ 01/2023-------PACC1----------------08/15/202308/16/2023-------ACCS1----------------12/31/2299On 08/28 after MGDJD150 ran:07/ 01/2023-------PACC1----------------08/15/202308/16/2023-------ACCS1----------------08/28/2023On 08/29:08/29/2023-------ACCS1----------------12/31/2299
+Expected Results                   : Verify MGDJD320 doesn't abend and member is re-enrolled to latest previous CP plan and PIDSL with no gap.
+Test Case ID for Row 4277          : 46141
+Query Execution Time(ms)           : 79
+Requirement ID                     : 36037.01.002
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46141
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46141
+Finished at                        : Thu Sep 07 16:47:32 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 07/Sep/2023 04:47:32PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

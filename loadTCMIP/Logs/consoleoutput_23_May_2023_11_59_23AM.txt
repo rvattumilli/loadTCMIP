@@ -1,0 +1,923 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 23/May/2023 11:59:23AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 44
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : false
+Link WI/Defect/CO                  : true
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 98
+Total No.of Rows                   : 37
+****************************************************
+Started at                         : Tue May 23 11:59:31 EDT 2023
+Creating test case for Row #       : 1897
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 544
+Validation status                  : PASS
+Short Desc                         : Review PAS Request
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Re-Review a PAS Request /PAS request submitted for a second opinion
+Expected Results                   : PAS request is submitted sucessfully
+Test Case ID for Row 1897          : 43232
+Query Execution Time(ms)           : 59
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43232
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43232
+Finished at                        : Tue May 23 11:59:41 EDT 2023
+****************************************************
+Started at                         : Tue May 23 11:59:41 EDT 2023
+Creating test case for Row #       : 1898
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 544
+Validation status                  : PASS
+Short Desc                         : Modify PAS Request
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : PAS requests may be updated if they have been saved but not submitted.
+Expected Results                   : PAS request is submitted sucessfully
+Test Case ID for Row 1898          : 43233
+Query Execution Time(ms)           : 67
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43233
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43233
+Finished at                        : Tue May 23 11:59:50 EDT 2023
+****************************************************
+Started at                         : Tue May 23 11:59:50 EDT 2023
+Creating test case for Row #       : 1899
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 530
+Validation status                  : PASS
+Short Desc                         : Enter PA Request
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Enter a PA Request. Click Manage Service Authorizations. Click Prior Authorization. Click Enter PA Request. Validate buttons, links, and confirm success of PA request.
+Expected Results                   : The Prior Authorization Response panel will display, indicating that the request was successfully submitted. The tracking number will be provided. Buttons and links should work as expected.
+Test Case ID for Row 1899          : 43234
+Query Execution Time(ms)           : 74
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43234
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43234
+Finished at                        : Tue May 23 12:00:00 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:00:00 EDT 2023
+Creating test case for Row #       : 1900
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 607
+Validation status                  : PASS
+Short Desc                         : Inquire PA Request
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Inquire about a previously submitted prior authorization PA request. Click Inquire/ Maintain PA Request. Validate search results, links, and buttons.
+Expected Results                   : Search should display search results. Requested information is displayed on the Base Information panel.
+Test Case ID for Row 1900          : 43235
+Query Execution Time(ms)           : 69
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43235
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43235
+Finished at                        : Tue May 23 12:00:09 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:00:09 EDT 2023
+Creating test case for Row #       : 1901
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 603
+Validation status                  : PASS
+Short Desc                         : Enter New Referral
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Submit a referral for a service provider. Click Referral. Validate search icon, input fields, calendar, buttons, and success panel.
+Expected Results                   : A Referral Confirmation panel is displayed, indicating that you have successfully submitted the referral and providing you with the Referral number that has been assigned. Buttons and links should work as expected and save new referral successfully.
+Test Case ID for Row 1901          : 43236
+Query Execution Time(ms)           : 71
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43236
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43236
+Finished at                        : Tue May 23 12:00:20 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:00:20 EDT 2023
+Creating test case for Row #       : 1902
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 575
+Validation status                  : PASS
+Short Desc                         : Inquire Referral
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Enter the Referral Authorization number to inquire about a specific 278 request. Click Referral. Click Inquire Referral. Validate Search results, buttons, and links.
+Expected Results                   : Referral information is displayed. Search, links, and buttons should work as expected
+Test Case ID for Row 1902          : 43237
+Query Execution Time(ms)           : 75
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43237
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43237
+Finished at                        : Tue May 23 12:00:30 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:00:30 EDT 2023
+Creating test case for Row #       : 1903
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 52
+Validation Time(ms)                : 732
+Validation status                  : PASS
+Short Desc                         : Request Transportation
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click on Request Transportation Link
+Expected Results                   : Redirected to the right page, page layout is as expected.
+Test Case ID for Row 1903          : 43238
+Query Execution Time(ms)           : 65
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43238
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43238
+Finished at                        : Tue May 23 12:00:39 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:00:39 EDT 2023
+Creating test case for Row #       : 1904
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 582
+Validation status                  : PASS
+Short Desc                         : Create Subordinate Accounts
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click Manage Subordinate Accounts. Validate buttons, search results, create new subordinate, login using created username and password, password reset, link a subordinate and remove a subordinate.
+Expected Results                   : System-generated username and password displayed on the confirmation message. Should display warning to save data
+Test Case ID for Row 1904          : 43239
+Query Execution Time(ms)           : 69
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43239
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43239
+Finished at                        : Tue May 23 12:00:49 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:00:49 EDT 2023
+Creating test case for Row #       : 1905
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 67
+Validation Time(ms)                : 834
+Validation status                  : PASS
+Short Desc                         : Link Subordinate Accounts
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Link Subordinate Account to Provider ID/SL and Move the services you want the subordinate to have access to from the Available Services
+Expected Results                   : Transaction is submitted sucessfully
+Test Case ID for Row 1905          : 43240
+Query Execution Time(ms)           : 116
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43240
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43240
+Finished at                        : Tue May 23 12:01:00 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:01:00 EDT 2023
+Creating test case for Row #       : 1906
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 554
+Validation status                  : PASS
+Short Desc                         : View Publications & Forms
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click on  "Click here to View Publications" link
+Expected Results                   : redirected to Publications site
+Test Case ID for Row 1906          : 43241
+Query Execution Time(ms)           : 67
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43241
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43241
+Finished at                        : Tue May 23 12:01:10 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:01:10 EDT 2023
+Creating test case for Row #       : 1907
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 562
+Validation status                  : PASS
+Short Desc                         : Order Publications
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click on Order Publications link
+Expected Results                   : redirected to Order Provider Publications site
+Test Case ID for Row 1907          : 43242
+Query Execution Time(ms)           : 103
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43242
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43242
+Finished at                        : Tue May 23 12:01:20 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:01:20 EDT 2023
+Creating test case for Row #       : 1908
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 672
+Validation status                  : PASS
+Short Desc                         : Training Registration
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click on Training Registraiton link
+Expected Results                   : redirected to Provider Training Portal site
+Test Case ID for Row 1908          : 43243
+Query Execution Time(ms)           : 86
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43243
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43243
+Finished at                        : Tue May 23 12:01:30 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:01:30 EDT 2023
+Creating test case for Row #       : 1909
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 526
+Validation status                  : PASS
+Short Desc                         : Regulations
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click on Regulations link
+Expected Results                   : redirected to MassHealth provider regulations site
+Test Case ID for Row 1909          : 43244
+Query Execution Time(ms)           : 89
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43244
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43244
+Finished at                        : Tue May 23 12:01:39 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:01:39 EDT 2023
+Creating test case for Row #       : 1910
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 50
+Validation Time(ms)                : 576
+Validation status                  : PASS
+Short Desc                         : FAQs
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click on FAQs link
+Expected Results                   : FAQs page is same as before and links are working
+Test Case ID for Row 1910          : 43245
+Query Execution Time(ms)           : 66
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43245
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43245
+Finished at                        : Tue May 23 12:01:49 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:01:49 EDT 2023
+Creating test case for Row #       : 1911
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 557
+Validation status                  : PASS
+Short Desc                         : Training and Assistance Materials
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click on "Training and Assistance Materials" link
+Expected Results                   : Redirected to right page, content is as expected.
+Test Case ID for Row 1911          : 43246
+Query Execution Time(ms)           : 71
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43246
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43246
+Finished at                        : Tue May 23 12:01:59 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:01:59 EDT 2023
+Creating test case for Row #       : 1912
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 573
+Validation status                  : PASS
+Short Desc                         : News & Updates Link
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : click on  News & Updates Link
+Expected Results                   : Redirected to right page, content is same as before
+Test Case ID for Row 1912          : 43247
+Query Execution Time(ms)           : 70
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43247
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43247
+Finished at                        : Tue May 23 12:02:09 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:02:09 EDT 2023
+Creating test case for Row #       : 1913
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 499
+Validation status                  : PASS
+Short Desc                         : EOHHS Pricing Regulations
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click on "EOHHS pricing Regulations" link
+Expected Results                   : Redirected to eohhs-regulations site, content is as expected
+Test Case ID for Row 1913          : 43248
+Query Execution Time(ms)           : 63
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43248
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43248
+Finished at                        : Tue May 23 12:02:18 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:02:18 EDT 2023
+Creating test case for Row #       : 1914
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 645
+Validation status                  : PASS
+Short Desc                         : Virtual Gateway
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Clik on "Virtual Gateway" link
+Expected Results                   : Redirected to the login site
+Test Case ID for Row 1914          : 43249
+Query Execution Time(ms)           : 78
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43249
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43249
+Finished at                        : Tue May 23 12:02:28 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:02:28 EDT 2023
+Creating test case for Row #       : 1915
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 612
+Validation status                  : PASS
+Short Desc                         : MassHealth
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Clik on "MassHealth" link
+Expected Results                   : Redirected to the Masshealth site
+Test Case ID for Row 1915          : 43250
+Query Execution Time(ms)           : 75
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43250
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43250
+Finished at                        : Tue May 23 12:02:38 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:02:38 EDT 2023
+Creating test case for Row #       : 1916
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 569
+Validation status                  : PASS
+Short Desc                         : Center for Health Information and Analysis
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click on "Center for Health Information and Analysis" link
+Expected Results                   : Redirected to right page, content is as expected.
+Test Case ID for Row 1916          : 43251
+Query Execution Time(ms)           : 71
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43251
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43251
+Finished at                        : Tue May 23 12:02:47 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:02:47 EDT 2023
+Creating test case for Row #       : 1917
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 539
+Validation status                  : PASS
+Short Desc                         : Inquire Eligbility Request
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Enter the tracking number to inquire about a specific 270/271 request.
+Expected Results                   : Eligibility Transactions Search Results are displayed
+Test Case ID for Row 1917          : 43252
+Query Execution Time(ms)           : 94
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43252
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43252
+Finished at                        : Tue May 23 12:02:57 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:02:57 EDT 2023
+Creating test case for Row #       : 1918
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 557
+Validation status                  : PASS
+Short Desc                         : Enroll PACE Members
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Enter Provider ID, Member details who is eligible for PACE to enroll. Verify buttons and enrollment success.
+Expected Results                   : Member enrollment to PACE is scessfull. Buttons and links should work as expected.
+Test Case ID for Row 1918          : 43253
+Query Execution Time(ms)           : 84
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43253
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43253
+Finished at                        : Tue May 23 12:03:07 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:03:07 EDT 2023
+Creating test case for Row #       : 1919
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 556
+Validation status                  : PASS
+Short Desc                         : Disenroll PACE Members
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Enter Provider ID, Member details who is enrolled in PACE to Disenroll.
+Expected Results                   : Disenrollment Confirmation is displayed. Buttons and links should work as expected.
+Test Case ID for Row 1919          : 43254
+Query Execution Time(ms)           : 69
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43254
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43254
+Finished at                        : Tue May 23 12:03:17 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:03:17 EDT 2023
+Creating test case for Row #       : 1920
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 562
+Validation status                  : PASS
+Short Desc                         : Enroll SCO Members
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Enter Provider ID, Member details who is eligible for SCO to enroll
+Expected Results                   : Member enrollment to SCO is scessfull. Buttons and links should work as expected.
+Test Case ID for Row 1920          : 43255
+Query Execution Time(ms)           : 96
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43255
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43255
+Finished at                        : Tue May 23 12:03:27 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:03:27 EDT 2023
+Creating test case for Row #       : 1921
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 558
+Validation status                  : PASS
+Short Desc                         : Disenroll SCO Members
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Enter Provider ID, Member details who is enrolled in PACE to Disenroll
+Expected Results                   : Disenrollment Confirmation is displayed. Buttons and links should work as expected.
+Test Case ID for Row 1921          : 43256
+Query Execution Time(ms)           : 85
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43256
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43256
+Finished at                        : Tue May 23 12:03:37 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:03:37 EDT 2023
+Creating test case for Row #       : 1922
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 54
+Validation Time(ms)                : 607
+Validation status                  : PASS
+Short Desc                         : Enter Management Minutes Questionnaires (MMQ)
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Enter MMQ Questionnaries for a member and verify Confirmation message. Validate buttons, links and success panel.
+Expected Results                   : MMQ is submitted successfully. Links and buttons should work as expected.
+Test Case ID for Row 1922          : 43257
+Query Execution Time(ms)           : 75
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43257
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43257
+Finished at                        : Tue May 23 12:03:47 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:03:47 EDT 2023
+Creating test case for Row #       : 1923
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 516
+Validation status                  : PASS
+Short Desc                         : Enter professional Claim
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Submit Professional Claim for an eligible member.  Validate links, buttons, and success panel.
+Expected Results                   : Claim is submitted sucessfully, ICN is generated. Links and buttons should work as expected.
+Test Case ID for Row 1923          : 43258
+Query Execution Time(ms)           : 108
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43258
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43258
+Finished at                        : Tue May 23 12:03:56 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:03:56 EDT 2023
+Creating test case for Row #       : 1924
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 555
+Validation status                  : PASS
+Short Desc                         : Inquire Claim Status
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Enter ICN number to check the status of the claim. Validate Search results, buttons, and links.
+Expected Results                   : Claim status is disaplayed. Links and buttons should work as expected.
+Test Case ID for Row 1924          : 43259
+Query Execution Time(ms)           : 70
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43259
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43259
+Finished at                        : Tue May 23 12:04:06 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:04:06 EDT 2023
+Creating test case for Row #       : 1925
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 585
+Validation status                  : PASS
+Short Desc                         : Hearing Aid Member Search
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Search for Hearing Aid Member
+Expected Results                   : Search results are successful and are as expected
+Test Case ID for Row 1925          : 43260
+Query Execution Time(ms)           : 86
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43260
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43260
+Finished at                        : Tue May 23 12:04:17 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:04:17 EDT 2023
+Creating test case for Row #       : 1926
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 604
+Validation status                  : PASS
+Short Desc                         : Download PACE Payment Reports
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : View PACE Payment Reports for selected provider. Validate search results and buttons.
+Expected Results                   : PDF reports are as expected. Links and buttons should work as expected.
+Test Case ID for Row 1926          : 43261
+Query Execution Time(ms)           : 89
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43261
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43261
+Finished at                        : Tue May 23 12:04:27 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:04:27 EDT 2023
+Creating test case for Row #       : 1927
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 558
+Validation status                  : PASS
+Short Desc                         : Download SCO Payment Reports
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : View SCO Payment Reports for selected provider. Validate search results and buttons.
+Expected Results                   : PDF reports are as expected. Links and buttons should work as expected.
+Test Case ID for Row 1927          : 43262
+Query Execution Time(ms)           : 61
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43262
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43262
+Finished at                        : Tue May 23 12:04:37 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:04:37 EDT 2023
+Creating test case for Row #       : 1928
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 529
+Validation status                  : PASS
+Short Desc                         : View Broadcast Messages
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click Manage Correspondence and Reporting. Click View Broadcast Messages. Validate sorting and subject links.
+Expected Results                   : Search, links, and buttons should work as expected
+Test Case ID for Row 1928          : 43263
+Query Execution Time(ms)           : 65
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43263
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43263
+Finished at                        : Tue May 23 12:04:46 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:04:46 EDT 2023
+Creating test case for Row #       : 1929
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 515
+Validation status                  : PASS
+Short Desc                         : View Notifications
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click View Notifications. Validate buttons and download links. Verify that the downloaded file is not corrupted.View SCO Payment Reports for selected provider. Validate search results and buttons.
+Expected Results                   : Valid files should be downloaded
+Test Case ID for Row 1929          : 43264
+Query Execution Time(ms)           : 85
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43264
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43264
+Finished at                        : Tue May 23 12:04:56 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:04:56 EDT 2023
+Creating test case for Row #       : 1930
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 550
+Validation status                  : PASS
+Short Desc                         : View Metrics/Reports
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click Manage Correspondence and Reporting.  Click View Metrics/Reports.  Validate buttons, search results, and download links.
+Expected Results                   : Buttons and links should work as expected. Files should be downloaded successfully
+Test Case ID for Row 1930          : 43265
+Query Execution Time(ms)           : 70
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43265
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43265
+Finished at                        : Tue May 23 12:05:06 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:05:06 EDT 2023
+Creating test case for Row #       : 1931
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 567
+Validation status                  : PASS
+Short Desc                         : Inquire Financial Data
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click Inquire Financial Data . Validate Search button and Search Results.
+Expected Results                   : Search should display results
+Test Case ID for Row 1931          : 43266
+Query Execution Time(ms)           : 78
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43266
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43266
+Finished at                        : Tue May 23 12:05:16 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:05:16 EDT 2023
+Creating test case for Row #       : 1932
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 559
+Validation status                  : PASS
+Short Desc                         : View Contracts and Documents
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : View Contracts and Documents. Validate search button and download links.
+Expected Results                   : Search should display Contracts and documents. Files should be downloaded successfully.
+Test Case ID for Row 1932          : 43267
+Query Execution Time(ms)           : 108
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43267
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43267
+Finished at                        : Tue May 23 12:05:26 EDT 2023
+****************************************************
+Started at                         : Tue May 23 12:05:26 EDT 2023
+Creating test case for Row #       : 1933
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 528
+Validation status                  : PASS
+Short Desc                         : Submit Feedback
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Click Submit Feedback. Validate captcha, input, and Submit Email button.
+Expected Results                   : Should submit email (This has to be tested from the server )
+Test Case ID for Row 1933          : 43268
+Query Execution Time(ms)           : 65
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43268
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43268
+Finished at                        : Tue May 23 12:05:36 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 23/May/2023 12:05:37PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

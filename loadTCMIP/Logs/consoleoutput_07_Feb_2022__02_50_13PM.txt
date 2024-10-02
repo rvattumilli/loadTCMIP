@@ -1,0 +1,355 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 07/Feb/2022 02:50:13PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+***************************************************
+Started at                         : Mon Feb 07 14:50:21 EST 2022
+Creating test case for TC Row      : 875
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 70 Day New Duals Member Information Sent to SM
+Long Desc                          : Send member information using the 'Mail Interface' file to Standard Modern via MoveIt 70 days before the member's enrollment effective date if the enrollment is a NEW DUALS passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'SPANIS' if the member written language is Spanish otherwise set the flag to 'ENG'. Send member address information in address fields.
+Expected Results                   : Member Information is sent 70 days before New Duals effective date and Language code =  'SPANIS' otherwise 'ENG' for member to SM
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 875           : 41188
+Notebook linked for test case      : 41188
+Work item/CO linked for test case  : 41188
+Finished at                        : Mon Feb 07 14:50:37 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:50:37 EST 2022
+Creating test case for TC Row      : 876
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 70 Day New Duals ARD Information Sent to SM
+Long Desc                          : Send active ARD information using the 'Mail Interface' file to Standard Modern via MoveIt 70 days before the member's enrollment effective date if the enrollment is a NEW DUALS passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'ENG'. Send ARD address information from T_RE_CONTACT in address fields.
+Expected Results                   : Active ARD Information is sent 70 days before New Duals effective date and Language code =  ''ENG' to SM
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 876           : 41189
+Notebook linked for test case      : 41189
+Work item/CO linked for test case  : 41189
+Finished at                        : Mon Feb 07 14:50:52 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:50:52 EST 2022
+Creating test case for TC Row      : 877
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 70 Day New Duals Member Information Sent to Maximus
+Long Desc                          : Send member information using the 'Mail Interface' file to Maximus via Connect Direct 70 days before the member's enrollment effective date if the enrollment is a NEW DUALS passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'SPANIS' if the member written language is Spanish otherwise set the flag to 'ENG'. Send member address information in address fields.
+Expected Results                   : Member Information is sent 70 days before New Duals effective date and Language code =  'SPANIS' otherwise 'ENG' for member to Maximus
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 877           : 41190
+Notebook linked for test case      : 41190
+Work item/CO linked for test case  : 41190
+Finished at                        : Mon Feb 07 14:51:07 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:51:07 EST 2022
+Creating test case for TC Row      : 878
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 70 Day New Duals ARD Information Sent to Maximus
+Long Desc                          : Send active ARD information using the 'Mail Interface' file to Maximus via Connect Direct 70 days before the member's enrollment effective date if the enrollment is a NEW DUALS passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'ENG'. Send ARD address information from T_RE_CONTACT in address fields.
+Expected Results                   : Active ARD Information is sent 70 days before New Duals effective date and Language code =  ''ENG' to Maximus
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 878           : 41191
+Notebook linked for test case      : 41191
+Work item/CO linked for test case  : 41191
+Finished at                        : Mon Feb 07 14:51:23 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:51:23 EST 2022
+Creating test case for TC Row      : 879
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 70 Day Regular Member Information Sent to SM
+Long Desc                          : Send member information using the 'Mail Interface' file to Standard Modern via MoveIt 70 days before the member's enrollment effective date if the enrollment is a REGULAR passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'SPANIS' if the member written language is Spanish otherwise set the flag to 'ENG'. Send member address information in address fields.
+Expected Results                   : Member Information is sent 70 days before Regular effective date and Language code =  'SPANIS' otherwise 'ENG' for member to SM
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 879           : 41192
+Notebook linked for test case      : 41192
+Work item/CO linked for test case  : 41192
+Finished at                        : Mon Feb 07 14:51:38 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:51:38 EST 2022
+Creating test case for TC Row      : 880
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 70 Day Regular ARD Information Sent to SM
+Long Desc                          : Send active ARD information using the 'Mail Interface' file to Standard Modern via MoveIt 70 days before the member's enrollment effective date if the enrollment is a REGULAR passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'ENG'. Send ARD address information from T_RE_CONTACT in address fields.
+Expected Results                   : Active ARD Information is sent 70 days before Regular effective date and Language code =  ''ENG' to SM
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 880           : 41193
+Notebook linked for test case      : 41193
+Work item/CO linked for test case  : 41193
+Finished at                        : Mon Feb 07 14:51:54 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:51:54 EST 2022
+Creating test case for TC Row      : 881
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 70 Day Regular Member Information Sent to Maximus
+Long Desc                          : Send member information using the 'Mail Interface' file to Maximus via Connect Direct 70 days before the member's enrollment effective date if the enrollment is a REGULAR passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'SPANIS' if the member written language is Spanish otherwise set the flag to 'ENG'. Send member address information in address fields.
+Expected Results                   : Member Information is sent 70 days before Regular effective date and Language code =  'SPANIS' otherwise 'ENG' for member to Maximus
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 881           : 41194
+Notebook linked for test case      : 41194
+Work item/CO linked for test case  : 41194
+Finished at                        : Mon Feb 07 14:52:09 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:52:09 EST 2022
+Creating test case for TC Row      : 882
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 70 Day Regular ARD Information Sent to Maximus
+Long Desc                          : Send active ARD information using the 'Mail Interface' file to Maximus via Connect Direct 70 days before the member's enrollment effective date if the enrollment is a REGULAR passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'ENG'. Send ARD address information from T_RE_CONTACT in address fields.
+Expected Results                   : Active ARD Information is sent 70 days before Regular effective date and Language code =  ''ENG' to Maximus
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 882           : 41195
+Notebook linked for test case      : 41195
+Work item/CO linked for test case  : 41195
+Finished at                        : Mon Feb 07 14:52:25 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:52:25 EST 2022
+Creating test case for TC Row      : 883
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 40 Day New Duals Member Information Sent to SM
+Long Desc                          : Send member information using the 'Mail Interface' file to Standard Modern via MoveIt 40 days before the member's enrollment effective date if the enrollment is a NEW DUALS passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'SPANIS' if the member written language is Spanish otherwise set the flag to 'ENG'. Send member address information in address fields.
+Expected Results                   : Member Information is sent 40 days before New Duals effective date and Language code =  'SPANIS' otherwise 'ENG' for member to SM
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 883           : 41196
+Notebook linked for test case      : 41196
+Work item/CO linked for test case  : 41196
+Finished at                        : Mon Feb 07 14:52:40 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:52:40 EST 2022
+Creating test case for TC Row      : 884
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 40 Day New Duals ARD Information Sent to SM
+Long Desc                          : Send active ARD information using the 'Mail Interface' file to Standard Modern via MoveIt 40 days before the member's enrollment effective date if the enrollment is a NEW DUALS passive one care enrollment.  Set 'Language' flag on the 'Mail Interface' file to 'ENG'. Send ARD address information from T_RE_CONTACT in address fields.
+Expected Results                   : Active ARD Information is sent 40 days before New Duals effective date and Language code =  ''ENG' to SM
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 884           : 41197
+Notebook linked for test case      : 41197
+Work item/CO linked for test case  : 41197
+Finished at                        : Mon Feb 07 14:52:55 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:52:55 EST 2022
+Creating test case for TC Row      : 885
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 40 Day New Duals Member Information Sent to Maximus
+Long Desc                          : Send member information using the 'Mail Interface' file to Maximus via Connect Direct 40 days before the member's enrollment effective date if the enrollment is a NEW DUALS passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'SPANIS' if the member written language is Spanish otherwise set the flag to 'ENG'. Send member address information in address fields.
+Expected Results                   : Member Information is sent 40 days before New Duals effective date and Language code =  'SPANIS' otherwise 'ENG' for member to Maximus
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 885           : 41198
+Notebook linked for test case      : 41198
+Work item/CO linked for test case  : 41198
+Finished at                        : Mon Feb 07 14:53:11 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:53:11 EST 2022
+Creating test case for TC Row      : 886
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 40 Day New Duals ARD Information Sent to Maximus
+Long Desc                          : Send active ARD information using the 'Mail Interface' file to Maximus via Connect Direct 40 days before the member's enrollment effective date if the enrollment is a NEW DUALS passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'ENG'. Send ARD address information from T_RE_CONTACT in address fields.
+Expected Results                   : Active ARD Information is sent 40 days before New Duals effective date and Language code =  ''ENG' to Maximus
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 886           : 41199
+Notebook linked for test case      : 41199
+Work item/CO linked for test case  : 41199
+Finished at                        : Mon Feb 07 14:53:27 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:53:27 EST 2022
+Creating test case for TC Row      : 887
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 40 Day Regular Member Information Sent to SM
+Long Desc                          : Send member information using the 'Mail Interface' file to Standard Modern via MoveIt 40 days before the member's enrollment effective date if the enrollment is a REGULAR passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'SPANIS' if the member written language is Spanish otherwise set the flag to 'ENG'. Send member address information in address fields.
+Expected Results                   : Member Information is sent 40 days before Regular effective date and Language code =  'SPANIS' otherwise 'ENG' for member to SM
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 887           : 41200
+Notebook linked for test case      : 41200
+Work item/CO linked for test case  : 41200
+Finished at                        : Mon Feb 07 14:53:43 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:53:43 EST 2022
+Creating test case for TC Row      : 888
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 40 Day Regular ARD Information Sent to SM
+Long Desc                          : Send active ARD information using the 'Mail Interface' file to Standard Modern via MoveIt 40 days before the member's enrollment effective date if the enrollment is a REGULAR passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'ENG'. Send ARD address information from T_RE_CONTACT in address fields.
+Expected Results                   : Active ARD Information is sent 40 days before Regular effective date and Language code =  ''ENG' to SM
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 888           : 41201
+Notebook linked for test case      : 41201
+Work item/CO linked for test case  : 41201
+Finished at                        : Mon Feb 07 14:53:58 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:53:58 EST 2022
+Creating test case for TC Row      : 889
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 40 Day Regular Member Information Sent to Maximus
+Long Desc                          : Send member information using the 'Mail Interface' file to Maximus via Connect Direct 40 days before the member's enrollment effective date if the enrollment is a REGULAR passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'SPANIS' if the member written language is Spanish otherwise set the flag to 'ENG'. Send member address information in address fields.
+Expected Results                   : Member Information is sent 40 days before Regular effective date and Language code =  'SPANIS' otherwise 'ENG' for member to Maximus
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 889           : 41202
+Notebook linked for test case      : 41202
+Work item/CO linked for test case  : 41202
+Finished at                        : Mon Feb 07 14:54:13 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:54:13 EST 2022
+Creating test case for TC Row      : 890
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 40 Day Regular ARD Information Sent to Maximus
+Long Desc                          : Send active ARD information using the 'Mail Interface' file to Maximus via Connect Direct 40 days before the member's enrollment effective date if the enrollment is a REGULAR passive one care enrollment. Set 'Language' flag on the 'Mail Interface' file to 'ENG'. Send ARD address information from T_RE_CONTACT in address fields.
+Expected Results                   : Active ARD Information is sent 40 days before Regular effective date and Language code =  ''ENG' to Maximus
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 890           : 41203
+Notebook linked for test case      : 41203
+Work item/CO linked for test case  : 41203
+Finished at                        : Mon Feb 07 14:54:28 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:54:28 EST 2022
+Creating test case for TC Row      : 891
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Insert 307 record onto T_RE_DTRR table
+Long Desc                          : Accept MMIS passive One Care enrollment for member if passive One Care enrollment is accepted by CMS with a 307 Transaction Reply Code ('Transaction Reply Code' field ) on a TRC record (Record Type = 'T' in the 'Record Type' field) Passive Enrollment Record (Transaction Code = '61' and Enrollment Source Code = 'J' ) on the DTRR and insert record onto T_RE_DTRR table.
+Expected Results                   : Record inserted into T_RE_DTRR table with 307 and effective date
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35937
+Associated WI Type                 : Work Item
+Test Case ID for Row 891           : 41204
+Notebook linked for test case      : 41204
+Work item/CO linked for test case  : 41204
+Finished at                        : Mon Feb 07 14:54:44 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 14:54:44 EST 2022
+Creating test case for TC Row      : 892
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Insert 308 record onto T_RE_DTRR table
+Long Desc                          : History MMIS passive One Care enrollment for member if passive One Care enrollment is rejected by CMS with a 308 Transaction Reply Code ('Transaction Reply Code' field ) on a TRC record (Record Type = 'T' in the 'Record Type' field) Passive Enrollment Record (Transaction Code = '61' and Enrollment Source Code = 'J' ) on the DTRR  and insert record onto T_RE_DTRR table.
+Expected Results                   : Record inserted into T_RE_DTRR table with 308 and effective date
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35937
+Associated WI Type                 : Work Item
+Test Case ID for Row 892           : 41205
+Notebook linked for test case      : 41205
+Work item/CO linked for test case  : 41205
+Finished at                        : Mon Feb 07 14:55:00 EST 2022
+***************************************************
+Logged out
+***************************************************
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 07/Feb/2022 02:55:00PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

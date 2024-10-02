@@ -1,0 +1,399 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 11/Sep/2023 04:14:19PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 38
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 151
+Total No.of Rows                   : 14
+*****************************************************************
+Started at                         : Mon Sep 11 16:14:25 EDT 2023
+Creating test case for Row #       : 4298
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 463
+Validation status                  : PASS
+Short Desc                         : DDS and MDM files existDDS emptyMDM empty
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : A zero-byte file from either DDS or MDM will not be considered a valid file, and ELGJD057 will be suspended, and a notice sent to MDM
+Expected Results                   : Log Invalid 0-byte input fileSend error email to MDMEnd SuccessEmail notification: DDS request file has zero length.MDM correction file has zero length
+Test Case ID for Row 4298          : 46169
+Query Execution Time(ms)           : 68
+Requirement ID                     : 37004.01.011
+Query Execution Time(ms)           : 34
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46169
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46169
+Finished at                        : Mon Sep 11 16:14:30 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:14:30 EDT 2023
+Creating test case for Row #       : 4299
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 452
+Validation status                  : PASS
+Short Desc                         : DDS and MDM files existDDS  not emptyMDM empty
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : A zero-byte file from either DDS or MDM will not be considered a valid file, and ELGJD057 will be suspended, and a notice sent to MDM
+Expected Results                   : Log Invalid 0-byte input fileSend error email to MDMEnd SuccessEmail notification: MDM correction file has zero length.File processing will be terminated.
+Test Case ID for Row 4299          : 46170
+Query Execution Time(ms)           : 115
+Requirement ID                     : 37004.01.011
+Query Execution Time(ms)           : 28
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46170
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 46170
+Finished at                        : Mon Sep 11 16:14:34 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:14:34 EDT 2023
+Creating test case for Row #       : 4300
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 482
+Validation status                  : PASS
+Short Desc                         : DDS and MDM files existDDS emptyMDM not empty
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : A zero-byte file from either DDS or MDM will not be considered a valid file, and ELGJD057 will be suspended, and a notice sent to MDM
+Expected Results                   : Log Invalid 0-byte input fileSend error email to MDMEnd Success.Email notification: DDS request file has zero length.MDM correction file is larger than DDS request file.File processing will be terminated.
+Test Case ID for Row 4300          : 46171
+Query Execution Time(ms)           : 64
+Requirement ID                     : 37004.01.011
+Query Execution Time(ms)           : 44
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46171
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46171
+Finished at                        : Mon Sep 11 16:14:39 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:14:39 EDT 2023
+Creating test case for Row #       : 4301
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.012') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Validation Time(ms)                : 462
+Validation status                  : PASS
+Short Desc                         : DDS and MDM files existDDS not emptyMDM not emptyMDM larger than DDS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : If the MDM file size is greater than the DDS file, suspend ELGJD057, and send a notification to MDM
+Expected Results                   : Log MDM file larger than DDS fileSend error email to MDMEnd SuccessEmail notification: MDM correction file is larger than DSS request file.File processing will be terminated.
+Test Case ID for Row 4301          : 46172
+Query Execution Time(ms)           : 70
+Requirement ID                     : 37004.01.012
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46172
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46172
+Finished at                        : Mon Sep 11 16:14:43 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:14:43 EDT 2023
+Creating test case for Row #       : 4302
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.014') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 58
+Validation Time(ms)                : 581
+Validation status                  : PASS
+Short Desc                         : DDS and MDM files existDDS  not emptyMDM not emptyDDS larger than MDM
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : The pair will be processed strictly sequentially: DDS file will be processed first, and then the MDM correction file.
+Expected Results                   : Process DDS fileCreate DDS response file and move to output directory for pickupRename DDS fileProcess MDM fileRename MDM fileEnd Success
+Test Case ID for Row 4302          : 46173
+Query Execution Time(ms)           : 58
+Requirement ID                     : 37004.01.014
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46173
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46173
+Finished at                        : Mon Sep 11 16:14:48 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:14:48 EDT 2023
+Creating test case for Row #       : 4303
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 468
+Validation status                  : PASS
+Short Desc                         : DDS and MDM files existDDS  not emptyMDM not emptyDDS and MDM are equal
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : The existing workflow for DDS file will remain the same, including the generation of the response file for DDS.
+Expected Results                   : Process DDS fileCreate DDS response file and move to output directory for pickupRename DDS fileProcess MDM fileRename MDM fileEnd Success
+Test Case ID for Row 4303          : 46174
+Query Execution Time(ms)           : 63
+Requirement ID                     : 37004.01.004
+Query Execution Time(ms)           : 39
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46174
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46174
+Finished at                        : Mon Sep 11 16:14:53 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:14:53 EDT 2023
+Creating test case for Row #       : 4304
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.013') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 502
+Validation status                  : PASS
+Short Desc                         : DDS and multiple MDM files exist
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : If there is more than one response file from either source send a notification to MDM and ELGJD057 should continue processing with the latest file(s) and rename the earlier file(s) so that they do not get processed.
+Expected Results                   : Log Multiple input file(s)Send error email to MDMProcess DDS fileCreate DDS response file and move to output directory for pickupRename DDS fileProcess latest MDM fileRename MDM fileEnd SuccessEmail notification: Multiple MDM correction files detected: Using latest MDM correction file.File processing will continue.
+Test Case ID for Row 4304          : 46175
+Query Execution Time(ms)           : 78
+Requirement ID                     : 37004.01.013
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46175
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46175
+Finished at                        : Mon Sep 11 16:14:57 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:14:57 EDT 2023
+Creating test case for Row #       : 4305
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.013') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 55
+Validation Time(ms)                : 518
+Validation status                  : PASS
+Short Desc                         : MDM and multiple DDS files exist
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : If there is more than one response file from either source send a notification to MDM and ELGJD057 should continue processing with the latest file(s) and rename the earlier file(s) so that they do not get processed.
+Expected Results                   : Log Multiple input file(s)Send error email to MDMProcess latest DDS fileCreate DDS response file and move to output directory for pickupRename DDS fileProcess MDM fileRename MDM fileEnd SuccessEmail notification: Multiple DDS request files detected: Using latest DDS request file.File processing will continue.
+Test Case ID for Row 4305          : 46176
+Query Execution Time(ms)           : 80
+Requirement ID                     : 37004.01.013
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46176
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46176
+Finished at                        : Mon Sep 11 16:15:02 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:15:02 EDT 2023
+Creating test case for Row #       : 4306
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.013') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 452
+Validation status                  : PASS
+Short Desc                         : Multiple MDM and multiple DDS files exist
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : If there is more than one response file from either source send a notification to MDM and ELGJD057 should continue processing with the latest file(s) and rename the earlier file(s) so that they do not get processed.
+Expected Results                   : Log Multiple input filesSend error email to MDMProcess latest DDS fileCreate DDS response file and move to output directory for pickupRename DDS fileProcess latest MDM fileRename MDM fileEnd SuccessEmail notification: Multiple MDM correction files detected: Using latest MDM correction file.Multiple DDS request files detected: Using latest DDS request file.File processing will continue.
+Test Case ID for Row 4306          : 46177
+Query Execution Time(ms)           : 65
+Requirement ID                     : 37004.01.013
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46177
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46177
+Finished at                        : Mon Sep 11 16:15:06 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:15:06 EDT 2023
+Creating test case for Row #       : 4307
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 449
+Validation status                  : PASS
+Short Desc                         : Validate MDM file name
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : MDM MOVEIT filename mask will be: MDM_DDS_CORR_MMIS_YYYYMMDDHHMMSS.DAT
+Expected Results                   : MDM_DDS_CORR_MMIS_YYYYMMDDHHMMSS.DAT
+Test Case ID for Row 4307          : 46178
+Query Execution Time(ms)           : 79
+Requirement ID                     : 37004.01.005
+Query Execution Time(ms)           : 40
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46178
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46178
+Finished at                        : Mon Sep 11 16:15:11 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:15:11 EDT 2023
+Creating test case for Row #       : 4308
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.007') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 522
+Validation status                  : PASS
+Short Desc                         : MDM correction file
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : MDM will provide the correction file via a new MOVEiT interface.
+Expected Results                   : Validate the new MDM correction file is sent via new MOVEiT interface.
+Test Case ID for Row 4308          : 46179
+Query Execution Time(ms)           : 89
+Requirement ID                     : 37004.01.007
+Query Execution Time(ms)           : 40
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46179
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46179
+Finished at                        : Mon Sep 11 16:15:16 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:15:16 EDT 2023
+Creating test case for Row #       : 4309
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.016') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 488
+Validation status                  : PASS
+Short Desc                         : Email notifications
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : Notifications to MDM will be sent to: EHS-DL-MDMDevelopmentTeam@MassMail.State.MA.US
+Expected Results                   : Vefiry all the email notifications.
+Test Case ID for Row 4309          : 46180
+Query Execution Time(ms)           : 145
+Requirement ID                     : 37004.01.016
+Query Execution Time(ms)           : 36
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46180
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46180
+Finished at                        : Mon Sep 11 16:15:20 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:15:20 EDT 2023
+Creating test case for Row #       : 4310
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.017') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 556
+Validation status                  : PASS
+Short Desc                         : MDM and DDS before 834 job
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : Processing of DDS and MDM input must be complete before the 834 job starts.
+Expected Results                   : Validate the changes in 834.
+Test Case ID for Row 4310          : 46181
+Query Execution Time(ms)           : 72
+Requirement ID                     : 37004.01.017
+Query Execution Time(ms)           : 38
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46181
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46181
+Finished at                        : Mon Sep 11 16:15:25 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:15:25 EDT 2023
+Creating test case for Row #       : 4311
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 49
+Validation Time(ms)                : 469
+Validation status                  : PASS
+Short Desc                         : Job ELGJD057
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : New input for Job ELGJD057 will be a pair of request files: 1) The current DDS file, and 2) a new correction file from MDM. Each execution of ELGJD057 will process two files.
+Expected Results                   : Verify ELGJD057 job runs successfully if both MDM and DSS file exists.
+Test Case ID for Row 4311          : 46182
+Query Execution Time(ms)           : 110
+Requirement ID                     : 37004.01.001
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46182
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46182
+Finished at                        : Mon Sep 11 16:15:30 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 11/Sep/2023 04:15:30PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

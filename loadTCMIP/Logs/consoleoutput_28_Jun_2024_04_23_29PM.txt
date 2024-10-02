@@ -1,0 +1,372 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 28/Jun/2024 04:23:29PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Query Execution Time(ms)           : 87
+Total No.of Columns fetched        : 6
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 234
+Total No.of Rows fetched           : 12
+*****************************************************************
+Started at                         : Fri Jun 28 16:23:35 EDT 2024
+Creating test case for Row #       : 5379
+Query Execution Time(ms)           : 82
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 568
+TC Validation status               : PASS
+Short Desc                         : dte_pa_auth_end Matched Extract End date
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : When the line item dte_pa_auth_end = current date, write an Inactive record to the dataset
+Expected Results                   : Set the record to I as in Inactive.
+Test Case ID for Row 5379          : 47526
+Query Execution Time(ms)           : 67
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.02.01.002
+Query Execution Time(ms)           : 49
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47526
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47526
+Finished at                        : Fri Jun 28 16:23:40 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:23:40 EDT 2024
+Creating test case for Row #       : 5380
+Query Execution Time(ms)           : 46
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 495
+TC Validation status               : PASS
+Short Desc                         : DTE_PA_AUTH_EFF matched extract date
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : When the line item dte_pa_auth_eff = current date, write an  active record to the dataset
+Expected Results                   : Set the record to A as in active.
+Test Case ID for Row 5380          : 47527
+Query Execution Time(ms)           : 70
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.02.01.002
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47527
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47527
+Finished at                        : Fri Jun 28 16:23:44 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:23:44 EDT 2024
+Creating test case for Row #       : 5381
+Query Execution Time(ms)           : 59
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 486
+TC Validation status               : PASS
+Short Desc                         : DTE_MH_MODIFIED matched extract date
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : When the T_PA_PAUTH.DTE_MH_MODIFIED = current date and SAK-PA-STATUS of line is not Approved or Modified write an Inactive record to the dataset
+Expected Results                   : Set the record to I as in Inactive.
+Test Case ID for Row 5381          : 47528
+Query Execution Time(ms)           : 68
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.02.01.001
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47528
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47528
+Finished at                        : Fri Jun 28 16:23:49 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:23:49 EDT 2024
+Creating test case for Row #       : 5382
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 501
+TC Validation status               : PASS
+Short Desc                         : Record matches criteria and has no diag code
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : When the line item dte_pa_auth_eff = current date and the PA has no SAK_DIAG, write an  active record to the dataset but no diagnosis segment
+Expected Results                   : Set the record to A as in active.  No diagnosis segment
+Test Case ID for Row 5382          : 47529
+Query Execution Time(ms)           : 79
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.02.01.002
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47529
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47529
+Finished at                        : Fri Jun 28 16:23:53 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:23:53 EDT 2024
+Creating test case for Row #       : 5383
+Query Execution Time(ms)           : 57
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 531
+TC Validation status               : PASS
+Short Desc                         : Record matches criteria and has  diag code
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : When the line item dte_pa_auth_eff = current date and the PA has a value for SAK_DIAG, write an  active record to the dataset with diagnosis segment
+Expected Results                   : Set the record to A as in active.  Has Diagnosis segment  values are Y and diagnosis.
+Test Case ID for Row 5383          : 47530
+Query Execution Time(ms)           : 82
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.02.01.002
+Query Execution Time(ms)           : 40
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47530
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47530
+Finished at                        : Fri Jun 28 16:23:58 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:23:58 EDT 2024
+Creating test case for Row #       : 5384
+Query Execution Time(ms)           : 44
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 524
+TC Validation status               : PASS
+Short Desc                         : Records match current date
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : Each day the run date/time from the last run should refresh to pull only the new prior authorizations and not previously sent PA requests.  it's a pipe-delimited file, there's a header record (column A in the business rules master file) and all fields should be double quoted
+Expected Results                   : Rows on the pipe delimited extract with fields in double quotes that match todays date.
+Test Case ID for Row 5384          : 47531
+Query Execution Time(ms)           : 84
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.01.01
+Query Execution Time(ms)           : 45
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47531
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47531
+Finished at                        : Fri Jun 28 16:24:03 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:24:03 EDT 2024
+Creating test case for Row #       : 5385
+Query Execution Time(ms)           : 51
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 538
+TC Validation status               : PASS
+Short Desc                         : Records extract match criteria
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : The criteria is found in 37704.02.01.001
+Expected Results                   : Only PA rows that match criteria are extracted
+Test Case ID for Row 5385          : 47532
+Query Execution Time(ms)           : 63
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.02.01
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47532
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47532
+Finished at                        : Fri Jun 28 16:24:07 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:24:07 EDT 2024
+Creating test case for Row #       : 5386
+Query Execution Time(ms)           : 42
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 523
+TC Validation status               : PASS
+Short Desc                         : Set payer program field correctly
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : There is a word doc in MIP that sets the field payerprogram based on criteria that needs to be validated.
+Expected Results                   : the payerprogram value matched word.doc criteria  based on PT and Proc code
+Test Case ID for Row 5386          : 47533
+Query Execution Time(ms)           : 71
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.03.01
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47533
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47533
+Finished at                        : Fri Jun 28 16:24:12 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:24:12 EDT 2024
+Creating test case for Row #       : 5387
+Query Execution Time(ms)           : 51
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 549
+TC Validation status               : PASS
+Short Desc                         : File naming convention is accurate
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : The PA extract file naming convention should be:  MAHEA_EVV_Auth_YYYYMMDD_HHMMSS.sss.dsv.zip.pgp MAHEA_EVV_Auth_Outbound_ControlFile_YYYYMMDD_HHMMSS.sss.dsv.zip.pgp
+Expected Results                   : file names will look something like this"MAHEA_EVV_Auth_20240301_250000.001.dsv"|"3" "MAHEA_EVV_Auth_Outbound_ControlFile_20240301_250000.001.dsv"|"3" "03/01/2024 01:01 PM" - "03/01/2024 01:01 PM"
+Test Case ID for Row 5387          : 47534
+Query Execution Time(ms)           : 187
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.05.01.001
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47534
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47534
+Finished at                        : Fri Jun 28 16:24:17 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:24:17 EDT 2024
+Creating test case for Row #       : 5388
+Query Execution Time(ms)           : 45
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 488
+TC Validation status               : PASS
+Short Desc                         : File format is correct
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : The PA extract file should be created as a Delimiter-Separated Values (DSV) format
+Expected Results                   : The PA extract file should be created as a Delimiter-Separated Values (DSV) format
+Test Case ID for Row 5388          : 47535
+Query Execution Time(ms)           : 87
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.05.01.002
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47535
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47535
+Finished at                        : Fri Jun 28 16:24:21 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:24:21 EDT 2024
+Creating test case for Row #       : 5389
+Query Execution Time(ms)           : 45
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 481
+TC Validation status               : PASS
+Short Desc                         : Error file is received
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : If there was an error found an error file is received
+Expected Results                   : If no error, no error file.  Else yes
+Test Case ID for Row 5389          : 47536
+Query Execution Time(ms)           : 72
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.05.01.003
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47536
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47536
+Finished at                        : Fri Jun 28 16:24:26 EDT 2024
+*****************************************************************
+Started at                         : Fri Jun 28 16:24:26 EDT 2024
+Creating test case for Row #       : 5390
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 510
+TC Validation status               : PASS
+Short Desc                         : Received an Inbound Control File (ICF)
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 180
+Owner                              : KEN ADGATE
+Grouping                           : PA MAINTENANCE
+Long Desc                          : There will always be a response file
+Expected Results                   : Response file is received
+Test Case ID for Row 5390          : 47537
+Query Execution Time(ms)           : 80
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37706.05.01.003
+Query Execution Time(ms)           : 54
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47537
+Notebook                           : EVV Testing
+Business Function                  : EVV PA Extract Testing
+Notebook/BF linked for test case   : 47537
+Finished at                        : Fri Jun 28 16:24:31 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 28/Jun/2024 04:24:31PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

@@ -1,0 +1,304 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Aug/2024 10:45:14AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 207
+Total No.of Rows fetched           : 12
+*****************************************************************
+Started at                         : Wed Aug 14 10:45:22 EDT 2024
+Creating test case for Row #       : 5419
+Validation Time(ms)                : 775
+TC Validation status               : PASS
+Short Desc                         : CNS Load File name Format
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : The naming convention for the CNS load flat file  would be " CNS_Load__YYYYMMDDHRMISS.TXT"
+Expected Results                   : The naming convention " CNS_Load__YYYYM MDDHRMISS.TXT" will be there as expected.
+Test Case ID for Row 5419          : 47686
+Requirement ID                     : 37806.01.005
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47686
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47686
+Finished at                        : Wed Aug 14 10:45:28 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:45:28 EDT 2024
+Creating test case for Row #       : 5420
+Validation Time(ms)                : 773
+TC Validation status               : PASS
+Short Desc                         : Comm & Accom Table check
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : Validate the CNS_Load file data came from HIX and MA21 to the two tables T_RE_COMMUNICATION and T_RE_ACCOMODATION.
+Expected Results                   : The CNS_Load file data is loaded to the two tables  T_RE_COMMUNICATION and T_RE_ACCOMODATION daily as expected.
+Test Case ID for Row 5420          : 47687
+Requirement ID                     : 37806.01.020
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47687
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47687
+Finished at                        : Wed Aug 14 10:45:34 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:45:34 EDT 2024
+Creating test case for Row #       : 5421
+Validation Time(ms)                : 762
+TC Validation status               : PASS
+Short Desc                         : Error report with MID & error code
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : Generate the following error reports for the input file, which the CNS load process did not make any update to the members in the database.  Errors:  01 - MID not found 02 - Source Agency is invalid 03 - Print type is invalid 04 - Communication Preference is invalid 05 - Invalid Communication Preference, Num_cell_Phone and Email combination 06 - Num_cell_phone is missing 07 - Num_cell_phone is invalid 08 - Email is missing 09 - Email is invalid 10 - Accommodation1 is invalid 11 - Accommodation2 is invalid 12 - Accommodation3 is invalid 13 - Accommodation4 is invalid 14 - Accommodation5 is invalid 15 - Accommodation6 is invalid 16 - Accommodation7 is invalid 17 - Accommodation8 is invalid 18 - Accommodation9 is invalid 19 - Data already exists for this MID 99 - Generic error for any edit
+Expected Results                   : All the error codes will generate as expected for  different members.
+Test Case ID for Row 5421          : 47688
+Requirement ID                     : 37806.01.035
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47688
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47688
+Finished at                        : Wed Aug 14 10:45:41 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:45:41 EDT 2024
+Creating test case for Row #       : 5422
+Validation Time(ms)                : 735
+TC Validation status               : PASS
+Short Desc                         : Invalid or Inactive MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : Sending following MIDs to the CNS Load Flat File, then error code 01 shoukd be generated for the following MIDs in the error file.  Task 1: Invalid(13num, 11num and 12 alphanumericsymbol digits) MIDs Task 2: Inactive MIDs
+Expected Results                   : The Invalid and Inactive MIDs will be rejected and displayed in  the error file with the code "01" along with MIDs as expected.
+Test Case ID for Row 5422          : 47689
+Requirement ID                     : 37806.01.055
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47689
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47689
+Finished at                        : Wed Aug 14 10:45:47 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:45:47 EDT 2024
+Creating test case for Row #       : 5423
+Validation Time(ms)                : 755
+TC Validation status               : PASS
+Short Desc                         : Comm Pref error code "04"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : Send Communication preference as paper, email or text\sms(all small case) to the CNS Load Flat File with different MIDs, then all the MIDs will be displayed in the error report with error code "04".
+Expected Results                   : All the MIDs will be there on the error report with error code "04".
+Test Case ID for Row 5423          : 47690
+Requirement ID                     : 37806.01.070
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47690
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47690
+Finished at                        : Wed Aug 14 10:45:55 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:45:55 EDT 2024
+Creating test case for Row #       : 5424
+Validation Time(ms)                : 765
+TC Validation status               : PASS
+Short Desc                         : Comm Pref error code "04"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : Send Communication preference as MESNG, Email, WHT@123 and 34326 to the CNS Load Flat File with different MIDs, then all the MIDs will be displayed in the error report with error code "04".
+Expected Results                   : All the MIDs will be there on the error report with error code "04" as expected.
+Test Case ID for Row 5424          : 47691
+Requirement ID                     : 37806.01.070
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47691
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47691
+Finished at                        : Wed Aug 14 10:46:02 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:46:02 EDT 2024
+Creating test case for Row #       : 5425
+Validation Time(ms)                : 764
+TC Validation status               : PASS
+Short Desc                         : Num_cell_phone in Invalid format
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : Send the following Num_cell_phone in invalid format to the CNS flat file, then it will reject and thow error code "07" in the error report.  Task1: 327846874 Task2: 48326487322 Task3: 327-342-90 Task4: 1800EOHHSS
+Expected Results                   : All the MIDs will be there on the error report with error code "07" as expected.
+Test Case ID for Row 5425          : 47692
+Requirement ID                     : 37806.01.085
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47692
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47692
+Finished at                        : Wed Aug 14 10:46:09 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:46:09 EDT 2024
+Creating test case for Row #       : 5426
+Validation Time(ms)                : 1836
+TC Validation status               : PASS
+Short Desc                         : Accom1-9 error codes "10-18"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : If accommodations 1 through 9 are  ASL, ALD, CART, LRG, BRAILLE, TTY, VRS, EFORMAT, OTHER, NONE(All small case letters) sent to the CNS load flat, all the records will be rejected and shown in the error file with error code 10-18 for the accomdations 1-9 accordingly.
+Expected Results                   : The error file will generate the records with error codes 10-18 for the accomdations 1-9 accordingly as expected.
+Test Case ID for Row 5426          : 47693
+Requirement ID                     : 37806.01.100
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47693
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47693
+Finished at                        : Wed Aug 14 10:46:16 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:46:16 EDT 2024
+Creating test case for Row #       : 5427
+Validation Time(ms)                : 772
+TC Validation status               : PASS
+Short Desc                         : Accom1-9 error codes "10-18"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : If accommodations 1 through 9 are  XYZ, Abc, Braille, VRS123, @TTY sent to the CNS load flat, all the records will be rejected and shown in the error file with error code 10-18 for the accomdations 1-9 accordingly.
+Expected Results                   : The error file will generate the records with error codes 10-18 for the accomdations 1-9 accordingly as expected.
+Test Case ID for Row 5427          : 47694
+Requirement ID                     : 37806.01.100
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47694
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47694
+Finished at                        : Wed Aug 14 10:46:23 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:46:23 EDT 2024
+Creating test case for Row #       : 5428
+Validation Time(ms)                : 876
+TC Validation status               : PASS
+Short Desc                         : Accom1-9
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : If accommodations 1 through 9 are  ASL, ALD, CART, LRG, BRAILLE, TTY, VRS, EFORMAT, OTHER, NONE or (Space/Blank) sent to the CNS load flat, all the records will be accepted and  no error report should be generated with MIDs.
+Expected Results                   : All the MIDs will be accepted by the CNS Load file as expected.
+Test Case ID for Row 5428          : 47695
+Requirement ID                     : 37806.01.100
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47695
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47695
+Finished at                        : Wed Aug 14 10:46:29 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:46:29 EDT 2024
+Creating test case for Row #       : 5429
+Validation Time(ms)                : 1062
+TC Validation status               : PASS
+Short Desc                         : Rejecting Records for existing DB
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : DB already has data for any of the fields CDE_PRINT_TYPE, CDE_COMMUNICATION_PREF, Num_cell_phone, Email, or CDE_Accomodation, then record will be rejected and error code 19 will be generated in the error file.
+Expected Results                   : All the records will be rejected as expected.
+Test Case ID for Row 5429          : 47696
+Requirement ID                     : 37806.01.115
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47696
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47696
+Finished at                        : Wed Aug 14 10:46:35 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:46:35 EDT 2024
+Creating test case for Row #       : 5430
+Validation Time(ms)                : 761
+TC Validation status               : PASS
+Short Desc                         : DCR Default Comm Pref = 'PAPER'
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : DCR
+Long Desc                          : Run the query for active members from T_RE_COMMUNICATION table and validate the  CDE_COMMUNICATION_PREF value defaulted to "PAPER" and Communication Pref Agency = Blank/Space
+Expected Results                   : CDE_COMMUNICATION_PREF value defaulted to "PAPER" and Communication Pref Agency = Blank/Space as expected.
+Test Case ID for Row 5430          : 47697
+Requirement ID                     : 37806.02.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47697
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47697
+Finished at                        : Wed Aug 14 10:46:41 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Aug/2024 10:46:41AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

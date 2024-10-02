@@ -1,0 +1,603 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 21/Mar/2023 10:17:55AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+MIP Username                       : rvattumi
+User Name                          : rvattumilli
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) wi_type, trim(a.id_req) id_req, f.nam req_type, f.sak_req_type from rvattumi.load_tc a, co_participant b, co c, co_type d, requirement e, requirement_type f where c.sak_csr = a.wi_test_case and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and d.sak_csr_type = c.sak_csr_type and e.sak_req_type = f.sak_req_type and trim(a.id_req) = trim(e.id_req) and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 16
+Query Execution Time(ms)           : 138
+Total No.of Rows                   : 21
+****************************************************
+Started at                         : Tue Mar 21 10:18:43 EDT 2023
+Creating test case for Row #       : 1831
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 4285
+Validation status                  : PASS
+Short Desc                         : Try to connect to soapsrvrSSL with (old) soapClient.
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Run a test using the soapsrvrSSL/ soapClientSSL. Run the same test with the (old) soapsrvr/soapClient.
+Expected Results                   : Connection should fail, soapClient should print an error message and exit with an error code.The soapsrvrSSL log file should have an error message.
+Test Case ID for Row 1831          : 43004
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43004
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43004
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43004
+Finished at                        : Tue Mar 21 10:19:20 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:19:20 EDT 2023
+Creating test case for Row #       : 1832
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1702
+Validation status                  : PASS
+Short Desc                         : Testing with connection to remote machines.
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Run a curl request on the server on which the soapsrvrSSL is running.Run a similar curl request from a remote machine (e.g. a laptop).The two outputs should agree.
+Expected Results                   : Results should agree with tests that have the requesting program on the same server machine as the soapsrvrSSL.
+Test Case ID for Row 1832          : 43005
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43005
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43005
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43005
+Finished at                        : Tue Mar 21 10:19:40 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:19:40 EDT 2023
+Creating test case for Row #       : 1833
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 7577
+Validation status                  : PASS
+Short Desc                         : Base App Eligibility File Upload
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : In MMIS UI, navigate to Member -> Member Eligibility Update File Upload.
+Expected Results                   : A successful upload action returns a response file to download.
+Test Case ID for Row 1833          : 43006
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43006
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43006
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43006
+Finished at                        : Tue Mar 21 10:20:30 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:20:30 EDT 2023
+Creating test case for Row #       : 1834
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 2181
+Validation status                  : PASS
+Short Desc                         : Portal Member MMQ web service
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : In Portal UI, navigate to Manage Members -> Long Term Care. Use Member ID, Last Name, First Initial from previous test and select conversion as a reason for submission from list of available options.On the resulting page, fill out the required information on each tab and submit the request.
+Expected Results                   : A successful response should display MMQ is submitted successfully.
+Test Case ID for Row 1834          : 43007
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43007
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43007
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43007
+Finished at                        : Tue Mar 21 10:21:07 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:21:07 EDT 2023
+Creating test case for Row #       : 1835
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 3079
+Validation status                  : PASS
+Short Desc                         : External Provider WebService
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Using SOAP UI tool, test providerDetailInfo operation.
+Expected Results                   : A valid response is displayed on the right side of the SOAP UI tool and HTTP response code should be 200.
+Test Case ID for Row 1835          : 43008
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43008
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43008
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43008
+Finished at                        : Tue Mar 21 10:21:28 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:21:28 EDT 2023
+Creating test case for Row #       : 1836
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1337
+Validation status                  : PASS
+Short Desc                         : External Member WebService
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Using SOAP UI tool, test memberDetailInfo operation.
+Expected Results                   : A valid response is displayed on the right side of the SOAP UI tool and HTTP response code should be 200.
+Test Case ID for Row 1836          : 43009
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43009
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43009
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43009
+Finished at                        : Tue Mar 21 10:22:07 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:22:07 EDT 2023
+Creating test case for Row #       : 1837
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 2311
+Validation status                  : PASS
+Short Desc                         : Portal Claims WebService 1
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : In Portal UI, navigate to Manage Claims and Payments -> Enter Single Claim -> Professional Claim and populate Billing and Service, Procedure tabs with necessary information and submit the claim.
+Expected Results                   : A successful test to enter claims should return with appropriate information as claim submitted.
+Test Case ID for Row 1837          : 43010
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43010
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43010
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43010
+Finished at                        : Tue Mar 21 10:22:32 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:22:32 EDT 2023
+Creating test case for Row #       : 1838
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1369
+Validation status                  : PASS
+Short Desc                         : Portal Claims WebService 2
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : In Portal UI, navigate to Manage Claims and Payments -> Inquire claim Status and search for a claim number or ICN.
+Expected Results                   : A successful response will pull up claim details.
+Test Case ID for Row 1838          : 43011
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43011
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43011
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43011
+Finished at                        : Tue Mar 21 10:22:58 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:22:58 EDT 2023
+Creating test case for Row #       : 1839
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1250
+Validation status                  : PASS
+Short Desc                         : Portal Eligibility web service verify
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Find Member ID for an example user by providing First Name and Last Name under members tab in MMIS UI. In Portal UI, navigate to Manage Members -> Eligibility -> Verify Member Eligibility.Enter Member ID from step #1 and ensure the date range b/w From Date and To Date is not more than 31 days. Click submit
+Expected Results                   : Verify Eligibility: On the resulting page, check eligibility tab. Response should be Member is Eligible or Member is not Eligible. A successful test will retrieve the demographic details associated with member ID.
+Test Case ID for Row 1839          : 43012
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43012
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43012
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43012
+Finished at                        : Tue Mar 21 10:23:21 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:23:21 EDT 2023
+Creating test case for Row #       : 1840
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1785
+Validation status                  : PASS
+Short Desc                         : Portal Eligibility web service Inquire
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : In Portal UI, navigate to Manage Members -> Eligibility -> Inquire Member Eligibility.Enter Member ID from above and ensure the date range b/w From Date and To Date is not more than 31 days. Click submit
+Expected Results                   : On the resulting page, eligibility transactions are listed.
+Test Case ID for Row 1840          : 43013
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43013
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43013
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43013
+Finished at                        : Tue Mar 21 10:23:42 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:23:42 EDT 2023
+Creating test case for Row #       : 1841
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1104
+Validation status                  : PASS
+Short Desc                         : Portal Batch File Uploads
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Create a text file with random characters and upload it via MMIS Portal by accessing Manage Batch file -> Upload batch file -> Enrollment history request for Transaction Type.
+Expected Results                   : File upload tracking number is displayed on the UI page.A copy of the file is saved on the WebLogic Server at the location defined for BATCHFILEXFR_OTHER_SCAN_PATH variable in newMMIS app.Check DB T_UPLOAD table on MMIS DB for an entry record.
+Test Case ID for Row 1841          : 43014
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43014
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43014
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43014
+Finished at                        : Tue Mar 21 10:24:03 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:24:03 EDT 2023
+Creating test case for Row #       : 1842
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 12356
+Validation status                  : PASS
+Short Desc                         : External Eligibility Service
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Using SOAP UI tool, test the checkMemberEligibility operation.
+Expected Results                   : A valid response is displayed on the right side of the SOAP UI tool and HTTP response code should be 200.
+Test Case ID for Row 1842          : 43015
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43015
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43015
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43015
+Finished at                        : Tue Mar 21 10:24:30 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:24:30 EDT 2023
+Creating test case for Row #       : 1843
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1377
+Validation status                  : PASS
+Short Desc                         : Eligibility MDB
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Test MDB service by dropping an eligibility request in Inbound Q. This testing needs to be performed in MOREG environment following deployment of code changes.
+Expected Results                   : Check logs for below entry indicating successful processing of Eligibility Request. STATUS: SUCCESS. Message has been successfully processed and sent to Output Queue.
+Test Case ID for Row 1843          : 43016
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43016
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43016
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43016
+Finished at                        : Tue Mar 21 10:24:58 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:24:58 EDT 2023
+Creating test case for Row #       : 1844
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 7711
+Validation status                  : PASS
+Short Desc                         : Web Services HTS 1
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Claims - Using Soap UI, test syncX12 Operation with 276 requests.
+Expected Results                   : Claims  A valid 277 response is displayed on the right side of the SOAP UI tool and the response should be HTTP 200 status code.
+Test Case ID for Row 1844          : 43017
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43017
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43017
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43017
+Finished at                        : Tue Mar 21 10:25:23 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:25:23 EDT 2023
+Creating test case for Row #       : 1845
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1352
+Validation status                  : PASS
+Short Desc                         : Web Services HTS 2
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Eligibility  Using Soap UI, test syncX12 operation with 270 requests.
+Expected Results                   : Eligibility - A valid 271 response is displayed on the right side of the SOAP UI tool and HTTP response code should be 200.
+Test Case ID for Row 1845          : 43018
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43018
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43018
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43018
+Finished at                        : Tue Mar 21 10:25:42 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:25:42 EDT 2023
+Creating test case for Row #       : 1846
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1948
+Validation status                  : PASS
+Short Desc                         : Web Services HTS 3
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : File Upload  Using Soap UI, test asyncX12 transaction by submitting an Eligibility 270 request.
+Expected Results                   : File Upload  A successful response is displayed on the right side of the SOAP UI tool and HTTP response code should be 200.
+Test Case ID for Row 1846          : 43019
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43019
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43019
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43019
+Finished at                        : Tue Mar 21 10:26:02 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:26:02 EDT 2023
+Creating test case for Row #       : 1847
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 4032
+Validation status                  : PASS
+Short Desc                         : Web Services HTS CORE 1
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Claims  Using Soap UI, test RealtimeTransaction Operation with 276 requests.
+Expected Results                   : Claims  A valid 277 response is displayed on the right side of the SOAP UI tool and the response should be HTTP 200 status code.
+Test Case ID for Row 1847          : 43020
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43020
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43020
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43020
+Finished at                        : Tue Mar 21 10:26:28 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:26:28 EDT 2023
+Creating test case for Row #       : 1848
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 924
+Validation status                  : PASS
+Short Desc                         : Web Services HTS CORE 2
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Eligibility - Using Soap UI, test RealtimeTransaction Operation with 270 requests.
+Expected Results                   : Eligibility - A valid 271 response is displayed on the right side of the SOAP UI tool and HTTP response code should be 200.
+Test Case ID for Row 1848          : 43021
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43021
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43021
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43021
+Finished at                        : Tue Mar 21 10:26:53 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:26:53 EDT 2023
+Creating test case for Row #       : 1849
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1833
+Validation status                  : PASS
+Short Desc                         : Web Services HTS CORE 3
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : File Upload  Using Soap UI, test BatchSubmitTransaction Operation with 270 eligibility requests as an attachment.
+Expected Results                   : File Upload - A successful response is displayed on the right side of the SOAP UI tool and HTTP response code should be 200.
+Test Case ID for Row 1849          : 43022
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43022
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43022
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43022
+Finished at                        : Tue Mar 21 10:27:19 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:27:19 EDT 2023
+Creating test case for Row #       : 1850
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 10008
+Validation status                  : PASS
+Short Desc                         : External Web Service Post Eligibility
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Using SoapUI, test postElig operation with Eligibility Request.
+Expected Results                   : A success response is displayed on the right side of the SOAP UI tool and HTTP response code should be 200.
+Test Case ID for Row 1850          : 43023
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43023
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43023
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43023
+Finished at                        : Tue Mar 21 10:27:55 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:27:55 EDT 2023
+Creating test case for Row #       : 1851
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1084
+Validation status                  : PASS
+Short Desc                         : Quartz Async
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : EligibilityProcessingJob schedule runs every 2 mins in Prod environment. (This test requires/assumes MA21 transaction data available in DB for integ service. )
+Expected Results                   : Check logs for below entry indicating successful run of the job.
+Test Case ID for Row 1851          : 43024
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43024
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43024
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43024
+Finished at                        : Tue Mar 21 10:28:15 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 21/Mar/2023 10:28:17AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

@@ -1,0 +1,159 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 18/Sep/2023 01:26:11PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.DAYS_TO_RESET_PWD > 2
+Query Execution Time(ms)           : 80
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 204
+Total No.of Rows fetched           : 15
+*****************************************************************
+Started at                         : Mon Sep 18 13:26:21 EDT 2023
+Creating test case for Row #       : 4493
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36552.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'J2EE Framework') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Portal Panels') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 GitLab') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 87
+Validation Time(ms)                : 751
+Validation status                  : PASS
+Short Desc                         : In POSC, enter Bus name with AN & spl  char.
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : Portal Panels
+Long Desc                          : In POSC, enter business name  only with using any of 36 alphanumeric(AN) char and 17 special chars.  / & , . - # ( ) : ; + ! $ * \ ' SPACE (' ') case1: Type chars(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case2: Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case3: Type & Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment)
+Expected Results                   : The Business name will be stored  successfully.
+Test Case ID for Row 4493          : 46416
+Query Execution Time(ms)           : 128
+Requirement ID                     : 36552.01.001
+Query Execution Time(ms)           : 70
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 46416
+Notebook                           : Project 24.02 GitLab
+Business Function                  : Project 24.02 GitLab
+Notebook/BF linked for test case   : 46416
+Finished at                        : Mon Sep 18 13:26:27 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 18 13:26:27 EDT 2023
+Creating test case for Row #       : 4494
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36552.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'J2EE Framework') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Portal Panels') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 GitLab') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 76
+Validation Time(ms)                : 761
+Validation status                  : PASS
+Short Desc                         : In POSC, enter Bus name with  NS alpha letters and ` ~ ^
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : Portal Panels
+Long Desc                          : In POSC, Admin account, enter business name  only with using Non standard(NS) alphanumeric letters and ` ~ ^   case1: Type chars(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case2: Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case3: Type & Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment)
+Expected Results                   : Error message should display stating  that only alphanumeric and 17 special  chars are allowed.
+Test Case ID for Row 4494          : 46417
+Query Execution Time(ms)           : 124
+Requirement ID                     : 36552.02.001
+Query Execution Time(ms)           : 79
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 46417
+Notebook                           : Project 24.02 GitLab
+Business Function                  : Project 24.02 GitLab
+Notebook/BF linked for test case   : 46417
+Finished at                        : Mon Sep 18 13:26:34 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 18 13:26:34 EDT 2023
+Creating test case for Row #       : 4495
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36552.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'J2EE Framework') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Portal Panels') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 GitLab') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 581
+Validation Time(ms)                : 3570
+Validation status                  : PASS
+Short Desc                         : In POSC,enter bus name with combination of chars.
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : Portal Panels
+Long Desc                          : In Posc, Admin account, enter business name  with the combination of permitted and non  permitted chars.   case1: Type chars(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case2: Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case3: Type & Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment)
+Expected Results                   : Error message should display stating  that only alphanumeric and 17 special  chars are allowed.
+Test Case ID for Row 4495          : 46418
+Query Execution Time(ms)           : 123
+Requirement ID                     : 36552.02.001
+Query Execution Time(ms)           : 51
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 46418
+Notebook                           : Project 24.02 GitLab
+Business Function                  : Project 24.02 GitLab
+Notebook/BF linked for test case   : 46418
+Finished at                        : Mon Sep 18 13:26:43 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 18 13:26:43 EDT 2023
+Creating test case for Row #       : 4496
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36552.03.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'J2EE Framework') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Portal Panels') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 GitLab') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 72
+Validation Time(ms)                : 732
+Validation status                  : PASS
+Short Desc                         : In POSC, enter first name with valid chars.
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : Portal Panels
+Long Desc                          : In POSC, enter first name which includes alpha char(caps & small) and special chars(dashes spaces apostrophes) case1: Type chars(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case2: Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case3: Type & Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment)
+Expected Results                   : The first name should be saved successfully.
+Test Case ID for Row 4496          : 46419
+Query Execution Time(ms)           : 108
+Requirement ID                     : 36552.03.001
+Query Execution Time(ms)           : 70
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 46419
+Notebook                           : Project 24.02 GitLab
+Business Function                  : Project 24.02 GitLab
+Notebook/BF linked for test case   : 46419
+Finished at                        : Mon Sep 18 13:26:49 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 18 13:26:49 EDT 2023
+Creating test case for Row #       : 4497
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36552.03.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'J2EE Framework') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Portal Panels') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 GitLab') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 75
+Validation Time(ms)                : 774
+Validation status                  : PASS
+Short Desc                         : In POSC, enter first name with invalid chars.
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : Portal Panels
+Long Desc                          : In POSC, enter first name which includes non standard alphanumeric char(caps & small) and 17 special chars(excluding dashes spaces apostrophes) and includes  ` ~ ^  case1: Type chars(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case2: Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment) case3: Type & Paste(Admin account, Provider Search, Provider Information, Service Authorization, Members panels, Claims and Payment)
+Expected Results                   : The error message will be displayed stating that only alpha and [dashes spaces apostrophes] chars allowed.
+Test Case ID for Row 4497          : 46420
+Query Execution Time(ms)           : 119
+Requirement ID                     : 36552.03.001
+Query Execution Time(ms)           : 56
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 46420
+Notebook                           : Project 24.02 GitLab
+Business Function                  : Project 24.02 GitLab
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f69d0b1d5bac9cb6dcc99ab5cbd1ed4c, findElement {using=xpath, value=//input[contains(@name,'TbName')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.89, chrome: {chromedriverVersion: 117.0.5938.88 (be6afae47212..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:1411/devtool..., se:cdpVersion: 117.0.5938.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f69d0b1d5bac9cb6dcc99ab5cbd1ed4c

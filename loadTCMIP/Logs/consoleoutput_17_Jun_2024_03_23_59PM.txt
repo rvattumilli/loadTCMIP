@@ -1,0 +1,1091 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 17/Jun/2024 03:23:59PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Total No.of Columns fetched        : 6
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 171
+Total No.of Rows fetched           : 42
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:05 EDT 2024
+Creating test case for Row #       : 5337
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 883
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract file naming convention
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound member file naming convention should be in correct format   MAHEA_EVV_Member_YYYYMMDD_HHMMSS.sss.dsv.zip.pgp
+Expected Results                   : Validate the Outbound Member file is in correct format as expected.  MAHEA_EVV_Member_YYYYMMDD_HHMMSS.sss.dsv.zip.pgp
+Test Case ID for Row 5337          : 47472
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47472
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47472
+Finished at                        : Mon Jun 17 15:24:10 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:10 EDT 2024
+Creating test case for Row #       : 5338
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 580
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract file format
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound member file format Should be in DSV (Delimiter Separated Value) and Pipe(|) delimited.
+Expected Results                   : Validate the Outbound Member file format is in DSV (Delimiter Separated Value) and Pipe(|) delimited as expected.
+Test Case ID for Row 5338          : 47473
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47473
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47473
+Finished at                        : Mon Jun 17 15:24:15 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:15 EDT 2024
+Creating test case for Row #       : 5339
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 560
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract file frequency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound member file format  frequency should be generated on daily basis and send to SANDATA using MOVEit
+Expected Results                   : Validate the  Outbound Member file format is generated on Daily basis and Send to SANDATA using MOVEit as expected.
+Test Case ID for Row 5339          : 47474
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47474
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47474
+Finished at                        : Mon Jun 17 15:24:20 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:20 EDT 2024
+Creating test case for Row #       : 5340
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 555
+TC Validation status               : PASS
+Short Desc                         : EVV Benefit Plans in the Outbound Member Extract
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the list of Benefit Plans that are associated with EVV in the Outbound Member file  Extract should include members with active eligibility
+Expected Results                   : Validate the  Outbound Member file included  the below Benefit plans with active eligibility memebers as expected.  MASSHEALTH STANDARD  MASSHEALTH COMMONHEALTH  STANDARD PLUS MR/DD HCBS WAIVER  STANDARD PLUS MRC/TBI HCBS WAIVER  MASSHEALTH FAMILY ASSISTANCE  STANDARD PLUS FRAIL ELDER HCBS WAIVER  STANDARD PLUS DDS COMMUNITY LIVING WAIVER  STANDARD PLUS AUTISM WAIVER  STANDARD PLUS ABI-RH WAIVER  STANDARD PLUS MFP COMMUNITY LIVING HCBS WAIVER  STANDARD PLUS MFP RESIDENTIAL SUPPORTS HCBS WAIVER  STANDARD PLUS ABI-N WAIVER  STANDARD PLUS DDS ADULT SUPPORTS WAIVER  STANDARD PLUS DDS INTENSIVE SUPPORT WAIVER  CAREPLUS
+Test Case ID for Row 5340          : 47475
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.01.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47475
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47475
+Finished at                        : Mon Jun 17 15:24:25 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:25 EDT 2024
+Creating test case for Row #       : 5341
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 522
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client First Name
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Client First Name should be mapped to first name from BASE table.
+Expected Results                   : validate the Client FirstName should be mapped to first name from Base table. ClientFirstName =  (NAM_FIRST ) from T_RE_ BASE as expected
+Test Case ID for Row 5341          : 47476
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47476
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47476
+Finished at                        : Mon Jun 17 15:24:30 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:30 EDT 2024
+Creating test case for Row #       : 5342
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 613
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client First Name Max Chars
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract First Name field should be allowed Maximum 30 chars and Special Chars  ( . '  - space).
+Expected Results                   : Validate  Maximum Chars  30 for Client FirstName and  Special Chars  ( . '  - space) are  allowed as expected.
+Test Case ID for Row 5342          : 47477
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47477
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47477
+Finished at                        : Mon Jun 17 15:24:35 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:35 EDT 2024
+Creating test case for Row #       : 5343
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 679
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client Middle Initial
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Client Middle Initial should be mapping value from BASE table.Max chars allowed should be 1.
+Expected Results                   : Validate the  Client Middle Initial is mapped to first name middle Initial from Base table. The max chars allowed is 1. ClientMiddleInitial =  (NAM_MID_INIT ) from T_RE_ BASE.
+Test Case ID for Row 5343          : 47478
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.02.002
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47478
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47478
+Finished at                        : Mon Jun 17 15:24:40 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:40 EDT 2024
+Creating test case for Row #       : 5344
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 563
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client Middle Initial NULL
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Client Middle Initial value should not use double quotes if the value is NULL from  Base table.
+Expected Results                   : Validate the Client Middle Initial should not use double quotes if the value is NULL from  Base table as expected.
+Test Case ID for Row 5344          : 47479
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.02.002
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47479
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47479
+Finished at                        : Mon Jun 17 15:24:45 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:45 EDT 2024
+Creating test case for Row #       : 5345
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 541
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client Last Name
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Client Last Name should be mapped to last name from BASE table.
+Expected Results                   : Validate the Client FirstName is  mapped to Last name from Base table. Client LastName =  (NAM_LAST ) from T_RE_ BASE
+Test Case ID for Row 5345          : 47480
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.02.003
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47480
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47480
+Finished at                        : Mon Jun 17 15:24:50 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:50 EDT 2024
+Creating test case for Row #       : 5346
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 528
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client Last Name Max Chars
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Last Name field Should allow maximum 30 chars and Special Chars  ( . '  - space).
+Expected Results                   : Validate Maximum 30 Chars and Special Chars  ( . '  - space) for Client Last Name are allowed as expected in member extract file.
+Test Case ID for Row 5346          : 47481
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.02.003
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47481
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47481
+Finished at                        : Mon Jun 17 15:24:54 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:24:54 EDT 2024
+Creating test case for Row #       : 5347
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 757
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client Medicaid ID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Client Medicaid ID should be mapped to ID_MEDICAID from BASE table
+Expected Results                   : Validate Client Medicaid ID is mapped to ID_MEDICAID from Base table. ClientMedicaidID = ID_MEDICAID from T_RE_ BASE as expected.
+Test Case ID for Row 5347          : 47482
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47482
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47482
+Finished at                        : Mon Jun 17 15:25:00 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:00 EDT 2024
+Creating test case for Row #       : 5348
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 665
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client Medicaid ID Chars
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Client Medicaid ID is mapped and should be always 12 chars and numeric only.
+Expected Results                   : Validate the  Client Medicaid ID is always be 12 Chars and Numeric only as expected.
+Test Case ID for Row 5348          : 47483
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47483
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47483
+Finished at                        : Mon Jun 17 15:25:05 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:05 EDT 2024
+Creating test case for Row #       : 5349
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 574
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Action field
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract should have Action field
+Expected Results                   : Validate the Outbound Member Extract has  Action field present as expected.
+Test Case ID for Row 5349          : 47484
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.04.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47484
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47484
+Finished at                        : Mon Jun 17 15:25:10 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:10 EDT 2024
+Creating test case for Row #       : 5350
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 605
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Action field Values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Action field values. The Action field values should be 'A' or 'C' in the Outbound Member Extract. 'A' for the New members 'C' for the change records
+Expected Results                   : Validate Action field values are 'A' or 'C' in the Outbound Member Extract. 'A' for the New members 'C' for the change records as expected.
+Test Case ID for Row 5350          : 47485
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.04.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47485
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47485
+Finished at                        : Mon Jun 17 15:25:15 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:15 EDT 2024
+Creating test case for Row #       : 5351
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 567
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client Language
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Client Language should be mapped to  Written Language from BASE table
+Expected Results                   : Validate the Client Language is  mapped to Written Language from Base table. ClientLanguage =  (CDE_LANG_WRITTEN ) from T_RE_BASE as expected.
+Test Case ID for Row 5351          : 47486
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.05.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47486
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47486
+Finished at                        : Mon Jun 17 15:25:20 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:20 EDT 2024
+Creating test case for Row #       : 5352
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 528
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client Language list
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Client Language should be mapped to Written Language list
+Expected Results                   : Validate the Client Language list is included the below values. SanData Accepted written Languages List:  The default language should be English Amharic ,Armenian ,Bengali ,Bengali Indian, Burmese, Cantonese, Egyptian Arabic, English,EuropeanSpanish,French,FrenchCreole,Fulah,Hawaiian,Hindi,Hmong,Iloko,Japanese,Korean ,Lao ,Mandarin Chinese ,Navajo ,Nepali ,Persian ,Polish ,Portuguese Russian ,Serbian ,Somali ,Spanish ,Swahili ,Tagalog ,Vietnamese ,Yue Chinese.
+Test Case ID for Row 5352          : 47487
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.05.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47487
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47487
+Finished at                        : Mon Jun 17 15:25:25 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:25 EDT 2024
+Creating test case for Row #       : 5353
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 636
+TC Validation status               : PASS
+Short Desc                         : EVV Outbound Member Extract Client Gender
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : EVV Extracts
+Long Desc                          : This is to verify the Outbound Member Extract Client Gender should be mapped to Gender from Base table
+Expected Results                   : Validate the Client Gender is mapped to Gender from Base table. The valid values should be 'M' and 'F'. Null (||)should accepted. ClientGender  =  (CDE_SEX ) from T_RE_BASE
+Test Case ID for Row 5353          : 47488
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.06.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47488
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47488
+Finished at                        : Mon Jun 17 15:25:30 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:30 EDT 2024
+Creating test case for Row #       : 5354
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 550
+TC Validation status               : PASS
+Short Desc                         : EVV ClientPhone
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : Phone number in the EVV extract should be always 10 digits without any hyphens. The phone number should be from T_RE_PHONE wich has the value of dayphone number.SAK_CDE_PHONE should be 1
+Expected Results                   : Validat the phone number on the EVV daily extract. Phone number shoul dbe always 10 digits and without any hyphens.
+Test Case ID for Row 5354          : 47489
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.11.002
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47489
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47489
+Finished at                        : Mon Jun 17 15:25:35 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:35 EDT 2024
+Creating test case for Row #       : 5355
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 542
+TC Validation status               : PASS
+Short Desc                         : EVV future eligibility end date
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : Change should be triggered when the member benefit plan eligibility ends rather than on the day when the eligibility change is recorded. Ex: If the member eligibility ends with future date Aug 03- 2024, trigger should happen on Aug 03 -2024 and the extract will be sent to SanData on the following date which is Aug 04-2024.
+Expected Results                   : Validate that the extarct triggers based on the end date. See example on the description.
+Test Case ID for Row 5355          : 47490
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.12.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47490
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47490
+Finished at                        : Mon Jun 17 15:25:39 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:39 EDT 2024
+Creating test case for Row #       : 5356
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 593
+TC Validation status               : PASS
+Short Desc                         : EVV retro eligibility end date
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : Change should be triggered on the date the members enters the retro end date.  Ex: If the member eligibility ends with retro date April 03- 2024, which was changed on current date the  trigger should happen on the current date(june 17) and the extract will be sent to SanData on the following date which is June 17-2024.
+Expected Results                   : Change should be triggered on the date the members enters the retro end date.  Ex: If the member eligibility ends with retro date April 03- 2024, which was changed on current date the  trigger should happen on the current date(june 17) and the extract will be sent to SanData on the following date which is June 17-2024.
+Test Case ID for Row 5356          : 47491
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.12.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47491
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47491
+Finished at                        : Mon Jun 17 15:25:45 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:45 EDT 2024
+Creating test case for Row #       : 5357
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 553
+TC Validation status               : PASS
+Short Desc                         : EVV ClientStatus = 02, 04
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : 02 = Member with active eligibility (Active) 04 = member with the closed eligibility (Inactive)  Ex: If the members benefit plan ends with future date Aug 03- 2024, the extract should update Client Status to be Inactive (04) on the following date Aug 04-2024. (Client Status should be updated in the filed as per the eligibility).  If the member benefit plan ends with retro end date the extract should update the client status to be inactive (04) on the day following  end date being received.   EX: If we receive a retro date for the DOD(02/28/2024) on 04/01/2024 we should trigger an extract to SanData on the following day which is 04/02/2024.
+Expected Results                   : Validat the ClientStatus which is always 2 digit. If the member has the active eligibility the client status should be 02 and inactive eligibility elibibility the client status should be 04.   Validate for retro and future dates. See example under the description.
+Test Case ID for Row 5357          : 47492
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.12.002
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47492
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47492
+Finished at                        : Mon Jun 17 15:25:50 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:50 EDT 2024
+Creating test case for Row #       : 5358
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 563
+TC Validation status               : PASS
+Short Desc                         : EVV ICO deemed enrolled members
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : If the member who has the ICO Deemed managed care eligibility which is usually ends after the 2 months after the benifit plan end date. Ex: If the members benefit plan ends with future date Aug 03- 2024, the ICO managed care eligibility end date would be after two months which is Oct 03-2024. Change trigger should happen on Oct 03-2023, and the extract will be sent to SanData on the following date which is Oct 04-2024. Client Status should be updated to Inactive (04) on the following date Oct 04-2024 based on ICO deemed enrollment end date.  Note: Use the date which ever is later to trigger the ClientStatus.  Note: Use the date which ever is later to trigger the ClientStatus.
+Expected Results                   : Validate the Sandata extract triggers based on the ICO Deemed managed care eligibility end dates. See the example under the description.
+Test Case ID for Row 5358          : 47493
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.12.003
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47493
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47493
+Finished at                        : Mon Jun 17 15:25:55 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:55 EDT 2024
+Creating test case for Row #       : 5359
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 542
+TC Validation status               : PASS
+Short Desc                         : EVV payer ID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : SanData extract should include PayerID field with 5 character code mapped to provider ID (PIDSL).The payer ID should never be empty.  See the attachement for the list of provider ID mapped to payer ID
+Expected Results                   : Validat the PayerID field under the SanData extract.
+Test Case ID for Row 5359          : 47494
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.13.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47494
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47494
+Finished at                        : Mon Jun 17 15:25:59 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:25:59 EDT 2024
+Creating test case for Row #       : 5360
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 564
+TC Validation status               : PASS
+Short Desc                         : Non-Managed care member (FFS)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : Non-Managed care member (FFS), always default the value to MassHealth (MAHEA).
+Expected Results                   : Validat the PayerID field for FFS members which should always default to MassHealth (MAHEA)
+Test Case ID for Row 5360          : 47495
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.13.002
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47495
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47495
+Finished at                        : Mon Jun 17 15:26:04 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:04 EDT 2024
+Creating test case for Row #       : 5361
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 561
+TC Validation status               : PASS
+Short Desc                         : EVV bOutbound Member control file
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : Validat the format and the naming of the outbound control file.Also the frequency and the Channel
+Expected Results                   : The format of the file should be DSV (Delimiter Separated Value listing file)  Outbound control file name to SanData:   MAHEA_EVV_Member_Outbound_ControlFile_YYYYMMDD_HHMMSS.sss.dsv.zip.pgp  Channel - MOVEit Frequency - Daily  Header Layout: "FileName"|"RecordCount"|"StartDateTime"|"EndDateTime"|"Hash"  Only the fields FileName and RecordCount are required. Payers typically opt to only send the required and completely omit the other 3.
+Test Case ID for Row 5361          : 47496
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.01.002
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47496
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47496
+Finished at                        : Mon Jun 17 15:26:10 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:10 EDT 2024
+Creating test case for Row #       : 5362
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 523
+TC Validation status               : PASS
+Short Desc                         : EVV Inbound error data file
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : The format and the naming of the Inbound error data file. DSV (Delimiter Separated Value listing file) MAHEA_EVV_Member_Error_YYYYMMDD_HHMMSS.sss.dsv.zip.pgp  Returned within 2 hours of Outbound.  Note: The Error file will only return if there are error(s).
+Expected Results                   : Validate the Inbound error data file returned when there are any errors in the output file and stored under the data directory for 7 days.
+Test Case ID for Row 5362          : 47497
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.01.003
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47497
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47497
+Finished at                        : Mon Jun 17 15:26:15 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:15 EDT 2024
+Creating test case for Row #       : 5363
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 590
+TC Validation status               : PASS
+Short Desc                         : EVV Inbound error member control file
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : The format of the file should be DSV (Delimiter Separated Value listing file)  Inbound error control file from SanData  MAHEA_EVV_Member_Inbound_ControlFile_YYYYMMDD_HHMMSS.sss.dsv.zip.pgp  Returned within 2 hours of Outbound.  Note: This will be only returned if there are error(s).  Header: "FileName"|"RecordCount"|"StartDateTime"|'EndDateTime"|"Hash"|"Success Count"|"Failed Count"
+Expected Results                   : Validate the format and naming convension for nbound error control file from SanData. This will be only returned if there are any errors in the output file.
+Test Case ID for Row 5363          : 47498
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.01.004
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47498
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47498
+Finished at                        : Mon Jun 17 15:26:19 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:19 EDT 2024
+Creating test case for Row #       : 5364
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 520
+TC Validation status               : PASS
+Short Desc                         : EVV error file storage
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : EVV Extracts
+Long Desc                          : Store the error files returned from SanData on the server for it 7 days.
+Expected Results                   : validat the error files are stored in data directory for 7 days.
+Test Case ID for Row 5364          : 47499
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.01.006
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47499
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47499
+Finished at                        : Mon Jun 17 15:26:24 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:24 EDT 2024
+Creating test case for Row #       : 5365
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 643
+TC Validation status               : PASS
+Short Desc                         : All rows show Timezone(default US/Eastern).
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : All rows in the Extract should show timezone with the defaulted one US/Eastern zone.
+Expected Results                   : The defaulted US/Eastern timezone will be displayed in all the rows of the extract as expected.
+Test Case ID for Row 5365          : 47500
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.08.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47500
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47500
+Finished at                        : Mon Jun 17 15:26:29 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:29 EDT 2024
+Creating test case for Row #       : 5366
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 583
+TC Validation status               : PASS
+Short Desc                         : DOB format YYYY-MM-DD
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : Extract should include Date of Birth in the format YYYY-MM-DD and should be 10 characters(uncluding '-').
+Expected Results                   : The date of birth will be in the format of YYYY-MM-DD, which should be 10 characters in length(including '-') as expected.
+Test Case ID for Row 5366          : 47501
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.09.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47501
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47501
+Finished at                        : Mon Jun 17 15:26:34 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:34 EDT 2024
+Creating test case for Row #       : 5367
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 526
+TC Validation status               : PASS
+Short Desc                         : Member address defaulted to "Home"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : The extract should include member address type, defaulted to "Home"
+Expected Results                   : The extract will include member address type, defaulted to "Home" as expected.
+Test Case ID for Row 5367          : 47502
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47502
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47502
+Finished at                        : Mon Jun 17 15:26:39 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:39 EDT 2024
+Creating test case for Row #       : 5368
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 600
+TC Validation status               : PASS
+Short Desc                         : Extract with Address Line 1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : The extract should include Address line 1 and should not be more than 30 characters in length with allowing only special characters # / - , '  and verify with the T_RE_OTHER_ADDRESS.
+Expected Results                   : The extract should include Address line 1 and should not be more than 30 characters in length with allowing only special characters # / - , '   as expected and verified successfully address line 1 with the T_RE_OTHER_ADDRESS.
+Test Case ID for Row 5368          : 47503
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.002
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47503
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47503
+Finished at                        : Mon Jun 17 15:26:43 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:43 EDT 2024
+Creating test case for Row #       : 5369
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 651
+TC Validation status               : PASS
+Short Desc                         : Extract with Address Line 2`
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : The extract should include Address line 2 and should not be more than 30 characters in length with allowing only special characters # / - , '  and verify with the T_RE_OTHER_ADDRESS.
+Expected Results                   : The extract should include Address line 2 and should not be more than 30 characters in length with allowing only special characters # / - , '   as expected and verified successfully address line 2 with the T_RE_OTHER_ADDRESS.
+Test Case ID for Row 5369          : 47504
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.003
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47504
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47504
+Finished at                        : Mon Jun 17 15:26:49 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:49 EDT 2024
+Creating test case for Row #       : 5370
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 514
+TC Validation status               : PASS
+Short Desc                         : Extract with Null in Address Line 2`
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : The extract should include Address line 2 with Null  and verify with the T_RE_OTHER_ADDRESS.
+Expected Results                   : The extract will include Address line 2 with Null  and verified successfully with the T_RE_OTHER_ADDRESS.
+Test Case ID for Row 5370          : 47505
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.003
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47505
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47505
+Finished at                        : Mon Jun 17 15:26:53 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:53 EDT 2024
+Creating test case for Row #       : 5371
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 629
+TC Validation status               : PASS
+Short Desc                         : Extract with accomdate county
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : The extract should include accomdate county and should not be more than 25 characters in length, no special characters allowed  and verify with the T_COUNTY based on the zip code.
+Expected Results                   : The extractwill include accomdate county and will not be more than 25 characters in length, no special characters allowed  as expected and successfully verified with the T_COUNTY based on the zip code.
+Test Case ID for Row 5371          : 47506
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.004
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47506
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47506
+Finished at                        : Mon Jun 17 15:26:58 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:26:58 EDT 2024
+Creating test case for Row #       : 5372
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 543
+TC Validation status               : PASS
+Short Desc                         : Extract with Null in accomdate county
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : The extract should include accomdate county as Null
+Expected Results                   : The extract will include accomdate county as Null as expected.
+Test Case ID for Row 5372          : 47507
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.004
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47507
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47507
+Finished at                        : Mon Jun 17 15:27:03 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:27:03 EDT 2024
+Creating test case for Row #       : 5373
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 555
+TC Validation status               : PASS
+Short Desc                         : Extract with Residence city
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : The extract should include Residence city and should not be more than 30 characters in length with no special charactersallowed  and verify with the member residence address in T_RE_OTHER_ADDRESS table.
+Expected Results                   : The extract will include Residence city and will not be more than 30 characters in length without special characters as expected and verified successfully with the member residence address in T_RE_OTHER_ADDRESS table.
+Test Case ID for Row 5373          : 47508
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47508
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47508
+Finished at                        : Mon Jun 17 15:27:08 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:27:08 EDT 2024
+Creating test case for Row #       : 5374
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 668
+TC Validation status               : PASS
+Short Desc                         : Extract with Residence state
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : The extract should include Residence state and should be 2 alphabetic characters in length with no special characters and numbers allowed  and verify with the member residence address in T_RE_OTHER_ADDRESS table.
+Expected Results                   : The extract will include Residence state with 2 alphabetic characters in length with no special characters and numbers allowed  as expected and verified successfully with the member residence address in T_RE_OTHER_ADDRESS table.
+Test Case ID for Row 5374          : 47509
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.006
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47509
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47509
+Finished at                        : Mon Jun 17 15:27:13 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:27:13 EDT 2024
+Creating test case for Row #       : 5375
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 622
+TC Validation status               : PASS
+Short Desc                         : Extract with zip code
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : The extract should include zipcode and should be 9 numeric characters in length with no special characters allowed  and verify with the member residence address in T_RE_OTHER_ADDRESS table.
+Expected Results                   : The extract will include zipcode and will be 9 numeric characters in length with no special characters allowed as expected  and verified successfully with the member residence address in T_RE_OTHER_ADDRESS table.
+Test Case ID for Row 5375          : 47510
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.007
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47510
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47510
+Finished at                        : Mon Jun 17 15:27:19 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:27:19 EDT 2024
+Creating test case for Row #       : 5376
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 545
+TC Validation status               : PASS
+Short Desc                         : zip code with last four digits as zero
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : Sending only 5 digit to the zip code, then the last 4 digits should be zero in the extract of 9 digit zip code and verify with the member residence address in T_RE_OTHER_ADDRESS table.
+Expected Results                   : The zeros are there in the last four digits of the zip code as expected and verified successfully with the member residence address in T_RE_OTHER_ADDRESS table.
+Test Case ID for Row 5376          : 47511
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.10.007
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47511
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47511
+Finished at                        : Mon Jun 17 15:27:23 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:27:23 EDT 2024
+Creating test case for Row #       : 5377
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 617
+TC Validation status               : PASS
+Short Desc                         : ClientPhoneType to 'other'
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : If the client has the phone number, then default the clientphonetype to 'other'.
+Expected Results                   : clientphonetype to 'other' is verified successfully.
+Test Case ID for Row 5377          : 47512
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.11.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47512
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47512
+Finished at                        : Mon Jun 17 15:27:28 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 17 15:27:28 EDT 2024
+Creating test case for Row #       : 5378
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 533
+TC Validation status               : PASS
+Short Desc                         : ClientPhoneType to Null
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : EVV Extracts
+Long Desc                          : If the client does not have the phone number, then the clientphonetype will be Null.
+Expected Results                   : The clientphonetype will be Null as expected.
+Test Case ID for Row 5378          : 47513
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37705.11.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 47513
+Notebook                           : EVV Testing
+Business Function                  : EVV Member Extract Testing
+Notebook/BF linked for test case   : 47513
+Finished at                        : Mon Jun 17 15:27:33 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 17/Jun/2024 03:27:34PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

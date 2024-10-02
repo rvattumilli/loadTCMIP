@@ -1,0 +1,285 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 21/Mar/2023 10:10:40AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+MIP Username                       : rvattumi
+User Name                          : rvattumilli
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) wi_type, trim(a.id_req) id_req, f.nam req_type, f.sak_req_type from rvattumi.load_tc a, co_participant b, co c, co_type d, requirement e, requirement_type f where c.sak_csr = a.wi_test_case and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and d.sak_csr_type = c.sak_csr_type and e.sak_req_type = f.sak_req_type and trim(a.id_req) = trim(e.id_req) and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 16
+Query Execution Time(ms)           : 162
+Total No.of Rows                   : 30
+****************************************************
+Started at                         : Tue Mar 21 10:11:02 EDT 2023
+Creating test case for Row #       : 1822
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 1541
+Validation status                  : PASS
+Short Desc                         : Missing soapsrvrSSL cert and key files
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : ON LINUX: Invoke the soapsrvrSSL with no arguments.
+Expected Results                   : SoapsrvrSSL prints an error message and exits with a non-zero error code.
+Test Case ID for Row 1822          : 42995
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 42995
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42995
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 42995
+Finished at                        : Tue Mar 21 10:11:22 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:11:22 EDT 2023
+Creating test case for Row #       : 1823
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 7279
+Validation status                  : PASS
+Short Desc                         : Invalid or incompatible soapsrvrSSL cert and key files
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : ON LINUX: SoapsrvrSSL startup with Invalid or incompatible cert and key files
+Expected Results                   : Upon startup, soapsrvrSSL prints an error message and terminates with a non-zero exit code.
+Test Case ID for Row 1823          : 42996
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 42996
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42996
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 42996
+Finished at                        : Tue Mar 21 10:11:46 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:11:46 EDT 2023
+Creating test case for Row #       : 1824
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 3628
+Validation status                  : PASS
+Short Desc                         : Invalid  .xml input file to soapsrvrSSL
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : ON LINUX: Invalid  .xml input file to soapsrvrSSL
+Expected Results                   : Expected error message reported by soapsrvrSSL.
+Test Case ID for Row 1824          : 42997
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 42997
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42997
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 42997
+Finished at                        : Tue Mar 21 10:12:13 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:12:13 EDT 2023
+Creating test case for Row #       : 1825
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 2106
+Validation status                  : PASS
+Short Desc                         : Missing configuration file for soapsrvrSSL
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : ON LINUX: Missing configuration file for soapsrvrSSL
+Expected Results                   : Upon startup, soapsrvrSSL reports an error message and terminates with a non-zero error code.
+Test Case ID for Row 1825          : 42998
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 42998
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42998
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 42998
+Finished at                        : Tue Mar 21 10:12:34 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:12:34 EDT 2023
+Creating test case for Row #       : 1826
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 2995
+Validation status                  : PASS
+Short Desc                         : Invalid command-line option to soapsrvrSSL
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : ON LINUX: Invalid command-line option to soapsrvrSSL
+Expected Results                   : soapsrvrSSL prints a usage message and exits.
+Test Case ID for Row 1826          : 42999
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 42999
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42999
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 42999
+Finished at                        : Tue Mar 21 10:12:55 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:12:55 EDT 2023
+Creating test case for Row #       : 1827
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 3477
+Validation status                  : PASS
+Short Desc                         : Start soapsrvrSSL with a command-line argument of length >1023 characters.
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : ON LINUX: Start soapsrvrSSL with a command-line argument of length >1023 characters.
+Expected Results                   : soapsrvrSSL program prints an error message and terminates with a FAILURE code.
+Test Case ID for Row 1827          : 43000
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43000
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43000
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43000
+Finished at                        : Tue Mar 21 10:13:15 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:13:15 EDT 2023
+Creating test case for Row #       : 1828
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 2236
+Validation status                  : PASS
+Short Desc                         : Submit a test claim that sends to the Netreveal service
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Submit a test claim that sends to the Netreveal service. This needs to be tested in an environment .in which there is a connection to Netreveal. It could be tested on the UAT system.
+Expected Results                   : Netreveal should be able to accept the request and respond with a valid edit response
+Test Case ID for Row 1828          : 43001
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43001
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43001
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43001
+Finished at                        : Tue Mar 21 10:13:40 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:13:40 EDT 2023
+Creating test case for Row #       : 1829
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 847
+Validation status                  : PASS
+Short Desc                         : Same test- old soapClient and soapClientSSL - RESULTS
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Run a test using the soapsrvrSSL/ soapClientSSL. Run the same test with the (old) soapsrvr/soapClient.
+Expected Results                   : Results should agree. The result soapClient and soapClientSSL output files agree except for the time/date and the elapsed times, and a 3-line print of the Content-type from the old soapClient program.
+Test Case ID for Row 1829          : 43002
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43002
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43002
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43002
+Finished at                        : Tue Mar 21 10:14:06 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:14:06 EDT 2023
+Creating test case for Row #       : 1830
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Validation Time(ms)                : 7572
+Validation status                  : PASS
+Short Desc                         : Same test- old soapClient and soapClientSSL - TIME
+Env                                : M
+Subsystem                          : Technical Architecture Vision
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Batch
+Long Desc                          : Run a test using the soapsrvrSSL/ soapClientSSL. Run the same test with the (old) soapsrvr/soapClient
+Expected Results                   : The elapsed times should be very close.The results should agree.
+Test Case ID for Row 1830          : 43003
+Associated Req ID                  : 35009.01.001
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 43003
+Link WI/Defect/CO                  : true
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 43003
+Associated iWI/Defect/CO           : 35009
+Associated iWI Type                : Work Item
+Work item/CO linked for test case  : 43003
+Finished at                        : Tue Mar 21 10:14:32 EDT 2023
+****************************************************
+Started at                         : Tue Mar 21 10:14:32 EDT 2023
+Creating test case for Row #       : 1831
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '35009.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Technical Architecture Vision') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project23.04') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Screenshot Path                    : C:\Users\RVattumilli\eclipse-workspace\loadTCMIP\Screenshots\
+null
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP abended 21/Mar/2023 10:14:54AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

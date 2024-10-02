@@ -1,0 +1,357 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 04/Dec/2023 03:56:15PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.DAYS_TO_RESET_PWD > 2
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 117
+Total No.of Rows fetched           : 11
+*****************************************************************
+Started at                         : Mon Dec 04 15:56:21 EST 2023
+Creating test case for Row #       : 4649
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 440
+Validation status                  : PASS
+Short Desc                         : Member with same SOT DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Submit SOT DOD input file with same previous SOT DOD for the member.
+Expected Results                   : Verify T_MC_SOT_DOD_STATUS.IND_MEMBER_IN_SOT_DOD is set to "P" and member is processed as usual.
+Test Case ID for Row 4649          : 46759
+Query Execution Time(ms)           : 59
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.01.001
+Query Execution Time(ms)           : 45
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46759
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46759
+Finished at                        : Mon Dec 04 15:56:26 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:56:26 EST 2023
+Creating test case for Row #       : 4650
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 425
+Validation status                  : PASS
+Short Desc                         : Member with different SOT DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Submit SOT DOD input file with SOT DOD different than previous SOT DOD for the member.
+Expected Results                   : Verify T_MC_SOT_DOD_STATUS.IND_MEMBER_IN_SOT_DOD is set to "F" and member is not processed further.
+Test Case ID for Row 4650          : 46760
+Query Execution Time(ms)           : 64
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.01.001
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46760
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46760
+Finished at                        : Mon Dec 04 15:56:31 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:56:31 EST 2023
+Creating test case for Row #       : 4651
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 393
+Validation status                  : PASS
+Short Desc                         : Member with no SOT DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Submit SOT DOD input file with member who doesn't have any SOT DOD record.
+Expected Results                   : Verify T_MC_SOT_DOD_STATUS.IND_MEMBER_IN_SOT_DOD is set to "P" and member is processed as usual.
+Test Case ID for Row 4651          : 46761
+Query Execution Time(ms)           : 69
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.01.001
+Query Execution Time(ms)           : 28
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46761
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46761
+Finished at                        : Mon Dec 04 15:56:35 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:56:35 EST 2023
+Creating test case for Row #       : 4652
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 447
+Validation status                  : PASS
+Short Desc                         : Member with same SOT DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Submit SOT DOD input file with same previous SOT DOD for the member.
+Expected Results                   : Verify outstanding or unrecouped positive payments are recouped and previous recouped payments/negative payments are not recouped again.
+Test Case ID for Row 4652          : 46762
+Query Execution Time(ms)           : 61
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.01.003
+Query Execution Time(ms)           : 28
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46762
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46762
+Finished at                        : Mon Dec 04 15:56:39 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:56:39 EST 2023
+Creating test case for Row #       : 4653
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 408
+Validation status                  : PASS
+Short Desc                         : Member with no SOT DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Submit SOT DOD input file with member who doesn't have any SOT DOD record.
+Expected Results                   : Verify outstanding or unrecouped positive payments are recouped and previous recouped payments/negative payments are not recouped again.
+Test Case ID for Row 4653          : 46763
+Query Execution Time(ms)           : 56
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.01.003
+Query Execution Time(ms)           : 26
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46763
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46763
+Finished at                        : Mon Dec 04 15:56:44 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:56:44 EST 2023
+Creating test case for Row #       : 4654
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.01.006') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 467
+Validation status                  : PASS
+Short Desc                         : Member with same SOT DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Submit SOT DOD input file with same previous SOT DOD for the member. If previous SOT DOD is same as SOT DOD submitted in input file, T_MC_SOT_DOD_STATUS.IND_MEMBER_IN_SOT_DOD is set to "P".
+Expected Results                   : Verify T_MC_SOT_DOD_STATUS.IND_MEMBER_IN_SOT_DOD is set to "P" and member is processed as usual.
+Test Case ID for Row 4654          : 46764
+Query Execution Time(ms)           : 54
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.01.006
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46764
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46764
+Finished at                        : Mon Dec 04 15:56:49 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:56:49 EST 2023
+Creating test case for Row #       : 4655
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.01.006') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 402
+Validation status                  : PASS
+Short Desc                         : Member with different SOT DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Submit SOT DOD input file with SOT DOD different than previous SOT DOD for the member. If previous SOT DOD is different than SOT DOD submitted in input file, T_MC_SOT_DOD_STATUS.IND_MEMBER_IN_SOT_DOD is set to "F".
+Expected Results                   : Verify T_MC_SOT_DOD_STATUS.IND_MEMBER_IN_SOT_DOD is set to "F" and member is not processed further.
+Test Case ID for Row 4655          : 46765
+Query Execution Time(ms)           : 59
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.01.006
+Query Execution Time(ms)           : 28
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46765
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46765
+Finished at                        : Mon Dec 04 15:56:53 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:56:53 EST 2023
+Creating test case for Row #       : 4656
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.01.006') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 653
+Validation status                  : PASS
+Short Desc                         : Member with no SOT DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Submit SOT DOD input file with member who doesn't have any SOT DOD record. If member doesn't have any previous SOT DOD records, T_MC_SOT_DOD_STATUS.IND_MEMBER_IN_SOT_DOD is set to "P".
+Expected Results                   : Verify T_MC_SOT_DOD_STATUS.IND_MEMBER_IN_SOT_DOD is set to "P" and member is processed as usual.
+Test Case ID for Row 4656          : 46766
+Query Execution Time(ms)           : 50
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.01.006
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46766
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46766
+Finished at                        : Mon Dec 04 15:56:57 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:56:57 EST 2023
+Creating test case for Row #       : 4657
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 424
+Validation status                  : PASS
+Short Desc                         : Error 05 legend in report
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Report the members rjected with error 05 in MGD-0721-A report. Error 05 legend is updated to "Submitted Member SOT DOD does not match Member SOT DOD previously submitted and stored in SOT table".
+Expected Results                   : Verify members rejected with error 05 are reported in MGD-0721-A report and error 05 legend is updated to "Submitted Member SOT DOD does not match Member SOT DOD previously submitted and stored in SOT table" in report. Verify page headers, column headers, run date, date range, page numbers, new column added, error count, error code(s), new error code legend.
+Test Case ID for Row 4657          : 46767
+Query Execution Time(ms)           : 71
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.02.001
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 2
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 46767
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46767
+Finished at                        : Mon Dec 04 15:57:02 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:57:02 EST 2023
+Creating test case for Row #       : 4658
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.02.006') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 411
+Validation status                  : PASS
+Short Desc                         : New column added to MGD-0721-A report
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : New column "Previously Stored SOT DOD" is added as third column in MGD-0721-A report. Existing column "SOT DOD" with current cycle's submitted SOT DOD is reported in second column.
+Expected Results                   : Verify new column "Previously Stored SOT DOD" is added as third column in MGD-0721-A report and existing column "SOT DOD" with current cycle's submitted SOT DOD is reported in second column.
+Test Case ID for Row 4658          : 46768
+Query Execution Time(ms)           : 76
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.02.006
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 2
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 46768
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46768
+Finished at                        : Mon Dec 04 15:57:06 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 15:57:06 EST 2023
+Creating test case for Row #       : 4659
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37329.02.006') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 438
+Validation status                  : PASS
+Short Desc                         : Empty MGD-0721-A report
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Empty MGD-0721-A report with no data.
+Expected Results                   : Verify page headers, column headers, new column added, run date, date range, page number, no member rows are printed, error legend is not printed in MGD-0721-A report.
+Test Case ID for Row 4659          : 46769
+Query Execution Time(ms)           : 72
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37329.02.006
+Query Execution Time(ms)           : 29
+Total No.of Columns fetched        : 2
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 46769
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46769
+Finished at                        : Mon Dec 04 15:57:11 EST 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 04/Dec/2023 03:57:11PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

@@ -1,0 +1,1409 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 13/Sep/2023 09:49:56AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 62
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 98
+Total No.of Rows                   : 41
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:03 EDT 2023
+Creating test case for Row #       : 4436
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 323
+Validation status                  : PASS
+Short Desc                         : CP with Current date and Current ACOB/PCCB/BH with Open end date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with current dates via UI where member has Current ACOB/PCCB/BH with Open end date.
+
+ACOB/PCCB/BH
+ <Todays Date> ------------- BH ------------------<12/31/2299>
+ <Todays Date > ------------- ACOB ------------- <12/31/2299>
+ <Todays Date > ------------- PCCB --------------<12/31/2299>
+
+Add CP with Current dates
+ <Todays Date > -------------CP-------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not Closed/Historied when member is enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with current dates via UI where member has Current ACOB/PCCB/BH with Open end date.
+Test Case ID for Row 4436          : 46331
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36195.01.001
+Query Execution Time(ms)           : 25
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46331
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46331
+Finished at                        : Wed Sep 13 09:50:08 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:08 EDT 2023
+Creating test case for Row #       : 4437
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 21
+Validation Time(ms)                : 358
+Validation status                  : PASS
+Short Desc                         : CP with Current date & Current ACOB/PCCB/BH with Open end BH & Future ACOB/PCCB
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has Current ACOB/PCCB/BH with Open-ended BH and Future ACOB/PCCB.
+
+Current Dates
+ <Todays Date> ------------- BH ----------------------------------------<12/31/2299>
+ <Todays Date > ------------- ACOB ------------- <11/30/2023>
+ <Todays Date > ------------- PCCB --------------<11/30/2023>
+
+Add CP with Current dates
+
+ <Todays Date > -------------CP-----------------------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has Current ACOB/PCCB/BH with Open-ended BH and Future ACOB/PCCB.
+Test Case ID for Row 4437          : 46332
+Query Execution Time(ms)           : 48
+Requirement ID                     : 36195.01.001
+Query Execution Time(ms)           : 22
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46332
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46332
+Finished at                        : Wed Sep 13 09:50:12 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:12 EDT 2023
+Creating test case for Row #       : 4438
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 23
+Validation Time(ms)                : 361
+Validation status                  : PASS
+Short Desc                         : CP with Current date when_Retro ACOB/PCCB/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with current dates via UI where member has retro ACOB/PCCB/BH.
+
+<Retro> --------------BH ----------------------------------------------- <12/31/2299>  
+<Retro>  ------------- ACOB --------------------------------------------<12/31/2299>
+<Retro>  ------------- PCCB --------------------------------------------<12/31/2299>
+Add CP with Current dates
+                       <Today' Date> -------------CP-------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with current dates via UI where member has retro ACOB/PCCB/BH.
+Test Case ID for Row 4438          : 46333
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36195.01.001
+Query Execution Time(ms)           : 17
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46333
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46333
+Finished at                        : Wed Sep 13 09:50:17 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:17 EDT 2023
+Creating test case for Row #       : 4439
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 621
+Validation status                  : PASS
+Short Desc                         : CP with Current date when_Current ACOB/PCCB and Retro BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with current dates via UI where member has retro BH and current ACOB/PCCB.
+
+<Retro> --------------BH ----------------------------------------------<12/31/2299>  
+                     <Today' Date>------------- ACOB -------------------<12/31/2299>
+                     <Today' Date>--------------- PCCB ------------------<12/31/2299>
+
+Add CP with Current dates
+                      <Today' Date> -------------CP------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with current dates via UI where member has retro BH and current ACOB/PCCB.
+Test Case ID for Row 4439          : 46335
+Query Execution Time(ms)           : 48
+Requirement ID                     : 36195.01.001
+Query Execution Time(ms)           : 23
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46335
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46335
+Finished at                        : Wed Sep 13 09:50:22 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:22 EDT 2023
+Creating test case for Row #       : 4440
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 71
+Validation Time(ms)                : 385
+Validation status                  : PASS
+Short Desc                         : CP with Future date and Current ACOB/PCCB/BH with Open end date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with Future dates via UI where member has Current ACOB/PCCB/BH with Open end dates.
+
+Current Dates
+ <Todays Date> --------------------------BH ----------------<12/31/2299>
+ <Todays Date > ------------------------ACOB -------------<12/31/2299>
+ <Todays Date > -------------------------PCCB -------------<12/31/2299>
+Add CP with Future dates
+                                     <Future date > --------CP----------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with Future dates via UI where member has Current ACOB/PCCB/BH with Open end dates.
+Test Case ID for Row 4440          : 46336
+Query Execution Time(ms)           : 74
+Requirement ID                     : 36195.01.005
+Query Execution Time(ms)           : 26
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46336
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46336
+Finished at                        : Wed Sep 13 09:50:27 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:27 EDT 2023
+Creating test case for Row #       : 4441
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 364
+Validation status                  : PASS
+Short Desc                         : CP with Future date when_Future ACOB/PCCB/BH with Open-ended BH and Future ACOB/PCCB.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with Future dates via UI where member has future ACOB/PCCB/BH with Open-ended BH and Future ACOB/PCCB.
+
+Future Dates
+<Future date> --------------------------BH ----------------------------------<12/31/2299>
+<Future date> ------------------------ACOB -------------<11/30/2023>
+<Future date>-------------------------PCCB -------------<11/30/2023>
+Add CP with Future dates
+<Future date> --------CP------------------------------------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with Future dates via UI where member has future ACOB/PCCB/BH with Open-ended BH and Future ACOB/PCCB.
+Test Case ID for Row 4441          : 46337
+Query Execution Time(ms)           : 50
+Requirement ID                     : 36195.01.005
+Query Execution Time(ms)           : 29
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46337
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46337
+Finished at                        : Wed Sep 13 09:50:31 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:31 EDT 2023
+Creating test case for Row #       : 4442
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 23
+Validation Time(ms)                : 416
+Validation status                  : PASS
+Short Desc                         : CP with Future date when_Retro ACOB/PCCB/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with Future dates via UI where member has retro ACOB/PCCB/BH with Open end dates.
+
+Retro dates
+<Retro> --------------BH ----------------------------------------------- <12/31/2299>  
+<Retro>  ------------- ACOB --------------------------------------------<12/31/2299>
+<Retro>  ------------- PCCB --------------------------------------------<12/31/2299>
+Add CP with Future dates
+                       <Future date> ------------- CP--------------------- ---<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with Future dates via UI where member has retro ACOB/PCCB/BH with Open end dates.
+Test Case ID for Row 4442          : 46338
+Query Execution Time(ms)           : 50
+Requirement ID                     : 36195.01.005
+Query Execution Time(ms)           : 20
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46338
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46338
+Finished at                        : Wed Sep 13 09:50:36 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:36 EDT 2023
+Creating test case for Row #       : 4443
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 367
+Validation status                  : PASS
+Short Desc                         : CP with Fututre date when_Current ACOB/PCCB and Retro BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with Future dates via UI where member has current ACO/PCCB and retro BH with Open end dates.
+
+<Retro> --------------BH ----------------------------------------------<12/31/2299>  
+                     <Today' Date>------------- ACOB -------------------<12/31/2299>
+                     <Today' Date>--------------- PCCB ------------------<12/31/2299>
+
+Add CP with Future dates
+                                                     <Future Date> ---------CP------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (BHCP/LTSS/ACCS1/PACC1) with Future dates via UI where member has current ACO/PCCB and retro BH with Open end dates.
+Test Case ID for Row 4443          : 46339
+Query Execution Time(ms)           : 47
+Requirement ID                     : 36195.01.005
+Query Execution Time(ms)           : 20
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46339
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46339
+Finished at                        : Wed Sep 13 09:50:41 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:41 EDT 2023
+Creating test case for Row #       : 4444
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 360
+Validation status                  : PASS
+Short Desc                         : RETRO CP(BHCP/LTSS) for Fututre ACOB/PCCB/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (BHCP/LTSS) with RETRO dates via UI where member has Future ACOB/PCCB/BH with Open-ended dates.
+
+ACOB/PCCB/BH - Future Dates
+
+                             <Future date> --------------------------BH-----------------------------------<12/31/2299>
+                             <Future date> ------------------------ACOB---------------------------------<12/31/2299>
+                             <Future date> -------------------------PCCB---------------------------------<12/31/2299>
+
+Add CP with RETRO dates
+
+<Retro date>---------CP (BHCP/LTSS)-------------------------------------------------------------<12/31/2299>
+
+UI will Throw an error and user will not be allowed to add the CP (BHCP/LTSS) segment.
+Expected Results                   : Verify that the UI is throwing edit "Member is not eligible for this program because member is not currently enrolled in an ACO/MCO Program." when a member is being enrolled to CP (BHCP/LTSS) with RETRO dates via UI where member has Future ACOB/PCCB/BH with Open-ended dates.
+Test Case ID for Row 4444          : 46340
+Query Execution Time(ms)           : 38
+Requirement ID                     : 36195.01.010
+Query Execution Time(ms)           : 40
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46340
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46340
+Finished at                        : Wed Sep 13 09:50:45 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:45 EDT 2023
+Creating test case for Row #       : 4445
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 387
+Validation status                  : PASS
+Short Desc                         : RETRO CP(ACCS1/PACC1) for Fututre ACOB/PCCB/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with RETRO dates via UI where member has Future ACOB/PCCB/BH with Open-ended dates.
+
+ACOB/PCCB/BH - Future Dates
+
+                             <Future date> --------------------------BH-----------------------------------<12/31/2299>
+                             <Future date> ------------------------ACOB---------------------------------<12/31/2299>
+                             <Future date> -------------------------PCCB---------------------------------<12/31/2299>
+
+Add CP with RETRO dates
+
+<Retro date>---------CP (ACCS1/PACC1)---------------------------------------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is NOT being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with RETRO dates via UI where member has Future ACOB/PCCB/BH with Open-ended dates.
+Test Case ID for Row 4445          : 46341
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36195.01.010
+Query Execution Time(ms)           : 31
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46341
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46341
+Finished at                        : Wed Sep 13 09:50:50 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:50 EDT 2023
+Creating test case for Row #       : 4446
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 347
+Validation status                  : PASS
+Short Desc                         : CURRENT CP(BHCP/LTSS) for Fututre ACOB/PCCB/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (BHCP/LTSS) with CURRENT dates via UI where member has Future ACOB/PCCB/BH with Open-ended dates.
+
+ACOB/PCCB/BH - Future Dates
+
+                             <Future date> --------------------------BH-----------------------------------<12/31/2299>
+                             <Future date> ------------------------ACOB---------------------------------<12/31/2299>
+                             <Future date> -------------------------PCCB---------------------------------<12/31/2299>
+
+Add CP with CURRENT dates
+
+<Current date>---------CP (BHCP/LTSS)-------------------------------------------------------------<12/31/2299>
+
+UI will Throw an error and user will not be allowed to add the CP (BHCP/LTSS) segment.
+Expected Results                   : Verify that the UI is throwing an UI edit "Member is not eligible for this program because member is not currently enrolled in an ACO/MCO Program." when a member is being enrolled to CP (BHCP/LTSS) with CURRENT dates via UI where member has Future ACOB/PCCB/BH with Open-ended dates.
+Test Case ID for Row 4446          : 46342
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36195.01.010
+Query Execution Time(ms)           : 19
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46342
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46342
+Finished at                        : Wed Sep 13 09:50:55 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:55 EDT 2023
+Creating test case for Row #       : 4447
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 22
+Validation Time(ms)                : 345
+Validation status                  : PASS
+Short Desc                         : CURRENT CP(ACCS1/PACC1) for Fututre ACOB/PCCB/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with CURRENT dates via UI where member has Future ACOB/PCCB/BH with Open-ended dates.
+
+ACOB/PCCB/BH - Future Dates
+
+                             <Future date> --------------------------BH-----------------------------------<12/31/2299>
+                             <Future date> ------------------------ACOB---------------------------------<12/31/2299>
+                             <Future date> -------------------------PCCB---------------------------------<12/31/2299>
+
+Add CP with CURRENT dates
+
+<Current date>---------CP (ACCS1/PACC1)---------------------------------------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is NOT being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with CURRENT dates via UI where member has Future ACOB/PCCB/BH with Open-ended dates.
+Test Case ID for Row 4447          : 46343
+Query Execution Time(ms)           : 49
+Requirement ID                     : 36195.01.010
+Query Execution Time(ms)           : 19
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46343
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46343
+Finished at                        : Wed Sep 13 09:50:59 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:50:59 EDT 2023
+Creating test case for Row #       : 4448
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 390
+Validation status                  : PASS
+Short Desc                         : FUTURE CP(BHCP/LTSS) for Fututre ACOB/PCCB/BH with Open end dates_(Same/Different dates)
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : 1. Member is being enrolled to CP (BHCP/LTSS) where member has Different FUTURE  dates for ACOB/PCCB/BH and CP(BHCP/LTSS) with Open-ended dates 
+Example -
+ACOB/PCCB/BH - Different Future Dates
+                                     <Future date> --------------------------BH-----------------------------------<12/31/2299>
+                                     <Future date> ------------------------ACOB---------------------------------<12/31/2299>
+                                     <Future date> -------------------------PCCB---------------------------------<12/31/2299>
+
+Add CP with Different FUTURE dates
+
+              <Future date>---------CP (BHCP/LTSS)-----------------------------------------------------<12/31/2299>
+
+2. Member is being enrolled to CP (BHCP/LTSS) where member has Same FUTURE  dates for ACOB/PCCB/BH and CP(BHCP/LTSS) with Open-ended dates.
+Example - 
+ACOB/PCCB/BH - Same Future Dates
+                                     <Future date> --------------------------BH-----------------------------------<12/31/2299>
+                                     <Future date> ------------------------ACOB---------------------------------<12/31/2299>
+                                     <Future date> -------------------------PCCB---------------------------------<12/31/2299>
+
+Add CP with Same FUTURE dates
+
+                                      <Future date>---------CP (BHCP/LTSS)------------------------------------<12/31/2299>
+Expected Results                   : 1. Verify that the UI is throwing an UI edit "Member is not eligible for this program because member is not currently enrolled in an ACO/MCO Program." when a member is being enrolled to CP (BHCP/LTSS) where member has Different FUTURE  dates for ACOB/PCCB/BH and CP(BHCP/LTSS) with Open-ended dates.
+
+2. Verify that the UI is NOT Historying the BH assignment when a member is being enrolled to CP (BHCP/LTSS) where member has Same FUTURE  dates for ACOB/PCCB/BH and CP(BHCP/LTSS) with Open-ended dates.
+Test Case ID for Row 4448          : 46344
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36195.01.010
+Query Execution Time(ms)           : 41
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46344
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46344
+Finished at                        : Wed Sep 13 09:51:05 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:05 EDT 2023
+Creating test case for Row #       : 4449
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 21
+Validation Time(ms)                : 391
+Validation status                  : PASS
+Short Desc                         : FUTURE CP(ACCS1/PACC1) for Fututre ACOB/PCCB/BH with Open end dates_(Same/Different dates)
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : 1.  Member is being enrolled to CP (ACCS1/PACC1) where member has different FUTURE dates for ACOB/PCCB/BH and CP(BHCP/LTSS) with Open-end dates.
+Example -
+ACOB/PCCB/BH - Different Future Dates
+                                     <Future date> --------------------------BH-----------------------------------<12/31/2299>
+                                     <Future date> ------------------------ACOB---------------------------------<12/31/2299>
+                                     <Future date> -------------------------PCCB---------------------------------<12/31/2299>
+
+Add CP with Different FUTURE dates
+
+              <Future date>---------CP (ACCS1/PACC1)-------------------------------------------------<12/31/2299>
+
+2. Member is being enrolled to CP (ACCS1/PACC1) where member has Same FUTURE  dates for ACOB/PCCB/BH and CP(BHCP/LTSS) with Open-end dates.
+Example - 
+ACOB/PCCB/BH - Same Future Dates
+                                     <Future date> --------------------------BH-----------------------------------<12/31/2299>
+                                     <Future date> ------------------------ACOB---------------------------------<12/31/2299>
+                                     <Future date> -------------------------PCCB---------------------------------<12/31/2299>
+
+Add CP with Same FUTURE dates
+
+                                      <Future date>---------CP (ACCS1/PACC1)--------------------------------<12/31/2299>
+Expected Results                   : 1.  Verify that the UI is NOT Historying the BH assignment when a member is being enrolled to CP (ACCS1/PACC1) where member has different FUTURE dates for ACOB/PCCB/BH and CP(BHCP/LTSS) with Open-ended dates.
+
+2. Verify that the UI is NOT Historying the BH assignment when a member is being enrolled to CP (ACCS1/PACC1) where member has Same FUTURE  dates for ACOB/PCCB/BH and CP(BHCP/LTSS) with Open-ended dates.
+Test Case ID for Row 4449          : 46345
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36195.01.010
+Query Execution Time(ms)           : 29
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46345
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46345
+Finished at                        : Wed Sep 13 09:51:10 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:10 EDT 2023
+Creating test case for Row #       : 4450
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 344
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with Current date when_Current PCC/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has Current PCC/BH with Open end dates.
+
+PCC/BH  - Current Dates
+ <Todays Date> ------------- BH -------------------------<12/31/2299>
+ <Todays Date > ------------- PCC------------------------<12/31/2299>
+
+Add CP with Current dates
+ <Todays Date > ------------CP (ACCS1/PACC1)------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has Current PCC/BH with Open end dates.
+Test Case ID for Row 4450          : 46346
+Query Execution Time(ms)           : 45
+Requirement ID                     : 36195.01.015
+Query Execution Time(ms)           : 24
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46346
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46346
+Finished at                        : Wed Sep 13 09:51:14 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:14 EDT 2023
+Creating test case for Row #       : 4451
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 22
+Validation Time(ms)                : 378
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with Current date when_Current PCC/BH with Open-ended BH and Future PCC.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has Current PCC/BH with Open-ended BH and Future end dated PCC.
+
+PCC/BH  - Current Dates
+ <Todays Date> ------------- BH ----------------------------------------<12/31/2299>
+ <Todays Date > ------------- PCC-----------------<11/30/2023>
+
+Add CP with Current dates
+
+ <Todays Date > -------------CP (ACCS1/PACC1)---------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has Current PCC/BH with Open-ended BH and Future end dated PCC.
+Test Case ID for Row 4451          : 46347
+Query Execution Time(ms)           : 47
+Requirement ID                     : 36195.01.015
+Query Execution Time(ms)           : 20
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46347
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46347
+Finished at                        : Wed Sep 13 09:51:19 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:19 EDT 2023
+Creating test case for Row #       : 4452
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 362
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with Current date when_Retro PCC/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has retro PCC/BH.
+
+<Retro> --------------BH ----------------------------------------------- <12/31/2299>  
+<Retro>  ------------- PCC ----------------------------------------------<12/31/2299>
+Add CP with Current dates
+                       <Today' Date> ---------CP (ACCS1/PACC1)-------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has retro PCC/BH.
+Test Case ID for Row 4452          : 46348
+Query Execution Time(ms)           : 42
+Requirement ID                     : 36195.01.015
+Query Execution Time(ms)           : 18
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46348
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46348
+Finished at                        : Wed Sep 13 09:51:23 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:23 EDT 2023
+Creating test case for Row #       : 4453
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 20
+Validation Time(ms)                : 383
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with Current date when_Current PCC and Retro BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has retro BH and current PCC.
+
+<Retro> --------------BH ----------------------------------------------<12/31/2299>  
+                     <Today' Date>--------------- PCCP ------------------<12/31/2299>
+
+Add CP with Current dates
+                      <Today' Date> -------------CP------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has retro BH and current PCC.
+Test Case ID for Row 4453          : 46349
+Query Execution Time(ms)           : 48
+Requirement ID                     : 36195.01.015
+Query Execution Time(ms)           : 29
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46349
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46349
+Finished at                        : Wed Sep 13 09:51:28 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:28 EDT 2023
+Creating test case for Row #       : 4454
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 351
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with future dates when_Current PCC/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has Current PCC/BH with Open end dates.
+
+PCC/BH  - Current Dates
+ <Todays Date> ------------- BH -------------------------------------<12/31/2299>
+ <Todays Date > ------------- PCC------------------------------------<12/31/2299>
+
+Add CP with future dates
+                   <Todays Date > ------------CP (ACCS1/PACC1)------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has Current PCC/BH with Open end dates.
+Test Case ID for Row 4454          : 46350
+Query Execution Time(ms)           : 44
+Requirement ID                     : 36195.01.020
+Query Execution Time(ms)           : 29
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46350
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46350
+Finished at                        : Wed Sep 13 09:51:32 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:32 EDT 2023
+Creating test case for Row #       : 4455
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 396
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with future date when_retro PCC/BH with Open-end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has retro PCC/BH with Open-end dates.
+
+PCC/BH  - Current Dates
+ <Retro Date> ------------- BH ----------------------------------------<12/31/2299>
+ <Retro Date > ------------- PCC---------------------------------------<12/31/2299>
+
+Add CP with future dates
+
+                       <Future Date > -------------CP (ACCS1/PACC1)---------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has retro PCC/BH with Open-end dates.
+Test Case ID for Row 4455          : 46351
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36195.01.020
+Query Execution Time(ms)           : 24
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46351
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46351
+Finished at                        : Wed Sep 13 09:51:36 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:36 EDT 2023
+Creating test case for Row #       : 4456
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 347
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with future date when_Current PCC/BH with Open-ended BH and Future PCC.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has Current PCC/BH with Open-ended BH and Future end dated PCC.
+
+PCC/BH  - Current Dates
+ <Todays Date> ------------- BH -----------------------------------------------------------------<12/31/2299>
+ <Todays Date > ------------- PCC-----------------<11/30/2023>
+
+Add CP with future dates
+
+                                  <future Date > -------------CP (ACCS1/PACC1)---------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has Current PCC/BH with Open-ended BH and Future end dated PCC.
+Test Case ID for Row 4456          : 46352
+Query Execution Time(ms)           : 49
+Requirement ID                     : 36195.01.020
+Query Execution Time(ms)           : 17
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46352
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46352
+Finished at                        : Wed Sep 13 09:51:41 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:41 EDT 2023
+Creating test case for Row #       : 4457
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 372
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with future date when_future PCC/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has future PCC/BH.
+
+               <Future> --------------BH ----------------------------------------------- <12/31/2299>  
+               <Future>  ------------- PCC ----------------------------------------------<12/31/2299>
+Add CP with future dates
+               <Future Date> ---------CP (ACCS1/PACC1)--------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has future PCC/BH.
+Test Case ID for Row 4457          : 46353
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36195.01.025
+Query Execution Time(ms)           : 21
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46353
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46353
+Finished at                        : Wed Sep 13 09:51:45 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:45 EDT 2023
+Creating test case for Row #       : 4458
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 339
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with future date and < future PCC/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has future PCC/BH. CP future eff date is less than PCC/BH future eff date.
+
+               <Future> --------------BH ----------------------------------------------- <12/31/2299>  
+               <Future>  ------------- PCC ----------------------------------------------<12/31/2299>
+Add CP with future dates
+     <Future Date> ---------CP (ACCS1/PACC1)---------------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has future PCC/BH. CP future eff date is less than PCC/BH future eff date.
+Test Case ID for Row 4458          : 46354
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36195.01.025
+Query Execution Time(ms)           : 29
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46354
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46354
+Finished at                        : Wed Sep 13 09:51:50 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:50 EDT 2023
+Creating test case for Row #       : 4459
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 23
+Validation Time(ms)                : 369
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with future date and > future PCC/BH with Open end dates.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has future PCC/BH. CP future eff date is greater than PCC/BH future eff date.
+
+               <Future> --------------BH ----------------------------------------------- <12/31/2299>  
+               <Future>  ------------- PCC ----------------------------------------------<12/31/2299>
+Add CP with future dates
+                                 <Future> ---------CP (ACCS1/PACC1)--------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has future PCC/BH. CP future eff date is greater than PCC/BH future eff date.
+Test Case ID for Row 4459          : 46355
+Query Execution Time(ms)           : 38
+Requirement ID                     : 36195.01.025
+Query Execution Time(ms)           : 23
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46355
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46355
+Finished at                        : Wed Sep 13 09:51:55 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:51:55 EDT 2023
+Creating test case for Row #       : 4460
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 356
+Validation status                  : PASS
+Short Desc                         : CP with Current date when_Current ACOB/PCCB/BH with Open-ended BH and Future ACOB/PCCB.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has Current ACOB/PCCB/BH with Open-ended BH and Future ACOB/PCCB.
+
+Current Dates
+ <Todays Date> ------------- BH ----------------------------------------<12/31/2299>
+ <Todays Date > ------------- ACOB ------------- <11/30/2023>
+ <Todays Date > ------------- PCCB --------------<11/30/2023>
+
+Add CP with Current dates
+
+ <Todays Date > -------------CP-----------------------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has Current ACOB/PCCB/BH with Open-ended BH and Future ACOB/PCCB.
+Test Case ID for Row 4460          : 46356
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36195.01.030
+Query Execution Time(ms)           : 294
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46356
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46356
+Finished at                        : Wed Sep 13 09:52:00 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:00 EDT 2023
+Creating test case for Row #       : 4461
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 405
+Validation status                  : PASS
+Short Desc                         : CP with Future date when Future ACOB/PCCB/BH with Open-ended BH and Future ACOB/PCCB.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with Future dates via UI where member has future ACOB/PCCB/BH with Open-ended BH and Future end date ACOB/PCCB.
+
+Future Dates
+<Future date> --------------------------BH ----------------------------------<12/31/2299>
+<Future date> ------------------------ACOB -------------<11/30/2023>
+<Future date>-------------------------PCCB -------------<11/30/2023>
+Add CP with Future dates
+<Future date> --------CP-----------------------------------------------------<12/31/2299>
+Expected Results                   : Verify that the BH is Not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with Future dates via UI where member has future ACOB/PCCB/BH with Open-ended BH and Future end date ACOB/PCCB.
+Test Case ID for Row 4461          : 46357
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36195.01.035
+Query Execution Time(ms)           : 42
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46357
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46357
+Finished at                        : Wed Sep 13 09:52:05 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:05 EDT 2023
+Creating test case for Row #       : 4462
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.040') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 441
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with retro date when_retro PCC/BH with Open-ended BH and Future PCC.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with retro dates via UI where member has retro PCC/BH with Open-ended BH and Future end dated PCC.
+
+PCC/BH  - retro Dates
+ <retro Date> ------------- BH ----------------------------------------<12/31/2299>
+ <retro Date > ------------- PCC-----------------<11/30/2023>
+
+Add CP with retro dates
+
+ <retro Date > -------------CP (ACCS1/PACC1)---------------------<12/31/2299>
+Expected Results                   : Verify that the BH is not being Closed/Historied when member is being enrolled to CP (ACCS1/PACC1) with retro dates via UI where member has retro PCC/BH with Open-ended BH and Future end dated PCC.
+Test Case ID for Row 4462          : 46358
+Query Execution Time(ms)           : 49
+Requirement ID                     : 36195.01.040
+Query Execution Time(ms)           : 282
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46358
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46358
+Finished at                        : Wed Sep 13 09:52:11 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:11 EDT 2023
+Creating test case for Row #       : 4463
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.01.045') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 667
+Validation status                  : PASS
+Short Desc                         : CP(ACCS1/PACC1) with retro date when_retro PCC/BH with Open-ended BH and retro closed PCC.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with retro dates via UI where member has retro PCC/BH with Open-ended BH and retro end dated PCC. CP retro eff date is > PCC end date.
+
+<01/01/2022> --------------------------- BH -----------------------------------------------------------------------<12/31/2299>
+<01/01/2022>  -----PCCP ----------<05/31/2023>
+                                                                                <Todays Date> -------------ACCS1/PACC1-----------<12/31/2299>
+Expected Results                   : Verify that the BH is not Historied and end date is updated to one day before ACCS1/PACC1 start date when member is being enrolled to CP (ACCS1/PACC1) with retro dates via UI where member has retro PCC/BH with Open-ended BH and retro end dated PCC. CP retro eff date is > PCC end date.
+Test Case ID for Row 4463          : 46359
+Query Execution Time(ms)           : 46
+Requirement ID                     : 36195.01.045
+Query Execution Time(ms)           : 29
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46359
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46359
+Finished at                        : Wed Sep 13 09:52:17 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:17 EDT 2023
+Creating test case for Row #       : 4464
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Validation Time(ms)                : 377
+Validation status                  : PASS
+Short Desc                         : CP with current dates when member has standalone retro BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has retro stand alone BH with end date > current date.
+
+<01/01/2022> ------------------------------BH ------------------------------------------------<12/31/2299>
+                         <Todays Date> ------------- ACCS1/PACC1 -------------------------------<12/31/2299>
+Expected Results                   : Verify Standalone BH is not historied and end date is updated to one day before ACCS1/PACC1 start date when member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has retro stand alone BH with end date > current date.
+Test Case ID for Row 4464          : 46360
+Query Execution Time(ms)           : 42
+Requirement ID                     : 36195.02.001
+Query Execution Time(ms)           : 27
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46360
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46360
+Finished at                        : Wed Sep 13 09:52:22 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:22 EDT 2023
+Creating test case for Row #       : 4465
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 22
+Validation Time(ms)                : 379
+Validation status                  : PASS
+Short Desc                         : CP with current dates when member has standalone current BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has current stand alone BH.
+
+<Todays Date> ------------------------------BH ------------------------------------------------<12/31/2299>
+ <Todays Date> ------------- ACCS1/PACC1 ---------------------------------------------------<12/31/2299>
+Expected Results                   : Verify Standalone BH is historied when member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has current stand alone BH.
+Test Case ID for Row 4465          : 46361
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36195.02.001
+Query Execution Time(ms)           : 29
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46361
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46361
+Finished at                        : Wed Sep 13 09:52:26 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:26 EDT 2023
+Creating test case for Row #       : 4466
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 387
+Validation status                  : PASS
+Short Desc                         : CP with current dates when member has standalone future BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has future stand alone BH.
+
+                                  <future Date> ------------------------------BH --------------- ----<12/31/2299>
+ <Todays Date> ------------- ACCS1/PACC1 ------------------------------------------------<12/31/2299>
+Expected Results                   : Verify Standalone BH is historied when member is being enrolled to CP (ACCS1/PACC1) with current dates via UI where member has future stand alone BH.
+Test Case ID for Row 4466          : 46362
+Query Execution Time(ms)           : 50
+Requirement ID                     : 36195.02.001
+Query Execution Time(ms)           : 22
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46362
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46362
+Finished at                        : Wed Sep 13 09:52:31 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:31 EDT 2023
+Creating test case for Row #       : 4467
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 411
+Validation status                  : PASS
+Short Desc                         : CP with future dates when member has standalone retro BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has retro standalone BH with end date >= CP effective date.
+
+<01/01/2022> ------------------------------BH ------------------------------------------------<12/31/2299>
+                               <future Date> ------------- ACCS1/PACC1 ----------------------------<12/31/2299>
+Expected Results                   : Verify Standalone BH is not historied and end date is updated to one day before ACCS1/PACC1 start date when member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has retro standalone BH with end date >= CP effective date.
+Test Case ID for Row 4467          : 46363
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36195.02.005
+Query Execution Time(ms)           : 25
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46363
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46363
+Finished at                        : Wed Sep 13 09:52:36 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:36 EDT 2023
+Creating test case for Row #       : 4468
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 397
+Validation status                  : PASS
+Short Desc                         : CP with future dates when member has standalone current BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has retro stand alone BH with end date >= CP effective date.
+
+<Todays Date> ------------------------------BH ------------------------------------------------<12/31/2299>
+                               <future Date> ------------- ACCS1/PACC1 -------------------------------<12/31/2299>
+Expected Results                   : Verify Standalone BH is not historied and end date is updated to one day before ACCS1/PACC1 start date when member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member has retro stand alone BH with end date >= CP effective date.
+Test Case ID for Row 4468          : 46364
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36195.02.005
+Query Execution Time(ms)           : 32
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46364
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46364
+Finished at                        : Wed Sep 13 09:52:41 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:41 EDT 2023
+Creating test case for Row #       : 4469
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 689
+Validation status                  : PASS
+Short Desc                         : CP with future dates when member has standalone future BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member's CP eff date is less than or equal to or greater than standalone BH eff date.
+
+Ex 1: 
+    <future Date> ------------------------------BH ------------------------------------------------<12/31/2299>
+                               <future Date> ------------- ACCS1/PACC1 -------------------------------<12/31/2299> 
+
+Ex 2: 
+    <future Date> ------------------------------BH ------------------------------------------------<12/31/2299>
+    <future Date> ------------- ACCS1/PACC1 ----------------------------------------------------<12/31/2299> 
+
+Ex 3:
+                                  <future Date> ----------------BH ---------------------------------------<12/31/2299>
+    <future Date> --------------------------------- ACCS1/PACC1 -------------------------------<12/31/2299>
+Expected Results                   : Verify Standalone BH is historied when member is being enrolled to CP (ACCS1/PACC1) with future dates via UI where member's CP eff date is less than or equal to or greater than standalone BH eff date.
+Test Case ID for Row 4469          : 46365
+Query Execution Time(ms)           : 70
+Requirement ID                     : 36195.02.005
+Query Execution Time(ms)           : 22
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46365
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46365
+Finished at                        : Wed Sep 13 09:52:46 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:46 EDT 2023
+Creating test case for Row #       : 4470
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 373
+Validation status                  : PASS
+Short Desc                         : CSA with current dates when member has standalone retro BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (CSA) with current dates via UI where member has retro stand alone BH with end date > current date.
+
+<01/01/2022> ------------------------------BH ------------------------------------------------<12/31/2299>
+                         <Todays Date> ------------- CSA -----------------------------------------<12/31/2299>
+Expected Results                   : Verify there are no changes to Standalone BH when member is being enrolled to CP (CSA) with current dates via UI where member has retro stand alone BH with end date > current date.
+Test Case ID for Row 4470          : 46366
+Query Execution Time(ms)           : 323
+Requirement ID                     : 36195.02.010
+Query Execution Time(ms)           : 27
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46366
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46366
+Finished at                        : Wed Sep 13 09:52:52 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:52 EDT 2023
+Creating test case for Row #       : 4471
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 392
+Validation status                  : PASS
+Short Desc                         : CSA with current dates when member has standalone current BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (CSA) with current dates via UI where member has current stand alone BH.
+
+<Todays Date> ------------------------------BH ------------------------------------------------<12/31/2299>
+ <Todays Date> ------------- CSA --------------------------------------------------------------<12/31/2299>
+Expected Results                   : Verify  there are no changes to Standalone BH when member is being enrolled to CP (CSA) with current dates via UI where member has current stand alone BH.
+Test Case ID for Row 4471          : 46367
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36195.02.010
+Query Execution Time(ms)           : 28
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46367
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46367
+Finished at                        : Wed Sep 13 09:52:58 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:52:58 EDT 2023
+Creating test case for Row #       : 4472
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 778
+Validation status                  : PASS
+Short Desc                         : CSA with current dates when member has standalone future BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (CSA) with current dates via UI where member has future stand alone BH.
+
+                                  <future Date> ------------------------------BH --------------------<12/31/2299>
+ <Todays Date> ------------- CSA--------- ------------------------------------------------<12/31/2299>
+Expected Results                   : Verify there are no changes to Standalone BH when member is being enrolled to CP (CSA) with current dates via UI where member has future stand alone BH.
+Test Case ID for Row 4472          : 46368
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36195.02.010
+Query Execution Time(ms)           : 23
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46368
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46368
+Finished at                        : Wed Sep 13 09:53:06 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:53:06 EDT 2023
+Creating test case for Row #       : 4473
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 49
+Validation Time(ms)                : 460
+Validation status                  : PASS
+Short Desc                         : CSA with future dates when member has standalone retro BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (CSA) with future dates via UI where member has retro standalone BH with end date >= CP effective date.
+
+<01/01/2022> ------------------------------BH ------------------------------------------------<12/31/2299>
+                               <future Date> ------------- CSA----------------------------------------<12/31/2299>
+Expected Results                   : Verify there are no changes to Standalone BH when member is being enrolled to CP (CSA) with future dates via UI where member has retro standalone BH with end date >= CP effective date.
+Test Case ID for Row 4473          : 46369
+Query Execution Time(ms)           : 49
+Requirement ID                     : 36195.02.015
+Query Execution Time(ms)           : 26
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46369
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46369
+Finished at                        : Wed Sep 13 09:53:11 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:53:11 EDT 2023
+Creating test case for Row #       : 4474
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 474
+Validation status                  : PASS
+Short Desc                         : CSA with future dates when member has standalone current BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (CSA) with future dates via UI where member has retro stand alone BH with end date >= CP effective date.
+
+<Todays Date> ------------------------------BH ------------------------------------------------<12/31/2299>
+                               <future Date> ------------- CSA-------------------------------------------<12/31/2299>
+Expected Results                   : Verify there are no changes to Standalone BH when member is being enrolled to CP (CSA) with future dates via UI where member has retro stand alone BH with end date >= CP effective date.
+Test Case ID for Row 4474          : 46370
+Query Execution Time(ms)           : 48
+Requirement ID                     : 36195.02.015
+Query Execution Time(ms)           : 20
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46370
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46370
+Finished at                        : Wed Sep 13 09:53:17 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:53:17 EDT 2023
+Creating test case for Row #       : 4475
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 20
+Validation Time(ms)                : 334
+Validation status                  : PASS
+Short Desc                         : CSA with future dates when member has standalone future BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (CSA) with future dates via UI where member's CP future eff date is less than or equal to or greater than standalone BH future eff date.
+
+Ex 1: 
+    <future Date> ------------------------------BH ------------------------------------------------<12/31/2299>
+                               <future Date> ------------- CSA--------------------------------------------<12/31/2299> 
+
+Ex 2: 
+    <future Date> ------------------------------BH ------------------------------------------------<12/31/2299>
+    <future Date> ------------- CSA----------------------------------------------------------------<12/31/2299> 
+
+Ex 3:
+                                  <future Date> ----------------BH ---------------------------------------<12/31/2299>
+    <future Date> --------------------------------- CSA--------------------------------------------<12/31/2299>
+Expected Results                   : Verify there are no changes to Standalone BH when member is being enrolled to CP (CSA) with future dates via UI where member's CP future eff date is less than or equal to or greater than standalone BH future eff date.
+Test Case ID for Row 4475          : 46371
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36195.02.015
+Query Execution Time(ms)           : 25
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46371
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46371
+Finished at                        : Wed Sep 13 09:53:22 EDT 2023
+*****************************************************************
+Started at                         : Wed Sep 13 09:53:22 EDT 2023
+Creating test case for Row #       : 4476
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36195.02.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CommP_UI_SU') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 21
+Validation Time(ms)                : 332
+Validation status                  : PASS
+Short Desc                         : CSA with retro dates when member has standalone BH (Retro/Current/Future)
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : CommP_UI_SU
+Long Desc                          : Member is being enrolled to CP (CSA) with Retro dates via UI where member has stand alone BH.
+
+Ex 1: 
+ <RETRO Date> ------------------------------BH ----------------------------<12/31/2299>
+ <RETRO Date> ------------- CSA--------------------------------------------<12/31/2299> 
+
+
+Ex2:
+
+                <Current Date> ------------------------------BH ----------------<12/31/2299>
+ <RETRO Date> ------------- CSA--------------------------------------------<12/31/2299> 
+
+
+Ex3:
+
+                                       <Future Date> ------------------------------BH ----------------<12/31/2299>
+ <RETRO Date> ------------- CSA-------------------------------------------------------------<12/31/2299>
+Expected Results                   : Verify there are no changes to Standalone BH when member is being enrolled to CP (CSA) with Retro dates via UI.
+Test Case ID for Row 4476          : 46372
+Query Execution Time(ms)           : 38
+Requirement ID                     : 36195.02.015
+Query Execution Time(ms)           : 21
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46372
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46372
+Finished at                        : Wed Sep 13 09:53:27 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 13/Sep/2023 09:53:27AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

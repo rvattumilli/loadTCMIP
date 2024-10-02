@@ -1,0 +1,438 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 04/Aug/2021 05:21:03PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Creating test case for TC Row : 455
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ACOA member has a DOB change
+Long Desc                     : Step 1: Find ACOA member ids that has a DOB change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 455      : 40271
+Notebook/Business function linked for test case 40271
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 456
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : SCO member has a DOB change
+Long Desc                     : Step 1: Find SCO member ids that has a DOB change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 456      : 40272
+Notebook/Business function linked for test case 40272
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 457
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO member has a DOB change
+Long Desc                     : Step 1: Find ICO member ids that has a DOB change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 457      : 40273
+Notebook/Business function linked for test case 40273
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 458
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MSTD member has a gender change
+Long Desc                     : Step 1: Find MSTD member ids that has a gender change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 458      : 40274
+Notebook/Business function linked for test case 40274
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 459
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MBHP member has a gender change
+Long Desc                     : Step 1: Find MBHP member ids that has a gender change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 459      : 40275
+Notebook/Business function linked for test case 40275
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 460
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ACOA member has a gender change
+Long Desc                     : Step 1: Find ACOA member ids that has a gender change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 460      : 40276
+Notebook/Business function linked for test case 40276
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 461
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : PACE member has a gender change
+Long Desc                     : Step 1: Find PACE member ids that has a gender change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 461      : 40277
+Notebook/Business function linked for test case 40277
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 462
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO member has a gender change
+Long Desc                     : Step 1: Find ICO member ids that has a gender change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 462      : 40278
+Notebook/Business function linked for test case 40278
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 463
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : SCO member has a DOB and a gender change
+Long Desc                     : Step 1: Find SCO member ids that has a DOB and a gender change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 463      : 40279
+Notebook/Business function linked for test case 40279
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 464
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ACOB member has a DOB and a gender change
+Long Desc                     : Step 1: Find ACOB member ids that has a DOB and a gender change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 464      : 40280
+Notebook/Business function linked for test case 40280
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 465
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MSTD member has a DOB change and no adj need
+Long Desc                     : Step 1: Find MSTD member ids that has a DOB change; Step 2: Do not setup the need for an adjustment for the members
+Expected Results              : Members should not get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 465      : 40281
+Notebook/Business function linked for test case 40281
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 466
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : PACE member has a DOB change and no adj need
+Long Desc                     : Step 1: Find PACE member ids that has a DOB change; Step 2: Do not setup the need for an adjustment for the members
+Expected Results              : Members should not get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 466      : 40282
+Notebook/Business function linked for test case 40282
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 467
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ACOB member has a gender change and no adj need
+Long Desc                     : Step 1: Find ACOB member ids that has a gender change; Step 2: Do not set up the need for an adjustment for the members
+Expected Results              : Members should not get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 467      : 40283
+Notebook/Business function linked for test case 40283
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 468
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO member has a gender change and no adj need
+Long Desc                     : Step 1: Find ICO member ids that has a gender change; Step 2: Do not set up the need for an adjustment for the members
+Expected Results              : Members should not get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 468      : 40284
+Notebook/Business function linked for test case 40284
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 469
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ACOA member has a DOB and a gender change and no adj need
+Long Desc                     : Step 1: Find ACOA member ids that has a DOB and a gender change; Step 2: Do not setup the need for an adjustment for the members
+Expected Results              : Members should not get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 469      : 40285
+Notebook/Business function linked for test case 40285
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 470
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MBHP member has a DOB and a gender change and no adj need
+Long Desc                     : Step 1: Find MBHP member ids that has a DOB and a gender change; Step 2: Do not setup the need for an adjustment for the members
+Expected Results              : Members should not get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 470      : 40286
+Notebook/Business function linked for test case 40286
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 471
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 820 from $0 check and no GMX return
+Long Desc                     : 1. Run a recon/cap process for MCO/ACO/MBHP
+2. Select two providers; for each, enter an AR (via Finance subsystem or GWT DCR if necessary) that equals each providers cap payment exactly, making the check amount 0.00
+3. Do not run MC financial cycle, hence no GMX returned value is present
+4. Run 820s
+Expected Results              : the two providers with 0.00 check amounts receive 820s with no manual intervention.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35409
+Associated WI Type            : Change Order
+Test Case ID for Row 471      : 40287
+Notebook/Business function linked for test case 40287
+Work item linked for test case 40287
+************************************************************************
+Creating test case for TC Row : 472
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 820 from negative check and no GMX return
+Long Desc                     : 1. Run a recon/cap process for MCO/ACO/MBHP 
+2. Select two providers; for each, enter an AR (via Finance subsystem or GWT DCR if necessary) that is greater than each providers cap payment, making the check amount negative 
+3. Do not run MC financial cycle, hence no GMX returned value is present
+4. Run 820s
+Expected Results              : the two providers with negative check amounts receive 820s with no manual intervention
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35409
+Associated WI Type            : Change Order
+Test Case ID for Row 472      : 40288
+Notebook/Business function linked for test case 40288
+Work item linked for test case 40288
+************************************************************************
+Creating test case for TC Row : 473
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 820 from $0 check and GMX = C
+Long Desc                     : 1. Run a recon/cap process for MCO/ACO/MBHP 
+2. Select two providers; for each, enter an AR (via Finance subsystem or GWT DCR if necessary) that equals each providers cap payment exactly, making the check amount 0.00 
+3. Run MC financial cycle, and wait for GMC return value C
+4. Run 820s
+Expected Results              : the two providers with 0.00 check amounts receive 820s with no manual intervention
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35409
+Associated WI Type            : Change Order
+Test Case ID for Row 473      : 40289
+Notebook/Business function linked for test case 40289
+Work item linked for test case 40289
+************************************************************************
+Creating test case for TC Row : 474
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 820 from negative check and GMX = C
+Long Desc                     : 1. Run a recon/cap process for MCO/ACO/MBHP 
+2. Select two providers; for each, enter an AR (via Finance subsystem or GWT DCR if necessary) that is greater than each providers cap payment, making the check amount negative
+3. Run MC financial cycle, and wait for GMC return value C
+4. Run 820s
+Expected Results              : the two providers with negative check amounts receive 820s with no manual intervention
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35409
+Associated WI Type            : Change Order
+Test Case ID for Row 474      : 40290
+Notebook/Business function linked for test case 40290
+Work item linked for test case 40290
+************************************************************************
+Creating test case for TC Row : 475
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 820 from two $0 checks and no GMX
+Long Desc                     : 1. Run a recon/cap process for MCO/ACO/MBHP 
+2. For MBHP, enter an AR (via Finance subsystem or GWT DCR if necessary) that equals two cap payment checks exactly, making two checks amount to 0.00
+3. Do not run MC financial cycle, hence no GMX returned value is present
+4. Run 820s
+Expected Results              : both 0.00 check amounts receive 820s with no manual intervention
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35409
+Associated WI Type            : Change Order
+Test Case ID for Row 475      : 40291
+Notebook/Business function linked for test case 40291
+Work item linked for test case 40291
+************************************************************************
+Creating test case for TC Row : 476
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 820 from two $0 checks and GMX=C
+Long Desc                     : 1. Run a recon/cap process for MCO/ACO/MBHP 
+2. For MBHP, enter an AR (via Finance subsystem or GWT DCR if necessary) that equals two cap payment checks exactly, making two checks amount to 0.00
+3. Run MC financial cycle, and wait for GMC return value C
+4. Run 820s
+Expected Results              : both 0.00 check amounts receive 820s with no manual intervention
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35409
+Associated WI Type            : Change Order
+Test Case ID for Row 476      : 40292
+Notebook/Business function linked for test case 40292
+Work item linked for test case 40292
+************************************************************************
+Creating test case for TC Row : 477
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 820 from two negative checks and no GMX
+Long Desc                     : 1. Run a recon/cap process for MCO/ACO/MBHP 
+2. For MBHP, enter an AR (via Finance subsystem or GWT DCR if necessary) that equals two cap payment checks making two checks amount to negative
+3. Do not run MC financial cycle, hence no GMX returned value is present
+4. Run 820s
+Expected Results              : both negative check amounts receive 820s with no manual intervention
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35409
+Associated WI Type            : Change Order
+Test Case ID for Row 477      : 40293
+Notebook/Business function linked for test case 40293
+Work item linked for test case 40293
+************************************************************************
+Creating test case for TC Row : 478
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Verify 820 from two negative checks and GMX=C
+Long Desc                     : 1. Run a recon/cap process for MCO/ACO/MBHP 
+2. For MBHP, enter an AR (via Finance subsystem or GWT DCR if necessary) that equals two cap payment checks making two checks amount to negative
+3. Run MC financial cycle, and wait for GMC return value C
+4. Run 820s
+Expected Results              : both negative check amounts receive 820s with no manual intervention
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35409
+Associated WI Type            : Change Order
+Test Case ID for Row 478      : 40294
+Notebook/Business function linked for test case 40294
+Work item linked for test case 40294
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 04/Aug/2021 05:26:44PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

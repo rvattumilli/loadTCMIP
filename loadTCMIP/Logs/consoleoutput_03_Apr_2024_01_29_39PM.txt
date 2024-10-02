@@ -1,0 +1,51 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 03/Apr/2024 01:29:39PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2
+Query Execution Time(ms)           : 41
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+SQL Statement                      : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) order by a.req_row asc
+No.of Cols                         : 8
+Query Execution Time(ms)           : 34
+Total No.of Rows fetched           : 1
+*****************************************************************
+Started at                         : Wed Apr 03 13:29:44 EDT 2024
+Creating requirement for Row #     : 3
+Validate Req SQL                   : select case when (select count(*) from requirement a where trim(a.id_req) = '28146.01.015') >= 1 then 1 else 0 end as IDREQSTATUS, case when (select count(*) from requirement b where trim(b.nam_req) = 'Automation with selenium') >= 1 then 1 else 0 end as NAMEREQSTATUS, case when (select count(*) from requirement_type c where trim(c.nam) = 'UI-Base') = 1 then 1 else 0 end as TYPEREQSTATUS, case when (select count(*) from subsystem_area d where trim(d.nam) = 'Managed') = 1 then 1 else 0 end as SUBSYSTEMREQSTATUS, case when (select count(*) from rtm e where trim(e.sak_rtm) = '1') = 1 then 1 else 0 end as RTMREQSTATUS, case when (select count(*) from object_owner f where ind_req_status = 'Y' and trim(f.nam_owner) = 'Mark Jameson') = 1 then 1 else 0 end as NAMOWNERREQSTATUS from dual
+Query Execution Time(ms)           : 43
+Total No.of Columns fetched        : 6
+Requirement Name                   : Automation with selenium
+Requirement Name Validation        : Requirement name already exists
+Requirement Validation status      : FAIL
+Finished at                        : Wed Apr 03 13:29:45 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 03/Apr/2024 01:29:45PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

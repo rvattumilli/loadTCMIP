@@ -1,0 +1,29 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 10/May/2022 12:36:43PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+***************************************************
+Started at                         : Tue May 10 12:36:51 EDT 2022
+Creating test case for TC Row      : 912
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MTM Pnl, From PCP w/Future date
+Long Desc                          : When a PCP Affiliated to an ACOA has an end date in future (not open-ended), make sure "PCP ID" Pop-up search under PCP To PCP Mass Transfer Maintenance Panel does not display that PCP.
+Expected Results                   : PCP To PCP Mass Transfer Maintenance Panel does not display the PCP which has an end date in future on "PCP ID" Pop-up search.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.001
+Test Case ID for Row 912           : 41373

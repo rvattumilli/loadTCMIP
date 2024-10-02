@@ -1,0 +1,1565 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 08/Mar/2023 09:43:45AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 108
+****************************************************
+Started at                         : Wed Mar 08 09:43:53 EST 2023
+Creating test case for Row #       : 1739
+Validation Time(ms)                : 2499
+Validation status                  : PASS
+Short Desc                         : Race description changes for existing values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Query T_CDE_RACE and validate description for ASIAN, BLACK, WHITE.Validate description in Race related data panel (Reference > Related data > Codes > Race)
+Expected Results                   : Race description in T_CDE_RACE and Race related data panel to reflect the following.ASIAN- DSC_RACE= "ASIAN"BLACK- DSC_RACE= "Black or African American"WHITE- DSC_RACE= "White"
+Test Case ID for Row 1739          : 42842
+Associated Req ID                  : 36495.01.001
+Requirement linked for test case   : 42842
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42842
+Validation Time(ms)                : 6914
+Finished at                        : Wed Mar 08 09:44:00 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:44:00 EST 2023
+Creating test case for Row #       : 1740
+Validation Time(ms)                : 3266
+Validation status                  : PASS
+Short Desc                         : New Race values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate new Race values and descriptions in T_CDE_RACE and Race related data panel.
+Expected Results                   : Race value and description in T_CDE_RACE and Race related data panel to reflect the following.CDE_RACE= "HAWAII" DSC_RACE= "Native Hawaiian or Other Pacific Islander"CDE_RACE= "OTHER" DSC_RACE= "Some other race"CDE_RACE= "A-CNTA" DSC_RACE= "Choose not to answer"CDE_RACE= "D-KNOW" DSC_RACE= "Don't Know"
+Test Case ID for Row 1740          : 42843
+Associated Req ID                  : 36495.01.002
+Requirement linked for test case   : 42843
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42843
+Validation Time(ms)                : 7641
+Finished at                        : Wed Mar 08 09:44:07 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:44:07 EST 2023
+Creating test case for Row #       : 1741
+Validation Time(ms)                : 2364
+Validation status                  : PASS
+Short Desc                         : New mem multiple Race and Ethnicity values-MHO
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Incoming transaction for new member that inlcudes the following:Source agency- MHORace- 5 values (mix of new and existing valid values)Ethnicity- 5 values (mix of new and existing valid values)
+Expected Results                   : DB: - All 5 values stored in the new Race and Ethnicity tables- Update time stamp, source agency stored in new tables for audit. - cde_race stored in t_re_base should be "OTHER"- cde_ethnic stored in t_re_base should be "OTHA"UI:- All 5 Race and Ethnicity values displayed on Member Information panel in a drop down in alphabetical order.- Ethnicity value displayed on Base Information panel should be "OTHA".
+Test Case ID for Row 1741          : 42844
+Associated Req ID                  : 36495.01.003
+Requirement linked for test case   : 42844
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42844
+Validation Time(ms)                : 6481
+Finished at                        : Wed Mar 08 09:44:14 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:44:14 EST 2023
+Creating test case for Row #       : 1742
+Validation Time(ms)                : 2678
+Validation status                  : PASS
+Short Desc                         : Existing mem multiple Race and Ethnicity values-MHO
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Create or find existing member with single Race and Ethnicity value stored in t_re_base and t_re_base is not "OTHER" for Race or "OTHA" for Ethnicity due to muliple values in new tables.Incoming transaction for the same member that inlcudes the following:Source agency- MHORace- 5 values (mix of new and existing valid values)Ethnicity- 5 values (mix of new and existing valid values)
+Expected Results                   : DB: - All 5 values stored in the new Race and Ethnicity tables- cde_race stored in t_re_base should be "OTHER"- cde_ethnic stored in t_re_base should be "OTHA"UI:- All 5 Race and Ethnicity values displayed on Member Information panel in a drop down in alphabetical order- Ethnicity value displayed on Base Information panel should be "OTHA".
+Test Case ID for Row 1742          : 42845
+Associated Req ID                  : 36495.01.003
+Requirement linked for test case   : 42845
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42845
+Validation Time(ms)                : 6970
+Finished at                        : Wed Mar 08 09:44:21 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:44:21 EST 2023
+Creating test case for Row #       : 1743
+Validation Time(ms)                : 2399
+Validation status                  : PASS
+Short Desc                         : New mem multiple Race and Ethnicity values-HIX
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Incoming transaction for new member that inlcudes the following:Source agency- HIXRace- 5 values (mix of new and existing valid values)Ethnicity- 5 values (mix of new and existing valid values)
+Expected Results                   : DB: - All 5 values stored in the new Race and Ethnicity tables- cde_race stored in t_re_base should be "OTHER"- cde_ethnic stored in t_re_base should be "OTHA"UI:- All 5 Race and Ethnicity values displayed on Member Information panel in a drop down in alphabetical order.- Ethnicity value displayed on Base Information panel should be "OTHA".
+Test Case ID for Row 1743          : 42846
+Associated Req ID                  : 36495.01.003
+Requirement linked for test case   : 42846
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42846
+Validation Time(ms)                : 6517
+Finished at                        : Wed Mar 08 09:44:27 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:44:27 EST 2023
+Creating test case for Row #       : 1744
+Validation Time(ms)                : 3023
+Validation status                  : PASS
+Short Desc                         : Existing mem multiple Race and Ethnicity values-HIX
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Create or find existing member with single Race and Ethnicity value stored in t_re_base and t_re_base is not "OTHER" for Race or "OTHA" for Ethnicity due to muliple values in new tables.Incoming transaction for the same member that inlcudes the following:Source agency- HIXRace- 5 values (mix of new and existing valid values)Ethnicity- 5 values (mix of new and existing valid values)
+Expected Results                   : DB: - All 5 values stored in the new Race and Ethnicity tables- cde_race stored in t_re_base should be "OTHER"- cde_ethnic stored in t_re_base should be "OTHA"UI:- All 5 Race and Ethnicity values displayed on Member Information panel in a drop down in alphabetical order- Ethnicity value displayed on Base Information panel should be "OTHA".
+Test Case ID for Row 1744          : 42847
+Associated Req ID                  : 36495.01.003
+Requirement linked for test case   : 42847
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42847
+Validation Time(ms)                : 7454
+Finished at                        : Wed Mar 08 09:44:35 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:44:35 EST 2023
+Creating test case for Row #       : 1751
+Validation Time(ms)                : 2297
+Validation status                  : PASS
+Short Desc                         : Updating Race values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate previously stored race value and source agency code in DB is replaced with latest data from incoming transaction when race value is updated based on hierarchy rules.
+Expected Results                   : DB: - Value from incoming source stored in the new Race table and t_re_baseUI:- Value from incoming source stored in the new Race table should be displayed in Member Information panel.
+Test Case ID for Row 1751          : 42848
+Associated Req ID                  : 36495.01.004
+Requirement linked for test case   : 42848
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42848
+Validation Time(ms)                : 6138
+Finished at                        : Wed Mar 08 09:44:41 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:44:41 EST 2023
+Creating test case for Row #       : 1745
+Validation Time(ms)                : 2392
+Validation status                  : PASS
+Short Desc                         : MHO sends valid & invalid Race & Ethnicity values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Incoming transaction from MHO with multiple Race and Ethnicity values that consists of both valid and invalid values
+Expected Results                   : DB: - All valid values stored in the new Race and Ethnicity tables- If multiple Race values stored in the new table, then cde_race in t_re_base should be "OTHER". If single value stored, then same value should be stored in both new table and t_re_base.- If multiple Ethnicity values stored in the new table, then cde_ethnic in t_re_base should be "OTHA". If single value stored, then same value should be stored in both new table and t_re_base.UI: - All values stored in new tables are displayed on Member Information panel in a drop down in alphabetical order- If multiple Ethnicity values stored in the new table, then ethnicity value displayed on Base Information panel should be "OTHA". If single value stored, then same value should displayed on Base Information panelResponse XML/Output file:- Respective Invalid race/ethnicity warning message should be present
+Test Case ID for Row 1745          : 42849
+Associated Req ID                  : 36495.01.008
+Requirement linked for test case   : 42849
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42849
+Validation Time(ms)                : 6723
+Finished at                        : Wed Mar 08 09:44:48 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:44:48 EST 2023
+Creating test case for Row #       : 1746
+Validation Time(ms)                : 2453
+Validation status                  : PASS
+Short Desc                         : HIX sends valid & invalid Race & Ethnicity values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Incoming transaction from HIX with multiple Race and Ethnicity values that consists of both valid and invalid values
+Expected Results                   : DB: - All valid values stored in the new Race and Ethnicity tables- If multiple Race values stored in the new table, then cde_race in t_re_base should be "OTHER". If single value stored, then same value should be stored in both new table and t_re_base.- If multiple Ethnicity values stored in the new table, then cde_ethnic in t_re_base should be "OTHA". If single value stored, then same value should be stored in both new table and t_re_base.UI: - All values stored in new tables are displayed on Member Information panel in a drop down in alphabetical orderResponse XML/Output file:- Respective Invalid race/ethnicity warning message(s) should be present
+Test Case ID for Row 1746          : 42850
+Associated Req ID                  : 36495.01.008
+Requirement linked for test case   : 42850
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42850
+Validation Time(ms)                : 6892
+Finished at                        : Wed Mar 08 09:44:54 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:44:54 EST 2023
+Creating test case for Row #       : 1747
+Validation Time(ms)                : 2446
+Validation status                  : PASS
+Short Desc                         : Non MHO/HIX sends multiple Race & Ethnicity for new mem
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Incoming transaction for new member from agency that is not MHO or HIX with mulitple race and ethnicity values.
+Expected Results                   : DB:- "UNKNOW" is stored in new tables and t_re_base for Race and EthnicityUI:- Race and Ethnicity value on Member Information panel should be displayed as "UNKNOW"Response XML/Output file:- Warning message "Agency is not authorized to submit more than one value for this field: cde_race" and "Agency is not authorized to submit more than one value for this field: cde_ethnicity" are posted
+Test Case ID for Row 1747          : 42851
+Associated Req ID                  : 36495.01.013
+Requirement linked for test case   : 42851
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42851
+Validation Time(ms)                : 6931
+Finished at                        : Wed Mar 08 09:45:01 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:45:01 EST 2023
+Creating test case for Row #       : 1748
+Validation Time(ms)                : 2632
+Validation status                  : PASS
+Short Desc                         : Single stored, Non-auth sends multiple Race/Ethnic-existing mem
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Create or find existing member with single Race and Ethnicity value stored in t_re_base and t_re_base is not "OTHER" for Race or "OTHA" for Ethnicity due to muliple values in new tables.Incoming transaction for the same member from agency that is not MHO or HIX with mulitple race and ethnicity values.
+Expected Results                   : DB:- No updates are made to new race and ethnicity tables or t_re_base.UI:- No changes to Race and Ethnicity value on Member Information panel.- No changes to Ethnicity value on Base information panelResponse XML/Output file:- Warning message "Agency is not authorized to submit more than one value for this field: cde_race" and "Agency is not authorized to submit more than one value for this field: cde_ethnicity" are posted
+Test Case ID for Row 1748          : 42852
+Associated Req ID                  : 36495.01.018
+Requirement linked for test case   : 42852
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42852
+Validation Time(ms)                : 6766
+Finished at                        : Wed Mar 08 09:45:08 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:45:08 EST 2023
+Creating test case for Row #       : 1749
+Validation Time(ms)                : 2427
+Validation status                  : PASS
+Short Desc                         : Multi stored, Non-auth sends multiple Race/Ethnic-existing mem
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Create or find existing member with muliple Race and Ethnicity values stored in the new tables. Incoming transaction for the same member from agency that is not MHO or HIX with mulitple race and ethnicity values.
+Expected Results                   : DB:- No updates are made to new race and ethnicity tables or t_re_base.UI:- No changes to Race and Ethnicity value on Member Information panel.- No changes to Ethnicity value on Base information panelResponse XML/Output file:- Warning message "Agency is not authorized to submit more than one value for this field: cde_race" and "Agency is not authorized to submit more than one value for this field: cde_ethnicity" are posted
+Test Case ID for Row 1749          : 42853
+Associated Req ID                  : 36495.01.018
+Requirement linked for test case   : 42853
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42853
+Validation Time(ms)                : 6522
+Finished at                        : Wed Mar 08 09:45:15 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:45:15 EST 2023
+Creating test case for Row #       : 1750
+Validation Time(ms)                : 2679
+Validation status                  : PASS
+Short Desc                         : Race hierarchy
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate the following hierarchy for cde_race and that hierarchy check compares agency code stored in new race table with incoming transaction source.1. MHO and HIX at the same level 2. PAC 3. DMH, DSS, DTA, HCF, SSA at the same level 4. DYSNote: Test with single cde_race value in incoming transaction other than UNKNOW, OTHER , A-CNTA or D-KNOW.
+Expected Results                   : Incoming from higher agency or agency on the same level; Pass hierarchy checkDB:- Value from incoming source stored in the new Race table and t_re_baseUI:- Value from incoming source stored in the new Race table should be displayed in Member Information panel.Incoming from lower agency; Fail hierarchy check- No updates are made to race field/table in DB or UI.
+Test Case ID for Row 1750          : 42854
+Associated Req ID                  : 36495.01.033
+Requirement linked for test case   : 42854
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42854
+Validation Time(ms)                : 6804
+Finished at                        : Wed Mar 08 09:45:22 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:45:22 EST 2023
+Creating test case for Row #       : 1752
+Validation Time(ms)                : 2465
+Validation status                  : PASS
+Short Desc                         : Race hierarchy exception #1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate if system has a single undefined race value (Unknow, Other, A-CNTA or D-KNOW) stored from a higher agency and lower agency sends a defined race value (other than Unknow, Other, A-CNTA or D-KNOW), then allow update
+Expected Results                   : DB: -Value from incoming source stored in the new Race table and t_re_baseUI:- Value from incoming source stored in the new Race table should be displayed in Member Information panel.
+Test Case ID for Row 1752          : 42855
+Associated Req ID                  : 36495.01.038
+Requirement linked for test case   : 42855
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42855
+Validation Time(ms)                : 6284
+Finished at                        : Wed Mar 08 09:45:28 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:45:28 EST 2023
+Creating test case for Row #       : 1753
+Validation Time(ms)                : 2517
+Validation status                  : PASS
+Short Desc                         : Race hierarchy exception #2
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate if system has a defined race value (other than Unknow, Other, A-CNTA or D-KNOW) stored from a lower agency and higher agency sends a single undefined race value (Unknow, Other, A-CNTA or D-KNOW), do not update
+Expected Results                   : DB: -Value from incoming source stored in the new Race table and t_re_baseUI:- Value from incoming source stored in the new Race table should be displayed in Member Information panel.
+Test Case ID for Row 1753          : 42856
+Associated Req ID                  : 36495.01.038
+Requirement linked for test case   : 42856
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42856
+Validation Time(ms)                : 7216
+Finished at                        : Wed Mar 08 09:45:35 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:45:35 EST 2023
+Creating test case for Row #       : 1754
+Validation Time(ms)                : 2706
+Validation status                  : PASS
+Short Desc                         : Race audit for new table
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction with change in race value for an existing member. Validate the time stamp of update, source agency and historic race values in the database for that member.
+Expected Results                   : Validated time stamp of updates, source agency and historic race values in the new audit table.
+Test Case ID for Row 1754          : 42857
+Associated Req ID                  : 36495.02.001
+Requirement linked for test case   : 42857
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42857
+Validation Time(ms)                : 6728
+Finished at                        : Wed Mar 08 09:45:42 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:45:42 EST 2023
+Creating test case for Row #       : 1755
+Validation Time(ms)                : 3102
+Validation status                  : PASS
+Short Desc                         : New Hispanic Ethnicity field and values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate new Hispanic Ethnicity values and descriptions added to DB.
+Expected Results                   : Hispanic Ethnicity values and descriptions in to reflect the following:Valid value: "HISPAN" Value description: "Hispanic or Latino" Valid value: "NONHIS" Value description: "Non Hispanic or Latino" Valid value: "A-CNTA" Value description: "Choose not to answer" Valid value: "D-KNOW" Value description: "Don't Know"
+Test Case ID for Row 1755          : 42858
+Associated Req ID                  : 36495.03.001
+Requirement linked for test case   : 42858
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42858
+Validation Time(ms)                : 7115
+Finished at                        : Wed Mar 08 09:45:49 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:45:49 EST 2023
+Creating test case for Row #       : 1756
+Validation Time(ms)                : 2578
+Validation status                  : PASS
+Short Desc                         : HIX/MHO sends Hispanic Ethnicity
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send MHO/HIX transaction for new member with cde_hispanic_ethnicity. Validate all valid values are accepted and stored: HISPAN, NONHIS, CNTA, D-KNOW
+Expected Results                   : DB: - Value form incoming source stored in new hispanic ethnicity table along with source agency, timestamp- When updating value for existing member, historic value and source agency stored for audit.
+Test Case ID for Row 1756          : 42859
+Associated Req ID                  : 36495.03.005
+Requirement linked for test case   : 42859
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42859
+Validation Time(ms)                : 6546
+Finished at                        : Wed Mar 08 09:45:55 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:45:55 EST 2023
+Creating test case for Row #       : 1757
+Validation Time(ms)                : 2371
+Validation status                  : PASS
+Short Desc                         : Hispanic Ethnicity Hierarchy and field update
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Find/create an existing member with hispanic ethnicity data already stored. Send MHO/HIX transaction with a change in hispanic ethnicity value. Validate stored value and agency are updated with incoming transaction value and agency.
+Expected Results                   : DB: - Value from incoming source stored in the new hispanic ethnicity table along with source agency, timestamp- Historic value and source agency stored for audit.
+Test Case ID for Row 1757          : 42860
+Associated Req ID                  : 36495.03.006
+Requirement linked for test case   : 42860
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42860
+Validation Time(ms)                : 7731
+Finished at                        : Wed Mar 08 09:46:03 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:46:03 EST 2023
+Creating test case for Row #       : 1758
+Validation Time(ms)                : 3066
+Validation status                  : PASS
+Short Desc                         : Non MHO/HIX sends Hispanic Ethnicity
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction from agency other than MHO & HIX with cde_hispanic_ethnicity field and value.
+Expected Results                   : DB- No updates made to hispanic ethnicity table/field.Response XML/Output file:- Warning message "Agency is not authorized to submit data in this field: cde_hispanic_ethnicity" is posted
+Test Case ID for Row 1758          : 42861
+Associated Req ID                  : 36495.03.010
+Requirement linked for test case   : 42861
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42861
+Validation Time(ms)                : 7544
+Finished at                        : Wed Mar 08 09:46:11 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:46:11 EST 2023
+Creating test case for Row #       : 1759
+Validation Time(ms)                : 2463
+Validation status                  : PASS
+Short Desc                         : New Ethnicity values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate new Ethnicity values and descriptions in T_CDE_ETHNIC.
+Expected Results                   : Ethnicity values and description in T_CDE_ETHNIC to reflect the following.CDE_ETHNIC= "CARIB" DSC_ETHNIC="Caribbean Islander" CDE_ETHNIC= "E-EUR" DSC_ETHNIC="Eastern European" CDE_ETHNIC= "GUATE" DSC_ETHNIC="Guatemalan" CDE_ETHNIC= "HOND" DSC_ETHNIC="Honduran" CDE_ETHNIC= "RUSSN" DSC_ETHNIC="Russian" CDE_ETHNIC= "A-CNTA" DSC_ETHNIC="Choose not to Answer" CDE_ETHNIC= "D-KNOW"DSC_ETHNIC="Don't Know"
+Test Case ID for Row 1759          : 42862
+Associated Req ID                  : 36495.05.001
+Requirement linked for test case   : 42862
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42862
+Validation Time(ms)                : 6772
+Finished at                        : Wed Mar 08 09:46:17 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:46:17 EST 2023
+Creating test case for Row #       : 1760
+Validation Time(ms)                : 2444
+Validation status                  : PASS
+Short Desc                         : Updating Ethnicity values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction to update existing ethicity value stored. Validate previously stored ethnicity value and source agency in new table is replaced with latest data from incoming transaction.
+Expected Results                   : DB: - Value from incoming source stored in the new Ethnicity table and t_re_baseUI:- Value from incoming source stored in the new Ethnicity table should be displayed in Member Information panel.- If multiple Ethnicity values stored in the new table, then ethnicity value displayed on Base Information panel should be "OTHA". If single value stored, then same value should displayed on Base Information panel
+Test Case ID for Row 1760          : 42863
+Associated Req ID                  : 36495.05.011
+Requirement linked for test case   : 42863
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42863
+Validation Time(ms)                : 6646
+Finished at                        : Wed Mar 08 09:46:24 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:46:24 EST 2023
+Creating test case for Row #       : 1761
+Validation Time(ms)                : 2518
+Validation status                  : PASS
+Short Desc                         : Ethnicity hierarchy
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate the following hierarchy for cde_ethnicity and that hierarchy check compares agency code stored in new race table with incoming transaction source.1. MHO and HIX at the same level 2. DTA 3. SSANote: Test with single cde_ethnicity value in incoming transaction other than UNKNOW, OTHER , A-CNTA or D-KNOW.
+Expected Results                   : Incoming from higher agency or agency on the same level; Pass hierarchy checkDB:- Value from incoming source stored in the new Ethnicity table and t_re_baseUI:- Value from incoming source stored in the new Ethnicity table should be displayed in Member Information and Base Information panel.Incoming from lower agency; Fail hierarchy check- No updates are made to ethnicity field/table in DB or UI.
+Test Case ID for Row 1761          : 42864
+Associated Req ID                  : 36495.05.040
+Requirement linked for test case   : 42864
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42864
+Validation Time(ms)                : 6769
+Finished at                        : Wed Mar 08 09:46:31 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:46:31 EST 2023
+Creating test case for Row #       : 1762
+Validation Time(ms)                : 2407
+Validation status                  : PASS
+Short Desc                         : Ethnicity hierarchy exception #1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate if system has a single undefined ethnicity value (UNKNOW, OTHA, A-CNTA or D-KNOW) stored from a higher agency and lower agency sends a defined ethnicity value (other than UNKNOW, OTHA, A-CNTA or D-KNOW), then allow update
+Expected Results                   : DB: -Value from incoming source stored in the new ethnicity table and t_re_baseUI:- Value from incoming source stored in the new ethnicity table should be displayed in Member Information and Base Information panel.
+Test Case ID for Row 1762          : 42865
+Associated Req ID                  : 36495.05.045
+Requirement linked for test case   : 42865
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42865
+Validation Time(ms)                : 6258
+Finished at                        : Wed Mar 08 09:46:37 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:46:37 EST 2023
+Creating test case for Row #       : 1763
+Validation Time(ms)                : 2290
+Validation status                  : PASS
+Short Desc                         : Ethnicity hierarchy exception #2
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate if system has a defined ethnicity value (other than UNKNOW, OTHA, A-CNTA or D-KNOW) stored from a lower agency and higher agency sends a single undefined ethnicity value (UNKNOW, OTHA, A-CNTA or D-KNOW), do not update
+Expected Results                   : DB: -Value from incoming source stored in the new ethnicity table and t_re_baseUI:- Value from incoming source stored in the new ethnicity table should be displayed in Member Information and Base Information panel.
+Test Case ID for Row 1763          : 42866
+Associated Req ID                  : 36495.05.045
+Requirement linked for test case   : 42866
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42866
+Validation Time(ms)                : 6172
+Finished at                        : Wed Mar 08 09:46:43 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:46:43 EST 2023
+Creating test case for Row #       : 1764
+Validation Time(ms)                : 2533
+Validation status                  : PASS
+Short Desc                         : Ethnicity audit for new table
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction with change in ethnicity value for an existing member. Validate time stamp of update, source agency and historic ethnicity values in the database for that member.
+Expected Results                   : Validated time stamp of updates, source agency and historic ethnicity values in the new audit table.
+Test Case ID for Row 1764          : 42867
+Associated Req ID                  : 36495.06.01
+Requirement linked for test case   : 42867
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42867
+Validation Time(ms)                : 6066
+Finished at                        : Wed Mar 08 09:46:49 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:46:49 EST 2023
+Creating test case for Row #       : 1765
+Validation Time(ms)                : 2552
+Validation status                  : PASS
+Short Desc                         : Ethnicty update from UI Base panel- single
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Update Ethnicity value from Base information panel for an existing member with a single ethnicity value stored.
+Expected Results                   : UI:- Ethnicity updates successfully; new value displayed on Member Information and Base Information panelDB:- Updated ethnicity value stored in new ethnicity table and t_re_base- No change to agency value in new ethnicity table
+Test Case ID for Row 1765          : 42868
+Associated Req ID                  : 36495.06.06
+Requirement linked for test case   : 42868
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42868
+Validation Time(ms)                : 6595
+Finished at                        : Wed Mar 08 09:46:56 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:46:56 EST 2023
+Creating test case for Row #       : 1766
+Validation Time(ms)                : 2504
+Validation status                  : PASS
+Short Desc                         : Ethnicty update from UI Base panel- multiple
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Update Ethnicity value from Base information panel for an existing member with a multiple ethnicity values stored.
+Expected Results                   : UI:- Unable to update Ethnicity; error message banner is triggered with "Ethnicity must be OTHA when member has multiple values."- No changes to ethnicity values on Member Information panel- Ethnicity value in Base Information panel remains OTHADB: - No changes to new ethnicity table or t_re_base
+Test Case ID for Row 1766          : 42869
+Associated Req ID                  : 36495.06.06
+Requirement linked for test case   : 42869
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42869
+Validation Time(ms)                : 6700
+Finished at                        : Wed Mar 08 09:47:03 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:03 EST 2023
+Creating test case for Row #       : 1767
+Validation Time(ms)                : 2404
+Validation status                  : PASS
+Short Desc                         : Ethnicity Related Data panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate new Ethnicity values and descriptions in new Ethnicity related data panel. Reference > Related data > Codes>Ethnicity
+Expected Results                   : All valid ethnicity values and descriptions displayed in related data panel.
+Test Case ID for Row 1767          : 42870
+Associated Req ID                  : 36495.06.10
+Requirement linked for test case   : 42870
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42870
+Validation Time(ms)                : 6021
+Finished at                        : Wed Mar 08 09:47:09 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:09 EST 2023
+Creating test case for Row #       : 1768
+Validation Time(ms)                : 2312
+Validation status                  : PASS
+Short Desc                         : Add/Modify/Delete Ethnicity from related data panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate ability to Add, Modify and Delete Ethnicity values/descriptions from related data panel.
+Expected Results                   : Able to Add, Modify an Delete Ethnicity from related data panel.
+Test Case ID for Row 1768          : 42871
+Associated Req ID                  : 36495.06.10
+Requirement linked for test case   : 42871
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42871
+Validation Time(ms)                : 5874
+Finished at                        : Wed Mar 08 09:47:15 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:15 EST 2023
+Creating test case for Row #       : 1778
+Validation Time(ms)                : 2220
+Validation status                  : PASS
+Short Desc                         : New value : CDE_LANG_WRITTEN
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a blank value for CDE_LANG_WRITTEN for a new member
+Expected Results                   : Blank should translate to "ENGDEF"
+Test Case ID for Row 1778          : 42872
+Associated Req ID                  : 36495.07.001
+Requirement linked for test case   : 42872
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42872
+Validation Time(ms)                : 6077
+Finished at                        : Wed Mar 08 09:47:21 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:21 EST 2023
+Creating test case for Row #       : 1779
+Validation Time(ms)                : 2396
+Validation status                  : PASS
+Short Desc                         : Wrtn L: "ENGDEF" as default when blank value sent
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send HIX file with the blank value for CDE_LANG_WRITTEN for a MHO member who already had a value for cde_lang_written
+Expected Results                   : Blank value should translate to "ENGDEF" instead of ENG.
+Test Case ID for Row 1779          : 42873
+Associated Req ID                  : 36495.07.002
+Requirement linked for test case   : 42873
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42873
+Validation Time(ms)                : 6231
+Finished at                        : Wed Mar 08 09:47:27 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:27 EST 2023
+Creating test case for Row #       : 1780
+Validation Time(ms)                : 2504
+Validation status                  : PASS
+Short Desc                         : Wrtn L: "ENGDEF" as default when invalid value sent
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send DSS file with the invalid value for CDE_LANG_WRITTEN for a HIX/MHO member  who already had a value for cde_lang_written
+Expected Results                   : Invalid value  should translate to "ENGDEF" instead of ENG.
+Test Case ID for Row 1780          : 42874
+Associated Req ID                  : 36495.07.002
+Requirement linked for test case   : 42874
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42874
+Validation Time(ms)                : 6454
+Finished at                        : Wed Mar 08 09:47:33 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:33 EST 2023
+Creating test case for Row #       : 1781
+Validation Time(ms)                : 2548
+Validation status                  : PASS
+Short Desc                         : Writn L: New Member: blank value
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send blank value for  cde_lang_written for a new member
+Expected Results                   : Blank value should translate to "ENGDEF" instead of ENG.
+Test Case ID for Row 1781          : 42875
+Associated Req ID                  : 36495.07.002
+Requirement linked for test case   : 42875
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42875
+Validation Time(ms)                : 5949
+Finished at                        : Wed Mar 08 09:47:39 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:39 EST 2023
+Creating test case for Row #       : 1782
+Validation Time(ms)                : 2628
+Validation status                  : PASS
+Short Desc                         : Writn L: New Member: Invalid value
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a invalid  value for  cde_lang_written for a new member
+Expected Results                   : Invalid value  should translate to "ENGDEF" instead of ENG.
+Test Case ID for Row 1782          : 42876
+Associated Req ID                  : 36495.07.002
+Requirement linked for test case   : 42876
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42876
+Validation Time(ms)                : 6214
+Finished at                        : Wed Mar 08 09:47:46 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:46 EST 2023
+Creating test case for Row #       : 1783
+Validation Time(ms)                : 2436
+Validation status                  : PASS
+Short Desc                         : Related data: cde_lang_written
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Go to Nav path: Reference > Related data > Codes
+Expected Results                   : Check all the valid values attached in the requirement 36495.07.005
+Test Case ID for Row 1783          : 42877
+Associated Req ID                  : 36495.07.005
+Requirement linked for test case   : 42877
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42877
+Validation Time(ms)                : 6080
+Finished at                        : Wed Mar 08 09:47:52 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:52 EST 2023
+Creating test case for Row #       : 1772
+Validation Time(ms)                : 2496
+Validation status                  : PASS
+Short Desc                         : New value : CDE_PRIMRY_LANG
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a blank value for CDE_PRIMRY_LANG for a new member from MHO
+Expected Results                   : Blank should translate to "ENGDEF"
+Test Case ID for Row 1772          : 42878
+Associated Req ID                  : 36495.08.001
+Requirement linked for test case   : 42878
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42878
+Validation Time(ms)                : 6504
+Finished at                        : Wed Mar 08 09:47:58 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:47:58 EST 2023
+Creating test case for Row #       : 1773
+Validation Time(ms)                : 2548
+Validation status                  : PASS
+Short Desc                         : "ENGDEF" as default when blank value sent
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send HIX file with the blank value for cde_primary_lang for a HIX member
+Expected Results                   : Blank should translate to "ENGDEF"
+Test Case ID for Row 1773          : 42879
+Associated Req ID                  : 36495.08.002
+Requirement linked for test case   : 42879
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42879
+Validation Time(ms)                : 6182
+Finished at                        : Wed Mar 08 09:48:04 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:48:04 EST 2023
+Creating test case for Row #       : 1774
+Validation Time(ms)                : 2421
+Validation status                  : PASS
+Short Desc                         : "ENGDEF" as default when invalid value sent
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send DSS file with the invalid value for cde_primary_lang for a HIX/MHO member
+Expected Results                   : Blank should translate to "ENGDEF"
+Test Case ID for Row 1774          : 42880
+Associated Req ID                  : 36495.08.002
+Requirement linked for test case   : 42880
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42880
+Validation Time(ms)                : 6619
+Finished at                        : Wed Mar 08 09:48:11 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:48:11 EST 2023
+Creating test case for Row #       : 1775
+Validation Time(ms)                : 2559
+Validation status                  : PASS
+Short Desc                         : No cde_primary_lang field; New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MHO file for new member without the cde_primary_lang field or value in the xml.
+Expected Results                   : Value should default to "ENGDEF"
+Test Case ID for Row 1775          : 42881
+Associated Req ID                  : 36495.08.003
+Requirement linked for test case   : 42881
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42881
+Validation Time(ms)                : 6257
+Finished at                        : Wed Mar 08 09:48:17 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:48:17 EST 2023
+Creating test case for Row #       : 1776
+Validation Time(ms)                : 2426
+Validation status                  : PASS
+Short Desc                         : No cde_primary_lang field; Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MHO file for existing HIX member without the cde_primary_lang field or value in the xml.
+Expected Results                   : Value should default to "ENGDEF"
+Test Case ID for Row 1776          : 42882
+Associated Req ID                  : 36495.08.003
+Requirement linked for test case   : 42882
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42882
+Validation Time(ms)                : 6205
+Finished at                        : Wed Mar 08 09:48:23 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:48:23 EST 2023
+Creating test case for Row #       : 1777
+Validation Time(ms)                : 2615
+Validation status                  : PASS
+Short Desc                         : Related data:  cde_primry_lang
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Go to Nav path: Reference > Related data > Codes
+Expected Results                   : Check all the valid values fpr  cde_primry_lang, attached in the requirement 36495.08.005
+Test Case ID for Row 1777          : 42883
+Associated Req ID                  : 36495.08.005
+Requirement linked for test case   : 42883
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42883
+Validation Time(ms)                : 7415
+Finished at                        : Wed Mar 08 09:48:31 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:48:31 EST 2023
+Creating test case for Row #       : 1784
+Validation Time(ms)                : 3011
+Validation status                  : PASS
+Short Desc                         : New Sexual Orientation values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate new Sexual Orientation field "CDE_SEXUAL_ORIENT" values and descriptions are added to the DB under Table - T_CDE_SEXUAL_ORIENTATION.
+Expected Results                   : Sexual Orientation values and descriptions are as below:Valid value: "BISEXUAL" Value description: "Bisexual"Valid value: "HETEROSEXUAL" Value description: "Straight or heterosexual"Valid value: "HOMOSEXUAL" Value description: "Lesbian or gay"Valid value: "QUEER" Value description: "Queer, pansexual, and/or questioning"Valid value: "OTHER" Value description: "Something else"Valid value: "DONTKNOW" Value description: "Don't know"Valid value: "A-CNTA" Value description: "Choose not to answer"
+Test Case ID for Row 1784          : 42884
+Associated Req ID                  : 36495.11.001
+Requirement linked for test case   : 42884
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42884
+Validation Time(ms)                : 7670
+Finished at                        : Wed Mar 08 09:48:38 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:48:38 EST 2023
+Creating test case for Row #       : 1785
+Validation Time(ms)                : 2722
+Validation status                  : PASS
+Short Desc                         : 5 SO values for a new/existing member from MHO or HIX.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate 5 values are stored under table  T_CDE_SEXUAL_ORIENTATION for a member.1. Send a transaction from MHO for a New member with 5 valid values for cde_sexual_orient and verify 5 valid values are added in the DB.2. Send a transaction from MHO for an Existing member with 5 valid values for cde_sexual_orient and verify 5 latest valid values are updated in the DB.3. Send a transaction from HIX for a New member with 5 valid values for cde_sexual_orient and verify 5 valid values are added in the DB.4. Send a transaction from HIX for an Existing member with 5 valid values for cde_sexual_orient and verify 5 latest valid values are updated in the DB.
+Expected Results                   : Validate under table - T_CDE_SEXUAL_ORIENTATION.1 - 5 valid sexual orientation values are added in the DB.2 - 5 valid sexual orientation values are updated in the DB.3 - 5 valid sexual orientationvalues are added in the DB.4 - 5 valid sexual orientation values are updated in the DB.
+Test Case ID for Row 1785          : 42885
+Associated Req ID                  : 36495.11.005
+Requirement linked for test case   : 42885
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42885
+Validation Time(ms)                : 7375
+Finished at                        : Wed Mar 08 09:48:46 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:48:46 EST 2023
+Creating test case for Row #       : 1786
+Validation Time(ms)                : 2675
+Validation status                  : PASS
+Short Desc                         : More than 5 SO values for a new/existing member from MHO/HIX.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate max of 5 values are stored under table  T_CDE_SEXUAL_ORIENTATION for a member.1. Send a transaction from MHO for a New member with more than 5 valid values for cde_sexual_orient and verify only 5 valid values are added in the DB.2. Send a transaction from MHO for an Existing member with more than 5 valid values for cde_sexual_orient and verify only 5 latest valid values are updated in the DB.3. Send a transaction from HIX for a New member with more than 5 valid values for cde_sexual_orient and verify only 5 valid values are added in the DB.4. Send a transaction from HIX for an Existing member with more than 5 valid values for cde_sexual_orient and verify only 5 latest valid values are updated in the DB.
+Expected Results                   : Validate under table - T_CDE_SEXUAL_ORIENTATION.1 - 5 valid sexual orientation values are added in the DB.2 - Only 5 latest valid sexual orientation values are updated in the DB.3 - 5 valid sexual orientation values are added in the DB.4 - Only 5 latest valid sexual orientation values are updated in the DB.
+Test Case ID for Row 1786          : 42886
+Associated Req ID                  : 36495.11.005
+Requirement linked for test case   : 42886
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42886
+Validation Time(ms)                : 7344
+Finished at                        : Wed Mar 08 09:48:53 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:48:53 EST 2023
+Creating test case for Row #       : 1787
+Validation Time(ms)                : 2550
+Validation status                  : PASS
+Short Desc                         : Don't aggregate SO values from different sources for a member.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate the sexual orientation values are not aggregated from diferent agency sources.Step 1 - Send a transaction from MHO for a member with 4 valid values for cde_sexual_orient Step 2 - Verify database has 4 valid values from agency MHO.Step 3 -  After few minutes or next day send a transaction from HIX for that member with 3 valid values for cde_sexual_orient.Step 4 - Verify 3 database has now 3 valid values from HIX.
+Expected Results                   : Sexual orientation field is updated by one agency source at a time.All previously stored value(s) for sexual orientation and source agency code values are replaced by the latest agency.
+Test Case ID for Row 1787          : 42887
+Associated Req ID                  : 36495.11.006
+Requirement linked for test case   : 42887
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42887
+Validation Time(ms)                : 6606
+Finished at                        : Wed Mar 08 09:49:00 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:00 EST 2023
+Creating test case for Row #       : 1788
+Validation Time(ms)                : 2506
+Validation status                  : PASS
+Short Desc                         : Store only valid values for SO.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate If source agencies (HIX/MHO) sends multiple cde_sexual_orient values that contains both valid and invalid values, then only Valid values are stored in DB and invalid values are ignored. Also warning message is displayed.  Example 1 - Agency sends Invalid values (HETERO and OTHA ) and Valid value (QUEER) for a new member.Expected result -  - Ignore invalid values.  - Display warning message " All invalid values for cde_sexual_orient are ignored or Invalid cde_sexual_orient code".  - Do not reject the transaction. - Store value = QUEER in DB.Example 2 - Agency sends Invalid values (HETERO and OTHA ) and Valid value (QUEER) for an existing member.Expected result -  - Ignore invalid values.  - Display warning message " All invalid values for cde_sexual_orient are ignored or Invalid cde_sexual_orient code".  - Do not reject the transaction. - Do not update field. - Retain previously stored value(s) in DB.
+Expected Results                   : Only Valid Values are stored for a new member and previous values are retained for an existing members in DB
+Test Case ID for Row 1788          : 42888
+Associated Req ID                  : 36495.11.010
+Requirement linked for test case   : 42888
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42888
+Validation Time(ms)                : 7017
+Finished at                        : Wed Mar 08 09:49:07 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:07 EST 2023
+Creating test case for Row #       : 1789
+Validation Time(ms)                : 2418
+Validation status                  : PASS
+Short Desc                         : Reject/Ignore Invalid values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate If agency source (HIX/MHO) sends Invalid values in an incoming transaction, then field is rejected and warning message is displayed.Example 1 - Agency sends Invalid values HETERO and OTHA for a new member.Expected result -  - Reject field cde_sexual _code.  - Display warning message " All invalid values for cde_sexual_orient are ignored or Invalid cde_sexual code". - Do not reject the transaction. - Store value = Blank/Space in DB. Example 1 - Agency sends invalid values HETERO and OTHA for an existing member.Expected result -  - Reject field cde_sexual _code.  - Display warning message " All invalid values for cde_sexual_orient are ignored or Invalid cde_sexual_orient code". - Do not reject the transaction. - Do not update field - Retain previously stored value(s) in DB.
+Expected Results                   : Only Blank/Space is stored for a new member and previous values are retained for an existing members in DB.
+Test Case ID for Row 1789          : 42889
+Associated Req ID                  : 36495.11.010
+Requirement linked for test case   : 42889
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42889
+Validation Time(ms)                : 6780
+Finished at                        : Wed Mar 08 09:49:14 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:14 EST 2023
+Creating test case for Row #       : 1790
+Validation Time(ms)                : 2566
+Validation status                  : PASS
+Short Desc                         : Reject/Ignore values = Blank/Space  for SO
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate If agency source (HIX/MHO) sends Blank/Space values in an incoming transaction, then field is rejected and warning message is displayed.Example 1 - Agency sends Blank/Space for a new member.Expected result -  - Reject field cde_sexual _code.  - Display warning message " All invalid values for cde_sexual_orient are ignored or Invalid Sexual Orientation code". - Do not reject the transaction. - Store value = Blank/Space in DB. Example 1 - Agency sends Blank/Space for an existing member.Expected result -  - Reject field cde_sexual _code.  - Display warning message " All invalid values for cde_sexual_orient are ignored or Invalid cde_sexual_orient code". - Do not reject the transaction - Do not update field. - Retain previously stored value(s) in DB.
+Expected Results                   : Only Valid Values are stored for a new member and previous values are retained for an existing members in DB
+Test Case ID for Row 1790          : 42890
+Associated Req ID                  : 36495.11.010
+Requirement linked for test case   : 42890
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42890
+Validation Time(ms)                : 6820
+Finished at                        : Wed Mar 08 09:49:20 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:20 EST 2023
+Creating test case for Row #       : 1791
+Validation Time(ms)                : 2550
+Validation status                  : PASS
+Short Desc                         : Non MHO/HIX_No DB updates for SO
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate if agency source other than MHO & HIX sends cde_sexual_orient in an incoming transaction, then field is rejected and warning message is displayed an dno upadtes to the field - cde_sexual_orient field in DB.
+Expected Results                   : Warning message "Agency is not authorized to submit data in this field: cde_sexual_orient" is displayed.
+Test Case ID for Row 1791          : 42891
+Associated Req ID                  : 36495.11.015
+Requirement linked for test case   : 42891
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42891
+Validation Time(ms)                : 6600
+Finished at                        : Wed Mar 08 09:49:27 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:27 EST 2023
+Creating test case for Row #       : 1792
+Validation Time(ms)                : 2414
+Validation status                  : PASS
+Short Desc                         : Sexual Orientation Hierarchy
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate the hierarchy for field cde_sexual_orient.Hierarchy check should compare agency source that last updated cde_sexual_orient field with incoming agency source (HIX/MHO).1. MHO and HIX at the same level.Example 1 - Day 1 MHO sends "BISEXUAL" & "HETEROSEXUAL" for cde_sexual_orient in a transaction. Database is updated with value BISEXUAL & HETEROSEXUALDay 2 HIX sends "HOMOSEXUAL" & "QUEER" for cde_sexual_orient in a transaction. Database is updated with value HOMOSEXUAL & QUEER and BISEXUAL & HETEROSEXUAL should only be stored as historic data.
+Expected Results                   : Values for Sexual orientation are being updated based on the agency (HIX/MHO) last send the cde_sexual_orient values.
+Test Case ID for Row 1792          : 42892
+Associated Req ID                  : 36495.11.025
+Requirement linked for test case   : 42892
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42892
+Validation Time(ms)                : 6722
+Finished at                        : Wed Mar 08 09:49:34 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:34 EST 2023
+Creating test case for Row #       : 1793
+Validation Time(ms)                : 2410
+Validation status                  : PASS
+Short Desc                         : Audit Sexual Orientation table
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Verify the Audit table for sexual orientation and validate that table contains - Updated time stamp, Source Agency that updated cde_sexual_orient values, Historic cde_sexual_orient values
+Expected Results                   : Table contains - Updated time stamp, Source Agency that updated cde_sexual_orient values, Historic cde_sexual_orient values
+Test Case ID for Row 1793          : 42893
+Associated Req ID                  : 36495.12.001
+Requirement linked for test case   : 42893
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42893
+Validation Time(ms)                : 6112
+Finished at                        : Wed Mar 08 09:49:40 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:40 EST 2023
+Creating test case for Row #       : 1794
+Validation Time(ms)                : 2444
+Validation status                  : PASS
+Short Desc                         : New Gender Identity values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate new Gender Identity field "CDE_GENDER_IDENTITY" values and descriptions are added to the DB under Table - T_CDE_GENDER_IDENTITY.
+Expected Results                   : Gender Identity values and descriptions are as below:Valid value: "M" Value description: "Male"Valid value: "F" Value description: "Female"Valid value: "GENQUEER" Value description: "Genderqueer/gender nonconforming neither exclusively male nor female"Valid value: "TRANSMAL" Value description: "Transgender man/trans man"Valid value: "TRANSFEM" Value description: "Transgender woman/trans woman"Valid value: "OTHER" Value description: "Additional gender category or other"Valid value: "DONTKNOW" Value description: "Don't know"Valid value: "A-CNTA" Value description: "Choose not to answer"
+Test Case ID for Row 1794          : 42894
+Associated Req ID                  : 36495.13.001
+Requirement linked for test case   : 42894
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42894
+Validation Time(ms)                : 6393
+Finished at                        : Wed Mar 08 09:49:46 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:46 EST 2023
+Creating test case for Row #       : 1795
+Validation Time(ms)                : 2420
+Validation status                  : PASS
+Short Desc                         : 5 GI values for a new/existing member from MHO or HIX.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate 5 values are stored under table T_CDE_GENDER_IDENTITY for a member.1. Send a transaction from MHO for a New member with 5 valid values for cde_gender_identity and verify 5 valid values are added in the DB.2. Send a transaction from MHO for an Existing member with 5 valid values for cde_gender_identity and verify 5 latest valid values are updated in the DB.3. Send a transaction from HIX for a New member with 5 valid values for cde_gender_identity and verify 5 valid values are added in the DB.4. Send a transaction from HIX for an Existing member with 5 valid values for cde_gender_identity and verify 5 latest valid values are updated in the DB.
+Expected Results                   : Validate under table - T_CDE_GENDER_IDENTITY.1 - 5 valid gender identity values are added in the DB.2 - 5 valid gender identity values are updated in the DB.3 - 5 valid gender identity values are added in the DB.4 - 5 valid gender identity values are updated in the DB.
+Test Case ID for Row 1795          : 42895
+Associated Req ID                  : 36495.13.005
+Requirement linked for test case   : 42895
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42895
+Validation Time(ms)                : 6501
+Finished at                        : Wed Mar 08 09:49:53 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:53 EST 2023
+Creating test case for Row #       : 1796
+Validation Time(ms)                : 2579
+Validation status                  : PASS
+Short Desc                         : More than 5 GI values for a new/existing member from MHO/HIX.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate max of 5 of values are stored under table T_CDE_GENDER_IDENTITY for a member.1. Send a transaction from MHO for a New member with more than 5 valid values for cde_gender_identity  and verify only 5 valid values are added in the DB.2. Send a transaction from MHO for an Existing member with more than 5 valid values for cde_gender_identity  and verify only 5 latest valid values are updated in the DB.3. Send a transaction from HIX for a New member with more than 5 valid values for cde_gender_identity  and verify only 5 valid values are added in the DB.4. Send a transaction from HIX for an Existing member with more than 5 valid values for cde_gender_identity  and verify only 5 latest valid values are updated in the DB.
+Expected Results                   : Validate under table - T_CDE_GENDER_IDENTITY.1 - 5 valid gender identity values are added in the DB.2 - Only 5 latest valid gender identity values are updated in the DB.3 - 5 valid gender identity values are added in the DB.4 - Only 5 latest valid gender identity values are updated in the DB.
+Test Case ID for Row 1796          : 42896
+Associated Req ID                  : 36495.13.005
+Requirement linked for test case   : 42896
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42896
+Validation Time(ms)                : 6713
+Finished at                        : Wed Mar 08 09:49:59 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:49:59 EST 2023
+Creating test case for Row #       : 1797
+Validation Time(ms)                : 2539
+Validation status                  : PASS
+Short Desc                         : Don't aggregate GI values from different sources for a member.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate the gender identity values are not aggregated from diferent agency sources.Step 1 - Send a transaction from MHO for a member with 4 valid values for cde_gender_identity.Step 2 - Verify database has 4 valid values from agency MHO.Step 3 -  After few minutes or next day send a transaction from HIX for that member with 3 valid values for cde_gender_identity.Step 4 - Verify database has now 3 valid values from HIX.
+Expected Results                   : Gender identity field is updated by one agency source at a time.All previously stored value(s) for gender identity and source agency code values are replaced by the latest agency.
+Test Case ID for Row 1797          : 42897
+Associated Req ID                  : 36495.13.006
+Requirement linked for test case   : 42897
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42897
+Validation Time(ms)                : 6251
+Finished at                        : Wed Mar 08 09:50:06 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:50:06 EST 2023
+Creating test case for Row #       : 1798
+Validation Time(ms)                : 3365
+Validation status                  : PASS
+Short Desc                         : Store only valid values for GI.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate If source agencies (HIX/MHO) sends multiple cde_gender_identity values that contains both valid and invalid values, then only Valid values are stored in DB and invalid values are ignored. Also warning message is displayed.  Example 1 - Agency sends Invalid values (GENQ and TRANS ) and Valid value (OTHER) for a new member.Expected result -  - Ignore invalid values.  - Display warning message "All invalid values for cde_gender_identity are ignored or Invalid cde_gender_identity code".  - Do not reject the transaction. - Store value = QUEER in DB.Example 2 - Agency sends Invalid values (HETERO and OTHA ) and Valid value (QUEER) for an existing member.Expected result -  - Ignore invalid values.  - Display warning message "All invalid values for cde_gender_identity are ignored or Invalid cde_gender_identity code".  - Do not reject the transaction. - Do not update field. - Retain previously stored value(s) in DB.
+Expected Results                   : Only Valid Values are stored for a new member and previous values are retained for an existing members in DB
+Test Case ID for Row 1798          : 42898
+Associated Req ID                  : 36495.13.010
+Requirement linked for test case   : 42898
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42898
+Validation Time(ms)                : 7512
+Finished at                        : Wed Mar 08 09:50:13 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:50:13 EST 2023
+Creating test case for Row #       : 1799
+Validation Time(ms)                : 2511
+Validation status                  : PASS
+Short Desc                         : Reject/Ignore Invalid values for GI
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate If agency source (HIX/MHO) sends Invalid values in an incoming transaction, then field is rejected and warning message is displayed.Example 1 - Agency sends Invalid values HETERO and OTHA for a new member.Expected result -  - Reject field cde_gender_identity .  - Display warning message "All invalid values for cde_gender_identity are ignored or Invalid cde_gender_identity code". - Do not reject the transaction. - Store value = Blank/Space in DB. Example 1 - Agency sends invalid values HETERO and OTHA for an existing member.Expected result -  - Reject field cde_gender_identity .  - Display warning message "All invalid values for cde_gender_identity are ignored or Invalid cde_gender_identity code". - Do not reject the transaction. - Do not update field - Retain previously stored value(s) in DB.
+Expected Results                   : Only Blank/Space is stored for a new member and previous values are retained for an existing members in DB.
+Test Case ID for Row 1799          : 42899
+Associated Req ID                  : 36495.13.010
+Requirement linked for test case   : 42899
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42899
+Validation Time(ms)                : 6642
+Finished at                        : Wed Mar 08 09:50:20 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:50:20 EST 2023
+Creating test case for Row #       : 1800
+Validation Time(ms)                : 2173
+Validation status                  : PASS
+Short Desc                         : Reject/Ignore values = Blank/Space for GI
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate If agency source (HIX/MHO) sends Blank/Space values in an incoming transaction, then field is rejected and warning message is displayed.Example 1 - Agency sends Blank/Space for a new member.Expected result -  - Reject field cde_gender_identity .  - Display warning message "All invalid values for cde_gender_identity are ignored or Invalid cde_gender_identity code". - Do not reject the transaction. - Store value = Blank/Space in DB. Example 1 - Agency sends Blank/Space for an existing member.Expected result -  - Reject field cde_gender_identity .  - Display warning message  "All invalid values for cde_gender_identity are ignored or Invalid cde_gender_identity code". - Do not reject the transaction - Do not update field. - Retain previously stored value(s) in DB.
+Expected Results                   : Only Valid Values are stored for a new member and previous values are retained for an existing members in DB
+Test Case ID for Row 1800          : 42900
+Associated Req ID                  : 36495.13.010
+Requirement linked for test case   : 42900
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42900
+Validation Time(ms)                : 6002
+Finished at                        : Wed Mar 08 09:50:26 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:50:26 EST 2023
+Creating test case for Row #       : 1801
+Validation Time(ms)                : 2302
+Validation status                  : PASS
+Short Desc                         : Non MHO/HIX_No DB updates for GI
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate if agency source other than MHO & HIX sends cde_gender_identity in an incoming transaction, then field is rejected and warning message is displayed and no upadtes to the field - cde_gender_identity in DB.
+Expected Results                   : Warning message "Agency is not authorized to submit data in this field: cde_gender_identity" is displayed.
+Test Case ID for Row 1801          : 42901
+Associated Req ID                  : 36495.13.015
+Requirement linked for test case   : 42901
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42901
+Validation Time(ms)                : 5860
+Finished at                        : Wed Mar 08 09:50:32 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:50:32 EST 2023
+Creating test case for Row #       : 1802
+Validation Time(ms)                : 2338
+Validation status                  : PASS
+Short Desc                         : Gender Identity Hierarchy
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Validate the hierarchy for field cde_gender_identity.Hierarchy check should compare agency source that last updated cde_sexual_orient field with incoming agency source (HIX/MHO).1. MHO and HIX at the same level.Example 1 - Day 1 MHO sends "GENQUEER" for cde_gender_identity in a transaction. Database is updated with value GENQUEER.Day 2 HIX sends "TRANSFEM" & "OTHER" for cde_gender_identity in a transaction. Database is updated with value "TRANSFEM" & "OTHER" and GENQUEER should only be stored as historic data.
+Expected Results                   : Values for Gender Identity are being updated based on the agency (HIX/MHO) last send the cde_gender_identity values.
+Test Case ID for Row 1802          : 42902
+Associated Req ID                  : 36495.13.025
+Requirement linked for test case   : 42902
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42902
+Validation Time(ms)                : 6074
+Finished at                        : Wed Mar 08 09:50:38 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:50:38 EST 2023
+Creating test case for Row #       : 1803
+Validation Time(ms)                : 2444
+Validation status                  : PASS
+Short Desc                         : Audit Gender Identity table
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : Batch
+Long Desc                          : Verify the Audit table for sexual orientation and validate that table contains - Updated time stamp, Source Agency that updated cde_sexual_orient values, Historic cde_sexual_orient values
+Expected Results                   : Table contains - Updated time stamp, Source Agency that updated cde_sexual_orient values, Historic cde_sexual_orient values
+Test Case ID for Row 1803          : 42903
+Associated Req ID                  : 36495.14.001
+Requirement linked for test case   : 42903
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42903
+Validation Time(ms)                : 5876
+Finished at                        : Wed Mar 08 09:50:44 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:50:44 EST 2023
+Creating test case for Row #       : 1769
+Validation Time(ms)                : 2403
+Validation status                  : PASS
+Short Desc                         : New values; race, ethnic, primary and written lang
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : send XML files with various agencies with new values for race, ethnic, primary lang, written lang Cde_race: "HAWAII", "OTHER", "A-CNTA", "D-KNOW"Cde_ethnic: "CARIB", "E-EUR", "GUATE", "HOND", "RUSSN", "A-CNTA", "D-KNOW"Cde_primary_lang: "ENGDEF"Written_lang: "ENGDEF"Note: There will be more than one test case with various agencies and values
+Expected Results                   : The new values should be in the extract
+Test Case ID for Row 1769          : 42904
+Associated Req ID                  : 36495.15.005
+Requirement linked for test case   : 42904
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42904
+Validation Time(ms)                : 5769
+Finished at                        : Wed Mar 08 09:50:50 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:50:50 EST 2023
+Creating test case for Row #       : 1770
+Validation Time(ms)                : 2169
+Validation status                  : PASS
+Short Desc                         : Display Am-IND in POPs when multiple values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MA21 and HIX files with multiple ethnicity values and includes the value "AM_IND"
+Expected Results                   : POPs member extract should include the value "AM-IND" and not "other"
+Test Case ID for Row 1770          : 42905
+Associated Req ID                  : 36495.15.010
+Requirement linked for test case   : 42905
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42905
+Validation Time(ms)                : 5325
+Finished at                        : Wed Mar 08 09:50:55 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:50:55 EST 2023
+Creating test case for Row #       : 1771
+Validation Time(ms)                : 2349
+Validation status                  : PASS
+Short Desc                         : Five ethnicity values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MA21 and HIX files with multiple ethnicity values .
+Expected Results                   : Member extracts has"otha"value
+Test Case ID for Row 1771          : 42906
+Associated Req ID                  : 36495.15.010
+Requirement linked for test case   : 42906
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42906
+Validation Time(ms)                : 6039
+Finished at                        : Wed Mar 08 09:51:01 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:51:01 EST 2023
+Creating test case for Row #       : 1804
+Validation Time(ms)                : 2359
+Validation status                  : PASS
+Short Desc                         : 834 Mapping for Race codes for new member.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Create a new member with race code as listed below and Validate 834 file for them as per below mapping on DMG05 .DMG*D8*DOB*Gender**Race code~ 834 valuesINDIAN = IASIAN = ABLACK = BHAWAII = JHISPAN = HINTER = EWHITE = COTHER = EA-CNTA = 7UNKNOW = 7D-KNOW = 7
+Expected Results                   : Race code on DMG05 is per the below 834 mapping - INDIAN = IASIAN = ABLACK = BHAWAII = JHISPAN = HINTER = EWHITE = COTHER = EA-CNTA = 7UNKNOW = 7D-KNOW = 7
+Test Case ID for Row 1804          : 42907
+Associated Req ID                  : 36495.16.001
+Requirement linked for test case   : 42907
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42907
+Validation Time(ms)                : 5936
+Finished at                        : Wed Mar 08 09:51:07 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:51:07 EST 2023
+Creating test case for Row #       : 1805
+Validation Time(ms)                : 2319
+Validation status                  : PASS
+Short Desc                         : 834 Mapping for Race codes for an existing member.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find an existing member and send a transaction with race code as listed below and Validate 834 file for them as per below mapping on DMG05 .DMG*D8*DOB*Gender**Race code~ 834 valuesINDIAN = IASIAN = ABLACK = BHAWAII = JHISPAN = HINTER = EWHITE = COTHER = EA-CNTA = 7UNKNOW = 7D-KNOW = 7
+Expected Results                   : Race code on DMG05 is per the below 834 mapping - INDIAN = IASIAN = ABLACK = BHAWAII = JHISPAN = HINTER = EWHITE = COTHER = EA-CNTA = 7UNKNOW = 7D-KNOW = 7
+Test Case ID for Row 1805          : 42908
+Associated Req ID                  : 36495.16.001
+Requirement linked for test case   : 42908
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42908
+Validation Time(ms)                : 5865
+Finished at                        : Wed Mar 08 09:51:13 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:51:13 EST 2023
+Creating test case for Row #       : 1806
+Validation Time(ms)                : 2470
+Validation status                  : PASS
+Short Desc                         : 834 file for multi race code for a new member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Create a new member with multi race codes and validate 834 file has DMG05 = E.
+Expected Results                   : 834 file has DMG05 = E.
+Test Case ID for Row 1806          : 42909
+Associated Req ID                  : 36495.16.005
+Requirement linked for test case   : 42909
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42909
+Validation Time(ms)                : 6111
+Finished at                        : Wed Mar 08 09:51:19 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:51:19 EST 2023
+Creating test case for Row #       : 1807
+Validation Time(ms)                : 2577
+Validation status                  : PASS
+Short Desc                         : 834 file for multi race code for an existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find an existing member and send a transaction with multi race codes and validate 834 file has DMG05 = E.
+Expected Results                   : 834 file has DMG05 = E.
+Test Case ID for Row 1807          : 42910
+Associated Req ID                  : 36495.16.005
+Requirement linked for test case   : 42910
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42910
+Validation Time(ms)                : 7010
+Finished at                        : Wed Mar 08 09:51:26 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:51:26 EST 2023
+Creating test case for Row #       : 1808
+Validation Time(ms)                : 2599
+Validation status                  : PASS
+Short Desc                         : 834 file for multi ethnicity code for a new member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Create a new member with multi ethnicity codes and validate 834 file has REF02 = OTHA.
+Expected Results                   : 834 file has REF02 = OTHA.
+Test Case ID for Row 1808          : 42911
+Associated Req ID                  : 36495.16.010
+Requirement linked for test case   : 42911
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42911
+Validation Time(ms)                : 6779
+Finished at                        : Wed Mar 08 09:51:33 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:51:33 EST 2023
+Creating test case for Row #       : 1809
+Validation Time(ms)                : 2503
+Validation status                  : PASS
+Short Desc                         : 834 file for multi ethnicity code for an existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find an existing member and send a transaction with multi ethnicity codes and validate 834 file has REF02 = OTHA.
+Expected Results                   : 834 file has REF02 = OTHA.
+Test Case ID for Row 1809          : 42912
+Associated Req ID                  : 36495.16.010
+Requirement linked for test case   : 42912
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42912
+Validation Time(ms)                : 6114
+Finished at                        : Wed Mar 08 09:51:39 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:51:39 EST 2023
+Creating test case for Row #       : 1810
+Validation Time(ms)                : 2629
+Validation status                  : PASS
+Short Desc                         : Language = ENG/ENG_DEF, New member_834
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Create a new member with Primary and written language = ENG_DEF and validate language is not reported on 834 file.Create a new member with Primary and written language = ENG_DEF and validate language is not reported on 834 file.
+Expected Results                   : Segment = LUI for language is not reported on 834 file
+Test Case ID for Row 1810          : 42913
+Associated Req ID                  : 36495.16.015
+Requirement linked for test case   : 42913
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42913
+Validation Time(ms)                : 6446
+Finished at                        : Wed Mar 08 09:51:45 EST 2023
+****************************************************
+Started at                         : Wed Mar 08 09:51:45 EST 2023
+Creating test case for Row #       : 1811
+Validation Time(ms)                : 2928
+Validation status                  : PASS
+Short Desc                         : Language = ENG/ENG_DEF, Existing member_835
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find an existing member and send a transaction with Primary and written language = ENG and validate language is not reported on 834 file.Find an existing member and send a transaction with Primary and written language = ENG and validate language is not reported on 834 file.
+Expected Results                   : Segment = LUI for language is not reported on 834 file
+Test Case ID for Row 1811          : 42914
+Associated Req ID                  : 36495.16.015
+Requirement linked for test case   : 42914
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42914
+Validation Time(ms)                : 6702
+Finished at                        : Wed Mar 08 09:51:52 EST 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 08/Mar/2023 09:51:53AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

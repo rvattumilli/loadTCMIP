@@ -1,0 +1,1195 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 17/Sep/2024 09:39:09AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 08/14/2024
+Function                           : executeQuery()
+SQL Statement                      : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2
+Query Execution Time(ms)           : 80
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Function                           : getTCReqData()
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 108
+Total No.of Rows fetched           : 30
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:16 EDT 2024
+Creating test case for Row #       : 5450
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 52
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 480
+TC Validation status               : PASS
+Short Desc                         : ARD in range: NF with asmnt 1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has 01/01/24-04/31/2024 with NF and Admission date 12/15/2023 01 asmnt  with ARD 01/10/2024
+Expected Results                   : NF should chang to the HIPPS code with the date range 01/01/2024-03/31/24( end date should be admission+ three full months)
+Test Case ID for Row 5450          : 47713
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5450
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47713' where tc_row = 5450
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5450
+Query Execution Time(ms)           : 65
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.001
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.001'
+Query Execution Time(ms)           : 41
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47713
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47713
+Finished at                        : Tue Sep 17 09:39:20 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:20 EDT 2024
+Creating test case for Row #       : 5451
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Total No.of Columns fetched        : 5
+Requirement                        : 38056.01.002
+Requirement Validation             : Verify Requirement ID for the Test case
+Validation Time(ms)                : 448
+TC Validation status               : FAIL
+Finished at                        : Tue Sep 17 09:39:21 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:21 EDT 2024
+Creating test case for Row #       : 5452
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Total No.of Columns fetched        : 5
+Requirement                        : 38056.01.003
+Requirement Validation             : Verify Requirement ID for the Test case
+Validation Time(ms)                : 443
+TC Validation status               : FAIL
+Finished at                        : Tue Sep 17 09:39:21 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:21 EDT 2024
+Creating test case for Row #       : 5453
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 472
+TC Validation status               : PASS
+Short Desc                         : ARD in range: NF with asmnt 2/3:MOM
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has 01/01/24-04/31/2024 with NF and Admission date 12/15/2023 02 asmnt  with ARD is 06/25/24
+Expected Results                   : Effective date should be first following month i.e 07/01/24
+Test Case ID for Row 5453          : 47714
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5453
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47714' where tc_row = 5453
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5453
+Query Execution Time(ms)           : 68
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47714
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47714
+Finished at                        : Tue Sep 17 09:39:26 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:26 EDT 2024
+Creating test case for Row #       : 5454
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 544
+TC Validation status               : PASS
+Short Desc                         : ARD in range: NF with asmnt 2/3:BOM
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has01/01/2024-12/31/2299 with NF and Admission date 12/15/2023 02 asmnt  with ARD is  05/01/24
+Expected Results                   : Effective date should be the first month itself, i.e  05/01/24.
+Test Case ID for Row 5454          : 47715
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5454
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47715' where tc_row = 5454
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5454
+Query Execution Time(ms)           : 75
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 40
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47715
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47715
+Finished at                        : Tue Sep 17 09:39:30 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:30 EDT 2024
+Creating test case for Row #       : 5455
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 461
+TC Validation status               : PASS
+Short Desc                         : ARD OOR: NF with asmnt 2/3: Bfr eff dte
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : ARD is before the effective date: MDS LOC has01/01/2024-12/31/2299 with NF and Admission date 12/15/2023 02 asmnt  with ARD is  12/01/23
+Expected Results                   : keep the effective date from the sc-1/UI and calculate the end date from the effective date; 01/01/2024-03/31/2024
+Test Case ID for Row 5455          : 47716
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5455
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47716' where tc_row = 5455
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5455
+Query Execution Time(ms)           : 74
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 68
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47716
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47716
+Finished at                        : Tue Sep 17 09:39:36 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:36 EDT 2024
+Creating test case for Row #       : 5456
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 655
+TC Validation status               : PASS
+Short Desc                         : ARD OOR: NF with asmnt 2/3: Bfr eff dte
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : ARD is before the effective date: MDS LOC has01/01/2024-12/31/2299 with NF and Admission date 12/15/2023 02 asmnt  with ARD is  12/15/23
+Expected Results                   : keep the effective date from the sc-1/UI and calculate the end date from the effective date; 01/01/2024-03/31/2024
+Test Case ID for Row 5456          : 47717
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5456
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47717' where tc_row = 5456
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5456
+Query Execution Time(ms)           : 73
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47717
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47717
+Finished at                        : Tue Sep 17 09:39:41 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:41 EDT 2024
+Creating test case for Row #       : 5457
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 490
+TC Validation status               : PASS
+Short Desc                         : Discharge date in NF
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has 01/01/2024-02/28/2024 discharge date 02/28/2024 NF 04/01/2024-06/15/2024 discharge date 06/15/2024 NF 02 asmnt with ARD 01/15/2024
+Expected Results                   : MDS LOC shd be 02/01/2024-02/28/2024 HIPPS code 04/01/2024-06/15/2024 discharge date 06/15/2024 NF
+Test Case ID for Row 5457          : 47718
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5457
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47718' where tc_row = 5457
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5457
+Query Execution Time(ms)           : 68
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47718
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47718
+Finished at                        : Tue Sep 17 09:39:46 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:46 EDT 2024
+Creating test case for Row #       : 5458
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 497
+TC Validation status               : PASS
+Short Desc                         : Discharge date in NF:Future dsch dte
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has 01/01/2024-06/30/2024 discharge date 06/30/2024 NF 08/01/2024-10/15/2024 discharge date 10/15/2024 NF Pending 02 asmnt with ARD 01/15/2024 Pending 02 asmnt with ARD 04/20/2024
+Expected Results                   : MDS LOC shd be 02/01/2024-04/31/2024 discharge date 06/30/2024 05/01/2024-06/30/2024 discharge date 06/30/2024
+Test Case ID for Row 5458          : 47719
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5458
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47719' where tc_row = 5458
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5458
+Query Execution Time(ms)           : 94
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47719
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47719
+Finished at                        : Tue Sep 17 09:39:51 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:51 EDT 2024
+Creating test case for Row #       : 5459
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 560
+TC Validation status               : PASS
+Short Desc                         : Inserting NF for ARD in range
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has 01/01/2024-04/30/2024 and Pending 02 asmnt  with ARD  02/15/2024
+Expected Results                   : MDS LOC   01/01/2024-02/29/2024 as NF and  03/01/2024-05/30/2024 with HIPPS code.
+Test Case ID for Row 5459          : 47720
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5459
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47720' where tc_row = 5459
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5459
+Query Execution Time(ms)           : 81
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 42
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47720
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47720
+Finished at                        : Tue Sep 17 09:39:56 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:39:56 EDT 2024
+Creating test case for Row #       : 5460
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 572
+TC Validation status               : PASS
+Short Desc                         : MDS LOC has HIPPS code
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has HIPPS code send in another 02 within 21 day rule(+/_)
+Expected Results                   : Record whould be accepted
+Test Case ID for Row 5460          : 47721
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5460
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47721' where tc_row = 5460
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5460
+Query Execution Time(ms)           : 76
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47721
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47721
+Finished at                        : Tue Sep 17 09:40:03 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:03 EDT 2024
+Creating test case for Row #       : 5461
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 1073
+TC Validation status               : PASS
+Short Desc                         : MDS LOC has HIPPS code
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has HIPPS code send in another 02 outside  21 day rule(+/_)
+Expected Results                   : Record whould be Pending
+Test Case ID for Row 5461          : 47722
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5461
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47722' where tc_row = 5461
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5461
+Query Execution Time(ms)           : 109
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 67
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47722
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47722
+Finished at                        : Tue Sep 17 09:40:08 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:08 EDT 2024
+Creating test case for Row #       : 5462
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 443
+TC Validation status               : PASS
+Short Desc                         : 21 days
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has 04/01/24-08/31/2024 with NF and Admission date 12/15/2023 01 asmnt  with ARD 03/01/2024 02 asmnt with ARD 06/19/2024(verify) 03 asmnt with ARD 10/12/2024( outside 21 days)
+Expected Results                   : The record in t_re_mds_status will be 01 will keep in pending status 02 will be accepted 03 will be in pending status MDS LOC will have  04/01/2024-06/30/2024-HIPPS code 07/01/2024-0831/2024-NF
+Test Case ID for Row 5462          : 47723
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5462
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47723' where tc_row = 5462
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5462
+Query Execution Time(ms)           : 65
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.005
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.005'
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47723
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47723
+Finished at                        : Tue Sep 17 09:40:13 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:13 EDT 2024
+Creating test case for Row #       : 5463
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 64
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 512
+TC Validation status               : PASS
+Short Desc                         : 04 asmnt in range of NF
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : 04 assessment is on the range of NF and Discharge date is open ended date
+Expected Results                   : Cut the NF end date to a day before the ARD date AND attach the 04 with the ARD date as the effective date and           End date as three full months from the ARD date
+Test Case ID for Row 5463          : 47724
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5463
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47724' where tc_row = 5463
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5463
+Query Execution Time(ms)           : 91
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.010
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.010'
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47724
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47724
+Finished at                        : Tue Sep 17 09:40:17 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:17 EDT 2024
+Creating test case for Row #       : 5464
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 466
+TC Validation status               : PASS
+Short Desc                         : 04 asmnt in range of NF
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : 04 assessment is on the range of NF and Discharge date is greater than the calculated end date
+Expected Results                   : Cut the NF end date to a day before the ARD date AND attach the 04 with the ARD date as the effective date and           End date as three full months from the ARD date (Use End date as      calculated )
+Test Case ID for Row 5464          : 47725
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5464
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47725' where tc_row = 5464
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5464
+Query Execution Time(ms)           : 68
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.010
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.010'
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47725
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47725
+Finished at                        : Tue Sep 17 09:40:21 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:21 EDT 2024
+Creating test case for Row #       : 5465
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 454
+TC Validation status               : PASS
+Short Desc                         : 04 asmnt in range of NF
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : 04 assessment is on the range of NF and Discharge date is less than the calculated end date
+Expected Results                   : Cut the NF end date to a day before the ARD date AND attach the 04 with the ARD date as the effective date and           Use Discharge date as End date
+Test Case ID for Row 5465          : 47726
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5465
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47726' where tc_row = 5465
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5465
+Query Execution Time(ms)           : 67
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.010
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.010'
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47726
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47726
+Finished at                        : Tue Sep 17 09:40:26 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:26 EDT 2024
+Creating test case for Row #       : 5466
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 445
+TC Validation status               : PASS
+Short Desc                         : 04 asmnt in not in range of NF
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : Incoming 04 assessment ARD date is after the NF End Date
+Expected Results                   : 04 assessment  is on Pending status
+Test Case ID for Row 5466          : 47727
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5466
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47727' where tc_row = 5466
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5466
+Query Execution Time(ms)           : 591
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.010
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.010'
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47727
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47727
+Finished at                        : Tue Sep 17 09:40:30 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:30 EDT 2024
+Creating test case for Row #       : 5467
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 442
+TC Validation status               : PASS
+Short Desc                         : 04 asmnt in not in range of NF
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : Incoming 04 assessment ARD date is before  NF effective date
+Expected Results                   : 04 assessment  is on Pending status
+Test Case ID for Row 5467          : 47728
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5467
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47728' where tc_row = 5467
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5467
+Query Execution Time(ms)           : 79
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.010
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.010'
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47728
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47728
+Finished at                        : Tue Sep 17 09:40:35 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:35 EDT 2024
+Creating test case for Row #       : 5468
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 48
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 502
+TC Validation status               : PASS
+Short Desc                         : NF segment with EOT and 10/12 asmnt
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : NF MDS segment with EOT as end date, incoming 10/12 assesment with MDS dicharge date after the NF effective date
+Expected Results                   : NF MDS segment is updated with incoming MDS discharge date
+Test Case ID for Row 5468          : 47729
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5468
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47729' where tc_row = 5468
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5468
+Query Execution Time(ms)           : 82
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.015
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.015'
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47729
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47729
+Finished at                        : Tue Sep 17 09:40:39 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:39 EDT 2024
+Creating test case for Row #       : 5469
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 74
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 517
+TC Validation status               : PASS
+Short Desc                         : Mltple MDS records and 04
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : Example, MDS LOC has 01/01/2023-04/31/2023NF 05/01/2023-07/31/2023 X asmnt 04 with ARD 03/01/2023 Y
+Expected Results                   : 01/01/2023-02/28/2023 NF 03/01/2023-05/31/2023 Y 06/01/2023-07/31/2023-X
+Test Case ID for Row 5469          : 47730
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5469
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47730' where tc_row = 5469
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5469
+Query Execution Time(ms)           : 71
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.015
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.015'
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47730
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47730
+Finished at                        : Tue Sep 17 09:40:43 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:43 EDT 2024
+Creating test case for Row #       : 5470
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 421
+TC Validation status               : PASS
+Short Desc                         : NF segment with EOT and 10/12 asmnt
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : NF MDS segment with EOT as end date, incoming 10/12 assesment with MDS dicharge date before the NF effective date
+Expected Results                   : NF MDS segment is not updated with incoming MDS discharge date MDS discharge assessment will be kept in Pending status on the MDS-STATUS table
+Test Case ID for Row 5470          : 47731
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5470
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47731' where tc_row = 5470
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5470
+Query Execution Time(ms)           : 65
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.015
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.015'
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47731
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47731
+Finished at                        : Tue Sep 17 09:40:47 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:47 EDT 2024
+Creating test case for Row #       : 5471
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 440
+TC Validation status               : PASS
+Short Desc                         : NF segment with SC1 Discharge and 10/12 asmnt
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : NF MDS segment with SC1 Discharge , incoming 10/12 assesment with MDS dicharge date
+Expected Results                   : NF MDS segment is not updated with incoming MDS discharge date MDS discharge assessment will be kept in Pending status on the MDS-STATUS table.
+Test Case ID for Row 5471          : 47732
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5471
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47732' where tc_row = 5471
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5471
+Query Execution Time(ms)           : 72
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.015
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.015'
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47732
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47732
+Finished at                        : Tue Sep 17 09:40:52 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:52 EDT 2024
+Creating test case for Row #       : 5472
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 72
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 476
+TC Validation status               : PASS
+Short Desc                         : No MDS and pending asmnts
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : No MDS and pending asmnts 01
+Expected Results                   : No updates to  t_re_mds_loc,t_re_mds_status
+Test Case ID for Row 5472          : 47733
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5472
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47733' where tc_row = 5472
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5472
+Query Execution Time(ms)           : 69
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.020
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.020'
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47733
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47733
+Finished at                        : Tue Sep 17 09:40:57 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:40:57 EDT 2024
+Creating test case for Row #       : 5473
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 546
+TC Validation status               : PASS
+Short Desc                         : No MDS and pending asmnts
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : No MDS and pending asmnts 02/03
+Expected Results                   : No updates to  t_re_mds_loc,t_re_mds_status
+Test Case ID for Row 5473          : 47734
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5473
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47734' where tc_row = 5473
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5473
+Query Execution Time(ms)           : 79
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.020
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.020'
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47734
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47734
+Finished at                        : Tue Sep 17 09:41:01 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:41:01 EDT 2024
+Creating test case for Row #       : 5474
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 440
+TC Validation status               : PASS
+Short Desc                         : No MDS and pending asmnts
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : No MDS and pending asmnts 04
+Expected Results                   : No updates to  t_re_mds_loc,t_re_mds_status
+Test Case ID for Row 5474          : 47735
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5474
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47735' where tc_row = 5474
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5474
+Query Execution Time(ms)           : 69
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.020
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.020'
+Query Execution Time(ms)           : 40
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47735
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47735
+Finished at                        : Tue Sep 17 09:41:06 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:41:06 EDT 2024
+Creating test case for Row #       : 5475
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '38056.01.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 54
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 538
+TC Validation status               : PASS
+Short Desc                         : Incoming 02/03 MDS fully covers the NF segment in MDS LOC with
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : If the incoming 02/03 MDS fully covers the NF segment in MDS LOC with Dischare date
+Expected Results                   : Update the incoming 02/03 and carry over the discharge date of  NF Segment  for the next MDS asmnt.  History the NF segment
+Test Case ID for Row 5475          : 47736
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5475
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47736' where tc_row = 5475
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5475
+Query Execution Time(ms)           : 66
+Total No.of Columns fetched        : 1
+Requirement ID                     : 38056.01.025
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '38056.01.025'
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47736
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47736
+Finished at                        : Tue Sep 17 09:41:10 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:41:10 EDT 2024
+Creating test case for Row #       : 5476
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36939.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '36939.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 484
+TC Validation status               : PASS
+Short Desc                         : Four codes and eff dte 10/01/2023
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Enter 3S,3G,RH, and NF in the MMQ with effective date 10/01/2023
+Expected Results                   : Those entered should be transferred to MDS LOC including NF
+Test Case ID for Row 5476          : 47737
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5476
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47737' where tc_row = 5476
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5476
+Query Execution Time(ms)           : 89
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36939.01.001
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '36939.01.001'
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47737
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47737
+Finished at                        : Tue Sep 17 09:41:15 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:41:15 EDT 2024
+Creating test case for Row #       : 5477
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36939.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '36939.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 450
+TC Validation status               : PASS
+Short Desc                         : Four codes and discharge dte 10/01/2024
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Enter 3S,3G,RH, and NF in the MMQ  that are discharged in 10/01/2023
+Expected Results                   : Those entered should not be transferred to MDS LOC.
+Test Case ID for Row 5477          : 47738
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5477
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47738' where tc_row = 5477
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5477
+Query Execution Time(ms)           : 107
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36939.01.001
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '36939.01.001'
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47738
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47738
+Finished at                        : Tue Sep 17 09:41:19 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:41:19 EDT 2024
+Creating test case for Row #       : 5478
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36939.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '36939.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 485
+TC Validation status               : PASS
+Short Desc                         : Eff and discharge dte as 10/01/2023
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Enter 3S,3G,RH, and NF in the MMQ with effective date 10/01/2023 and discharged on 10/01/2023
+Expected Results                   : N/A
+Test Case ID for Row 5478          : 47739
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5478
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47739' where tc_row = 5478
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5478
+Query Execution Time(ms)           : 70
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36939.01.001
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '36939.01.001'
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47739
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47739
+Finished at                        : Tue Sep 17 09:41:23 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 09:41:23 EDT 2024
+Creating test case for Row #       : 5479
+Function                           : validateTCData()
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36939.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Function                           : executeQuery()
+SQL Statement                      : select case when (select count(*) from requirement e where trim(e.id_req) = '36939.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'MDS') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 445
+TC Validation status               : PASS
+Short Desc                         : Duplicate records
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Enter 3S,3G,RH, and NF in both MDS and MMQ with effective date after 10/01/2023
+Expected Results                   : There should not be a duplictate records in MDS.
+Test Case ID for Row 5479          : 47740
+Function                           : updateLoadTableData()
+Select SQL                         : select * from load_tc where tc_row = 5479
+Column Name                        : TC_ROW
+Update SQL                         : update load_tc set testcase_id = '47740' where tc_row = 5479
+Function                           : executeQuery()
+SQL Statement                      : select * from load_tc where tc_row = 5479
+Query Execution Time(ms)           : 69
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36939.01.001
+Function                           : executeQuery()
+SQL Statement                      : select b.nam req_type, b.sak_req_type from requirement a, requirement_type b where a.sak_req_type = b.sak_req_type and a.id_req = '36939.01.001'
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47740
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47740
+Finished at                        : Tue Sep 17 09:41:27 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 17/Sep/2024 09:41:27AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

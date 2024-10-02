@@ -1,0 +1,61 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 23/May/2023 11:39:59AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 44
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+MIP Username                       : rvattumi
+User Name                          : rvattumilli
+Link Notebook/Business Function    : true
+Link Requirement                   : false
+Link WI/Defect/CO                  : true
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null and rownum < 2 order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 87
+Total No.of Rows                   : 1
+****************************************************
+Started at                         : Tue May 23 11:40:08 EDT 2023
+Creating test case for Row #       : 1896
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'PROVIDER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod POSC') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Validation Time(ms)                : 638
+Validation status                  : PASS
+Short Desc                         : Inquire PAS Request
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : inquire on a previously submitted PAS to confirm whether it has been  approved, denied, or is in process. Click Pre-Admission Screening. Click Inquire/Maintain PAS Request. Validate search results, links, and buttons.
+Expected Results                   : Decision Status as well as the Authorized Days is displayed
+Test Case ID for Row 1896          : 43231
+Query Execution Time(ms)           : 115
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod POSC
+Notebook/BF linked for test case   : 43231
+iWI/Defect/CO                      : 36444
+iWI Type                           : Work Item
+Work Item linked for test case     : 43231
+Finished at                        : Tue May 23 11:40:20 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 23/May/2023 11:40:21AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

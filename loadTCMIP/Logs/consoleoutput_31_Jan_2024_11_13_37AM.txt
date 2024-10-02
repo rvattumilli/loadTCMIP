@@ -1,0 +1,452 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 31/Jan/2024 11:13:37AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2
+Query Execution Time(ms)           : 74
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 149
+Total No.of Rows fetched           : 18
+*****************************************************************
+Started at                         : Wed Jan 31 11:13:45 EST 2024
+Creating test case for Row #       : 4675
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 50
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 512
+Validation status                  : PASS
+Short Desc                         : Benefit Plan Group Type Maintenance
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Plan Group Type Maintenance" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> related data --> Codes --> Benefit Plan Group Type --> Benefit Plan Group Type Maintenance</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4675          : 46998
+Query Execution Time(ms)           : 86
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 46998
+Finished at                        : Wed Jan 31 11:13:49 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:13:49 EST 2024
+Creating test case for Row #       : 4676
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 484
+Validation status                  : PASS
+Short Desc                         : Benefit Plan Group
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Plan Group" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> related data --> Codes --> Benefit Plan Group Type --> Benefit Plan Group</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4676          : 46999
+Query Execution Time(ms)           : 104
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 46999
+Finished at                        : Wed Jan 31 11:13:52 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:13:52 EST 2024
+Creating test case for Row #       : 4677
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 478
+Validation status                  : PASS
+Short Desc                         : Benefit Plan Group Maintenance
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Plan Group Maintenance" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> related data --> Codes --> Benefit Plan Group Type --> Benefit Plan Group Maintenance</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4677          : 47000
+Query Execution Time(ms)           : 76
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47000
+Finished at                        : Wed Jan 31 11:13:56 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:13:56 EST 2024
+Creating test case for Row #       : 4678
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 762
+Validation status                  : PASS
+Short Desc                         : Benefit Adjustment Factor Maintenance
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Adjustment Factor Maintenance" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> related data --> Other --> Benefit Adjustment Factor --> Benefit Adjustment Factor Maintenance</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4678          : 47001
+Query Execution Time(ms)           : 78
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47001
+Finished at                        : Wed Jan 31 11:14:00 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:00 EST 2024
+Creating test case for Row #       : 4679
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 452
+Validation status                  : PASS
+Short Desc                         : Benefit Adjustment Factor Rate
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Adjustment Factor Rate" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> related data --> Other --> Benefit Adjustment Factor --> Benefit Adjustment Factor Rate</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4679          : 47002
+Query Execution Time(ms)           : 67
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47002
+Finished at                        : Wed Jan 31 11:14:03 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:03 EST 2024
+Creating test case for Row #       : 4680
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 524
+Validation status                  : PASS
+Short Desc                         : Benefit Adjustment Factor Rate Maintenance
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Adjustment Factor Rate Maintenance" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> related data --> Other --> Benefit Adjustment Factor --> Benefit Adjustment Factor Rate Maintenance</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4680          : 47003
+Query Execution Time(ms)           : 84
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47003
+Finished at                        : Wed Jan 31 11:14:07 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:07 EST 2024
+Creating test case for Row #       : 4681
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 54
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 499
+Validation status                  : PASS
+Short Desc                         : Contract Benefit Plan Coverage Maintenance
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Contract Benefit Plan Coverage Maintenance" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> related data --> Xref --> Contract Benefit Plan Coverage --> Contract Benefit Plan Coverage Maintenance</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4681          : 47004
+Query Execution Time(ms)           : 91
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47004
+Finished at                        : Wed Jan 31 11:14:11 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:11 EST 2024
+Creating test case for Row #       : 4682
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 746
+Validation status                  : PASS
+Short Desc                         : Benefit Classification Maintenance
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Classification Maintenance" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Benefit Classification --> Benefit Classification --> Benefit Classification Maintenance</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4682          : 47005
+Query Execution Time(ms)           : 81
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47005
+Finished at                        : Wed Jan 31 11:14:15 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:15 EST 2024
+Creating test case for Row #       : 4683
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 485
+Validation status                  : PASS
+Short Desc                         : Benefit Classification Coverage
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Classification Coverage" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Benefit Classification --> Benefit Classification --> Benefit Classification Coverage</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4683          : 47006
+Query Execution Time(ms)           : 64
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47006
+Finished at                        : Wed Jan 31 11:14:18 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:18 EST 2024
+Creating test case for Row #       : 4684
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 462
+Validation status                  : PASS
+Short Desc                         : Benefit Classification Group
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Classification Group" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Benefit Classification --> Benefit Classification --> Benefit Classification Coverage --> Benefit Classification Group</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4684          : 47007
+Query Execution Time(ms)           : 68
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47007
+Finished at                        : Wed Jan 31 11:14:21 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:21 EST 2024
+Creating test case for Row #       : 4685
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 522
+Validation status                  : PASS
+Short Desc                         : Benefit Classification SubGroup
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Classification SubGroup" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Benefit Classification --> Benefit Classification --> Benefit Classification Coverage --> Benefit Classification SubGroup</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4685          : 47008
+Query Execution Time(ms)           : 87
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47008
+Finished at                        : Wed Jan 31 11:14:25 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:25 EST 2024
+Creating test case for Row #       : 4686
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 469
+Validation status                  : PASS
+Short Desc                         : Benefit Classification Benefits
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Classification Benefits" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Benefit Classification --> Benefit Classification --> Benefit Classification Coverage --> Benefit Classification Benefits</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4686          : 47009
+Query Execution Time(ms)           : 70
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47009
+Finished at                        : Wed Jan 31 11:14:29 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:29 EST 2024
+Creating test case for Row #       : 4687
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 500
+Validation status                  : PASS
+Short Desc                         : Benefit Classification Split
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Classification Split" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Benefit Classification --> Benefit Classification --> Benefit Classification Coverage --> Benefit Classification Split</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4687          : 47010
+Query Execution Time(ms)           : 73
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47010
+Finished at                        : Wed Jan 31 11:14:33 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:33 EST 2024
+Creating test case for Row #       : 4688
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 478
+Validation status                  : PASS
+Short Desc                         : Benefit Coverage
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Coverage" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Member Plan --> Member Plan --> Benefit Coverage</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4688          : 47011
+Query Execution Time(ms)           : 74
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47011
+Finished at                        : Wed Jan 31 11:14:36 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:36 EST 2024
+Creating test case for Row #       : 4689
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 502
+Validation status                  : PASS
+Short Desc                         : Benefit Plan Coverage Rules
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Plan Coverage Rules" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Member Plan --> Member Plan --> Benefit Coverage --> Benefit Plan Coverage Rules</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4689          : 47012
+Query Execution Time(ms)           : 74
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47012
+Finished at                        : Wed Jan 31 11:14:40 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:40 EST 2024
+Creating test case for Row #       : 4690
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 48
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 495
+Validation status                  : PASS
+Short Desc                         : Benefit Plan Coverage Summary
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Plan Coverage Summary" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Member Plan --> Member Plan --> Benefit Coverage --> Benefit Plan Coverage Summary</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4690          : 47013
+Query Execution Time(ms)           : 66
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47013
+Finished at                        : Wed Jan 31 11:14:44 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:44 EST 2024
+Creating test case for Row #       : 4691
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 503
+Validation status                  : PASS
+Short Desc                         : Benefit Plan COB Maintenance
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Plan COB Maintenance" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Member Plan --> Benefit Plan COB --> Benefit Plan COB Maintenance</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4691          : 47014
+Query Execution Time(ms)           : 65
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47014
+Finished at                        : Wed Jan 31 11:14:47 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 31 11:14:47 EST 2024
+Creating test case for Row #       : 4692
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Reference') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'REFERENCE PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Dev Mod Base App') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 469
+Validation status                  : PASS
+Short Desc                         : Benefit Plan Hierarchy Maintenance
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 639
+Owner                              : RABIK SHRESTHA
+Grouping                           : REFERENCE PANELS
+Long Desc                          : Verify Panel: "Benefit Plan Hierarchy Maintenance" is accessible or not. If the panel accepts inputs, verify input and click search or save the data.  If input data is valid than it generates data/reports.  <b> Path: MMIS --> Reference --> benefit administration --> - Member Plan --> Benefit Plan Hierarchy --> Benefit Plan Hierarchy Maintenance</b>
+Expected Results                   : Verify panel is accessible and data is displayed or reports are generated.
+Test Case ID for Row 4692          : 47015
+Query Execution Time(ms)           : 81
+Total No.of Columns fetched        : 1
+Notebook                           : Dev Mod Testing
+Business Function                  : Dev Mod Base App
+Notebook/BF linked for test case   : 47015
+Finished at                        : Wed Jan 31 11:14:51 EST 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 31/Jan/2024 11:14:51AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

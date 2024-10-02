@@ -1,0 +1,1820 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 17/Aug/2023 03:47:37PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 66
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 101
+Total No.of Rows                   : 85
+*****************************************************************
+Started at                         : Thu Aug 17 15:47:46 EDT 2023
+Creating test case for Row #       : 4129
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 412
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Member data to Accenture
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Member data to Accenture, eld06540.xml.XXXX, is produced by job ELGJD065. File is transferred
+Expected Results                   : Verify File eld06540.xml.XXXX is produced in $DATADIR. Verify file is  moved to /cb/data/<env>//acnmember/outfiles, to be sent to Accenture.Verify job ELGJD065 completed sucessfully
+Test Case ID for Row 4129          : 45939
+Query Execution Time(ms)           : 52
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45939
+Finished at                        : Thu Aug 17 15:47:49 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:47:49 EDT 2023
+Creating test case for Row #       : 4130
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 402
+Validation status                  : PASS
+Short Desc                         : Cloud mig - TPL Carrier file data from MMIS to Accenture
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : TPL Carrier file data from MMIS to Accenture, tpm90201.xml.9999, is produced by job TPLJM902. File is transferred
+Expected Results                   : Verify File tpm90201.xml.9999  is produced in $DATADIR. Verify file is moved to /cb/data/<env>/acncarrier/outfiles, to be sent to Accenture.Verify jobTPLJM902  completed sucessfully
+Test Case ID for Row 4130          : 45940
+Query Execution Time(ms)           : 51
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45940
+Finished at                        : Thu Aug 17 15:47:51 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:47:51 EDT 2023
+Creating test case for Row #       : 4131
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 377
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Denied medical claims from MMIS to Accenture
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Denied medical claims from MMIS to Accenture, prd05501.xml.XXXX, is produced by job CLMJD4502. File is transferred
+Expected Results                   : Verify File prd05501.xml.XXXX is produced in $DATADIR. Verify file is moved to /cb/data/<env>/acnclaims/outfiles, to be sent to Accenture.Verify job CLMJD4502 completed sucessfully.
+Test Case ID for Row 4131          : 45941
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45941
+Finished at                        : Thu Aug 17 15:47:54 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:47:54 EDT 2023
+Creating test case for Row #       : 4132
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 416
+Validation status                  : PASS
+Short Desc                         : Cloud mig - ACS- POPS Member Update
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : ACS- POPS Member Update  File, eld05501.xml.G<9999>, is produced by job ELGJD055. File is transferred
+Expected Results                   : Verify File eld05501.xml.G<9999> is produced in $DATADIR. Verify file is moved to /cb/data/<env>/mmispharmacy/outfiles.Verify Job ELGJD055  completed sucessfully.
+Test Case ID for Row 4132          : 45942
+Query Execution Time(ms)           : 64
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45942
+Finished at                        : Thu Aug 17 15:47:57 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:47:57 EDT 2023
+Creating test case for Row #       : 4133
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 379
+Validation status                  : PASS
+Short Desc                         : Cloud mig - ACS- POPS Non-Pharmacy Claims(Job  CLMJD450 )
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : ACS- POPS Non-Pharmacy File, cld45011.xml.G<9999>, is produced by job CLMJD450. File is transferred
+Expected Results                   : Verify File cld45011.xml.G<9999> is produced in $DATADIR. Verify file is moved to /cb/data/<env>/mmispharmacy/outfiles.Verify Job ELGJD055  completed sucessfully.
+Test Case ID for Row 4133          : 45943
+Query Execution Time(ms)           : 52
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45943
+Finished at                        : Thu Aug 17 15:48:00 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:00 EDT 2023
+Creating test case for Row #       : 4134
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 372
+Validation status                  : PASS
+Short Desc                         : Cloud mig - ACS- POPS Provider Update  (Job  PRVJD055)
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : ACS- POPS Provider Update  File, prd05501.xml.G<9999>, is produced by job PRVJD055. File is transferred
+Expected Results                   : Verify File prd05501.xml.G<9999> is produced in $DATADIR. Verify file is moved to /cb/data/<env>/mmispharmacy/outfiles.Verify Job PRVJD055 processes the file.
+Test Case ID for Row 4134          : 45944
+Query Execution Time(ms)           : 51
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45944
+Finished at                        : Thu Aug 17 15:48:03 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:03 EDT 2023
+Creating test case for Row #       : 4135
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 371
+Validation status                  : PASS
+Short Desc                         : Cloud mig - ACS- POPS Paid and denied pharmacy claim
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : ACS- POPS Paid and denied pharmacy claim file, cld49001.xml is processed by the job CLMJD490
+Expected Results                   : Verify the file cld49001.xml  is moved from folder /cb/data/<env>/mmispharmacy/infiles to $DATADIR for processing. Verify the job CLMJD490  Process the file.
+Test Case ID for Row 4135          : 45945
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45945
+Finished at                        : Thu Aug 17 15:48:06 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:06 EDT 2023
+Creating test case for Row #       : 4136
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 404
+Validation status                  : PASS
+Short Desc                         : Cloud mig - ACS- POPS Claim information for NewMMIS to perform administrative adjustments due to member link activity
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : ACS- POPS Claim information for NewMMIS to perform administrative adjustments due to member link activity,file cld00201.xml is processed
+Expected Results                   : Verify the file  cld00201.xml  is moved from folder /cb/data/<env>/mmispharmacy/infiles to $DATADIR for processing. Verify the job CRLJD002  process the file.
+Test Case ID for Row 4136          : 45946
+Query Execution Time(ms)           : 63
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45946
+Finished at                        : Thu Aug 17 15:48:09 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:09 EDT 2023
+Creating test case for Row #       : 4137
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 444
+Validation status                  : PASS
+Short Desc                         : Cloud mig - CMS Part A Daily
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : CMS Part A Daily File,biadsjd1.dat.G<9999>, is produced. File is transferred
+Expected Results                   : Verify the  file biadsjd1.dat.G<9999> is produced in $DATADIR. Verify file is moved to /cd/data/<env>/cms/outbound.
+Test Case ID for Row 4137          : 45947
+Query Execution Time(ms)           : 50
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45947
+Finished at                        : Thu Aug 17 15:48:12 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:12 EDT 2023
+Creating test case for Row #       : 4138
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 381
+Validation status                  : PASS
+Short Desc                         : Cloud mig -CMS Part A Monthly
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : CMS Part A Monthly File , biamsjc1.dat.G<9999>, is produced. File is transferred
+Expected Results                   : Verify File biamsjc1.dat.G<9999> is produced in $DATADIR. Verify file is moved to /cd/data/<env>/cms/outbound.
+Test Case ID for Row 4138          : 45948
+Query Execution Time(ms)           : 50
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45948
+Finished at                        : Thu Aug 17 15:48:14 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:14 EDT 2023
+Creating test case for Row #       : 4139
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 382
+Validation status                  : PASS
+Short Desc                         : Cloud mig - CMS Part B  Monthly
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : CMS Part B  Monthly file , bibmsja1dat.G<9999>, is produced. File is transferred
+Expected Results                   : Verify file  bibmsja1dat.G<9999> is produced in $DATADIR. Verify file is moved to /cd/data/<env>/cms/outbound.
+Test Case ID for Row 4139          : 45949
+Query Execution Time(ms)           : 51
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45949
+Finished at                        : Thu Aug 17 15:48:17 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:17 EDT 2023
+Creating test case for Row #       : 4140
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 377
+Validation status                  : PASS
+Short Desc                         : Cloud mig - CMS Medicare A, B, C, and D coverage information
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : CMS Medicare A, B, C, and D coverage information File, elm65001.dat, is received and processed by job ELGJM650
+Expected Results                   : Verify the file elm65001.dat,is moved from folder /cd/data/<env>/cms/inbound to  $DATADIR for processing. Verify the job ELGJM650 processes the file.
+Test Case ID for Row 4140          : 45950
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45950
+Finished at                        : Thu Aug 17 15:48:20 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:20 EDT 2023
+Creating test case for Row #       : 4141
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 380
+Validation status                  : PASS
+Short Desc                         : Cloud mig - CMS Buy in B Response files
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : CMS Buy in B Response files File, bibdrjd1.dat, is received and processed.
+Expected Results                   : Verify the file bibdrjd1.dat is moved to from the folder /cd/data/<env>/cms/inbound  to $DATADIR for processing.
+Test Case ID for Row 4141          : 45951
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45951
+Finished at                        : Thu Aug 17 15:48:23 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:23 EDT 2023
+Creating test case for Row #       : 4142
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 371
+Validation status                  : PASS
+Short Desc                         : Cloud mig - CMS Eligibility Responses (ERF)  by COBA ID
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : CMS Eligibility Responses (ERF)  by COBA ID File, E01_ELIG_RESP_NEWMMIS, is received and processed.
+Expected Results                   : Verify the file E01_ELIG_RESP_NEWMMIS is moved from folder /cd/data/<env>/cms/inbound to $DATADIR for processing  .
+Test Case ID for Row 4142          : 45952
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45952
+Finished at                        : Thu Aug 17 15:48:26 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:26 EDT 2023
+Creating test case for Row #       : 4143
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 396
+Validation status                  : PASS
+Short Desc                         : Cloud mig - CMS Part A Claims in Version 5010  all COBA IDs
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : CMS Part A Claims in Version 5010  all COBA IDs File, GHI_INST_CLAIMS_NEWMMIS, is received and processed.
+Expected Results                   : Verify the file GHI_INST_CLAIMS_NEWMMIS is moved from folder /cd/data/prod/<env>/cms/inbound to $DATADIR for processing .
+Test Case ID for Row 4143          : 45953
+Query Execution Time(ms)           : 61
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45953
+Finished at                        : Thu Aug 17 15:48:29 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:29 EDT 2023
+Creating test case for Row #       : 4144
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 410
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Maximus Member Data to CST
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Maximus Member Data to CST File, eld06301.xml.9999, is processed  by ELGJD063
+Expected Results                   : Verify the file eld06301.xml.9999 is procuded in $DATADIR. Verify file is  moved to the folder   /cb/data/<env>/maxmember/outfiles. Verify the job ELGJD063 completed sucessfully.
+Test Case ID for Row 4144          : 45954
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45954
+Finished at                        : Thu Aug 17 15:48:32 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:32 EDT 2023
+Creating test case for Row #       : 4145
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 394
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Maximus Outreach Data - with Managed Care Plans
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Maximus Outreach Data - with Managed Care Plans File, mgd06761.xml.9999, is processed  by job MGDJD676
+Expected Results                   : Verify the file mgd06761.xml.9999 is produced in $DATADIR. Verify the file is then moved to the folder   /cb/data/<env>/maxoutreach/outfiles. Verify the job MGDJD676 completed sucessfully.
+Test Case ID for Row 4145          : 45955
+Query Execution Time(ms)           : 52
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45955
+Finished at                        : Thu Aug 17 15:48:34 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:34 EDT 2023
+Creating test case for Row #       : 4146
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 377
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Maximus Imaging Data from CST.
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Maximus Imaging Data from CST. File, 9999999999999.tif where the 9s are the claim ICN
+Expected Results                   : Verify the file is moved from this folder  /cb/data/<env>/maximagedata/infiles to $DATADIR for processing.
+Test Case ID for Row 4146          : 45956
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45956
+Finished at                        : Thu Aug 17 15:48:37 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:37 EDT 2023
+Creating test case for Row #       : 4147
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 374
+Validation status                  : PASS
+Short Desc                         : Cloud mig - DDS Response to DMR on Member data
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : DDS Response to DMR on Member data  File, elgpd057.xml.9999, is processed by ELGJD057
+Expected Results                   : Verify the file elgpd057.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder /cb/data/<env>/dmrmember/outfiles. Verify the job ELGJD057 completed sucessfully.
+Test Case ID for Row 4147          : 45957
+Query Execution Time(ms)           : 65
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45957
+Finished at                        : Thu Aug 17 15:48:40 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:40 EDT 2023
+Creating test case for Row #       : 4148
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 360
+Validation status                  : PASS
+Short Desc                         : Cloud mig - DentaQuest TPL Carrier file data from MMIS to DentaQuest
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : DentaQuest TPL Carrier file data from MMIS to DentaQuest  File, tpm90201.xml.9999, is processed by TPLJM902
+Expected Results                   : Verify the file tpm90201.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder  /cb/data/<env>/dentaltpl/outfiles. Verify the job TPLJM902 completed sucessfully.
+Test Case ID for Row 4148          : 45958
+Query Execution Time(ms)           : 65
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45958
+Finished at                        : Thu Aug 17 15:48:43 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:43 EDT 2023
+Creating test case for Row #       : 4149
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 394
+Validation status                  : PASS
+Short Desc                         : Cloud mig - DentaQuest Status of Claims sent by DentaQuest
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : DentaQuest Status of Claims sent by DentaQuest File, clw50014.xml.9999, is processed by CLMJW520
+Expected Results                   : Verify the file clw50014.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder  /cb/data/<env>/dentalclms/outfiles. Verify the job CLMJW520 completed sucessfully.
+Test Case ID for Row 4149          : 45959
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45959
+Finished at                        : Thu Aug 17 15:48:46 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:46 EDT 2023
+Creating test case for Row #       : 4150
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 382
+Validation status                  : PASS
+Short Desc                         : Cloud mig - DentaQuest oral dental claim files
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : DentaQuest oral dental claim  File, clw50010.xml.9999, is received and processed by CLMJW500
+Expected Results                   : Verify the file clw50010.xml.9999 is moved from folder  /cb/data/<env>/dentalclms/infiles  to $DATADIR for processing. Verify the job  CLMJW500  processes the file.
+Test Case ID for Row 4150          : 45960
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45960
+Finished at                        : Thu Aug 17 15:48:48 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:48 EDT 2023
+Creating test case for Row #       : 4151
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'EPSDT') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 384
+Validation status                  : PASS
+Short Desc                         : Cloud mig - DPH oral dental claim files
+Env                                : M
+Subsystem                          : EPSDT
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : DPH oral dental claim File, epspq001.xml.9999.DAT and epspq001.xml.9999.INF ,  processed by EPSJQ001
+Expected Results                   : Verify the fileepspq001.xml.9999.DAT and epspq001.xml.9999.INF are produced in $DATADIR. Verify the files are  moved to the folder  /cb/data/<env>/dphwicrecipientssfddphwic/outfiles. Verify the job EPSJQ001 completed sucessfully.
+Test Case ID for Row 4151          : 45961
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45961
+Finished at                        : Thu Aug 17 15:48:51 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:51 EDT 2023
+Creating test case for Row #       : 4152
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 620
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Evicore Provider data file
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Evicore Provider data file, prd05501.xml.9999 ,  processed by PRVJD055
+Expected Results                   : Verify the file  prd05501.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder /cb/data/<env>/eviprovider/outfiles. Job PRVJD055 processed sucessfully
+Test Case ID for Row 4152          : 45962
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45962
+Finished at                        : Thu Aug 17 15:48:54 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:54 EDT 2023
+Creating test case for Row #       : 4153
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 377
+Validation status                  : PASS
+Short Desc                         : Cloud mig - GHI Institutional Claims
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : GHI Institutional Claims file, GHI_INST_CLAIMS_NEWMMIS is received and processed.
+Expected Results                   : Verify the file GHI_INST_CLAIMS_NEWMMIS  is moved from folder  /cd/data/<env>/ghi/inbound to $DATADIR for processing. The file processed sucessfully.
+Test Case ID for Row 4153          : 45963
+Query Execution Time(ms)           : 57
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45963
+Finished at                        : Thu Aug 17 15:48:57 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:48:57 EDT 2023
+Creating test case for Row #       : 4154
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 23
+Validation Time(ms)                : 363
+Validation status                  : PASS
+Short Desc                         : Cloud mig - GHI Medicare eligibility acknowledgment
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : GHI Medicare eligibility acknowledgment file, E01_ELIG_ACK_NEWMMIS is received and processed
+Expected Results                   : Verify the file  E01_ELIG_ACK_NEWMMIS is moved from folder  /cd/data/<env>/ghi/inbound to $DATADIR for processing. The file processed sucessfully.
+Test Case ID for Row 4154          : 45964
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45964
+Finished at                        : Thu Aug 17 15:49:00 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:00 EDT 2023
+Creating test case for Row #       : 4155
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 370
+Validation status                  : PASS
+Short Desc                         : Cloud mig - HCF Member Data
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : HCF Member Data  file, eld05901.xml.9999, processed by the job ELGJD059
+Expected Results                   : Verify the file  eld05901.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder   /cb/data/<env>/hcfmember/outfiles. The job ELGJD059 completed sucessfully.
+Test Case ID for Row 4155          : 45965
+Query Execution Time(ms)           : 67
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45965
+Finished at                        : Thu Aug 17 15:49:03 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:03 EDT 2023
+Creating test case for Row #       : 4156
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 380
+Validation status                  : PASS
+Short Desc                         : Cloud mig - HMS/Gainwell Tech-was Permedion) Provider data
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : HMS/Gainwell Tech-was Permedion) Provider data  file, tpr90001.xml.9999, processed by the job TPLJR900
+Expected Results                   : Verify the file  tpr90001.xml.9999 is produced in $DATADIR. Verify the file is then moved to the folder  /cb/data/<env>/hmsprov/outfiles.  The job  TPLJR900  completed sucessfully.
+Test Case ID for Row 4156          : 45966
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45966
+Finished at                        : Thu Aug 17 15:49:05 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:05 EDT 2023
+Creating test case for Row #       : 4157
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 366
+Validation status                  : PASS
+Short Desc                         : Cloud mig - HMS/Gainwell Tech-was Permedion) PAS Claims for Review
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : HMS/Gainwell Tech-was Permedion) PAS Claims for Review  file,clw46010.xml.9999, processed by the job ??
+Expected Results                   : Verify the file clw46010.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder  /cb/data/<env>/hmspasclms/outfiles.
+Test Case ID for Row 4157          : 45967
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45967
+Finished at                        : Thu Aug 17 15:49:08 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:08 EDT 2023
+Creating test case for Row #       : 4158
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 409
+Validation status                  : PASS
+Short Desc                         : Cloud mig - MA-21 ( Mass Alliance for 21st Century Disability Policy) Member Data
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : MA-21 ( Mass Alliance for 21st Century Disability Policy) Member Data file,eld06210.xml, processed by the job ??
+Expected Results                   : Verify the file eld06210.xml is produced in $DATADIR. Verify the file is  moved to the folder /cb/data/prod/dmamember/outfiles.
+Test Case ID for Row 4158          : 45968
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45968
+Finished at                        : Thu Aug 17 15:49:11 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:11 EDT 2023
+Creating test case for Row #       : 4159
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 382
+Validation status                  : PASS
+Short Desc                         : Cloud mig - MA-21 ( Mass Alliance for 21st Century Disability Policy) SDX File from SSA
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : MA-21 ( Mass Alliance for 21st Century Disability Policy) SDX File from SSA file,eld21000.xml.9999, processed by the job ELGJD210
+Expected Results                   : Verify the file is eld21000.xml.9999 is moved from the folder /cb/data/<env>/ma21sdx/infiles to $DATADIR for processing.  Verify the job ELGJD210  process the file.
+Test Case ID for Row 4159          : 45969
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45969
+Finished at                        : Thu Aug 17 15:49:14 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:14 EDT 2023
+Creating test case for Row #       : 4160
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 389
+Validation status                  : PASS
+Short Desc                         : Cloud mig -Mass Pro System Utilization Review data to MassPro (now Permedion)
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : Mass Pro System Utilization Review data to MassPro (now Permedion) File, clw46010.xml.9999 , processed by the job CLMJD460
+Expected Results                   : Verify the file clw46010.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder ??? Verify the job CLMJD460 completed sucessfully.
+Test Case ID for Row 4160          : 45970
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45970
+Finished at                        : Thu Aug 17 15:49:16 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:16 EDT 2023
+Creating test case for Row #       : 4161
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Finance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 398
+Validation status                  : PASS
+Short Desc                         : Cloud mig -MH Finance,Systems Payout File from MassHealth Finance Unit
+Env                                : M
+Subsystem                          : Finance
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : MH Finance,Systems Payout File from MassHealth Finance Unit File, finjr704.xml , processed by the job FINJR704
+Expected Results                   : Verify the file finjr704.xml  is moved from the folder /cb/data/<env>/sfdsyspayout/infiles to  $DATADIR for processing. Verify the job  FINJR704 processes the file.
+Test Case ID for Row 4161          : 45971
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45971
+Finished at                        : Thu Aug 17 15:49:19 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:19 EDT 2023
+Creating test case for Row #       : 4162
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Prior Auth') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 374
+Validation status                  : PASS
+Short Desc                         : Cloud mig -PA data to Netereveal
+Env                                : M
+Subsystem                          : Prior Auth
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : PA data to Netereveal, pad07001.xml.9999 , processed by the job PAUPD070
+Expected Results                   : Verify the file pad07001.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder  /dnr/<env>/data/MMIS/tonetreveal. Verify job PAUPD070 completed sucessfully.
+Test Case ID for Row 4162          : 45972
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45972
+Finished at                        : Thu Aug 17 15:49:22 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:22 EDT 2023
+Creating test case for Row #       : 4163
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 413
+Validation status                  : PASS
+Short Desc                         : Cloud mig -Paid Claims data to Netreveal
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : Paid Claims data to Netreveal, tpw90001.xml.9999, processed by the job TPLJW900
+Expected Results                   : Verify the file tpw90001.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder  /dnr/<env>/data/MMIS/tonetreveal. Verify the job TPLJW900 completed sucessfully.
+Test Case ID for Row 4163          : 45973
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45973
+Finished at                        : Thu Aug 17 15:49:25 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:25 EDT 2023
+Creating test case for Row #       : 4164
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Internal Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 379
+Validation status                  : PASS
+Short Desc                         : Cloud mig -Response file from Netreveal
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Internal Interfaces
+Long Desc                          : Response file from Netreveal,file cld57010.xml.9999,is received and  processed by the job CLMJD570
+Expected Results                   : Verify the file cld57010.xml.9999 is moved from folder  /dnr/<env>/data/MMIS/fromnetreveal  to  $DATADIR ,Verify the job CLMJD570 processes the file.
+Test Case ID for Row 4164          : 45974
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45974
+Finished at                        : Thu Aug 17 15:49:28 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:28 EDT 2023
+Creating test case for Row #       : 4165
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 393
+Validation status                  : PASS
+Short Desc                         : Cloud mig -Provider Data to OPTUM
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Provider Data to OPTUM, prd05501.xml.9999, processed by the job PRVJD055
+Expected Results                   : Verify the file prd05501.xml.9999 is produced in $DATADIR. Verify the file is  moved to the folder  /cb/data/<env>/mmisoptum/outfiles. Verify the job PRVJD055 completed sucessfully.
+Test Case ID for Row 4165          : 45975
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45975
+Finished at                        : Thu Aug 17 15:49:30 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:30 EDT 2023
+Creating test case for Row #       : 4166
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 391
+Validation status                  : PASS
+Short Desc                         : Cloud mig -Bank and EFT Data from MMARS
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Bank and EFT Data from MMARS, file prw37001.dat.9999,is received and  processed by the job PRVJW370
+Expected Results                   : Verify the file finj70310.xml.9999,  is moved from folder  /cb/data/<env>/nmmarsloadx/infiles to  $DATADIR ,Verify the job FINJR703 processes the file.
+Test Case ID for Row 4166          : 45976
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45976
+Finished at                        : Thu Aug 17 15:49:33 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:33 EDT 2023
+Creating test case for Row #       : 4167
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Finance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 370
+Validation status                  : PASS
+Short Desc                         : Cloud mig -Payment Requests (GXM) to MMARS
+Env                                : M
+Subsystem                          : Finance
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Payment Requests (GXM) to MMARS, fid70603.xml.9999, processed by the job FINJR_GXM
+Expected Results                   : Verify the file fid70603.xml.9999 is produced in $DATADIR. Verify the file is moved to the folder   /cb/data/prod/nmarsload/outfiles, Verify the job FINJR_GXM completed sucessfully.
+Test Case ID for Row 4167          : 45977
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45977
+Finished at                        : Thu Aug 17 15:49:36 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:36 EDT 2023
+Creating test case for Row #       : 4168
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Finance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 405
+Validation status                  : PASS
+Short Desc                         : Cloud mig -Status Return from MMARS via MA21
+Env                                : M
+Subsystem                          : Finance
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Status Return from MMARS via MA21, finj70310.xml.9999, processed by the job FINJR703
+Expected Results                   : Verify the file finj70310.xml.9999,  is moved from folder  /cb/data/<env>/nmmarsloadx/infiles to  $DATADIR ,Verify the job FINJR703 processes the file.
+Test Case ID for Row 4168          : 45978
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45978
+Finished at                        : Thu Aug 17 15:49:39 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:39 EDT 2023
+Creating test case for Row #       : 4169
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 50
+Validation Time(ms)                : 424
+Validation status                  : PASS
+Short Desc                         : Cloud mig -Vendor Customer Creation (VCC)  to MMARS
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Vendor Customer Creation (VCC)  to MMARS, prv31050.xml.9999, processed by the job PRVJW310
+Expected Results                   : Verify the file prv31050.xml.9999 is produced in $DATADIR. Verify the file is then moved to the folder   /cb/data/<env>/nmarsload/outfiles. Verify the  job PRVJW310 completed sucessfully.
+Test Case ID for Row 4169          : 45979
+Query Execution Time(ms)           : 50
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45979
+Finished at                        : Thu Aug 17 15:49:41 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:41 EDT 2023
+Creating test case for Row #       : 4170
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 374
+Validation status                  : PASS
+Short Desc                         : Cloud mig -UMASS/ITD Member Data to ARTS, Appeals and ERU
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : UMASS/ITD Member Data to ARTS, Appeals and ERU, eld06540.xml.dat, processed by the job ELGJD065
+Expected Results                   : Verify the file eld06540.xml.dat is produced in $DATADIR. Verify the file is  moved to the folder /cb/data/<env>/memberdata/outfiles. Verify the job ELGJD065 completed sucessfully.
+Test Case ID for Row 4170          : 45980
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45980
+Finished at                        : Thu Aug 17 15:49:44 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:44 EDT 2023
+Creating test case for Row #       : 4171
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 378
+Validation status                  : PASS
+Short Desc                         : Cloud mig -UMASS/ITD Medicare Buy-In Billing file
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : UMASS/ITD Medicare Buy-In Billing file , biadrjd1.dat.9999* / bibdrjd1.dat.9999*, processed by the job BUYJD193
+Expected Results                   : Verify the file biadrjd1.dat.9999* / bibdrjd1.dat.9999* is produced in $DATADIR. Verify the file is  moved to the folder /cb/data/<env>/umsmedibuyin/outfiles. Verify the job BUYJD193 completed sucessfully.
+Test Case ID for Row 4171          : 45981
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45981
+Finished at                        : Thu Aug 17 15:49:47 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:47 EDT 2023
+Creating test case for Row #       : 4172
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 363
+Validation status                  : PASS
+Short Desc                         : Cloud mig -UMASS/ITD SDX
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : UMASS/ITD SDX , eld21000.*.DAT, processed by the job ELDJM191
+Expected Results                   : Verify the file eld21000.*.DAT is produced in $DATADIR. Verify the file is  moved to the folder  /cb/data/<env>/umssdx/outfiles. Verify the job ELDJM191 completed sucessfully.
+Test Case ID for Row 4172          : 45982
+Query Execution Time(ms)           : 50
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45982
+Finished at                        : Thu Aug 17 15:49:50 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:50 EDT 2023
+Creating test case for Row #       : 4173
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 364
+Validation status                  : PASS
+Short Desc                         : Cloud mig -UMASS/ITD Medicare Monthly Retro Report
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : UMASS/ITD Medicare Monthly Retro Report , elm16001.dat*, elm16002.dat*, processed by the job ??
+Expected Results                   : Verify the files elm16001.dat*, elm16002.dat*are produced in $DATADIR. Verify the files are then moved to the folder  /cb/data/<env>/umsmediretro/outfiles.
+Test Case ID for Row 4173          : 45983
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45983
+Finished at                        : Thu Aug 17 15:49:53 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:53 EDT 2023
+Creating test case for Row #       : 4174
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 390
+Validation status                  : PASS
+Short Desc                         : Cloud mig -CMS/GHI Eligibility response file to Umass
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : CMS/GHI Eligibility response file to Umass, E01_ELIG_RESP_NEWMMIS.DAT (ConnectDirect GHI to UMASS transfer as-is), processed by the job ??
+Expected Results                   : Verify the file E01_ELIG_RESP_NEWMMIS.DAT is  produced in $DATADIR. Verify the file is moved to the folder   /cb/data/<env>/umsmediretro/outfiles.
+Test Case ID for Row 4174          : 45984
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45984
+Finished at                        : Thu Aug 17 15:49:55 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:55 EDT 2023
+Creating test case for Row #       : 4175
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 374
+Validation status                  : PASS
+Short Desc                         : Cloud mig -UMASS/ITD Denied Claims data to Estate Recovery Unit (ERU)
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : UMASS/ITD Denied Claims data to Estate Recovery Unit (ERU) file , tpl0470c.xml.9999(Denied) , processed by the TPLJR470
+Expected Results                   : Verify the file tpl0470c.xml.9999 is  produced in $DATADIR. Verify the file is  moved to the folder   /cb/data/<env>/estateclaims/outfiles. Verify the job TPLJR470 is processed sucessfully.
+Test Case ID for Row 4175          : 45985
+Query Execution Time(ms)           : 67
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45985
+Finished at                        : Thu Aug 17 15:49:58 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:49:58 EDT 2023
+Creating test case for Row #       : 4176
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 391
+Validation status                  : PASS
+Short Desc                         : Cloud mig -Data warehouse Part D Letter File
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : External Interfaces
+Long Desc                          : Data warehouse Part D Letter File file , elm06701.dat , is received and processed by the TPL
+Expected Results                   : Verify the file elm06701.dat is moved from folder /cb/data/<env>/mmisdwpartd/infiles to $DATADIR for processing.
+Test Case ID for Row 4176          : 45986
+Query Execution Time(ms)           : 59
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45986
+Finished at                        : Thu Aug 17 15:50:01 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:01 EDT 2023
+Creating test case for Row #       : 4177
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 362
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Provider data to Accenture
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Provider data file to Accenture, prd05501.xml.XXXX, is produced by job PRVJD055. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//acnprovider/outfiles, to be sent to Accenture
+Test Case ID for Row 4177          : 45987
+Query Execution Time(ms)           : 63
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45987
+Finished at                        : Thu Aug 17 15:50:04 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:04 EDT 2023
+Creating test case for Row #       : 4178
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 23
+Validation Time(ms)                : 381
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Claims Adjudication and Pricing data to Accenture
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Claims Adjudication and Pricing data file to Accenture, cld45510.xml.XXXX, is produced by job CLMJD455. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//acnclaims/outfiles, to be sent to Accenture
+Test Case ID for Row 4178          : 45988
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45988
+Finished at                        : Thu Aug 17 15:50:07 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:07 EDT 2023
+Creating test case for Row #       : 4179
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 423
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Third Party Liability data to Accenture
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Third Party Liability data file to Accenture, tpd09801.xml, is produced by job TPLJD980. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//acntplresource/outfiles, to be sent to Accenture
+Test Case ID for Row 4179          : 45989
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45989
+Finished at                        : Thu Aug 17 15:50:10 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:10 EDT 2023
+Creating test case for Row #       : 4180
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 382
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Claims Adjudication and Pricing data to ACS- POPS (Pharmacy Online System)
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Claims Adjudication and Pricing data file to Accenture, cld45010.xml.xxxx, is produced by job CLMJD450. Temporary paid claims file is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//mmispharmacy/outfiles, to be sent to ACS- POPS (Pharmacy Online System)
+Test Case ID for Row 4180          : 45990
+Query Execution Time(ms)           : 52
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45990
+Finished at                        : Thu Aug 17 15:50:13 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:13 EDT 2023
+Creating test case for Row #       : 4181
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Finance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 368
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Finance data to ACS- POPS (Pharmacy Online System)
+Env                                : M
+Subsystem                          : Finance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Finance data file to ACS- POPS (Pharmacy Online System), finjw150.xml, is produced by job FINJW150. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//mmispharmacy/outfiles, to be sent to ACS- POPS (Pharmacy Online System)
+Test Case ID for Row 4181          : 45991
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45991
+Finished at                        : Thu Aug 17 15:50:15 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:15 EDT 2023
+Creating test case for Row #       : 4182
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 381
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Third Party Liability data to ACS- POPS (Pharmacy Online System)
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Third Party Liability data file to ACS- POPS (Pharmacy Online System), tpm90201.xml , is produced by job TPLJM902. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//mmispharmacy/outfiles, to be sent to ACS- POPS (Pharmacy Online System)
+Test Case ID for Row 4182          : 45992
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45992
+Finished at                        : Thu Aug 17 15:50:18 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:18 EDT 2023
+Creating test case for Row #       : 4183
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 372
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Buy-In Data Maintenance data to CMS
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Buy-in Data Maintenance data file to CMS, biamsja1.dat, is produced by job BUYSJAM. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//cms/outbound, to be sent to CMS
+Test Case ID for Row 4183          : 45993
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45993
+Finished at                        : Thu Aug 17 15:50:21 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:21 EDT 2023
+Creating test case for Row #       : 4184
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 375
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Buy-In Data Maintenance data to CMS
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Buy-in Data Maintenance data file to CMS, bibdsjd1.dat, is produced by job BUYSJD. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//cms/outbound, to be sent to CMS
+Test Case ID for Row 4184          : 45994
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45994
+Finished at                        : Thu Aug 17 15:50:24 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:24 EDT 2023
+Creating test case for Row #       : 4185
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 413
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Buy-In Data Maintenance data to CMS
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Buy-in Data Maintenance data file to CMS, bibmsjc1.dat, is produced by job BUYSJCM. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//cms/outbound, to be sent to CMS
+Test Case ID for Row 4185          : 45995
+Query Execution Time(ms)           : 57
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45995
+Finished at                        : Thu Aug 17 15:50:27 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:27 EDT 2023
+Creating test case for Row #       : 4186
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 446
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Buy-In Data Maintenance data to CMS
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Buy-in Data Maintenance data file to CMS, elm60005.dat, is produced by job ELGJM600. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>//cms/outbound, to be sent to CMS
+Test Case ID for Row 4186          : 45996
+Query Execution Time(ms)           : 50
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45996
+Finished at                        : Thu Aug 17 15:50:29 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:29 EDT 2023
+Creating test case for Row #       : 4187
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 369
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Relationship Entity Management data to Maximus
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Relationship Entity Management data file to Maximus, prd05501.xml.9999, is produced by job PRVJD055. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/maxprovider/outfiles, to be sent to Maximus
+Test Case ID for Row 4187          : 45997
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45997
+Finished at                        : Thu Aug 17 15:50:32 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:32 EDT 2023
+Creating test case for Row #       : 4188
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 428
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Member Management data to Maximus
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Member Management data file to DDS, elgpd057.xml.9999, is produced by job ELGJD057. File is transferred
+Expected Results                   : A valid DMR Member Eligibility Request Transaction Input from DMR data is successfully loaded into the database. The NewMMIS has found a match on Consumer ID sent by DMR. The ID is tied to it and will be used to populate the eligibility, TPL and demographic information on the response to DMR. Verify file moves to /cb/data/<env>/dmrmember/outfiles, to be sent to Maximus
+Test Case ID for Row 4188          : 45998
+Query Execution Time(ms)           : 95
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45998
+Finished at                        : Thu Aug 17 15:50:35 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:35 EDT 2023
+Creating test case for Row #       : 4189
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Finance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 401
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Finance data to DentaQuest
+Env                                : M
+Subsystem                          : Finance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Member Management data file to DentaQuest, fiw15501.xml.9999, is produced by job FINJW155. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/dentalpay/outfiles, to be sent to DentaQuest
+Test Case ID for Row 4189          : 45999
+Query Execution Time(ms)           : 50
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 45999
+Finished at                        : Thu Aug 17 15:50:38 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:38 EDT 2023
+Creating test case for Row #       : 4190
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 390
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Claims Adjudication and Pricing data to DentaQuest
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Claims Adjudication and Pricing data file to DentaQuest, clw51114.xml.9999, is produced by job CLMJW511. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/dentalclms/outfiles, to be sent to DentaQuest
+Test Case ID for Row 4190          : 46000
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46000
+Finished at                        : Thu Aug 17 15:50:41 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:41 EDT 2023
+Creating test case for Row #       : 4191
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 63
+Validation Time(ms)                : 498
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Member Management data to eviCore
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Member Management data file to eviCore, eld06540.xml.9999, is produced by job ELGJD065. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/evimember/outfiles, to be sent to eviCore
+Test Case ID for Row 4191          : 46001
+Query Execution Time(ms)           : 63
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46001
+Finished at                        : Thu Aug 17 15:50:44 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:44 EDT 2023
+Creating test case for Row #       : 4192
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 405
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Third Party Liability data to GHI (Group Health, Inc.)
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Third Party Liability data file to GHI (Group Health, Inc.), tpl0940m.dat.G<9999>, is produced by job TPLJM940. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/ghi/outbound, to be sent to GHI (Group Health, Inc.)
+Test Case ID for Row 4192          : 46002
+Query Execution Time(ms)           : 51
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46002
+Finished at                        : Thu Aug 17 15:50:47 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:47 EDT 2023
+Creating test case for Row #       : 4193
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 398
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Third Party Liability data to HMS/Gainwell Tech-was Permedion)
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Third Party Liability data file to HMS/Gainwell Tech-was Permedion), tpw90001.xml.9999, is produced by job TPLJW900. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/hmsclmpaid/outfiles, to be sent to HMS/Gainwell Tech-was Permedion)
+Test Case ID for Row 4193          : 46003
+Query Execution Time(ms)           : 50
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46003
+Finished at                        : Thu Aug 17 15:50:50 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:50 EDT 2023
+Creating test case for Row #       : 4194
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 363
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Buy-In Data Maintenance data to Mass Health Contractor
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Buy-In Data Maintenance data file to Mass Health Contractor, eld21000.xml.9999, is produced by job ELGJD191. File is transferred
+Expected Results                   : Make sure SDX incoming file from CMS is copied to a MassHealth Contractor
+Test Case ID for Row 4194          : 46004
+Query Execution Time(ms)           : 86
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46004
+Finished at                        : Thu Aug 17 15:50:53 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:53 EDT 2023
+Creating test case for Row #       : 4195
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 55
+Validation Time(ms)                : 543
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Third Party Liability data to Netreveal
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Third Party Liability data file to Netreveal, tpw90002.xml.9999, is produced by job TPLJW900. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /dnr/<env>/data/MMIS/tonetreveal, to be sent to Netreveal
+Test Case ID for Row 4195          : 46005
+Query Execution Time(ms)           : 51
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46005
+Finished at                        : Thu Aug 17 15:50:56 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:56 EDT 2023
+Creating test case for Row #       : 4196
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 354
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Member Management data to OPTUM
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Member Management data file to OPTUM, eld06540.xml.9999, is produced by job ELGJD065. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/mmisoptum/outfiles, to be sent to OPTUM
+Test Case ID for Row 4196          : 46006
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46006
+Finished at                        : Thu Aug 17 15:50:59 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:50:59 EDT 2023
+Creating test case for Row #       : 4197
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 438
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Buy-In Data Maintenance data to UMASS\ITD
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Buy-In Data Maintenance data file to UMASS\ITD, biadrjd1.dat.9999* / bibdrjd1.dat.9999*, is produced by job BUYJD193. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/umsmedibuyin/outfiles, to be sent to UMASS\ITD
+Test Case ID for Row 4197          : 46007
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46007
+Finished at                        : Thu Aug 17 15:51:02 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:02 EDT 2023
+Creating test case for Row #       : 4198
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 389
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Buy-In Data Maintenance data to UMASS\ITD
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Buy-In Data Maintenance data file to UMASS\ITD, elm65001.dat, is produced by job ELGJM655. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/umsmedipartd/outfiles, to be sent to UMASS\ITD
+Test Case ID for Row 4198          : 46008
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46008
+Finished at                        : Thu Aug 17 15:51:04 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:04 EDT 2023
+Creating test case for Row #       : 4199
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Third Party Liability') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 370
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Third Party Liability data to UMASS\ITD
+Env                                : M
+Subsystem                          : Third Party Liability
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Third Party Liability data file to UMASS\ITD, tpl0470b.xml.9999(paid), is produced by job TPLJR470. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/estateclaims/outfiles, to be sent to UMASS\ITD
+Test Case ID for Row 4199          : 46009
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46009
+Finished at                        : Thu Aug 17 15:51:07 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:07 EDT 2023
+Creating test case for Row #       : 4200
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 363
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Member Management data to Netreveal
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Member Management data file to Netreveal, eld05501.xml.9999, is produced by job ELGJD055. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /dnr/<env>/data/MMIS/tonetreveal, to be sent to Netreveal
+Test Case ID for Row 4200          : 46010
+Query Execution Time(ms)           : 59
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46010
+Finished at                        : Thu Aug 17 15:51:10 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:10 EDT 2023
+Creating test case for Row #       : 4201
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 369
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Relationship Entity Management data to Netreveal
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Relationship Entity Management data file to Netreveal, prd05501.xml.9999, is produced by job PRVJD055. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /dnr/<env>/data/MMIS/tonetreveal, to be sent to Netreveal
+Test Case ID for Row 4201          : 46011
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46011
+Finished at                        : Thu Aug 17 15:51:13 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:13 EDT 2023
+Creating test case for Row #       : 4202
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 375
+Validation status                  : PASS
+Short Desc                         : Cloud mig - Relationship Entity Management data to OSC-MMARS
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Relationship Entity Management data file to OSC-MMARS, prv311prelim.xml.9999, is produced by job PRVJW311. File is transferred
+Expected Results                   : Make sure the file is produced in $DATADIR. Verify file moves to /cb/data/<env>/nmmarsload/outfiles, to be sent to OSC-MMARS
+Test Case ID for Row 4202          : 46012
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46012
+Finished at                        : Thu Aug 17 15:51:16 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:16 EDT 2023
+Creating test case for Row #       : 4203
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 359
+Validation status                  : PASS
+Short Desc                         : Cloud mig - ACS- POPS YTD copay information for member claim activity - Inbound
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : ACS- POPS YTD copay information file, clmpops_99999999.xml / clmmco*, is received and processed by the job CLMJD399
+Expected Results                   : Verify the inbound file, clmpops_99999999.xml / clmmco*,  is moved from  folder /cb/data/<env>/mmispharmacy/infiles, to $DATADIR. Verify job CLMJD399 processes the file
+Test Case ID for Row 4203          : 46013
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46013
+Finished at                        : Thu Aug 17 15:51:19 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:19 EDT 2023
+Creating test case for Row #       : 4204
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 436
+Validation status                  : PASS
+Short Desc                         : Cloud mig - ACS- POPS claim information for the reversal of a paid claim - Inbound
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : ACS- POPS file containing claim information for the reversal of a paid claim, cld48000.xml, is received and processed by the job CLMJD480
+Expected Results                   : Verify the inbound file, cld48000.xml,  is moved from  folder /cb/data/<env>/mmispharmacy/infiles, to $DATADIR. Verify job CLMJD480 processes the file
+Test Case ID for Row 4204          : 46014
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46014
+Finished at                        : Thu Aug 17 15:51:22 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:22 EDT 2023
+Creating test case for Row #       : 4205
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 370
+Validation status                  : PASS
+Short Desc                         : Cloud mig - CMS medicare A, B, C, and D coverage information  - Inbound
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : CMS file containing medicare A, B, C, and D coverage information, elm65001.dat, is received and processed by the job ELGJM650
+Expected Results                   : Verify the inbound file, elm65001.dat,  is moved from folder /cd/data/<env>/cms/inbound, to $DATADIR. Verify job ELGJM650 processes the file
+Test Case ID for Row 4205          : 46015
+Query Execution Time(ms)           : 50
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46015
+Finished at                        : Thu Aug 17 15:51:25 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:25 EDT 2023
+Creating test case for Row #       : 4206
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 402
+Validation status                  : PASS
+Short Desc                         : Cloud mig - CMS OSCR/CLIA new name GMA.QIES.RPRT91 files  - Inbound
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : CMS file containing OSCR/CLIA new name GMA.QIES.RPRT91 files, PRV01205.DAT, is received and processed by the job PRVJW012
+Expected Results                   : Verify the inbound file, PRV01205.DAT,  is moved from folder /cd/data/<env>/cms/inbound, to $DATADIR. Verify job PRVJW012 processes the file
+Test Case ID for Row 4206          : 46016
+Query Execution Time(ms)           : 57
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46016
+Finished at                        : Thu Aug 17 15:51:27 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:27 EDT 2023
+Creating test case for Row #       : 4207
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 412
+Validation status                  : PASS
+Short Desc                         : Cloud mig - DentaQuest dental reversal file  - Inbound
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : DentaQuest dental reversal file, clw51110.xml.9999, is received and processed by the job CLMJW511
+Expected Results                   : Verify the inbound file, clw51110.xml.9999,  is moved from folder /cb/data/<env>/dentalclms/infiles, to $DATADIR. Verify job CLMJW511 processes the file
+Test Case ID for Row 4207          : 46017
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46017
+Finished at                        : Thu Aug 17 15:51:30 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:30 EDT 2023
+Creating test case for Row #       : 4208
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 395
+Validation status                  : PASS
+Short Desc                         : Cloud mig - DentaQuest administrative adjustments  - Inbound
+Env                                : M
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : DentaQuest administrative adjustments file, clw00101.xml.9999, is received and processed by the job CRLJW001
+Expected Results                   : Verify the inbound file, clw00101.xml.9999,  is moved from folder /cb/data/<env>/dentalclms/infiles, to $DATADIR. Verify job CRLJW001 processes the file
+Test Case ID for Row 4208          : 46018
+Query Execution Time(ms)           : 51
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46018
+Finished at                        : Thu Aug 17 15:51:33 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:33 EDT 2023
+Creating test case for Row #       : 4209
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Buy-In Data Maintenance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 489
+Validation status                  : PASS
+Short Desc                         : Cloud mig - MA-21 ( Mass Alliance for 21st Century Disability Policy) sState Verification Eligibility System (SVES)  response from MA21 - (aka Title II Work file)  - Inbound
+Env                                : M
+Subsystem                          : Buy-In Data Maintenance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Cloud mig - MA-21 ( Mass Alliance for 21st Century Disability Policy) sState Verification Eligibility System (SVES)  response from MA21 - (aka Title II Work file) file, eld07600.xml, is received and processed by the job ELGJD076
+Expected Results                   : Verify the inbound file, eld07600.xml,  is moved from folder, /cb/data/<env>/sves/infiles to $DATADIR. Verify job ELGJD076 processes the file
+Test Case ID for Row 4209          : 46019
+Query Execution Time(ms)           : 64
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46019
+Finished at                        : Thu Aug 17 15:51:37 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:37 EDT 2023
+Creating test case for Row #       : 4210
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Finance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 371
+Validation status                  : PASS
+Short Desc                         : Cloud mig - OSC-MMARS payment return from MMARS - via MA21  - Inbound
+Env                                : M
+Subsystem                          : Finance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Cloud mig - OSC-MMARS payment return from MMARS - via MA21 file, fidprtn00.xml.9999, is received and processed by the job FINJRPMT_RTN
+Expected Results                   : Verify the inbound file, fidprtn00.xml.9999,  is moved from folder, /cb/data/<env>/nmmarsloadx/infiles to $DATADIR. Verify job FINJRPMT_RTN processes the file
+Test Case ID for Row 4210          : 46020
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46020
+Finished at                        : Thu Aug 17 15:51:40 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:40 EDT 2023
+Creating test case for Row #       : 4211
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Finance') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 377
+Validation status                  : PASS
+Short Desc                         : Cloud mig - OSC-MMARS appropriation data from MMARS  - Inbound
+Env                                : M
+Subsystem                          : Finance
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Cloud mig - OSC-MMARS appropriation data from MMARS  file, fidbq8100.xml.out.xml.9999 and fidbq8900.xml.out.xml.9999, is received and processed by the job FINJR701
+Expected Results                   : Verify the inbound file, fidbq8100.xml.out.xml.9999 and fidbq8900.xml.out.xml.9999,  is moved from folder, /cb/<env>/prod/nmappropnmapprop2/infiles to $DATADIR. Verify job FINJR701 processes the file
+Test Case ID for Row 4211          : 46021
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46021
+Finished at                        : Thu Aug 17 15:51:43 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:43 EDT 2023
+Creating test case for Row #       : 4212
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 371
+Validation status                  : PASS
+Short Desc                         : Cloud mig - OSC-MMARS VCR file from  MMARS  - Inbound
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Cloud mig - OSC-MMARS VCR file from MMARS, vcrinput.xml, is received and processed by the job PRVJD312
+Expected Results                   : Verify the inbound file, vcrinput.xml,  is moved from folder, /cb/data/<env>/interceptload/infiless to $DATADIR. Verify job PRVJD312 processes the file
+Test Case ID for Row 4212          : 46022
+Query Execution Time(ms)           : 51
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46022
+Finished at                        : Thu Aug 17 15:51:45 EDT 2023
+*****************************************************************
+Started at                         : Thu Aug 17 15:51:45 EDT 2023
+Creating test case for Row #       : 4213
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'External Interfaces') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Interfaces') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 24
+Validation Time(ms)                : 367
+Validation status                  : PASS
+Short Desc                         : Cloud mig - UMASS\ITD request for claims data from ERU  - Inbound
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : External Interfaces
+Long Desc                          : Cloud mig - UMASS\ITD request for claims data from ERU file, tpl0470w.xml.9999, is received and processed by the job TPLJR470
+Expected Results                   : Verify the inbound file, tpl0470w.xml.9999,  is moved from folder, /cb/data/<env>/estateclaims/infiles to $DATADIR. Verify job TPLJR470 processes the file
+Test Case ID for Row 4213          : 46023
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Interfaces
+Notebook/BF linked for test case   : 46023
+Finished at                        : Thu Aug 17 15:51:48 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 17/Aug/2023 03:51:48PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

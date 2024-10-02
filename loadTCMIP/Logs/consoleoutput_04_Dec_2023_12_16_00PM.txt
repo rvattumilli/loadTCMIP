@@ -1,0 +1,170 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 04/Dec/2023 12:16:00PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.DAYS_TO_RESET_PWD > 2
+Query Execution Time(ms)           : 84
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 204
+Total No.of Rows fetched           : 4
+*****************************************************************
+Started at                         : Mon Dec 04 12:16:08 EST 2023
+Creating test case for Row #       : 4645
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '99999.02.01') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 48
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 453
+Validation status                  : PASS
+Short Desc                         : SR37335: Program mgd0040m runs successfully
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Program mgd0040m runs successfully in job MGDJM720 without any abend after code changes.
+Expected Results                   : Verify program mgd0040m runs successfully without any abend after code changes.
+Test Case ID for Row 4645          : 46752
+Query Execution Time(ms)           : 72
+Total No.of Columns fetched        : 1
+Requirement ID                     : 99999.02.01
+Query Execution Time(ms)           : 40
+Total No.of Columns fetched        : 2
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 46752
+Link WI/Defect/CO                  : true
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46752
+iWI/Defect/CO                      : 37335
+iWI Type                           : Work Item
+Work Item linked for test case     : 46752
+Finished at                        : Mon Dec 04 12:16:19 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 12:16:19 EST 2023
+Creating test case for Row #       : 4646
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '99999.02.01') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 459
+Validation status                  : PASS
+Short Desc                         : SR37335: Report MGD-0040-M is created
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Report MGD-0040-M from job MGDJM720 is generated successfully without any errors and report is not corrupted.
+Expected Results                   : Verify report MGD-0040-M from job MGDJM720 is generated successfully without any errors and report is not corrupted.
+Test Case ID for Row 4646          : 46753
+Query Execution Time(ms)           : 69
+Total No.of Columns fetched        : 1
+Requirement ID                     : 99999.02.01
+Query Execution Time(ms)           : 27
+Total No.of Columns fetched        : 2
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 46753
+Link WI/Defect/CO                  : true
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46753
+iWI/Defect/CO                      : 37335
+iWI Type                           : Work Item
+Work Item linked for test case     : 46753
+Finished at                        : Mon Dec 04 12:16:30 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 12:16:30 EST 2023
+Creating test case for Row #       : 4647
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '99999.02.01') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 48
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 511
+Validation status                  : PASS
+Short Desc                         : SR37335: Report MGD-0040-M copied to Mobius
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Report MGD-0040-M from job MGDJM720 is generated and copied to Mobius.
+Expected Results                   : Verify report MGD-0040-M from job MGDJM720 is generated successfully copied to Mobius.
+Test Case ID for Row 4647          : 46754
+Query Execution Time(ms)           : 63
+Total No.of Columns fetched        : 1
+Requirement ID                     : 99999.02.01
+Query Execution Time(ms)           : 30
+Total No.of Columns fetched        : 2
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 46754
+Link WI/Defect/CO                  : true
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46754
+iWI/Defect/CO                      : 37335
+iWI Type                           : Work Item
+Work Item linked for test case     : 46754
+Finished at                        : Mon Dec 04 12:16:40 EST 2023
+*****************************************************************
+Started at                         : Mon Dec 04 12:16:40 EST 2023
+Creating test case for Row #       : 4648
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '99999.02.01') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = '2023 Pre-AWS Contingency Release') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 431
+Validation status                  : PASS
+Short Desc                         : SR37335: Report MGD-0040-M is split
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Report MGD-0040-M from job MGDJM720 is split per provider and copied to POSC.
+Expected Results                   : Verify report MGD-0040-M from job MGDJM720 is split per provider and copied to POSC.
+Test Case ID for Row 4648          : 46755
+Query Execution Time(ms)           : 77
+Total No.of Columns fetched        : 1
+Requirement ID                     : 99999.02.01
+Query Execution Time(ms)           : 27
+Total No.of Columns fetched        : 2
+Requirement Type                   : Scan Remediation
+SAK Requirement Type               : 26
+Requirement linked for test case   : 46755
+Link WI/Defect/CO                  : true
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 46755
+iWI/Defect/CO                      : 37335
+iWI Type                           : Work Item
+Work Item linked for test case     : 46755
+Finished at                        : Mon Dec 04 12:16:51 EST 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 04/Dec/2023 12:16:52PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

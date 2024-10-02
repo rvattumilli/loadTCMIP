@@ -1,0 +1,129 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 10/Jun/2024 02:36:58PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Total No.of Columns fetched        : 6
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 106
+Total No.of Rows fetched           : 11
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:05 EDT 2024
+Creating test case for Row #       : 5290
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:06 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:06 EDT 2024
+Creating test case for Row #       : 5291
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:06 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:06 EDT 2024
+Creating test case for Row #       : 5292
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:07 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:07 EDT 2024
+Creating test case for Row #       : 5293
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:07 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:07 EDT 2024
+Creating test case for Row #       : 5294
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:08 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:08 EDT 2024
+Creating test case for Row #       : 5295
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:08 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:08 EDT 2024
+Creating test case for Row #       : 5296
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:09 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:09 EDT 2024
+Creating test case for Row #       : 5297
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:09 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:09 EDT 2024
+Creating test case for Row #       : 5298
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:10 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:10 EDT 2024
+Creating test case for Row #       : 5299
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:11 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:37:11 EDT 2024
+Creating test case for Row #       : 5300
+Total No.of Columns fetched        : 5
+Subsystem                          : Member management
+Subsystem Validation               : Verify Subsystem for the Test case
+TC Validation status               : FAIL
+Finished at                        : Mon Jun 10 14:37:11 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 10/Jun/2024 02:37:11PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

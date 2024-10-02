@@ -1,0 +1,200 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 07/Dec/2022 07:26:19PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 66
+****************************************************
+Started at                         : Wed Dec 07 19:26:25 EST 2022
+Creating test case for Row #       : 1237
+Short Desc                         : Member*s ICO eligibility closes and opens the same day.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member*s ICO eligibility  closes and opens the same day.
+Expected Results                   : Member does not show on report and does not receive notice.
+Test Case ID for Row 1237          : 42223
+Associated Req ID                  : 36063.03.017
+Requirement linked for test case   : 42223
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42223
+Finished at                        : Wed Dec 07 19:26:28 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:26:28 EST 2022
+Creating test case for Row #       : 1238
+Short Desc                         : Member*s ICO eligibility closes.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member*s ICO eligibility  closes.
+Expected Results                   : Member shows on report and  receives notice.
+Test Case ID for Row 1238          : 42224
+Associated Req ID                  : 36063.03.017
+Requirement linked for test case   : 42224
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42224
+Finished at                        : Wed Dec 07 19:26:32 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:26:32 EST 2022
+Creating test case for Row #       : 1239
+Short Desc                         : Member*s ICO eligibility closes and receives open non-ICO eligibility the same day.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member*s ICO eligibility closes and receives open non-ICO eligibility the same day.
+Expected Results                   : Member shows on report and  receives notice.
+Test Case ID for Row 1239          : 42225
+Associated Req ID                  : 36063.03.017
+Requirement linked for test case   : 42225
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42225
+Finished at                        : Wed Dec 07 19:26:35 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:26:35 EST 2022
+Creating test case for Row #       : 1240
+Short Desc                         : Member*s ICO eligibility receives additional ICO eligibility the same day.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member*s ICO eligibility receives additional ICO eligibility the same day.
+Expected Results                   : Member does not show on report and does not receive notice.
+Test Case ID for Row 1240          : 42226
+Associated Req ID                  : 36063.03.017
+Requirement linked for test case   : 42226
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42226
+Finished at                        : Wed Dec 07 19:26:38 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:26:38 EST 2022
+Creating test case for Row #       : 1241
+Short Desc                         : Report formatting is correct.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Report formatting is correct
+Expected Results                   : Report is in correct format and shows in Mobius.
+Test Case ID for Row 1241          : 42227
+Associated Req ID                  : 36063.04.010
+Requirement linked for test case   : 42227
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42227
+Finished at                        : Wed Dec 07 19:26:41 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:26:41 EST 2022
+Creating test case for Row #       : 1242
+Short Desc                         : Report is seperated by PIDSL.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Report is seperated by PIDSL
+Expected Results                   : Member in different providers show up under the correct PIDSL.
+Test Case ID for Row 1242          : 42228
+Associated Req ID                  : 36063.04.010
+Requirement linked for test case   : 42228
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42228
+Finished at                        : Wed Dec 07 19:26:44 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:26:44 EST 2022
+Creating test case for Row #       : 1243
+Short Desc                         : Member is in deemed status and there is a config change.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member is in deemed status and there is a config change.
+Expected Results                   : Member does not display on the report since it was only a configuration change.
+Test Case ID for Row 1243          : 42229
+Associated Req ID                  : 36063.04.015
+Requirement linked for test case   : 42229
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42229
+Finished at                        : Wed Dec 07 19:26:47 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:26:47 EST 2022
+Creating test case for Row #       : 1244
+Short Desc                         : Member*s ICO eligibility closes and opens the same day.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member*s ICO eligibility  closes and opens the same day.
+Expected Results                   : Member does not show on report.
+Test Case ID for Row 1244          : 42230
+Associated Req ID                  : 36063.04.015
+Requirement linked for test case   : 42230
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42230
+Finished at                        : Wed Dec 07 19:26:51 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:26:51 EST 2022
+Creating test case for Row #       : 1245
+Short Desc                         : Report 'NO DATA' on the report if there is no data.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Report 'NO DATA' on the report if there is no data.
+Expected Results                   : Report is generated with 'NO DATA' noted in the detail.
+Test Case ID for Row 1245          : 42231
+Associated Req ID                  : 36063.04.020
+Requirement linked for test case   : 42231
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42231
+Finished at                        : Wed Dec 07 19:26:54 EST 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 07/Dec/2022 07:27:10PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

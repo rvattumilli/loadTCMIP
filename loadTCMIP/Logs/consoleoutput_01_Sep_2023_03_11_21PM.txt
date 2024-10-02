@@ -1,0 +1,841 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 01/Sep/2023 03:11:21PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 71
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 115
+Total No.of Rows                   : 31
+*****************************************************************
+Started at                         : Fri Sep 01 15:11:28 EDT 2023
+Creating test case for Row #       : 4239
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.010.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'DCR') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 414
+Validation status                  : PASS
+Short Desc                         : DCR to end date PMP Distributions for PCCB
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DCR
+Long Desc                          : DCR to end date (with the current date when DCR runs, if DCR running in a weekday, then current date minus one day) all open PMP Distributions on T_PMP_AUTOASSGN table with a CDE_MC_PGM_TYPE = "PCC", SAK_PUB_HLTH 115 (PCCB), DTE_END 22991231.
+Expected Results                   : Verify all open end dated PCCBs are closed with current date when running DCR on week day or with current date -1 when running DCR on weekend.
+Test Case ID for Row 4239          : 46088
+Query Execution Time(ms)           : 65
+Requirement ID                     : 36752.010.010
+Query Execution Time(ms)           : 33
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46088
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46088
+Finished at                        : Fri Sep 01 15:11:33 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:11:33 EDT 2023
+Creating test case for Row #       : 4240
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.010.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Configurations') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 445
+Validation status                  : PASS
+Short Desc                         : Add ACOBs to PMP Auto Assign Dist Panel
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Configurations
+Long Desc                          : Add ACOB providers to PMP regions via UI after PCCBs are closed. Effective date for ACOB is one day after PCCB end date and end date is open end date.
+Expected Results                   : Verify ACOBs are added to PMP regions and CF % is 100 for PMP regions.
+Test Case ID for Row 4240          : 46089
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36752.010.015
+Query Execution Time(ms)           : 68
+Requirement Type                   : Configuration Task (CW)
+SAK Requirement Type               : 28
+Requirement linked for test case   : 46089
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46089
+Finished at                        : Fri Sep 01 15:11:37 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:11:37 EDT 2023
+Creating test case for Row #       : 4241
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.010.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Configurations') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 403
+Validation status                  : PASS
+Short Desc                         : Update the ACOB/PCCB/CPCCB Choice Factor
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Configurations
+Long Desc                          : Use the MC Program Level Maintenance Panel to update the following programs:1. ACOB Program - change the choice Factor to "Y" and Choice Factor (CF) Level to "PMP".2. CPCCB Program - change the choice Factor to "N" and Choice Factor (CF) Level to blanks.3. PCCB Program - change the choice Factor to "N" and Choice Factor (CF) Level to blanks.
+Expected Results                   : Verify that configurations are saved in MC program Level Maintenance panel. Verify ACOB providers are displayed in dropdown in PMP auto assign distribution panel.
+Test Case ID for Row 4241          : 46090
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36752.010.020
+Query Execution Time(ms)           : 39
+Requirement Type                   : Configuration Task (CW)
+SAK Requirement Type               : 28
+Requirement linked for test case   : 46090
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46090
+Finished at                        : Fri Sep 01 15:11:41 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:11:41 EDT 2023
+Creating test case for Row #       : 4242
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.010.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 440
+Validation status                  : PASS
+Short Desc                         : Add PCCB/CPCCB elig records for the member
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : If recycled member is eligible for PCCB/CPCCB , add PCCB/CPCCB records to T_RE_CF_RECIP_ELIG table for the BRE to process the member.
+Expected Results                   : Verify PCCB/CPCCB records are added to T_RE_CF_RECIP_ELIG table for the member.
+Test Case ID for Row 4242          : 46091
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36752.010.020
+Query Execution Time(ms)           : 69
+Requirement Type                   : Configuration Task (CW)
+SAK Requirement Type               : 28
+Requirement linked for test case   : 46091
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46091
+Finished at                        : Fri Sep 01 15:11:45 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:11:45 EDT 2023
+Creating test case for Row #       : 4243
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.010.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 425
+Validation status                  : PASS
+Short Desc                         : CF eligible member added to PT
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with AA - CF potential record and (C)PCCB eligibility is enrolled correctly.
+Expected Results                   : Verify member is enrolled correctly by AA process.
+Test Case ID for Row 4243          : 46092
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36752.010.020
+Query Execution Time(ms)           : 29
+Requirement Type                   : Configuration Task (CW)
+SAK Requirement Type               : 28
+Requirement linked for test case   : 46092
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46092
+Finished at                        : Fri Sep 01 15:11:49 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:11:49 EDT 2023
+Creating test case for Row #       : 4244
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.010.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 433
+Validation status                  : PASS
+Short Desc                         : Case enrollment PCCB eligible member
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with PCCB eligibility enrolled to ACOB/(C)PCCB/(CP)BH through case processing logic.
+Expected Results                   : Verify member is enrolled to ACOB/(C)PCCB/(CP)BH through case processing logic.
+Test Case ID for Row 4244          : 46093
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36752.010.020
+Query Execution Time(ms)           : 26
+Requirement Type                   : Configuration Task (CW)
+SAK Requirement Type               : 28
+Requirement linked for test case   : 46093
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46093
+Finished at                        : Fri Sep 01 15:11:54 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:11:54 EDT 2023
+Creating test case for Row #       : 4245
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.010.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 379
+Validation status                  : PASS
+Short Desc                         : ACOB/(C)PCCB/(CP)BH re-enroll eligible member
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member  eligible for ACOB/(C)PCCB/(CP)BH through re-enrollment logic.
+Expected Results                   : Verify member is enrolled to ACOB/(C)PCCB/(CP)BH through re-enrollment logic.
+Test Case ID for Row 4245          : 46094
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36752.010.020
+Query Execution Time(ms)           : 25
+Requirement Type                   : Configuration Task (CW)
+SAK Requirement Type               : 28
+Requirement linked for test case   : 46094
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46094
+Finished at                        : Fri Sep 01 15:11:58 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:11:58 EDT 2023
+Creating test case for Row #       : 4246
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.010.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 401
+Validation status                  : PASS
+Short Desc                         : Member alredy enrolled in CommP eligible for AA CF
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member who is already enrolled in CommP is eligible for ACOB/(C)PCCB/(CP)BH through AA logic. Member's CommP can coexist with CF program.
+Expected Results                   : Verify member is enrolled to ACOB/(C)PCCB/(CP)BH through AA logic.
+Test Case ID for Row 4246          : 46095
+Query Execution Time(ms)           : 73
+Requirement ID                     : 36752.010.020
+Query Execution Time(ms)           : 34
+Requirement Type                   : Configuration Task (CW)
+SAK Requirement Type               : 28
+Requirement linked for test case   : 46095
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46095
+Finished at                        : Fri Sep 01 15:12:02 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:02 EDT 2023
+Creating test case for Row #       : 4247
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.020.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 426
+Validation status                  : PASS
+Short Desc                         : Modify data sent to BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : PCCB-PIDSL is no longer sent in CFP entity. ACOB-PIDSL is sent in CFP entity to BRE.
+Expected Results                   : Verify ACOB PIDSL is sent in CFP entity which is sent to BRE and not PCCB PIDSL.
+Test Case ID for Row 4247          : 46096
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36752.020.010
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46096
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46096
+Finished at                        : Fri Sep 01 15:12:06 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:06 EDT 2023
+Creating test case for Row #       : 4248
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.020.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'BRE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 397
+Validation status                  : PASS
+Short Desc                         : Modify input to BRE to accept ACOB percentages
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : BRE
+Long Desc                          : Update input sent to BRE to accept choice factor percentages and underassignment count for individual ACOBs instead percentages for PCCB/CPCCB. Keep percentages for PCC. Do not send underassignment count for PCCBs/CPCCBs to BRE.
+Expected Results                   : Verify ACOB CF percentages and underassignemnt count is sent to BRE as input and PCCB underassignment count is not sent to BRE.
+Test Case ID for Row 4248          : 46097
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36752.020.020
+Query Execution Time(ms)           : 28
+Requirement Type                   : BRE
+SAK Requirement Type               : 15
+Requirement linked for test case   : 46097
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46097
+Finished at                        : Fri Sep 01 15:12:10 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:10 EDT 2023
+Creating test case for Row #       : 4249
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.020.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'BRE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 395
+Validation status                  : PASS
+Short Desc                         : Multiple providers in same PMP CF region
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : BRE
+Long Desc                          : PMP CF region has multiple providers with different CF percentages.
+Expected Results                   : Verify that percentages of members assigned via choice factor are close to what is allocated.
+Test Case ID for Row 4249          : 46098
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36752.020.020
+Query Execution Time(ms)           : 30
+Requirement Type                   : BRE
+SAK Requirement Type               : 15
+Requirement linked for test case   : 46098
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46098
+Finished at                        : Fri Sep 01 15:12:14 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:14 EDT 2023
+Creating test case for Row #       : 4250
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 398
+Validation status                  : PASS
+Short Desc                         : Send MCO information to BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Send MCO provider choice factor percentages, MCO provider enrollment restrictions, MCO plan type information, MCO panel size, and MCO underassignment count to BRE if the MCO has a percentage allocated for the Managed Care assignment plan region and CF ind is "Y".
+Expected Results                   : Verify MCO provider choice factor percentages, MCO provider enrollment restrictions, MCO plan type information, MCO panel size, and MCO underassignment count are sent to BRE if the MCO has a percentage allocated for the Managed Care assignment plan region and CF ind is "Y".
+Test Case ID for Row 4250          : 46099
+Query Execution Time(ms)           : 61
+Requirement ID                     : 36752.030.010
+Query Execution Time(ms)           : 35
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46099
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46099
+Finished at                        : Fri Sep 01 15:12:18 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:18 EDT 2023
+Creating test case for Row #       : 4251
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 404
+Validation status                  : PASS
+Short Desc                         : Do not send MCO information to BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Do not send MCO information to BRE if provider's panel hold is "Y" or current patients only ind is "Y" or CF percentage is not > 0 or CF ind for MCO is not "Y" or PMP is not in "Enrolled" status in the enrollment region.
+Expected Results                   : Verify MCO information is not sent to BRE if provider's panel hold is "Y" or current patients only ind is "Y" or CF percentage is not > 0 or CF ind for MCO is not "Y" or PMP is not in "Enrolled" status in the enrollment region.
+Test Case ID for Row 4251          : 46100
+Query Execution Time(ms)           : 72
+Requirement ID                     : 36752.030.010
+Query Execution Time(ms)           : 23
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46100
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46100
+Finished at                        : Fri Sep 01 15:12:22 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:22 EDT 2023
+Creating test case for Row #       : 4252
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 398
+Validation status                  : PASS
+Short Desc                         : Send ACOA information to BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Send ACOA provider choice factor percentages, ACOA provider enrollment restrictions, ACOA plan type information, ACOA panel size, and ACOA underassignment count to BRE if the ACOA has a percentage allocated for the Managed Care assignment plan region and CF ind is "Y".
+Expected Results                   : Verify ACOA provider choice factor percentages, ACOA provider enrollment restrictions, ACOA plan type information, ACOA panel size, and ACOA underassignment count are sent to BRE if the ACOA has a percentage allocated for the Managed Care assignment plan region and CF ind is "Y".
+Test Case ID for Row 4252          : 46101
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36752.030.020
+Query Execution Time(ms)           : 48
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46101
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46101
+Finished at                        : Fri Sep 01 15:12:27 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:27 EDT 2023
+Creating test case for Row #       : 4253
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 418
+Validation status                  : PASS
+Short Desc                         : Do not send ACOA information to BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Do not send ACOA information to BRE if provider's panel hold is "Y" or current patients only ind is "Y" or CF percentage is not > 0 or CF ind for ACOA is not "Y" or PMP is not in "Enrolled" status in the enrollment region for that ACOA provider.
+Expected Results                   : Verify ACOA information is not sent to BRE if provider's panel hold is "Y" or current patients only ind is "Y" or CF percentage is not > 0 or CF ind for ACOA is not "Y" or or PMP is not in "Enrolled" status in the enrollment region for that ACOA provider.
+Test Case ID for Row 4253          : 46102
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36752.030.020
+Query Execution Time(ms)           : 27
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46102
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46102
+Finished at                        : Fri Sep 01 15:12:31 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:31 EDT 2023
+Creating test case for Row #       : 4254
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 512
+Validation status                  : PASS
+Short Desc                         : Send ACOB information to BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Update input sent to BRE to include ACOB provider choice factor percentages, ACOB provider enrollment restrictions, ACOB plan type information, ACOB panel size, and ACOB underassignment count if the ACOB has a percentage allocated for the PMP region and CF indicator is "Y".Test with below conditions as well:"A region with no ACOBs to make sure no ACOBs are assigned to via choice factor."A region with only 1 ACOB with allocated percentages.
+Expected Results                   : Verify ACOB provider choice factor percentages, ACOB provider enrollment restrictions, ACOB plan type information, ACOB panel size, and ACOB underassignment count if the ACOB has a percentage allocated for the PMP region and CF indicator is "Y" is sent to BRE. Verify that member is not enrolled to ACOB if no CF % is allocated for ACOB in a PMP CF region.
+Test Case ID for Row 4254          : 46103
+Query Execution Time(ms)           : 68
+Requirement ID                     : 36752.030.030
+Query Execution Time(ms)           : 37
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46103
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46103
+Finished at                        : Fri Sep 01 15:12:36 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:36 EDT 2023
+Creating test case for Row #       : 4255
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 409
+Validation status                  : PASS
+Short Desc                         : Do not send ACOB information to BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Do not send ACOB information to BRE if panel hold is "Y" or current patients only indicator is "Y" or CF percentage is not > 0 in that region or CF ind for ACOA is not "Y" or PMP is not in "Enrolled" status in the enrollment region for that ACOB provider.
+Expected Results                   : Verify ACOB information is not sent to BRE if panel hold is "Y" for that ACOB provider.
+Test Case ID for Row 4255          : 46104
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36752.030.030
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46104
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46104
+Finished at                        : Fri Sep 01 15:12:40 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:40 EDT 2023
+Creating test case for Row #       : 4256
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.040') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 405
+Validation status                  : PASS
+Short Desc                         : Send PCC information to BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Send PCC provider choice factor percentages, PCC provider enrollment restrictions, PCC plan type information, PCC panel size, and PCC underassignment count to BRE if the PCC has a percentage allocated for the Managed Care assignment plan region and CF ind is "Y".
+Expected Results                   : Verify PCC provider choice factor percentages, PCC provider enrollment restrictions, PCC plan type information, PCC panel size, and PCC underassignment count are sent to BRE if the PCC has a percentage allocated for the Managed Care assignment plan region and CF ind is "Y".
+Test Case ID for Row 4256          : 46105
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36752.030.040
+Query Execution Time(ms)           : 31
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46105
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46105
+Finished at                        : Fri Sep 01 15:12:44 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:44 EDT 2023
+Creating test case for Row #       : 4257
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.040') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 407
+Validation status                  : PASS
+Short Desc                         : Do not send PCC information to BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Do not send PCC information to BRE if provider's panel hold is "Y" or current patients only ind is "Y" or CF percentage is not > 0 or CF ind for PCC is not "Y" or PMP is not in "Enrolled" status in the enrollment region for that PCC provider.
+Expected Results                   : Verify PCC information is not sent to BRE if provider's panel hold is "Y" or current patients only ind is "Y" or CF percentage is not > 0 or CF ind for PCC is not "Y" or or PMP is not in "Enrolled" status in the enrollment region for that PCC provider.
+Test Case ID for Row 4257          : 46106
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36752.030.040
+Query Execution Time(ms)           : 25
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46106
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46106
+Finished at                        : Fri Sep 01 15:12:48 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:48 EDT 2023
+Creating test case for Row #       : 4258
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.070') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'BRE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 405
+Validation status                  : PASS
+Short Desc                         : Enroll member to ACOB/(C)PCCB/(CP)BH
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : BRE
+Long Desc                          : Enroll member to ACOB, closest PCCB/(C)PCCB and (CP)BH if member is assigned to ACOB by BRE.
+Expected Results                   : Verify member is enrolled to ACOB/(C)PCCB/(CP)BH.
+Test Case ID for Row 4258          : 46107
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36752.030.070
+Query Execution Time(ms)           : 34
+Requirement Type                   : BRE
+SAK Requirement Type               : 15
+Requirement linked for test case   : 46107
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46107
+Finished at                        : Fri Sep 01 15:12:52 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:52 EDT 2023
+Creating test case for Row #       : 4259
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.070') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'BRE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 428
+Validation status                  : PASS
+Short Desc                         : ACOB/(C)PCCB providers with restrictions
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : BRE
+Long Desc                          : Send ACOB/(C)PCCB providers restrictions to BRE and do not enroll member to ACOB/(C)PCCB providerif member satisfies provider restrictions.
+Expected Results                   : Verify member is not enrolled to ACOB/(C)PCCB/(CP)BH if member satisfies provider restrictions.
+Test Case ID for Row 4259          : 46108
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36752.030.070
+Query Execution Time(ms)           : 23
+Requirement Type                   : BRE
+SAK Requirement Type               : 15
+Requirement linked for test case   : 46108
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46108
+Finished at                        : Fri Sep 01 15:12:56 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:12:56 EDT 2023
+Creating test case for Row #       : 4260
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.070') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'BRE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 416
+Validation status                  : PASS
+Short Desc                         : ACOB current vs future panel size
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : BRE
+Long Desc                          : Do not enroll member to ACOB if current panel size > max panel size for that ACOB provider
+Expected Results                   : Verify member is not enrolled to ACOB if current panel size > future panel size for that ACOB provider
+Test Case ID for Row 4260          : 46109
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36752.030.070
+Query Execution Time(ms)           : 28
+Requirement Type                   : BRE
+SAK Requirement Type               : 15
+Requirement linked for test case   : 46109
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46109
+Finished at                        : Fri Sep 01 15:13:01 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:13:01 EDT 2023
+Creating test case for Row #       : 4261
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.070') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'BRE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 415
+Validation status                  : PASS
+Short Desc                         : ACOB provider with panel hold
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : BRE
+Long Desc                          : Do not enroll member to ACOB if panel hold is "Y" for that ACOB provider
+Expected Results                   : Verify member is not enrolled to ACOB if panel hold is "Y" for that ACOB provider
+Test Case ID for Row 4261          : 46110
+Query Execution Time(ms)           : 61
+Requirement ID                     : 36752.030.070
+Query Execution Time(ms)           : 31
+Requirement Type                   : BRE
+SAK Requirement Type               : 15
+Requirement linked for test case   : 46110
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46110
+Finished at                        : Fri Sep 01 15:13:06 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:13:06 EDT 2023
+Creating test case for Row #       : 4262
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.030.070') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'BRE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 56
+Validation Time(ms)                : 441
+Validation status                  : PASS
+Short Desc                         : ACOB provider with current patients only indicator
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : BRE
+Long Desc                          : Do not enroll member to ACOB if current patients only indicator is not "Y" for that ACOB provider
+Expected Results                   : Verify member is not enrolled to ACOB if current patients only indicator is not "Y" for that ACOB provider
+Test Case ID for Row 4262          : 46111
+Query Execution Time(ms)           : 80
+Requirement ID                     : 36752.030.070
+Query Execution Time(ms)           : 29
+Requirement Type                   : BRE
+SAK Requirement Type               : 15
+Requirement linked for test case   : 46111
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46111
+Finished at                        : Fri Sep 01 15:13:10 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:13:10 EDT 2023
+Creating test case for Row #       : 4263
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.040.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'BRE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 405
+Validation status                  : PASS
+Short Desc                         : Send provider underassignment from BRE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : BRE
+Long Desc                          : Send ACOB provider underassignment from BRE and do not send underassignment for PCCB and CPCCB from BRE.
+Expected Results                   : Verify that BRE sends underassignment for ACOB provider and not for PCCB/CPCCB.
+Test Case ID for Row 4263          : 46112
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36752.040.010
+Query Execution Time(ms)           : 46
+Requirement Type                   : BRE
+SAK Requirement Type               : 15
+Requirement linked for test case   : 46112
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46112
+Finished at                        : Fri Sep 01 15:13:14 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:13:14 EDT 2023
+Creating test case for Row #       : 4264
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.040.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 417
+Validation status                  : PASS
+Short Desc                         : Update underassignment for ACOB
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Update under assignment for ACOB in PMP Auto assign table after receiving from BRE. Do not update underassignment for PCCB and CPCCB in PMP auto assign table.
+Expected Results                   : Verify that under assignment is updated only for ACOB and not PCCB/CPCCB providers in PMP auto assign table.
+Test Case ID for Row 4264          : 46113
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36752.040.015
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46113
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46113
+Finished at                        : Fri Sep 01 15:13:19 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:13:19 EDT 2023
+Creating test case for Row #       : 4265
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.050.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MC PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 428
+Validation status                  : PASS
+Short Desc                         : Allow UI to update ACOB CF % and dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC PANELS
+Long Desc                          : Allow UI to update CF %s and dates for ACOB providers in PMP auto assign dist panel
+Expected Results                   : Verify that CF %s and dates can be updated for ACOB providers in PMP auto assign distribution panel. Verify data is updated in DB for the ACOB provider.
+Test Case ID for Row 4265          : 46114
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36752.050.010
+Query Execution Time(ms)           : 37
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46114
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46114
+Finished at                        : Fri Sep 01 15:13:23 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:13:23 EDT 2023
+Creating test case for Row #       : 4266
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.050.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MC PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 442
+Validation status                  : PASS
+Short Desc                         : Allow UI to add ACOB CF records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC PANELS
+Long Desc                          : Allow UI to add CF record for ACOB provider in PMP auto assignment dist panel.
+Expected Results                   : Verify that CF record for ACOB provider can be added via PMP auto assignment dist panel in UI. Verify ACO indicator drop down is set to "Yes" when selecting ACOB provider and MC Program Type is MCO. Verify record is saved to DB with ACOB information.
+Test Case ID for Row 4266          : 46115
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36752.050.010
+Query Execution Time(ms)           : 26
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46115
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46115
+Finished at                        : Fri Sep 01 15:13:27 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:13:27 EDT 2023
+Creating test case for Row #       : 4267
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.050.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MC PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 410
+Validation status                  : PASS
+Short Desc                         : Do not allow UI to add PCCB records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC PANELS
+Long Desc                          : Do not allow UI to add PCCB records in PMP auto assignment dist panel. When selecting "PCC" in MC program type dropdown, ACO drop down should be disabled and defaulted to "NO".
+Expected Results                   : Verify that UI does not allow to add PCCB records and ACO dropdown is disabled and defaulted to "NO" when MC program type is "PCC".
+Test Case ID for Row 4267          : 46116
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36752.050.020
+Query Execution Time(ms)           : 31
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46116
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46116
+Finished at                        : Fri Sep 01 15:13:32 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:13:32 EDT 2023
+Creating test case for Row #       : 4268
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.060.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MC PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 403
+Validation status                  : PASS
+Short Desc                         : Update field level help text
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC PANELS
+Long Desc                          : Update help text for "ACO" field to "ACO PMP ID is ACO or not. For program type MCO, dropdown is contextually populated depending on the PMP ID selected. For PCC value is set to No".
+Expected Results                   : Verify "ACO" field help text is updated to "ACO PMP ID is ACO or not. For program type MCO, dropdown is contextually populated depending on the PMP ID selected. For PCC value is set to No".
+Test Case ID for Row 4268          : 46117
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36752.060.010
+Query Execution Time(ms)           : 39
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46117
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46117
+Finished at                        : Fri Sep 01 15:13:36 EDT 2023
+*****************************************************************
+Started at                         : Fri Sep 01 15:13:36 EDT 2023
+Creating test case for Row #       : 4269
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36752.060.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MC PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 393
+Validation status                  : PASS
+Short Desc                         : Update panel level help text
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC PANELS
+Long Desc                          : Update help text for "PMP Auto Assignment Distribution" panel to "If MC Program Type is MCO:Select PMP ID and then ACO drop down will be set to Yes or No based on the selected PMP ID. If MC Program Type is PCC:The ACO indicator should be disabled and populated with a No."
+Expected Results                   : Verify "PMP Auto Assignment Distribution" panel help text is updated to "If MC Program Type is MCO:Select PMP ID and then ACO drop down will be set to Yes or No based on the selected PMP ID. If MC Program Type is PCC:The ACO indicator should be disabled and populated with a No."
+Test Case ID for Row 4269          : 46118
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36752.060.010
+Query Execution Time(ms)           : 34
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46118
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46118
+Finished at                        : Fri Sep 01 15:13:40 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 01/Sep/2023 03:13:41PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

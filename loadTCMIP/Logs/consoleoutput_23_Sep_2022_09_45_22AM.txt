@@ -1,0 +1,414 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 23/Sep/2022 09:45:22AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Fri Sep 23 09:45:29 EDT 2022
+Creating test case for Row #       : 1130
+Short Desc                         : Send msg with priority 5
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Send msg with priority 5
+Expected Results                   : Message shall be saved and available in POSC(Provider see's correct priority on Message)
+Test Case ID for Row 1130          : 41990
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41990
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41990
+Finished at                        : Fri Sep 23 09:45:33 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:45:33 EDT 2022
+Creating test case for Row #       : 1131
+Short Desc                         : Provider Message panel- send Letter to individuals w attachment
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Messaging Channel: Web Portal Letter - To: Individual Provider(s) - include a PDF or Text file
+Expected Results                   : Message shall be saved and available in POSC(Provider receives Letter)(Login as diff. individual provider that was not sent a letter- no letter message)
+Test Case ID for Row 1131          : 41991
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41991
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41991
+Finished at                        : Fri Sep 23 09:45:36 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:45:36 EDT 2022
+Creating test case for Row #       : 1132
+Short Desc                         : Provider Message panel- send Letter to individuals wo attachment
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Try to submit message via Letter channel without an attachment, to individual provider
+Expected Results                   : Unable to submit
+Test Case ID for Row 1132          : 41992
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41992
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41992
+Finished at                        : Fri Sep 23 09:45:40 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:45:40 EDT 2022
+Creating test case for Row #       : 1133
+Short Desc                         : Messaging Channel: Web Portal Letter - To: Provider Type(s)
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Messaging Channel: Web Portal Letter - To: Provider Type(s)
+Expected Results                   : Message shall be saved and available in POSC(Provider receives Letter)(Login as diff. individual provider that was not sent a letter- no letter message)
+Test Case ID for Row 1133          : 41993
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41993
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41993
+Finished at                        : Fri Sep 23 09:45:43 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:45:43 EDT 2022
+Creating test case for Row #       : 1134
+Short Desc                         : Messaging Channel: Web Portal Letter - To: All Providers
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Messaging Channel: Web Portal Letter - To: All Providers
+Expected Results                   : Message shall be saved and available in POSC(Provider receives Letter)(Login as diff. individual provider that was not sent a letter- no letter message)
+Test Case ID for Row 1134          : 41994
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41994
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41994
+Finished at                        : Fri Sep 23 09:45:47 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:45:47 EDT 2022
+Creating test case for Row #       : 1135
+Short Desc                         : Messaging Channel: Web Portal Report - To: Individual Providers
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Messaging Channel: Web Portal Report - To: Individual Provider(s)
+Expected Results                   : Message shall be saved and available in POSC(Provider receives Report)(Login as diff. individual provider that was not sent a Report - no letter message)
+Test Case ID for Row 1135          : 41995
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41995
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41995
+Finished at                        : Fri Sep 23 09:45:50 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:45:50 EDT 2022
+Creating test case for Row #       : 1136
+Short Desc                         : Messaging Channel: Web Portal Report - To: Provider Type(s)
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Messaging Channel: Web Portal Report - To: Provider Type(s)
+Expected Results                   : Message shall be saved and available in POSC(Provider receives Report)(Login as diff. individual provider that was not sent a Report - no letter message)
+Test Case ID for Row 1136          : 41996
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41996
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41996
+Finished at                        : Fri Sep 23 09:45:53 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:45:53 EDT 2022
+Creating test case for Row #       : 1137
+Short Desc                         : Provider Message panel- send Report to individuals wo attachment
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Try to submit message via Report channel without an attachment, to provider types
+Expected Results                   : Unable to submit
+Test Case ID for Row 1137          : 41997
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41997
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41997
+Finished at                        : Fri Sep 23 09:45:56 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:45:56 EDT 2022
+Creating test case for Row #       : 1138
+Short Desc                         : Messaging Channel: Web Portal Report - To: All Providers
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Messaging Channel: Web Portal Report - To: All Providers
+Expected Results                   : Message shall be saved and available in POSC(Provider receives Report)
+Test Case ID for Row 1138          : 41998
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41998
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41998
+Finished at                        : Fri Sep 23 09:46:00 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:00 EDT 2022
+Creating test case for Row #       : 1139
+Short Desc                         : Messaging Channel:  verify "Void" message (Post-Login) works
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In "Provider Message" panel, verify "Void" message functionality for messages sent through the Web Portal Post-Login channel. From Provider Message Search panel, select a non-expired, non-previously voided message and void the message.
+Expected Results                   : Message should be flagged as Voided Message removed from display on POSC (Login as Provider that had this voided message and search for it unsuccessfully)
+Test Case ID for Row 1139          : 41999
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41999
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41999
+Finished at                        : Fri Sep 23 09:46:03 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:03 EDT 2022
+Creating test case for Row #       : 1140
+Short Desc                         : Messaging Channel:  verify "Void" message (Letter) works
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In "Provider Message" panel, verify "Void" message functionality for messages sent through the Web Portal Letter channel. From Provider Message Search panel, select a non-expired, non-previously voided message and void the message.
+Expected Results                   : Message should be flagged as Voided Message removed from display on POSC (Login as Provider that had this voided message and search for it unsuccessfully)
+Test Case ID for Row 1140          : 42000
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42000
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42000
+Finished at                        : Fri Sep 23 09:46:07 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:07 EDT 2022
+Creating test case for Row #       : 1141
+Short Desc                         : Messaging Channel:  verify "Void" message (Report) works
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In "Provider Message" panel, verify "Void" message functionality for messages sent through the Web Portal Report channel. From Provider Message Search panel, select a non-expired, non-previously voided message and void the message.
+Expected Results                   : Message should be flagged as Voided Message removed from display on POSC (Login as Provider that had this voided message and search for it unsuccessfully)
+Test Case ID for Row 1141          : 42001
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42001
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42001
+Finished at                        : Fri Sep 23 09:46:10 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:10 EDT 2022
+Creating test case for Row #       : 1142
+Short Desc                         : Verify field online help
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Verify field online help in provider Message Send panel
+Expected Results                   : Online Help is available
+Test Case ID for Row 1142          : 42002
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42002
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42002
+Finished at                        : Fri Sep 23 09:46:13 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:13 EDT 2022
+Creating test case for Row #       : 1143
+Short Desc                         : "Internal Message" panel: send Post-Login msg
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Messaging Channel: Post-Login - To: Internal Users
+Expected Results                   : Message is savedInternal user verifies receipt
+Test Case ID for Row 1143          : 42003
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42003
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42003
+Finished at                        : Fri Sep 23 09:46:16 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:16 EDT 2022
+Creating test case for Row #       : 1144
+Short Desc                         : "Internal Message" panel: send "User Alert"
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In "Internal Message" panel, verify post Messages to "User Alerts" by enter valid data in Message and add Internal Users. Click on Save All to post message and verify results.
+Expected Results                   : Alert is savedInternal user verifies receipt
+Test Case ID for Row 1144          : 42004
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42004
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42004
+Finished at                        : Fri Sep 23 09:46:20 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:20 EDT 2022
+Creating test case for Row #       : 1145
+Short Desc                         : "Internal Message" panel: send  "Informational Messages"
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In "Internal Message" panel, verify post Messages to "Informational Messages" by enter valid data in Message and add Internal Users. Click on Save All to post message and verify results.
+Expected Results                   : Informational message is savedInternal user verifies receipt
+Test Case ID for Row 1145          : 42005
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42005
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42005
+Finished at                        : Fri Sep 23 09:46:23 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:23 EDT 2022
+Creating test case for Row #       : 1146
+Short Desc                         : "Internal Message" panel: send "All Internal Users"
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In "Internal Message" panel, verify post Message to "All Internal Users" through Informational Messages channel by enter valid data in Message and select checkbox for "Send the Message to all Internal Users". Click "Save All" to post a message and verify results.
+Expected Results                   : Message is savedAll internal users can see it
+Test Case ID for Row 1146          : 42006
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42006
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42006
+Finished at                        : Fri Sep 23 09:46:27 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:27 EDT 2022
+Creating test case for Row #       : 1147
+Short Desc                         : "Internal Message" panel, "Void" User Alerts & Informational Msg
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In "Internal Message" panel, verify "Void" message functionality for User Alerts and Informational Messages. From Internal Message Search, select a non-expired, non-previously voided message and "Void" message by editing the message and flag message as Void.
+Expected Results                   : Message should be flagged as VoidedInternal user verifies User Alerts and Informational Message voided
+Test Case ID for Row 1147          : 42007
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42007
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42007
+Finished at                        : Fri Sep 23 09:46:30 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:30 EDT 2022
+Creating test case for Row #       : 1148
+Short Desc                         : In "Internal Message" panel, verify "Edit" message functionality
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In "Internal Message" panel, verify "Edit" message functionality. From Internal Message Search Information, select a non-expired, non-previously voided message by editing message content.
+Expected Results                   : Message is savedMessage displays edited information to internal user
+Test Case ID for Row 1148          : 42008
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42008
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42008
+Finished at                        : Fri Sep 23 09:46:33 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:33 EDT 2022
+Creating test case for Row #       : 1149
+Short Desc                         : In Internal Message panel, verify Copy message functionality
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In Internal Message panel, verify Copy message functionality. From Internal Message Search, select a message to be copied and copy the message to start a new message with previous message content. Save the message and verify results.
+Expected Results                   : Message is savedA new message shall be available with same/or modified details from previous message.
+Test Case ID for Row 1149          : 42009
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42009
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42009
+Finished at                        : Fri Sep 23 09:46:36 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:46:36 EDT 2022
+Creating test case for Row #       : 1150
+Short Desc                         : In "Internal Message" panel, validate field validations
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In "Internal Message" panel, validate field validations, Error message should trigger appropriately.
+Expected Results                   : Message validations shall be displayed according to design document.
+Test Case ID for Row 1150          : 42010
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 42010
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 42010
+Finished at                        : Fri Sep 23 09:46:40 EDT 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 23/Sep/2022 09:46:40AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+Configuration Failures: 1, Skips: 1
+===============================================
+

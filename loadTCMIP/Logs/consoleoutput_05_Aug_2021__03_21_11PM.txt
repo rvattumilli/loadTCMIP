@@ -1,0 +1,32 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 05/Aug/2021 03:21:11PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Creating test case for TC Row : 493
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Mangament
+Short Desc                    : Verify revised CC notices; old CC notices are no longer generated
+Long Desc                     : The CC notices are now revised and the old CC notices are no longer generated anymore.
+Expected Results              : The CC notices are now revised and the old CC notices are no longer generated anymore.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+************************************************************************
+Logged out
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 0, Failures: 1, Skips: 0
+Configuration Failures: 1, Skips: 2
+===============================================
+

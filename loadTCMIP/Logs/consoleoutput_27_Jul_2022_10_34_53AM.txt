@@ -1,0 +1,251 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 27/Jul/2022 10:34:53AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Wed Jul 27 10:35:03 EDT 2022
+Creating test case for Row #       : 1003
+Short Desc                         : Enroll ACO member to CSA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Enroll a MSTDA/MFASA/CRPLA member, Age:0-20, to CSA through SU Panel. Check if all the CSA CP providers are displayed in the PMP srch for ACO members
+Expected Results                   : Member is successfully enrolled in CSA Plan.
+Test Case ID for Row 1003          : 41722
+Associated Req ID                  : 33860.01.001
+Requirement linked for test case   : 41722
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41722
+Finished at                        : Wed Jul 27 10:35:08 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:08 EDT 2022
+Creating test case for Row #       : 1004
+Short Desc                         : Enroll MCO member to CSA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Enroll a MSTD/MFAS/CRPLS member, Age:0-20, to CSA through SU Panel. Check if all the CSA CP providers are displayed in the PMP srch for MCO members
+Expected Results                   : Member is successfully enrolled in CSA Plan.
+Test Case ID for Row 1004          : 41723
+Associated Req ID                  : 33860.01.001
+Requirement linked for test case   : 41723
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41723
+Finished at                        : Wed Jul 27 10:35:11 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:11 EDT 2022
+Creating test case for Row #       : 1005
+Short Desc                         : Enroll PCCP/BH member to CSA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 759
+Owner                              : PRIYA KANTAMNENI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Enroll a PCCP/BH,ACOB/PCCB/BH,CPCCP/CPBH member, Age:0-20, to CSA through SU Panel. Check if all the CSA CP providers are displayed in the PMP srch for PCCP members
+Expected Results                   : Member is successfully enrolled in CSA Plan.
+Test Case ID for Row 1005          : 41724
+Associated Req ID                  : 33860.01.001
+Requirement linked for test case   : 41724
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41724
+Finished at                        : Wed Jul 27 10:35:14 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:14 EDT 2022
+Creating test case for Row #       : 1006
+Short Desc                         : Enroll BH only members to CSA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 759
+Owner                              : PRIYA KANTAMNENI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Enroll a BH alone/CBHI1/CBHI2 member, Age:0-20, to CSA through SU Panel. Check if all the CSA CP providers are displayed in the PMP srch for BH members
+Expected Results                   : Member is successfully enrolled in CSA Plan.
+Test Case ID for Row 1006          : 41725
+Associated Req ID                  : 33860.01.001
+Requirement linked for test case   : 41725
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41725
+Finished at                        : Wed Jul 27 10:35:18 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:18 EDT 2022
+Creating test case for Row #       : 1007
+Short Desc                         : Enroll FFS member to CSA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify CSA Providers are being displayed when enrolling a FFS member to CSA program via UI from SU Panel.
+Expected Results                   : Member is successfully enrolled in CSA Plan.
+Test Case ID for Row 1007          : 41726
+Associated Req ID                  : 33860.01.002
+Requirement linked for test case   : 41726
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41726
+Finished at                        : Wed Jul 27 10:35:21 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:21 EDT 2022
+Creating test case for Row #       : 1008
+Short Desc                         : Enroll Medicare member to CSA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify CSA Providers are being displayed when enrolling a member with Medicare to CSA program via UI from SU Panel.
+Expected Results                   : Member is successfully enrolled in CSA Plan.
+Test Case ID for Row 1008          : 41727
+Associated Req ID                  : 33860.01.002
+Requirement linked for test case   : 41727
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41727
+Finished at                        : Wed Jul 27 10:35:24 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:24 EDT 2022
+Creating test case for Row #       : 1009
+Short Desc                         : Enroll TPL member to CSA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify CSA Providers are being displayed when enrolling a member with TPL to CSA program via UI from SU Panel.
+Expected Results                   : Member is successfully enrolled in CSA Plan.
+Test Case ID for Row 1009          : 41728
+Associated Req ID                  : 33860.01.002
+Requirement linked for test case   : 41728
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41728
+Finished at                        : Wed Jul 27 10:35:27 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:27 EDT 2022
+Creating test case for Row #       : 1010
+Short Desc                         : Enroll Non ACO/MCO member to CSA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify CSA Providers are being displayed when enrolling a non MCO/ACO member to CSA program via UI from SU Panel.
+Expected Results                   : Member is successfully enrolled in CSA Plan.
+Test Case ID for Row 1010          : 41729
+Associated Req ID                  : 33860.01.002
+Requirement linked for test case   : 41729
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41729
+Finished at                        : Wed Jul 27 10:35:30 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:30 EDT 2022
+Creating test case for Row #       : 1011
+Short Desc                         : Enroll BHCP/LTSS/ELTSS member to CSA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify CSA Providers are being displayed when enrolling a member with BHCP/LTSS/ELTSS to CSA program via UI from SU Panel.
+Expected Results                   : Member is successfully enrolled in CSA Plan.Existing CP assignment should be disenrolled.
+Test Case ID for Row 1011          : 41730
+Associated Req ID                  : 33860.01.002
+Requirement linked for test case   : 41730
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41730
+Finished at                        : Wed Jul 27 10:35:33 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:33 EDT 2022
+Creating test case for Row #       : 1012
+Short Desc                         : Enroll ACO member to BHCP/LTSS/ELTSS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Enroll an ACO/MCO member to BHCP/LTSS/ELTSS program via UI from SU Panel.
+Expected Results                   : Member is successfully enrolled in BHCP/LTSS/ELTSS Plan.
+Test Case ID for Row 1012          : 41731
+Associated Req ID                  : 33860.01.002
+Requirement linked for test case   : 41731
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41731
+Finished at                        : Wed Jul 27 10:35:36 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:36 EDT 2022
+Creating test case for Row #       : 1013
+Short Desc                         : Enroll member to  ACCS1/PACC1
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Enroll member to ACCS1/PACC1 program via UI from SU Panel.
+Expected Results                   : Member is successfully enrolled in  ACCS1/PACC1 Plan.
+Test Case ID for Row 1013          : 41732
+Associated Req ID                  : 33860.01.002
+Requirement linked for test case   : 41732
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41732
+Finished at                        : Wed Jul 27 10:35:39 EDT 2022
+****************************************************
+Started at                         : Wed Jul 27 10:35:39 EDT 2022
+Creating test case for Row #       : 1014
+Short Desc                         : Enroll member to  ACCS2/PACC2
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Enroll member to ACCS2/PACC2 program via UI from SU Panel.
+Expected Results                   : Member is successfully enrolled in  ACCS2/PACC2 Plan.
+Test Case ID for Row 1014          : 41733
+Associated Req ID                  : 33860.01.002
+Requirement linked for test case   : 41733
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41733
+Finished at                        : Wed Jul 27 10:35:42 EDT 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 27/Jul/2022 10:35:42AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

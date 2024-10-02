@@ -1,0 +1,640 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 06/Mar/2023 04:31:52PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 100
+****************************************************
+Started at                         : Mon Mar 06 16:31:59 EST 2023
+Creating test case for Row #       : 1493
+Validation status                  : PASS
+Short Desc                         : Daily file
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Check the incoming MDS file and see if it is being loaded in t_re_MDS_file on a daily basis. ( Since we are already receiving the files, check the current logic hasnt been stirred)
+Expected Results                   : MA_MDS3_ASMT_EXTRCT_YYYYMMDD which includes records for all MA residents with completed MDSs since the last daily file should be tere. Note; It can have more than one file.  ".dne" means file belonged to previous day which somehow wasnt present then.
+Test Case ID for Row 1493          : 42628
+Associated Req ID                  : 36269.01.000
+Requirement linked for test case   : 42628
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42628
+Finished at                        : Mon Mar 06 16:32:05 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:32:05 EST 2023
+Creating test case for Row #       : 1494
+Validation status                  : PASS
+Short Desc                         : No files came in from CMS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : No files came in from CMS
+Expected Results                   : The log file should be 0
+Test Case ID for Row 1494          : 42629
+Associated Req ID                  : 36269.01.000
+Requirement linked for test case   : 42629
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42629
+Finished at                        : Mon Mar 06 16:32:12 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:32:12 EST 2023
+Creating test case for Row #       : 1495
+Validation status                  : PASS
+Short Desc                         : Error in file name
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Some files have errors; E.g incorrect date format, or incorrect file name. .MA_MDS3_ASMT_XXTRCT_YYYYMMDD .MA_MDS3_ASMT_EXTRCT_MMDDYYYY
+Expected Results                   : The error files will not be processed
+Test Case ID for Row 1495          : 42630
+Associated Req ID                  : 36269.01.000
+Requirement linked for test case   : 42630
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42630
+Finished at                        : Mon Mar 06 16:32:18 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:32:18 EST 2023
+Creating test case for Row #       : 1496
+Validation status                  : PASS
+Short Desc                         : Valid PID/SL and Invalid MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send a member record with Valid PID/SL and Invalid MID
+Expected Results                   : Check t_re_mds_rec ,the error code should be 1 and the error report to providers and internal staffs should be created.(req 03.003 and03.006)
+Test Case ID for Row 1496          : 42631
+Associated Req ID                  : 36269.01.009
+Requirement linked for test case   : 42631
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42631
+Finished at                        : Mon Mar 06 16:32:24 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:32:24 EST 2023
+Creating test case for Row #       : 1497
+Validation status                  : PASS
+Short Desc                         : Valid PID/SL and Valid MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send a member record withValid PID/SL and Valid MID
+Expected Results                   : Check t_re_mds_rec ,the error code should be 0. Check the success report to providers and internal staffs(03.002 and 03.005)
+Test Case ID for Row 1497          : 42632
+Associated Req ID                  : 36269.01.009
+Requirement linked for test case   : 42632
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42632
+Finished at                        : Mon Mar 06 16:32:30 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:32:30 EST 2023
+Creating test case for Row #       : 1498
+Validation status                  : PASS
+Short Desc                         : Invalid PID/SL and valid MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send a member record with Invalid PID/SL and valid MID
+Expected Results                   : Check t_re_mds_rec ,the error code should be 2. check the member error report to internal staffs (03.007)
+Test Case ID for Row 1498          : 42633
+Associated Req ID                  : 36269.01.010
+Requirement linked for test case   : 42633
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42633
+Finished at                        : Mon Mar 06 16:32:36 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:32:36 EST 2023
+Creating test case for Row #       : 1499
+Validation status                  : PASS
+Short Desc                         : Invalid PID/SL and Invalid MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send a member record withInvalid PID/SL and Invalid MID
+Expected Results                   : Check t_re_mds_rec ,the error code should be 2. Check the report 03.010)
+Test Case ID for Row 1499          : 42634
+Associated Req ID                  : 36269.01.010
+Requirement linked for test case   : 42634
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42634
+Finished at                        : Mon Mar 06 16:32:43 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:32:43 EST 2023
+Creating test case for Row #       : 1500
+Validation status                  : PASS
+Short Desc                         : Inactive/Active MIDs have same date
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Inactive and Active MIDs have same dte_effective and dt_end
+Expected Results                   : nothing happens
+Test Case ID for Row 1500          : 42635
+Associated Req ID                  : 36269.01.013
+Requirement linked for test case   : 42635
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42635
+Finished at                        : Mon Mar 06 16:32:48 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:32:48 EST 2023
+Creating test case for Row #       : 1501
+Validation status                  : PASS
+Short Desc                         : Ensure Aid cats get  copied over.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Inactive and Active MIDs have same dte_effective and dt_end and if the aids cat match.
+Expected Results                   : Members aid cats are correct. Nothing happen
+Test Case ID for Row 1501          : 42636
+Associated Req ID                  : 36269.01.013
+Requirement linked for test case   : 42636
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42636
+Finished at                        : Mon Mar 06 16:32:55 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:32:55 EST 2023
+Creating test case for Row #       : 1502
+Validation status                  : PASS
+Short Desc                         : Same date but one has history status
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Inactive and Active MIDs have same dte_effective and dt_end  but one record has History status with same date.
+Expected Results                   : That history status wont get transferred.
+Test Case ID for Row 1502          : 42637
+Associated Req ID                  : 36269.01.013
+Requirement linked for test case   : 42637
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42637
+Finished at                        : Mon Mar 06 16:33:00 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:00 EST 2023
+Creating test case for Row #       : 1503
+Validation status                  : PASS
+Short Desc                         : No overlap in Active and Inactive MIDs
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Inactive MID has 01/01-03/30 and Active MID has 04/01-06/30
+Expected Results                   : 01/01-03/30 is transferred to the active MID.
+Test Case ID for Row 1503          : 42638
+Associated Req ID                  : 36269.01.013
+Requirement linked for test case   : 42638
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42638
+Finished at                        : Mon Mar 06 16:33:06 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:06 EST 2023
+Creating test case for Row #       : 1504
+Validation status                  : PASS
+Short Desc                         : No overlap in Active and Inactive MIDs: Aid cats
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Inactive MID has 01/01-03/30 and Active MID has 04/01-06/30
+Expected Results                   : Aid cats are transferred to the active MID
+Test Case ID for Row 1504          : 42639
+Associated Req ID                  : 36269.01.013
+Requirement linked for test case   : 42639
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42639
+Finished at                        : Mon Mar 06 16:33:12 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:12 EST 2023
+Creating test case for Row #       : 1505
+Validation status                  : PASS
+Short Desc                         : Split date is reflected in Active MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MID 1= 01/01-03/30MID 2 which will be active= 01/01-2/14, 2/15-5/30
+Expected Results                   : To be Active MID= 01/01-2/14 and 2/15-5/30
+Test Case ID for Row 1505          : 42640
+Associated Req ID                  : 36269.01.013
+Requirement linked for test case   : 42640
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42640
+Finished at                        : Mon Mar 06 16:33:18 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:18 EST 2023
+Creating test case for Row #       : 1506
+Validation status                  : PASS
+Short Desc                         : Split date is transferred in Active MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Active MID= 01/01-03/30Inactive MID= 01/01-2/14, 2/15-5/30
+Expected Results                   : To be Active MID= 01/01-2/14 and 2/15-5/30. Make sure  01/01-03/30 is not transferred as it overlaps the dates.
+Test Case ID for Row 1506          : 42641
+Associated Req ID                  : 36269.01.013
+Requirement linked for test case   : 42641
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42641
+Finished at                        : Mon Mar 06 16:33:24 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:24 EST 2023
+Creating test case for Row #       : 1507
+Validation status                  : PASS
+Short Desc                         : ELGJD050 Member Unlinking Program operates as expected
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Manual Report will occur if there are existing active member id records in T_RE_MDS_LOC else no manual report for T_RE_MDS_LOC will occur and ELGJD050 will complete without abending.
+Expected Results                   : Overlap|----------Active------------------|                 |--------------Inactive------------|In this scenario Issue Manual Report and no changes will occur.|----------Active------------------|                 |--------------Inactive------------|
+Test Case ID for Row 1507          : 42642
+Associated Req ID                  : 36269.01.013
+Requirement linked for test case   : 42642
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42642
+Finished at                        : Mon Mar 06 16:33:30 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:30 EST 2023
+Creating test case for Row #       : 1508
+Validation status                  : PASS
+Short Desc                         : One day overlap
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : When the MIDs are linked and both MIDs have a one day overlap in MDS segment,MID 1=01/01/24-03/31/2024MID 2=03/31/2024-6/31/24Then, Active MID should have,01/01/24-03/31/202403/31/2024-6/31/2024.
+Expected Results                   : No error report is produced and processes as should
+Test Case ID for Row 1508          : 42643
+Associated Req ID                  : 36269.01.60
+Requirement linked for test case   : 42643
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42643
+Finished at                        : Mon Mar 06 16:33:36 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:36 EST 2023
+Creating test case for Row #       : 1472
+Validation status                  : PASS
+Short Desc                         : Monthly  report broken by providers and S/L
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Make sure the reports are broken out by Provider ID and service location
+Expected Results                   : Each individual provider and service location will have their own report
+Test Case ID for Row 1472          : 42644
+Associated Req ID                  : 36269.03.001
+Requirement linked for test case   : 42644
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42644
+Finished at                        : Mon Mar 06 16:33:43 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:43 EST 2023
+Creating test case for Row #       : 1473
+Validation status                  : PASS
+Short Desc                         : Sorting order of reports
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Check to see if the reports are sorted by provider ID for monthly report
+Expected Results                   : The reports are sorted by provider ID for monthly report
+Test Case ID for Row 1473          : 42645
+Associated Req ID                  : 36269.03.001
+Requirement linked for test case   : 42645
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42645
+Finished at                        : Mon Mar 06 16:33:50 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:50 EST 2023
+Creating test case for Row #       : 1474
+Validation status                  : PASS
+Short Desc                         : T_message
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Check jobs. Example Select count(*) from t_message where dsc_subject like'%ELG-402-W%' order by sak_message desc
+Expected Results                   : Count should be double. Example- If the  "Total number of MDS accepted"= is 12. Count to this should be 24
+Test Case ID for Row 1474          : 42646
+Associated Req ID                  : 36269.03.001
+Requirement linked for test case   : 42646
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42646
+Finished at                        : Mon Mar 06 16:33:57 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:33:57 EST 2023
+Creating test case for Row #       : 1475
+Validation status                  : PASS
+Short Desc                         : T_message_message_types
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Check jobs. Example Select count(*) from t_message where dsc_subject like'%ELG-402-W%' order by sak_message desc
+Expected Results                   : Count should be double. Example- If the  "Total number of MDS accepted"= is 12. Count to this should be 24
+Test Case ID for Row 1475          : 42647
+Associated Req ID                  : 36269.03.001
+Requirement linked for test case   : 42647
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42647
+Finished at                        : Mon Mar 06 16:34:03 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:34:03 EST 2023
+Creating test case for Row #       : 1476
+Validation status                  : PASS
+Short Desc                         : T_attachment
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Check jobs. Example Select count(*) from t_message where dsc_subject like'%ELG-402-W%' order by sak_message desc
+Expected Results                   : Count should be double. Example- If the  "Total number of MDS accepted"= is 12. Count to this should be 24
+Test Case ID for Row 1476          : 42648
+Associated Req ID                  : 36269.03.001
+Requirement linked for test case   : 42648
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42648
+Finished at                        : Mon Mar 06 16:34:11 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:34:11 EST 2023
+Creating test case for Row #       : 1477
+Validation status                  : PASS
+Short Desc                         : T_provider_messages
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Check jobs. Example Select count(*) from t_message where dsc_subject like'%ELG-402-W%' order by sak_message desc
+Expected Results                   : Count should be double. Example- If the  "Total number of MDS accepted"= is 12. Count to this should be 24
+Test Case ID for Row 1477          : 42649
+Associated Req ID                  : 36269.03.001
+Requirement linked for test case   : 42649
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42649
+Finished at                        : Mon Mar 06 16:34:19 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:34:19 EST 2023
+Creating test case for Row #       : 1462
+Validation status                  : PASS
+Short Desc                         : ELGJW402- Submission Success Report-Provider
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : ELGJW402-  After the job runs make sure all the values and fields are listed correctly and the report is weekly
+Expected Results                   : Data in report should contain PIDSL, State Provider Number, MID, Provider Name, Medicaid Number, Member Name, Assessment ID, Assessment Reference Date, Date assessment received to MMIS, HIPPS Code C_MDCR_HIPPS_TXT, total number of MDS assessments accepted.
+Test Case ID for Row 1462          : 42650
+Associated Req ID                  : 36269.03.002
+Requirement linked for test case   : 42650
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42650
+Finished at                        : Mon Mar 06 16:34:25 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:34:25 EST 2023
+Creating test case for Row #       : 1463
+Validation status                  : PASS
+Short Desc                         : ELGJW404-Error Report-Member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : ELGJW404- After the job runs make sure all the values and fields are listed correctly  and the report is weekly
+Expected Results                   : Data in report should reflect what was in the MDS form even if they are incorrect. : PIDSL, SSN, MBI ,MID, Member Name, Provider Name , Member Name, Assessment ID, Assessment Reference Date, Date assessment received to MMIS, Date assessment received to QIES (SBMSN_DT), HIPPS Code, total number of errors, Error reason.
+Test Case ID for Row 1463          : 42651
+Associated Req ID                  : 36269.03.003
+Requirement linked for test case   : 42651
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42651
+Finished at                        : Mon Mar 06 16:34:32 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:34:32 EST 2023
+Creating test case for Row #       : 1464
+Validation status                  : PASS
+Short Desc                         : ELGJM425- Success Submission Report to the users
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : ELGJM425- After the job runs make sure all the values and fields are listed correctly  and the report is monthly
+Expected Results                   : Data in report should contain: PIDSL, MID, Provider Name, Member Name , Assessment ID, Assessment Reference Date, Date assessment received to MMIS, HIPPS Code, total number of MDS assessments accepted. It should also include the total of MDSs rejected by MMIS due to errors per PIDSL and a total of all assessment for all Nursing Facilities.
+Test Case ID for Row 1464          : 42652
+Associated Req ID                  : 36269.03.005
+Requirement linked for test case   : 42652
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42652
+Finished at                        : Mon Mar 06 16:34:38 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:34:38 EST 2023
+Creating test case for Row #       : 1465
+Validation status                  : PASS
+Short Desc                         : ELGJM427- Error report to theusers
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : ELGJM427- After the job runs make sure all the values and fields are listed correctly.
+Expected Results                   : Data in report should reflect what was in the MDS form even if they are incorrect. : PIDSL, SSN, MBI,MID, Provider Name, Medicaid Number, Member Name, Assessment ID, Assessment Reference Date, Date assessment received to MMIS, Date assessment received to QIES (SBMSN_DT) HIPPS Code, total number of errors, Error reason. Additionally, it should include the total of MDSs rejected by MMIS due to errors per PIDSL.
+Test Case ID for Row 1465          : 42653
+Associated Req ID                  : 36269.03.006
+Requirement linked for test case   : 42653
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42653
+Finished at                        : Mon Mar 06 16:34:44 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:34:44 EST 2023
+Creating test case for Row #       : 1466
+Validation status                  : PASS
+Short Desc                         : ELGJM430-Second error report to the users
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : ELGJM430- After the job runs make sure all the values and fields are listed correctly.
+Expected Results                   : It should contain data as received even though incorrect; MID, Member Name, PIDSL, Provider Name, Assessment ID, ARD, Date assessment received by QIES, Date assessment received to MMIS, HIPPS Code, Error Reason (PIDSL missing or incorrect), Total of errors for the report time period.
+Test Case ID for Row 1466          : 42654
+Associated Req ID                  : 36269.03.007
+Requirement linked for test case   : 42654
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42654
+Finished at                        : Mon Mar 06 16:34:50 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:34:50 EST 2023
+Creating test case for Row #       : 1467
+Validation status                  : PASS
+Short Desc                         : ELGJM432- MDS Discrepancy Report-No MDS segment
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : ELGJM432  After the job runs make sure all the values and fields are listed correctly.
+Expected Results                   : Data should contain :MID, Member name, PIDSL, Provider name, LTC admission date, LTC Segment Start date. It should also have a count of members who had LTC segments but no MDS.
+Test Case ID for Row 1467          : 42655
+Associated Req ID                  : 36269.03.008
+Requirement linked for test case   : 42655
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42655
+Finished at                        : Mon Mar 06 16:34:57 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:34:57 EST 2023
+Creating test case for Row #       : 1468
+Validation status                  : PASS
+Short Desc                         : ELGJM434-Discrepancy Report No NF segment
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : ELGJM434  After the job runs make sure all the values and fields are listed correctly.
+Expected Results                   : data in report should contain MID, Member name, PIDSL, Provider name, ARD, Date assessment received by QIES (SBMSN_DT), Date assessment received to MMIS, HIPPS Code and also a total count of members who had MDS segments but no LTC segment. This is a monthly report to the internal staff
+Test Case ID for Row 1468          : 42656
+Associated Req ID                  : 36269.03.009
+Requirement linked for test case   : 42656
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42656
+Finished at                        : Mon Mar 06 16:35:03 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:35:03 EST 2023
+Creating test case for Row #       : 1469
+Validation status                  : PASS
+Short Desc                         : Count if both the PID/SL and the MID aren't found
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : ELGJM436  After the job runs make sure all the values and fields are listed correctly.
+Expected Results                   : Monthly report on the count if both the PID/SL and the MID aren't found in MMIS.
+Test Case ID for Row 1469          : 42657
+Associated Req ID                  : 36269.03.010
+Requirement linked for test case   : 42657
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42657
+Finished at                        : Mon Mar 06 16:35:09 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:35:09 EST 2023
+Creating test case for Row #       : 1470
+Validation status                  : PASS
+Short Desc                         : Weekly reports
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Check the date range to make sure it only captures weekly
+Expected Results                   : The submission and Error reports to providers should have weekly reports
+Test Case ID for Row 1470          : 42658
+Associated Req ID                  : 36269.04.000
+Requirement linked for test case   : 42658
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42658
+Finished at                        : Mon Mar 06 16:35:15 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 16:35:15 EST 2023
+Creating test case for Row #       : 1478
+Validation status                  : PASS
+Short Desc                         : MDS Summary panel/Validate t_re_mds_fields
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Check the t_re_mds_fields and make sure values are inserted correctly. Key	Field	Data Type	Length	Precision	CommentsPK	MDS_LABEL	CHAR 	20	0	MDS field name, e.g., Medicaid number.  Example: A0700	LABEL_NUM	NUMBER	4	0		START_POS	NUMBER	4	0	Position of field in MDS data file	FIELD_LEN	NUMBER 	4	0	Length of field to be extracted from MDS data file	FIELD_INCLUDED	CHAR	1	0	Y extracts & inserts MDS value in T_RE_MDS_FILE; Default = N;	ID_VERSION_LOCK	NUMBER	8	0
+unexpected alert open: {Alert text : Are you sure you want to add the Test Case?}
+  (Session info: chrome=110.0.5481.178): Are you sure you want to add the Test Case?
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bb18b216d543364fb9476706651b2ccf, findElement {using=xpath, value=//textarea[contains(@name,'TcDscExpected')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:8813}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:8813/devtool..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bb18b216d543364fb9476706651b2ccf
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP abended 06/Mar/2023 04:35:18PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

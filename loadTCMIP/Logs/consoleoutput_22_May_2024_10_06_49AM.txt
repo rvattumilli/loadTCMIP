@@ -1,0 +1,241 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 22/May/2024 10:06:49AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Total No.of Columns fetched        : 6
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 227
+Total No.of Rows fetched           : 8
+*****************************************************************
+Started at                         : Wed May 22 10:07:01 EDT 2024
+Creating test case for Row #       : 5197
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 448
+TC Validation status               : PASS
+Short Desc                         : Suffix with and with out special character
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : Batch
+Long Desc                          : Create a new member with and  out special character.
+Expected Results                   : Validate the name suffix is added to the name under T_RE_BASE and T_RE_ADDL_DEMO
+Test Case ID for Row 5197          : 47303
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.13.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47303
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47303
+Finished at                        : Wed May 22 10:07:06 EDT 2024
+*****************************************************************
+Started at                         : Wed May 22 10:07:06 EDT 2024
+Creating test case for Row #       : 5198
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 433
+TC Validation status               : PASS
+Short Desc                         : Name suffix with space value
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : Batch
+Long Desc                          : Create a new member with nam_suffix as space.
+Expected Results                   : Validate that no value is added to nam_suffix under T_RE_BASE and T_RE_ADDL_DEMO
+Test Case ID for Row 5198          : 47304
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.13.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47304
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47304
+Finished at                        : Wed May 22 10:07:10 EDT 2024
+*****************************************************************
+Started at                         : Wed May 22 10:07:10 EDT 2024
+Creating test case for Row #       : 5199
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 447
+TC Validation status               : PASS
+Short Desc                         : Name suffix  for existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : Batch
+Long Desc                          : Send an xml to update the name suffix for an existing member with the same source
+Expected Results                   : Validate the name suffix has been updated.
+Test Case ID for Row 5199          : 47305
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.13.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47305
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47305
+Finished at                        : Wed May 22 10:07:14 EDT 2024
+*****************************************************************
+Started at                         : Wed May 22 10:07:14 EDT 2024
+Creating test case for Row #       : 5200
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 443
+TC Validation status               : PASS
+Short Desc                         : Existing member with special character
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : Batch
+Long Desc                          : Send an xml with special character to update the name suffix for an existing member with the same source
+Expected Results                   : Validate the name suffix has been updated with the special character.
+Test Case ID for Row 5200          : 47306
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.13.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47306
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47306
+Finished at                        : Wed May 22 10:07:19 EDT 2024
+*****************************************************************
+Started at                         : Wed May 22 10:07:19 EDT 2024
+Creating test case for Row #       : 5201
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 438
+TC Validation status               : PASS
+Short Desc                         : Existing member with space value
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : Batch
+Long Desc                          : Send an xml with space value for nam_suffix for an existing member who already has name suffix in DB using the same source.
+Expected Results                   : Validate the updates under name suffix. The name suffix should be empty.
+Test Case ID for Row 5201          : 47307
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.13.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47307
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47307
+Finished at                        : Wed May 22 10:07:23 EDT 2024
+*****************************************************************
+Started at                         : Wed May 22 10:07:23 EDT 2024
+Creating test case for Row #       : 5202
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 444
+TC Validation status               : PASS
+Short Desc                         : Existing member with no suffix field.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : Batch
+Long Desc                          : Send an xml without nam_suffix value for an existing member who already has name suffix in DB using the same source.
+Expected Results                   : Validate the updates under name suffix. The name suffix should be empty.
+Test Case ID for Row 5202          : 47308
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.13.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47308
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47308
+Finished at                        : Wed May 22 10:07:27 EDT 2024
+*****************************************************************
+Started at                         : Wed May 22 10:07:27 EDT 2024
+Creating test case for Row #       : 5203
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 445
+TC Validation status               : PASS
+Short Desc                         : Hierarchy rules should apply
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : Batch
+Long Desc                          : Existing member  database MHO   MI  S,  nam_suffix 2,  Transaction SSA  MI  L,  nam_suffix SR,
+Expected Results                   : The value of MI and name suffix are not changed in table T_RE_BASE and T_RE_ADDL_DEMO
+Test Case ID for Row 5203          : 47309
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.13.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47309
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47309
+Finished at                        : Wed May 22 10:07:31 EDT 2024
+*****************************************************************
+Started at                         : Wed May 22 10:07:31 EDT 2024
+Creating test case for Row #       : 5204
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 438
+TC Validation status               : PASS
+Short Desc                         : Hierarchy lower to higher
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : Batch
+Long Desc                          : Existing member  database PAC   MI  A,  nam_suffix SR,  Transaction DSS  MI  Z,  nam_suffix JR,
+Expected Results                   : The value of MI and name suffix are changed in table T_RE_BASE and T_RE_ADDL_DEMO
+Test Case ID for Row 5204          : 47310
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.13.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47310
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47310
+Finished at                        : Wed May 22 10:07:35 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 22/May/2024 10:07:36AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

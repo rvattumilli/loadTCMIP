@@ -1,0 +1,399 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 07/Sep/2023 05:11:32PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 117
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 126
+Total No.of Rows                   : 14
+*****************************************************************
+Started at                         : Thu Sep 07 17:11:39 EDT 2023
+Creating test case for Row #       : 4278
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 444
+Validation status                  : PASS
+Short Desc                         : Using different combinations of NF  and HIPPS code for updating the LOC/MDS panel.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : 1.Updating the LOC/MDS from HIPPS code to NF code in the LOC/MDS panel.2.Updating the LOC/MDS from HIPPS code to HIPPS code in the LOC/MDS panel.3.Updating the LOC/MDS from NF code to HIPPS code in the LOC/MDS panel.4.Updating the LOC/MDS from NF code to NF code in the LOC/MDS panel.
+Expected Results                   : 1.Able to update from HIPPS code to NF code. 2.Able to update from HIPPS to HIPPS code in the LOC/MDS panel.3.Able to update from NF to HIPPS code in the LOC/MDS panel.4.Able to update from NF to NF code in the LOC/MDS panel.
+Test Case ID for Row 4278          : 46143
+Query Execution Time(ms)           : 67
+Requirement ID                     : 37210.01.001
+Query Execution Time(ms)           : 37
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46143
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46143
+Finished at                        : Thu Sep 07 17:11:43 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:11:43 EDT 2023
+Creating test case for Row #       : 4279
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Validation Time(ms)                : 495
+Validation status                  : PASS
+Short Desc                         : Adding new NF record with the  existing HIPPS code
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Test case to verify if we are able to add a new MDS record with LOC/MDS Code with the existing record with the HIPPS code as NF Code in Level Of Care/MDS panel.
+Expected Results                   : Should be able to add new MDS record with LOC/MDS code as NF code
+Test Case ID for Row 4279          : 46144
+Query Execution Time(ms)           : 70
+Requirement ID                     : 37210.01.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46144
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46144
+Finished at                        : Thu Sep 07 17:11:47 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:11:47 EDT 2023
+Creating test case for Row #       : 4280
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 455
+Validation status                  : PASS
+Short Desc                         : Add new record with HIPPS code
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Test case to verify if we are able to add a new MDS record with LOC/MDS Code as HIPPS Code in LOC/MDS panel.
+Expected Results                   : Validation message will be popped, when trying to add the HIPPS code directly.
+Test Case ID for Row 4280          : 46145
+Query Execution Time(ms)           : 73
+Requirement ID                     : 37210.01.001
+Query Execution Time(ms)           : 32
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46145
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46145
+Finished at                        : Thu Sep 07 17:11:52 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:11:52 EDT 2023
+Creating test case for Row #       : 4281
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 469
+Validation status                  : PASS
+Short Desc                         : Update date & reason end code.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Test case to verify if we are able to update the other fields(dates, reason end code) without changing the LOC/MDS Code in LOC/MDS panel.
+Expected Results                   : Should be able to update the other fields in LOC/MDS panel.
+Test Case ID for Row 4281          : 46146
+Query Execution Time(ms)           : 61
+Requirement ID                     : 37210.01.001
+Query Execution Time(ms)           : 34
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46146
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46146
+Finished at                        : Thu Sep 07 17:11:56 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:11:56 EDT 2023
+Creating test case for Row #       : 4282
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 464
+Validation status                  : PASS
+Short Desc                         : checking validation message with  overlapping dates.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Test case to verify if we get a validation message when we try to add a LOC/MDS record with overlapping dates in LOC/MDS panel.
+Expected Results                   : validation message popped up when we try to add a LOC/MDSrecord with overlapping dates.
+Test Case ID for Row 4282          : 46147
+Query Execution Time(ms)           : 73
+Requirement ID                     : 37210.01.001
+Query Execution Time(ms)           : 33
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46147
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46147
+Finished at                        : Thu Sep 07 17:12:00 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:12:00 EDT 2023
+Creating test case for Row #       : 4283
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 458
+Validation status                  : PASS
+Short Desc                         : Update NF code to HIPPS code.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Verify if we are able to update the LOC/MDS Code from NF Code to HIPPS Code with both Active and History MDS records in Level Of Care/MDS panel.
+Expected Results                   : Should be able to update the LOC/MDS Code from NF Code to HIPPS Code.
+Test Case ID for Row 4283          : 46148
+Query Execution Time(ms)           : 67
+Requirement ID                     : 37210.01.001
+Query Execution Time(ms)           : 36
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46148
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46148
+Finished at                        : Thu Sep 07 17:12:05 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:12:05 EDT 2023
+Creating test case for Row #       : 4284
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 460
+Validation status                  : PASS
+Short Desc                         : Update NF code to HIPPS code with multiple records.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Verify if we are able to update the LOC/MDS Code from NF Code to HIPPS Code with multiple MDS records having different PID/SL with one day overlap dates in Level Of Care/MDS panel.
+Expected Results                   : Should be able to update the LOC/MDS Code from NF Code to HIPPS Code.
+Test Case ID for Row 4284          : 46149
+Query Execution Time(ms)           : 74
+Requirement ID                     : 37210.01.001
+Query Execution Time(ms)           : 28
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46149
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46149
+Finished at                        : Thu Sep 07 17:12:09 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:12:09 EDT 2023
+Creating test case for Row #       : 4285
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 487
+Validation status                  : PASS
+Short Desc                         : Updating the LOC effective date, end  date and LTC admission date, LTC  discharge date for both NF and HIPPS.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : 1.If the LTC discharge date is before LTC admission date(scenario 1 with NF code & Scenario 2 with HIPPS code). 2.If the LTC discharge date is updated and if the discharge reason is empty.3.The LOC effective date is less than LTC admission date(scenario 1 with NF code & Scenario 2 with HIPPS code).4.Updation of LTC discharge date is less than or equal to the LOC end date.
+Expected Results                   : 1. Validation message will be popped, stating that LTC discharge date should be after admission date. 2. Validation message should occur, stating there should be a valid discharge reason. 3. validation message should occur with LTC admission datemust be less than or equato LOC effective date. 4. There is a change in LOC end date and is equal to the updated LTC discharge date.
+Test Case ID for Row 4285          : 46150
+Query Execution Time(ms)           : 66
+Requirement ID                     : 37210.01.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46150
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46150
+Finished at                        : Thu Sep 07 17:12:14 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:12:14 EDT 2023
+Creating test case for Row #       : 4286
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 481
+Validation status                  : PASS
+Short Desc                         : segment not insrted after UI updte
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Send in MDS assessments for  a member who had HIPPS code manually added via UI from the NF code.
+Expected Results                   : A new segment is inserted.
+Test Case ID for Row 4286          : 46151
+Query Execution Time(ms)           : 64
+Requirement ID                     : 37210.01.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46151
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46151
+Finished at                        : Thu Sep 07 17:12:18 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:12:18 EDT 2023
+Creating test case for Row #       : 4287
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 55
+Validation Time(ms)                : 497
+Validation status                  : PASS
+Short Desc                         : Update LOC/MDS fields of active record.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Active and History MDS records have the overlapping dates, update all the LOC/MDS fields of the active record(scenario 1: same provider, scenario 2: different provider).
+Expected Results                   : Should be able to update the LOC/MDS fields successfully in the active record.
+Test Case ID for Row 4287          : 46152
+Query Execution Time(ms)           : 66
+Requirement ID                     : 37210.01.002
+Query Execution Time(ms)           : 36
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46152
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46152
+Finished at                        : Thu Sep 07 17:12:22 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:12:22 EDT 2023
+Creating test case for Row #       : 4288
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Validation Time(ms)                : 480
+Validation status                  : PASS
+Short Desc                         : Active MDS records dateoverlapping.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Two active MDS records have the overlapping dates, update the LOC/MDS fields(scenario 1: same provider, scenario 2: different provider).
+Expected Results                   : Validation message will occur due to the overlapping dates.
+Test Case ID for Row 4288          : 46153
+Query Execution Time(ms)           : 74
+Requirement ID                     : 37210.01.002
+Query Execution Time(ms)           : 34
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46153
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46153
+Finished at                        : Thu Sep 07 17:12:27 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:12:27 EDT 2023
+Creating test case for Row #       : 4289
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 442
+Validation status                  : PASS
+Short Desc                         : Add new LOC/MDS record
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Add the new LOC/MDS record for the member having the open history LOC/MDS record(scenario 1: same provider, scenario 2: different provider).
+Expected Results                   : We can able to successfully add the new record for the member having the open history LOC/MDS record
+Test Case ID for Row 4289          : 46154
+Query Execution Time(ms)           : 77
+Requirement ID                     : 37210.01.002
+Query Execution Time(ms)           : 30
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46154
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46154
+Finished at                        : Thu Sep 07 17:12:31 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:12:31 EDT 2023
+Creating test case for Row #       : 4290
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.04.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 59
+Validation Time(ms)                : 483
+Validation status                  : PASS
+Short Desc                         : Updating LOC/MDS history panel.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : Update all the LOC/MDS history panel withthe member having active MDS record also.
+Expected Results                   : The history panel cannot be updated, it is read only
+Test Case ID for Row 4290          : 46155
+Query Execution Time(ms)           : 72
+Requirement ID                     : 37210.04.003
+Query Execution Time(ms)           : 40
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46155
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46155
+Finished at                        : Thu Sep 07 17:12:35 EDT 2023
+*****************************************************************
+Started at                         : Thu Sep 07 17:12:35 EDT 2023
+Creating test case for Row #       : 4291
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37210.04.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER PANELS') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'A') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 474
+Validation status                  : PASS
+Short Desc                         : Updating LOC/MDS history panel with existing active MDS record.
+Env                                : A
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER PANELS
+Long Desc                          : select the member having both active and history LOC/MDS records, update the active MDS record and save. Then check the history LOC/MDS panel for updating.
+Expected Results                   : The history panel cannot be updated, it is read only
+Test Case ID for Row 4291          : 46156
+Query Execution Time(ms)           : 69
+Requirement ID                     : 37210.04.003
+Query Execution Time(ms)           : 39
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 46156
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46156
+Finished at                        : Thu Sep 07 17:12:40 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 07/Sep/2023 05:12:40PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

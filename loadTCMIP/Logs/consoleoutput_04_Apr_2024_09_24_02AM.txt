@@ -1,0 +1,578 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 04/Apr/2024 09:24:02AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Total No.of Columns fetched        : 6
+SQL Statement                      : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) order by a.req_row asc
+No.of Cols                         : 8
+Query Execution Time(ms)           : 39
+Total No.of Rows fetched           : 36
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:09 EDT 2024
+Creating requirement for Row #     : 4
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 444
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.001
+Requirement Name                   : MCE Definition
+Requirement Type                   : Informational
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : MCE segments are MSTD, MSTDA, MFAS, MFASA, CRPLS, CRPLA, MSKSC, PACE, SCO, ICO
+SAK Req for Row 4                  : 13644
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:12 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:12 EDT 2024
+Creating requirement for Row #     : 5
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 449
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.003
+Requirement Name                   : BH-Only Definition
+Requirement Type                   : Informational
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : BH-Only segments are BH, CBHI1, CBHI2 with no overlapping segments MSTD, MSTDA, MFAS, MFASA, CRPLS, CRPLA, MSKSC, PACE, SCO, ICO, ACOB, PCCB/CPCCB with ACOB, PCCP/CPPCC, BH with ACOB/PCCP, CPBH with ACOB/CPPCC.
+SAK Req for Row 5                  : 13645
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:16 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:16 EDT 2024
+Creating requirement for Row #     : 6
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 456
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.005
+Requirement Name                   : Contiguous Segment Definition
+Requirement Type                   : Informational
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : A segment is contiguous if its effective date is the next day after the original end date of a segment closed or historied for OOS and is a type defined in Contiguous Segments Types Definition.
+SAK Req for Row 6                  : 13646
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:20 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:20 EDT 2024
+Creating requirement for Row #     : 7
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 447
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.007
+Requirement Name                   : Contiguous Segment Types Definition
+Requirement Type                   : Informational
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : Contiguous segment types are MSTD, MSTDA, MFAS, MFASA, CRPLS, CRPLA, MSKSC, PACE, SCO, ICO, ACOB, PCCB/CPCCB with ACOB, PCCP/CPPCC, BH with ACOB/PCCP, CPBH with ACOB/CPPCC.
+SAK Req for Row 7                  : 13647
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:23 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:23 EDT 2024
+Creating requirement for Row #     : 8
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 408
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.009
+Requirement Name                   : Non Contiguous Segments Definition
+Requirement Type                   : Informational
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : Non contiguous segments are: (1) BH-Only segments (2) any contiguous segment contiguous to a BH-Only enrollment, (3) any other Managed Care assignment plan not mentioned in MCE Definition, or BH-Only Definition, or Contiguous Segment Types.
+SAK Req for Row 8                  : 13648
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:27 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:27 EDT 2024
+Creating requirement for Row #     : 9
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 418
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.011
+Requirement Name                   : Segment End Dates by Managed Care Program
+Requirement Type                   : Informational
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : OOS end date rules by Managed Care program are defined in requirements 36881.06.005 and 36881.06.010
+SAK Req for Row 9                  : 13649
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:31 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:31 EDT 2024
+Creating requirement for Row #     : 10
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 458
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.013
+Requirement Name                   : Batch OOS Stop Reason Code
+Requirement Type                   : Informational
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : Batch OOS Stop Reason code is defined in requirement 36881.11.003, unless otherwise noted in a disenrollment or history requirement.
+SAK Req for Row 10                 : 13650
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:34 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:34 EDT 2024
+Creating requirement for Row #     : 11
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 485
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.015
+Requirement Name                   : BH-Only Disenrollment Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date open or closed BH-Only segments that overlap OOS date except if effective date = OOS date.
+SAK Req for Row 11                 : 13651
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:38 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:38 EDT 2024
+Creating requirement for Row #     : 12
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 430
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.017
+Requirement Name                   : BH-Only History Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History open or closed BH-Only segments if effective date = OOS date.
+SAK Req for Row 12                 : 13652
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:41 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:41 EDT 2024
+Creating requirement for Row #     : 13
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 404
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.019
+Requirement Name                   : MCE Disenrollment Rule 1.1
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed MCE segments that overlap OOS date (1) except if effective date = OOS date and (2) have no contiguous segments.
+SAK Req for Row 13                 : 13653
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:45 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:45 EDT 2024
+Creating requirement for Row #     : 14
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 469
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.021
+Requirement Name                   : MCE Disenrollment Rule 1.2
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed MCE segments that overlap OOS date (1) except if effective date = OOS date and (2) have one or more contiguous segment(s) where the last contiguous segment has a closed end date.
+SAK Req for Row 14                 : 13654
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:48 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:48 EDT 2024
+Creating requirement for Row #     : 15
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 426
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.023
+Requirement Name                   : MCE Disenrollment Rule 2
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : Do not end date closed MCE segments that meet MCE Disenrollment Rule 1.2, but there exists a contiguous closed BH segment that (1) ties to a contiguous ACOB/PCCP and (2) extends beyond the contiguous ACOB/PCCP end date as BH-Only.
+SAK Req for Row 15                 : 13655
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:52 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:52 EDT 2024
+Creating requirement for Row #     : 16
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 417
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.025
+Requirement Name                   : MCE History Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed MCE segments that meet MCE Disenrollment Rules 1.1 or 1.2 and effective date = OOS date.
+SAK Req for Row 16                 : 13656
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:56 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:56 EDT 2024
+Creating requirement for Row #     : 17
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 433
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.027
+Requirement Name                   : ACOB Disenrollment Rule 1.1
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed ACOB segments that overlap OOS date (1) except if effective date = OOS date and (2) have a closed dependent BH/CPBH segment, and (3) have no contiguous segments.
+SAK Req for Row 17                 : 13657
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:24:59 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:24:59 EDT 2024
+Creating requirement for Row #     : 18
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 440
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.029
+Requirement Name                   : ACOB Disenrollment Rule 1.2
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed ACOB segments that overlap OOS date (1) except if effective date = OOS date and (2) have a closed dependent BH/CPBH segment,(3) have one or more contiguous segment(s) where the last contiguous segment has a closed end date.
+SAK Req for Row 18                 : 13658
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:02 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:02 EDT 2024
+Creating requirement for Row #     : 19
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 499
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.031
+Requirement Name                   : ACOB Disenrollment Rule 1.3
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed ACOB segments that overlap OOS date (1) except if effective date = OOS date and (2) have a closed dependent BH segment that extends beyond the ACOB segment and is dependent on one or more contiguous ACOB/PCCP segment(s) where the last contiguous segment has a closed end date.
+SAK Req for Row 19                 : 13659
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:07 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:07 EDT 2024
+Creating requirement for Row #     : 20
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 446
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.033
+Requirement Name                   : ACOB Disenrollment Rule 2
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : Do not end date closed ACOB segments if there exists a closed BH  segment that (1) extends beyond the OOS overlapping ACOB with no contiguous segments as BH-Only, or (2) extends beyond  a contiguous ACOB/PCCP as BH-Only.
+SAK Req for Row 20                 : 13660
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:11 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:11 EDT 2024
+Creating requirement for Row #     : 21
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 471
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.035
+Requirement Name                   : ACOB History Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed ACOB segments that meet ACOB Disenrollment Rules 1.1 or 1.2 or 1.3 and effective date = OOS date.
+SAK Req for Row 21                 : 13661
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:14 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:14 EDT 2024
+Creating requirement for Row #     : 22
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 458
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.037
+Requirement Name                   : PCCB/CPCCB Disenrollment Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed PCCB/CPCCB segments dependent on ACOB segments closed for OOS.
+SAK Req for Row 22                 : 13662
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:18 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:18 EDT 2024
+Creating requirement for Row #     : 23
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 488
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.039
+Requirement Name                   : PCCB/CPCCB History Rule 1.1
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed PCCB/CPCCB segments dependent on ACOB segments historied for OOS.
+SAK Req for Row 23                 : 13663
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:21 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:21 EDT 2024
+Creating requirement for Row #     : 24
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 421
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.041
+Requirement Name                   : PCCB/CPCCB History Rule 1.2
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed PCCB/CPCCB segments dependent on an ACOB segment closed for OOS, and have effective date greater than OOS date.
+SAK Req for Row 24                 : 13664
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:24 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:24 EDT 2024
+Creating requirement for Row #     : 25
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 406
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.043
+Requirement Name                   : PCCP/CPPCC Disenrollment Rule 1.1
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed PCCP/CPPCC segments that overlap OOS date (1) except if effective date = OOS date and (2) have a closed dependent BH/CPBH segment, and (3) have no contiguous segments.
+SAK Req for Row 25                 : 13665
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:28 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:28 EDT 2024
+Creating requirement for Row #     : 26
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 432
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.045
+Requirement Name                   : PCCP/CPPCC Disenrollment Rule 1.2
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed PCCP/CPPCC segments that overlap OOS date (1) except if effective date = OOS date and (2) have a closed dependent BH/CPBH segment, and and (3) have one or more contiguous segment(s) where the last contiguous segment has a closed end date.
+SAK Req for Row 26                 : 13666
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:31 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:31 EDT 2024
+Creating requirement for Row #     : 27
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 413
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.047
+Requirement Name                   : PCCP/CPPCC Disenrollment Rule 1.3
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed  PCCP segments that overlap OOS date (1) except if effective date = OOS date and (2) have a closed dependent BH segment that extends beyond the  PCCP segment and is dependent on one or more contiguous ACOB/PCCP segment(s) where the last contiguous segment has a closed end date.
+SAK Req for Row 27                 : 13667
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:34 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:34 EDT 2024
+Creating requirement for Row #     : 28
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 418
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.049
+Requirement Name                   : PCCP/CPPCC Disenrollment Rule 2
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : Do not end date closed PCCP segments  if there exists a closed BH segment that (1) extends beyond the OOS overlapping PCCP with no contiguous segments as BH-Only, or (2) extends beyond  a contiguous ACOB/PCCP as BH-Only.
+SAK Req for Row 28                 : 13668
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:38 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:38 EDT 2024
+Creating requirement for Row #     : 29
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 419
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.051
+Requirement Name                   : PCCP/CPPCC History Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed PCCP/CPPCC segments where effective date = OOS date.
+SAK Req for Row 29                 : 13669
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:41 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:41 EDT 2024
+Creating requirement for Row #     : 30
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 409
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.053
+Requirement Name                   : BH/CPBH Disenrollment Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed BH/CPBH segments dependent on ACOB/PCCP/CPPCC segments end dated for OOS.
+SAK Req for Row 30                 : 13670
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:44 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:44 EDT 2024
+Creating requirement for Row #     : 31
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 402
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.055
+Requirement Name                   : BH/CPBH History Rule 1.1
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed BH/CPBH segments dependent on ACOB/PCCP/CPPCC segments historied for OOS
+SAK Req for Row 31                 : 13671
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:48 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:48 EDT 2024
+Creating requirement for Row #     : 32
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 421
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.057
+Requirement Name                   : BHCP, LTSS, ELTSS Disenrollment Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed CP segments BHCP, LTSS, ELTSS that overlap OOS date and are dependent on an MCO/ACO segment closed for OOS.
+SAK Req for Row 32                 : 13672
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:51 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:51 EDT 2024
+Creating requirement for Row #     : 33
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 418
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.059
+Requirement Name                   : BHCP, LTSS, ELTSS History Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed CP segments BHCP, LTSS, ELTSS dependent on an MCO/ACO segment historied for OOS.
+SAK Req for Row 33                 : 13673
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:54 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:54 EDT 2024
+Creating requirement for Row #     : 34
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 435
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.061
+Requirement Name                   : CMP Disenrollment Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : End date closed CMP segments that overlap OOS date and are dependent on an ACO segment closed for OOS.
+SAK Req for Row 34                 : 13674
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:25:57 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:25:57 EDT 2024
+Creating requirement for Row #     : 35
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 423
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.063
+Requirement Name                   : CMP History Rule 1.1
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed CMP segments dependent on an ACO  segment historied for OOS.
+SAK Req for Row 35                 : 13675
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:26:01 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:26:01 EDT 2024
+Creating requirement for Row #     : 36
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 427
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.065
+Requirement Name                   : CMP History Rule 1.2
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed CMP segments dependent on an ACO segment closed for OOS, and have effective date greater than OOS date.
+SAK Req for Row 36                 : 13676
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:26:04 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:26:04 EDT 2024
+Creating requirement for Row #     : 37
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 399
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.067
+Requirement Name                   : Contiguous Segments History Rule
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : History closed contiguous segments except if they are contiguous to a BH-Only segment closed or historied for OOS.
+SAK Req for Row 37                 : 13677
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:26:07 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:26:07 EDT 2024
+Creating requirement for Row #     : 38
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 427
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.069
+Requirement Name                   : Batch OOS Stop Reason Code Rule 1
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : Apply the batch OOS Stop Reason code to all segments end dated or historied for OOS, except CP segments BHCP, LTSS, ELTSS.
+SAK Req for Row 38                 : 13678
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:26:11 EDT 2024
+*****************************************************************
+Started at                         : Thu Apr 04 09:26:11 EDT 2024
+Creating requirement for Row #     : 39
+Total No.of Columns fetched        : 6
+Validation Time(ms)                : 436
+Requirement Validation status      : PASS
+Requirement ID                     : 36881.20.071
+Requirement Name                   : Batch OOS Stop Reason Code Rule 2
+Requirement Type                   : Batch
+Requirement Subsystem              : Managed Care
+Requirement RTM                    : 73
+Requirement Narrative              : Apply stop reason B6 when end dating or historing CP segments BHCP, LTSS, ELTSS for OOS.
+SAK Req for Row 39                 : 13679
+Total No.of Columns fetched        : 1
+Finished at                        : Thu Apr 04 09:26:14 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 04/Apr/2024 09:26:14AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

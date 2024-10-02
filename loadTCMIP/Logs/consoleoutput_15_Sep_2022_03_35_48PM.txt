@@ -1,0 +1,119 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 15/Sep/2022 03:35:48PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Thu Sep 15 15:35:55 EDT 2022
+Creating test case for Row #       : 1095
+Short Desc                         : New Pharmacy Lock-in Overlap with different dates
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : Add 2 new lock-in records with overlapping dates but different Provider ID/SL
+Expected Results                   : Records are saved successfully
+Test Case ID for Row 1095          : 41939
+Associated Req ID                  : 35599.01.003
+Requirement linked for test case   : 41939
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41939
+Finished at                        : Thu Sep 15 15:35:58 EDT 2022
+****************************************************
+Started at                         : Thu Sep 15 15:35:58 EDT 2022
+Creating test case for Row #       : 1094
+Short Desc                         : New Pharmacy Lock-in Overlap with same dates
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : Add 2 new lock-in records with same eff and end date but different Provider ID/SL
+Expected Results                   : Records are saved successfully
+Test Case ID for Row 1094          : 41940
+Associated Req ID                  : 35599.01.004
+Requirement linked for test case   : 41940
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41940
+Finished at                        : Thu Sep 15 15:36:00 EDT 2022
+****************************************************
+Started at                         : Thu Sep 15 15:36:00 EDT 2022
+Creating test case for Row #       : 1098
+Short Desc                         : Overlap error if prvdr id is same & dates overlap
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : Add 2 new records or add a new record with an existing record, overlappping the lock in dates but keeping the provider ids same
+Expected Results                   : Save is not successful and edit is thrown
+Test Case ID for Row 1098          : 41941
+Associated Req ID                  : 35599.01.005
+Requirement linked for test case   : 41941
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41941
+Finished at                        : Thu Sep 15 15:36:03 EDT 2022
+****************************************************
+Started at                         : Thu Sep 15 15:36:03 EDT 2022
+Creating test case for Row #       : 1099
+Short Desc                         : Overlap error if prvdr id is same & dates are same
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : Add 2 new records or add a new record with an existing record, where eff and end dates are the same and the provider ids are same
+Expected Results                   : Save is not successful and edit is thrown
+Test Case ID for Row 1099          : 41942
+Associated Req ID                  : 35599.01.005
+Requirement linked for test case   : 41942
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41942
+Finished at                        : Thu Sep 15 15:36:06 EDT 2022
+****************************************************
+Started at                         : Thu Sep 15 15:36:06 EDT 2022
+Creating test case for Row #       : 1101
+Short Desc                         : Overlap error if prvdr id is same & dates overlap - 3 or more records
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : Find  a member with 2 or more lock-in records with overlap but different provider ID/SL. Add another lockin record which causes an overlap with the existing records, and has the same PID as one of the existing records
+Expected Results                   : Save is not successful and edit is thrown
+Test Case ID for Row 1101          : 41943
+Associated Req ID                  : 35599.01.005
+Requirement linked for test case   : 41943
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41943
+Finished at                        : Thu Sep 15 15:36:09 EDT 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 15/Sep/2022 03:36:11PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

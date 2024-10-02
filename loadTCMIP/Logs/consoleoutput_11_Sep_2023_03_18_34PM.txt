@@ -1,0 +1,113 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 11/Sep/2023 03:18:34PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 79
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 87
+Total No.of Rows                   : 3
+*****************************************************************
+Started at                         : Mon Sep 11 15:18:41 EDT 2023
+Creating test case for Row #       : 4292
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37140.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 61
+Validation Time(ms)                : 547
+Validation status                  : PASS
+Short Desc                         : Sig change for discharged member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Find a member with a discharge assessment(F10) and then send a txn with a significant change for that record.
+Expected Results                   : That record should not extend beyond the discharge date.
+Test Case ID for Row 4292          : 46162
+Query Execution Time(ms)           : 78
+Requirement ID                     : 37140.01.001
+Query Execution Time(ms)           : 49
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46162
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46162
+Finished at                        : Mon Sep 11 15:18:46 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 15:18:46 EDT 2023
+Creating test case for Row #       : 4293
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37140.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 459
+Validation status                  : PASS
+Short Desc                         : Sig change for discharged member via UI
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Enter a HIPPS code and give it a discharge date via UI. Then send a significant change asmt.
+Expected Results                   : The second record should not go past the discharge date.
+Test Case ID for Row 4293          : 46163
+Query Execution Time(ms)           : 75
+Requirement ID                     : 37140.01.001
+Query Execution Time(ms)           : 44
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46163
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46163
+Finished at                        : Mon Sep 11 15:18:51 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 15:18:51 EDT 2023
+Creating test case for Row #       : 4294
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37140.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.01-fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 488
+Validation status                  : PASS
+Short Desc                         : DCR for sig. change
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : check the MIDS with discharge assessmnt who have received sig. change
+Expected Results                   : Verify the end date is of the discharge date.
+Test Case ID for Row 4294          : 46164
+Query Execution Time(ms)           : 91
+Requirement ID                     : 37140.01.005
+Query Execution Time(ms)           : 42
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46164
+Notebook                           : Project 24.01-fixes
+Business Function                  : Project 24.01-fixes
+Notebook/BF linked for test case   : 46164
+Finished at                        : Mon Sep 11 15:18:57 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 11/Sep/2023 03:18:57PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

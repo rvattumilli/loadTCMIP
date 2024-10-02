@@ -1,0 +1,366 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Aug/2024 10:42:06AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 262
+Total No.of Rows fetched           : 23
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:13 EDT 2024
+Creating test case for Row #       : 5419
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:14 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:14 EDT 2024
+Creating test case for Row #       : 5420
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:15 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:15 EDT 2024
+Creating test case for Row #       : 5421
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:16 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:16 EDT 2024
+Creating test case for Row #       : 5422
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:17 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:17 EDT 2024
+Creating test case for Row #       : 5423
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:18 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:18 EDT 2024
+Creating test case for Row #       : 5424
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:19 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:19 EDT 2024
+Creating test case for Row #       : 5425
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:20 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:20 EDT 2024
+Creating test case for Row #       : 5426
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:21 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:21 EDT 2024
+Creating test case for Row #       : 5427
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:21 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:21 EDT 2024
+Creating test case for Row #       : 5428
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:22 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:22 EDT 2024
+Creating test case for Row #       : 5429
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:23 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:23 EDT 2024
+Creating test case for Row #       : 5430
+Environment                        : MO
+Environment Validation             : Verify Environment for the Test case
+TC Validation status               : FAIL
+Finished at                        : Wed Aug 14 10:42:24 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:24 EDT 2024
+Creating test case for Row #       : 5431
+Validation Time(ms)                : 803
+TC Validation status               : PASS
+Short Desc                         : CNS Load Flat File Format
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : CNS Load Flat File should contain MID, Source Agency, Print Type, Communication Preference Num_cell_phone, Email and Accommodation1 through Accommodation9 following the proper format structure MID string 12 Source Agency (HIX, MHO or SSA) string 3 Print type string 8 Communication Preference string 8 Num_cell_phone string 10 Email string 60 Accommodation1 string 10 Accommodation2 string 10 Accommodation3 string 10 Accommodation4 string 10 Accommodation5 string 10 Accommodation6 string 10 Accommodation7 string 10 Accommodation8 string 10 Accommodation9 string 10
+Expected Results                   : Verify that the CNS file format is as expected.
+Test Case ID for Row 5431          : 47675
+Requirement ID                     : 37806.01.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47675
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47675
+Finished at                        : Wed Aug 14 10:42:30 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:30 EDT 2024
+Creating test case for Row #       : 5432
+Validation Time(ms)                : 840
+TC Validation status               : PASS
+Short Desc                         : CNS Load Flat File (No Accommodations)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Submit CNS load flat file with nothing/no value accommodations related to T_RE_ACCOMMODATION
+Expected Results                   : Verify that no record is inserted with blank/space/null in database
+Test Case ID for Row 5432          : 47676
+Requirement ID                     : 37806.01.025
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47676
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47676
+Finished at                        : Wed Aug 14 10:42:38 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:38 EDT 2024
+Creating test case for Row #       : 5433
+Validation Time(ms)                : 823
+TC Validation status               : PASS
+Short Desc                         : CNS Error Report Format w/ No Email
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Submit a load file with no email
+Expected Results                   : Verify that CNS error Report Flat file is a Pipe-separated text file.  Example - MID|Error Code
+Test Case ID for Row 5433          : 47677
+Requirement ID                     : 37806.01.045
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47677
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47677
+Finished at                        : Wed Aug 14 10:42:44 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:44 EDT 2024
+Creating test case for Row #       : 5434
+Validation Time(ms)                : 775
+TC Validation status               : PASS
+Short Desc                         : CNS Error Report Format w/ No Cell Phone
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Submit a load file with no cell phone number
+Expected Results                   : Verify that CNS error Report Flat file is a Pipe-separated text file.  Example - MID|Error Code
+Test Case ID for Row 5434          : 47678
+Requirement ID                     : 37806.01.045
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47678
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47678
+Finished at                        : Wed Aug 14 10:42:50 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:50 EDT 2024
+Creating test case for Row #       : 5435
+Validation Time(ms)                : 812
+TC Validation status               : PASS
+Short Desc                         : CNS Flat File w/ Valid Agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Submit a file with agency set to HIX, MHO or SSA
+Expected Results                   : Verify that no error is returned.
+Test Case ID for Row 5435          : 47679
+Requirement ID                     : 37806.01.060
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47679
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47679
+Finished at                        : Wed Aug 14 10:42:56 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:42:56 EDT 2024
+Creating test case for Row #       : 5436
+Validation Time(ms)                : 803
+TC Validation status               : PASS
+Short Desc                         : CNS Flat File w/ Invalid Agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Submit a file with agency other than HIX, MHO, or SSA
+Expected Results                   : Verify that "Error Code 02 - Source Agency is Invalid" is returned
+Test Case ID for Row 5436          : 47680
+Requirement ID                     : 37806.01.060
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47680
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47680
+Finished at                        : Wed Aug 14 10:43:03 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:43:03 EDT 2024
+Creating test case for Row #       : 5437
+Validation Time(ms)                : 795
+TC Validation status               : PASS
+Short Desc                         : CNS Flate File Error Code 05
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Submit a file with the following scenario: Communication Preference = PAPER, - Num_cell_Phone and email address both exists. - Num_cell_Phone Or email address exists.
+Expected Results                   : Verify that "Error Code 05 - Invalid Communication Preference, Num_cell_Phone, and Email combination" is returned
+Test Case ID for Row 5437          : 47681
+Requirement ID                     : 37806.01.075
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47681
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47681
+Finished at                        : Wed Aug 14 10:43:09 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:43:09 EDT 2024
+Creating test case for Row #       : 5438
+Validation Time(ms)                : 858
+TC Validation status               : PASS
+Short Desc                         : CNS Flat File Error Code 05
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Submit a file with the following scenario: Communication Preference = TEXT\SMS, - Num_cell_phone and email address both exists. - email address exists.
+Expected Results                   : Verify that "Error Code 05 - Invalid Communication Preference, Num_cell_Phone, and Email combination" is returned
+Test Case ID for Row 5438          : 47682
+Requirement ID                     : 37806.01.090
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47682
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47682
+Finished at                        : Wed Aug 14 10:43:16 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:43:16 EDT 2024
+Creating test case for Row #       : 5439
+Validation Time(ms)                : 759
+TC Validation status               : PASS
+Short Desc                         : CNS Flat File Error Code 19
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Submit a file for an existing member with data already present in the following fields:  CDE_PRINT_TYPE, CDE_COMMUNICATION_PREF, Num_cell_phone, Email, or CDE_Accomodation
+Expected Results                   : Verify that "Error Code 19 - Data already exists for this MID" is returned.
+Test Case ID for Row 5439          : 47683
+Requirement ID                     : 37806.01.102
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47683
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47683
+Finished at                        : Wed Aug 14 10:43:22 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:43:22 EDT 2024
+Creating test case for Row #       : 5440
+Validation Time(ms)                : 753
+TC Validation status               : PASS
+Short Desc                         : CNS Flat File Error Code 99
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Submit a file that fails processing
+Expected Results                   : Verify that "Error Code 99" is returned.
+Test Case ID for Row 5440          : 47684
+Requirement ID                     : 37806.01.105
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47684
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47684
+Finished at                        : Wed Aug 14 10:43:28 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 10:43:28 EDT 2024
+Creating test case for Row #       : 5441
+Validation Time(ms)                : 745
+TC Validation status               : PASS
+Short Desc                         : Aid Cat 14 Default Print Type = "LRG"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : DCR
+Long Desc                          : Run a query for a member ACTIVE (Eligible) members in the Database from T_RE_COMMUNICATION with aid cat 14 without the CDE_PRINT_TYPE value or with CDE_PRINT_TYPE value = "REG" and insert the default value "LRG" and Print Type Agency = Blank/Space.
+Expected Results                   : Verify the default value for aid cat 14 members without CDE_PRINT_TYPE or with CDE_PRINT_TYPE value = "REG" are set to CDE_PRINT_TYPE = 'LRG'
+Test Case ID for Row 5441          : 47685
+Requirement ID                     : 37806.02.001
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47685
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47685
+Finished at                        : Wed Aug 14 10:43:35 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Aug/2024 10:43:35AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

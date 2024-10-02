@@ -1,0 +1,371 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 05/Dec/2022 03:17:46PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Mon Dec 05 15:17:54 EST 2022
+Creating test case for Row #       : 1152
+Short Desc                         : Member currently enrolled in ACO
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : When member is enrolled in ACOA or ACOB, verify that CMP program is displayed in MC program dropdown.
+Expected Results                   : The MC program dropdown should display CMP program in MC program dropdown.
+Test Case ID for Row 1152          : 42130
+Associated Req ID                  : 36010.02.001
+Requirement linked for test case   : 42130
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42130
+Finished at                        : Mon Dec 05 15:17:58 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:17:58 EST 2022
+Creating test case for Row #       : 1153
+Short Desc                         : Reg Panel - Member currently enrolled in ACO
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : In Regular Panel, ensure that the CMP program is not displayed in MC program dropdown
+Expected Results                   : he CMP program should not be displayed as an option in Regular panel even when a member is enrolled in ACOA or ACOB.
+Test Case ID for Row 1153          : 42131
+Associated Req ID                  : 36010.02.001
+Requirement linked for test case   : 42131
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42131
+Finished at                        : Mon Dec 05 15:18:01 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:01 EST 2022
+Creating test case for Row #       : 1154
+Short Desc                         : ACOA PIDSL for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that PIDSL is auto populated to corresponding ACOA PIDSL when the CMP dates are within the range of ACOA.
+Expected Results                   : The PMP ID/Svc Loc field should be auto populated with ACOA PIDSL when valid CMP dates are entered.
+Test Case ID for Row 1154          : 42132
+Associated Req ID                  : 36010.02.002
+Requirement linked for test case   : 42132
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42132
+Finished at                        : Mon Dec 05 15:18:05 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:05 EST 2022
+Creating test case for Row #       : 1155
+Short Desc                         : ACOB PIDSL for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : For ACOB CMP members, ensure to use the ACOB PIDSL (not the BH/CPBH or PCCB/CPCCB PIDSL) to create the CMP enrollment.
+Expected Results                   : The PMP ID/Svc Loc field should be auto populated with ACOB PIDSL when valid CMP dates are entered.
+Test Case ID for Row 1155          : 42133
+Associated Req ID                  : 36010.02.002
+Requirement linked for test case   : 42133
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42133
+Finished at                        : Mon Dec 05 15:18:08 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:08 EST 2022
+Creating test case for Row #       : 1156
+Short Desc                         : CMP effective and end dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the effective and end date field are empty when CMP is selected in the MC program dropdown.
+Expected Results                   : The Effective Date and End Date fields should be empty/blank when CMP is selected in the MC program dropdown.
+Test Case ID for Row 1156          : 42134
+Associated Req ID                  : 36010.02.003
+Requirement linked for test case   : 42134
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42134
+Finished at                        : Mon Dec 05 15:18:11 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:11 EST 2022
+Creating test case for Row #       : 1157
+Short Desc                         : Member not enrolled in ACOA or ACOB
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : When member is not enrolled in ACOA, or ACOB do not display CMP in MC program dropdown.
+Expected Results                   : The CMP should not be in the MC program dropdown list
+Test Case ID for Row 1157          : 42135
+Associated Req ID                  : 36010.02.004
+Requirement linked for test case   : 42135
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42135
+Finished at                        : Mon Dec 05 15:18:15 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:15 EST 2022
+Creating test case for Row #       : 1158
+Short Desc                         : History CMP when ACO is historied
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that when ACOA or ACOB is set to History then the corresponding CMP is also set to History. Also ensure all the entity in the database are updated correctly.
+Expected Results                   : CMP should be historied along with its corresponding ACOA or ACOB
+Test Case ID for Row 1158          : 42136
+Associated Req ID                  : 36010.02.005
+Requirement linked for test case   : 42136
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42136
+Finished at                        : Mon Dec 05 15:18:19 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:19 EST 2022
+Creating test case for Row #       : 1159
+Short Desc                         : PMP Panel Modifications for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Modify just the PMP-SU Assignment panel by adding the NEW program ACO CMP as an option to the MC Program dropdown field for ACO CMP eligible members. Mods enabling CMP enrollment to the PMP regular panel are not needed as CMP manual enrollments occur via the PMP SU panel only.
+Expected Results                   : Verify CMP is shown in MC program drop down in SU panel only and not in regular PMP Assignment History panel for eligible members.
+Test Case ID for Row 1159          : 42137
+Associated Req ID                  : 36010.02.006
+Requirement linked for test case   : 42137
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42137
+Finished at                        : Mon Dec 05 15:18:23 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:23 EST 2022
+Creating test case for Row #       : 1160
+Short Desc                         : Show CMP for eligible members
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that user able to select CMP from the dropdown.
+Expected Results                   : User should be able to select CMP as an option.
+Test Case ID for Row 1160          : 42138
+Associated Req ID                  : 36010.02.007
+Requirement linked for test case   : 42138
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42138
+Finished at                        : Mon Dec 05 15:18:26 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:26 EST 2022
+Creating test case for Row #       : 1161
+Short Desc                         : Default the PID/SL of the existing ACO to CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Default the PMP ID/SVC LOC of the existing ACO to the CMP that falls within the range of the CMP dates after users select the NEW CMP program VIA PMP - SU panel
+Expected Results                   : The PMP ID/Svc Loc field should be auto populated with ACO PIDSL when valid CMP dates are entered.
+Test Case ID for Row 1161          : 42139
+Associated Req ID                  : 36010.02.008
+Requirement linked for test case   : 42139
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42139
+Finished at                        : Mon Dec 05 15:18:29 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:29 EST 2022
+Creating test case for Row #       : 1162
+Short Desc                         : Enable users to enter both CMP effective & end date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Test to verify that both effective and end date fields are enabled when CMP is selected in MC program dropdown.
+Expected Results                   : The dates field should be enabled
+Test Case ID for Row 1162          : 42140
+Associated Req ID                  : 36010.02.009
+Requirement linked for test case   : 42140
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42140
+Finished at                        : Mon Dec 05 15:18:33 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:33 EST 2022
+Creating test case for Row #       : 1163
+Short Desc                         : Verify Eff & End dates of CMP are within ACO dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that both the CMP Effective & End dates are within the ACO enrollment dates.
+Expected Results                   : Verify that both the CMP Effective & End dates are valid and within the ACO enrollment dates.
+Test Case ID for Row 1163          : 42141
+Associated Req ID                  : 36010.02.010
+Requirement linked for test case   : 42141
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42141
+Finished at                        : Mon Dec 05 15:18:36 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:36 EST 2022
+Creating test case for Row #       : 1164
+Short Desc                         : Display error if newly added CMP dates fail verfication
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Validate that when the user entered CMP dates are not within the range of ACOA or ACOB by displaying an error message.
+Expected Results                   : Display error message "ACO CMP dates must be within ACO dates" if CMP start & end dates entered are not within the ACO enrollment date range on the SU panel
+Test Case ID for Row 1164          : 42142
+Associated Req ID                  : 36010.02.011
+Requirement linked for test case   : 42142
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42142
+Finished at                        : Mon Dec 05 15:18:40 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:40 EST 2022
+Creating test case for Row #       : 1165
+Short Desc                         : Display error message if the CMP dates overlap with 2 MC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Validate that when the user entered CMP dates are not within the range of ACOA or ACOB by displaying an error message in case of overlap with two different MC assignment plans & PIDSL.
+Expected Results                   : Display error message "ACO CMP dates must be within ACO dates" if CMP start & end dates overlap with two different MC assignment plans & PIDSL.
+Test Case ID for Row 1165          : 42143
+Associated Req ID                  : 36010.02.012
+Requirement linked for test case   : 42143
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42143
+Finished at                        : Mon Dec 05 15:18:44 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:44 EST 2022
+Creating test case for Row #       : 1166
+Short Desc                         : History the CMP enrlmnt when the crpnding ACO is H
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : When ACOA or ACOB is status is set to History, verify that it's corresponding CMP must also be historied and the stop reason is same as ACOA or ACOB
+Expected Results                   : CMP should be historied and stop reason should be same as corresponding ACOA or ACOB
+Test Case ID for Row 1166          : 42144
+Associated Req ID                  : 36010.02.013
+Requirement linked for test case   : 42144
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42144
+Finished at                        : Mon Dec 05 15:18:47 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:47 EST 2022
+Creating test case for Row #       : 1167
+Short Desc                         : Enable users to save the newly added CMP enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Test the "Save All" button functionality to ensure new CMP enrollment is saved successfully.
+Expected Results                   : A new CMP record should be created successfully.
+Test Case ID for Row 1167          : 42145
+Associated Req ID                  : 36010.02.014
+Requirement linked for test case   : 42145
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42145
+Finished at                        : Mon Dec 05 15:18:51 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:51 EST 2022
+Creating test case for Row #       : 1168
+Short Desc                         : CMP enrollment with retro dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Enroll member into CMP with retro dates
+Expected Results                   : A new CMP program should be created with retro dates if all the criteria are met
+Test Case ID for Row 1168          : 42146
+Associated Req ID                  : 36010.02.014
+Requirement linked for test case   : 42146
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42146
+Finished at                        : Mon Dec 05 15:18:53 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:53 EST 2022
+Creating test case for Row #       : 1169
+Short Desc                         : Enable users to update the existing CMP dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Modify the CMP effective and end date and click on "Save All" button
+Expected Results                   : The CMP dates should be updated successfully
+Test Case ID for Row 1169          : 42147
+Associated Req ID                  : 36010.02.016
+Requirement linked for test case   : 42147
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42147
+Finished at                        : Mon Dec 05 15:18:56 EST 2022
+****************************************************
+Started at                         : Mon Dec 05 15:18:56 EST 2022
+Creating test case for Row #       : 1170
+Short Desc                         : Enable users to save the updated CMP dates
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Test by entering retro dates and update the CMP record
+Expected Results                   : The CMP dates should be updated successfully
+Test Case ID for Row 1170          : 42148
+Associated Req ID                  : 36010.02.017
+Requirement linked for test case   : 42148
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42148
+Finished at                        : Mon Dec 05 15:19:00 EST 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 05/Dec/2022 03:19:00PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

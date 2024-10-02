@@ -1,0 +1,2167 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 21/Jun/2023 08:42:31AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 71
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' '), tc_row, trim(d.dsc) wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 85
+Total No.of Rows                   : 82
+****************************************************
+Started at                         : Wed Jun 21 08:42:39 EDT 2023
+Creating test case for Row #       : 2127
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.018') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 400
+Validation status                  : PASS
+Short Desc                         : HIPPS Code Used for SCO Institutional Rate Cell Eff 10/1/23
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Find 25 Non-Transitional Institutional SCO members.  Set up T_RE_MDS_LOC with the same institutional data on T_RE_LOC.  Give each member one of the 25 new HIPPS 3rd digit codes on T_RE_MDS_LOC.cde_mds_loc, effective 10/01/23.
+Expected Results                   : All 25 members receives the proper Tier1, Tier2, Tier3 Institutional Rate Cell.
+Test Case ID for Row 2127          : 43623
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36269.01.018
+Query Execution Time(ms)           : 45
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43623
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43623
+Finished at                        : Wed Jun 21 08:42:44 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:42:44 EDT 2023
+Creating test case for Row #       : 2128
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.018') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 406
+Validation status                  : PASS
+Short Desc                         : SCO Transitional to Institution Member
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : A SCO Institutional Transitional member has a HIPPS code on T_RE_MDS_LOC effective 10/1/23.
+Expected Results                   : Member receives Transitional Rate Cell (not an Institional Rate Cell)
+Test Case ID for Row 2128          : 43624
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36269.01.018
+Query Execution Time(ms)           : 28
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43624
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43624
+Finished at                        : Wed Jun 21 08:42:48 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:42:48 EDT 2023
+Creating test case for Row #       : 2129
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.018') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 401
+Validation status                  : PASS
+Short Desc                         : SCO Transitional to Community Member
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : A SCO Community Transitional member has a HIPPS code on T_RE_MDS_LOC effective 10/1/23.
+Expected Results                   : Member receives Transitional Rate Cell (not an Institional Rate Cell)
+Test Case ID for Row 2129          : 43625
+Query Execution Time(ms)           : 78
+Requirement ID                     : 36269.01.018
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43625
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43625
+Finished at                        : Wed Jun 21 08:42:52 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:42:52 EDT 2023
+Creating test case for Row #       : 2130
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.018') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 398
+Validation status                  : PASS
+Short Desc                         : SCO Institutional Member has NF
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : A SCO Institutional member has NF (has no HPPS code) on T_RE_MDS_LOC effective 10/01/2023
+Expected Results                   : Member receives the lowest Community Rate Cell
+Test Case ID for Row 2130          : 43626
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36269.01.018
+Query Execution Time(ms)           : 27
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43626
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43626
+Finished at                        : Wed Jun 21 08:42:56 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:42:56 EDT 2023
+Creating test case for Row #       : 2131
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.031') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Validation Time(ms)                : 435
+Validation status                  : PASS
+Short Desc                         : Batch Disenrollment LTC Settings
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : For MC programs MSTDA, MFASA, CRPLA, ACOB, on the MC Program Level Maintenance panel, set Disenroll LTC to Y, Disenroll 100 Day LTC to N.
+Expected Results                   : Settings are properly set.
+Test Case ID for Row 2131          : 43627
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36269.01.031
+Query Execution Time(ms)           : 27
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43627
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43627
+Finished at                        : Wed Jun 21 08:43:01 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:01 EDT 2023
+Creating test case for Row #       : 2132
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.031') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 429
+Validation status                  : PASS
+Short Desc                         : Members Disenrolled for LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Find 2 members in each program, and add LTC effective immediately, as of the cycle date.
+Expected Results                   : All eight members are auto disenrolled as of 1 day before the LTC admission date, including all 3 ACOB segments
+Test Case ID for Row 2132          : 43628
+Query Execution Time(ms)           : 50
+Requirement ID                     : 36269.01.031
+Query Execution Time(ms)           : 22
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43628
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43628
+Finished at                        : Wed Jun 21 08:43:04 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:04 EDT 2023
+Creating test case for Row #       : 2133
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.031') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : Members Not Disenrolled for LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Find 2 members in each program MSTD, MFAS, CRPLS, MSKSC, add LTC effective immediately, as of the cycle dates.
+Expected Results                   : None of these eight members are auto disenrolled.
+Test Case ID for Row 2133          : 43629
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36269.01.031
+Query Execution Time(ms)           : 26
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43629
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43629
+Finished at                        : Wed Jun 21 08:43:09 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:09 EDT 2023
+Creating test case for Row #       : 2134
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.033') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 423
+Validation status                  : PASS
+Short Desc                         : SCO Demo Rpt 8500M
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Run 8500M for 9/2023 and 10/2023
+Expected Results                   : Report of 9/2023 is per usual.  Report for 10/2023 reports HIPPS code for Institutional members in column CCM
+Test Case ID for Row 2134          : 43630
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36269.01.033
+Query Execution Time(ms)           : 37
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43630
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43630
+Finished at                        : Wed Jun 21 08:43:13 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:13 EDT 2023
+Creating test case for Row #       : 2135
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.034') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 408
+Validation status                  : PASS
+Short Desc                         : PACE Demo Rpt 8500M
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Run 8510M for 9/2023 and 10/2023
+Expected Results                   : Report of 9/2023 is per usual.  Report for 10/2023 reports HIPPS code for Institutional members in column CCM
+Test Case ID for Row 2135          : 43631
+Query Execution Time(ms)           : 65
+Requirement ID                     : 36269.01.034
+Query Execution Time(ms)           : 30
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43631
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43631
+Finished at                        : Wed Jun 21 08:43:17 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:17 EDT 2023
+Creating test case for Row #       : 2136
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.039') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 418
+Validation status                  : PASS
+Short Desc                         : SCO New Enrollments Rpt 6152M
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Enroll 3 members into SCO as of 9/1/23.  Enroll 3 members into SCO as of 10/1/23. Run 6152M for 9/2023 and 10/2023
+Expected Results                   : Report of 9/2023 uses T_RE_LOC.  Report of 10/2023 uses T_RE_MDS_LOC.
+Test Case ID for Row 2136          : 43632
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36269.01.039
+Query Execution Time(ms)           : 38
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43632
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43632
+Finished at                        : Wed Jun 21 08:43:21 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:21 EDT 2023
+Creating test case for Row #       : 2137
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.041') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 434
+Validation status                  : PASS
+Short Desc                         : PACE New Enrollments Rpt 6153M
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Enroll 3 members into PACE as of 9/1/23.  Enroll 3 members into PACE as of 10/1/23.Run 6153M for 9/2023 and 10/2023
+Expected Results                   : Report of 9/2023 uses T_RE_LOC.  Report of 10/2023 uses T_RE_MDS_LOC.
+Test Case ID for Row 2137          : 43633
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36269.01.041
+Query Execution Time(ms)           : 35
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43633
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43633
+Finished at                        : Wed Jun 21 08:43:25 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:25 EDT 2023
+Creating test case for Row #       : 2138
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.042') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 442
+Validation status                  : PASS
+Short Desc                         : ICO New Enrollments Rpt 6154M
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 92
+Owner                              : SUSAN MATTES
+Grouping                           : Batch
+Long Desc                          : Enroll 3 members into ICO as of 9/1/23.  Enroll 3 members into ICO as of 10/1/23.Run 6154M for 9/2023 and 10/2023
+Expected Results                   : Report of 9/2023 uses T_RE_LOC.  Report of 10/2023 uses T_RE_MDS_LOC.
+Test Case ID for Row 2138          : 43634
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36269.01.042
+Query Execution Time(ms)           : 38
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43634
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43634
+Finished at                        : Wed Jun 21 08:43:29 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:29 EDT 2023
+Creating test case for Row #       : 2139
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 51
+Validation Time(ms)                : 445
+Validation status                  : PASS
+Short Desc                         : Non-CarePlus MCO Member with LOC/MMC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Non - CarePlus MCO member with LOC/MMC where member enrolled in LOC for 86 days on cycle date. Managed Care MDS start date is set to future after cycle date.
+Expected Results                   : Verify trigger D1 is generated for the member.
+Test Case ID for Row 2139          : 43635
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 30
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43635
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43635
+Finished at                        : Wed Jun 21 08:43:33 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:33 EDT 2023
+Creating test case for Row #       : 2140
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 423
+Validation status                  : PASS
+Short Desc                         : CarePlus MCO Member with LOC/MMC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : CarePlus MCO member with LOC/MMC where member enrolled in LOC for 86 days on cycle date. Managed Care MDS start date is set to future after cycle date.
+Expected Results                   : Verify trigger DG is generated for the member.
+Test Case ID for Row 2140          : 43636
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 28
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43636
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43636
+Finished at                        : Wed Jun 21 08:43:37 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:37 EDT 2023
+Creating test case for Row #       : 2141
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 407
+Validation status                  : PASS
+Short Desc                         : Non-CarePlus MCO Member with LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Non - CarePlus MCO member with LOC/MDS where member enrolled in LOC for 86 days on cycle date. Managed Care MDS start date is set to cycle date.
+Expected Results                   : Verify trigger D1 is generated for the member.
+Test Case ID for Row 2141          : 43637
+Query Execution Time(ms)           : 70
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 23
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43637
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43637
+Finished at                        : Wed Jun 21 08:43:41 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:41 EDT 2023
+Creating test case for Row #       : 2142
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 377
+Validation status                  : PASS
+Short Desc                         : CarePlus MCO Member with LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : CarePlus MCO member with LOC/MDS where member enrolled in LOC for 86 days on cycle date. Managed Care MDS start date is set to cycle date.
+Expected Results                   : Verify trigger DG is generated for the member.
+Test Case ID for Row 2142          : 43638
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 35
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43638
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43638
+Finished at                        : Wed Jun 21 08:43:45 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:45 EDT 2023
+Creating test case for Row #       : 2143
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 392
+Validation status                  : PASS
+Short Desc                         : Non-CarePlus MCO Member with LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Non - CarePlus MCO member with LOC/MDS where member enrolled in LOC for 86 days on cycle date. Managed Care MDS start date is  less than cycle date.
+Expected Results                   : Verify trigger D1 is generated for the member.
+Test Case ID for Row 2143          : 43639
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 26
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43639
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43639
+Finished at                        : Wed Jun 21 08:43:49 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:49 EDT 2023
+Creating test case for Row #       : 2144
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 411
+Validation status                  : PASS
+Short Desc                         : CarePlus MCO Member with LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : CarePlus MCO member with LOC/MDS where member enrolled in LOC for 86 days on cycle date. Managed Care MDS start date is less than cycle date.
+Expected Results                   : Verify trigger DG is generated for the member.
+Test Case ID for Row 2144          : 43640
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 24
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43640
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43640
+Finished at                        : Wed Jun 21 08:43:53 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:53 EDT 2023
+Creating test case for Row #       : 2145
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 407
+Validation status                  : PASS
+Short Desc                         : Non-CarePlus MCO Member with inactive LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Non - CarePlus MCO member with LOC/MDS where member has inactive  LOC/MDS and days between MDS effective date and cycle date is 86. Managed Care MDS start date is less than or equal to cycle date.
+Expected Results                   : Verify  trigger D1 is not generated for the member.
+Test Case ID for Row 2145          : 43641
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 22
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43641
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43641
+Finished at                        : Wed Jun 21 08:43:57 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:43:57 EDT 2023
+Creating test case for Row #       : 2146
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 397
+Validation status                  : PASS
+Short Desc                         : CarePlus MCO Member with LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : CarePlus MCO member with LOC/MDS where member has inactive  LOC/MDS and days between MDS effective date and cycle date is 86. Cycle date greater than Managed Care MDS start date.
+Expected Results                   : Verify trigger DG is not generated for the member.
+Test Case ID for Row 2146          : 43642
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 33
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43642
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43642
+Finished at                        : Wed Jun 21 08:44:01 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:01 EDT 2023
+Creating test case for Row #       : 2147
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 391
+Validation status                  : PASS
+Short Desc                         : PCC member with LOC/MMC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member enrolled in PCC and has LOC/MMC. Managed Care MDS start date is greater than cycle date.
+Expected Results                   : Verify member disenrolled from PCC and trigger D5 is generated for the member.
+Test Case ID for Row 2147          : 43643
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 25
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43643
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43643
+Finished at                        : Wed Jun 21 08:44:06 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:06 EDT 2023
+Creating test case for Row #       : 2148
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 380
+Validation status                  : PASS
+Short Desc                         : ACOB member with LOC/MMC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member enrolled in ACOB and has LOC/MMC. Managed Care MDS start date is greater than cycle date.
+Expected Results                   : Verify member disenrolled from ACOB and trigger D5 is generated for the member.
+Test Case ID for Row 2148          : 43644
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 25
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43644
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43644
+Finished at                        : Wed Jun 21 08:44:10 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:10 EDT 2023
+Creating test case for Row #       : 2149
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 390
+Validation status                  : PASS
+Short Desc                         : PCC member with LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member enrolled in PCC and has LOC/MDS. Managed Care MDS start date is equal to cycle date.
+Expected Results                   : Verify member disenrolled from PCC and trigger D5 is generated for the member.
+Test Case ID for Row 2149          : 43645
+Query Execution Time(ms)           : 48
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 28
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43645
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43645
+Finished at                        : Wed Jun 21 08:44:14 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:14 EDT 2023
+Creating test case for Row #       : 2150
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 394
+Validation status                  : PASS
+Short Desc                         : ACOB member with LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member enrolled in ACOB and has LOC/MDS. Managed Care MDS start date is equal to cycle date.
+Expected Results                   : Verify member disenrolled from ACOB and trigger D5 is generated for the member.
+Test Case ID for Row 2150          : 43646
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 23
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43646
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43646
+Finished at                        : Wed Jun 21 08:44:18 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:18 EDT 2023
+Creating test case for Row #       : 2151
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 398
+Validation status                  : PASS
+Short Desc                         : PCC member with LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member enrolled in PCC and has LOC/MDS. Managed Care MDS start date is less than cycle date.
+Expected Results                   : Verify member disenrolled from PCC and trigger D5 is generated for the member.
+Test Case ID for Row 2151          : 43647
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 29
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43647
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43647
+Finished at                        : Wed Jun 21 08:44:22 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:22 EDT 2023
+Creating test case for Row #       : 2152
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 402
+Validation status                  : PASS
+Short Desc                         : ACOB member with LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member enrolled in ACOB and has LOC/MDS. Managed Care MDS start date is less than cycle date.
+Expected Results                   : Verify member disenrolled from ACOB and trigger D5 is generated for the member.
+Test Case ID for Row 2152          : 43648
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 25
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43648
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43648
+Finished at                        : Wed Jun 21 08:44:26 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:26 EDT 2023
+Creating test case for Row #       : 2153
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 396
+Validation status                  : PASS
+Short Desc                         : PCC member with inactive LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member enrolled in PCC and has inactive LOC/MDS. Managed Care MDS start date is less than or equal to cycle date.
+Expected Results                   : Verify member is not disenrolled from PCC and trigger D5 is not generated for the member.
+Test Case ID for Row 2153          : 43649
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 27
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43649
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43649
+Finished at                        : Wed Jun 21 08:44:30 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:30 EDT 2023
+Creating test case for Row #       : 2154
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 403
+Validation status                  : PASS
+Short Desc                         : ACOB member with inactive LOC/MDS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member enrolled in ACOB and has inactive LOC/MDS. Managed Care MDS start date is less than or equal to cycle date.
+Expected Results                   : Verify member is not disenrolled from ACOB and trigger D5 is not generated for the member.
+Test Case ID for Row 2154          : 43650
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36269.01.035
+Query Execution Time(ms)           : 24
+Requirement Type                   : Notice/Letter
+SAK Requirement Type               : 19
+Requirement linked for test case   : 43650
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43650
+Finished at                        : Wed Jun 21 08:44:34 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:34 EDT 2023
+Creating test case for Row #       : 2155
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 57
+Validation Time(ms)                : 462
+Validation status                  : PASS
+Short Desc                         : SCO Capitation Demographics report with LOC/MMC records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGDCPTXN to before MDS start date.2. Member with SCO assignment and capitation history records for cap month before MDS start date
+Expected Results                   : Verify MGD-8500-M report is created with data from old tables
+Test Case ID for Row 2155          : 43651
+Query Execution Time(ms)           : 76
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 30
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43651
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43651
+Finished at                        : Wed Jun 21 08:44:38 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:38 EDT 2023
+Creating test case for Row #       : 2156
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 396
+Validation status                  : PASS
+Short Desc                         : SCO Capitation Demographics report with LOC/MDS records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGDCPTXN to same date as MDS start date.2. Member with SCO assignment and capitation history records for cap month same as MDS start date.
+Expected Results                   : Verify MGD-8500-M report is created with data from new tables
+Test Case ID for Row 2156          : 43652
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 23
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43652
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43652
+Finished at                        : Wed Jun 21 08:44:43 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:43 EDT 2023
+Creating test case for Row #       : 2157
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 395
+Validation status                  : PASS
+Short Desc                         : SCO Capitation Demographics report with LOC/MDS records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGDCPTXN to after start date.2. Member with SCO assignment and capitation history records for cap month after MDS start date
+Expected Results                   : Verify MGD-8500-M report is created with data from new tables
+Test Case ID for Row 2157          : 43653
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 30
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43653
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43653
+Finished at                        : Wed Jun 21 08:44:47 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:47 EDT 2023
+Creating test case for Row #       : 2158
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 391
+Validation status                  : PASS
+Short Desc                         : SCO Capitation Demographics report with inactive LOC/MDS records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGDCPTXN to after start date.2. Member with SCO assignment and capitation history records for cap month after MDS start date
+Expected Results                   : Verify MMC column is not populated in the report MGD-8500-M for the member
+Test Case ID for Row 2158          : 43654
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 23
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43654
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43654
+Finished at                        : Wed Jun 21 08:44:51 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:51 EDT 2023
+Creating test case for Row #       : 2159
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 418
+Validation status                  : PASS
+Short Desc                         : PACE Capitation Demographics report with LOC/MMC records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGDCPTXN to before MDS start date.2. Member with PACE assignment and capitation history records for  cap month before MDS start date
+Expected Results                   : Verify MGD-8501-M report is created with data from old tables
+Test Case ID for Row 2159          : 43655
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 24
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43655
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43655
+Finished at                        : Wed Jun 21 08:44:55 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:55 EDT 2023
+Creating test case for Row #       : 2160
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 403
+Validation status                  : PASS
+Short Desc                         : PACE Capitation Demographics report with LOC/MDS records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGDCPTXN to same date as MDS start date.2. Member with PACE assignment and capitation history records for cap month same as MDS start date.
+Expected Results                   : Verify MGD-8501-M report is created with data from new tables
+Test Case ID for Row 2160          : 43656
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 28
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43656
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43656
+Finished at                        : Wed Jun 21 08:44:59 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:44:59 EDT 2023
+Creating test case for Row #       : 2161
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 398
+Validation status                  : PASS
+Short Desc                         : PACE Capitation Demographics report with LOC/MDS records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGDCPTXN to after start date.2. Member with PACE assignment and capitation history records for cap month after MDS start date
+Expected Results                   : Verify MGD-8501-M report is created with data from new tables
+Test Case ID for Row 2161          : 43657
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 34
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43657
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43657
+Finished at                        : Wed Jun 21 08:45:03 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:03 EDT 2023
+Creating test case for Row #       : 2162
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 415
+Validation status                  : PASS
+Short Desc                         : PACE Capitation Demographics report with inactive LOC/MDS records
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGDCPTXN to after start date.2. Member with PACE assignment and capitation history records for cap month after MDS start date
+Expected Results                   : Verify MMC column is not populated in the report MGD-8501-M for the member
+Test Case ID for Row 2162          : 43658
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 25
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43658
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43658
+Finished at                        : Wed Jun 21 08:45:07 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:07 EDT 2023
+Creating test case for Row #       : 2163
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 404
+Validation status                  : PASS
+Short Desc                         : SCO enrollment report with LOC/MMC data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGD6152M to before MDS start date.2. Member has SCO assignment and LOC/MMC data
+Expected Results                   : Verify MGD-6152-M SCO report is created using data from the T_RE_LOC table.
+Test Case ID for Row 2163          : 43659
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 25
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43659
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43659
+Finished at                        : Wed Jun 21 08:45:11 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:11 EDT 2023
+Creating test case for Row #       : 2164
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 387
+Validation status                  : PASS
+Short Desc                         : SCO enrollment report with LOC/MDS data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PAMRS Nam_Program = MGD6152M to same date as MDS start date.2. Member has SCO assignment and LOC/MDS data.
+Expected Results                   : Verify MGD-6152-M SCO report is created using data from the T_RE_MDS_LOC table
+Test Case ID for Row 2164          : 43660
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 35
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43660
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43660
+Finished at                        : Wed Jun 21 08:45:16 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:16 EDT 2023
+Creating test case for Row #       : 2165
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 431
+Validation status                  : PASS
+Short Desc                         : SCO enrollment report with LOC/MDS data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PAMRS Nam_Program = MGD6152M to after MDS start date.2. Member has SCO assignment and LOC/MDS data.
+Expected Results                   : Verify MGD-6152-M SCO report is created using data from the T_RE_MDS_LOC table
+Test Case ID for Row 2165          : 43661
+Query Execution Time(ms)           : 61
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 33
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43661
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43661
+Finished at                        : Wed Jun 21 08:45:20 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:20 EDT 2023
+Creating test case for Row #       : 2166
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 429
+Validation status                  : PASS
+Short Desc                         : SCO enrollment report with inactive LOC/MDS data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PAMRS Nam_Program = MGD6152M to after MDS start date.2. Member has SCO assignment and inactive LOC/MDS data.
+Expected Results                   : Verify PPA amount in MGD-6152-M SCO report for the member
+Test Case ID for Row 2166          : 43662
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 28
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43662
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43662
+Finished at                        : Wed Jun 21 08:45:24 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:24 EDT 2023
+Creating test case for Row #       : 2167
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 55
+Validation Time(ms)                : 447
+Validation status                  : PASS
+Short Desc                         : PACE enrollment report with LOC/MMC data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGD6152M to before MDS start date.2. Member has PACE assignment and LOC/MMC data
+Expected Results                   : Verify MGD-6153-M PACE report is created using data from the T_RE_LOC table.
+Test Case ID for Row 2167          : 43663
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 34
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43663
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43663
+Finished at                        : Wed Jun 21 08:45:28 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:28 EDT 2023
+Creating test case for Row #       : 2168
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 412
+Validation status                  : PASS
+Short Desc                         : PACE enrollment report with LOC/MDS data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PAMRS Nam_Program = MGD6152M to same date as MDS start date.2. Member has PACE assignment and LOC/MDS data.
+Expected Results                   : Verify MGD-6153-M PACE report is created using data from the T_RE_MDS_LOC table
+Test Case ID for Row 2168          : 43664
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 25
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43664
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43664
+Finished at                        : Wed Jun 21 08:45:32 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:32 EDT 2023
+Creating test case for Row #       : 2169
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 404
+Validation status                  : PASS
+Short Desc                         : PACE enrollment report with LOC/MDS data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PAMRS Nam_Program = MGD6152M to after MDS start date.2. Member has PACE assignment and LOC/MDS data.
+Expected Results                   : Verify MGD-6153-M PACE report is created using data from the T_RE_MDS_LOC table
+Test Case ID for Row 2169          : 43665
+Query Execution Time(ms)           : 65
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 29
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43665
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43665
+Finished at                        : Wed Jun 21 08:45:37 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:37 EDT 2023
+Creating test case for Row #       : 2170
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 441
+Validation status                  : PASS
+Short Desc                         : PACE enrollment report with inactive LOC/MDS data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PAMRS Nam_Program = MGD6152M to after MDS start date.2. Member has PACE assignment and inactive LOC/MDS data.
+Expected Results                   : Verify PPA amount in MGD-6153-M PACE report for the member
+Test Case ID for Row 2170          : 43666
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 35
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43666
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43666
+Finished at                        : Wed Jun 21 08:45:41 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:41 EDT 2023
+Creating test case for Row #       : 2171
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 562
+Validation status                  : PASS
+Short Desc                         : ICO enrollment report with LOC/MMC data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PARMS Nam_Program = MGD6152M to before MDS start date.2. Member has ICO assignment and LOC/MMC data
+Expected Results                   : Verify MGD-6154-M ICO report is created using data from the T_RE_LOC table.
+Test Case ID for Row 2171          : 43667
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 29
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43667
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43667
+Finished at                        : Wed Jun 21 08:45:45 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:45 EDT 2023
+Creating test case for Row #       : 2172
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 378
+Validation status                  : PASS
+Short Desc                         : ICO enrollment report with LOC/MDS data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PAMRS Nam_Program = MGD6152M to same date as MDS start date.2. Member has ICO assignment and LOC/MDS data.
+Expected Results                   : Verify MGD-6154-M ICO report is created using data from the T_RE_MDS_LOC table
+Test Case ID for Row 2172          : 43668
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 30
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43668
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43668
+Finished at                        : Wed Jun 21 08:45:50 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:50 EDT 2023
+Creating test case for Row #       : 2173
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 2134
+Validation status                  : PASS
+Short Desc                         : ICO enrollment report with LOC/MDS data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PAMRS Nam_Program = MGD6152M to after MDS start date.2. Member has ICO assignment and LOC/MDS data.
+Expected Results                   : Verify MGD-6154-M ICO report is created using data from the T_RE_MDS_LOC table
+Test Case ID for Row 2173          : 43669
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 23
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43669
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43669
+Finished at                        : Wed Jun 21 08:45:55 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:55 EDT 2023
+Creating test case for Row #       : 2174
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.032') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 393
+Validation status                  : PASS
+Short Desc                         : ICO enrollment report with inactive LOC/MDS data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : 1. Set the date_parm_1 in T_SYSTEM_PAMRS Nam_Program = MGD6152M to after MDS start date.2. Member has ICO assignment and inactive LOC/MDS data.
+Expected Results                   : Verify PPA amount in MGD-6154-M ICO report for the member
+Test Case ID for Row 2174          : 43670
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36269.01.032
+Query Execution Time(ms)           : 29
+Requirement Type                   : Reports
+SAK Requirement Type               : 20
+Requirement linked for test case   : 43670
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43670
+Finished at                        : Wed Jun 21 08:45:59 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:45:59 EDT 2023
+Creating test case for Row #       : 2175
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 424
+Validation status                  : PASS
+Short Desc                         : MC MH enrollment before MDS-no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : Member has Dental and MH choice factor eligibility. Cycle_date before MDS start date and has no LTC
+Expected Results                   : A Dental and MH assignments are created.
+Test Case ID for Row 2175          : 43671
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43671
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43671
+Finished at                        : Wed Jun 21 08:46:03 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:03 EDT 2023
+Creating test case for Row #       : 2176
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 408
+Validation status                  : PASS
+Short Desc                         : MC MH enrollment before MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : Member has Dental and MH choice factor eligibility. Cycle_date before MDS start date and has LTC
+Expected Results                   : A Dental and MH assignments are not created.
+Test Case ID for Row 2176          : 43672
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43672
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43672
+Finished at                        : Wed Jun 21 08:46:07 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:07 EDT 2023
+Creating test case for Row #       : 2177
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 383
+Validation status                  : PASS
+Short Desc                         : MC prev ICO enrollment before MDS-no ICF_MR
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : Member with previous ICO assignment regains eligibility. First of next month before MDS start date and has no ICF_MR
+Expected Results                   : ICO reenrollment is created.
+Test Case ID for Row 2177          : 43673
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 26
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43673
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43673
+Finished at                        : Wed Jun 21 08:46:11 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:11 EDT 2023
+Creating test case for Row #       : 2178
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 417
+Validation status                  : PASS
+Short Desc                         : MC prev ICO enrollment before MDS-has ICF_MR
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : Member with previous ICO assignment regains eligibility. First of next month before MDS start date and has ICF_MR
+Expected Results                   : ICO reenrollment is not created.
+Test Case ID for Row 2178          : 43674
+Query Execution Time(ms)           : 50
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43674
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43674
+Finished at                        : Wed Jun 21 08:46:15 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:15 EDT 2023
+Creating test case for Row #       : 2179
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : MC MH enrollment post MDS-no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : Member has Dental and MH choice factor eligibility. Cycle_date on or after MDS start date and has no LTC
+Expected Results                   : A Dental and MH assignments are created.
+Test Case ID for Row 2179          : 43675
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43675
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43675
+Finished at                        : Wed Jun 21 08:46:20 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:20 EDT 2023
+Creating test case for Row #       : 2180
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 435
+Validation status                  : PASS
+Short Desc                         : MC MH enrollment post MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : Member has Dental and MH choice factor eligibility. Cycle_date on or after MDS start date and has LTC
+Expected Results                   : A Dental and MH assignments are not created.
+Test Case ID for Row 2180          : 43676
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 53
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43676
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43676
+Finished at                        : Wed Jun 21 08:46:24 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:24 EDT 2023
+Creating test case for Row #       : 2181
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 440
+Validation status                  : PASS
+Short Desc                         : MC prev ICO enrollment post MDS-no ICF_MR
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : Member with previous ICO assignment regains eligibility. First of next month on or after MDS start date and has no ICF_MR
+Expected Results                   : ICO reenrollment is created.
+Test Case ID for Row 2181          : 43677
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43677
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43677
+Finished at                        : Wed Jun 21 08:46:28 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:28 EDT 2023
+Creating test case for Row #       : 2182
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 407
+Validation status                  : PASS
+Short Desc                         : MC prev ICO enrollment post MDS-has ICF_MR
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : Member with previous ICO assignment regains eligibility. First of next month on or after MDS start date and has ICF_MR
+Expected Results                   : ICO reenrollment is not created.
+Test Case ID for Row 2182          : 43678
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43678
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43678
+Finished at                        : Wed Jun 21 08:46:32 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:32 EDT 2023
+Creating test case for Row #       : 2183
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 392
+Validation status                  : PASS
+Short Desc                         : CP CSA enrollment before MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP CSA effective date before MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment not created.
+Test Case ID for Row 2183          : 43679
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 36
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43679
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43679
+Finished at                        : Wed Jun 21 08:46:36 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:36 EDT 2023
+Creating test case for Row #       : 2184
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 408
+Validation status                  : PASS
+Short Desc                         : CP CSA enrollment before MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP CSA effective date before MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2184          : 43680
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43680
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43680
+Finished at                        : Wed Jun 21 08:46:41 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:41 EDT 2023
+Creating test case for Row #       : 2185
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 58
+Validation Time(ms)                : 470
+Validation status                  : PASS
+Short Desc                         : CP CSA enrollment post MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP CSA effective date on or after MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment not created.
+Test Case ID for Row 2185          : 43681
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43681
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43681
+Finished at                        : Wed Jun 21 08:46:45 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:45 EDT 2023
+Creating test case for Row #       : 2186
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 369
+Validation status                  : PASS
+Short Desc                         : CP CSA enrollment on or after MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP CSA effective date on or after MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2186          : 43682
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 27
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43682
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43682
+Finished at                        : Wed Jun 21 08:46:49 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:49 EDT 2023
+Creating test case for Row #       : 2187
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : CP BHCP enrollment before MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP BHCP effective date before MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2187          : 43683
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43683
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43683
+Finished at                        : Wed Jun 21 08:46:53 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:53 EDT 2023
+Creating test case for Row #       : 2188
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 381
+Validation status                  : PASS
+Short Desc                         : CP BHCP enrollment before MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP BHCP effective date before MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2188          : 43684
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 37
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43684
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43684
+Finished at                        : Wed Jun 21 08:46:58 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:46:58 EDT 2023
+Creating test case for Row #       : 2189
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 413
+Validation status                  : PASS
+Short Desc                         : CP BHCP enrollment post MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP BHCP effective date on or after MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2189          : 43685
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43685
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43685
+Finished at                        : Wed Jun 21 08:47:02 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:02 EDT 2023
+Creating test case for Row #       : 2190
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 388
+Validation status                  : PASS
+Short Desc                         : CP BHCP enrollment on or after MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP BHCP effective date on or after MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2190          : 43686
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43686
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43686
+Finished at                        : Wed Jun 21 08:47:06 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:06 EDT 2023
+Creating test case for Row #       : 2191
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 399
+Validation status                  : PASS
+Short Desc                         : CP BHCP enrollment before MDS-with historied LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP BHCP effective date before MDS start date and has historied LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2191          : 43687
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 24
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43687
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43687
+Finished at                        : Wed Jun 21 08:47:10 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:10 EDT 2023
+Creating test case for Row #       : 2192
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 402
+Validation status                  : PASS
+Short Desc                         : CP BHCP enrollment on or after MDS-with historied LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP BHCP effective date on or after MDS start date and has historied LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2192          : 43688
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 27
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43688
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43688
+Finished at                        : Wed Jun 21 08:47:14 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:14 EDT 2023
+Creating test case for Row #       : 2193
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 396
+Validation status                  : PASS
+Short Desc                         : CP LTSS enrollment before MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP LTSS effective date before MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2193          : 43689
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43689
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43689
+Finished at                        : Wed Jun 21 08:47:19 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:19 EDT 2023
+Creating test case for Row #       : 2194
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 391
+Validation status                  : PASS
+Short Desc                         : CP LTSS enrollment before MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP LTSS effective date before MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2194          : 43690
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43690
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43690
+Finished at                        : Wed Jun 21 08:47:23 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:23 EDT 2023
+Creating test case for Row #       : 2195
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 404
+Validation status                  : PASS
+Short Desc                         : CP LTSS enrollment post MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP LTSS effective date on or after MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2195          : 43691
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43691
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43691
+Finished at                        : Wed Jun 21 08:47:27 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:27 EDT 2023
+Creating test case for Row #       : 2196
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 402
+Validation status                  : PASS
+Short Desc                         : CP LTSS enrollment on or after MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP LTSS effective date on or after MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2196          : 43692
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43692
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43692
+Finished at                        : Wed Jun 21 08:47:32 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:32 EDT 2023
+Creating test case for Row #       : 2197
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 410
+Validation status                  : PASS
+Short Desc                         : CP ACCS1 enrollment before MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP ACCS1 effective date before MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2197          : 43693
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 26
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43693
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43693
+Finished at                        : Wed Jun 21 08:47:36 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:36 EDT 2023
+Creating test case for Row #       : 2198
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 407
+Validation status                  : PASS
+Short Desc                         : CP ACCS1 enrollment before MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP ACCS1 effective date before MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2198          : 43694
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43694
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43694
+Finished at                        : Wed Jun 21 08:47:40 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:40 EDT 2023
+Creating test case for Row #       : 2199
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 394
+Validation status                  : PASS
+Short Desc                         : CP ACCS1 enrollment post MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP ACCS1 effective date on or after MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2199          : 43695
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 24
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43695
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43695
+Finished at                        : Wed Jun 21 08:47:44 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:44 EDT 2023
+Creating test case for Row #       : 2200
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 393
+Validation status                  : PASS
+Short Desc                         : CP ACCS1 enrollment on or after MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP ACCS1 effective date on or after MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2200          : 43696
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43696
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43696
+Finished at                        : Wed Jun 21 08:47:48 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:48 EDT 2023
+Creating test case for Row #       : 2201
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 395
+Validation status                  : PASS
+Short Desc                         : CP ACCS2 enrollment before MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP ACCS2 effective date before MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment not created.
+Test Case ID for Row 2201          : 43697
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43697
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43697
+Finished at                        : Wed Jun 21 08:47:52 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:52 EDT 2023
+Creating test case for Row #       : 2202
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 950
+Validation status                  : PASS
+Short Desc                         : CP ACCS2 enrollment before MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP ACCS2 effective date before MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2202          : 43698
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 26
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43698
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43698
+Finished at                        : Wed Jun 21 08:47:57 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:47:57 EDT 2023
+Creating test case for Row #       : 2203
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 380
+Validation status                  : PASS
+Short Desc                         : CP ACCS2 enrollment post MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP ACCS2 effective date on or after MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment not created.
+Test Case ID for Row 2203          : 43699
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 23
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43699
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43699
+Finished at                        : Wed Jun 21 08:48:01 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:48:01 EDT 2023
+Creating test case for Row #       : 2204
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 409
+Validation status                  : PASS
+Short Desc                         : CP ACCS2 enrollment on or after MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP ACCS2 effective date on or after MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2204          : 43700
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43700
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43700
+Finished at                        : Wed Jun 21 08:48:05 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:48:05 EDT 2023
+Creating test case for Row #       : 2205
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 397
+Validation status                  : PASS
+Short Desc                         : CP PACC1/PACC2 enrollment before MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP PACC1/PACC2 effective date before MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment not created.
+Test Case ID for Row 2205          : 43701
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 37
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43701
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43701
+Finished at                        : Wed Jun 21 08:48:09 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:48:09 EDT 2023
+Creating test case for Row #       : 2206
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 1011
+Validation status                  : PASS
+Short Desc                         : CP PACC1/PACC2 enrollment before MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP PACC1/PACC2 effective date before MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2206          : 43702
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 28
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43702
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43702
+Finished at                        : Wed Jun 21 08:48:14 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:48:14 EDT 2023
+Creating test case for Row #       : 2207
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 982
+Validation status                  : PASS
+Short Desc                         : CP PACC1/PACC2 enrollment post MDS-with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP PACC1/PACC2 effective date on or after MDS start date and has LTC.
+Expected Results                   : IND_LTC field updated to Y in T_RE_PMP_ASSIGN_COMMP table. Assignment not created.
+Test Case ID for Row 2207          : 43703
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 27
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43703
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43703
+Finished at                        : Wed Jun 21 08:48:18 EDT 2023
+****************************************************
+Started at                         : Wed Jun 21 08:48:18 EDT 2023
+Creating test case for Row #       : 2208
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36269.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 390
+Validation status                  : PASS
+Short Desc                         : CP PACC1/PACC2 enrollment on or after MDS-with no LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 382
+Owner                              : ANSHUL GANDHI
+Grouping                           : Batch
+Long Desc                          : CP PACC1/PACC2 effective date on or after MDS start date and has no LTC.
+Expected Results                   : IND_LTC field updated to N in T_RE_PMP_ASSIGN_COMMP table. Assignment created.
+Test Case ID for Row 2208          : 43704
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36269.01.030
+Query Execution Time(ms)           : 27
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43704
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43704
+Finished at                        : Wed Jun 21 08:48:23 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 21/Jun/2023 08:48:23AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

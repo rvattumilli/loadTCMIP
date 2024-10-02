@@ -1,0 +1,39 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 05/Dec/2022 03:13:29PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Mon Dec 05 15:13:41 EST 2022
+Creating test case for Row #       : 1151
+Short Desc                         : Configure T_PR_COVERED_PGM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Add these values to the T_PR_COVERED_PGM table. SAK_PUB_HLTH = 125, SAK_PROV_PGM = 135, IND_MGD_CARE = `Y', DTE_EFFECTIVE = 19000101, DTE_END = 22991231, DTE_INACTIVE = 22991231.
+Expected Results                   : Verify the below values in T_PR_COVERED_PGM: SAK_PUB_HLTH = 125, SAK_PROV_PGM = 135, IND_MGD_CARE = `Y', DTE_EFFECTIVE = 19000101, DTE_END = 22991231, DTE_INACTIVE = 22991231
+Test Case ID for Row 1151          : 42129
+Associated Req ID                  : 36010.01.009
+Requirement linked for test case   : 42129
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+no such element: Unable to locate element: {"method":"xpath","selector":"//img[@src='../../images/icon-add.gif']"}
+  (Session info: chrome=108.0.5359.72)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'EHS-QNY-W0622WP', ip: '10.195.12.69', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [481855e1f8476f285935ba0d05cafbf0, findElement {using=xpath, value=//img[@src='../../images/icon-add.gif']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.72, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50147}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50147/devtoo..., se:cdpVersion: 108.0.5359.72, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 481855e1f8476f285935ba0d05cafbf0

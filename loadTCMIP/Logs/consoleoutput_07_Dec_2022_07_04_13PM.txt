@@ -1,0 +1,614 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 07/Dec/2022 07:04:13PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 102
+****************************************************
+Started at                         : Wed Dec 07 19:04:19 EST 2022
+Creating test case for Row #       : 1204
+Short Desc                         : Display error if updated CMP eff date fails verification
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that an error message is displayed when CMP start date updated by the users are not within the ACOA or ACOB range.
+Expected Results                   : An error message should be displayed.
+Test Case ID for Row 1204          : 42191
+Associated Req ID                  : 36010.02.018
+Requirement linked for test case   : 42191
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42191
+Finished at                        : Wed Dec 07 19:04:24 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:24 EST 2022
+Creating test case for Row #       : 1205
+Short Desc                         : Display error if updated CMP end date fails verification
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that an error message is displayed when CMP start date updated by the users are not within the ACOA or ACOB range.
+Expected Results                   : An error message should be displayed.
+Test Case ID for Row 1205          : 42192
+Associated Req ID                  : 36010.02.018
+Requirement linked for test case   : 42192
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42192
+Finished at                        : Wed Dec 07 19:04:27 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:27 EST 2022
+Creating test case for Row #       : 1206
+Short Desc                         : Display error if updted CMP eff & end dtes fail verification
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that an error message is displayed when CMP start & end dates updated by the users are not within the ACOA or ACOB range.
+Expected Results                   : An error message should be displayed.
+Test Case ID for Row 1206          : 42193
+Associated Req ID                  : 36010.02.018
+Requirement linked for test case   : 42193
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42193
+Finished at                        : Wed Dec 07 19:04:30 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:30 EST 2022
+Creating test case for Row #       : 1207
+Short Desc                         : Display error if the updted CMP overlp wit 2 MC plans
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that an error message is displayed when the CMP dates updated by the users overlaps with 2 MC programs
+Expected Results                   : An error message should be displayed.
+Test Case ID for Row 1207          : 42194
+Associated Req ID                  : 36010.02.019
+Requirement linked for test case   : 42194
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42194
+Finished at                        : Wed Dec 07 19:04:34 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:34 EST 2022
+Creating test case for Row #       : 1208
+Short Desc                         : Verify no CMP is shown on the dropdown lists
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who is NOT currently enrolled in any ACOA or ACOB programs (MSTDA/ACOB/PCCB/BH)
+Expected Results                   : The CMP should not be displayed in MC program dropdown.
+Test Case ID for Row 1208          : 42195
+Associated Req ID                  : 36010.02.020
+Requirement linked for test case   : 42195
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42195
+Finished at                        : Wed Dec 07 19:04:37 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:37 EST 2022
+Creating test case for Row #       : 1209
+Short Desc                         : Verify PMP ID search feature is turned off
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the PMP ID/Svc Loc field and search icon are disabled when CMP is selected in the MC dropdown.
+Expected Results                   : The PMP ID/Svc Loc field should be disabled and provider search icon should be hidden.
+Test Case ID for Row 1209          : 42196
+Associated Req ID                  : 36010.02.021
+Requirement linked for test case   : 42196
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42196
+Finished at                        : Wed Dec 07 19:04:40 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:40 EST 2022
+Creating test case for Row #       : 1210
+Short Desc                         : Verify the search button feature is turned off
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the "Search" button is disabled when CMP is selected in the MC dropdown.
+Expected Results                   : The search button at bottom of the panel should be hidden.
+Test Case ID for Row 1210          : 42197
+Associated Req ID                  : 36010.02.021
+Requirement linked for test case   : 42197
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42197
+Finished at                        : Wed Dec 07 19:04:43 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:43 EST 2022
+Creating test case for Row #       : 1211
+Short Desc                         : Updte CMP enddte to match ACO enddte whn disenrllmnt occurs
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the CMP end date and stop reason code is matched with ACOA or ACOB when disenrolling a member from  ACO plans
+Expected Results                   : The CMP end date and stop reason should be updated and should match to the corresponding ACOA or ACOB
+Test Case ID for Row 1211          : 42198
+Associated Req ID                  : 36010.02.022
+Requirement linked for test case   : 42198
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42198
+Finished at                        : Wed Dec 07 19:04:46 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:46 EST 2022
+Creating test case for Row #       : 1212
+Short Desc                         : Update CMP end date to match ACO end date when transfer occurs
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the CMP end date and stop reason code is matched with ACOA or ACOB when transferring a member from one ACOA or ACOB plan to other MC plans
+Expected Results                   : The CMP end date and stop reason should be updated and should match to the corresponding ACOA or ACOB
+Test Case ID for Row 1212          : 42199
+Associated Req ID                  : 36010.02.022
+Requirement linked for test case   : 42199
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42199
+Finished at                        : Wed Dec 07 19:04:50 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:50 EST 2022
+Creating test case for Row #       : 1213
+Short Desc                         : Verify transfer is allowed for mbr with CMP in Regular Panel
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the CMP end date and stop reason code is matched with ACOA or ACOB when transferring a member from one ACOA or ACOB plan to other MC plans thru regular panel
+Expected Results                   : The CMP end date and stop reason should be updated and should match to the corresponding ACOA or ACOB
+Test Case ID for Row 1213          : 42200
+Associated Req ID                  : 36010.02.022
+Requirement linked for test case   : 42200
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42200
+Finished at                        : Wed Dec 07 19:04:53 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:53 EST 2022
+Creating test case for Row #       : 1214
+Short Desc                         : Verify that CMP can't coexist with mutually exclusive MC plan
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the user will not be allowed to enroll a member into MC plans that CMP cannot coexist with
+Expected Results                   : Either a validation message should be displayed or end date ACOA or ACOB program along with CMP.
+Test Case ID for Row 1214          : 42201
+Associated Req ID                  : 36010.02.024
+Requirement linked for test case   : 42201
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42201
+Finished at                        : Wed Dec 07 19:04:56 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:56 EST 2022
+Creating test case for Row #       : 1215
+Short Desc                         : Display 6 NEW UI CMP specific reason codes
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that 6 NEW UI CMP-specific reason codes are displayed as an option in the stop reason dropdown.
+Expected Results                   : The stop reason dropdown should display the CMP stop reason codes.
+Test Case ID for Row 1215          : 42202
+Associated Req ID                  : 36010.02.025
+Requirement linked for test case   : 42202
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42202
+Finished at                        : Wed Dec 07 19:04:59 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:04:59 EST 2022
+Creating test case for Row #       : 1216
+Short Desc                         : Verify NEW stop reason codes are specific for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the  NEW CMP stop reason codes for CMP. If the codes are selected for non-CMP programs an error should be displayed
+Expected Results                   : An error message should be displayed.
+Test Case ID for Row 1216          : 42203
+Associated Req ID                  : 36010.02.025
+Requirement linked for test case   : 42203
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42203
+Finished at                        : Wed Dec 07 19:05:02 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:02 EST 2022
+Creating test case for Row #       : 1217
+Short Desc                         : Verify Stop Reason is Updatable in Regular Panel
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the the Stop reason code is updatable for already existing CMP record thru Regular Panel
+Expected Results                   : The stop reason code of CMP should be updated
+Test Case ID for Row 1217          : 42204
+Associated Req ID                  : 36010.02.025
+Requirement linked for test case   : 42204
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42204
+Finished at                        : Wed Dec 07 19:05:06 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:06 EST 2022
+Creating test case for Row #       : 1218
+Short Desc                         : Verify that NEW stop reasons are displayed consecutively
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that these stop reasons are displayed consecutively as a group to the user.
+Expected Results                   : The stop reasons should be displayed consecutively
+Test Case ID for Row 1218          : 42205
+Associated Req ID                  : 36010.02.025
+Requirement linked for test case   : 42205
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42205
+Finished at                        : Wed Dec 07 19:05:09 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:09 EST 2022
+Creating test case for Row #       : 1219
+Short Desc                         : Enable users to set the CMP segment to history 
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the users are allowed to set the CMP segment to history status using SU - PMP panel 
+Expected Results                   : The CMP record should be historied
+Test Case ID for Row 1219          : 42206
+Associated Req ID                  : 36010.02.026
+Requirement linked for test case   : 42206
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42206
+Finished at                        : Wed Dec 07 19:05:13 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:13 EST 2022
+Creating test case for Row #       : 1220
+Short Desc                         : Enable users to select the CMP stop reason code 
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the users are allowed to select/update the stop reason for a member who is already enrolled in CMP.
+Expected Results                   : The stop reason of CMP should be updated.
+Test Case ID for Row 1220          : 42207
+Associated Req ID                  : 36010.02.027
+Requirement linked for test case   : 42207
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42207
+Finished at                        : Wed Dec 07 19:05:17 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:17 EST 2022
+Creating test case for Row #       : 1221
+Short Desc                         : Non overlapping- CMP Record in active mid
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MEMBER LINK/UNLINK
+Long Desc                          : Link two MIDS where the Active MID has CMP enrollment records and Inactive MID has none
+Expected Results                   : The enrollment records on the Active MID will stay as is.
+Test Case ID for Row 1221          : 42208
+Associated Req ID                  : 36010.05.001
+Requirement linked for test case   : 42208
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42208
+Finished at                        : Wed Dec 07 19:05:20 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:20 EST 2022
+Creating test case for Row #       : 1222
+Short Desc                         : Non overlapping -CMP Record in inactive mid.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MEMBER LINK/UNLINK
+Long Desc                          : Link two MIDS where the inactive MID has CMP enrollment records and Active MID has none
+Expected Results                   : The CMP record will be transferred from inactive MID to active MID
+Test Case ID for Row 1222          : 42209
+Associated Req ID                  : 36010.05.001
+Requirement linked for test case   : 42209
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42209
+Finished at                        : Wed Dec 07 19:05:24 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:24 EST 2022
+Creating test case for Row #       : 1223
+Short Desc                         : Overlapping - CMP Records & mutually exclusive plan
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MEMBER LINK/UNLINK
+Long Desc                          : Link two MIDS where the Active MID has mutually exclusive enrollment records
+Expected Results                   : None of the MC enrollments records from the inactive MID will be transferred and manual report will be sent out
+Test Case ID for Row 1223          : 42210
+Associated Req ID                  : 36010.05.002
+Requirement linked for test case   : 42210
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42210
+Finished at                        : Wed Dec 07 19:05:27 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:27 EST 2022
+Creating test case for Row #       : 1224
+Short Desc                         : Overlapping - CMP records in Active & Inactive MID
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MEMBER LINK/UNLINK
+Long Desc                          : Link two MIDS where both the Active MID and Inactive MID has CMP enrollment records which overlap
+Expected Results                   : None of the MC enrollments records from the inactive MID will be transferred and manual report will be sent out
+Test Case ID for Row 1224          : 42211
+Associated Req ID                  : 36010.05.002
+Requirement linked for test case   : 42211
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42211
+Finished at                        : Wed Dec 07 19:05:30 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:30 EST 2022
+Creating test case for Row #       : 1225
+Short Desc                         : Verify CMP enrollmnt region is matched wth crrspnding ACOA pln
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the appropriate region code is displayed for CMP plan having ACOA
+Expected Results                   : The CMP region code should match with the corresponding ACOA plan.
+Test Case ID for Row 1225          : 42212
+Associated Req ID                  : 36010.07.001
+Requirement linked for test case   : 42212
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42212
+Finished at                        : Wed Dec 07 19:05:33 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:33 EST 2022
+Creating test case for Row #       : 1226
+Short Desc                         : Verify CMP enrollmnt region is matched wth crrspnding ACOB pln
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the appropriate region code is displayed for CMP plan having ACOB
+Expected Results                   : The CMP region code should match with the corresponding ACOB plan.
+Test Case ID for Row 1226          : 42213
+Associated Req ID                  : 36010.07.001
+Requirement linked for test case   : 42213
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42213
+Finished at                        : Wed Dec 07 19:05:36 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:36 EST 2022
+Creating test case for Row #       : 1227
+Short Desc                         : ACO batch transfer with existing CMP assignment-1
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Member has an MFASA assignment plan who is later transferred to an MSTDA assignment with a RETRO effective date. The MFASA assignment has an existing CMP assignment plan with an effective date greater than the MFASA effective date.
+Expected Results                   : CMP assignment should be created for its corresponding MSTDA assignment plan.
+Test Case ID for Row 1227          : 42214
+Associated Req ID                  : 36010.08.003
+Requirement linked for test case   : 42214
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42214
+Finished at                        : Wed Dec 07 19:05:39 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:39 EST 2022
+Creating test case for Row #       : 1228
+Short Desc                         : ACO batch transfer with existing CMP assignment-2
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Member has an MFASA assignment plan who is later transferred to an MSTDA assignment with a RETRO effective date.The MFASA assignment has an existing CMP assignment plan with an end date less than the MFASA end date.
+Expected Results                   : CMP assignment should be created for its corresponding MSTDA assignment plan.
+Test Case ID for Row 1228          : 42215
+Associated Req ID                  : 36010.08.003
+Requirement linked for test case   : 42215
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42215
+Finished at                        : Wed Dec 07 19:05:42 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:42 EST 2022
+Creating test case for Row #       : 1229
+Short Desc                         : ACO batch transfer with existing CMP assignment-3
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Member has an MFASA assignment plan who is later transferred to an MSTDA assignment with a RETRO effective date. The MFASA assignment has an existing CMP assignment plan with an effective date greater than the MFASA end date after disenrollment.
+Expected Results                   : Existing CMP should be historied and new CMP assignment should be created for its corresponding MSTDA assignment plan.
+Test Case ID for Row 1229          : 42216
+Associated Req ID                  : 36010.08.003
+Requirement linked for test case   : 42216
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42216
+Finished at                        : Wed Dec 07 19:05:46 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:46 EST 2022
+Creating test case for Row #       : 1230
+Short Desc                         : ACO batch transfer with existing CMP assignment-4
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Member has an MFASA assignment plan who is later transferred to an MSTDA assignment with a RETRO effective date. The MFASA assignment plan has an existing CMP assignment with an effective date greater than the MFASA end date after disenrollment. The MFASA assignment has an accompanying CMP assignment with an effective date greater than the MSTDA effective date.
+Expected Results                   : CMP assignment should be created for its corresponding MSTDA assignment.
+Test Case ID for Row 1230          : 42217
+Associated Req ID                  : 36010.08.003
+Requirement linked for test case   : 42217
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42217
+Finished at                        : Wed Dec 07 19:05:49 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:49 EST 2022
+Creating test case for Row #       : 1231
+Short Desc                         : ACO batch  transfer with existing CMP assignment-5
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Member has an MFASA assignment that is being transferred to an MSTDA assignment with same effective and end dates. Effective date is a retro date.The MFASA assignment has an accompanying CMP assignment with dates equal to the effective and end date of the MFASA assignment.
+Expected Results                   : CMP assignment should be created for its corresponding MSTDA assignment.
+Test Case ID for Row 1231          : 42218
+Associated Req ID                  : 36010.08.003
+Requirement linked for test case   : 42218
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42218
+Finished at                        : Wed Dec 07 19:05:52 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:52 EST 2022
+Creating test case for Row #       : 1232
+Short Desc                         : ACO batch transfer with existing CMP assignment-6
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Member has an MFASA assignment who is later transferred to an MSTDA assignment with a RETRO effective date.The MFASA assignment has an accompanying CMP assignment with an effective date greater than the MFASA end date after disenrollment.The MFASA assignment has an accompanying CMP assignment with an effective date greater than the MSTDA effective date.The MFASA assignment has an accompanying CMP assignment with an end date less than the MSTDA end date.
+Expected Results                   : CMP assignment should be created for its corresponding MSTDA assignment.
+Test Case ID for Row 1232          : 42219
+Associated Req ID                  : 36010.08.003
+Requirement linked for test case   : 42219
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42219
+Finished at                        : Wed Dec 07 19:05:55 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:55 EST 2022
+Creating test case for Row #       : 1233
+Short Desc                         : ACO assignment historied due to loss of eligibility
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Member has an MSTDA assignment that has been historied due to loss of eligibility.
+Expected Results                   : No new CMP assignment should be created
+Test Case ID for Row 1233          : 42220
+Associated Req ID                  : 36010.08.003
+Requirement linked for test case   : 42220
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42220
+Finished at                        : Wed Dec 07 19:05:58 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:05:58 EST 2022
+Creating test case for Row #       : 1234
+Short Desc                         : ACO transfer with existing CMP assignment (non batch)
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Member has an MFASA assignment who is later transferred to an MSTDA assignment with a RETRO effective date. After the member has been disenrolled from CMP, the CMP end date has been changed by non-batch entity (Manual update). CMP now has new stop reason code.
+Expected Results                   : No new CMP assignment should be created
+Test Case ID for Row 1234          : 42221
+Associated Req ID                  : 36010.08.005
+Requirement linked for test case   : 42221
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42221
+Finished at                        : Wed Dec 07 19:06:02 EST 2022
+****************************************************
+Started at                         : Wed Dec 07 19:06:02 EST 2022
+Creating test case for Row #       : 1235
+Short Desc                         : ACO Disenrollment Creates Future CMP EFF Date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who has both the ACO & CMP enrollment. The member is disenrolled from ACO plan with end date creating CMP effective Date greater than ACO End Date.
+Expected Results                   : The CMP enrollment should be historied
+Test Case ID for Row 1235          : 42222
+Associated Req ID                  : 36010.09.001
+Requirement linked for test case   : 42222
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42222
+Finished at                        : Wed Dec 07 19:06:05 EST 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 07/Dec/2022 07:06:21PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

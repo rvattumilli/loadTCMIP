@@ -1,0 +1,316 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 10/Jun/2024 02:38:53PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Total No.of Columns fetched        : 6
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 129
+Total No.of Rows fetched           : 11
+*****************************************************************
+Started at                         : Mon Jun 10 14:38:58 EDT 2024
+Creating test case for Row #       : 5290
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 506
+TC Validation status               : PASS
+Short Desc                         : Pending MDS record within 21 days
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send in 01,02,03,04,05 assessment types with various ARDs  that is within 21 days before and after Run job ELGJD034 so that the records are now in pending status Send in an "NF"
+Expected Results                   : The records should now be accepted with 02 and 03 records accepted if they are within 21 days window. 04,05 shold work as usual with no change to logic
+Test Case ID for Row 5290          : 47413
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47413
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47413
+Finished at                        : Mon Jun 10 14:39:03 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:03 EDT 2024
+Creating test case for Row #       : 5291
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 489
+TC Validation status               : PASS
+Short Desc                         : Conflicting ARDs
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : MDS record with conflicting ARDs
+Expected Results                   : Logic will take the record with an earlier ARD date
+Test Case ID for Row 5291          : 47414
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47414
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47414
+Finished at                        : Mon Jun 10 14:39:08 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:08 EDT 2024
+Creating test case for Row #       : 5292
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 540
+TC Validation status               : PASS
+Short Desc                         : Pending MDS record outside 21 days
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send in 02,03 outside the 21 days boundaries Run job ELGJD034 so that the records are now in pending status Send in an "NF"
+Expected Results                   : Record should stay in pending status
+Test Case ID for Row 5292          : 47415
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47415
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47415
+Finished at                        : Mon Jun 10 14:39:12 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:12 EDT 2024
+Creating test case for Row #       : 5293
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 511
+TC Validation status               : PASS
+Short Desc                         : Incoming MDS records within 21 days
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send in NF segment Send in assessment 1 Send in 01,02,03,04,05 assessment types with various ARDs  that is within 21 days before and after Run job ELGJD034
+Expected Results                   : The records should now be accepted with 02 and 03 records accepted if they are within 21 days window. 04,05 should work as usual with no change to logic
+Test Case ID for Row 5293          : 47416
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47416
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47416
+Finished at                        : Mon Jun 10 14:39:17 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:17 EDT 2024
+Creating test case for Row #       : 5294
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 527
+TC Validation status               : PASS
+Short Desc                         : MDS record with HIPPS code
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Take an accepted row and send in another record with an ARD within 21 days period
+Expected Results                   : Next record should be accepted
+Test Case ID for Row 5294          : 47417
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47417
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47417
+Finished at                        : Mon Jun 10 14:39:22 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:22 EDT 2024
+Creating test case for Row #       : 5295
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 576
+TC Validation status               : PASS
+Short Desc                         : Future dschrge dte  for ass tpe 10:Incmng MDSs
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : There is NF record in mds loc effective 01/10/2024 Send in future discharge date  08/22 for ass 10 Send in assments 1, 2  with past ARDs 01/01 and 03/31 Discharge asmnt stays in pending Send in asmnt 4 with ard 7/30
+Expected Results                   : Discharge asmnt should now be accepted with end date cut to 08/22
+Test Case ID for Row 5295          : 47418
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47418
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47418
+Finished at                        : Mon Jun 10 14:39:27 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:27 EDT 2024
+Creating test case for Row #       : 5296
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 543
+TC Validation status               : PASS
+Short Desc                         : Future dschrge dte  for ass tpe 12:Incmng MDSs
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : There is NF record in mds loc effective 01/10/2024 Send in future discharge date  08/22 for ass 12 Send in assments 1,3 and 4 with past ARDs 01/01 and 03/31 Discharge asmnt stays in pending Send in asmnt 4 aith ard 7/30
+Expected Results                   : Discharge asmnt should now be accepted with end date cut to 08/22
+Test Case ID for Row 5296          : 47419
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47419
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47419
+Finished at                        : Mon Jun 10 14:39:32 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:32 EDT 2024
+Creating test case for Row #       : 5297
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 520
+TC Validation status               : PASS
+Short Desc                         : Test the Pending MDS records: Ass 10
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : There is no NF record in mds loc  Send in future discharge date  06/22 for ass 10 Send in assments 1, 2 and  with past ARDs 01/01 and 03/31 The records will be in pending and then send in the NF segment in MDS/LOC with eff date 01/10/2024
+Expected Results                   : Assessments are accepted but end date is cut to the discharge date
+Test Case ID for Row 5297          : 47420
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47420
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47420
+Finished at                        : Mon Jun 10 14:39:36 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:36 EDT 2024
+Creating test case for Row #       : 5298
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 509
+TC Validation status               : PASS
+Short Desc                         : Test the Pending MDS records: Ass 12
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : There is no NF record in mds loc  Send in future discharge date  06/22 for ass 12 Send in assments 1, 2 with past ARDs 01/01 and 03/31 The records will be in pending and then send in the NF segment in MDS/LOC with eff date 01/10/2024
+Expected Results                   : Assessments are accepted but end date is cut to the discharge date
+Test Case ID for Row 5298          : 47421
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47421
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47421
+Finished at                        : Mon Jun 10 14:39:41 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:41 EDT 2024
+Creating test case for Row #       : 5299
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 482
+TC Validation status               : PASS
+Short Desc                         : MDS record with a HIPPS code
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Take a record that has a HIPPS code and give a manual/sc1 discharge in MDS/LOC 1Send in the ARD date in the future . 2Send in the ARD date in the past.
+Expected Results                   : 1. It should be rejected. 2. It should be accepted but cut to the discharge date.
+Test Case ID for Row 5299          : 47422
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47422
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47422
+Finished at                        : Mon Jun 10 14:39:46 EDT 2024
+*****************************************************************
+Started at                         : Mon Jun 10 14:39:46 EDT 2024
+Creating test case for Row #       : 5300
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 489
+TC Validation status               : PASS
+Short Desc                         : ELGJD034 job log error
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send in an MDS record with a discharge date in the future
+Expected Results                   : ELGJD034 job run will display an error code 125: Discharge date cannot be before effective or after end date- MDS is not accepted and the record will stay in pending status.
+Test Case ID for Row 5300          : 47423
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37632.01.010
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47423
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47423
+Finished at                        : Mon Jun 10 14:39:51 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 10/Jun/2024 02:39:51PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

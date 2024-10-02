@@ -1,0 +1,524 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Dec/2022 11:24:08AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 107
+****************************************************
+Started at                         : Wed Dec 14 11:24:17 EST 2022
+Creating test case for Row #       : 1246
+Short Desc                         : Provider Info optimistic support for add data under equal child pnls
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider add data for Provider Information on equal child panels using Chrome and Edge.
+Expected Results                   : A notification should be triggered that a record exists in the database for the same Provider.
+Test Case ID for Row 1246          : 42272
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42272
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42272
+Finished at                        : Wed Dec 14 11:24:21 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:21 EST 2022
+Creating test case for Row #       : 1247
+Short Desc                         : Provider Info optimistic support for add data under distinct child pnls
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider add data for Provider Information on distinct child panels using Chrome and Edge.
+Expected Results                   : A notification should be triggered that a record exists in the database for the same Provider.
+Test Case ID for Row 1247          : 42273
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42273
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42273
+Finished at                        : Wed Dec 14 11:24:24 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:24 EST 2022
+Creating test case for Row #       : 1248
+Short Desc                         : Provider Info optimistic support for edit data under equal child pnls
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider edit data for Provider Information on equal child panels using Chrome and Edge.
+Expected Results                   : A notification should be triggered that a record exists in the database for the same Provider.
+Test Case ID for Row 1248          : 42274
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42274
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42274
+Finished at                        : Wed Dec 14 11:24:27 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:27 EST 2022
+Creating test case for Row #       : 1249
+Short Desc                         : Provider Info optimistic support for edit data under distinct child pnls
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider edit data for Provider Information on distinct child panels using Chrome and Edge.
+Expected Results                   : A notification should be triggered that a record exists in the database for the same Provider.
+Test Case ID for Row 1249          : 42275
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42275
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42275
+Finished at                        : Wed Dec 14 11:24:31 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:31 EST 2022
+Creating test case for Row #       : 1250
+Short Desc                         : Provider Info parent/child version table tracking
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify Provider Information T_PR_PROV child version id increment.
+Expected Results                   : T_PR_PROV child version increments due to changes in child panels.
+Test Case ID for Row 1250          : 42276
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42276
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42276
+Finished at                        : Wed Dec 14 11:24:34 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:34 EST 2022
+Creating test case for Row #       : 1251
+Short Desc                         : Provider Info parent table data version tracking
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify Provider Information T_PR_PROV parent table increment after increment from child version id.
+Expected Results                   : T_PR_PROV version increments after data save.
+Test Case ID for Row 1251          : 42277
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42277
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42277
+Finished at                        : Wed Dec 14 11:24:37 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:37 EST 2022
+Creating test case for Row #       : 1252
+Short Desc                         : Provider Svc Loc optimistic support for add data under equal child pnls
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider/Svc Location add data for Provider Service Location on equal child panels using Chrome and Edge.
+Expected Results                   : A notification should be triggered that a record exists in the database for the same Provider.
+Test Case ID for Row 1252          : 42278
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42278
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42278
+Finished at                        : Wed Dec 14 11:24:40 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:40 EST 2022
+Creating test case for Row #       : 1253
+Short Desc                         : Provider Svc Loc optimistic support for add data under distinct child pnls
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider/Svc Location add data for Provider Service Location on distinct child panels using Chrome and Edge.
+Expected Results                   : A notification should be triggered that a record exists in the database for the same Provider
+Test Case ID for Row 1253          : 42279
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42279
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42279
+Finished at                        : Wed Dec 14 11:24:44 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:44 EST 2022
+Creating test case for Row #       : 1254
+Short Desc                         : Provider Svc Loc optimistic support for edit data under equal child pnls
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider/Svc Location edit data for Provider Service Location on equal child panels using Chrome and Edge.
+Expected Results                   : A notification should be triggered that a record exists in the database for the same Provider.
+Test Case ID for Row 1254          : 42280
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42280
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42280
+Finished at                        : Wed Dec 14 11:24:47 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:47 EST 2022
+Creating test case for Row #       : 1255
+Short Desc                         : Provider Svc Loc optimistic support for edit data under distinct child pnls
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider/Svc Location edit data for Provider Service Location on distinct child panels using Chrome and Edge.
+Expected Results                   : A notification should be triggered that a record exists in the database for the same Provider.
+Test Case ID for Row 1255          : 42281
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42281
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42281
+Finished at                        : Wed Dec 14 11:24:51 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:51 EST 2022
+Creating test case for Row #       : 1256
+Short Desc                         : Provider Svc Loc parent/child version table tracking
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify Provider Service Location T_PR_SVC_LOC child version id increment.
+Expected Results                   : T_PR_SVC_LOC child version increments due to changes in child panels.
+Test Case ID for Row 1256          : 42282
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42282
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42282
+Finished at                        : Wed Dec 14 11:24:54 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:54 EST 2022
+Creating test case for Row #       : 1257
+Short Desc                         : Provider Svc Loc parent table data version tracking
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify Provider Service Location T_PR_SVC_LOC parent table increment after increment from child version id.
+Expected Results                   : T_PR_SVC_LOC version increments after data save.
+Test Case ID for Row 1257          : 42283
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42283
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42283
+Finished at                        : Wed Dec 14 11:24:58 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:24:58 EST 2022
+Creating test case for Row #       : 1258
+Short Desc                         : Provider Info add for equal child pnls regression test.
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent different Provider add data for Provider Information on equal child panels using Chrome and Edge.
+Expected Results                   : A Save Successful message shall be displayed in both browsers.
+Test Case ID for Row 1258          : 42284
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42284
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42284
+Finished at                        : Wed Dec 14 11:25:01 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:01 EST 2022
+Creating test case for Row #       : 1259
+Short Desc                         : Provider Info add data for distinct child pnls regression test
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent different Provider edit data for Provider Information on equal child panels using Chrome and Edge.
+Expected Results                   : A Save Successful message shall be displayed in both browsers.
+Test Case ID for Row 1259          : 42285
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42285
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42285
+Finished at                        : Wed Dec 14 11:25:04 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:04 EST 2022
+Creating test case for Row #       : 1260
+Short Desc                         : Provider Svc Loc add data for equal child pnls regression test
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent different Provider/Svc Location add data for Provider Service Location on equal child panels using Chrome and Edge.
+Expected Results                   : A Save Successful message shall be displayed in both browsers.
+Test Case ID for Row 1260          : 42286
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42286
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42286
+Finished at                        : Wed Dec 14 11:25:07 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:07 EST 2022
+Creating test case for Row #       : 1261
+Short Desc                         : Provider Svc Loc edit data on equal child panels regression test
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent different Provider/Svc Location edit data for Provider Service Location on equal child panels using Chrome and Edge.
+Expected Results                   : A Save Successful message shall be displayed in both browsers.
+Test Case ID for Row 1261          : 42287
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42287
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42287
+Finished at                        : Wed Dec 14 11:25:10 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:10 EST 2022
+Creating test case for Row #       : 1262
+Short Desc                         : Provider and Svc Loc add data on equal child pnls.
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider and different Service Location add data for Provider Service Location on equal child panels using Chrome and Edge.
+Expected Results                   : A Save Successful message shall be displayed in both browsers.
+Test Case ID for Row 1262          : 42288
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42288
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42288
+Finished at                        : Wed Dec 14 11:25:14 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:14 EST 2022
+Creating test case for Row #       : 1263
+Short Desc                         : Provider and Svc Loc edit data on equal child pnls
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Provider and different Svc Location edit data for Provider Service Location on equal child panels using Chrome and Edge.
+Expected Results                   : A notification should be triggered that a record exists in the database for the same Provider.
+Test Case ID for Row 1263          : 42289
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42289
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42289
+Finished at                        : Wed Dec 14 11:25:17 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:17 EST 2022
+Creating test case for Row #       : 1264
+Short Desc                         : Case Number add data on equal child panels using Chrome and Edge
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Case Number add data on equal child panels using Chrome and Edge.
+Expected Results                   : The following notification should be triggered: You and another user have attempted to save the same record at the same time. This is not allowed. Re-enter your data and try to save the record again.
+Test Case ID for Row 1264          : 42290
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42290
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42290
+Finished at                        : Wed Dec 14 11:25:20 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:20 EST 2022
+Creating test case for Row #       : 1265
+Short Desc                         : Case Number add data on distinct child panels using Chrome and Edge
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Case Number add data on distinct child panels using Chrome and Edge.
+Expected Results                   : The following notification should be triggered: You and another user have attempted to save the same record at the same time. This is not allowed. Re-enter your data and try to save the record again.
+Test Case ID for Row 1265          : 42291
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42291
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42291
+Finished at                        : Wed Dec 14 11:25:24 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:24 EST 2022
+Creating test case for Row #       : 1266
+Short Desc                         : Case Num edit and add data on equal child pnls using Chrome and Edge
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Case Number edit and add data on equal child panels using Chrome and Edge.
+Expected Results                   : The following notification should be triggered: You and another user have attempted to save the same record at the same time. This is not allowed. Re-enter your data and try to save the record again.
+Test Case ID for Row 1266          : 42292
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42292
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42292
+Finished at                        : Wed Dec 14 11:25:27 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:27 EST 2022
+Creating test case for Row #       : 1267
+Short Desc                         : Case Num edit and add data on distinct child pnls using Chrome and Edge
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent same Case Number edit and add data on distinct child panels using Chrome and Edge.
+Expected Results                   : The following notification should be triggered: You and another user have attempted to save the same record at the same time. This is not allowed. Re-enter your data and try to save the record again.
+Test Case ID for Row 1267          : 42293
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42293
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42293
+Finished at                        : Wed Dec 14 11:25:31 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:31 EST 2022
+Creating test case for Row #       : 1268
+Short Desc                         : Prov T_PR_CASE parent table increment after inc from child ver. id.
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify Provider T_PR_CASE parent table increment after increment from child version id.
+Expected Results                   : T_PR_CASE parent table version id increments after data save.
+Test Case ID for Row 1268          : 42294
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42294
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42294
+Finished at                        : Wed Dec 14 11:25:34 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:34 EST 2022
+Creating test case for Row #       : 1269
+Short Desc                         : Case Number add data on equal child panels using Chrome and Edge
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent different Case Number add data on equal child panels using Chrome and Edge.
+Expected Results                   : A Save Successful message shall be displayed in both browsers.
+Test Case ID for Row 1269          : 42295
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42295
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42295
+Finished at                        : Wed Dec 14 11:25:37 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:37 EST 2022
+Creating test case for Row #       : 1270
+Short Desc                         : Diff Case Num add data on distinct child pnls using Chrome and Edge
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent different Case Number add data on distinct child panels using Chrome and Edge.
+Expected Results                   : A Save Successful message shall be displayed in both browsers.
+Test Case ID for Row 1270          : 42296
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42296
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42296
+Finished at                        : Wed Dec 14 11:25:40 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:40 EST 2022
+Creating test case for Row #       : 1271
+Short Desc                         : Diff Case Num edit data on equal child panels using Chrome and Edge
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent different Case Number edit data on equal child panels using Chrome and Edge.
+Expected Results                   : A Save Successful message shall be displayed in both browsers.
+Test Case ID for Row 1271          : 42297
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42297
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42297
+Finished at                        : Wed Dec 14 11:25:43 EST 2022
+****************************************************
+Started at                         : Wed Dec 14 11:25:43 EST 2022
+Creating test case for Row #       : 1272
+Short Desc                         : Diff Case Num edit data on distinct child pnls using Chrome and Edge
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : PROVIDER PANELS
+Long Desc                          : Verify concurrent different Case Number edit data on distinct child panels using Chrome and Edge.
+Expected Results                   : A Save Successful message shall be displayed in both browsers.
+Test Case ID for Row 1272          : 42298
+Associated Req ID                  : 36222.01.001
+Requirement linked for test case   : 42298
+Notebook                           : Project23.03
+Business Function                  : Project23.03
+Notebook/BF linked for test case   : 42298
+Finished at                        : Wed Dec 14 11:25:46 EST 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Dec/2022 11:26:03AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

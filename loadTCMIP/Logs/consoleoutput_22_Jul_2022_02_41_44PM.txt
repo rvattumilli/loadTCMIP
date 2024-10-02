@@ -1,0 +1,73 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 22/Jul/2022 02:41:44PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Fri Jul 22 14:41:51 EDT 2022
+Creating test case for Row #       : 995
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Do not Suppress ACCS enrollment notice
+Long Desc                          : Member disenrolled from CP Plan Type (ACCS1/2) with auto-disenrollment codes other than (BK, BH and BI) and enrolled to new CP Plan Type (ACCS2/1) but PID/SL is same.
+Expected Results                   : Verify there is  trigger EB generated for the ACCS in table "T_MC_CST_TRIGGER".
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.011
+Test Case ID for Row 995           : 41705
+Requirement linked for test case   : 41705
+Notebook/BF linked for test case   : 41705
+Finished at                        : Fri Jul 22 14:41:58 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:41:58 EDT 2022
+Creating test case for Row #       : 996
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Do not Suppress PACC  enrollment notice
+Long Desc                          : Member disenrolled from CP Plan Type (PACC/2) with auto-disenrollment codes other than (BK, BH and BI) and enrolled to new CP Plan Type (PACC2/1) but PID/SL is same.
+Expected Results                   : Verify there is trigger EB generated for the PACC in table "T_MC_CST_TRIGGER".
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.011
+Test Case ID for Row 996           : 41706
+Requirement linked for test case   : 41706
+Notebook/BF linked for test case   : 41706
+Finished at                        : Fri Jul 22 14:42:06 EDT 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 22/Jul/2022 02:42:06PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

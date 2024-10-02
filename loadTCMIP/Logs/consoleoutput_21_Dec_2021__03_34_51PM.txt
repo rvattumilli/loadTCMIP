@@ -1,0 +1,866 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 21/Dec/2021 03:34:51PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Started at: Tue Dec 21 15:35:01 EST 2021
+Creating test case for TC Row : 713
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO assignment lost eligibility with deemed eligibility stop rs
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code and the configured deemed period = 2 months. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date (sql_dte_today) is within the configured deemed period. 
+ 
+3) Day deemed period ends (month 2): 
+After Daily and Weekly runs 
+ICO assignment is end dated with an end date of the last day of month the deemed period ended with Stop reason code: Z1 (Loss of eligibility) 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 713      : 40758
+Notebook/Business function linked for test case 40758
+Work item linked for test case 40758
+Finished at: Tue Dec 21 15:35:17 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:35:17 EST 2021
+Creating test case for TC Row : 714
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO assignment lost eligibility with a non-deemed elig stop rsn
+Long Desc                     : A member with ICO assignment lost eligibility on current day with a non-deemed eligibility stop reason code. 
+Verify InfoCrossing for ICO dis-enrollment transaction
+Expected Results              : After the eligibility gets updated: 
+ICO assignment is end dated with the end of the month the aid cat ended. 
+Stop reason code: Z1 (Loss of eligibility) 
+Nightly 834 cycle will pick up the change.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 714      : 40759
+Notebook/Business function linked for test case 40759
+Work item linked for test case 40759
+Finished at: Tue Dec 21 15:35:33 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:35:33 EST 2021
+Creating test case for TC Row : 715
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO lost elig with deemed stop rsn null elig open ended
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code  and the configured deemed period = 2 months.  
+After 1 month regains eligibility for ICO and remains open on the run date. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date (sql_dte_today) is within the configured deemed period. 
+ 
+3) Same month end: 
+After Daily and Weekly runs 
+ICO assignment Stop Reason Code updated to default ?AZ? since member now has open eligibility. Member will not be picked up by the daily disenrollment process under the deemed eligibility logic.  
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 715      : 40760
+Notebook/Business function linked for test case 40760
+Work item linked for test case 40760
+Finished at: Tue Dec 21 15:35:49 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:35:49 EST 2021
+Creating test case for TC Row : 716
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO lost elig with deemed stop rsn  elig for 1 day(deem)
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code  and the configured deemed period = 2 months.  
+After 1 month regains eligibility for ICO only for 1 day. This second eligibility segment was closed with a deemed eligibility stop reason code. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the configured deemed period. 
+Deemed waiting period was reset according to the last Aid Cat end date. 
+ 
+3) End of month 1 from the recent date eligibility end date: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the configured deemed period. 
+ 
+4) Day new deemed period ends: 
+After Daily and Weekly runs 
+ICO assignment is end dated due the configured deemed period ended (according to the last deemed eligibility end date) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 716      : 40761
+Notebook/Business function linked for test case 40761
+Work item linked for test case 40761
+Finished at: Tue Dec 21 15:36:06 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:36:06 EST 2021
+Creating test case for TC Row : 717
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO lost elig with deemed stop rsn  elig for 1 day
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code and the configured deemed period = 2 months.  
+After 1 month regains eligibility for ICO only for 1 day. This second eligibility segment did not have a deemed eligibility stop reason code.2 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment is end dated according to the last eligibility end date (not deemed eligibility) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 717      : 40762
+Notebook/Business function linked for test case 40762
+Work item linked for test case 40762
+Finished at: Tue Dec 21 15:36:23 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:36:23 EST 2021
+Creating test case for TC Row : 718
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO lost elig with a deemed stop reason.Deemed period extended.
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason and the configured deemed period = 2 months. Only one eligibility. 
+Deemed period got extended. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+Deemed period updated to 3 months. 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period. 
+ 
+3) End of month 2 from the date eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the new configured deemed period. 
+ 
+4) Day new deemed period ends (month 3): 
+After Daily and Weekly runs 
+ICO assignment is end dated due to the new configured deemed period ended (according to the last deemed eligibility end date) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 718      : 40763
+Notebook/Business function linked for test case 40763
+Work item linked for test case 40763
+Finished at: Tue Dec 21 15:36:42 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:36:42 EST 2021
+Creating test case for TC Row : 719
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Multiple Aid Cats and Deemed period extended
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code and the configured deemed period = 2 months.  
+After 1 month regains eligibility for ICO only for 1 day. This second eligibility segment was closed with a deemed eligibility stop reason code. And deemed period got extended. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+Deemed period updated to 3 months. 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period. 
+Deemed period restart  due new 1 day elig. 
+ 
+3) End of month 1 from the date new eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the new configured deemed period. 
+ 
+4) End of month 2 from the date new eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the new configured deemed period. 
+ 
+5) Day new deemed period ends (month end): 
+After Daily and Weekly runs 
+ICO assignment is end dated due the configured deemed period ended (according to the last deemed eligibility end date) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 719      : 40764
+Notebook/Business function linked for test case 40764
+Work item linked for test case 40764
+Finished at: Tue Dec 21 15:36:59 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:36:59 EST 2021
+Creating test case for TC Row : 720
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Multiple Aid Cats Deemed period reduced.
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code and the configured deemed period = 2 months.  
+After 1 month regains eligibility for ICO. The new eligibility segment is end dated the same date that it started (1 day eligibility segment) with a deemed eligibility stop reason code. Also the configured deemed period was reduced. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+Deemed period updated to 1 month. 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period. 
+Deemed period restart  due new 1 day elig. 
+ 
+3) End of month 1 from the date new eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period of 2 months from the date new eligibility ended. 
+ 
+4) Day original deemed period ends (month 2): 
+After Daily and Weekly runs 
+ICO assignment is end dated due the original configured deemed period ended (according to the last deemed eligibility end date) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 720      : 40765
+Notebook/Business function linked for test case 40765
+Work item linked for test case 40765
+Finished at: Tue Dec 21 15:37:16 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:37:16 EST 2021
+Creating test case for TC Row : 721
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO deemed period reduced and no other deemed aid cat segment.
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code and the configured deemed period = 2 months.  
+After 1 month configured deemed period was reduced. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+Deemed period updated to 1 month. 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period. 
+ 
+3) Day original deemed period ends (month 2): 
+After Daily and Weekly runs 
+ICO assignment is end dated due the original configured deemed period ended (according to the last deemed eligibility end date) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 721      : 40766
+Notebook/Business function linked for test case 40766
+Work item linked for test case 40766
+Finished at: Tue Dec 21 15:37:33 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:37:33 EST 2021
+Creating test case for TC Row : 722
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO deemed period reduced before expiration.
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code  the configured deemed period = 2 months.   
+Then configured deemed period was reduced just before deemed period is about to expire. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period. 
+ 
+3) Deemed period updated to 1 month before member deemed period expiration. 
+ 
+4) Day original deemed period ends (month 2): 
+After Daily and Weekly runs 
+ICO assignment is end dated due the original configured deemed period ended (according to the last deemed eligibility end date) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 722      : 40767
+Notebook/Business function linked for test case 40767
+Work item linked for test case 40767
+Finished at: Tue Dec 21 15:37:49 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:37:49 EST 2021
+Creating test case for TC Row : 723
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO deemed period extended after expiration.
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code and it is already end dated. Original configured deemed period = 2 months.   
+The configurable deemed period is extended after the assignment disenroll was applied. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period. 
+ 
+3) Day original deemed period ends (month 2): 
+After Daily and Weekly runs 
+ICO assignment is end dated due the original configured deemed period ended (according to the last deemed eligibility end date) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+4) Configurable deemed period is extended to 3 months after member deemed period expiration. 
+ICO assignment does not change, it remains end dated with the original end date. 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 723      : 40768
+Notebook/Business function linked for test case 40768
+Work item linked for test case 40768
+Finished at: Tue Dec 21 15:38:06 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:38:06 EST 2021
+Creating test case for TC Row : 724
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO deemed period reduced after expiration.
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code and it is already end dated. Original configured deemed period = 2 months.   
+The configurable deemed period is reduced after the assignment disenroll was applied. 
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because run date is within the configured deemed period. 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period. 
+ 
+3) Day original deemed period ends (month 2): 
+After Daily and Weekly runs 
+ICO assignment is end dated due the original configured deemed period ended (according to the last deemed eligibility end date) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+4) Configurable deemed period is updated to 1 month after member deemed period expiration. 
+ICO assignment does not change, it remains end dated with the original end date. 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 724      : 40769
+Notebook/Business function linked for test case 40769
+Work item linked for test case 40769
+Finished at: Tue Dec 21 15:38:23 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:38:23 EST 2021
+Creating test case for TC Row : 725
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Overlapping Aid Cat segments ending together. Deemed one richer.
+Long Desc                     : A member with ICO assignment has 2 overlapping eligibility segments. One eligibility segment was closed with a deemed stop reason code and the other was close with a non-deemed stop reason code. Deemed Eligibility has better mc hierarchy. Configured deemed period = 2 months.   
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+Stop reason code updated to DP.  
+Nightly 834 cycle will pick up the stop reason DP if it was applied on the day (or before) the aid cat closes, before the nightly 834 cycle. 
+NOTE: If the DP were to be applied after the cycle the aid cat end date is picked up, no additional 834 displaying the DP would be sent. 
+ICO Deemed mailing requirement on the plans will be handled in a different CO. 
+After weekly cycle, it remains as above 
+ 
+2) End of month 1 from the date eligibility ended: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period. 
+ 
+3) Day original deemed period ends (month 2): 
+After Daily and Weekly runs 
+ICO assignment is end dated due the original configured deemed period ended (according to the last deemed eligibility end date) with Stop reason code: Z1 (Loss of eligibility) 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 725      : 40770
+Notebook/Business function linked for test case 40770
+Work item linked for test case 40770
+Finished at: Tue Dec 21 15:38:39 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:38:39 EST 2021
+Creating test case for TC Row : 726
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Overlapping Aid Cat segments ending together. Non-deemed richer.
+Long Desc                     : A member with ICO assignment has 2 overlapping eligibility segments. One eligibility segment was closed with a deemed stop reason code and the other was close with a non-deemed stop reason code. Non-Deemed eligibility has better mc hierarchy. 
+ 
+Verify InfoCrossing for ICO dis-enrollment transaction
+Expected Results              : After the eligibility gets updated: 
+ICO assignment is end dated with the end of the month the aid cat ended. 
+Stop reason code: Z1 (Loss of eligibility) 
+Nightly 834 cycle will pick up the change. 
+ 
+Verified InfoCrossing for disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 726      : 40771
+Notebook/Business function linked for test case 40771
+Work item linked for test case 40771
+Finished at: Tue Dec 21 15:38:55 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:38:55 EST 2021
+Creating test case for TC Row : 727
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Aid Cat retro ended with deemed eligibility stop reason code.
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code in a retro date.
+Expected Results              : After the eligibility gets updated:
+ICO assignment is end dated with the end of the month the aid cat ended.
+Stop reason code: Z1 (Loss of eligibility)
+Nightly 834 cycle will pick up the change.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 727      : 40772
+Notebook/Business function linked for test case 40772
+Work item linked for test case 40772
+Finished at: Tue Dec 21 15:39:11 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:39:11 EST 2021
+Creating test case for TC Row : 728
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Aid Cat retro ended with non-deemed eligibility stop reason code
+Long Desc                     : A member with ICO assignment lost eligibility with a non-deemed eligibility stop reason code in a retro date.
+Expected Results              : After the eligibility gets updated: 
+ICO assignment is end dated with the end of the month the aid cat ended. 
+Stop reason code: Z1 (Loss of eligibility) 
+Nightly 834 cycle will pick up the change.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 728      : 40773
+Notebook/Business function linked for test case 40773
+Work item linked for test case 40773
+Finished at: Tue Dec 21 15:39:26 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:39:26 EST 2021
+Creating test case for TC Row : 729
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Aid Cat future ended with a deemed eligibility stop reason code
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code in a future date. Configured deemed period = 2 months.   
+ 
+Also when the member eligibility closes but the ICO enrollment remains open, an ICO dis-enrollment transaction should not be sent to InfoCrossing.  
+The ICO disenrollment transaction should only be sent to InfoCrossing at the end of the Deemed enrollment period.
+Expected Results              : 1) After the eligibility gets updated: 
+ICO assignment remains open because Aid Cat end date is open at the evaluation date (1st day of next month). 
+ 
+After weekly cycle, it remains as above 
+ 
+2) When the date eligibility is end dated: 
+After Daily and Weekly runs 
+ICO assignment remains open because run date is within the original configured deemed period. ICO assignment Stop Reason Code is updated to ?DP?. 
+ 
+3) Day original deemed period ends: 
+After Daily and Weekly runs 
+ICO assignment is end dated due the configured deemed period ended (according to the eligibility end date) with Stop reason code: Z1 (Loss of eligibility). 
+ 
+Verified InfoCrossing for enrollment and disenrollment transactions.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 729      : 40774
+Notebook/Business function linked for test case 40774
+Work item linked for test case 40774
+Finished at: Tue Dec 21 15:39:43 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:39:43 EST 2021
+Creating test case for TC Row : 730
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Aid Cat retro ended with deemed elig reason but covid 19 period.
+Long Desc                     : A member with ICO assignment lost eligibility in retro date with a deemed eligibility stop reason code but is in covid19 period (Covid19 period had just ended).
+Expected Results              : ICO assignment is end dated on the last day of the next month the aid cat ended.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 730      : 40775
+Notebook/Business function linked for test case 40775
+Work item linked for test case 40775
+Finished at: Tue Dec 21 15:39:58 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:39:58 EST 2021
+Creating test case for TC Row : 731
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : ICO lost elig with deemed elig stop rsn but active covid period
+Long Desc                     : A member with ICO assignment lost eligibility with a deemed eligibility stop reason code but covid19 period is still active.
+Expected Results              : 1) After the eligibility gets updated:
+ICO assignment remains open. It will be disenrolled until the last Friday of the next month the Aid Cat ends.
+
+Same as above after Weekly
+
+3) Last Friday of next month:
+ICO assignment is end dated on the last day of the next month the Aid cat ended with Stop reason code: Z1 (Loss of eligibility).
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 731      : 40776
+Notebook/Business function linked for test case 40776
+Work item linked for test case 40776
+Finished at: Tue Dec 21 15:40:14 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:40:14 EST 2021
+Creating test case for TC Row : 732
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test the SCO/PACE with DP stop reason code
+Long Desc                     : SCO/PACE should not have open assignment based on ICO deemed period stop reason codes
+Expected Results              : SCO/PACE do not have open assignment based on ICO deemed period stop reason codes
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 732      : 40777
+Notebook/Business function linked for test case 40777
+Work item linked for test case 40777
+Finished at: Tue Dec 21 15:40:29 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:40:29 EST 2021
+Creating test case for TC Row : 733
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test the recon/cap for members with ICO assignments tested for DP in all the the 35571 test cases
+Long Desc                     : Capitation Payment should be created if member has eligibility for the month being evaluated even if it is 1 day of eligibility.
+Capitation RECON Payment should be created if member loses eligibility.
+No RECON/CAP if no eligibility found during the month being evaluated.
+Expected Results              : Capitation Payment is created if member has eligibility for the month being evaluated even if it is 1 day of eligibility.
+Capitation RECON Payment is created if member loses eligibility.
+No RECON/CAP if no eligibility found during the month being evaluated.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 733      : 40778
+Notebook/Business function linked for test case 40778
+Work item linked for test case 40778
+Finished at: Tue Dec 21 15:40:45 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:40:45 EST 2021
+Creating test case for TC Row : 734
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test normal recon/cap processing for ICO/SCO/PACE assignment
+Long Desc                     : Capitation Payment should be created if member has eligibility for the month being evaluated.
+Capitation RECON Payment should be created if member loses eligibility for the month
+No RECON/CAP if no eligibility found during the month being evaluated.
+Expected Results              : Recon/Cap for the assignments are created based on members eligibility.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 734      : 40779
+Notebook/Business function linked for test case 40779
+Work item linked for test case 40779
+Finished at: Tue Dec 21 15:41:00 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:41:00 EST 2021
+Creating test case for TC Row : 735
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test MGDJD140
+Long Desc                     : MGDJD140 get the members with ?DP? assignments generated by MGDJD150/MGDJD050.
+Expected Results              : Assignments (with stop reason code ?DP?) inserted in t_re_ext_recips
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 735      : 40780
+Notebook/Business function linked for test case 40780
+Work item linked for test case 40780
+Finished at: Tue Dec 21 15:41:16 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:41:16 EST 2021
+Creating test case for TC Row : 736
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test monthly 834-PMGDMLYR for the ICO assignments tested for DP
+Long Desc                     : The monthly 834 should generate the enrollments and disenrollments for the ICO assignments tested for DP in all the 35571 test cases.
+Expected Results              : The monthly 834 generate the enrollments and disenrollments.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35571
+Associated WI Type            : Change Order
+Test Case ID for Row 736      : 40781
+Notebook/Business function linked for test case 40781
+Work item linked for test case 40781
+Finished at: Tue Dec 21 15:41:32 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:41:32 EST 2021
+Creating test case for TC Row : 737
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test 820 for receiver_acct_num field with new max length of 35
+Long Desc                     : Test 820 with new length of receiver_acct_num field with the new max length of 35 to check if the modified map can handle the new full length of this field.
+Expected Results              : BPR15 will be populated with the receiver_acct_num max value length of 35 in the X12 output file
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35714
+Associated WI Type            : Work Item
+Test Case ID for Row 737      : 40782
+Notebook/Business function linked for test case 40782
+Work item linked for test case 40782
+Finished at: Tue Dec 21 15:41:47 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:41:47 EST 2021
+Creating test case for TC Row : 738
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test 820 for receiver_acct_num field with new max length of <35
+Long Desc                     : Test 820 with new length of receiver_acct_num field to check if the modified map can still handle if the full length of this field <35.
+Expected Results              : BPR15 will be populated with the receiver_acct_num max value length of <35 in the X12 output file
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35714
+Associated WI Type            : Work Item
+Test Case ID for Row 738      : 40783
+Notebook/Business function linked for test case 40783
+Work item linked for test case 40783
+Finished at: Tue Dec 21 15:42:02 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:42:02 EST 2021
+Creating test case for TC Row : 739
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test 820 for receiver_acct_num field with new max length of >35
+Long Desc                     : Test 820 with new length of receiver_acct_num field to check if the modified map can handle if the full length of this field >35.
+Expected Results              : BPR15 will be populated with the receiver_acct_num max value length of >35 in the X12 output file
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35714
+Associated WI Type            : Work Item
+Test Case ID for Row 739      : 40784
+Notebook/Business function linked for test case 40784
+Work item linked for test case 40784
+Finished at: Tue Dec 21 15:42:18 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:42:18 EST 2021
+Creating test case for TC Row : 740
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test 820 for receiver_acct_num field with new length all blank
+Long Desc                     : Test 820 with new length of receiver_acct_num field to check if the modified map can handle if the new full length of this field is all blank.
+Expected Results              : It will fail to generate the compliant output X12 file and generate non-compliant X12 in PROBLEM Directory, and OXI readable HTML will be generated for conditional required data element missing
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35714
+Associated WI Type            : Work Item
+Test Case ID for Row 740      : 40785
+Notebook/Business function linked for test case 40785
+Work item linked for test case 40785
+Finished at: Tue Dec 21 15:42:33 EST 2021
+************************************************************************
+Started at: Tue Dec 21 15:42:33 EST 2021
+Creating test case for TC Row : 741
+Notebook                      : Project22.03
+Business Function             : Project22.03
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Test 820 for receiver_acct_num field which already has length > 17
+Long Desc                     : Test 820 with new length of receiver_acct_num field to check if the modified map can handle the existing receiver account number >17.
+Expected Results              : BPR15 will be populated with the receiver_acct_num max value length of 35 in the X12 output file
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35714
+Associated WI Type            : Work Item
+Test Case ID for Row 741      : 40786
+Notebook/Business function linked for test case 40786
+Work item linked for test case 40786
+Finished at: Tue Dec 21 15:42:49 EST 2021
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 21/Dec/2021 03:42:49PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

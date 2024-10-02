@@ -1,0 +1,129 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 11/Sep/2023 04:05:36PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 45
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 294
+Total No.of Rows                   : 17
+*****************************************************************
+Started at                         : Mon Sep 11 16:05:43 EDT 2023
+Creating test case for Row #       : 4295
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.019') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Validation Time(ms)                : 456
+Validation status                  : PASS
+Short Desc                         : No input files
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : If no files are received(DDS and MDM corrected file), job will log 'No Files to Process' and end successfully.
+Expected Results                   : Log No Files to ProcessEnd Success
+Test Case ID for Row 4295          : 46166
+Query Execution Time(ms)           : 65
+Requirement ID                     : 37004.01.019
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46166
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46166
+Finished at                        : Mon Sep 11 16:05:47 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:05:47 EDT 2023
+Creating test case for Row #       : 4296
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.009') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 451
+Validation status                  : PASS
+Short Desc                         : DDS file exists, no MDM file
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : If there is a DDS file, but no MDM file, suspend ELGJD057, and send a notification to MDM
+Expected Results                   : Log Missing input fileSend error email to MDMEnd Success.Email notification: MDM correction file is missingFile processing will be terminated.
+Test Case ID for Row 4296          : 46167
+Query Execution Time(ms)           : 61
+Requirement ID                     : 37004.01.009
+Query Execution Time(ms)           : 36
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46167
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46167
+Finished at                        : Mon Sep 11 16:05:52 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:05:52 EDT 2023
+Creating test case for Row #       : 4297
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 498
+Validation status                  : PASS
+Short Desc                         : MDM file exists, no DDS file
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : If there is an MDM file, but no DDS file, suspend ELGJD057, and send a notification to MDM
+Expected Results                   : Log Missing input fileSend error email to MDMEnd SuccessEmail notification: DDS request file is missingFile processing will be terminated.
+Test Case ID for Row 4297          : 46168
+Query Execution Time(ms)           : 72
+Requirement ID                     : 37004.01.010
+Query Execution Time(ms)           : 36
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46168
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46168
+Finished at                        : Mon Sep 11 16:05:56 EDT 2023
+*****************************************************************
+Started at                         : Mon Sep 11 16:05:56 EDT 2023
+Creating test case for Row #       : 4298
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37004.01.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 99
+Validation Time(ms)                : 511
+Validation status                  : PASS
+Short Desc                         : DDS and MDM files existDDS emptyMDM empty
+unexpected alert open: {Alert text : **** Must select an Environment}
+  (Session info: chrome=116.0.5845.180): **** Must select an Environment
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4b8481c4d7db57152460cbbe8d1ad5a6, findElement {using=xpath, value=//select[contains(@name,'TcEnvInd')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.180, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:7195}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:7195/devtool..., se:cdpVersion: 116.0.5845.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b8481c4d7db57152460cbbe8d1ad5a6
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP abended 11/Sep/2023 04:05:57PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

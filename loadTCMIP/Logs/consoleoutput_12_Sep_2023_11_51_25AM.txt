@@ -1,0 +1,425 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 12/Sep/2023 11:51:25AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 97
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 110
+Total No.of Rows                   : 15
+*****************************************************************
+Started at                         : Tue Sep 12 11:51:33 EDT 2023
+Creating test case for Row #       : 4312
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.030.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 498
+Validation status                  : PASS
+Short Desc                         : Member losses ICO eligibility with DP reason code
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member losses ICO eligibility with DP reason code and the member's enrollment receives DP stop reason.
+Expected Results                   : Member's enrollment receives DP stop reason. Also check table t_re_assign_dp_status to verify that there is a row for that member's enrollment.
+Test Case ID for Row 4312          : 46189
+Query Execution Time(ms)           : 71
+Requirement ID                     : 36915.030.005
+Query Execution Time(ms)           : 37
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46189
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46189
+Finished at                        : Tue Sep 12 11:51:39 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:51:39 EDT 2023
+Creating test case for Row #       : 4313
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.030.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 493
+Validation status                  : PASS
+Short Desc                         : Member losses ICO eligibility with non-DP reason code
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member losses ICO eligibility with non-DP reason code and the member's enrollment disenrolls with Z1 and is end dated.
+Expected Results                   : Member's enrollment receives Z1 stop reason and is end dated.
+Test Case ID for Row 4313          : 46190
+Query Execution Time(ms)           : 73
+Requirement ID                     : 36915.030.005
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46190
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46190
+Finished at                        : Tue Sep 12 11:51:45 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:51:45 EDT 2023
+Creating test case for Row #       : 4314
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.030.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 574
+Validation status                  : PASS
+Short Desc                         : Member new to DP status received DP notice trigger
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member newly receives ICO enrollment with a DP status and receives DP notice trigger.
+Expected Results                   : Member receives DP notice trigger.
+Test Case ID for Row 4314          : 46191
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36915.030.010
+Query Execution Time(ms)           : 37
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46191
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46191
+Finished at                        : Tue Sep 12 11:51:50 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:51:50 EDT 2023
+Creating test case for Row #       : 4315
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.030.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 507
+Validation status                  : PASS
+Short Desc                         : Member already in DP status no DP trigger
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member already has ICO enrollment in DP status. Should not receive DP notice trigger.
+Expected Results                   : Member does not receive DP notice trigger.
+Test Case ID for Row 4315          : 46192
+Query Execution Time(ms)           : 73
+Requirement ID                     : 36915.030.010
+Query Execution Time(ms)           : 39
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46192
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46192
+Finished at                        : Tue Sep 12 11:51:55 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:51:55 EDT 2023
+Creating test case for Row #       : 4316
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.030.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 1008
+Validation status                  : PASS
+Short Desc                         : Member not in DP status no DP trigger
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member disenrolled from ICO for non-DP stop reason does not receive DP notice trigger.
+Expected Results                   : Member does not receive DP notice trigger.
+Test Case ID for Row 4316          : 46193
+Query Execution Time(ms)           : 94
+Requirement ID                     : 36915.030.010
+Query Execution Time(ms)           : 36
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46193
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46193
+Finished at                        : Tue Sep 12 11:52:00 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:00 EDT 2023
+Creating test case for Row #       : 4317
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.040.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 48
+Validation Time(ms)                : 490
+Validation status                  : PASS
+Short Desc                         : Member gains DP status put on report
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member disenrolled from ICO with DP stop reason code is displayed on batch report.
+Expected Results                   : Member enrolled with DP status is displayed on batch report.
+Test Case ID for Row 4317          : 46194
+Query Execution Time(ms)           : 82
+Requirement ID                     : 36915.040.010
+Query Execution Time(ms)           : 43
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46194
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46194
+Finished at                        : Tue Sep 12 11:52:05 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:05 EDT 2023
+Creating test case for Row #       : 4318
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.040.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 524
+Validation status                  : PASS
+Short Desc                         : Member already in DP status no report
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member was already disenrolled from ICO with DP stop reason code so the member should not show on report.
+Expected Results                   : Member enrolled with DP status is not displayed on batch report.
+Test Case ID for Row 4318          : 46195
+Query Execution Time(ms)           : 75
+Requirement ID                     : 36915.040.010
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46195
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46195
+Finished at                        : Tue Sep 12 11:52:10 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:10 EDT 2023
+Creating test case for Row #       : 4319
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.040.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Validation Time(ms)                : 518
+Validation status                  : PASS
+Short Desc                         : Member not in DP status no report
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member disenrolled from ICO with non-DP stop reason code is not displayed on batch report.
+Expected Results                   : Member enrollment with non-DP status is not displayed on batch report.
+Test Case ID for Row 4319          : 46196
+Query Execution Time(ms)           : 74
+Requirement ID                     : 36915.040.010
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46196
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46196
+Finished at                        : Tue Sep 12 11:52:15 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:15 EDT 2023
+Creating test case for Row #       : 4320
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.050.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 512
+Validation status                  : PASS
+Short Desc                         : Member ICO has 1 elig segment entire month
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with ICO eligibility the entire month does not get placed into DP status.
+Expected Results                   : Member not placed into DP status
+Test Case ID for Row 4320          : 46197
+Query Execution Time(ms)           : 90
+Requirement ID                     : 36915.050.010
+Query Execution Time(ms)           : 38
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46197
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46197
+Finished at                        : Tue Sep 12 11:52:20 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:20 EDT 2023
+Creating test case for Row #       : 4321
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.050.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 524
+Validation status                  : PASS
+Short Desc                         : Member ICO has more than 1 elig segment entire month
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with more than 1 ICO eligibility the entire month does not get placed into DP status.
+Expected Results                   : Member not placed into DP status
+Test Case ID for Row 4321          : 46198
+Query Execution Time(ms)           : 156
+Requirement ID                     : 36915.050.010
+Query Execution Time(ms)           : 38
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46198
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46198
+Finished at                        : Tue Sep 12 11:52:25 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:25 EDT 2023
+Creating test case for Row #       : 4322
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.050.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Validation Time(ms)                : 538
+Validation status                  : PASS
+Short Desc                         : Member ICO has partial elig 1 segment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with one ICO eligibility segment part of month gets placed into DP status.
+Expected Results                   : Member placed into DP status
+Test Case ID for Row 4322          : 46199
+Query Execution Time(ms)           : 91
+Requirement ID                     : 36915.050.010
+Query Execution Time(ms)           : 314
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46199
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46199
+Finished at                        : Tue Sep 12 11:52:30 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:30 EDT 2023
+Creating test case for Row #       : 4323
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.050.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 537
+Validation status                  : PASS
+Short Desc                         : Member ICO has partial elig more than 1 segment with gap
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with partial ICO eligibility segment part of month gets placed into DP status.
+Expected Results                   : Member placed into DP status as of the gap
+Test Case ID for Row 4323          : 46200
+Query Execution Time(ms)           : 108
+Requirement ID                     : 36915.050.010
+Query Execution Time(ms)           : 38
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46200
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46200
+Finished at                        : Tue Sep 12 11:52:35 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:35 EDT 2023
+Creating test case for Row #       : 4324
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.050.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 484
+Validation status                  : PASS
+Short Desc                         : Member regains ICO elig
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member regains ICO eligibility.
+Expected Results                   : Member ICO enrollment comes out of DP status.
+Test Case ID for Row 4324          : 46201
+Query Execution Time(ms)           : 77
+Requirement ID                     : 36915.050.010
+Query Execution Time(ms)           : 42
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46201
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46201
+Finished at                        : Tue Sep 12 11:52:40 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:40 EDT 2023
+Creating test case for Row #       : 4325
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.050.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Validation Time(ms)                : 525
+Validation status                  : PASS
+Short Desc                         : Member's DP period ends and ICO enrollment closes
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member's ICO enrollment receives Z1 and member's ICO enrollment closes because the member no longer has ICO eligibility.
+Expected Results                   : Member ICO enrollment closes with Z1 and the end dates changes from open to end at of the end of the month.
+Test Case ID for Row 4325          : 46202
+Query Execution Time(ms)           : 80
+Requirement ID                     : 36915.050.010
+Query Execution Time(ms)           : 42
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46202
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46202
+Finished at                        : Tue Sep 12 11:52:46 EDT 2023
+*****************************************************************
+Started at                         : Tue Sep 12 11:52:46 EDT 2023
+Creating test case for Row #       : 4326
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36915.050.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Managed Care') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.02') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 538
+Validation status                  : PASS
+Short Desc                         : Member with open BH has potential record
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with and open BH loses eligibility has a potential record added on the run date.
+Expected Results                   : No abend
+Test Case ID for Row 4326          : 46203
+Query Execution Time(ms)           : 87
+Requirement ID                     : 36915.050.010
+Query Execution Time(ms)           : 38
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46203
+Notebook                           : Project24.02
+Business Function                  : Project24.02
+Notebook/BF linked for test case   : 46203
+Finished at                        : Tue Sep 12 11:52:51 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 12/Sep/2023 11:52:51AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

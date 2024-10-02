@@ -1,0 +1,107 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 26/Jul/2022 01:40:08PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Tue Jul 26 13:40:15 EDT 2022
+Creating test case for Row #       : 999
+Short Desc                         : Validate DMH files are dispatched
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Configure route_interface.ctl file in MO similar to PROD, After successful job run, Verify the job log if DMH files (DMH_DMA_DMHMEMBER.INF, DMH_DMA_DMHMEMBER.DAT )are dispatched to the output directory sucessfully through dispatcher.ksh
+Expected Results                   : Job log shows DMH files (DMH_DMA_DMHMEMBER.INF, DMH_DMA_DMHMEMBER.DAT )are dispatched sucessfully to the output direcotry as configured in route_interface.ctl
+Test Case ID for Row 999           : 41711
+Associated Req ID                  : 35478.01.002
+Requirement linked for test case   : 41711
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41711
+Finished at                        : Tue Jul 26 13:40:18 EDT 2022
+****************************************************
+Started at                         : Tue Jul 26 13:40:18 EDT 2022
+Creating test case for Row #       : 1000
+Short Desc                         : Non-DMH_DMA_DMHMEMBER, COMMBRIDGE files are dispatched as expected
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Verify the job log for Non-DMH_DMA_DMHMEMBER, COMMBRIDGE files that they are dispatched to the output directory as configured in route_interface.ctl file. Verify the filename is as expected.
+Expected Results                   : The job log shows that Non-DMH_DMA_DMHMEMBER, COMMBRIDGE Files are sucessfully dispatched to the output directory as configured in  route_interface.ctl file. The filename is as expected
+Test Case ID for Row 1000          : 41712
+Associated Req ID                  : 35478.01.002
+Requirement linked for test case   : 41712
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41712
+Finished at                        : Tue Jul 26 13:40:21 EDT 2022
+****************************************************
+Started at                         : Tue Jul 26 13:40:21 EDT 2022
+Creating test case for Row #       : 1001
+Short Desc                         : Non -DMH_DMA_DMHMEMBER, non-COMMBRIDGE files are dispatched as expected
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Verify  the job log for Non-DMH_DMA_DMHMEMBER, non-COMMBRIDGE files that they are dispatched to the output directory as configured in route_interface.ctl file. Verify the filename is as expected.
+Expected Results                   : The job log shows that Non-DMH_DMA_DMHMEMBER, non-COMMBRIDGE Files are are sucessfully dispatched to the output directory as configured in  route_interface.ctl file. The filename is as expected
+Test Case ID for Row 1001          : 41713
+Associated Req ID                  : 35478.01.002
+Requirement linked for test case   : 41713
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41713
+Finished at                        : Tue Jul 26 13:40:25 EDT 2022
+****************************************************
+Started at                         : Tue Jul 26 13:40:25 EDT 2022
+Creating test case for Row #       : 1002
+Short Desc                         : Validate DMH file name has timestamp
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Configure route_interface.ctl file in MO similar to PROD, After successful job run verify the job log that the file name in the output directory dispatched has timestamp added at the end of the filename.
+Expected Results                   : The job log shows that both DMH files( DMH_DMA_DMHMEMBER_ts.DAT and DMH_DMA_DMHMEMBER_ts.INF) dispatched has timestamp at the end of the filename
+Test Case ID for Row 1002          : 41714
+Associated Req ID                  : 35478.01.003
+Requirement linked for test case   : 41714
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41714
+Finished at                        : Tue Jul 26 13:40:28 EDT 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 26/Jul/2022 01:40:32PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

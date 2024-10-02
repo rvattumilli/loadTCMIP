@@ -1,0 +1,295 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 24/Jul/2023 02:25:58PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 73
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 81
+Total No.of Rows                   : 10
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:04 EDT 2023
+Creating test case for Row #       : 2548
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 421
+Validation status                  : PASS
+Short Desc                         : Two HIPPS code in one search period:POSC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Check when the MDS LOC has two HIPPS code. Example, 05/10-I and 5/16-5/30-K.
+Expected Results                   : Display both the HIPPS code
+Test Case ID for Row 2548          : 44190
+Query Execution Time(ms)           : 71
+Requirement ID                     : 36342.02.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 44190
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44190
+Finished at                        : Mon Jul 24 14:26:09 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:09 EDT 2023
+Creating test case for Row #       : 2549
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 460
+Validation status                  : PASS
+Short Desc                         : Members elig startes later than the search period:POSC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Search period is 05/01-05/30 but the members elig started from 05/10.
+Expected Results                   : Effective date should be displayed as 05/10/23
+Test Case ID for Row 2549          : 44191
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36342.02.001
+Query Execution Time(ms)           : 26
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 44191
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44191
+Finished at                        : Mon Jul 24 14:26:14 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:14 EDT 2023
+Creating test case for Row #       : 2550
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 423
+Validation status                  : PASS
+Short Desc                         : Overlapping segments from providers: POSC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Date of search has a member that has one day overlap from different providers.
+Expected Results                   : Both the codes should be displayed
+Test Case ID for Row 2550          : 44192
+Query Execution Time(ms)           : 91
+Requirement ID                     : 36342.02.001
+Query Execution Time(ms)           : 29
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 44192
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44192
+Finished at                        : Mon Jul 24 14:26:19 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:19 EDT 2023
+Creating test case for Row #       : 2551
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.03.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 65
+Validation Time(ms)                : 679
+Validation status                  : PASS
+Short Desc                         : Two HIPPS code in one search period:Base app
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Check when the MDS LOC has two HIPPS code. Example, 05/10-I and 5/16-5/30-K.
+Expected Results                   : Display both the HIPPS code
+Test Case ID for Row 2551          : 44193
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36342.03.001
+Query Execution Time(ms)           : 36
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 44193
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44193
+Finished at                        : Mon Jul 24 14:26:25 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:25 EDT 2023
+Creating test case for Row #       : 2552
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.03.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 466
+Validation status                  : PASS
+Short Desc                         : Members elig startes later than the search period:Base app
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Search period is 05/01-05/30 but the members elig started from 05/10.
+Expected Results                   : Effective date should be displayed as 05/10/23
+Test Case ID for Row 2552          : 44194
+Query Execution Time(ms)           : 72
+Requirement ID                     : 36342.03.001
+Query Execution Time(ms)           : 39
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 44194
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44194
+Finished at                        : Mon Jul 24 14:26:30 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:30 EDT 2023
+Creating test case for Row #       : 2553
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 440
+Validation status                  : PASS
+Short Desc                         : Overlapping segments from providers: Base
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Date of search has a member that has one day overlap from different providers.
+Expected Results                   : Both the codes should be displayed
+Test Case ID for Row 2553          : 44195
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36342.02.001
+Query Execution Time(ms)           : 33
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 44195
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44195
+Finished at                        : Mon Jul 24 14:26:34 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:34 EDT 2023
+Creating test case for Row #       : 2554
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 393
+Validation status                  : PASS
+Short Desc                         : Test the gap between dates:POSC app
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Search range has gap . Example, 01/01/23-01/15/23 and 01/17/23-01/30/2023..
+Expected Results                   : POSC should display  01/01/23-01/15/23 and 01/17/23-01/30/2023..
+Test Case ID for Row 2554          : 44196
+Query Execution Time(ms)           : 72
+Requirement ID                     : 36342.02.001
+Query Execution Time(ms)           : 28
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 44196
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44196
+Finished at                        : Mon Jul 24 14:26:39 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:39 EDT 2023
+Creating test case for Row #       : 2555
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 49
+Validation Time(ms)                : 646
+Validation status                  : PASS
+Short Desc                         : Test the gap between dates:Base app
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Search range has gap . Example, 01/01/23-01/15/23 and 01/17/23-01/30/2023..
+Expected Results                   : Base should display  01/01/23-01/15/23 and 01/17/23-01/30/2023..
+Test Case ID for Row 2555          : 44197
+Query Execution Time(ms)           : 71
+Requirement ID                     : 36342.02.001
+Query Execution Time(ms)           : 25
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 44197
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44197
+Finished at                        : Mon Jul 24 14:26:44 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:44 EDT 2023
+Creating test case for Row #       : 2556
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 407
+Validation status                  : PASS
+Short Desc                         : Send search query for inactive MID:POSC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Send search query for inactive MID
+Expected Results                   : Search query should pull active MID.
+Test Case ID for Row 2556          : 44198
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36342.02.001
+Query Execution Time(ms)           : 30
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 44198
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44198
+Finished at                        : Mon Jul 24 14:26:48 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 14:26:48 EDT 2023
+Creating test case for Row #       : 2557
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'ELIGIBILITY VERIFICATION') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 418
+Validation status                  : PASS
+Short Desc                         : Send search query for inactive MID:Base
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Send search query for inactive MID
+Expected Results                   : Search query should pull active MID.
+Test Case ID for Row 2557          : 44199
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36342.02.001
+Query Execution Time(ms)           : 23
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 44199
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 44199
+Finished at                        : Mon Jul 24 14:26:53 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 24/Jul/2023 02:26:53PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

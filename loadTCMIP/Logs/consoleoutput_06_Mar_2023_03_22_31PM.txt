@@ -1,0 +1,1951 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 06/Mar/2023 03:22:31PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 395
+****************************************************
+Started at                         : Mon Mar 06 15:22:41 EST 2023
+Creating test case for Row #       : 1392
+Validation status                  : PASS
+Short Desc                         : New table T_RE_MDS_AUDIT
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify a new table "T_RE_MDS_AUDIT" exists in MMIS database
+Expected Results                   : The table "T_RE_MDS_AUDIT" should exist in MMIS database
+Test Case ID for Row 1392          : 42527
+Associated Req ID                  : 36269.02.003
+Requirement linked for test case   : 42527
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42527
+Finished at                        : Mon Mar 06 15:22:49 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:22:49 EST 2023
+Creating test case for Row #       : 1393
+Validation status                  : PASS
+Short Desc                         : T_RE_MDS_AUDIT table columns
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Veriy "T_RE_MDS_AUDIT" table columns
+Expected Results                   : "T_RE_MDS_AUDIT" should have the following columnsSAK_PROVCDE_SERVICE_LOCCDE_LOC_NEW_SCORENAM_AUDITOR  CDE_ORG_AUDITOR DTE_AUDITTXT_COMMENTS_AUDITORIND_MDS_RECEIVEDDTE_RECEIVEDCDE_REASON_AUDITID_UNIQUE
+Test Case ID for Row 1393          : 42528
+Associated Req ID                  : 36269.02.003
+Requirement linked for test case   : 42528
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42528
+Finished at                        : Mon Mar 06 15:22:56 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:22:56 EST 2023
+Creating test case for Row #       : 1394
+Validation status                  : PASS
+Short Desc                         : New table T_RE_MDS_AUDIT_REASON
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify a new table "T_RE_MDS_AUDIT_REASON" exists in MMIS database
+Expected Results                   : The table "T_RE_MDS_AUDIT_REASON" should exist in MMIS database
+Test Case ID for Row 1394          : 42529
+Associated Req ID                  : 36269.02.003
+Requirement linked for test case   : 42529
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42529
+Finished at                        : Mon Mar 06 15:23:04 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:23:04 EST 2023
+Creating test case for Row #       : 1395
+Validation status                  : PASS
+Short Desc                         : T_RE_MDS_AUDIT_REASON columns
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Veriy "T_RE_MDS_AUDIT_REASON" table has expected columns
+Expected Results                   : "T_RE_MDS_AUDIT_REASON" should have the following columnsCDE_REASON_AUDITDSC_REASON_AUDIT
+Test Case ID for Row 1395          : 42530
+Associated Req ID                  : 36269.02.003
+Requirement linked for test case   : 42530
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42530
+Finished at                        : Mon Mar 06 15:23:12 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:23:12 EST 2023
+Creating test case for Row #       : 1435
+Validation status                  : PASS
+Short Desc                         : New panel; LOC/MDS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify fields on LOC/MDS panel
+Expected Results                   : LOC/MDS Panel should have the following fieldsProvider ID, Service location, Level of Care/MDS, Status, LOC Effective Date, LOC End Date, LTC Admission Date, LTC Discharge Date
+Test Case ID for Row 1435          : 42531
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42531
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42531
+Finished at                        : Mon Mar 06 15:23:20 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:23:20 EST 2023
+Creating test case for Row #       : 1436
+Validation status                  : PASS
+Short Desc                         : Verify left portion of LOC/MDS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify fields on the Left portion of LOC/MDS panel
+Expected Results                   : LOC/MDS panel should have the following fields displayed on the Left  Provider ID/LOC, LOC/MDS, LOC Effective Date and LOC End date
+Test Case ID for Row 1436          : 42532
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42532
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42532
+Finished at                        : Mon Mar 06 15:23:27 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:23:27 EST 2023
+Creating test case for Row #       : 1437
+Validation status                  : PASS
+Short Desc                         : Verify right portion of LOC/MDS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify fields on the Right portion of LOC/MDS panel
+Expected Results                   : LOC/MDS panel should have the following fields displayed on the RightLTC Admission Date, LTC Admission Reason, LTC Discharge Reason, LTC Discharge Date and LTC Discharge Reason
+Test Case ID for Row 1437          : 42533
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42533
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42533
+Finished at                        : Mon Mar 06 15:23:35 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:23:35 EST 2023
+Creating test case for Row #       : 1438
+Validation status                  : PASS
+Short Desc                         : Audit link Level Of Care/MDS panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if the Audit link is working for new Level Of Care/MDS panel
+Expected Results                   : Audit link should work as expected.
+Test Case ID for Row 1438          : 42534
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42534
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42534
+Finished at                        : Mon Mar 06 15:23:43 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:23:43 EST 2023
+Creating test case for Row #       : 1439
+Validation status                  : PASS
+Short Desc                         : New panel link Level Of Care/MDS panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if the new panel is opened with the link available in the member maintenance panel.
+Expected Results                   : New panel should open upon clicking the link available in the member maintenance panel.
+Test Case ID for Row 1439          : 42535
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42535
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42535
+Finished at                        : Mon Mar 06 15:23:52 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:23:52 EST 2023
+Creating test case for Row #       : 1440
+Validation status                  : PASS
+Short Desc                         : Cancel button Level Of Care/MDS panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if the cancel button is working in the new Level Of Care/MDS panel.
+Expected Results                   : New panel should close upon clicking the cancel button in the new Level Of Care/MDS panel.
+Test Case ID for Row 1440          : 42536
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42536
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42536
+Finished at                        : Mon Mar 06 15:24:00 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:24:00 EST 2023
+Creating test case for Row #       : 1441
+Validation status                  : PASS
+Short Desc                         : Level Of Care/MDS panel details
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if the user can add the Level Of Care/MDS panel details and saves to the database.
+Expected Results                   : Records should be able to be added to the Level Of Care/MDS panel fields and saves to the database.
+Test Case ID for Row 1441          : 42537
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42537
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42537
+Finished at                        : Mon Mar 06 15:24:08 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:24:08 EST 2023
+Creating test case for Row #       : 1442
+Validation status                  : PASS
+Short Desc                         : Level Of Care/MDS panel more than 1 record
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if the Level Of Care/MDS panel list is working with more than 1 record.
+Expected Results                   : Level Of Care/MDS panel list should work as expected for more than 1 record.
+Test Case ID for Row 1442          : 42538
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42538
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42538
+Finished at                        : Mon Mar 06 15:24:16 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:24:16 EST 2023
+Creating test case for Row #       : 1443
+Validation status                  : PASS
+Short Desc                         : Sorting  for Level Of Care/MDS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if sorting is working for new Level Of Care/MDS panel.
+Expected Results                   : Records should be able to sort by date in ascending/descending order.
+Test Case ID for Row 1443          : 42539
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42539
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42539
+Finished at                        : Mon Mar 06 15:24:23 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:24:23 EST 2023
+Creating test case for Row #       : 1444
+Validation status                  : PASS
+Short Desc                         : Pagination for Level Of Care/MDS panel.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if pagination is working for new Level Of Care/MDS panel.
+Expected Results                   : Navigating between pages should work as expected.
+Test Case ID for Row 1444          : 42540
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42540
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42540
+Finished at                        : Mon Mar 06 15:24:32 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:24:32 EST 2023
+Creating test case for Row #       : 1445
+Validation status                  : PASS
+Short Desc                         : New record update
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Should be able to update a new record in Level Of Care/MDS Panel.
+Expected Results                   : Able to update a new record in Level Of Care/MDS Panel.
+Test Case ID for Row 1445          : 42541
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42541
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42541
+Finished at                        : Mon Mar 06 15:24:42 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:24:42 EST 2023
+Creating test case for Row #       : 1446
+Validation status                  : PASS
+Short Desc                         : Admission reason and Discharge reason
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Admission reason and Discharge reason on MDS form should not be displayed in Level Of Care/MDS panel.
+Expected Results                   : Admission reason and Discharge reason on MDS form are not displayed in Level Of Care/MDS panel.
+Test Case ID for Row 1446          : 42542
+Associated Req ID                  : 36269.04.001
+Requirement linked for test case   : 42542
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42542
+Finished at                        : Mon Mar 06 15:24:52 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:24:52 EST 2023
+Creating test case for Row #       : 1367
+Validation status                  : PASS
+Short Desc                         : MDS Summary panel link
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify there is a link for MDS Summary panel under the base app.
+Expected Results                   : In MMIS, under member maintenance a link "MDS Summary" should be available to access the newly implemented Summary panel
+Test Case ID for Row 1367          : 42543
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42543
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42543
+Finished at                        : Mon Mar 06 15:25:00 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:25:00 EST 2023
+Creating test case for Row #       : 1368
+Validation status                  : PASS
+Short Desc                         : MDS summary panel fields
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify MDS summary panel have these fields-MDS Assessment type, Provider ID/LOC, HIPPS code, Assessment reference date, MDS received date, Provider name, Federal OBRA reason, PPS assessment, Is this assessment the first assessment, Entry/discharge reporting, type of dischage, Is this a SNF part A interrupted stay,  Is this SNF PPS part A discharge assessment
+Expected Results                   : MDS summary panel should have following  fields displayed- MDS Assessment type, Provider ID/LOC, HIPPS code, Assessment reference date, MDS received date along with data. Provider name, Federal OBRA reason, PPS assessment, Is this assessment the first assessment, Entry/discharge reporting, type of dischage, Is this a SNF part A interrupted stay,  Is this SNF PPS part A discharge assessment
+Test Case ID for Row 1368          : 42544
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42544
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42544
+Finished at                        : Mon Mar 06 15:25:12 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:25:12 EST 2023
+Creating test case for Row #       : 1369
+Validation status                  : PASS
+Short Desc                         : MDS summary panel audit link
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS summary panel: Verify audit link at the top right corner of the panel
+Expected Results                   : MDS summary data panel should have audit link on the top right corner of the panel and should work as expected
+Test Case ID for Row 1369          : 42545
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42545
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42545
+Finished at                        : Mon Mar 06 15:25:20 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:25:20 EST 2023
+Creating test case for Row #       : 1370
+Validation status                  : PASS
+Short Desc                         : MDS Summary Data status and assessment
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS summary data panel: Verify MDS Summary Data panel should be displayed  when status and assessment type field are selected
+Expected Results                   : Upon clicking status and assessment type field on the MDS summary panel columns, MDS summary data panel should be displayed.
+Test Case ID for Row 1370          : 42546
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42546
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42546
+Finished at                        : Mon Mar 06 15:25:29 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:25:29 EST 2023
+Creating test case for Row #       : 1371
+Validation status                  : PASS
+Short Desc                         : MDS summary display only field
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS summary data panel: Verify all fields are 'display only' fields
+Expected Results                   : MDS Summary Data panel should be 'display only' fields.
+Test Case ID for Row 1371          : 42547
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42547
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42547
+Finished at                        : Mon Mar 06 15:25:37 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:25:37 EST 2023
+Creating test case for Row #       : 1372
+Validation status                  : PASS
+Short Desc                         : Sorting and pagination functionality
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS summary panel: Verify Sorting and pagination functionality
+Expected Results                   : Sorting and the pagination functionality should be working as expected.
+Test Case ID for Row 1372          : 42548
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42548
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42548
+Finished at                        : Mon Mar 06 15:25:43 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:25:43 EST 2023
+Creating test case for Row #       : 1373
+Validation status                  : PASS
+Short Desc                         : MDS detail tab check
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify MDS Detail tab displays full MDS assessement.
+Expected Results                   : MDS detail tab should display the full MDS assessment and have the sections
+Test Case ID for Row 1373          : 42549
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42549
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42549
+Finished at                        : Mon Mar 06 15:25:50 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:25:50 EST 2023
+Creating test case for Row #       : 1374
+Validation status                  : PASS
+Short Desc                         : MDS Detail panel Sorting and paging
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Detail panel: Verify Sorting and paging functionality
+Expected Results                   : Sorting and the paging functionality should be working as expected and should be based on column1 (section)
+Test Case ID for Row 1374          : 42550
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42550
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42550
+Finished at                        : Mon Mar 06 15:25:58 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:25:58 EST 2023
+Creating test case for Row #       : 1375
+Validation status                  : PASS
+Short Desc                         : MDS Detail list panel columns
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Detail list panel: Verify required columns are displayed
+Expected Results                   : MDS Detail list panel should have the following columns displayed: Section, section description, MDS Item, Item description, Value, Value description
+Test Case ID for Row 1375          : 42551
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42551
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42551
+Finished at                        : Mon Mar 06 15:26:06 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:26:06 EST 2023
+Creating test case for Row #       : 1376
+Validation status                  : PASS
+Short Desc                         : MDS Detail panel data
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Detail panel: Verify correct data is displayed
+Expected Results                   : MDS Detail panel should display the correct data
+Test Case ID for Row 1376          : 42552
+Associated Req ID                  : 36269.04.002
+Requirement linked for test case   : 42552
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42552
+Finished at                        : Mon Mar 06 15:26:13 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:26:13 EST 2023
+Creating test case for Row #       : 1377
+Validation status                  : PASS
+Short Desc                         : MDS Detail Panel page records
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify MDS displays 20 records per page
+Expected Results                   : MDS display 20 records per page
+Test Case ID for Row 1377          : 42553
+Associated Req ID                  : 36269.04.003
+Requirement linked for test case   : 42553
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42553
+Finished at                        : Mon Mar 06 15:26:20 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:26:20 EST 2023
+Creating test case for Row #       : 1378
+Validation status                  : PASS
+Short Desc                         : No change allowed to the MDS assessment
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify MDS Detail tab displays MDS assessment questions and user should not be able to make changes
+Expected Results                   : User should not be able to make changes to MDS assessment questions(read only)
+Test Case ID for Row 1378          : 42554
+Associated Req ID                  : 36269.04.004
+Requirement linked for test case   : 42554
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42554
+Finished at                        : Mon Mar 06 15:26:28 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:26:28 EST 2023
+Creating test case for Row #       : 1379
+Validation status                  : PASS
+Short Desc                         : Fields are empty for MDS assessment
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if answer fields are empty forMDS assessment questions
+Expected Results                   : If the fields are empty  for MDS assessment questions blank should be displayed.
+Test Case ID for Row 1379          : 42555
+Associated Req ID                  : 36269.04.004
+Requirement linked for test case   : 42555
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42555
+Finished at                        : Mon Mar 06 15:26:36 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:26:36 EST 2023
+Creating test case for Row #       : 1396
+Validation status                  : PASS
+Short Desc                         : MDS Audit panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify there is a link for MDS Audit panel under the base app
+Expected Results                   : In MMIS, under member maintenance a link "MDS Audit" should be available to access the newly implemented Audit panel
+Test Case ID for Row 1396          : 42556
+Associated Req ID                  : 36269.04.005
+Requirement linked for test case   : 42556
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42556
+Finished at                        : Mon Mar 06 15:26:43 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:26:43 EST 2023
+Creating test case for Row #       : 1397
+Validation status                  : PASS
+Short Desc                         : Left portion of MDS Audit Maintenace panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify fields on the Left portion of MDS Audit Maintenace panel
+Expected Results                   : MDS Audit Maintenance panel should have the following fields displayed on the left portion of the panel Provider ID/ Loc, New LOC Score From Auditor, Auditor Name, Auditor Organization, Audit Date, Auditor Comments
+Test Case ID for Row 1397          : 42557
+Associated Req ID                  : 36269.04.005
+Requirement linked for test case   : 42557
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42557
+Finished at                        : Mon Mar 06 15:26:50 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:26:50 EST 2023
+Creating test case for Row #       : 1398
+Validation status                  : PASS
+Short Desc                         : Right portion of MDS Audit Maintenace panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify fields on the Right portion of MDS Audit Maintenace panel
+Expected Results                   : MDS Audit Maintenance panel should have the following fields displayed on the RightCorrected MDS Received From The Facility, Date Received, Unique Identifier (identifier in the MDS assessment) Reason Code
+Test Case ID for Row 1398          : 42558
+Associated Req ID                  : 36269.04.005
+Requirement linked for test case   : 42558
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42558
+Finished at                        : Mon Mar 06 15:27:00 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:00 EST 2023
+Creating test case for Row #       : 1399
+Validation status                  : PASS
+Short Desc                         : MDS Audit list panel fields
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify fields on MDS Audit list panel
+Expected Results                   : MDS Audit list section should have the following fieldsProvider ID/ Loc New LOC score, Auditor Name, Audit Date, Corrected MDS Received, Date Received, Reason Code, Unique ID
+Test Case ID for Row 1399          : 42559
+Associated Req ID                  : 36269.04.005
+Requirement linked for test case   : 42559
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42559
+Finished at                        : Mon Mar 06 15:27:06 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:06 EST 2023
+Creating test case for Row #       : 1400
+Validation status                  : PASS
+Short Desc                         : New LOC Score From Auditor- Dropdown
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify Dropdown "New LOC Score From Auditor"
+Expected Results                   : "New LOC Score From Auditor" should be populated with third character of the HIPPS code
+Test Case ID for Row 1400          : 42560
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42560
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42560
+Finished at                        : Mon Mar 06 15:27:12 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:12 EST 2023
+Creating test case for Row #       : 1401
+Validation status                  : PASS
+Short Desc                         : Auditor Organization- Dropdown
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify Dropdown "Auditor Organization "
+Expected Results                   : "Auditor Organization " should be populated with "TPA/EOHHS"
+Test Case ID for Row 1401          : 42561
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42561
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42561
+Finished at                        : Mon Mar 06 15:27:18 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:18 EST 2023
+Creating test case for Row #       : 1402
+Validation status                  : PASS
+Short Desc                         : Provider ID/ Loc - Dropdown
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify field "Provider ID/ Loc "
+Expected Results                   : "Provider ID/ Loc" should have a text box where a provide ID can be searched via the magnifying glass
+Test Case ID for Row 1402          : 42562
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42562
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42562
+Finished at                        : Mon Mar 06 15:27:23 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:23 EST 2023
+Creating test case for Row #       : 1403
+Validation status                  : PASS
+Short Desc                         : Reason code- Dropdown
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify field "Reason code  "
+Expected Results                   : "Reason code " should be populated with the below reason code descriptions15 Audit16 First Level Appeal17 Informal Conference Appeal18 Board of Hearings Appeal19 Court Ordered Appeal
+Test Case ID for Row 1403          : 42563
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42563
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42563
+Finished at                        : Mon Mar 06 15:27:29 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:29 EST 2023
+Creating test case for Row #       : 1404
+Validation status                  : PASS
+Short Desc                         : Corrected MDS Received From The Facility - Dropdown
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify Dropdown "Corrected MDS Received From The Facility  "
+Expected Results                   : "Corrected MDS Received From The Facility " dropdown should have- default value of space. Y as a dropdown option.
+Test Case ID for Row 1404          : 42564
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42564
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42564
+Finished at                        : Mon Mar 06 15:27:34 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:34 EST 2023
+Creating test case for Row #       : 1405
+Validation status                  : PASS
+Short Desc                         : Update, Delete, and Cancel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify Update, Delete, and Cancel Button functinality
+Expected Results                   : Update, Delete and Cancel button functionalities should be working as expected
+Test Case ID for Row 1405          : 42565
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42565
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42565
+Finished at                        : Mon Mar 06 15:27:40 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:40 EST 2023
+Creating test case for Row #       : 1406
+Validation status                  : PASS
+Short Desc                         : Save All functionality
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify "Save All" functionality
+Expected Results                   : Save All functionality should be working as expected.
+Test Case ID for Row 1406          : 42566
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42566
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42566
+Finished at                        : Mon Mar 06 15:27:46 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:46 EST 2023
+Creating test case for Row #       : 1407
+Validation status                  : PASS
+Short Desc                         : New button functionality
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify "New button" functionality
+Expected Results                   : Verify the new button functionality is working as expected.
+Test Case ID for Row 1407          : 42567
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42567
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42567
+Finished at                        : Mon Mar 06 15:27:52 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:52 EST 2023
+Creating test case for Row #       : 1408
+Validation status                  : PASS
+Short Desc                         : Sorting and the paging
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Sorting and the paging functionality
+Expected Results                   : Verify Sorting and the paging functionality is working as expected. Check for the date assending and decending  order is working as expected.
+Test Case ID for Row 1408          : 42568
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42568
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42568
+Finished at                        : Mon Mar 06 15:27:58 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:27:58 EST 2023
+Creating test case for Row #       : 1447
+Validation status                  : PASS
+Short Desc                         : MDS Audit Panel; fields needing dropdown option
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Test to ensure Auditor Name should allow only uppercase.
+Expected Results                   : Auditor Name should translate to uppercase if user enters lower case.
+Test Case ID for Row 1447          : 42569
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42569
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42569
+Finished at                        : Mon Mar 06 15:28:04 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:04 EST 2023
+Creating test case for Row #       : 1448
+Validation status                  : PASS
+Short Desc                         : Unique identifier to upper case
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Test to ensure Unique Identifier must allow the uppercase.
+Expected Results                   : Unique Identifier should translate to uppercase if user enters lower case.
+Test Case ID for Row 1448          : 42570
+Associated Req ID                  : 36269.04.006
+Requirement linked for test case   : 42570
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42570
+Finished at                        : Mon Mar 06 15:28:10 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:10 EST 2023
+Creating test case for Row #       : 1449
+Validation status                  : PASS
+Short Desc                         : Level of Care/MDS panel; Required fields and edits
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS level of Care/MDS Maintenance Panel : Verify error thrown if the required fields are not entered
+Expected Results                   : In the MDS level of Care/MDS Maintenance panel; Provider ID/LOC, Level of Care/MDS, LOC Effective date, LOC end date, LTC Admission Date, LTC Admission Reason, LTC Discharge date are all required fields just like in LOC/MMC panel. If there is no value entered then display an error," ... is a required field."
+Test Case ID for Row 1449          : 42571
+Associated Req ID                  : 36269.04.007
+Requirement linked for test case   : 42571
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42571
+Finished at                        : Mon Mar 06 15:28:16 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:16 EST 2023
+Creating test case for Row #       : 1450
+Validation status                  : PASS
+Short Desc                         : Admission date
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify Admission Date
+Expected Results                   : Admission Date must be in the past/today but not in the future.  If Date is in future display error "THE ADMISSION DATE CANNOT BE IN THE FUTURE".
+Test Case ID for Row 1450          : 42572
+Associated Req ID                  : 36269.04.007
+Requirement linked for test case   : 42572
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42572
+Finished at                        : Mon Mar 06 15:28:22 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:22 EST 2023
+Creating test case for Row #       : 1409
+Validation status                  : PASS
+Short Desc                         : Unique Identifier
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit list : Verify Unique Identifier
+Expected Results                   : Each Audit should have a unique indetifier and  the unique identifier should be of Alphanumeric and character limit is 20
+Test Case ID for Row 1409          : 42573
+Associated Req ID                  : 36269.04.008
+Requirement linked for test case   : 42573
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42573
+Finished at                        : Mon Mar 06 15:28:28 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:28 EST 2023
+Creating test case for Row #       : 1410
+Validation status                  : PASS
+Short Desc                         : File unique identifier
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify the unique identifier is the one in the MDS file
+Expected Results                   : The file unique identifier should exactly match the MMIS unique identifier.
+Test Case ID for Row 1410          : 42574
+Associated Req ID                  : 36269.04.008
+Requirement linked for test case   : 42574
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42574
+Finished at                        : Mon Mar 06 15:28:34 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:34 EST 2023
+Creating test case for Row #       : 1383
+Validation status                  : PASS
+Short Desc                         : SCO error if LOC segment and no MDS via SU panle
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : In MMIS, verify the following error message is displayed if a member tries SCO enrollment by having level of care but no MDS assesment."Member ineligible for SCO; member has LOC/ No MDS"
+Expected Results                   : The expected error message should be displayed when the member has level of care but no MDS, and attempts to enroll for SCO via SU panel after MDS cut over date.
+Test Case ID for Row 1383          : 42575
+Associated Req ID                  : 36269.04.014
+Requirement linked for test case   : 42575
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42575
+Finished at                        : Mon Mar 06 15:28:40 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:40 EST 2023
+Creating test case for Row #       : 1384
+Validation status                  : PASS
+Short Desc                         : No Error if LOC segment and MDS assesement via SU panle.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : In MMIS, verify the no error message is displayed if a member tries SCO enrollment by having level of care and also MDS assesment.
+Expected Results                   : No error message should be displayed when the member has level of care also  MDS assesement, and attempts to enroll for SCO
+Test Case ID for Row 1384          : 42576
+Associated Req ID                  : 36269.04.014
+Requirement linked for test case   : 42576
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42576
+Finished at                        : Mon Mar 06 15:28:46 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:46 EST 2023
+Creating test case for Row #       : 1385
+Validation status                  : PASS
+Short Desc                         : SCO and PACE via regular panlel.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : The SCO and PACE programs cannot be enrolled via Regular panel because the T_MC_PGM. IND_GEN_ENROLL is configured as N.
+Expected Results                   : Member will not be enrolled to SCO and PACE
+Test Case ID for Row 1385          : 42577
+Associated Req ID                  : 36269.04.014
+Requirement linked for test case   : 42577
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42577
+Finished at                        : Mon Mar 06 15:28:52 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:52 EST 2023
+Creating test case for Row #       : 1386
+Validation status                  : PASS
+Short Desc                         : PACE error if LOC segment present via SU panle
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : In MMIS, Verify the following error message is displayed if a member has LOC, and tried to enroll in PACE"Members must be in the community to enroll in PACE"
+Expected Results                   : The expected error message should be displayed when the member has level of care and attempts PACE enrollment after MDS cut over date.
+Test Case ID for Row 1386          : 42578
+Associated Req ID                  : 36269.04.015
+Requirement linked for test case   : 42578
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42578
+Finished at                        : Mon Mar 06 15:28:58 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:28:58 EST 2023
+Creating test case for Row #       : 1387
+Validation status                  : PASS
+Short Desc                         : Allow PACE enrollment if no LOC Via SU panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : In MMIS, Verify no error message is displayed if a meber has no LOC and tried PACE enrollment
+Expected Results                   : No Error message should be displayed when the member has no LOC and attempts PACE enrollment.
+Test Case ID for Row 1387          : 42579
+Associated Req ID                  : 36269.04.015
+Requirement linked for test case   : 42579
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42579
+Finished at                        : Mon Mar 06 15:29:04 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:04 EST 2023
+Creating test case for Row #       : 1451
+Validation status                  : PASS
+Short Desc                         : Discharge date UI
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify LOC end date when Discharge date is entered via UI
+Expected Results                   : LOC end date will be ended when Discharge date is entered via UI
+Test Case ID for Row 1451          : 42580
+Associated Req ID                  : 36269.04.017
+Requirement linked for test case   : 42580
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42580
+Finished at                        : Mon Mar 06 15:29:11 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:11 EST 2023
+Creating test case for Row #       : 1452
+Validation status                  : PASS
+Short Desc                         : No delete function
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : LOC/MDS Panel : Verify Delete Button functionality not present
+Expected Results                   : Delete button functionality should not be present in MDS/LOC panel
+Test Case ID for Row 1452          : 42581
+Associated Req ID                  : 36269.04.018
+Requirement linked for test case   : 42581
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42581
+Finished at                        : Mon Mar 06 15:29:16 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:16 EST 2023
+Creating test case for Row #       : 1453
+Validation status                  : PASS
+Short Desc                         : Display description-MDS/LOC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS/LOC Panel: Veify the description of fields
+Expected Results                   : Upon click on the field "Provider ID/LOC" should provide the description as "The MassHealth Provider ID of the institution that is authorized to bill for Long Term Care (LTC) for the member."Upon click on the field "Level of Care/MDS" should provide the description as "Mds Level of Care (LOC)/ Minimum Data Set(MDS) authorized for the member."Upon click on the field "LTC Admission Date" should provide the description as "The admission date for Long Term Care."Upon click on the field "LTC Admission Reason" should provide the description as " Reason member was admitted to Long Term Care (LTC) facility."Upon click on the field "LOC Effective Date" should provide the description as "The begin date the corresponding provider is authorized to bill for the corresponding Level of Care."Upon click on the field "LOC End Date" should provide the description as " The end date the corresponding provider is authorized to bill through the corresponding Level of Care."Upon click on the field "LTC Discharge Date" should provide the description as "The discharge date for Long Term Care."Upon click on the field "LTC Discharge Reason" should provide the description as "Reason member was discharged from Long Term Care (LTC) facility."
+Test Case ID for Row 1453          : 42582
+Associated Req ID                  : 36269.04.019
+Requirement linked for test case   : 42582
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42582
+Finished at                        : Mon Mar 06 15:29:23 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:23 EST 2023
+Creating test case for Row #       : 1411
+Validation status                  : PASS
+Short Desc                         : MDS Audit Panel description
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel: Veify the description of fields
+Expected Results                   : Upon click on the field "Provider ID/LOC" should provide the description as "The MassHealth Provider ID of the institution that is authorized to bill for Long Term Care (LTC) for the member"Upon click on the field "New LOC Score From Auditor" should provide the description as "Indicates the revised Nursing payment grouper based on Audit"Upon click on the field "Auditor Name" should provide the description as "Indicates the Name of the auditor"Upon click on the field "Auditor Organization" should provide the description as " Indicates the Organization, the auditor belongs to"Upon click on the field "Audit Date" should provide the description as "Indicates the date the audit was conducted"Upon click on the field "Auditor Comments" should provide the description as "Indicates the comments made by the auditor."Upon click on the field "Corrected MDS Received From The Facility" should provide the description as "Indicates if the MDS was received from the Facility".Upon click on the field "Date Received" should provide the description as "Indicates the date the corrected MDS was received".Upon click on the field "Unique Identifier" should provide the description as " Indicates the unique ID assigned to the MDS form for the member".Upon click on the field "Reason Code" should provide the description as "Indicates audit status"
+Test Case ID for Row 1411          : 42583
+Associated Req ID                  : 36269.04.020
+Requirement linked for test case   : 42583
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42583
+Finished at                        : Mon Mar 06 15:29:29 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:29 EST 2023
+Creating test case for Row #       : 1380
+Validation status                  : PASS
+Short Desc                         : Display Description : MDS Summary
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Summary Panel: Verify the description of fields
+Expected Results                   : 1.Upon clicking on 'ARD' field should provide the description as 'Date as reported by user'. 2.Upon clicking on 'HIPPS Code' field should provide the description as 'Indicates the overall level of assessed clinical need that the member has'.3.Upon clicking on 'MDS received date'  field should provide the description as 'Date the assessment was received by MMIS'.4.Upon clicking on 'MDS Assessment Type' field should provide the description as 'Indicates the type of MDS assessment received for the member'.
+Test Case ID for Row 1380          : 42584
+Associated Req ID                  : 36269.04.021
+Requirement linked for test case   : 42584
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42584
+Finished at                        : Mon Mar 06 15:29:35 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:35 EST 2023
+Creating test case for Row #       : 1454
+Validation status                  : PASS
+Short Desc                         : MDS End date in MDS LOC logic
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify UI LOC end date override MDS form end date
+Expected Results                   : UI MDS LOC end date will override MDS form end date if the dates do not allign with the MDS form.
+Test Case ID for Row 1454          : 42585
+Associated Req ID                  : 36269.04.023
+Requirement linked for test case   : 42585
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42585
+Finished at                        : Mon Mar 06 15:29:41 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:41 EST 2023
+Creating test case for Row #       : 1455
+Validation status                  : PASS
+Short Desc                         : Provider ID/LOC look up functionality
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : LOC/MDS Panel : Verify field "Provider ID/ Loc "
+Expected Results                   : "Provider ID/LOC" should have a text box where a provide ID can be searched via the magnifying glass
+Test Case ID for Row 1455          : 42586
+Associated Req ID                  : 36269.04.024
+Requirement linked for test case   : 42586
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42586
+Finished at                        : Mon Mar 06 15:29:47 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:47 EST 2023
+Creating test case for Row #       : 1456
+Validation status                  : PASS
+Short Desc                         : Drop down for MDS/LOC admission
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : LOC/MDS Panel : Verify Admission reason codes in the drop down.
+Expected Results                   : LTC Admission reason code should have below values in the drop down:HM Admitted from homeHS Admitted from hospitalNH Admitted from nursing homeRH Admitted from rest home
+Test Case ID for Row 1456          : 42587
+Associated Req ID                  : 36269.04.026
+Requirement linked for test case   : 42587
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42587
+Finished at                        : Mon Mar 06 15:29:53 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:53 EST 2023
+Creating test case for Row #       : 1457
+Validation status                  : PASS
+Short Desc                         : Discharge reason codes
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : LOC/MDS Panel : Verify Discharge reason codes in the drop down.
+Expected Results                   : LTC Discharge Reason code should have below values in the drop down:HM Home-routine dischargeLF Left against medical adviceHS Discharged to a hospitalTF Transferred to another LTC facilityRH Discharged to a rest homeDI DiedOT OtherOW Change in Ownership
+Test Case ID for Row 1457          : 42588
+Associated Req ID                  : 36269.04.026
+Requirement linked for test case   : 42588
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42588
+Finished at                        : Mon Mar 06 15:29:59 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:29:59 EST 2023
+Creating test case for Row #       : 1412
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "ProviderID"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "ProviderID"
+Expected Results                   : Provider Id should be of current logic (default sizing)
+Test Case ID for Row 1412          : 42589
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42589
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42589
+Finished at                        : Mon Mar 06 15:30:04 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:04 EST 2023
+Creating test case for Row #       : 1413
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "LOC"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "LOC"
+Expected Results                   : Location should be of 1 character
+Test Case ID for Row 1413          : 42590
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42590
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42590
+Finished at                        : Mon Mar 06 15:30:10 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:10 EST 2023
+Creating test case for Row #       : 1414
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "New LOC Score From Auditor"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "New LOC Score From Auditor"
+Expected Results                   : New LOC Score From Auditor should be of 1 character
+Test Case ID for Row 1414          : 42591
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42591
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42591
+Finished at                        : Mon Mar 06 15:30:16 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:16 EST 2023
+Creating test case for Row #       : 1415
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "Auditor Name"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "Auditor Name"
+Expected Results                   : Auditor Name should not be more than  25 characters.
+Test Case ID for Row 1415          : 42592
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42592
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42592
+Finished at                        : Mon Mar 06 15:30:22 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:22 EST 2023
+Creating test case for Row #       : 1416
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "Auditor Organization"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "Auditor Organization"
+Expected Results                   : Auditor Organization should not be more than 5 characters
+Test Case ID for Row 1416          : 42593
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42593
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42593
+Finished at                        : Mon Mar 06 15:30:28 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:28 EST 2023
+Creating test case for Row #       : 1417
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "Audit Date"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "Audit Date"
+Expected Results                   : Audit Date should be of 8 digits with 0 decimals
+Test Case ID for Row 1417          : 42594
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42594
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42594
+Finished at                        : Mon Mar 06 15:30:34 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:34 EST 2023
+Creating test case for Row #       : 1418
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "Audit Comments"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "Audit Comments"
+Expected Results                   : Audit Comments should be able to fill in upto 300 characters.
+Test Case ID for Row 1418          : 42595
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42595
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42595
+Finished at                        : Mon Mar 06 15:30:40 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:40 EST 2023
+Creating test case for Row #       : 1419
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "Corrected MDS Received From The Facility"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "Corrected MDS Received From The Facility"
+Expected Results                   : Corrected MDS Received From The Facility should be of 1 character
+Test Case ID for Row 1419          : 42596
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42596
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42596
+Finished at                        : Mon Mar 06 15:30:46 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:46 EST 2023
+Creating test case for Row #       : 1420
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "Date Received "
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "Date Received "
+Expected Results                   : Date Received  should be 8 digits with 0 decimals
+Test Case ID for Row 1420          : 42597
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42597
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42597
+Finished at                        : Mon Mar 06 15:30:52 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:52 EST 2023
+Creating test case for Row #       : 1421
+Validation status                  : PASS
+Short Desc                         : Charcter types and limits - "Reason Code"
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify charcter types and limits for the field "Reason Code"
+Expected Results                   : Reason Code should of 2 digit reason code along with description
+Test Case ID for Row 1421          : 42598
+Associated Req ID                  : 36269.04.027
+Requirement linked for test case   : 42598
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42598
+Finished at                        : Mon Mar 06 15:30:57 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:30:57 EST 2023
+Creating test case for Row #       : 1458
+Validation status                  : PASS
+Short Desc                         : Help feature for LOC/MDS panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify "Help" option is included under LOC/MDS Panel
+Expected Results                   : Upon clicking on "Help" option under the LOC/MDS panel should provide the following informationThe Level of Care/MDS panel allows the users to view and authorized users to maintain information about a member''s admission, discharge, Minimum Data Set(MDS) LOC Code, LOC effective date and LOC end date from a Long Term Care (LTC) facility while residing there.Check the unit test design for the whole help panel display.
+Test Case ID for Row 1458          : 42599
+Associated Req ID                  : 36269.04.028
+Requirement linked for test case   : 42599
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42599
+Finished at                        : Mon Mar 06 15:31:05 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:05 EST 2023
+Creating test case for Row #       : 1422
+Validation status                  : PASS
+Short Desc                         : Help under MDS Audit Panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify "Help" option is included under MDS Audit Panel
+Expected Results                   : Upon clicking on "Help" option under the MDS audit panel should provide the following information"The MDS Audit panel allows the users to view and the authorized users to ask the Nursing Facility for a new suggested Minimum Data Set(MDS) code when the member has been audited. The panel stores the auditors? information along with the date the audit was conducted and the date that the audit was completed after the corrected MDS has been received from the facility"Check the unit test design for the whole help panel display.
+Test Case ID for Row 1422          : 42600
+Associated Req ID                  : 36269.04.029
+Requirement linked for test case   : 42600
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42600
+Finished at                        : Mon Mar 06 15:31:10 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:10 EST 2023
+Creating test case for Row #       : 1381
+Validation status                  : PASS
+Short Desc                         : Help feature for MDS Summary Panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify "Help" option is included under MDS Summary panel
+Expected Results                   : Upon clicking on "Help" option under MDS Summary panel should provide the following information:'The MDS Summary panel allows the user to view a member's history of Minimum Data Set(MDS) from the Nursing Facility in which he/she resides. This panel also gives a detail description of the member's demographic information, assessment type and medical conditions which relate to care at a medical facility. This is a view only panel.'
+Test Case ID for Row 1381          : 42601
+Associated Req ID                  : 36269.04.030
+Requirement linked for test case   : 42601
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42601
+Finished at                        : Mon Mar 06 15:31:16 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:16 EST 2023
+Creating test case for Row #       : 1423
+Validation status                  : PASS
+Short Desc                         : MDS error for required fields
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify error thrown if the required fields are not entered
+Expected Results                   : In the MDS Audit panel Provider ID/LOC,New LOC Score From Auditor, Auditor Name, Auditor Organization, are all required fields and MMIS should throw out an error if those fields are not filled in. If the fields are required, then display the error," ... is required".
+Test Case ID for Row 1423          : 42602
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42602
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42602
+Finished at                        : Mon Mar 06 15:31:22 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:22 EST 2023
+Creating test case for Row #       : 1424
+Validation status                  : PASS
+Short Desc                         : Audit Date missing error MSG
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify error message thrown if "Audit Date" field is missing
+Expected Results                   : In the MDS Audit Panel, if the Audit Date is missing, MMIS should throw an error message "Audit Date is Required"
+Test Case ID for Row 1424          : 42603
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42603
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42603
+Finished at                        : Mon Mar 06 15:31:28 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:28 EST 2023
+Creating test case for Row #       : 1425
+Validation status                  : PASS
+Short Desc                         : Audit Date invalied error MSG <12/31/2299
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify error message thrown if "Audit Date" is invalid and entered with a date greater than "12/31/2299"
+Expected Results                   : In the MDS Audit Panel, if the Audit Date entered is greater than "12/31/2299" MMIS should throw an error message "Audit Date must be less than or equal to 12/31/2299"
+Test Case ID for Row 1425          : 42604
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42604
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42604
+Finished at                        : Mon Mar 06 15:31:35 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:35 EST 2023
+Creating test case for Row #       : 1426
+Validation status                  : PASS
+Short Desc                         : Audit Date invalied error MSG >01/01/1900
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify error message thrown if "Audit Date" is invalid and entered with a date less than "01/01/1900"
+Expected Results                   : In the MDS Audit Panel, if the Audit Date entered is lower than "01/01/1900" MMIS should throw an error message "Audit Date must be greater than or equal to 01/01/1900"
+Test Case ID for Row 1426          : 42605
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42605
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42605
+Finished at                        : Mon Mar 06 15:31:41 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:41 EST 2023
+Creating test case for Row #       : 1427
+Validation status                  : PASS
+Short Desc                         : Date format error MSG
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify error message thrown if "Audit Date" is invalid and entered with an incorrect date format
+Expected Results                   : In the MDS Audit Panel, if the Audit Date entered is entered with incorrect date format, MMIS should throw an error message "Invalid Audit date. Format is MM/DD/CCYY"
+Test Case ID for Row 1427          : 42606
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42606
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42606
+Finished at                        : Mon Mar 06 15:31:47 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:47 EST 2023
+Creating test case for Row #       : 1428
+Validation status                  : PASS
+Short Desc                         : Date Received error MSG
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify error message thrown if "Date Received" has invalid entry
+Expected Results                   : In the MDS Audit Panel, if the Date Received entered is entered with incorrect date format, MMIS should throw an error message "Invalied  date received. Format is MM/DD/CCYY"In the MDS Audit Panel, if the Date Received entered is greater than "12/31/2299" MMIS should throw an error message "Date must be less than or equal to 12/31/2299"In the MDS Audit Panel, if theDate Received entered is lower than "01/01/1900" MMIS should throw an error message "Date must be greater than or equal to 01/01/1900"
+Test Case ID for Row 1428          : 42607
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42607
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42607
+Finished at                        : Mon Mar 06 15:31:52 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:52 EST 2023
+Creating test case for Row #       : 1429
+Validation status                  : PASS
+Short Desc                         : The Facility" is Y and the Date received is not entered
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify error message is thrown if "Corrected MDS Received From The Facility" is Y and the Date received is not entered
+Expected Results                   : In the MDS Audit Panel, if the field "Corrected MDS Received From The Facility" value is 'Y' and the Date received value is not entered , MMIS should throw an error "Date Received is required when Corrected MDS Received From The Facility is Y"
+Test Case ID for Row 1429          : 42608
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42608
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42608
+Finished at                        : Mon Mar 06 15:31:58 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:31:58 EST 2023
+Creating test case for Row #       : 1430
+Validation status                  : PASS
+Short Desc                         : The Facility" is Y and the Reason Code  is not entered
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify error message is thrown if "Corrected MDS Received From The Facility" is Y and the Reason Code  is not entered
+Expected Results                   : In the MDS Audit Panel, if the field "Corrected MDS Received From The Facility" value is 'Y' and the Date received value is not entered , MMIS should throw an error "Reason Code is required when Corrected MDS Received From The Facility is Y"
+Test Case ID for Row 1430          : 42609
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42609
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42609
+Finished at                        : Mon Mar 06 15:32:04 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:04 EST 2023
+Creating test case for Row #       : 1431
+Validation status                  : PASS
+Short Desc                         : The Facility" is Y and the Unique Identifier is not entered
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : MDS Audit Panel : Verify error message is thrown if "Corrected MDS Received From The Facility" is Y and the Unique Identifier  is not entered
+Expected Results                   : In the MDS Audit Panel, if the field "Corrected MDS Received From The Facility" value is 'Y' and the Date received value is not entered , MMIS should throw an error "Unique Identifier is required when Corrected MDS Received From The Facility is Y"
+Test Case ID for Row 1431          : 42610
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42610
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42610
+Finished at                        : Mon Mar 06 15:32:10 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:10 EST 2023
+Creating test case for Row #       : 1432
+Validation status                  : PASS
+Short Desc                         : Missing provider
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : If invalid entry, throw error that the entry is invalid.
+Expected Results                   : Validate the error
+Test Case ID for Row 1432          : 42611
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42611
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42611
+Finished at                        : Mon Mar 06 15:32:16 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:16 EST 2023
+Creating test case for Row #       : 1433
+Validation status                  : PASS
+Short Desc                         : Magnifying glass in Provider ID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Make sure magnifying glass in Provider id is working as should.
+Expected Results                   : Verify that the Magnifying glass is working as expected
+Test Case ID for Row 1433          : 42612
+Associated Req ID                  : 36269.04.032
+Requirement linked for test case   : 42612
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42612
+Finished at                        : Mon Mar 06 15:32:21 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:21 EST 2023
+Creating test case for Row #       : 1459
+Validation status                  : PASS
+Short Desc                         : Informational Requirement: Dischrge dte precedence
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify UI Discharge date override MDS Discharge assessment date
+Expected Results                   : UI MDS Discharge date will override MDS Discharge assessment date if the dates do not allign with the MDS form.
+Test Case ID for Row 1459          : 42613
+Associated Req ID                  : 36269.04.033
+Requirement linked for test case   : 42613
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42613
+Finished at                        : Mon Mar 06 15:32:27 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:27 EST 2023
+Creating test case for Row #       : 1388
+Validation status                  : PASS
+Short Desc                         : MDS T_RE_LOC to populate the Supported Rate Cell
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : In MMIS, Under  PMP Assignment History and PMP Assignment History SU Maintenance Panels verify that supported rate cell is populated with MDS_T_RE_LOC
+Expected Results                   : Supported rate cells under  PMP Assignment History and PMP Assignment History SU Maintenance Panels should be populated with MDS T_RE_LOC
+Test Case ID for Row 1388          : 42614
+Associated Req ID                  : 36269.04.034
+Requirement linked for test case   : 42614
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42614
+Finished at                        : Mon Mar 06 15:32:33 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:33 EST 2023
+Creating test case for Row #       : 1389
+Validation status                  : PASS
+Short Desc                         : Support rate cell via regular panle
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : For ICO, populate Support Rate Cell when available vai regular panle
+Expected Results                   : For ICO, display Support Rate Cell.
+Test Case ID for Row 1389          : 42615
+Associated Req ID                  : 36269.04.034
+Requirement linked for test case   : 42615
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42615
+Finished at                        : Mon Mar 06 15:32:39 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:39 EST 2023
+Creating test case for Row #       : 1390
+Validation status                  : PASS
+Short Desc                         : MDS T_RE_LOC edit for ICF MR
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : After MDS Cutover Date Display error message. Before MDS cutover Date Do not display error message.
+Expected Results                   : Validate for the error message - Member has ICF-MR LOC
+Test Case ID for Row 1390          : 42616
+Associated Req ID                  : 36269.04.035
+Requirement linked for test case   : 42616
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42616
+Finished at                        : Mon Mar 06 15:32:45 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:45 EST 2023
+Creating test case for Row #       : 1391
+Validation status                  : PASS
+Short Desc                         : Warning message for member with LTC on Submission date
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : In MMIS, Verify that prior authorization base information panel is displays the following warning message when a member has LTC on submission date.Warning! Member has LTC on Submission Date!? when the member has LTC with Nursing Facility OR Rest Home (NF or RH) LOC codes on the PA Submission Date. Include the new MDS T_RE_LOC for this edit.
+Expected Results                   : The expected warning message is displayed when member has LTC on submission date.
+Test Case ID for Row 1391          : 42617
+Associated Req ID                  : 36269.04.036
+Requirement linked for test case   : 42617
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42617
+Finished at                        : Mon Mar 06 15:32:51 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:51 EST 2023
+Creating test case for Row #       : 1382
+Validation status                  : PASS
+Short Desc                         : Add new panels link in Member Maintenance panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify new panel link is available for MDS under Member Maintenance panel
+Expected Results                   : In MMIS, under member maintenance, the following new panel link should be available:MDS Summary
+Test Case ID for Row 1382          : 42618
+Associated Req ID                  : 36269.04.037
+Requirement linked for test case   : 42618
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42618
+Finished at                        : Mon Mar 06 15:32:57 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:32:57 EST 2023
+Creating test case for Row #       : 1434
+Validation status                  : PASS
+Short Desc                         : New panel- MDS audit
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify new panel links are availble for MDS under Member maintenance
+Expected Results                   : In MMIS, under member maintenance, the following new panel links should be availableMDS Audit
+Test Case ID for Row 1434          : 42619
+Associated Req ID                  : 36269.04.037
+Requirement linked for test case   : 42619
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42619
+Finished at                        : Mon Mar 06 15:33:03 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:33:03 EST 2023
+Creating test case for Row #       : 1460
+Validation status                  : PASS
+Short Desc                         : Add new panels links in Member Maintainance panel
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify new panel links are availble for MDS under Member maintenance
+Expected Results                   : In MMIS, under member maintenance, the following new panel links should be availableLevel Of Care/MDSMDS AuditMDS Summary
+Test Case ID for Row 1460          : 42620
+Associated Req ID                  : 36269.04.037
+Requirement linked for test case   : 42620
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42620
+Finished at                        : Mon Mar 06 15:33:09 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:33:09 EST 2023
+Creating test case for Row #       : 1361
+Validation status                  : PASS
+Short Desc                         : Member Info panel- add LOC/MDS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify there is a field for Level of Care/MDS under the member information panel.
+Expected Results                   : In MMIS, under member information  a field  Level of Care/MDS should be viewable.
+Test Case ID for Row 1361          : 42621
+Associated Req ID                  : 36269.04.038
+Requirement linked for test case   : 42621
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42621
+Finished at                        : Mon Mar 06 15:33:15 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:33:15 EST 2023
+Creating test case for Row #       : 1362
+Validation status                  : PASS
+Short Desc                         : Level of Care/MDS dropdown field
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if the Member Information panel has the new Level of Care/MDS dropdown field.
+Expected Results                   : In MMIS, under member information  a field  Level of Care/MDS should have a dropdown option.
+Test Case ID for Row 1362          : 42622
+Associated Req ID                  : 36269.04.038
+Requirement linked for test case   : 42622
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42622
+Finished at                        : Mon Mar 06 15:33:21 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:33:21 EST 2023
+Creating test case for Row #       : 1363
+Validation status                  : PASS
+Short Desc                         : Display dates on Level of Care/MDS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if Level of Care/MDS dropdown displays the results based on effective date in descending order, with exception of results with end date 12/31/2299 displaying first.
+Expected Results                   : The date should be displayed based on the descending order. Id the dates has the open end date it should be displayed first.
+Test Case ID for Row 1363          : 42623
+Associated Req ID                  : 36269.04.038
+Requirement linked for test case   : 42623
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42623
+Finished at                        : Mon Mar 06 15:33:28 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:33:28 EST 2023
+Creating test case for Row #       : 1364
+Validation status                  : PASS
+Short Desc                         : Level of Care/MDS when adding a new record
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if Level of Care/MDS dropdown is updated on save-all when adding a new Level Of Care/MDS record.
+Expected Results                   : The  Level of Care/MDS field should display new record when saved
+Test Case ID for Row 1364          : 42624
+Associated Req ID                  : 36269.04.038
+Requirement linked for test case   : 42624
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42624
+Finished at                        : Mon Mar 06 15:33:34 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:33:34 EST 2023
+Creating test case for Row #       : 1365
+Validation status                  : PASS
+Short Desc                         : Level of Care/MDS when updaing  existing record.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if Level of Care/MDS dropdown is updated on save-all when updating an existing Level Of Care/MDS record
+Expected Results                   : The  Level of Care/MDS field should display updates on the existing record when saved.
+Test Case ID for Row 1365          : 42625
+Associated Req ID                  : 36269.04.038
+Requirement linked for test case   : 42625
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42625
+Finished at                        : Mon Mar 06 15:33:40 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:33:40 EST 2023
+Creating test case for Row #       : 1366
+Validation status                  : PASS
+Short Desc                         : Level of Care/MDS field help
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : View if the field help is working for Level of Care/MDS dropdown field in Member Information panel.
+Expected Results                   : Verify if the field help is working properly.
+Test Case ID for Row 1366          : 42626
+Associated Req ID                  : 36269.04.038
+Requirement linked for test case   : 42626
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42626
+Finished at                        : Mon Mar 06 15:33:46 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 15:33:46 EST 2023
+Creating test case for Row #       : 1461
+Validation status                  : PASS
+Short Desc                         : Errors for LOC/MDS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify Errors for LOC/MDS
+Expected Results                   : Error messages will be repurposed in MDS LOC panel.Check document uploaded for 36269.07.000 in MIP
+Test Case ID for Row 1461          : 42627
+Associated Req ID                  : 36269.07.000
+Requirement linked for test case   : 42627
+Notebook                           : Project22.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42627
+Finished at                        : Mon Mar 06 15:33:52 EST 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 06/Mar/2023 03:33:53PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

@@ -1,0 +1,206 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 09/Aug/2021 04:07:12PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Creating test case for TC Row : 553
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Retro Enroll member to CRPLS
+Long Desc                     : Enroll member to CRPLS retroactive to previous month with eff date 7th of month and end date as last of previous month. Enroll member to CRPLS with eff date 3rd of current 834 reporting month to open end date with same provider as previous enrollment.
+Expected Results              : Verify 834 monthly reports previous and current month enrollments.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 553      : 40425
+Notebook/Business function linked for test case 40425
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 554
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Multiple enrollments in a month
+Long Desc                     : Member had multiple enrollments in reporting month. Member had two MSTD segments split by CRPLS segment. MSTD1 starts prior to reporting month and ends in reporting month. CRPLS starts and ends in reporting month. MSTD2 starts in reporting month to open end date.
+Expected Results              : Verify monthly 834 reports all active enrollments in a reporting month.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 554      : 40426
+Notebook/Business function linked for test case 40426
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 555
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Multiple enrollments in a month
+Long Desc                     : Member had multiple active enrollments in reporting month. Member's MSTD segment starts prior to reporting month and ends in reporting month. MSTD2 starts in reporting month to open end date. There's a gap between MSTD1 and MSTD2 in the reporting month.
+Expected Results              : Verify monthly 834 reports all active enrollments in a reporting month.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 555      : 40427
+Notebook/Business function linked for test case 40427
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 556
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Mid month MFAS enrollment
+Long Desc                     : Member's MFAS enrollment starts mid of reporting month and ends in next month.
+Expected Results              : Verify monthly 834 reports MFAS enrollment.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 556      : 40428
+Notebook/Business function linked for test case 40428
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 557
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MSTD enrollment of a member
+Long Desc                     : Member had MSTD enrollment in reporting month for few days and is end dated in next month.
+Expected Results              : Verify monthly 834 reports MSTD enrollment.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 557      : 40429
+Notebook/Business function linked for test case 40429
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 558
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : CRPLA enrlmnt in reporting month
+Long Desc                     : Member had active CRPLA enrollment for few days in reporting month where eff and end dates fall in reporting month.
+Expected Results              : Verify monthly 834 reports CRPLA enrollment.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 558      : 40430
+Notebook/Business function linked for test case 40430
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 559
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MSTDA enrlmnt in reporting month
+Long Desc                     : Member had active MSTDA enrollment for few days in reporting month where eff and end dates fall in reporting month.
+Expected Results              : Verify monthly 834 reports MSTDA enrollment.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 559      : 40431
+Notebook/Business function linked for test case 40431
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 560
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Multiple CRPLA in a month
+Long Desc                     : Member had multiple CRPLA enrollments in a reporting month. CRPLA1 starts prior to reporting month and ends in reporting month. CRPLA2 starts and ends in reporting month.
+Expected Results              : Verify monthly 834 reports CRPLA enrollment.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 560      : 40432
+Notebook/Business function linked for test case 40432
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 561
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Multiple DNTL1 in a month
+Long Desc                     : Member had multiple DNTL1 enrollments in a reporting month. 1st DNTL1 starts prior to reporting month and ends in reporting month. 2nd DNTL1 starts and ends in reporting month.
+Expected Results              : Verify monthly 834 reports DNTL1 enrollment.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 561      : 40433
+Notebook/Business function linked for test case 40433
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 562
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Multiple enrlmnts in reporting month
+Long Desc                     : Member had multiple enrollments in reporting month. One of the enrollments is historied before monthly runs for the reporting month.
+Expected Results              : Verify monthly 834 reports only active enrollments for reporting month.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 562      : 40434
+Notebook/Business function linked for test case 40434
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Creating test case for TC Row : 563
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : No changes to member
+Long Desc                     : Terminate member's enrollment during monthly cycle but after daily roster is complete and no further changes to member.
+Expected Results              : Verify member is not reported on daily 834 next day.
+Grouping                      : EDI Transactions
+Associated WI/Defect/CO       : 35423
+Associated WI Type            : Defect
+Test Case ID for Row 563      : 40435
+Notebook/Business function linked for test case 40435
+Requested item to link is Defect. So, skipping linking test cases step.
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 09/Aug/2021 04:08:54PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

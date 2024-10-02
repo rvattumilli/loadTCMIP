@@ -1,0 +1,38 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 10/May/2022 12:30:52PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+***************************************************
+Started at                         : Tue May 10 12:31:00 EDT 2022
+Creating test case for TC Row      : 910
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MTM Pnl, From PCP w/RETRO End date
+Long Desc                          : When a PCP Affiliated to an ACOA has a Retro end date (Date before the Run Date) , make sure "PCP ID" Pop-up search under PCP To PCP Mass Transfer Maintenance Panel does not display that PCP.
+Expected Results                   : PCP To PCP Mass Transfer Maintenance Panel does not display the PCP  which has a Retro end date on "PCP ID" Pop-up search.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.001
+Test Case ID for Row 910           : 41371
+Requirement linked for test case   : 41371
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 0, Failures: 1, Skips: 0
+Configuration Failures: 1, Skips: 2
+===============================================
+

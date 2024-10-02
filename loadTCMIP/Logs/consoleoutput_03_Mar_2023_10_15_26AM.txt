@@ -1,0 +1,42 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 03/Mar/2023 10:15:26AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 1760
+****************************************************
+Started at                         : Fri Mar 03 10:15:43 EST 2023
+Creating test case for Row #       : 1297
+Short Desc                         : Verify the input MIDs -VALID file
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the file with valid inputs
+Expected Results                   : The members in the file will be processed with no errors.
+Test Case ID for Row 1297          : 42425
+Associated Req ID                  : 36157.02.010
+Requirement linked for test case   : 42425
+Notebook                           : Project 23.04
+Business Function                  : Project 23.04
+no such element: Unable to locate element: {"method":"xpath","selector":"//img[@src='../../images/icon-add.gif']"}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c0129aa9bca84202cdf85450de332df3, findElement {using=xpath, value=//img[@src='../../images/icon-add.gif']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:10243}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:10243/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c0129aa9bca84202cdf85450de332df3

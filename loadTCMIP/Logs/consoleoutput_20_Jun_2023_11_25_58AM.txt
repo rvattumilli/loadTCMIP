@@ -1,0 +1,373 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 20/Jun/2023 11:25:58AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 83
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' '), tc_row, trim(d.dsc) wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 282
+Total No.of Rows                   : 13
+****************************************************
+Started at                         : Tue Jun 20 11:26:05 EDT 2023
+Creating test case for Row #       : 2114
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 55
+Validation Time(ms)                : 473
+Validation status                  : PASS
+Short Desc                         : From 10/01/2023 display MDS info on 271.
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find or Create member with MDS data present after 10/1/2023. Send 270 inquiry for search period from 10/1/2023 or after. Validate the New EB segment is displayed for MDS.EB*1*IND*54~DTP*292*RD8*ltcBeginDate-ltcEndDate~  -> MDS LOC datesDTP*435*D8*LTC admission date~ DTP*193*D8*20231001~ -> MDS Case-mix Begin dateDTP*194*D8*20231030~ ->  MDS Case-mix End dateMSG* MDS LOC code; X .~ ->MDS LOC Code value will be displayed from the databaseLS*2120~ -> Long-Term Care Provider InformationNM1*FA*2* Name Last or Organization Name*****XX*NPI number~ N3* Address information~N4* City Name *State*Postal Code~PER*IC**TE*Phone number~LE*2120~
+Expected Results                   : The New EB segment is displayed for MDS.EB*1*IND*54~DTP*292*RD8*ltcBeginDate-ltcEndDate~  -> MDS LOC datesDTP*435*D8*LTC admission date~ DTP*193*D8*20231001~ -> MDS Case-mix Begin dateDTP*194*D8*20231030~ ->  MDS Case-mix End dateMSG* MDS LOC code; X .~ ->MDS LOC Code value will be displayed from the databaseLS*2120~ -> Long-Term Care Provider InformationNM1*FA*2* Name Last or Organization Name*****XX*NPI number~ N3* Address information~N4* City Name *State*Postal Code~PER*IC**TE*Phone number~LE*2120~
+Test Case ID for Row 2114          : 43563
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36342.04.001
+Query Execution Time(ms)           : 569
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43563
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43563
+Finished at                        : Tue Jun 20 11:26:12 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:26:12 EDT 2023
+Creating test case for Row #       : 2115
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Validation Time(ms)                : 750
+Validation status                  : PASS
+Short Desc                         : From 10/01/2023 NO MMQ info on 271.
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find or create member with MMQ data present after 10/1/2023. Send 270 inquiry for search period from 10/1/2023 or after. Validate the EB segment is not displayed for MMQ.
+Expected Results                   : The EB segment is NOT displayed for MMQ.
+Test Case ID for Row 2115          : 43564
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36342.04.001
+Query Execution Time(ms)           : 35
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43564
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43564
+Finished at                        : Tue Jun 20 11:26:17 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:26:17 EDT 2023
+Creating test case for Row #       : 2116
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Validation Time(ms)                : 449
+Validation status                  : PASS
+Short Desc                         : Before 10/01/2023 NO MDS info on 271.
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find or Create member with MDS data present before 10/1/2023. Send 270 inquiry for search period before 10/1/2023. Validate the New EB segment is not displayed for MDS.
+Expected Results                   : New EB segment is NOT displayed for MDS.
+Test Case ID for Row 2116          : 43565
+Query Execution Time(ms)           : 75
+Requirement ID                     : 36342.04.005
+Query Execution Time(ms)           : 36
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43565
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43565
+Finished at                        : Tue Jun 20 11:26:21 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:26:21 EDT 2023
+Creating test case for Row #       : 2117
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 56
+Validation Time(ms)                : 480
+Validation status                  : PASS
+Short Desc                         : EB03 = 54 for MDS.
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Send 270 inquiry for search period from 10/1/2023 or after. Validate EB03 for MDS = 54.
+Expected Results                   : EB03 for MDS = 54.
+Test Case ID for Row 2117          : 43566
+Query Execution Time(ms)           : 61
+Requirement ID                     : 36342.04.010
+Query Execution Time(ms)           : 42
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43566
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43566
+Finished at                        : Tue Jun 20 11:26:26 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:26:26 EDT 2023
+Creating test case for Row #       : 2118
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 55
+Validation Time(ms)                : 465
+Validation status                  : PASS
+Short Desc                         : NM segment for Provider info for MDS.
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Send 270 inquiry for search period from 10/1/2023 or after. Validate NM segment for provider information is displayed which corresponds to the new MDS EB segment on loop 2120C
+Expected Results                   : NM segment for provider information is displayed for MDSs EB segment on loop 2120C.
+Test Case ID for Row 2118          : 43567
+Query Execution Time(ms)           : 76
+Requirement ID                     : 36342.04.015
+Query Execution Time(ms)           : 53
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43567
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43567
+Finished at                        : Tue Jun 20 11:26:33 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:26:33 EDT 2023
+Creating test case for Row #       : 2119
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 51
+Validation Time(ms)                : 476
+Validation status                  : PASS
+Short Desc                         : EB with Date and Provider info for MDS.
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Send 270 inquiry for search period from 10/1/2023 or after. Validate the new EB segment for MDS with their respective DTPs and MSG segments on loop 2110C and provider information on loop 2120C for LTC is displayed.
+Expected Results                   : The new EB segment for MDS with their respective DTPs and MSG segments on loop 2110C and provider information on loop 2120C for LTC is displayed.
+Test Case ID for Row 2119          : 43568
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36342.04.020
+Query Execution Time(ms)           : 38
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43568
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43568
+Finished at                        : Tue Jun 20 11:26:39 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:26:39 EDT 2023
+Creating test case for Row #       : 2120
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 58
+Validation Time(ms)                : 807
+Validation status                  : PASS
+Short Desc                         : Trigger MSG segment for MDS
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find or Create member with HIPPS code present after 10/1/2023. Send 270 inquiry for search period from 10/1/2023 or after. Validate the New MSG segment is displayed under the new EB segmnet for MDS..MSG* MDS LOC Code; X
+Expected Results                   : The New MSG segment is displayed under the new EB segment for MDS.
+Test Case ID for Row 2120          : 43569
+Query Execution Time(ms)           : 76
+Requirement ID                     : 36342.04.025
+Query Execution Time(ms)           : 575
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43569
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43569
+Finished at                        : Tue Jun 20 11:26:45 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:26:45 EDT 2023
+Creating test case for Row #       : 2121
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 462
+Validation status                  : PASS
+Short Desc                         : Do not Trigger MSG segment for MDS
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find or Create member without HIPPS code. Send 270 inquiry for search period from 10/1/2023 or after. Validate the New MSG segment is NOT displayed displayed under the new EB segment for MDS.
+Expected Results                   : The New MSG segment is NOT displayed displayed under the new EB segment for MDS..
+Test Case ID for Row 2121          : 43570
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36342.04.025
+Query Execution Time(ms)           : 40
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43570
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43570
+Finished at                        : Tue Jun 20 11:26:51 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:26:51 EDT 2023
+Creating test case for Row #       : 2122
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 488
+Validation status                  : PASS
+Short Desc                         : MMQ info displyed on 271 before 10/1/2023.
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find or create member with MMQ data present before 10/1/2023. Send 270 inquiry for search period before 10/1/2023. Validate the EB segment is displayed for MMQ.
+Expected Results                   : The EB segment is displayed for MMQ.
+Test Case ID for Row 2122          : 43571
+Query Execution Time(ms)           : 68
+Requirement ID                     : 36342.04.030
+Query Execution Time(ms)           : 36
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43571
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43571
+Finished at                        : Tue Jun 20 11:26:55 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:26:55 EDT 2023
+Creating test case for Row #       : 2123
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.035') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 2098
+Validation status                  : PASS
+Short Desc                         : MDS info not displyed on 271 before 10/1/2023.
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Find or create member with MDS data present before 10/1/2023. Send 270 inquiry for search period before 10/1/2023. Validate the EB segment is not displayed for MDS.
+Expected Results                   : The EB segment is not displayed for MDS.
+Test Case ID for Row 2123          : 43572
+Query Execution Time(ms)           : 75
+Requirement ID                     : 36342.04.035
+Query Execution Time(ms)           : 34
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43572
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43572
+Finished at                        : Tue Jun 20 11:27:03 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:27:03 EDT 2023
+Creating test case for Row #       : 2124
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.040') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 445
+Validation status                  : PASS
+Short Desc                         : Display MMQ end date = 9/30/2023
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Example 1 - Find or create MID with MMQ info but no MMQ score and send 270 inquiry search period  = 09/25/2023  10/20/2023. Validate 271 displays the EB segment for MMQ only until 9/30/2023 along with its Provider information on 2120C NM Segment. EB*X**30~ -> No EB05 when no MMQ score is available.DTP*292*RD8*20230925-20230930~ -> ltcBeginDate - ltcEndDateDTP*435*D8*20180829~ -> Long-term-care admit dateMSG*111 Resident at Long-Term-Care Facility.~LS*2120~ -> Long-Term Care Provider InformationNM1*FA*2* Name Last or Organization Name*****XX*NPI number~ N3* Address information~N4* City Name *State*Postal Code~PER*IC**TE*Phone number~LE*2120       ORExample 2 -Find or create MID with MMQ info with MMQ score and send 270 inquiry search period  = 09/25/2023  10/20/2023. Validate 271 displays the EB segment for MMQ only until 9/30/2023 along with its Provider information on 2120C NM Segment. EB*X**30**R-239.0 ~ -> 1char (MMC)-MMQ ScoreDTP*292*RD8*20230925-20230930 ~ -> ltcBeginDate - ltcEndDateDTP*435*D8*20180829~ -> Long-term-care admit dateDTP*193*D8*20230925~ -> Case-mix Begin date                                                                       DTP*194*D8*20230930~ -> Case-mix End date (should end on 20230930)                                                                                  MSG*111 Resident at Long-Term-Care Facility.LS*2120~ -> Long-Term Care Provider InformationNM1*FA*2* Name Last or Organization Name*****XX*NPI number~ N3* Address information~N4* City Name *State*Postal Code~PER*IC**TE*Phone number~LE*2120~
+Expected Results                   : Example 1 - MMQ end date = 9/30/2023 Example 2 - MMQ end date = 9/30/2023
+Test Case ID for Row 2124          : 43573
+Query Execution Time(ms)           : 92
+Requirement ID                     : 36342.04.040
+Query Execution Time(ms)           : 34
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43573
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43573
+Finished at                        : Tue Jun 20 11:27:09 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:27:09 EDT 2023
+Creating test case for Row #       : 2125
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.045') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 1085
+Validation status                  : PASS
+Short Desc                         : Display MDS start date = 10/01/2023
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Example 1 - Find or create MID with MDS info but no MDS LOC code and send 270 inquiry search period  = 09/25/2023  10/20/2023. Validate 271 displays the EB segment for MDS from 10/01/2023, NO MSG segment and display the LTC dates and Provider Information on the 2120C NM segment. EB*1*IND*54~DTP*292*RD8*20231001-20231020 ~ -> ltcBeginDate - ltcEndDateDTP*435*D8*20180829~ -> Long-term-care admit dateLS*2120~ -> Long-Term Care Provider InformationNM1*FA*2* Name Last or Organization Name*****XX*NPI number~ N3* Address information~N4* City Name *State*Postal Code~PER*IC**TE*Phone number~LE*2120~Example 2 -Find or create MID with MDS info with MDS LOC code and send 270 inquiry search period  = 09/25/2023  10/20/2023. Validate 271 displays the EB segment for MDS from 10/01/2023, Trigger the MSG segment to display the MDS LOC Code and display the LTC dates and Provider Information on the 2120C NM segment. EB*1*IND*54~DTP*292*RD8*20231001-20231020 ~ -> ltcBeginDate  ltcEndDate (MDS LOC dates)DTP*435*D8*20180829~ -> Long-term-care admit dateDTP*193*D8*20231001~ -> MDS Case-mix Begin dateDTP*194*D8*20231020~ -> MDS Case-mix End dateMSG* MDS LOC code; X .~ -> MDS LOC Code value will be displayed from the database.LS*2120~ -> Long-Term Care Provider InformationNM1*FA*2* Name Last or Organization Name*****XX*NPI number~ N3* Address information~N4* City Name *State*Postal Code~PER*IC**TE*Phone number~LE*2120~
+Expected Results                   : Example 1 - MDS start date = 10/01/2023, NO MSG segment, LTC dates and Provider infor on 2120C NM segment. Example 2 - MDS start date = 10/01/2023, trigger MSG segment, LTC dates and Provider info on 2120C NM segment.
+Test Case ID for Row 2125          : 43574
+Query Execution Time(ms)           : 65
+Requirement ID                     : 36342.04.045
+Query Execution Time(ms)           : 37
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43574
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43574
+Finished at                        : Tue Jun 20 11:27:16 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 11:27:16 EDT 2023
+Creating test case for Row #       : 2126
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36342.04.060') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'OXi-Eligibility') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'OXI') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 405
+Validation status                  : PASS
+Short Desc                         : PER02 should be NULL/Blank.
+Env                                : M
+Subsystem                          : OXi-Eligibility
+SAK Participant                    : 750
+Owner                              : SAROJ THAKUR
+Grouping                           : OXI
+Long Desc                          : Send 270 inquiry for a member with MDS nformation after 10/01/2023 and validate 271 displaye PER02 = Blank/Null on 2120C loop.PER*IC**TE*Phone number~
+Expected Results                   : PER02 is Blank/Null.
+Test Case ID for Row 2126          : 43575
+Query Execution Time(ms)           : 70
+Requirement ID                     : 36342.04.060
+Query Execution Time(ms)           : 27
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 43575
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43575
+Finished at                        : Tue Jun 20 11:27:21 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 20/Jun/2023 11:27:21AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

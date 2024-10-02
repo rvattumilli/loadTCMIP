@@ -1,0 +1,1257 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 15/Jun/2023 09:59:55AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 76
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' '), tc_row, trim(d.dsc) wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 138
+Total No.of Rows                   : 47
+****************************************************
+Started at                         : Thu Jun 15 10:00:03 EDT 2023
+Creating test case for Row #       : 1979
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 579
+Validation status                  : PASS
+Short Desc                         : New disability table and values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate new disability field (CDE_DISABILITY_DEAF, CDE_DISABILITY_BLIND, CDE_DISABILITY_REMEMB, CDE_DISABILITY_WALKING, CDE_DISABILITY_DRESSING, CDE_DISABILITY_ERRANDS) values and descriptions for are added to t_cde_disabled table.Value: "Y" Description: "Yes"Value: "N" Description: "No"Value: "A-CNTA" Description: "Choose not to asnswer"Value: "D-KNOW" Description: "Don't Know".
+Expected Results                   : All new disability values and descriptions shown in t_cde_disabled table.
+Test Case ID for Row 1979          : 43381
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36647.01.001
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43381
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43381
+Finished at                        : Thu Jun 15 10:00:08 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:08 EDT 2023
+Creating test case for Row #       : 1980
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 441
+Validation status                  : PASS
+Short Desc                         : Test all new disability fields and vlaues
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Create a new MHO member with all 6 disability fields and valid values for each. Send update transactions with all the different disability values for the same member. Create a new HIX member with all 6 disability fields and valid values for each. Send update transactions with all the different disability values for the same member.
+Expected Results                   : All new disability fields and values are accepted and stored in t_re_addl_demo table for MHO and HIX members
+Test Case ID for Row 1980          : 43382
+Query Execution Time(ms)           : 71
+Requirement ID                     : 36647.01.005
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43382
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43382
+Finished at                        : Thu Jun 15 10:00:12 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:12 EDT 2023
+Creating test case for Row #       : 1981
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 435
+Validation status                  : PASS
+Short Desc                         : Non Authorized agency sends cde_disability_deaf
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate if agency other than MHO & HIX sends cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands, new warning messages for agency not authorized to submit data for specific disability field should be triggered and no updates are made to the field(s) in the database.Send transaction for new or existing member with all 6 disability fields and values from any agency other than MHO & HIX
+Expected Results                   : DB:- No updates made to disability fields when warnings are triggered Warning messages that should be triggered depending on disability fields sent."Agency is not authorized to submit data for cde_disability_deaf""Agency is not authorized to submit data for cde_disability_blind""Agency is not authorized to submit data for cde_disability_rememb""Agency is not authorized to submit data for cde_disability_dressing""Agency is not authorized to submit data for cde_disability_errands"
+Test Case ID for Row 1981          : 43383
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36647.01.010
+Query Execution Time(ms)           : 45
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43383
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43383
+Finished at                        : Thu Jun 15 10:00:17 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:17 EDT 2023
+Creating test case for Row #       : 1982
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 48
+Validation Time(ms)                : 441
+Validation status                  : PASS
+Short Desc                         : Disability hierarchy_1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create member with cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands data stored in the DB from MHO.Step 2: Send transactions from HIX with the same values stored in the DB for the 6 disability fields for the same member.Step 3: Send transactions from MHO with different values than what is stored for 3 of the 6 fields for the same member.
+Expected Results                   : Step 1:DB:- disability values stored in the database and agency stored as MHO for each disability fieldStep 2:- No changes to disability values stored- Agency is updated to HIXStep 3:- Values are updated for the fields where different values were sent. - No changes to the values for fields where same values were sent.- Agency is updated to MHO for all 6 disability fields.
+Test Case ID for Row 1982          : 43384
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36647.01.015
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43384
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43384
+Finished at                        : Thu Jun 15 10:00:21 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:21 EDT 2023
+Creating test case for Row #       : 1983
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 451
+Validation status                  : PASS
+Short Desc                         : Disability hierarchy_2
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create member with cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands data stored in the DB from HIX.Step 2: Send transactions from MHO with the same values stored in the DB for the 6 disability fields for the same member.Step 3: Send transactions from HIX with different values than what is stored for 3 of the 6 fields for the same member.
+Expected Results                   : Step 1:DB:- disability values stored in the database and agency stored as HIX for each disability fieldStep 2:- No changes to disability values stored- Agency is updated to MHOStep 3:- Values are updated for the fields where different values were sent. - No changes to the values for fields where same values were sent.- Agency is updated to HIX for all 6 disability fields.
+Test Case ID for Row 1983          : 43385
+Query Execution Time(ms)           : 112
+Requirement ID                     : 36647.01.015
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43385
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43385
+Finished at                        : Thu Jun 15 10:00:26 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:26 EDT 2023
+Creating test case for Row #       : 1984
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 411
+Validation status                  : PASS
+Short Desc                         : Blank/null Disability-New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction for new MHO member with cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands value as blank/space.
+Expected Results                   : DB:- No records created in the database for all 6 fields.
+Test Case ID for Row 1984          : 43386
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36647.01.020
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43386
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43386
+Finished at                        : Thu Jun 15 10:00:30 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:30 EDT 2023
+Creating test case for Row #       : 1985
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 454
+Validation status                  : PASS
+Short Desc                         : Blank/null Disability- Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create existing MHO or HIX member with cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands data stored in the database.Step 2: Send transaction for the same member from MHO with all disability field values as blank/space.Step 3: Send transaction for the same member from HIX with all disability field values as blank/space.
+Expected Results                   : Step 1:DB:- Disability values and agency stored in the database for each disability field.Step 2:DB:- No updates made in the database for all 6 fields. Step 3:DB:- No updates made in the database for all 6 fields.
+Test Case ID for Row 1985          : 43387
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36647.01.020
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43387
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43387
+Finished at                        : Thu Jun 15 10:00:35 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:35 EDT 2023
+Creating test case for Row #       : 1986
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 410
+Validation status                  : PASS
+Short Desc                         : No Disability fields-New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction for new HIX member WITHOUT cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands fields
+Expected Results                   : DB:- No records created in the database for all 6 fields.
+Test Case ID for Row 1986          : 43388
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36647.01.020
+Query Execution Time(ms)           : 27
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43388
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43388
+Finished at                        : Thu Jun 15 10:00:39 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:39 EDT 2023
+Creating test case for Row #       : 1987
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 413
+Validation status                  : PASS
+Short Desc                         : No Disability fields- Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create existing MHO or HIX member with cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands data stored in the database.Step 2: Send transaction for the same member from MHO WITHOUT the disability fields.Step 3: Send transaction for the same member from HIX WITHOUT the disability fields
+Expected Results                   : Step 1:DB:- Disability values and agency stored in the database for each disability field.Step 2:DB:- No updates made in the database for all 6 fields. Step 3:DB:- No updates made in the database for all 6 fields.
+Test Case ID for Row 1987          : 43389
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36647.01.020
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43389
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43389
+Finished at                        : Thu Jun 15 10:00:44 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:44 EDT 2023
+Creating test case for Row #       : 1988
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 430
+Validation status                  : PASS
+Short Desc                         : Invalid disability values-New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction for new MHO or HIX member with invalid values for cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands.
+Expected Results                   : DB:- No updates made in the database for all 6 fields. Post eligibility response XML:- Warning message "Invalid (respective disability field) value" should be triggered for each field
+Test Case ID for Row 1988          : 43390
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36647.01.025
+Query Execution Time(ms)           : 42
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43390
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43390
+Finished at                        : Thu Jun 15 10:00:48 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:00:48 EDT 2023
+Creating test case for Row #       : 1989
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 432
+Validation status                  : PASS
+Short Desc                         : Invalid disability values-Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction for an existing MHO or HIX member with invalid values for cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands.
+Expected Results                   : DB:- No updates made in the database for all 6 fields. Post eligibility response XML:- Warning message "Invalid (respective disability field) value" should be triggered for each field
+Test Case ID for Row 1989          : 43391
+Query Execution Time(ms)           : 76
+Requirement ID                     : 36647.01.025
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43391
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43391
+Finished at                        : Thu Jun 15 10:01:00 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:00 EDT 2023
+Creating test case for Row #       : 1990
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.01.030') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 466
+Validation status                  : PASS
+Short Desc                         : Audit table for disability fields
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create MHO member with cde_disability_deaf, cde_disability_blind, cde_disability_rememb, cde_disability_walking, cde_disability_dressing, cde_disability_errands data stored in the DB.Step 2: Send transactions from HIX with the same values stored in the DB for the 6 disability fields for the same member.Step 3: Send transactions from MHO with different values than what is stored for at least 1 of the 6 fields for the same member.
+Expected Results                   : Step 1: - Audit table should have an insert record for each fieldStep 2: - Audit table should have an update record for each field with agency as MHO (previously stored agency)Step 3: - Audit table should have an update record for each field with agency as HIX (previously stored agency) and previously stored value for the fields where value(s) changed.
+Test Case ID for Row 1990          : 43392
+Query Execution Time(ms)           : 75
+Requirement ID                     : 36647.01.030
+Query Execution Time(ms)           : 36
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43392
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43392
+Finished at                        : Thu Jun 15 10:01:05 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:05 EDT 2023
+Creating test case for Row #       : 1991
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 405
+Validation status                  : PASS
+Short Desc                         : New written language values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate the following language values and descriptions are added to t_cde_lang_written table.Value: "BRAILL" Description: "English Braille"Value: "CHI-TR" Description: "Chinese  Traditional"Value: "CHI-SI" Description: "Chinese  Simplified"Value: "NEPALE" Description: "Nepalese"
+Expected Results                   : All new languages and descriptions shown in t_cde_lang_written table and written language related data table
+Test Case ID for Row 1991          : 43393
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36647.02.001
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43393
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43393
+Finished at                        : Thu Jun 15 10:01:09 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:09 EDT 2023
+Creating test case for Row #       : 1992
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 450
+Validation status                  : PASS
+Short Desc                         : Test all new language vlaues
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Create new members with the following data.1) Written language: BRAILL, Spoken language: C-MAND, multiple race and ethnicity values.2) Written: CHI-TR, Spoken: C-CANT, multiple ethnicity values inclusive of AM-IND3) Written: CHI-SI, Spoken: NEPALE4) Written: NEPALE, Spoken: NEPALE
+Expected Results                   : All new written and spoken language values accepted by the system and stored in both t_re_base and t_re_addl_demo table and displayed on Member Information panel.
+Test Case ID for Row 1992          : 43394
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36647.02.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43394
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43394
+Finished at                        : Thu Jun 15 10:01:13 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:13 EDT 2023
+Creating test case for Row #       : 1993
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.02.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 439
+Validation status                  : PASS
+Short Desc                         : Written language hierarchy_1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Send txn from SSA with with one of the new written language values.Step 2: Send txn from DSS (same level) for the same member with the same written language value.Step 3: Send txn from DTA (lower) for the same member with the same written language value.Step 4: Send txn from HIX (higher) for the same member with the same written language value.
+Expected Results                   : Step 1: - New written language value stored in t_re_addl_demo and t_re_base table with agency as SSA. Same value displayed on Member Information panel. Insert record added to audit table. Step 2: - Written language value remains the same in t_re_addl_demo and t_re_base table, but agency updated to DSS. Update record for written langauge added to audit table for SSA. No updates on Member Information panelStep 3: - No updates to written language field in t_re_addl_demo, t_re_base and audit table. Value and agency remains the same and no changes to Member Information panel.Step 4: - Written language value remains the same in t_re_addl_demo and t_re_base table, but agency updated to HIX. Update record for written langauge added to audit table for DSS. No updates on Member Information panel, agency updated to HIX
+Test Case ID for Row 1993          : 43395
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36647.02.010
+Query Execution Time(ms)           : 38
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43395
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43395
+Finished at                        : Thu Jun 15 10:01:18 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:18 EDT 2023
+Creating test case for Row #       : 1994
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.02.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 421
+Validation status                  : PASS
+Short Desc                         : Written language hierarchy_2
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Send txn from SSA with with one of the new written language values.Step 2: Send txn from DMH (same level) for the same member with a different written language value.Step 3: Send txn from DYS (lower) for the same member with a different written language value.Step 4: Send txn from MHO (higher) for the same member with a different written language.
+Expected Results                   : Step 1: - New written language value stored in t_re_addl_demo and t_re_base table with agency as SSA. Same value displayed on Member Information panel. Insert record added to audit table. Step 2: - Written language value and agency are updated in t_re_addl_demo and t_re_base table. Same value is updated on Member Information panel. Update record for written language added to audit table with SSA and previously stored value.Step 3: - No updates to written language field in the database or Member Information panel, value and agency remains the sameStep 4: -  Written language value and agency are updated in t_re_addl_demo and t_re_base table. Same value is updated on Member Information panel. Update record for written language added to audit table with DMH and previously stored value.
+Test Case ID for Row 1994          : 43396
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36647.02.010
+Query Execution Time(ms)           : 26
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43396
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43396
+Finished at                        : Thu Jun 15 10:01:23 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:23 EDT 2023
+Creating test case for Row #       : 1995
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 51
+Validation Time(ms)                : 711
+Validation status                  : PASS
+Short Desc                         : New spoken language values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate the following language values and descriptions are added to t_cde_primry_lang table.Value: "C-MAND" Description: "Chinese  Mandarin"Value: "C-CANT" Description"Chinese  Cantonese"Value: "NEPALE"Description: "Nepalese"
+Expected Results                   : All new languages and descriptions shown in t_cde_primry_lang table and spoken language related data panel
+Test Case ID for Row 1995          : 43397
+Query Execution Time(ms)           : 61
+Requirement ID                     : 36647.03.001
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43397
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43397
+Finished at                        : Thu Jun 15 10:01:27 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:27 EDT 2023
+Creating test case for Row #       : 1996
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 426
+Validation status                  : PASS
+Short Desc                         : Authorized agency updates spoken language
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create or find a new member from HCF with a valid cde_primary_lang value stored and displayed on Member Inforamtion panel.Step 2: Send transaction from MHO, HIX, SSA, PAC or HCF for the same member with a different cde_primary_lang value.
+Expected Results                   : Step 1: cde_primary_lang value should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: cde_primary_lang value and agency should be updated in t_re_addl_demo table and value should be updated in t_re_base. Same value is displayed on Member Information panel.
+Test Case ID for Row 1996          : 43398
+Query Execution Time(ms)           : 65
+Requirement ID                     : 36647.03.005
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43398
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43398
+Finished at                        : Thu Jun 15 10:01:32 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:32 EDT 2023
+Creating test case for Row #       : 1997
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 450
+Validation status                  : PASS
+Short Desc                         : DTA removed for cde_primary_lang
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create or find an existing member with a  valid cde_primary_lang stored and displayed on Member Information panel.Step 2: Send transaction from DTA with a different cde_primary_lang value.
+Expected Results                   : Step 1: cde_primary_lang value should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: No updates should be made to cde_primary_lang in the database. Warning 2350 "Agency is not authorized to submit data in this field: cde_primary_lang" should be posted in response XML.
+Test Case ID for Row 1997          : 43399
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36647.03.005
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43399
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43399
+Finished at                        : Thu Jun 15 10:01:36 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:36 EDT 2023
+Creating test case for Row #       : 1998
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 44
+Validation Time(ms)                : 430
+Validation status                  : PASS
+Short Desc                         : Not authorized warning for cde_primary_lang
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction from an agency other than MHO, HIX, SSA, PAC or HCF with a valid cde_primary_lang value.
+Expected Results                   : Warning message 2350 "Agency is not authorized to submit data in this field: cde_primary_lang" should be posted in response XML. No upddates should be made to cde_primary_lang field in t_re_base or t_re_addl_demo table.
+Test Case ID for Row 1998          : 43400
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36647.03.010
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43400
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43400
+Finished at                        : Thu Jun 15 10:01:41 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:41 EDT 2023
+Creating test case for Row #       : 1999
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 447
+Validation status                  : PASS
+Short Desc                         : Spoken language hierarchy
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Send transaction from HCF with spoken language value other than OTHER or ENGDEFStep 2: Send transaction from PAC (higher) with the same spoken language value for the same member.Step 3: Send transaction from SSA (lower) with a different spoken language value for the same member.Step 4: Send transaction from MHO or HIX (higher) with a different spoken language value for the same member.
+Expected Results                   : Step 1: Spoken language value should be stored in t_re_addl_demo table and t_re_base. Insert record added to audit table. Same is displayed on Member Information panel. Step 2: Agency for spoken language updated to PAC in t_re_addl_demo table. Update record for HCF added to audit table. No changes to spoken language value in the database or Member Information panel. Step 3: No updates made to spoken language agency or values in the database or Member Information panel. Step 4: Agency and value for spoken language updated with transaction agency and value in t_re_addl_demo table, t_re_base and Member Information panel. Update record for PAC added to audit table
+Test Case ID for Row 1999          : 43401
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36647.03.015
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43401
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43401
+Finished at                        : Thu Jun 15 10:01:45 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:45 EDT 2023
+Creating test case for Row #       : 2000
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 432
+Validation status                  : PASS
+Short Desc                         : Language exception_1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a HIX or MHO member with OTHER, ENGDEF or space/null for spoken and written language.Step 2: Send transaction from SSA with spoken and written langauge values other than OTHER,ENGDEF, space/null for the same member.
+Expected Results                   : Step 1: Undefined spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: Defined value from SSA should be updated in t_re_addl_demo and t_re_base tables. Same values displayed on Member Information panel.
+Test Case ID for Row 2000          : 43402
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36647.03.020
+Query Execution Time(ms)           : 36
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43402
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43402
+Finished at                        : Thu Jun 15 10:01:50 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:50 EDT 2023
+Creating test case for Row #       : 2001
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 428
+Validation status                  : PASS
+Short Desc                         : Language exception_2
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a PAC member with spoken and written language value other than OTHER, ENGDEF or space/null.Step 2: Send transaction from MHO or HIX with spoken and written langauge values as OTHER,ENGDEF or space/null for the same member.
+Expected Results                   : Step 1: Defined spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: No update to spoken and written langauge fields in the database or Member Information panel.
+Test Case ID for Row 2001          : 43403
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36647.03.025
+Query Execution Time(ms)           : 34
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43403
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43403
+Finished at                        : Thu Jun 15 10:01:55 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:01:55 EDT 2023
+Creating test case for Row #       : 2002
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 416
+Validation status                  : PASS
+Short Desc                         : Defined to defined from same agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a new member with a spoken and written language values other than OTHER, ENGDEF or space/null.Step 2: Send transaction from the same agency with a different spoken and written langauge value other than OTHER, ENGDEF or space/null.
+Expected Results                   : Step 1: Defined spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: Updated spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.
+Test Case ID for Row 2002          : 43404
+Query Execution Time(ms)           : 82
+Requirement ID                     : 36647.03.015
+Query Execution Time(ms)           : 44
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43404
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43404
+Finished at                        : Thu Jun 15 10:02:00 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:00 EDT 2023
+Creating test case for Row #       : 2003
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 545
+Validation status                  : PASS
+Short Desc                         : Defined to undefined from lower and same level agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a new member with a spoken and written language values other than OTHER, ENGDEF or space/null.Step 2: Send transaction from a same level agency with spoken and written langauge value as OTHER or ENGDEF.Step 3: Send transaction from a lower level agency with spoken and written langauge value as OTHER or ENGDEF.
+Expected Results                   : Step 1: Defined spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: No update to spoken and written langauge fields in the database or Member Information panel.Step 3: No update to spoken and written langauge fields in the database or Member Information panel.
+Test Case ID for Row 2003          : 43405
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36647.03.015
+Query Execution Time(ms)           : 26
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43405
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43405
+Finished at                        : Thu Jun 15 10:02:04 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:04 EDT 2023
+Creating test case for Row #       : 2004
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 432
+Validation status                  : PASS
+Short Desc                         : Defined to undefined from same agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a new member with a spoken and written language values other than OTHER, ENGDEF or space/null.Step 2: Send transaction from the same agency with a different spoken and written langauge value as OTHER or ENGDEF.
+Expected Results                   : Step 1: Defined spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: Updated undefined spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.
+Test Case ID for Row 2004          : 43406
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36647.03.015
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43406
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43406
+Finished at                        : Thu Jun 15 10:02:09 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:09 EDT 2023
+Creating test case for Row #       : 2005
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 412
+Validation status                  : PASS
+Short Desc                         : Undefined to defined from higher agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a new member from lower agency and spoken and written language values as OTHER or ENGDEF.Step 2: Send transaction from a higher agency with spoken and written langauge values other than OTHER or ENGDEF.
+Expected Results                   : Step 1: Undefined value sent for spoken and written language should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: Updated spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.
+Test Case ID for Row 2005          : 43407
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36647.03.015
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43407
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43407
+Finished at                        : Thu Jun 15 10:02:13 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:13 EDT 2023
+Creating test case for Row #       : 2006
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 416
+Validation status                  : PASS
+Short Desc                         : Undefined to defined from same level and same agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a new HIX member with a spoken and written language values as OTHER or ENGDEF.Step 2: Send transaction from MHO with a different spoken and written langauge value other than OTHER, ENGDEF or space/null.Step 3: Send transaction from MHO with another different spoken and written langauge value other than OTHER, ENGDEF or space/null.
+Expected Results                   : Step 1: Defined spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: Updated spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 3: Updated spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.
+Test Case ID for Row 2006          : 43408
+Query Execution Time(ms)           : 65
+Requirement ID                     : 36647.03.015
+Query Execution Time(ms)           : 26
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43408
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43408
+Finished at                        : Thu Jun 15 10:02:17 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:17 EDT 2023
+Creating test case for Row #       : 2007
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 424
+Validation status                  : PASS
+Short Desc                         : Undefined to undefined from higher agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a new member from lower agency and spoken and written language values other than OTHER or ENGDEF.Step 2: Send transaction from a higher agency with a different spoken and written langauge values other than OTHER or ENGDEF.
+Expected Results                   : Step 1: Undefined value sent for spoken and written language should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: Updated undefined spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.
+Test Case ID for Row 2007          : 43409
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36647.03.015
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43409
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43409
+Finished at                        : Thu Jun 15 10:02:22 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:22 EDT 2023
+Creating test case for Row #       : 2008
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 451
+Validation status                  : PASS
+Short Desc                         : Undefined to undefined from lower agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a new member from lower agency and spoken and written language values as OTHER or ENGDEF.Step 2: Send transaction from a lower agency with spoken and written langauge values other than OTHER or ENGDEF.
+Expected Results                   : Step 1: Undefined value sent for spoken and written language should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: No updates to spoken and written language values or agency stored in t_re_addl_demo, t_re_base table or Member Information panel.
+Test Case ID for Row 2008          : 43410
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36647.03.015
+Query Execution Time(ms)           : 26
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43410
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43410
+Finished at                        : Thu Jun 15 10:02:27 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:27 EDT 2023
+Creating test case for Row #       : 2009
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.03.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 522
+Validation status                  : PASS
+Short Desc                         : Undefined to undefined from same level and same agency
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create a new HIX member with a spoken and written language values as OTHER or ENGDEF.Step 2: Send transaction from MHO with a different spoken and written langauge values as OTHER.Step 3: Send transaction from MHO with another different spoken and written langauge values as ENGDEF.
+Expected Results                   : Step 1: Defined spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 2: Updated spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.Step 3: Updated spoken and written language values should be stored in t_re_addl_demo table and t_re_base. Same is displayed on Member Information panel.
+Test Case ID for Row 2009          : 43411
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36647.03.015
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43411
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43411
+Finished at                        : Thu Jun 15 10:02:31 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:31 EDT 2023
+Creating test case for Row #       : 2010
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Validation Time(ms)                : 410
+Validation status                  : PASS
+Short Desc                         : New English Proficiency field and values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate the following English Proficiency values and descriptions are added to the t_cde_english_proficiency table.Value: "VERWELL" Description: "Very well"Value: "WELL" Description: "Well"Value: "NOTWELL" Description: "Not well"Value: "NOTALL" Description: "Not at all"Value: "A-CNTA" Description: "Choose not to answer"Value: "D-KNOW" Description: "Don't Know".
+Expected Results                   : All new English Proficiency and descriptions shown in the t_cde_english_proficiency table.
+Test Case ID for Row 2010          : 43412
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36647.04.001
+Query Execution Time(ms)           : 42
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43412
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43412
+Finished at                        : Thu Jun 15 10:02:36 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:36 EDT 2023
+Creating test case for Row #       : 2011
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 442
+Validation status                  : PASS
+Short Desc                         : Test all English Proficiency vlaues
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Create a new MHO member English Proficiency data. Send update transactions with all the different English Proficiency values for the same member. Create a new HIX member English Proficiency data. Send update transactions with all the different English Proficiency values for the same member.
+Expected Results                   : All new disability fields and values are accepted and stored in t_re_addl_demo table for MHO and HIX members
+Test Case ID for Row 2011          : 43413
+Query Execution Time(ms)           : 68
+Requirement ID                     : 36647.04.005
+Query Execution Time(ms)           : 36
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43413
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43413
+Finished at                        : Thu Jun 15 10:02:41 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:41 EDT 2023
+Creating test case for Row #       : 2012
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 424
+Validation status                  : PASS
+Short Desc                         : Non Authorized agency sends cde_english_prof
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Validate if agency other than MHO & HIX sends cde_english_prof, new warning message "Agency is not authorized to submit data for cde_english_prof" is triggered and no updates are made to the field in the database.Send transaction for new or existing member with cde_english_prof field and value from any agency other than MHO & HIX
+Expected Results                   : DB:- No updates made to cde_english_prof fieldPost eligibility response XML:- Warning message "Agency is not authorized to submit data for cde_english_prof" should be triggered
+Test Case ID for Row 2012          : 43414
+Query Execution Time(ms)           : 83
+Requirement ID                     : 36647.04.010
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43414
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43414
+Finished at                        : Thu Jun 15 10:02:46 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:46 EDT 2023
+Creating test case for Row #       : 2013
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 442
+Validation status                  : PASS
+Short Desc                         : English Proficiency hierarchy_1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create member with cde_english_prof data stored in the DB from MHO.Step 2: Send transactions from HIX with the same English Proficiency value stored in the DB for the same member.Step 3: Send transactions from MHO with a different value than what is stored in the database for the same member.
+Expected Results                   : Step 1:DB:- English proficiency value stored in the t_re_addl_demo table and agency stored as MHO- Insert record added to audit table Step 2:- No changes to English proficiency value stored- Agency is updated to HIX in t_re_addl_demo table- Update record added to audit table for MHOStep 3:- Both value and agency updated in the database- Update record added to the audit table with HIX and previous value stored
+Test Case ID for Row 2013          : 43415
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36647.04.015
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43415
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43415
+Finished at                        : Thu Jun 15 10:02:50 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:50 EDT 2023
+Creating test case for Row #       : 2014
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 378
+Validation status                  : PASS
+Short Desc                         : English Proficiency hierarchy_2
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create member with cde_english_prof data stored in the DB from HIX.Step 2: Send transactions from MHO with the same English Proficiency value stored in the DB for the same member.Step 3: Send transactions from HIX with a different value than what is stored in the database for the same member.
+Expected Results                   : Step 1:DB:- English proficiency value stored in the database and agency stored as HIX - Insert record added to audit table Step 2:- No changes to English proficiency value stored- Agency is updated to MHO- Update record added to audit table for HIXStep 3:- Both value and agency updated in the database- Update record added to the audit table with MHO and previous value stored
+Test Case ID for Row 2014          : 43416
+Query Execution Time(ms)           : 65
+Requirement ID                     : 36647.04.015
+Query Execution Time(ms)           : 27
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43416
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43416
+Finished at                        : Thu Jun 15 10:02:54 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:54 EDT 2023
+Creating test case for Row #       : 2015
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : Blank/null English Proficiency-New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction for new MHO member with cde_english_prof value as blank/space.
+Expected Results                   : DB:- No records created in the database for cde_english_prof field.
+Test Case ID for Row 2015          : 43417
+Query Execution Time(ms)           : 76
+Requirement ID                     : 36647.04.020
+Query Execution Time(ms)           : 45
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43417
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43417
+Finished at                        : Thu Jun 15 10:02:59 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:02:59 EDT 2023
+Creating test case for Row #       : 2016
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 371
+Validation status                  : PASS
+Short Desc                         : Blank/null English Proficiency- Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create existing MHO or HIX member with cde_english_prof value stored in the database.Step 2: Send transaction for the same member from MHO with cde_english_prof field value as blank/space.Step 3: Send transaction for the same member from HIX with cde_english_prof field value as blank/space.
+Expected Results                   : Step 1:- English Proficiency value and agency stored in the database.Step 2:- No updates to cde_english_prof field in the database.Step 3:- No updates to cde_english_prof field in the database.
+Test Case ID for Row 2016          : 43418
+Query Execution Time(ms)           : 66
+Requirement ID                     : 36647.04.020
+Query Execution Time(ms)           : 26
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43418
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43418
+Finished at                        : Thu Jun 15 10:03:03 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:03:03 EDT 2023
+Creating test case for Row #       : 2017
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 453
+Validation status                  : PASS
+Short Desc                         : No English Proficiency fields-New member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction for new HIX member WITHOUT cde_english_prof field
+Expected Results                   : DB:- No records created in the database for cde_english_prof field.
+Test Case ID for Row 2017          : 43419
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36647.04.020
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43419
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43419
+Finished at                        : Thu Jun 15 10:03:07 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:03:07 EDT 2023
+Creating test case for Row #       : 2018
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 740
+Validation status                  : PASS
+Short Desc                         : No English Proficiency fields- Existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create existing MHO or HIX member with cde_english_prof data stored in the database.Step 2: Send transaction for the same member from MHO WITHOUT the cde_english_prof field.Step 3: Send transaction for the same member from HIX WITHOUT the cde_english_prof field.
+Expected Results                   : Step 1:- English Proficiency value and agency stored in the database.Step 2:- No updates to cde_english_prof field in the database.Step 3:- No updates to cde_english_prof field in the database.
+Test Case ID for Row 2018          : 43420
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36647.04.020
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43420
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43420
+Finished at                        : Thu Jun 15 10:03:13 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:03:13 EDT 2023
+Creating test case for Row #       : 2019
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 480
+Validation status                  : PASS
+Short Desc                         : Invalid English proficiency-new member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send transaction for new MHO or HIX member with invalid values for cde_english_prof.
+Expected Results                   : DB:- No updates made in the database for cde_english_prof. Post eligibility response XML:- Warning message "Invalid cde_english_prof code" should be triggered
+Test Case ID for Row 2019          : 43421
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36647.04.025
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43421
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43421
+Finished at                        : Thu Jun 15 10:03:17 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:03:17 EDT 2023
+Creating test case for Row #       : 2020
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.04.025') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 36
+Validation Time(ms)                : 426
+Validation status                  : PASS
+Short Desc                         : Invalid English proficiency-existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Step 1: Create MHO or HIX member with valid cde_english_prof data stored in the database.Step 2: Send transaction for the same member with an invalid value for cde_english_prof.
+Expected Results                   : Step 1:- English Proficiency value and agency stored in the database.Step 2: Post eligibility response XML:- Warning message "Invalid cde_english_prof code" should be triggered
+Test Case ID for Row 2020          : 43422
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36647.04.025
+Query Execution Time(ms)           : 28
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43422
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43422
+Finished at                        : Thu Jun 15 10:03:22 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:03:22 EDT 2023
+Creating test case for Row #       : 2021
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.06.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 52
+Validation Time(ms)                : 523
+Validation status                  : PASS
+Short Desc                         : Member extracts-multiple races
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Find member with mulitple race values.
+Expected Results                   : All race values should be sent in member extract with each value it it's own race segment.
+Test Case ID for Row 2021          : 43423
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36647.06.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 43423
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43423
+Finished at                        : Thu Jun 15 10:03:26 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:03:26 EDT 2023
+Creating test case for Row #       : 2022
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.06.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 442
+Validation status                  : PASS
+Short Desc                         : Member extracts-multiple ethnicities
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Find member with mulitple ethnicity values with or without AM-IND.
+Expected Results                   : All ethnicity values should be sent in all member extracts, including POPs, with each value it it's own ethnicity segment.
+Test Case ID for Row 2022          : 43424
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36647.06.005
+Query Execution Time(ms)           : 40
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 43424
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43424
+Finished at                        : Thu Jun 15 10:03:31 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:03:31 EDT 2023
+Creating test case for Row #       : 2023
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.06.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 426
+Validation status                  : PASS
+Short Desc                         : Member extracts-new language values
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Find member with new spoken and written language values and validate they are sent in member extracts
+Expected Results                   : All new spoken and written language values should be sent in members extracts.
+Test Case ID for Row 2023          : 43425
+Query Execution Time(ms)           : 74
+Requirement ID                     : 36647.06.010
+Query Execution Time(ms)           : 33
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 43425
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43425
+Finished at                        : Thu Jun 15 10:03:35 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:03:35 EDT 2023
+Creating test case for Row #       : 2024
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.06.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 52
+Validation Time(ms)                : 482
+Validation status                  : PASS
+Short Desc                         : Schema validation
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Send HIX transaction with the any new valid values for the following fields.CDE_DISABILITY_DEAFCDE_DISABILITY_BLINDCDE_DISABILITY_REMEMBCDE_DISABILITY_WALKINGCDE_DISABILITY_DRESSINGCDE_DISABILITY_ERRANDSCDE_ENGLISH_PROFCDE_PRIMARY_LANGCDE_LANG_WRITTEN
+Expected Results                   : Transaction passes schema validation and processes successfully.
+Test Case ID for Row 2024          : 43426
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36647.06.011
+Query Execution Time(ms)           : 35
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 43426
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43426
+Finished at                        : Thu Jun 15 10:03:40 EDT 2023
+****************************************************
+Started at                         : Thu Jun 15 10:03:40 EDT 2023
+Creating test case for Row #       : 2025
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36647.06.015') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 466
+Validation status                  : PASS
+Short Desc                         : New language values for 834s
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 904
+Owner                              : KATHY LAU
+Grouping                           : Batch
+Long Desc                          : Find member with new spoken and written language values and validate they are sent on 834 file.
+Expected Results                   : Segment = LUI for language reported on 834 file for the  following new language valuesNEPALE = NEPBRAILL = BRLCHI-TR = CTRCHI-SI = CSIC-MAND= CMAC-CANT = CCA
+Test Case ID for Row 2025          : 43427
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36647.06.015
+Query Execution Time(ms)           : 41
+Requirement Type                   : EDI/OXi
+SAK Requirement Type               : 22
+Requirement linked for test case   : 43427
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43427
+Finished at                        : Thu Jun 15 10:03:44 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 15/Jun/2023 10:03:45AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

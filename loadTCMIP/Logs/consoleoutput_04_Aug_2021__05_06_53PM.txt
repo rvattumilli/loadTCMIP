@@ -1,0 +1,44 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 04/Aug/2021 05:06:53PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Creating test case for TC Row : 453
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 92
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MSTD member has a DOB change
+Long Desc                     : Step 1: Find MSTD member ids that has a DOB change; Step 2: Setup the need for an adjustment for the members
+Expected Results              : Members should get adjusted after the recon run.
+Grouping                      : Batch
+Associated WI/Defect/Change Order: 35387
+Associated WI Type            : Defect
+Test Case ID for Row 453      : 40269
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 04/Aug/2021 05:07:19PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 0, Failures: 1, Skips: 0
+===============================================
+

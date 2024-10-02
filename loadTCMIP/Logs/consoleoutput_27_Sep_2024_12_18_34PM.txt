@@ -1,0 +1,89 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 27/Sep/2024 12:18:34PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 09/17/2024
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 247
+Total No.of Rows fetched              : 2
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Fri Sep 27 12:18:41 EDT 2024
+Creating test case for Row #          : 5480
+Validation Time(ms)                   : 551
+TC Validation status                  : PASS
+Short Desc                            : Member with existing record in MDS LOC
+Env                                   : M
+Subsystem                             : Member Management
+SAK Participant                       : 866
+Owner                                 : ROSINA THAKURI
+Grouping                              : Batch
+Long Desc                             : Member already has record in MDS LOC which is not historied
+Expected Results                      : NF should not be transferred to MDS LOC
+Test Case ID for Row 5480             : 47747
+Requirement ID                        : 36939.01.001
+Requirement Type                      : Database
+SAK Requirement Type                  : 21
+Requirement linked for test case      : 47747
+Notebook                              : MDS
+Business Function                     : MDS
+Notebook/BF linked for test case      : 47747
+Finished at                           : Fri Sep 27 12:18:46 EDT 2024
+*****************************************************************
+Started at                            : Fri Sep 27 12:18:46 EDT 2024
+Creating test case for Row #          : 5481
+Validation Time(ms)                   : 554
+TC Validation status                  : PASS
+Short Desc                            : Member with historied existing record in MDS LOC
+Env                                   : M
+Subsystem                             : Member Management
+SAK Participant                       : 866
+Owner                                 : ROSINA THAKURI
+Grouping                              : Batch
+Long Desc                             : Member already has record in MDS LOC which is historied
+Expected Results                      : NF should be transferred to MDS LOC
+Test Case ID for Row 5481             : 47748
+Requirement ID                        : 36939.01.001
+Requirement Type                      : Database
+SAK Requirement Type                  : 21
+Requirement linked for test case      : 47748
+Notebook                              : MDS
+Business Function                     : MDS
+Notebook/BF linked for test case      : 47748
+Finished at                           : Fri Sep 27 12:18:51 EDT 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 27/Sep/2024 12:18:51PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

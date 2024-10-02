@@ -1,0 +1,47 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 31/Aug/2022 04:23:24PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Wed Aug 31 16:23:34 EDT 2022
+Creating test case for Row #       : 1093
+Short Desc                         : Diagnosis Code Major/Minor Catg
+Env                                : I
+Subsystem                          : Reference
+SAK Participant                    : 81
+Owner                              : RANDY LADDERBUSH
+Grouping                           : DIAGNOSIS AND CODE RELATED VALID
+Long Desc                          : MMIS to capture the major and minor categories for reference information as part of their diagnosis reference update process. 2 new columns will be added to t_diagnosis: dsc_minor_cat and dsc_major_cat.A new ad-hoc program will be written to populate the new columns using the classification tables: t_bnft_group_std and t_group_std_bnft.   This request is coming from the Data Warehouse.
+Expected Results                   : A new ad-hoc program will be written to populate the new columns using the classification tables: t_bnft_group_std and t_group_std_bnft.  It will run only when someone runs it manually. The data should then be passed down to the DW.  The DW can then store the information in their reference tables and update it as information is received from MMIS.
+Test Case ID for Row 1093          : 41908
+Associated Req ID                  : 36259.001
+Requirement linked for test case   : 41908
+Notebook                           : ProjectCY22-5
+Business Function                  : ProjectCY22-5
+Notebook/BF linked for test case   : 41908
+Finished at                        : Wed Aug 31 16:23:38 EDT 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 31/Aug/2022 04:23:39PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

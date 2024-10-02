@@ -1,0 +1,668 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 14/Sep/2021 03:14:30PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Started at: Tue Sep 14 15:14:43 EDT 2021
+Creating test case for TC Row : 613
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices for new members with exempt conditions
+Long Desc                     : When new member is enrolled with exempt confitions verify  CE notices should generate after the notice job.
+Expected Results              : CE notices generated.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 613      : 40505
+Notebook/Business function linked for test case 40505
+Work item linked for test case 40505
+Finished at: Tue Sep 14 15:14:59 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:14:59 EDT 2021
+Creating test case for TC Row : 614
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices for new members with non-exempt conditions
+Long Desc                     : When new member is enrolled with non-exempt confitions, verify  CC notices should generate after the notice job.
+Expected Results              : CS notices generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 614      : 40506
+Notebook/Business function linked for test case 40506
+Work item linked for test case 40506
+Finished at: Tue Sep 14 15:15:14 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:15:14 EDT 2021
+Creating test case for TC Row : 615
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent if DOB changes to < 21
+Long Desc                     : When member receives DOB change, verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 615      : 40507
+Notebook/Business function linked for test case 40507
+Work item linked for test case 40507
+Finished at: Tue Sep 14 15:15:30 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:15:30 EDT 2021
+Creating test case for TC Row : 616
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member no longer is 21
+Long Desc                     : i) If members turns >21 and now has non-exempt conditions before the month-end, no CE or CC notices should generate 
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 616      : 40508
+Notebook/Business function linked for test case 40508
+Work item linked for test case 40508
+Finished at: Tue Sep 14 15:15:46 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:15:46 EDT 2021
+Creating test case for TC Row : 617
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent if member enrolls to MH Limited plans
+Long Desc                     : When member enrolls to any of the MassHealth Limited plans such as, 
+o 37 - Family-Emergency Services Only 
+o 38 - Disabled-Emergency Services Only 
+o 68 - Undocumented Aged Aliens 
+o 69 - Undocumented Disabled Aliens 
+o AX - Limited with CMSP 
+o X3 - Limited 
+o X4 - Limited (Disabled) 
+o X5 - Limited (Elder) 
+o X6 - Limited (Elder Disabled) 
+verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 617      : 40509
+Notebook/Business function linked for test case 40509
+Work item linked for test case 40509
+Finished at: Tue Sep 14 15:16:02 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:16:02 EDT 2021
+Creating test case for TC Row : 618
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member no longer enrolled to MH Limited
+Long Desc                     : i) If members are no longer enrolled to any of the MassHealth Limited plans (37, 38, 68, 69, AX, X3, X4, X5, X6) and now has non-exempt conditions before the month-end, no CE or CC notices should generate. 
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 618      : 40510
+Notebook/Business function linked for test case 40510
+Work item linked for test case 40510
+Finished at: Tue Sep 14 15:16:18 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:16:18 EDT 2021
+Creating test case for TC Row : 619
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent if member enrolls to EAEDC Program
+Long Desc                     : When member enrolls to EAEDC Program (04 - EAEDC) 
+verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 619      : 40511
+Notebook/Business function linked for test case 40511
+Work item linked for test case 40511
+Finished at: Tue Sep 14 15:16:34 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:16:34 EDT 2021
+Creating test case for TC Row : 620
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member no longer enrolled to  EAEDC Program
+Long Desc                     : i) If members are no longer enrolled to EAEDC Program (04 - EAEDC)) and now has non-exempt conditions before the month-end, no CE or CC notices should generate. 
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 620      : 40512
+Notebook/Business function linked for test case 40512
+Work item linked for test case 40512
+Finished at: Tue Sep 14 15:16:49 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:16:49 EDT 2021
+Creating test case for TC Row : 621
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent for Former Foster-Care Individuals plans
+Long Desc                     : When member enrolls to any of the Former Foster-Care Individual plans such as, 
+o VV - DSS Aging Out 
+o VW - SF DCF (DSS) Aging Out 
+o B1 - Former Foster Care Children-Standard 
+o B4- Former Foster Children Premium Assistance 
+ 
+verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 621      : 40513
+Notebook/Business function linked for test case 40513
+Work item linked for test case 40513
+Finished at: Tue Sep 14 15:17:06 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:17:06 EDT 2021
+Creating test case for TC Row : 622
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notice if member no longer has Former Foster Care plan
+Long Desc                     : i) If members are no longer enrolled to any of the Former Foster-Care Individual plans (VV, VW, B1, B4) and now has non-exempt conditions before the month-end, no CE or CC notices should generate.  
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 622      : 40514
+Notebook/Business function linked for test case 40514
+Work item linked for test case 40514
+Finished at: Tue Sep 14 15:17:21 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:17:21 EDT 2021
+Creating test case for TC Row : 623
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent for ethnicity update to AI/AN
+Long Desc                     : When member updates ethnicity to AI/AN, verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 623      : 40515
+Notebook/Business function linked for test case 40515
+Work item linked for test case 40515
+Finished at: Tue Sep 14 15:17:36 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:17:36 EDT 2021
+Creating test case for TC Row : 624
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent for members receiving SSI
+Long Desc                     : When member enrolls to any of the SSI benefits from SSA such as, 
+o 01 - SSI Aged 
+o 03 - SSI Disabled  
+o 05 - Aged (SSI-MAOA) Standard 
+o 07 - Disabled (SSI-MAOA) 
+o 14 - MCB SSI 
+verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 624      : 40516
+Notebook/Business function linked for test case 40516
+Work item linked for test case 40516
+Finished at: Tue Sep 14 15:17:51 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:17:51 EDT 2021
+Creating test case for TC Row : 625
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member no longer receives SSI benefits
+Long Desc                     : i) If members are no longer enrolled to any of the SSI benefit plans (01, 03, 05, 07, 14) and now has non-exempt conditions before the month-end, no CE or CC notices should generate. 
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 625      : 40517
+Notebook/Business function linked for test case 40517
+Work item linked for test case 40517
+Finished at: Tue Sep 14 15:18:07 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:18:07 EDT 2021
+Creating test case for TC Row : 626
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent for members receiving TAFDC
+Long Desc                     : When member enrolls to any of the TAFDC benefits from DTA such as, 
+o 02 - TAFDC  
+o 06 - TAFDC 
+o 08 - Multi Assistance Unit 
+verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 626      : 40518
+Notebook/Business function linked for test case 40518
+Work item linked for test case 40518
+Finished at: Tue Sep 14 15:18:23 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:18:23 EDT 2021
+Creating test case for TC Row : 627
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member no longer receives TAFDC benefits
+Long Desc                     : i) If members are no longer enrolled to any of the TAFDC benefit plans (02, 06, 08) and now has non-exempt conditions before the month-end, no CE or CC notices should generate. 
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 627      : 40519
+Notebook/Business function linked for test case 40519
+Work item linked for test case 40519
+Finished at: Tue Sep 14 15:18:39 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:18:39 EDT 2021
+Creating test case for TC Row : 628
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent for members in Adoption/FosterCare
+Long Desc                     : When member enrolls to any of the Adoption Assistance and Foster Care Maintenance benefits such as, 
+o VV - Standard-DWW Chaffee Kid-Federally funded 
+o VW - Standard-DWW Chaffee Kid-State funded 
+o VY - State Adoption Subsidy 
+o VZ - State Foster Care Subsidy 
+o B1 - Former Foster Care Children-Standard 
+o B2 - Hospital Presumptive Eligibility-Former Foster Care Children 
+o B4 - Former Foster Children Premium Assistance 
+ 
+ 
+verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 628      : 40520
+Notebook/Business function linked for test case 40520
+Work item linked for test case 40520
+Finished at: Tue Sep 14 15:18:54 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:18:54 EDT 2021
+Creating test case for TC Row : 629
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member no longer receives Adoption/FosterCare
+Long Desc                     : i) If members are no longer enrolled to any of the Adoption Assistance and Foster Care Maintenance benefit plans (VV, VW, VY, VZ, B1, B2, B4) and now has non-exempt conditions before the month-end, no CE or CC notices should generate. 
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 629      : 40521
+Notebook/Business function linked for test case 40521
+Work item linked for test case 40521
+Finished at: Tue Sep 14 15:19:10 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:19:10 EDT 2021
+Creating test case for TC Row : 630
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent for members with Refugee benefits
+Long Desc                     : When member enrolls to the Refugee Resettlement Program (00-Standard-Refugees), verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 630      : 40522
+Notebook/Business function linked for test case 40522
+Work item linked for test case 40522
+Finished at: Tue Sep 14 15:19:25 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:19:25 EDT 2021
+Creating test case for TC Row : 631
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member no longer receives Refugee benefits
+Long Desc                     : i) If members are no longer enrolled to Refugee Resettlement Program (00) and now has non-exempt conditions before the month-end, no CE or CC notices should generate. 
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 631      : 40523
+Notebook/Business function linked for test case 40523
+Work item linked for test case 40523
+Finished at: Tue Sep 14 15:19:40 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:19:40 EDT 2021
+Creating test case for TC Row : 632
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent for members in HSN and CMSP
+Long Desc                     : When member enrolls to any of the HSN and CMSP Plans 
+o AJ - Enrolled in PACE 
+o AY - CMSP Only Benefit  
+o AX - Limited with CMSP  
+o BA - CMSP over 400% FPL  
+o Y2 - HSN Presumptive Full 
+o X1 - CMSP/Ltd Benefits without HSN fail verif 
+o Z2 - HSN Presumptive Partial 
+o Z3 - Auto-Disenroll - Medicare A or B 
+o Z4 - Auto-Disenroll - Mutually Exclusive Program 
+o 1B - QHP + APTC + State Wrap + CSR1 + HSN Par 
+o 1C - QHP + APTC + State Wrap + CSR1 + HSN Ful 
+o 2B - QHP + APTC + State Wrap + CSR2 + HSN Par 
+o 2C - QHP + APTC + State Wrap + CSR2 + HSN Ful 
+o 3B - QHP + APTC + State Wrap + CSR3 + HSN Par 
+o 6E - QHP + APTC + State Wrap + HSN Partial 
+o 6T - QHP + APTC + SF State Wrap + HSN Partial 
+o 7L - QHP + APTC + HSN + Limited    
+o 9G - QHP +  HSN + Limited 
+o 9H - QHP +  HSN + Limited 
+o 9I - QHP +  HSN Partial 
+, verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 632      : 40524
+Notebook/Business function linked for test case 40524
+Work item linked for test case 40524
+Finished at: Tue Sep 14 15:19:56 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:19:56 EDT 2021
+Creating test case for TC Row : 633
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member no longer in HSN and CMSP
+Long Desc                     : i) If members are no longer enrolled to any of the HSN and CMSP Plans (AJ, AY, AX, BA, Y2, X1, Z2, Z3, Z4, 1B, 1C, 2B, 2C, 3B, 6E, 6T, 7L, 9G, 9H, 9I) and now has non-exempt conditions before the month-end, no CE or CC notices should generate. 
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 633      : 40525
+Notebook/Business function linked for test case 40525
+Work item linked for test case 40525
+Finished at: Tue Sep 14 15:20:12 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:20:12 EDT 2021
+Creating test case for TC Row : 634
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent for members in BRE exempt plans
+Long Desc                     : When member enrolls to any of the current BRE exempt Plans such as 
+o 1X - QHP w/PTC null 
+o 1Y  - QHP w/PTC null 
+o AP - Partial Uncompensated Care (with family deductible)  
+o AQ - Full Uncompensated Care  
+o C1 - Inmate Standard  
+o C2 - Inmate CarePlus 
+o C3 - Inmate Limited  
+o W1 - Hospital PE ? Standard Children 
+o W2 - Hospital PE ? Standard Pregnant  
+o W3 - Hospital PE ? Standard Parent  
+o W4 - Hospital PE ? Standard Benchmark  
+o W5 - Hospital PE ? Standard Benchmark 2  
+o W6 - Hospital PE ? HIV Family Assistance  
+o W7 - Hospital PE ? BCCTP  
+o W8 - Hospital PE ? NQP/UND Pregnant Women  
+o W9 - SF Hospital PE ? NQP Children  
+o X2 - CMSP  
+, verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 634      : 40526
+Notebook/Business function linked for test case 40526
+Work item linked for test case 40526
+Finished at: Tue Sep 14 15:20:28 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:20:28 EDT 2021
+Creating test case for TC Row : 635
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member no longer in BRE exempt plans
+Long Desc                     : i) If members are no longer enrolled to any of the BRE exempt plans Plans (1X, 1Y, AP, AQ, C1, C2, C3, W1, W2, W3, W4, W5, W6, W7, W8, W9, X2) and now has non-exempt conditions before the month-end, no CE or CC notices should generate. 
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 635      : 40527
+Notebook/Business function linked for test case 40527
+Work item linked for test case 40527
+Finished at: Tue Sep 14 15:20:43 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:20:43 EDT 2021
+Creating test case for TC Row : 636
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent for members gets <current FPL%
+Long Desc                     : When member FPL is <= current FPL% (50%), verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job, the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 636      : 40528
+Notebook/Business function linked for test case 40528
+Work item linked for test case 40528
+Finished at: Tue Sep 14 15:20:59 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:20:59 EDT 2021
+Creating test case for TC Row : 637
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CS notices if member FPL > current FPL%
+Long Desc                     : i) If member FPL gets updated to > current FPL% (50%) and now has non-exempt conditions before the month-end, no CE or CC notices should generate.  
+  
+The exempt condition of the members should remain Y.  
+  
+ii) When the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month, verify CE notices should generate from the notice job. 
+And if the member also had received a copay cap change in the same month then only one copay notice should generate.
+Expected Results              : i) CE or CC notices not generated.   
+  
+ii) CC notices generated. 
+But if member had copay cap change as well then only one CC notice will be generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 637      : 40529
+Notebook/Business function linked for test case 40529
+Work item linked for test case 40529
+Finished at: Tue Sep 14 15:21:15 EDT 2021
+************************************************************************
+Started at: Tue Sep 14 15:21:15 EDT 2021
+Creating test case for TC Row : 638
+Notebook                      : Project 22.01-fixes
+Business Function             : Project 22.01-fixes
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices if member is >65 years old
+Long Desc                     : i) Verify CE notices should not get generated if non-exempt member turns 65 or more.  
+  
+The exempt condition of the members should remain N.  
+  
+Ii) Verify CC notices should not generate for the same member when the monthly BRE runs
+Expected Results              : i) CE notices not generated.   
+  
+ii) CC notices not generated.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 638      : 40530
+Notebook/Business function linked for test case 40530
+Work item linked for test case 40530
+Finished at: Tue Sep 14 15:21:31 EDT 2021
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 14/Sep/2021 03:21:32PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

@@ -1,0 +1,941 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 13/Jun/2024 10:15:19AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Total No.of Columns fetched        : 6
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 295
+Total No.of Rows fetched           : 36
+*****************************************************************
+Started at                         : Thu Jun 13 10:15:24 EDT 2024
+Creating test case for Row #       : 5301
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 470
+TC Validation status               : PASS
+Short Desc                         : Security  create provider with email address already in active AIMS account.
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Under Azure authentication, MMIS Security attempts to create a provider user with an email address already existing in an active AIMS account.
+Expected Results                   : The new user add fails because  the email address already exists
+Test Case ID for Row 5301          : 47436
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47436
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47436
+Finished at                        : Thu Jun 13 10:15:29 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:15:29 EDT 2024
+Creating test case for Row #       : 5302
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 517
+TC Validation status               : PASS
+Short Desc                         : Internal users are not affected
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : As a regression test, verify that internal users are not affected by the implementation of Primary User and Backup User roles.
+Expected Results                   : Internal users can be created without any errors.
+Test Case ID for Row 5302          : 47437
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47437
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47437
+Finished at                        : Thu Jun 13 10:15:33 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:15:33 EDT 2024
+Creating test case for Row #       : 5303
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 477
+TC Validation status               : PASS
+Short Desc                         : Primary User & Backup User" role name is displayed
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that the "Primary User & Backup User" role name is displayed per requirement in the following panels: Base App - [Roles] - [Security] - [Roles] Base App - [Roles] - [Security] - [Roles] - [Roles Maintenance] Base App - [Users] - [User Maintenance] - [Providers] -[Provider Maintenance] - [Provider Roles] - [Role Maintenance]
+Expected Results                   : Primary User & Backup User role shall be displayed in the Role Maintenance panel.
+Test Case ID for Row 5303          : 47438
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.01.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47438
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47438
+Finished at                        : Thu Jun 13 10:15:37 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:15:37 EDT 2024
+Creating test case for Row #       : 5304
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 467
+TC Validation status               : PASS
+Short Desc                         : Scurity users cannot add more than 2 POSC primary users
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that security users cannot add more than 2 POSC users to the "Primary User & Backup User" role for the same PID/SL in the base application, for the same effective period.
+Expected Results                   : The following error message shall be displayed for PID/SL that is extended to 2 or more users. You have exceeded the number of Primary Users per PID/SL. No more than two primary users may be assigned per PID/SL. <<Provider ID and SL>>
+Test Case ID for Row 5304          : 47439
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47439
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47439
+Finished at                        : Thu Jun 13 10:15:42 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:15:42 EDT 2024
+Creating test case for Row #       : 5305
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 448
+TC Validation status               : PASS
+Short Desc                         : Scurity users can add > 2 POSC users other roles
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that security users can add more than 2 POSC users to any role except the "Primary User & Backup User" role for the same PID/SL in the base application.
+Expected Results                   : More than 2 POSC users will possess any service (or Role) except for the Primary User & Backup User for a particular PID/SL.
+Test Case ID for Row 5305          : 47440
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47440
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47440
+Finished at                        : Thu Jun 13 10:15:46 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:15:46 EDT 2024
+Creating test case for Row #       : 5306
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 496
+TC Validation status               : PASS
+Short Desc                         : Inactive providers  don't count towards 2 primary limit
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : In Base Securiry panel, verify that inactive Web Portal Users do not count towards the limit of the "Primary User & Backup User" count.
+Expected Results                   : The inactive Web Portal users will not count towards the limit.
+Test Case ID for Row 5306          : 47441
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47441
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47441
+Finished at                        : Thu Jun 13 10:15:50 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:15:50 EDT 2024
+Creating test case for Row #       : 5307
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 482
+TC Validation status               : PASS
+Short Desc                         : Validation error appears while reactivating primary user when 2
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : In Base Security User panel, verify that the validation error message appears while reactivating the User with the "Primary User & Backup User" role while the limit is exceeded.
+Expected Results                   : The following error message shall be displayed when reactivating the User: You have exceeded the number of Primary Users per PID/SL. No more than two primary users may be assigned per PID/SL. <<Provider ID and SL>>
+Test Case ID for Row 5307          : 47442
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47442
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47442
+Finished at                        : Thu Jun 13 10:15:55 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:15:55 EDT 2024
+Creating test case for Row #       : 5308
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 469
+TC Validation status               : PASS
+Short Desc                         : Providers w expired  "Primary User ." role don't count for limit
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : In Base Security panel, Verify that Web Portal Users with an expired role do not count towards the limit of the "Primary User & Backup User" count.
+Expected Results                   : The Web Portal user with an expired role will not count towards the limit. 
+Test Case ID for Row 5308          : 47443
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47443
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47443
+Finished at                        : Thu Jun 13 10:15:59 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:15:59 EDT 2024
+Creating test case for Row #       : 5309
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 493
+TC Validation status               : PASS
+Short Desc                         : Providers future "Primary User ." role don't count for limit
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that Web Portal Users with a future-dated role do not count towards the limit of the "Primary User & Backup User" count.
+Expected Results                   : The Web Portal user with an future-dated role will not count towards the limit. 
+Test Case ID for Row 5309          : 47444
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47444
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47444
+Finished at                        : Thu Jun 13 10:16:03 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:03 EDT 2024
+Creating test case for Row #       : 5310
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 461
+TC Validation status               : PASS
+Short Desc                         : No errors- users with no overlapping primary user role
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify the following user scenario: verify users with no overlapping primary user role dates for the same PID/SL.
+Expected Results                   : No error when last entered
+Test Case ID for Row 5310          : 47445
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47445
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47445
+Finished at                        : Thu Jun 13 10:16:08 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:08 EDT 2024
+Creating test case for Row #       : 5311
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 462
+TC Validation status               : PASS
+Short Desc                         : Error when adding third primary for same period
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify the following user scenario: verify two users with overlapping primary user role dates for the same PID/SL and adding another primary user for the period
+Expected Results                   : Error message is displayed since two users are previously assigned to the primary user role.  Role dates cannot overlap since a proposed user cannot be primary if two users already contain the primary role for the same PID.
+Test Case ID for Row 5311          : 47446
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47446
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47446
+Finished at                        : Thu Jun 13 10:16:12 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:12 EDT 2024
+Creating test case for Row #       : 5312
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 476
+TC Validation status               : PASS
+Short Desc                         : Error when extending third primary for same period
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that the validation error message appears while extending the role end date, so that it is no longer expired, while the limit of "Primary User & Backup User" has already been reached.
+Expected Results                   : The following error message shall be displayed when reactivating the User: You have exceeded the number of Primary Users per PID/SL. No more than two primary users may be assigned per PID/SL. <<Provider ID and SL>>
+Test Case ID for Row 5312          : 47447
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47447
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47447
+Finished at                        : Thu Jun 13 10:16:16 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:16 EDT 2024
+Creating test case for Row #       : 5313
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 413
+TC Validation status               : PASS
+Short Desc                         : "Primary Provider User ID" checkbox ticked - primary role saved
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that after associating a Web Provider Portal user with the role "Primary User & Backup User", the "Primary Provider User ID" checkbox will automatically be checked upon successful save.
+Expected Results                   : Primary Provider User Id checkbox shall be displayed as read only and it should be checked if the Primary User & Backup User role is assigned otherwise should only be read only and not checked. Verify that the column T_ANALYST_PROVIDERS.IND_PRIMARY_USER is set to 1 after the Primary User & Backup User is assigned for the selected ID_CLERK.
+Test Case ID for Row 5313          : 47448
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47448
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47448
+Finished at                        : Thu Jun 13 10:16:21 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:21 EDT 2024
+Creating test case for Row #       : 5314
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 725
+TC Validation status               : PASS
+Short Desc                         : "Primary Provider User ID" checkbox unaffected other role saved
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that after assigning a Web Provider Portal user with a role except the "Primary User & Backup User" role, the "Primary Provider User ID" checkbox will remain unchecked upon successful save.
+Expected Results                   : The Primary Provider User ID checkbox will remain unchecked.
+Test Case ID for Row 5314          : 47449
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47449
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47449
+Finished at                        : Thu Jun 13 10:16:26 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:26 EDT 2024
+Creating test case for Row #       : 5315
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 469
+TC Validation status               : PASS
+Short Desc                         : "Primary Provider User ID" checkbox blanked-primary role deleted
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that after deleting the "Primary User & Backup User" role from a Web Provider Portal user, the "Primary Provider User ID" checkbox will automatically be unchecked upon successful save.
+Expected Results                   : The Primary Provider User ID checkbox is unchecked upon role deletion. NOTEL IT IS PREFERRED TO END_DATE rather than DELETE a role.
+Test Case ID for Row 5315          : 47450
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47450
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47450
+Finished at                        : Thu Jun 13 10:16:30 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:30 EDT 2024
+Creating test case for Row #       : 5316
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 478
+TC Validation status               : PASS
+Short Desc                         : Can reassign primary role to another PID/SL user
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that security users can reassign the "Primary User & Backup User" role by removing it from one POSC user and assigning it to another POSC user within the base application.
+Expected Results                   : The Primary User and Backup user role can be re-assigned for a web portal user if it is removed from another user's PID/SL.
+Test Case ID for Row 5316          : 47451
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47451
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47451
+Finished at                        : Thu Jun 13 10:16:35 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:35 EDT 2024
+Creating test case for Row #       : 5317
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 504
+TC Validation status               : PASS
+Short Desc                         : Non "PrimaryUser" role assignment when 2 primaries
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that security users can assign some other role besides "Primary User & Backup User" role to a Web Portal Provider User within the base app when two have the primary role already.
+Expected Results                   : The other Role (besides Primary User & Backup User) will be assigned to the Web Portal Provider user.
+Test Case ID for Row 5317          : 47452
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47452
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47452
+Finished at                        : Thu Jun 13 10:16:39 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:39 EDT 2024
+Creating test case for Row #       : 5318
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 476
+TC Validation status               : PASS
+Short Desc                         : Security User Providers Help panel displays  updated header text
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify Security User Providers Help panel displays the updated header text in the online help page.
+Expected Results                   : Help panel shall be displayed as specified in requirements. See document Base Online Help
+Test Case ID for Row 5318          : 47453
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47453
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47453
+Finished at                        : Thu Jun 13 10:16:43 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:43 EDT 2024
+Creating test case for Row #       : 5319
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 489
+TC Validation status               : PASS
+Short Desc                         : Primary Provider User ID field help text
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify the Primary Provider User ID field help text displays the updated text.
+Expected Results                   : Text field shall be displayed as specified per requirement. See document Base Online Help
+Test Case ID for Row 5319          : 47454
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.02.005
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 47454
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47454
+Finished at                        : Thu Jun 13 10:16:48 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:48 EDT 2024
+Creating test case for Row #       : 5320
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 826
+TC Validation status               : PASS
+Short Desc                         : Primary provider create subordinate with email already in active AIMS account.
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : Under Azure authentication, a POSC primary provider user attempts to edd a  subordinate user with an email address already existing in an active AIMS account.
+Expected Results                   : The new user add fails because  the email address already exists
+Test Case ID for Row 5320          : 47455
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47455
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47455
+Finished at                        : Thu Jun 13 10:16:53 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:53 EDT 2024
+Creating test case for Row #       : 5321
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 518
+TC Validation status               : PASS
+Short Desc                         : Chgs  to primary user don't impact provider enrollment process
+Env                                : I
+Subsystem                          : General System
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROV. ENROLLMENT
+Long Desc                          : As part of the regression testing, verify that changes made to the primary user do not affect the provider enrollment process.
+Expected Results                   : The provider enrollment process shall result in the creation of the ATN number. After the enrollment process is approved and a provider and service location are issued, the Primary Provider User ID shall not be checked and still hold a read-only value in Base Security panel.
+Test Case ID for Row 5321          : 47456
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47456
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47456
+Finished at                        : Thu Jun 13 10:16:58 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:16:58 EDT 2024
+Creating test case for Row #       : 5322
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 526
+TC Validation status               : PASS
+Short Desc                         : Webservice ExtProvEnroll is not affected
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROV. ENROLLMENT
+Long Desc                          : As a regression test, verify that provider enrollment through ExtProvEnroll is not affected by the primary user changes.
+Expected Results                   : Provider id will be issued with no errors due to provider enrollment changes
+Test Case ID for Row 5322          : 47457
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47457
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47457
+Finished at                        : Thu Jun 13 10:17:02 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:02 EDT 2024
+Creating test case for Row #       : 5323
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 480
+TC Validation status               : PASS
+Short Desc                         : Base-created primaries log into POSC and Manage Subordinates
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : As a regression test, verify that web portal users created through the base application with the "Primary User & Backup User" role can login to POSC and access the "Manage Subordinate Accounts" panel.
+Expected Results                   : Web portal users assigned to the Primary User and Backup User shall have access to the following panels [Administer Account] - [Manage Subordinate Accounts]  [Subordinate Search] [Add New Subordinate] [Link Subordinate] [Update Subordinate]
+Test Case ID for Row 5323          : 47458
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47458
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47458
+Finished at                        : Thu Jun 13 10:17:07 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:07 EDT 2024
+Creating test case for Row #       : 5324
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 473
+TC Validation status               : PASS
+Short Desc                         : POSC-created subordinates can POSC but not Manage Subordinates
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : As a regression test, verify that the subordinate users created through the POSC Application without the "Provider User & Backup User" can access the POSC Application but are restricted from the Manage Subordinate Accounts Panel
+Expected Results                   : The created subordinate User is able to successfully log into the POSC application and does not have access to the "Manage Subordinate Accounts" panel.
+Test Case ID for Row 5324          : 47459
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47459
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47459
+Finished at                        : Thu Jun 13 10:17:11 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:11 EDT 2024
+Creating test case for Row #       : 5325
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 451
+TC Validation status               : PASS
+Short Desc                         : In POSC Manage Subordinates panel, verify that inactive Web Port
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : In POSC Manage Subordinates panel, verify that inactive Web Portal Users do not count towards the limit of the "Primary User & Backup User" count.
+Expected Results                   : The inactive Web Portal users will not count towards the limit.
+Test Case ID for Row 5325          : 47460
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47460
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47460
+Finished at                        : Thu Jun 13 10:17:15 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:15 EDT 2024
+Creating test case for Row #       : 5326
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 430
+TC Validation status               : PASS
+Short Desc                         : In POSC Manage Subordinate panel, verify that Web Portal Users w
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : In POSC Manage Subordinate panel, verify that Web Portal Users with an expired role do not count towards the limit of the "Primary User & Backup User" count.
+Expected Results                   : Expired users do not get included in count
+Test Case ID for Row 5326          : 47461
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47461
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47461
+Finished at                        : Thu Jun 13 10:17:20 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:20 EDT 2024
+Creating test case for Row #       : 5327
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 481
+TC Validation status               : PASS
+Short Desc                         : Verify that the renamed 'Primary User & Backup User' role name i
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : Verify that the renamed 'Primary User & Backup User' role name is present within available services in the following panels: POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Add New Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Link Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Update Subordinate]
+Expected Results                   : The Primary User and Backup User role name shall be available in the list of available services.
+Test Case ID for Row 5327          : 47462
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47462
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47462
+Finished at                        : Thu Jun 13 10:17:24 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:24 EDT 2024
+Creating test case for Row #       : 5328
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 454
+TC Validation status               : PASS
+Short Desc                         : Verify the expected security message appears in Add Subordinate,
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : Verify the expected security message appears in Add Subordinate, Update Subordinate, Link Subordinate panels upon primary user assignment rejection because of  their assignment as prmary  provider would exceed the Primary User & Backup user role assignment limit of two primaries for the selected PID/SL. POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Add New Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Link Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Update Subordinate]
+Expected Results                   : The following message shall be displayed if web portal provider user exceeds the Primary User & Backup user assignment for the selected PID/SL. "You have exceeded the maximum number of subordinate users that can be assigned the "Primary User & Backup User" service.  The limit is 2 per PID/SL. Please remove the "Primary User & Backup User" service from one subordinate before assigning the service to the intended subordinate." Note: the error should appear even if there are already more than two primaries for the PID/SL
+Test Case ID for Row 5328          : 47463
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47463
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47463
+Finished at                        : Thu Jun 13 10:17:29 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:29 EDT 2024
+Creating test case for Row #       : 5329
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 460
+TC Validation status               : PASS
+Short Desc                         : Verify that any other service besides the Primary User & Backup
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : Verify that any other service besides the Primary User & Backup User service can be assigned to a subordinate user through the Add Subordinate, Update Subordinate, Link Subordinate panels: POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Add New Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Link Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Update Subordinate]
+Expected Results                   : The Role will be assigned without any error message.
+Test Case ID for Row 5329          : 47464
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47464
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47464
+Finished at                        : Thu Jun 13 10:17:33 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:33 EDT 2024
+Creating test case for Row #       : 5330
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 477
+TC Validation status               : PASS
+Short Desc                         : Verify other allowed actions submitted under the Update Subordin
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : Verify other allowed actions submitted under the Update Subordinate and Link Subordinate panels will not trigger the primary user limit error for the user that is being modified under a PID/SL that has reached the Primary User limit. 
+Expected Results                   : After the action is attempted to be submitted, the primary user limit error will not appear, instead the appropriate save successful will be shown for the Update Subordinate panel or the cannot link error will be shown in the Link Subordinate panel.
+Test Case ID for Row 5330          : 47465
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47465
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47465
+Finished at                        : Thu Jun 13 10:17:38 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:38 EDT 2024
+Creating test case for Row #       : 5331
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 437
+TC Validation status               : PASS
+Short Desc                         : Verify that a user with the Primary User & Backup User role can
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : Verify that a user with the Primary User & Backup User role can assign (or remove) the Primary User & Backup User service from subordinate users.
+Expected Results                   : The User will be able to assign and remove the 'Primary User & Backup User' role from the subordinate User.; so long as the limit of two for the PID/SL has not been reached
+Test Case ID for Row 5331          : 47466
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47466
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47466
+Finished at                        : Thu Jun 13 10:17:42 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:42 EDT 2024
+Creating test case for Row #       : 5332
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 460
+TC Validation status               : PASS
+Short Desc                         : Verify primary User static informational text is present in the
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : Verify primary User static informational text is present in the Add, Update, and Link Subordinate panels: POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Add New Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Link Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Update Subordinate]
+Expected Results                   : The following message shall be displayed for the proposed panels. The Primary User & Backup User service should only be assigned to the Primary users; note that there is a limit of two Primary users.
+Test Case ID for Row 5332          : 47467
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47467
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47467
+Finished at                        : Thu Jun 13 10:17:47 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:47 EDT 2024
+Creating test case for Row #       : 5333
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 458
+TC Validation status               : PASS
+Short Desc                         : Verify that the list component width increase of the available s
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : Verify that the list component width increase of the available services and assigned services component is present; showing the full text of the longest Role.
+Expected Results                   : The width of the list component is increased to display the text of the longest Role.
+Test Case ID for Row 5333          : 47468
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47468
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47468
+Finished at                        : Thu Jun 13 10:17:51 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:51 EDT 2024
+Creating test case for Row #       : 5334
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 475
+TC Validation status               : PASS
+Short Desc                         : As a regression test, verify that the list component width incre
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : As a regression test, verify that the list component width increase is exclusively applicable to the assigned services and available services component in POSC Add, Link, and Update subordinate panels and that the other list components are not affected.
+Expected Results                   : The width of the other list components remains at the standard size.
+Test Case ID for Row 5334          : 47469
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47469
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47469
+Finished at                        : Thu Jun 13 10:17:56 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:17:56 EDT 2024
+Creating test case for Row #       : 5335
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 470
+TC Validation status               : PASS
+Short Desc                         : Verify online help for the following POSC panels. POSC App - [Ad
+Env                                : I
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : PROVIDER
+Long Desc                          : Verify online help for the following POSC panels. POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Add New Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Link Subordinate] POSC App - [Administer Account] - [Manage Subordinate Accounts] - [Update Subordinate]
+Expected Results                   : Field help and online help shall be displayed as required by document 37069 POSC Online Help Changes for requirement  37069.04.001 Updated during 2024.02.08 requirements WT.docx
+Test Case ID for Row 5335          : 47470
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.04.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47470
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47470
+Finished at                        : Thu Jun 13 10:18:00 EDT 2024
+*****************************************************************
+Started at                         : Thu Jun 13 10:18:00 EDT 2024
+Creating test case for Row #       : 5336
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 447
+TC Validation status               : PASS
+Short Desc                         : Verify that the base app Security maintenance 'Primary User ID'
+Env                                : I
+Subsystem                          : Security Management
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : SECURITY PANEL
+Long Desc                          : Verify that the base app Security maintenance 'Primary User ID' checkbox field is populated (i.e. checked) and the PID/SL level Primary Provider User Column under the user is set to 'Yes'  upon the assignment of the primary user role through the following POSC subordinate panels: Update Subordinate; Add New Subordinate;  Link Subordinate.
+Expected Results                   : The Primary User ID Checkbox field will be checked upon paSecuritynel refresh.
+Test Case ID for Row 5336          : 47471
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37069.05.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : UI-POSC
+SAK Requirement Type               : 16
+Requirement linked for test case   : 47471
+Notebook                           : 2024 July Release
+Business Function                  : 2024 July Release
+Notebook/BF linked for test case   : 47471
+Finished at                        : Thu Jun 13 10:18:05 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 13/Jun/2024 10:18:06AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

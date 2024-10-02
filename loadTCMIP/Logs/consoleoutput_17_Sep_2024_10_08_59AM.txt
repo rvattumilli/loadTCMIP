@@ -1,0 +1,85 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 17/Sep/2024 10:08:59AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/17/2024
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status = 'X' order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 87
+Total No.of Rows fetched           : 2
+*****************************************************************
+Started at                         : Tue Sep 17 10:09:04 EDT 2024
+Creating test case for Row #       : 5451
+Validation Time(ms)                : 462
+TC Validation status               : PASS
+Short Desc                         : ARD  in range of admsn
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has 01/01/24-04/31/2024 with NF and Admission date 12/15/2023 01 asmnt  with ARD 12/30/2024
+Expected Results                   : The record will be in the accepted status in t_re_mds_status.
+Test Case ID for Row 5451          : 47741
+Requirement ID                     : 38056.01.001
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47741
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47741
+Finished at                        : Tue Sep 17 10:09:08 EDT 2024
+*****************************************************************
+Started at                         : Tue Sep 17 10:09:08 EDT 2024
+Creating test case for Row #       : 5452
+Validation Time(ms)                : 455
+TC Validation status               : PASS
+Short Desc                         : ARD not in range: ARD after admission date
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : DCR
+Long Desc                          : MDS LOC has 04/01/24-08/31/2024 with NF and Admission date 12/15/2023 01 asmnt  with ARD 05/01/2024
+Expected Results                   : The record will be in the pending status in t_re_mds_status nothing will change in MDS LOC
+Test Case ID for Row 5452          : 47742
+Requirement ID                     : 38056.01.001
+Requirement Type                   : Database
+SAK Requirement Type               : 21
+Requirement linked for test case   : 47742
+Notebook                           : MDS
+Business Function                  : MDS
+Notebook/BF linked for test case   : 47742
+Finished at                        : Tue Sep 17 10:09:13 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 17/Sep/2024 10:09:13AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

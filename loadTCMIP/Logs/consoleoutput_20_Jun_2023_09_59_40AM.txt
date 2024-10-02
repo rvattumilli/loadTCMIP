@@ -1,0 +1,685 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 20/Jun/2023 09:59:40AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 89
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' '), tc_row, trim(d.dsc) wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 94
+Total No.of Rows                   : 25
+****************************************************
+Started at                         : Tue Jun 20 09:59:55 EDT 2023
+Creating test case for Row #       : 2069
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 506
+Validation status                  : PASS
+Short Desc                         : Valid amt_peti field
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send valid amt_peti field for a new MHO member.
+Expected Results                   : Verify T_RE_BASE, valid value for AMT_PETI should be displayed.
+Test Case ID for Row 2069          : 43537
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 36
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43537
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43537
+Finished at                        : Tue Jun 20 10:00:01 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:00:01 EDT 2023
+Creating test case for Row #       : 2070
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 514
+Validation status                  : PASS
+Short Desc                         : Existing MHO amt_peti
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send valid amt_peti field for an existing MHO member.
+Expected Results                   : Verify T_RE_BASE, existing value for AMT_PETI should be replaced with the valid value.
+Test Case ID for Row 2070          : 43538
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 41
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43538
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43538
+Finished at                        : Tue Jun 20 10:00:08 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:00:08 EDT 2023
+Creating test case for Row #       : 2071
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 473
+Validation status                  : PASS
+Short Desc                         : Without amt_peti field
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send without amt_peti field for a new MHO member.
+Expected Results                   : Verify T_RE_BASE, value '0' should be displayed for AMT_PETI.
+Test Case ID for Row 2071          : 43539
+Query Execution Time(ms)           : 67
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 22
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43539
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43539
+Finished at                        : Tue Jun 20 10:00:15 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:00:15 EDT 2023
+Creating test case for Row #       : 2072
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 488
+Validation status                  : PASS
+Short Desc                         : Existing MHO without amt_peti
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send without amt_peti field  for existing MHO member that already has a PETI amount in database.
+Expected Results                   : Verify T_RE_BASE, existing value should be retained for AMT_PETI.
+Test Case ID for Row 2072          : 43540
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43540
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43540
+Finished at                        : Tue Jun 20 10:00:21 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:00:21 EDT 2023
+Creating test case for Row #       : 2073
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 545
+Validation status                  : PASS
+Short Desc                         : Negative amt_peti
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send  negative amt_peti field for a new MHO member.
+Expected Results                   : Verify T_RE_BASE, value '0' should be displayed for AMT_PETI.
+Test Case ID for Row 2073          : 43541
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43541
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43541
+Finished at                        : Tue Jun 20 10:00:28 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:00:28 EDT 2023
+Creating test case for Row #       : 2074
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 470
+Validation status                  : PASS
+Short Desc                         : Negative amt_peti existing MHO
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send negative amt_peti field for an existing MHO member already has a value in database.
+Expected Results                   : verify T_RE_BASE, existing value should be retained for AMT_PETI.
+Test Case ID for Row 2074          : 43542
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 28
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43542
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43542
+Finished at                        : Tue Jun 20 10:00:34 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:00:34 EDT 2023
+Creating test case for Row #       : 2075
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 494
+Validation status                  : PASS
+Short Desc                         : amt_peti with no amount
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send negative amt_peti field for an existing MHO member who doesn't have value in database.
+Expected Results                   : Verify T_RE_BASE, value '0' should be displayed for AMT_PETI.
+Test Case ID for Row 2075          : 43543
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 28
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43543
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43543
+Finished at                        : Tue Jun 20 10:00:41 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:00:41 EDT 2023
+Creating test case for Row #       : 2076
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 463
+Validation status                  : PASS
+Short Desc                         : non-MHO amt_peti existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send without amt_peti field for existing non-MHO member that already has a PETI amount in database.
+Expected Results                   : Verify T_RE_BASE, existing value should be retained for AMT_PETI.
+Test Case ID for Row 2076          : 43544
+Query Execution Time(ms)           : 55
+Requirement ID                     : 36536.01.004
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43544
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43544
+Finished at                        : Tue Jun 20 10:00:47 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:00:47 EDT 2023
+Creating test case for Row #       : 2077
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 486
+Validation status                  : PASS
+Short Desc                         : non-MHO amt_peti new member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send without amt_peti field for a new non-MHO member.
+Expected Results                   : Verify T_RE_BASE, value '0' should be displayed for AMT_PETI.
+Test Case ID for Row 2077          : 43545
+Query Execution Time(ms)           : 78
+Requirement ID                     : 36536.01.004
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43545
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43545
+Finished at                        : Tue Jun 20 10:00:56 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:00:56 EDT 2023
+Creating test case for Row #       : 2078
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 486
+Validation status                  : PASS
+Short Desc                         : More than 8 charc amt_peti field
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send amt_peti field more than 8 digits for a new MHO member. Eg 1000000.00
+Expected Results                   : Verify T_RE_BASE, value '0' should be displayed for AMT_PETI.
+Test Case ID for Row 2078          : 43546
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 23
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43546
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43546
+Finished at                        : Tue Jun 20 10:01:04 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:01:04 EDT 2023
+Creating test case for Row #       : 2079
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 534
+Validation status                  : PASS
+Short Desc                         : More than 8 charc amt_peti field existing MHO
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send amt_peti field with more than 8 digits for an existing MHO member already has a value in database.Eg 1000000.00
+Expected Results                   : verify T_RE_BASE, existing value should be retained for AMT_PETI.
+Test Case ID for Row 2079          : 43547
+Query Execution Time(ms)           : 61
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43547
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43547
+Finished at                        : Tue Jun 20 10:01:20 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:01:20 EDT 2023
+Creating test case for Row #       : 2080
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 655
+Validation status                  : PASS
+Short Desc                         : Peti amount with value '0'
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send amt_peti field with value '0' for a new MHO member.
+Expected Results                   : Verify T_RE_BASE, value '0' should be displayed for AMT_PETI.
+Test Case ID for Row 2080          : 43548
+Query Execution Time(ms)           : 103
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43548
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43548
+Finished at                        : Tue Jun 20 10:01:41 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:01:41 EDT 2023
+Creating test case for Row #       : 2081
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 786
+Validation status                  : PASS
+Short Desc                         : Existing MHO amt_peti with existing value
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send amt_peti field with value '0' for an existing MHO member that already has a PETI amount in database.
+Expected Results                   : verify T_RE_BASE, existing value for AMT_PETI should be replaced with '0'.
+Test Case ID for Row 2081          : 43549
+Query Execution Time(ms)           : 106
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 97
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43549
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43549
+Finished at                        : Tue Jun 20 10:02:02 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:02:02 EDT 2023
+Creating test case for Row #       : 2082
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 713
+Validation status                  : PASS
+Short Desc                         : amt_peti field blank
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send amt_peti field with no value for a new MHO member.
+Expected Results                   : Verify T_RE_BASE, value '0' should be displayed for AMT_PETI.
+Test Case ID for Row 2082          : 43550
+Query Execution Time(ms)           : 90
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43550
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43550
+Finished at                        : Tue Jun 20 10:02:24 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:02:24 EDT 2023
+Creating test case for Row #       : 2083
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 500
+Validation status                  : PASS
+Short Desc                         : amt_peti field blank existing MHO
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send amt_peti field with no value for an existing MHO member that already has a PETI amount in database.
+Expected Results                   : verify T_RE_BASE, existing value should be retained for AMT_PETI.
+Test Case ID for Row 2083          : 43551
+Query Execution Time(ms)           : 77
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43551
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43551
+Finished at                        : Tue Jun 20 10:02:32 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:02:32 EDT 2023
+Creating test case for Row #       : 2084
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 536
+Validation status                  : PASS
+Short Desc                         : amt_peti field 8 characters
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send amt_peti field of 8 digits (2 characters after decimal)for a new MHO member.
+Expected Results                   : Verify T_RE_BASE, valid value for AMT_PETI should be displayed.
+Test Case ID for Row 2084          : 43552
+Query Execution Time(ms)           : 57
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 32
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43552
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43552
+Finished at                        : Tue Jun 20 10:02:39 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:02:39 EDT 2023
+Creating test case for Row #       : 2085
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 551
+Validation status                  : PASS
+Short Desc                         : amt_peti field 8 characters existing MHO
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send  amt_peti field of 8 digits (2 characters after decimal) for an existing MHO member.
+Expected Results                   : Verify T_RE_BASE, new valid value for AMT_PETI should replace the existing value.
+Test Case ID for Row 2085          : 43553
+Query Execution Time(ms)           : 70
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43553
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43553
+Finished at                        : Tue Jun 20 10:02:47 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:02:47 EDT 2023
+Creating test case for Row #       : 2086
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 549
+Validation status                  : PASS
+Short Desc                         : amt_peti without decimal
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send amt_peti field  without decimal for a new MHO member. Eg $250
+Expected Results                   : Verify T_RE_BASE, valid value for AMT_PETI should be displayed. Eg, $250.00
+Test Case ID for Row 2086          : 43554
+Query Execution Time(ms)           : 71
+Requirement ID                     : 36536.01.001
+Query Execution Time(ms)           : 30
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43554
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43554
+Finished at                        : Tue Jun 20 10:02:56 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:02:56 EDT 2023
+Creating test case for Row #       : 2087
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 493
+Validation status                  : PASS
+Short Desc                         : warning message -non-MHO
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send non-MHO file for a new member having valid amt_peti field.
+Expected Results                   : The expected warning message is displayed 'Eligibility source not authorized to send data in this field'.
+Test Case ID for Row 2087          : 43555
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36536.01.004
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43555
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43555
+Finished at                        : Tue Jun 20 10:03:02 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:03:02 EDT 2023
+Creating test case for Row #       : 2088
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 493
+Validation status                  : PASS
+Short Desc                         : warning message -non-MHO existing member
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send non-MHO file for an existing MHO member having valid amt_peti field.
+Expected Results                   : The expected warning message is displayed 'Eligibility source not authorized to send data in this field' and existing value for amt_peti should be retained.
+Test Case ID for Row 2088          : 43556
+Query Execution Time(ms)           : 69
+Requirement ID                     : 36536.01.004
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43556
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43556
+Finished at                        : Tue Jun 20 10:03:11 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:03:11 EDT 2023
+Creating test case for Row #       : 2089
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 50
+Validation Time(ms)                : 569
+Validation status                  : PASS
+Short Desc                         : New field: amt_peti
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send MA21 file with new segment peti for the new field.
+Expected Results                   : The file should be accepted without any errors.
+Test Case ID for Row 2089          : 43557
+Query Execution Time(ms)           : 68
+Requirement ID                     : 36536.01.005
+Query Execution Time(ms)           : 41
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 43557
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43557
+Finished at                        : Tue Jun 20 10:03:19 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:03:19 EDT 2023
+Creating test case for Row #       : 2090
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 491
+Validation status                  : PASS
+Short Desc                         : PETI Amount- new field
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Check if a new field 'PETI Amount' is displayed in the 'Member Information' panel.
+Expected Results                   : In MMIS, under the member information panel, a new field 'PETI Amount' should be available and read only.
+Test Case ID for Row 2090          : 43558
+Query Execution Time(ms)           : 52
+Requirement ID                     : 36536.01.002
+Query Execution Time(ms)           : 37
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 43558
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43558
+Finished at                        : Tue Jun 20 10:03:25 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:03:25 EDT 2023
+Creating test case for Row #       : 2091
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 536
+Validation status                  : PASS
+Short Desc                         : PETI Amount- currency format
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Send MA21 file with 'PETI Amount' field.
+Expected Results                   : PETI Amount' should be of the currency format.
+Test Case ID for Row 2091          : 43559
+Query Execution Time(ms)           : 53
+Requirement ID                     : 36536.01.002
+Query Execution Time(ms)           : 29
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 43559
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43559
+Finished at                        : Tue Jun 20 10:03:32 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:03:32 EDT 2023
+Creating test case for Row #       : 2092
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 510
+Validation status                  : PASS
+Short Desc                         : PETI Amount- field help
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : View the field help for new 'PETI Amount' field in the Member Information panel.
+Expected Results                   : Upon click on the field 'PETI Amount' should provide the description as "Post Eligibility Treatment of Income Amount".
+Test Case ID for Row 2092          : 43560
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36536.01.002
+Query Execution Time(ms)           : 43
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 43560
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43560
+Finished at                        : Tue Jun 20 10:03:38 EDT 2023
+****************************************************
+Started at                         : Tue Jun 20 10:03:38 EDT 2023
+Creating test case for Row #       : 2093
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36536.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MAINTENANCE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 490
+Validation status                  : PASS
+Short Desc                         : PETI Amount- Audit
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 945
+Owner                              : EKTA MATHUR
+Grouping                           : MEMBER MAINTENANCE
+Long Desc                          : Verify if the Audit panel functionality is working for the new 'PETI Amount' field.
+Expected Results                   : Under the 'Base information audit history' panel should have 'PETI Amount' search criteria and should work as expected.
+Test Case ID for Row 2093          : 43561
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36536.01.002
+Query Execution Time(ms)           : 31
+Requirement Type                   : UI-Base System
+SAK Requirement Type               : 17
+Requirement linked for test case   : 43561
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43561
+Finished at                        : Tue Jun 20 10:03:45 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 20/Jun/2023 10:03:47AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

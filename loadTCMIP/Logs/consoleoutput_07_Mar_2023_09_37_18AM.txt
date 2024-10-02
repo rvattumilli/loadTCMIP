@@ -1,0 +1,1334 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 07/Mar/2023 09:37:18AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 172
+****************************************************
+Started at                         : Tue Mar 07 09:37:27 EST 2023
+Creating test case for Row #       : 1696
+Validation Time(ms)                : 3025
+Validation status                  : PASS
+Short Desc                         : Accepting MDS from June15, 2023
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit MDS file from June 15, 2023
+Expected Results                   : A segment in LOC/MDS is created.
+Test Case ID for Row 1696          : 42780
+Associated Req ID                  : 36269.01.001
+Requirement linked for test case   : 42780
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42780
+Validation Time(ms)                : 8090
+Finished at                        : Tue Mar 07 09:37:36 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:37:36 EST 2023
+Creating test case for Row #       : 1697
+Validation Time(ms)                : 3227
+Validation status                  : PASS
+Short Desc                         : MDS file from June 01, 2023
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit MDS file from June 01, 2023
+Expected Results                   : No segment is created since we are not receiving any file
+Test Case ID for Row 1697          : 42781
+Associated Req ID                  : 36269.01.001
+Requirement linked for test case   : 42781
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42781
+Validation Time(ms)                : 7216
+Finished at                        : Tue Mar 07 09:37:43 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:37:43 EST 2023
+Creating test case for Row #       : 1738
+Validation Time(ms)                : 2562
+Validation status                  : PASS
+Short Desc                         : Switch ability on/off
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Test switch ability to process LOC/MDS table If date-trigger is ON/OFF for Nursing Facility submit MDS.
+Expected Results                   : The job will not process any MDS.
+Test Case ID for Row 1738          : 42782
+Associated Req ID                  : 36269.01.001
+Requirement linked for test case   : 42782
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42782
+Validation Time(ms)                : 6862
+Finished at                        : Tue Mar 07 09:37:50 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:37:50 EST 2023
+Creating test case for Row #       : 1698
+Validation Time(ms)                : 2872
+Validation status                  : PASS
+Short Desc                         : Accepting MMQ from June15, 2023.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit MMQ file from DOS June 15, 2023
+Expected Results                   : A segment in the LOC/MMC table
+Test Case ID for Row 1698          : 42783
+Associated Req ID                  : 36269.01.002
+Requirement linked for test case   : 42783
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42783
+Validation Time(ms)                : 7593
+Finished at                        : Tue Mar 07 09:37:57 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:37:57 EST 2023
+Creating test case for Row #       : 1699
+Validation Time(ms)                : 2532
+Validation status                  : PASS
+Short Desc                         : MMQ file from DOS September 30,2023,
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit MMQ file from DOS September 30,2023,
+Expected Results                   : A segment in the LOC/MMC table
+Test Case ID for Row 1699          : 42784
+Associated Req ID                  : 36269.01.002
+Requirement linked for test case   : 42784
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42784
+Validation Time(ms)                : 7067
+Finished at                        : Tue Mar 07 09:38:04 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:38:04 EST 2023
+Creating test case for Row #       : 1700
+Validation Time(ms)                : 3783
+Validation status                  : PASS
+Short Desc                         : MMQ file from DOS October 1, 2023
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit MMQ file from DOS October 1, 2023.
+Expected Results                   : File should be rejected.
+Test Case ID for Row 1700          : 42785
+Associated Req ID                  : 36269.01.002
+Requirement linked for test case   : 42785
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42785
+Validation Time(ms)                : 8420
+Finished at                        : Tue Mar 07 09:38:13 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:38:13 EST 2023
+Creating test case for Row #       : 1701
+Validation Time(ms)                : 4810
+Validation status                  : PASS
+Short Desc                         : Accepting NF, 3G, 3S and RH, June15-Sep 30, 2023
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a MA21file with NF segment effective date June 15,2023.
+Expected Results                   : Segment in LOC/MMC with "NF" code should be created.
+Test Case ID for Row 1701          : 42786
+Associated Req ID                  : 36269.01.003
+Requirement linked for test case   : 42786
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42786
+Validation Time(ms)                : 9910
+Finished at                        : Tue Mar 07 09:38:23 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:38:23 EST 2023
+Creating test case for Row #       : 1702
+Validation Time(ms)                : 3747
+Validation status                  : PASS
+Short Desc                         : NF segment effective date October 1,2023.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a MA21file with NF segment effective date October 1,2023.
+Expected Results                   : Segment in LOC/MDS with "NF" code should be created.
+Test Case ID for Row 1702          : 42787
+Associated Req ID                  : 36269.01.003
+Requirement linked for test case   : 42787
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42787
+Validation Time(ms)                : 8162
+Finished at                        : Tue Mar 07 09:38:31 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:38:31 EST 2023
+Creating test case for Row #       : 1690
+Validation Time(ms)                : 3243
+Validation status                  : PASS
+Short Desc                         : MMQ before  Sept 30.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit MMQ file having effective date before October 1, 2023 
+Expected Results                   : MMQ file should go through.
+Test Case ID for Row 1690          : 42788
+Associated Req ID                  : 36269.01.004
+Requirement linked for test case   : 42788
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42788
+Validation Time(ms)                : 8109
+Finished at                        : Tue Mar 07 09:38:39 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:38:39 EST 2023
+Creating test case for Row #       : 1691
+Validation Time(ms)                : 4078
+Validation status                  : PASS
+Short Desc                         : MMQ on Oct 01,23.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit MMQ file having effective date on October 1, 2023 
+Expected Results                   : File will be rejected with error"MMQ ARE NO LONGER VALID FOR SERVICE DATES AFTER OCTOBER 1, 2023"
+Test Case ID for Row 1691          : 42789
+Associated Req ID                  : 36269.01.004
+Requirement linked for test case   : 42789
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42789
+Validation Time(ms)                : 8533
+Finished at                        : Tue Mar 07 09:38:47 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:38:47 EST 2023
+Creating test case for Row #       : 1692
+Validation Time(ms)                : 2961
+Validation status                  : PASS
+Short Desc                         : MMQ after Oct 01,23.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit MMQ file having effective date after October 1, 2023 
+Expected Results                   : File will be rejected with error"" MMQ ARE NO LONGER VALID FOR SERVICE DATES AFTER OCTOBER 1, 2023"
+Test Case ID for Row 1692          : 42790
+Associated Req ID                  : 36269.01.004
+Requirement linked for test case   : 42790
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42790
+Validation Time(ms)                : 8026
+Finished at                        : Tue Mar 07 09:38:55 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:38:55 EST 2023
+Creating test case for Row #       : 1693
+Validation Time(ms)                : 3268
+Validation status                  : PASS
+Short Desc                         : NF segment with MMQ score before Oct 1, 23.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit transaction with NursingFacility segment having effective date before October 1, 2023 
+Expected Results                   : Should be accepted
+Test Case ID for Row 1693          : 42791
+Associated Req ID                  : 36269.01.004
+Requirement linked for test case   : 42791
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42791
+Validation Time(ms)                : 9073
+Finished at                        : Tue Mar 07 09:39:05 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:39:05 EST 2023
+Creating test case for Row #       : 1694
+Validation Time(ms)                : 3130
+Validation status                  : PASS
+Short Desc                         : NF segment with MMQ segment on Oct 1, 23.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit transaction with NursingFacility segment having effective date on October 1, 2023 
+Expected Results                   : Should be rejected with msg,"MMQ ARE NO LONGER VALID FOR SERVICE DATES AFTER OCTOBER 1, 2023"
+Test Case ID for Row 1694          : 42792
+Associated Req ID                  : 36269.01.004
+Requirement linked for test case   : 42792
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42792
+Validation Time(ms)                : 7050
+Finished at                        : Tue Mar 07 09:39:12 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:39:12 EST 2023
+Creating test case for Row #       : 1695
+Validation Time(ms)                : 2657
+Validation status                  : PASS
+Short Desc                         : NF segment with MMQ segment after Oct 1, 23.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Submit transaction with NursingFacility segment having effective date after October 1, 2023 
+Expected Results                   : Should be rejected with msg,"MMQ ARE NO LONGER VALID FOR SERVICE DATES AFTER OCTOBER 1, 2023"
+Test Case ID for Row 1695          : 42793
+Associated Req ID                  : 36269.01.004
+Requirement linked for test case   : 42793
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42793
+Validation Time(ms)                : 6731
+Finished at                        : Tue Mar 07 09:39:18 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:39:18 EST 2023
+Creating test case for Row #       : 1703
+Validation Time(ms)                : 2714
+Validation status                  : PASS
+Short Desc                         : Overlapping dates in MDS LOC and LOC MMC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a MDS file with a MDS effective date of 10/30/22 when member already  overlapping segments in LOC/MMC. (can send a file with admit reason)
+Expected Results                   : There should be separate segments for MDS LOC and LOC/MMC. End date in LOC/MMC stays unaffected.
+Test Case ID for Row 1703          : 42794
+Associated Req ID                  : 36269.01.005
+Requirement linked for test case   : 42794
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42794
+Validation Time(ms)                : 7912
+Finished at                        : Tue Mar 07 09:39:26 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:39:26 EST 2023
+Creating test case for Row #       : 1704
+Validation Time(ms)                : 4814
+Validation status                  : PASS
+Short Desc                         : Both MID and PID/SL are found in MMIS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS file with valid MID and PIDSL for a member that already has a "NF" code in the MDS LOC segment
+Expected Results                   : A segment in LOC/MDS is created with the appropriate dates?(use admission MDS file)
+Test Case ID for Row 1704          : 42795
+Associated Req ID                  : 36269.01.007
+Requirement linked for test case   : 42795
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42795
+Validation Time(ms)                : 9075
+Finished at                        : Tue Mar 07 09:39:35 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:39:35 EST 2023
+Creating test case for Row #       : 1705
+Validation Time(ms)                : 3034
+Validation status                  : PASS
+Short Desc                         : Both MID and PID/SL are found in MMIS for LOC/MMC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS file with valid MID and PIDSL for a member that does not have a "NF" code in the MDS LOC segment but has "NF" code in MMC
+Expected Results                   : A segment in LOC/MDS is created with the
+Test Case ID for Row 1705          : 42796
+Associated Req ID                  : 36269.01.007
+Requirement linked for test case   : 42796
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42796
+Validation Time(ms)                : 7065
+Finished at                        : Tue Mar 07 09:39:42 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:39:42 EST 2023
+Creating test case for Row #       : 1706
+Validation Time(ms)                : 3720
+Validation status                  : PASS
+Short Desc                         : Valid MID and PIDSL
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS file with valid MID and PIDSL for a member that does not have a "NF" code in both the MDS LOC and MMC
+Expected Results                   : Not sure about the segment but there is discrepency report.
+Test Case ID for Row 1706          : 42797
+Associated Req ID                  : 36269.01.007
+Requirement linked for test case   : 42797
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42797
+Validation Time(ms)                : 8727
+Finished at                        : Tue Mar 07 09:39:51 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:39:51 EST 2023
+Creating test case for Row #       : 1707
+Validation Time(ms)                : 2643
+Validation status                  : PASS
+Short Desc                         : Valid PID/SL and Invalid MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a MDS file with Valid PID/SL and Invalid MID
+Expected Results                   : No segment created in MDS LOC
+Test Case ID for Row 1707          : 42798
+Associated Req ID                  : 36269.01.007
+Requirement linked for test case   : 42798
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42798
+Validation Time(ms)                : 12930
+Finished at                        : Tue Mar 07 09:40:04 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:40:04 EST 2023
+Creating test case for Row #       : 1708
+Validation Time(ms)                : 4090
+Validation status                  : PASS
+Short Desc                         : Valid PID/SL and Valid MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a MDS file with Valid PID/SL and Valid MID
+Expected Results                   : No segment created in MDS LOC
+Test Case ID for Row 1708          : 42799
+Associated Req ID                  : 36269.01.007
+Requirement linked for test case   : 42799
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42799
+Validation Time(ms)                : 8457
+Finished at                        : Tue Mar 07 09:40:12 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:40:12 EST 2023
+Creating test case for Row #       : 1709
+Validation Time(ms)                : 3191
+Validation status                  : PASS
+Short Desc                         : Invalid PID/SL and valid MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a MDS file with Invalid PID/SL and valid MID
+Expected Results                   : No segment created in MDS LOC
+Test Case ID for Row 1709          : 42800
+Associated Req ID                  : 36269.01.007
+Requirement linked for test case   : 42800
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42800
+Validation Time(ms)                : 7587
+Finished at                        : Tue Mar 07 09:40:20 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:40:20 EST 2023
+Creating test case for Row #       : 1710
+Validation Time(ms)                : 2692
+Validation status                  : PASS
+Short Desc                         : Invalid PID/SL and Invalid MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a MDS file with Invalid PID/SL and Invalid MID
+Expected Results                   : No segment created in MDS LOC
+Test Case ID for Row 1710          : 42801
+Associated Req ID                  : 36269.01.007
+Requirement linked for test case   : 42801
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42801
+Validation Time(ms)                : 6768
+Finished at                        : Tue Mar 07 09:40:27 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:40:27 EST 2023
+Creating test case for Row #       : 1711
+Validation Time(ms)                : 3638
+Validation status                  : PASS
+Short Desc                         : PID/SL MID found but corresponding LOC is not
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS file where the LOC segment does not have any segment
+Expected Results                   : The status in t_re_mds_status table should be in P
+Test Case ID for Row 1711          : 42802
+Associated Req ID                  : 36269.01.008
+Requirement linked for test case   : 42802
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42802
+Validation Time(ms)                : 7927
+Finished at                        : Tue Mar 07 09:40:35 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:40:35 EST 2023
+Creating test case for Row #       : 1712
+Validation Time(ms)                : 3223
+Validation status                  : PASS
+Short Desc                         : PID/SL MID found and corresponding LOC seg still not found after 90 days
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Reject pending MDS if record is pending more than 90 days.
+Expected Results                   : The status in t_re_mds_status table should be in R
+Test Case ID for Row 1712          : 42803
+Associated Req ID                  : 36269.01.008
+Requirement linked for test case   : 42803
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42803
+Validation Time(ms)                : 8352
+Finished at                        : Tue Mar 07 09:40:43 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:40:43 EST 2023
+Creating test case for Row #       : 1713
+Validation Time(ms)                : 3476
+Validation status                  : PASS
+Short Desc                         : PID/SL MID found and corresponding LOC is found after 90days
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send the same  MDS file as above after 90 days and the LOC segmentnot empty
+Expected Results                   : The status in t_re_mds_status table should be in A
+Test Case ID for Row 1713          : 42804
+Associated Req ID                  : 36269.01.008
+Requirement linked for test case   : 42804
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42804
+Validation Time(ms)                : 7969
+Finished at                        : Tue Mar 07 09:40:51 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:40:51 EST 2023
+Creating test case for Row #       : 1735
+Validation Time(ms)                : 3169
+Validation status                  : PASS
+Short Desc                         : Process pending MDS records, even if no MDS files for the day of run.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Process pending MDS records, even if no MDS files for the day of run.
+Expected Results                   : All pending MDS records will be processed and Accepted.
+Test Case ID for Row 1735          : 42805
+Associated Req ID                  : 36269.01.008
+Requirement linked for test case   : 42805
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42805
+Validation Time(ms)                : 9281
+Finished at                        : Tue Mar 07 09:41:00 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:41:00 EST 2023
+Creating test case for Row #       : 1714
+Validation Time(ms)                : 3144
+Validation status                  : PASS
+Short Desc                         : Inactive MID in MDS but system will find activeMID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS file with inactive MID
+Expected Results                   : System will find active MID and update the record accordingly.
+Test Case ID for Row 1714          : 42806
+Associated Req ID                  : 36269.01.011
+Requirement linked for test case   : 42806
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42806
+Validation Time(ms)                : 8310
+Finished at                        : Tue Mar 07 09:41:09 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:41:09 EST 2023
+Creating test case for Row #       : 1683
+Validation Time(ms)                : 2804
+Validation status                  : PASS
+Short Desc                         : New MDS fields after cut off
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MA21 file with NF segment(CDE_MDS_LOC) for MDS effective dte on Oct 1, 23. 1.dte_loc_effective_mds2. dte_loc_end_mds. 3. cde_mds_loc
+Expected Results                   : Member extract and webservice files should have  new fields;1.dte_loc_effective_mds2. dte_loc_end_mds. 3. cde_mds_loc
+Test Case ID for Row 1683          : 42807
+Associated Req ID                  : 36269.01.012
+Requirement linked for test case   : 42807
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42807
+Validation Time(ms)                : 7133
+Finished at                        : Tue Mar 07 09:41:16 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:41:16 EST 2023
+Creating test case for Row #       : 1715
+Validation Time(ms)                : 2583
+Validation status                  : PASS
+Short Desc                         : Eff Dte MDS LOC, First assessment MDS(A0310A=1)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS(A0310A=1) file
+Expected Results                   : Effective date will be the date member was admitted to the facility
+Test Case ID for Row 1715          : 42808
+Associated Req ID                  : 36269.01.014
+Requirement linked for test case   : 42808
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42808
+Validation Time(ms)                : 6439
+Finished at                        : Tue Mar 07 09:41:22 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:41:22 EST 2023
+Creating test case for Row #       : 1737
+Validation Time(ms)                : 2565
+Validation status                  : PASS
+Short Desc                         : Same assessment in same cycle
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Test same assessment for a member in the same cycle
+Expected Results                   : Latest one will update the plder one
+Test Case ID for Row 1737          : 42809
+Associated Req ID                  : 36269.01.014
+Requirement linked for test case   : 42809
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42809
+Validation Time(ms)                : 7621
+Finished at                        : Tue Mar 07 09:41:30 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:41:30 EST 2023
+Creating test case for Row #       : 1716
+Validation Time(ms)                : 3315
+Validation status                  : PASS
+Short Desc                         : End Dte MDS LOC, First assessment MDS(A0310A=1)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS(A0310A=1) file
+Expected Results                   : end date will be three months +the date of admission. Example 01/10-4/30
+Test Case ID for Row 1716          : 42810
+Associated Req ID                  : 36269.01.015
+Requirement linked for test case   : 42810
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42810
+Validation Time(ms)                : 8081
+Finished at                        : Tue Mar 07 09:41:38 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:41:38 EST 2023
+Creating test case for Row #       : 1717
+Validation Time(ms)                : 2435
+Validation status                  : PASS
+Short Desc                         : Discharge assessment A0310F=10
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS  A0310F=10 file with a discharge date
+Expected Results                   : The LOC end date is updated to reflect that date
+Test Case ID for Row 1717          : 42811
+Associated Req ID                  : 36269.01.016
+Requirement linked for test case   : 42811
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42811
+Validation Time(ms)                : 6186
+Finished at                        : Tue Mar 07 09:41:44 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:41:44 EST 2023
+Creating test case for Row #       : 1718
+Validation Time(ms)                : 2672
+Validation status                  : PASS
+Short Desc                         : Correcting MDS(A0310A=5
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send correcting MDS(A0310A=5
+Expected Results                   : MMIS will mark the previous LOC begin/end date with the same MDS/LOC begin/end date as "History"status and insert a new segment with same LOC begin/end date and mark it "Active" status.
+Test Case ID for Row 1718          : 42812
+Associated Req ID                  : 36269.01.017
+Requirement linked for test case   : 42812
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42812
+Validation Time(ms)                : 6346
+Finished at                        : Tue Mar 07 09:41:51 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:41:51 EST 2023
+Creating test case for Row #       : 1719
+Validation Time(ms)                : 2331
+Validation status                  : PASS
+Short Desc                         : Correcting MDS(A0310A=6
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send correcting MDS(A0310A=6
+Expected Results                   : MMIS will mark the previous LOC begin/end date with the same MDS/LOC begin/end date as "History"status and insert a new segment with same LOC begin/end date and mark it "Active" status.
+Test Case ID for Row 1719          : 42813
+Associated Req ID                  : 36269.01.017
+Requirement linked for test case   : 42813
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42813
+Validation Time(ms)                : 6120
+Finished at                        : Tue Mar 07 09:41:57 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:41:57 EST 2023
+Creating test case for Row #       : 1684
+Validation Time(ms)                : 2431
+Validation status                  : PASS
+Short Desc                         : HIPPS code after cut off
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Member has (a-y) code in mds loc after cutoff
+Expected Results                   : New fields influding the HIPPS code are reflected in the extract and webservice after the cut off
+Test Case ID for Row 1684          : 42814
+Associated Req ID                  : 36269.01.019
+Requirement linked for test case   : 42814
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42814
+Validation Time(ms)                : 6067
+Finished at                        : Tue Mar 07 09:42:03 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:42:03 EST 2023
+Creating test case for Row #       : 1685
+Validation Time(ms)                : 2377
+Validation status                  : PASS
+Short Desc                         : Prior cut off date on Sept 30,2023
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MA21 file with NF segment  with old cde_loc with system parm date on Sept 30,
+Expected Results                   : Member extract and webservice file should contain old extract information including cde_loc and dte_effective and dte_end
+Test Case ID for Row 1685          : 42815
+Associated Req ID                  : 36269.01.019
+Requirement linked for test case   : 42815
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42815
+Validation Time(ms)                : 6488
+Finished at                        : Tue Mar 07 09:42:09 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:42:09 EST 2023
+Creating test case for Row #       : 1686
+Validation Time(ms)                : 2962
+Validation status                  : PASS
+Short Desc                         : HIPPS code before  cut off
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Member has (a-y) code in mds loc before the cutoff
+Expected Results                   : New fields are NOT reflected in the extract before the cut off
+Test Case ID for Row 1686          : 42816
+Associated Req ID                  : 36269.01.019
+Requirement linked for test case   : 42816
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42816
+Validation Time(ms)                : 6713
+Finished at                        : Tue Mar 07 09:42:16 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:42:16 EST 2023
+Creating test case for Row #       : 1687
+Validation Time(ms)                : 2321
+Validation status                  : PASS
+Short Desc                         : Query MMQ count after October 1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Ouery for count of MMQ files with effective date as Oct 1, 2023,  after October 1, 23
+Expected Results                   : Count should be 0.
+Test Case ID for Row 1687          : 42817
+Associated Req ID                  : 36269.01.019
+Requirement linked for test case   : 42817
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42817
+Validation Time(ms)                : 6199
+Finished at                        : Tue Mar 07 09:42:22 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:42:22 EST 2023
+Creating test case for Row #       : 1688
+Validation Time(ms)                : 2662
+Validation status                  : PASS
+Short Desc                         : Query MMQ count on October 1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Ouery for count of MMQ files with effective date as Oct 1, 2023,  on October 1, 24
+Expected Results                   : Count should be 0.
+Test Case ID for Row 1688          : 42818
+Associated Req ID                  : 36269.01.019
+Requirement linked for test case   : 42818
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42818
+Validation Time(ms)                : 6380
+Finished at                        : Tue Mar 07 09:42:29 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:42:29 EST 2023
+Creating test case for Row #       : 1689
+Validation Time(ms)                : 2618
+Validation status                  : PASS
+Short Desc                         : Query MMQ count on October 1 for DOS before oct 1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Ouery for count of MMQ files with effective date as Oct 1, 2023,  before October 1, 25
+Expected Results                   : Count should not be 0
+Test Case ID for Row 1689          : 42819
+Associated Req ID                  : 36269.01.019
+Requirement linked for test case   : 42819
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42819
+Validation Time(ms)                : 6627
+Finished at                        : Tue Mar 07 09:42:35 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:42:35 EST 2023
+Creating test case for Row #       : 1720
+Validation Time(ms)                : 2370
+Validation status                  : PASS
+Short Desc                         : Effective date for Quarterly A(A0310A=2)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS Quarterly(A0310A=2)
+Expected Results                   : Effective date will be the first of the following month after ARD of that assessment. i.e if the ARD is 4/20. Effective date is 5/01
+Test Case ID for Row 1720          : 42820
+Associated Req ID                  : 36269.01.020
+Requirement linked for test case   : 42820
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42820
+Validation Time(ms)                : 6001
+Finished at                        : Tue Mar 07 09:42:41 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:42:41 EST 2023
+Creating test case for Row #       : 1721
+Validation Time(ms)                : 2517
+Validation status                  : PASS
+Short Desc                         : Effective date for Annual (A0310A=3)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS Annual assessment(A0310 A=3)
+Expected Results                   : Effective date will be the first of the following month after ARD of that assessment. i.e if the ARD is 4/20. Effective date is 5/01
+Test Case ID for Row 1721          : 42821
+Associated Req ID                  : 36269.01.020
+Requirement linked for test case   : 42821
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42821
+Validation Time(ms)                : 6445
+Finished at                        : Tue Mar 07 09:42:48 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:42:48 EST 2023
+Creating test case for Row #       : 1722
+Validation Time(ms)                : 2443
+Validation status                  : PASS
+Short Desc                         : Effective date for Significant status change(A0310A=4)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS Significant status change (A0310A=4)
+Expected Results                   : Effective date will be equivalent to the ARD date.
+Test Case ID for Row 1722          : 42822
+Associated Req ID                  : 36269.01.021
+Requirement linked for test case   : 42822
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42822
+Validation Time(ms)                : 6536
+Finished at                        : Tue Mar 07 09:42:54 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:42:54 EST 2023
+Creating test case for Row #       : 1736
+Validation Time(ms)                : 2411
+Validation status                  : PASS
+Short Desc                         : Different assessment in same cycle
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Test different assessment for a member in the same cycle
+Expected Results                   : Both records will be processed
+Test Case ID for Row 1736          : 42823
+Associated Req ID                  : 36269.01.021
+Requirement linked for test case   : 42823
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42823
+Validation Time(ms)                : 6382
+Finished at                        : Tue Mar 07 09:43:01 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:01 EST 2023
+Creating test case for Row #       : 1723
+Validation Time(ms)                : 2350
+Validation status                  : PASS
+Short Desc                         : End date for Quartely/Annual (A0310A=2)/(A0310A=3)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS Quarterly/Annual assessment(A0310A=2/A0310 A=3)
+Expected Results                   : End date will the the end of third month from effective date. E.g= 4/1-6/30
+Test Case ID for Row 1723          : 42824
+Associated Req ID                  : 36269.01.022
+Requirement linked for test case   : 42824
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42824
+Validation Time(ms)                : 6190
+Finished at                        : Tue Mar 07 09:43:07 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:07 EST 2023
+Creating test case for Row #       : 1724
+Validation Time(ms)                : 2625
+Validation status                  : PASS
+Short Desc                         : End date for Significant status change(A0310A=4)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS Significant status change (A0310A=4)
+Expected Results                   : Previous assessment will reflect end date a day prior to the ARD date and the end date for the current assessment will be three months+the full ARD month. Example,Old LOC Dates= 5/1-7/30 will be reflected as - 5/1-6/14, and 6/15-9/30 where ARD date is 6/15.
+Test Case ID for Row 1724          : 42825
+Associated Req ID                  : 36269.01.023
+Requirement linked for test case   : 42825
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42825
+Validation Time(ms)                : 6954
+Finished at                        : Tue Mar 07 09:43:14 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:14 EST 2023
+Creating test case for Row #       : 1725
+Validation Time(ms)                : 2413
+Validation status                  : PASS
+Short Desc                         : End date for  MDS PPS Discharge Assessment (A0310H=1)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS Medicare MDS PPS Discharge Assessment (A0310H=1)
+Expected Results                   : End date will be the same as the first assessment. i.e three months +the date of admission
+Test Case ID for Row 1725          : 42826
+Associated Req ID                  : 36269.01.024
+Requirement linked for test case   : 42826
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42826
+Validation Time(ms)                : 5934
+Finished at                        : Tue Mar 07 09:43:20 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:20 EST 2023
+Creating test case for Row #       : 1726
+Validation Time(ms)                : 2413
+Validation status                  : PASS
+Short Desc                         : End dte for death tracker assessment (A0310F=12)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS form (A0310F=12) Death tracker
+Expected Results                   : The LOC end date will reflect that DOD.
+Test Case ID for Row 1726          : 42827
+Associated Req ID                  : 36269.01.025
+Requirement linked for test case   : 42827
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42827
+Validation Time(ms)                : 6200
+Finished at                        : Tue Mar 07 09:43:26 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:26 EST 2023
+Creating test case for Row #       : 1727
+Validation Time(ms)                : 2456
+Validation status                  : PASS
+Short Desc                         : MDS End date in MDS LOC logic
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : MDS End date in MDS LOC will fluctuate if ; (Part of req. 01.015)vi. Batch/UI entry will take precedence if the dates do not align with the MDS form.
+Expected Results                   : Batch/UI entry will take precedence if the dates do not align with the MDS form.
+Test Case ID for Row 1727          : 42828
+Associated Req ID                  : 36269.01.026
+Requirement linked for test case   : 42828
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42828
+Validation Time(ms)                : 6250
+Finished at                        : Tue Mar 07 09:43:32 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:32 EST 2023
+Creating test case for Row #       : 1728
+Validation Time(ms)                : 2546
+Validation status                  : PASS
+Short Desc                         : MDS form A0310F=11(Discharge assessment-return anticipated)
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send MDS form A0310F=11(Discharge assessment-return anticipated)
+Expected Results                   : Discharge date will NOT change the LOC end date.
+Test Case ID for Row 1728          : 42829
+Associated Req ID                  : 36269.01.027
+Requirement linked for test case   : 42829
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42829
+Validation Time(ms)                : 6524
+Finished at                        : Tue Mar 07 09:43:39 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:39 EST 2023
+Creating test case for Row #       : 1729
+Validation Time(ms)                : 2404
+Validation status                  : PASS
+Short Desc                         : Discharge dte via UI=LOC end dte
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Enter Discharge date via UI/batch in the LOC/MDS Maintenance panel
+Expected Results                   : It will end the LOC end date.
+Test Case ID for Row 1729          : 42830
+Associated Req ID                  : 36269.01.028
+Requirement linked for test case   : 42830
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42830
+Validation Time(ms)                : 5914
+Finished at                        : Tue Mar 07 09:43:45 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:45 EST 2023
+Creating test case for Row #       : 1730
+Validation Time(ms)                : 2443
+Validation status                  : PASS
+Short Desc                         : Code errors
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send in sc 1 form with various errors . CDE_ERROR DSC_MESSAGE2028 Admit date should not be after term date2038 Eligibility begin date must be a valid date2052 Provider number not on file2055 LTC admission date must be a valid date2056 LTC termination date must be a valid date or zeroes2057 Invalid LTC level of care2059 LOC dates cannot overlap2060 LTC LOC begin date must be a valid date2061 LTC LOC end date must be a valid date or an open end date of 12/31/22992062 LTC LOC end date must be on or after the begin date2144 Level of Care begin date cannot be before date of birth2145 Level of Care begin date cannot be after date of death2146 Level of Care end date cannot be before date of birth2147 Level of Care end date cannot be after date of death2159 Discharge Reason Code invalid2160 Admission Reason is required2161 Discharge Reason is required2184 Admission Date must be less than or equal to the LOC Effective Date2185 LOC End Date cannot be greater than the Discharge Date2186 LOC End date cannot be in the future2308 Valid LOC Code is required when Admit Date is valid2310 LOC Provider ID is required2311 Discharge date required when LOC end date is present2312 Admit date required when LOC code is present2313 Begin date required when LOC code is present2315 Cannot update an open segment to a new cde_loc2326 Cannot Admit to this Facility Until Discharged from Previous Facility2328 Cannot Update Eff Date, Admit Date or Admit Reason on a Closed LOC Record
+Expected Results                   : Make sure the code with error description is posted.
+Test Case ID for Row 1730          : 42831
+Associated Req ID                  : 36269.01.028
+Requirement linked for test case   : 42831
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42831
+Validation Time(ms)                : 6899
+Finished at                        : Tue Mar 07 09:43:51 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:51 EST 2023
+Creating test case for Row #       : 1731
+Validation Time(ms)                : 2420
+Validation status                  : PASS
+Short Desc                         : Open end dte for Discharge date
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send in xml where no values are provided for dte_end, dte_discharge when not in XML
+Expected Results                   : Discharge date and dte_end are 22991231
+Test Case ID for Row 1731          : 42832
+Associated Req ID                  : 36269.01.028
+Requirement linked for test case   : 42832
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42832
+Validation Time(ms)                : 6207
+Finished at                        : Tue Mar 07 09:43:58 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:43:58 EST 2023
+Creating test case for Row #       : 1732
+Validation Time(ms)                : 2352
+Validation status                  : PASS
+Short Desc                         : Same provider can update open rec
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : find a member with open ended "end date" and send in a file with the same provider with 1.different effective2., cde_reason_discharge 3.cde_reason_admission
+Expected Results                   : The file should process and new data will override the old one.
+Test Case ID for Row 1732          : 42833
+Associated Req ID                  : 36269.01.028
+Requirement linked for test case   : 42833
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42833
+Validation Time(ms)                : 5867
+Finished at                        : Tue Mar 07 09:44:03 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:44:03 EST 2023
+Creating test case for Row #       : 1733
+Validation Time(ms)                : 2331
+Validation status                  : PASS
+Short Desc                         : Diff Provider can insert new NF record with non overlapping dates
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : send NF with a provider  with date range and send another xml file with NF with non overlapping dates for another provider.
+Expected Results                   : There should be two NF records with two diff providers
+Test Case ID for Row 1733          : 42834
+Associated Req ID                  : 36269.01.028
+Requirement linked for test case   : 42834
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42834
+Validation Time(ms)                : 6040
+Finished at                        : Tue Mar 07 09:44:10 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:44:10 EST 2023
+Creating test case for Row #       : 1734
+Validation Time(ms)                : 2344
+Validation status                  : PASS
+Short Desc                         : Batch entry rules MDS discharge dte
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send dte_end, dte_discharge and cde_reason_discharge="DI"via MA21 file for a member who already has a different dte end and dte discharge in MDS LOC
+Expected Results                   : MDS LOC will reflect the dte end and discharge with that of MA21 file
+Test Case ID for Row 1734          : 42835
+Associated Req ID                  : 36269.01.029
+Requirement linked for test case   : 42835
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42835
+Validation Time(ms)                : 5620
+Finished at                        : Tue Mar 07 09:44:15 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:44:15 EST 2023
+Creating test case for Row #       : 1677
+Validation Time(ms)                : 2369
+Validation status                  : PASS
+Short Desc                         : Detecting an insert or update of MDS/LOC record with future eff dte
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Change the effective date in the MDS/LOC but within a year. Example 01/01/2022, change the LOC effective date to 01/30/2022
+Expected Results                   : Date used for search  is :TDOS=01/30/22 and FDOS-01/30/2023
+Test Case ID for Row 1677          : 42836
+Associated Req ID                  : 36269.01.045
+Requirement linked for test case   : 42836
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42836
+Validation Time(ms)                : 6095
+Finished at                        : Tue Mar 07 09:44:21 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:44:21 EST 2023
+Creating test case for Row #       : 1678
+Validation Time(ms)                : 2291
+Validation status                  : PASS
+Short Desc                         : Detecting an insert or update of MDS/LOC record with past  effective date
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Change the effective date in the MDS/LOC but within a year. Example 05/30/2022, change the LOC effective date to 12/30/2021
+Expected Results                   : Date used for search  is :TDOS=05/30/22-05/30/2022
+Test Case ID for Row 1678          : 42837
+Associated Req ID                  : 36269.01.045
+Requirement linked for test case   : 42837
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42837
+Validation Time(ms)                : 6268
+Finished at                        : Tue Mar 07 09:44:28 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:44:28 EST 2023
+Creating test case for Row #       : 1679
+Validation Time(ms)                : 2498
+Validation status                  : PASS
+Short Desc                         : MMQ retro change
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Change the retro score in MMQ file
+Expected Results                   : The old job should be active and that claim should be captured.
+Test Case ID for Row 1679          : 42838
+Associated Req ID                  : 36269.01.045
+Requirement linked for test case   : 42838
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42838
+Validation Time(ms)                : 6249
+Finished at                        : Tue Mar 07 09:44:34 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:44:34 EST 2023
+Creating test case for Row #       : 1680
+Validation Time(ms)                : 2319
+Validation status                  : PASS
+Short Desc                         : Same dte range with HIPPS cde chnge.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Check the MDS LOC where the date range is the same but the HIPPS code has changed.
+Expected Results                   : Claims engine should capture that change.
+Test Case ID for Row 1680          : 42839
+Associated Req ID                  : 36269.01.045
+Requirement linked for test case   : 42839
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42839
+Validation Time(ms)                : 6275
+Finished at                        : Tue Mar 07 09:44:40 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:44:40 EST 2023
+Creating test case for Row #       : 1681
+Validation Time(ms)                : 2317
+Validation status                  : PASS
+Short Desc                         : New EOB code 9041
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a file to trigger the code
+Expected Results                   : There should be a new EOB code and description
+Test Case ID for Row 1681          : 42840
+Associated Req ID                  : 36269.01.046
+Requirement linked for test case   : 42840
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42840
+Validation Time(ms)                : 6367
+Finished at                        : Tue Mar 07 09:44:46 EST 2023
+****************************************************
+Started at                         : Tue Mar 07 09:44:46 EST 2023
+Creating test case for Row #       : 1682
+Validation Time(ms)                : 2351
+Validation status                  : PASS
+Short Desc                         : Error  when HIPPS code doesn't match
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 866
+Owner                              : ROSINA THAKURI
+Grouping                           : Batch
+Long Desc                          : Send a file to trigger the code
+Expected Results                   : the edit for the 3rd character of HIPPS code billed on the claim does not match the member record
+Test Case ID for Row 1682          : 42841
+Associated Req ID                  : 36269.01.047
+Requirement linked for test case   : 42841
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42841
+Validation Time(ms)                : 5688
+Finished at                        : Tue Mar 07 09:44:52 EST 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 07/Mar/2023 09:44:53AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

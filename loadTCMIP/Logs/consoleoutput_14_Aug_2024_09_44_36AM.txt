@@ -1,0 +1,546 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Aug/2024 09:44:36AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 297
+Total No.of Rows fetched           : 23
+*****************************************************************
+Started at                         : Wed Aug 14 09:45:19 EDT 2024
+Creating test case for Row #       : 5396
+Validation Time(ms)                : 1010
+TC Validation status               : PASS
+Short Desc                         : DP Elig  ended with retro elig gap
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and two contiguous elig rows.  Elig2 end dated in check month with stop reason code for DP. Elig1 updated causing retro gap between the elig rows
+Expected Results                   : Member enrollment placed into DP plus two months after end of second elig with no retro.
+Test Case ID for Row 5396          : 47652
+Requirement ID                     : 37813.010.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47652
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47652
+Finished at                        : Wed Aug 14 09:45:28 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:45:28 EDT 2024
+Creating test case for Row #       : 5397
+Validation Time(ms)                : 752
+TC Validation status               : PASS
+Short Desc                         : DP Elig  ended with retro elig gap with multiple elig
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and multiple elig rows contiguous and with gap. Elig 4 is not covering a full month (closed) Elig 1 is updated causing a retro gap with Elig 2.
+Expected Results                   : Member enrollment placed into DP plus two months after end of fourth  elig with no retro.
+Test Case ID for Row 5397          : 47653
+Requirement ID                     : 37813.010.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47653
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47653
+Finished at                        : Wed Aug 14 09:45:34 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:45:34 EDT 2024
+Creating test case for Row #       : 5398
+Validation Time(ms)                : 753
+TC Validation status               : PASS
+Short Desc                         : DP Elig  ended with retro elig gap with multiple elig- gap  in current month
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and multiple elig rows contiguous and with gap. Elig 4 is open ended Elig 1 is updated causing a retro gap with Elig 2.
+Expected Results                   : Member enrollment placed into DP and placed into AZ after gap period ends.
+Test Case ID for Row 5398          : 47654
+Requirement ID                     : 37813.010.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47654
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47654
+Finished at                        : Wed Aug 14 09:45:41 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:45:41 EDT 2024
+Creating test case for Row #       : 5399
+Validation Time(ms)                : 773
+TC Validation status               : PASS
+Short Desc                         : Elig ended with retro DP.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and  elig row closed in retro date.  Most recent elig was end dated in retro date with stop reason code for DP (DP period expired).
+Expected Results                   : Member enrollment end dated at end of discovery month.
+Test Case ID for Row 5399          : 47655
+Requirement ID                     : 37813.010.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47655
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47655
+Finished at                        : Wed Aug 14 09:45:48 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:45:48 EDT 2024
+Creating test case for Row #       : 5400
+Validation Time(ms)                : 782
+TC Validation status               : PASS
+Short Desc                         : Multiple elig ended with retro DP.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and multiple elig rows closed in retro date.  Most recent elig was end dated in retro date with stop reason code for DP (DP period expired).
+Expected Results                   : Member enrollment end dated at end of discovery month.
+Test Case ID for Row 5400          : 47656
+Requirement ID                     : 37813.010.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47656
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47656
+Finished at                        : Wed Aug 14 09:45:55 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:45:55 EDT 2024
+Creating test case for Row #       : 5401
+Validation Time(ms)                : 783
+TC Validation status               : PASS
+Short Desc                         : DP Member elig ends in current month
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and eligibility row closed in the check month with stop reason code for DP.
+Expected Results                   : Member enrollment placed  into DP status.
+Test Case ID for Row 5401          : 47657
+Requirement ID                     : 37813.020.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47657
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47657
+Finished at                        : Wed Aug 14 09:46:02 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:46:02 EDT 2024
+Creating test case for Row #       : 5402
+Validation Time(ms)                : 749
+TC Validation status               : PASS
+Short Desc                         : DP Member elig gap in current month
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and Elig1 row closed in the check month with stop reason code for DP. Elig2 is added after assignment was updated to DP with gap between the elig rows and open-ended end date.
+Expected Results                   : Member enrollment placed into DP status and placed into AZ status after gap expires.
+Test Case ID for Row 5402          : 47658
+Requirement ID                     : 37813.020.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47658
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47658
+Finished at                        : Wed Aug 14 09:46:09 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:46:09 EDT 2024
+Creating test case for Row #       : 5403
+Validation Time(ms)                : 735
+TC Validation status               : PASS
+Short Desc                         : DP Member elig gap with gap expired
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and two elig rows with gap.  Elig1 row closed in the check month with stop reason code for DP. Elig2 row start at the beginning of next month and it is open ended.
+Expected Results                   : Member enrollment not placed into DP.
+Test Case ID for Row 5403          : 47659
+Requirement ID                     : 37813.020.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47659
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47659
+Finished at                        : Wed Aug 14 09:46:16 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:46:16 EDT 2024
+Creating test case for Row #       : 5404
+Validation Time(ms)                : 735
+TC Validation status               : PASS
+Short Desc                         : DP Member with gap in current month elig ends
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and multiple elig rows with gap.
+Expected Results                   : Member enrollment placed into DP and disenrolled after DP period ends.
+Test Case ID for Row 5404          : 47660
+Requirement ID                     : 37813.020.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47660
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47660
+Finished at                        : Wed Aug 14 09:46:22 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:46:22 EDT 2024
+Creating test case for Row #       : 5405
+Validation Time(ms)                : 749
+TC Validation status               : PASS
+Short Desc                         : Non DP Elig  ended with retro elig gap
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and two eligibility rows. Elig1 retro end dated with one-year gap Elig2  closed in the check month with stop reason code not for DP.
+Expected Results                   : Member enrollment ended same month with Z1.
+Test Case ID for Row 5405          : 47661
+Requirement ID                     : 37813.030.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47661
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47661
+Finished at                        : Wed Aug 14 09:46:29 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:46:29 EDT 2024
+Creating test case for Row #       : 5406
+Validation Time(ms)                : 753
+TC Validation status               : PASS
+Short Desc                         : Non DP Elig  ended with retro elig gap with multiple elig- gap  in current month
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and multiple eligibility rows. Elig1 updated with retro end date causing a retro gap. Elig3 ended on the last day of check month. Elig4 is open ended starting on the first day of the next month (beyond check month).
+Expected Results                   : Member enrollment placed into ended same month with Z1 and end dated same month when elig ends.
+Test Case ID for Row 5406          : 47662
+Requirement ID                     : 37813.030.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47662
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47662
+Finished at                        : Wed Aug 14 09:46:36 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:46:36 EDT 2024
+Creating test case for Row #       : 5407
+Validation Time(ms)                : 725
+TC Validation status               : PASS
+Short Desc                         : DP Elig  ended with retro elig gap with multiple elig- gap  in current month
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and multiple eligibility rows. Elig1 updated with retro end date causing a retro gap. Elig3 ended on the last day of check month. Elig4 is open ended starting after the first day  of the next month (beyond check month).
+Expected Results                   : Member enrollment placed into ended same month with Z1 and end dated same month when elig ends.
+Test Case ID for Row 5407          : 47663
+Requirement ID                     : 37813.030.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47663
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47663
+Finished at                        : Wed Aug 14 09:46:43 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:46:43 EDT 2024
+Creating test case for Row #       : 5408
+Validation Time(ms)                : 724
+TC Validation status               : PASS
+Short Desc                         : Elig ended with retro non DP.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and only one eligibility rows. Eligibility was retro end dated.
+Expected Results                   : Member enrollment end dated at end of discovery month.
+Test Case ID for Row 5408          : 47664
+Requirement ID                     : 37813.030.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47664
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47664
+Finished at                        : Wed Aug 14 09:46:50 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:46:50 EDT 2024
+Creating test case for Row #       : 5409
+Validation Time(ms)                : 723
+TC Validation status               : PASS
+Short Desc                         : Multiple elig ended with retro non DP.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and only one eligibility rows. Eligibility was retro end dated.
+Expected Results                   : Member enrollment end dated at end of discovery month.
+Test Case ID for Row 5409          : 47665
+Requirement ID                     : 37813.030.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47665
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47665
+Finished at                        : Wed Aug 14 09:46:56 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:46:56 EDT 2024
+Creating test case for Row #       : 5410
+Validation Time(ms)                : 833
+TC Validation status               : PASS
+Short Desc                         : ICO open end dt,elig closed not DP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 759
+Owner                              : PRIYA KANTAMNENI
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and eligibility row closed in the check month with stop reason code NOT for DP.
+Expected Results                   : Member disenrolled with end date as last day of date of discovery month.
+Test Case ID for Row 5410          : 47666
+Requirement ID                     : 37813.040.020
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47666
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47666
+Finished at                        : Wed Aug 14 09:47:03 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:47:03 EDT 2024
+Creating test case for Row #       : 5411
+Validation Time(ms)                : 741
+TC Validation status               : PASS
+Short Desc                         : ICO open end dt,2 elig rows,closed not DP,elig row with gap
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 759
+Owner                              : PRIYA KANTAMNENI
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and two eligibility rows with gap. Elig1 closed in the middle of the check month with stop reason code not for DP. Elig2  starting in the middle of the next month and open ended. (future eligibility row with a gap)  Example: Elig1: 20200101  20240315 (end dated on 20240301)--elig stop reason code is Not for DP. Elig2: 20240415  22991231 (future eligibility row with a gap)
+Expected Results                   : No full month eligibility in March.  Member disenrolled, as only eligibility segments within outlook date will be evaluated (march)  End date: 20240331
+Test Case ID for Row 5411          : 47667
+Requirement ID                     : 37813.040.020
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47667
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47667
+Finished at                        : Wed Aug 14 09:47:11 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:47:11 EDT 2024
+Creating test case for Row #       : 5412
+Validation Time(ms)                : 732
+TC Validation status               : PASS
+Short Desc                         : ICO open end dt,4 elig rows,closed not DP,elig row with gap
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 759
+Owner                              : PRIYA KANTAMNENI
+Grouping                           : Batch
+Long Desc                          : Member with open ended ICO assignment and multiple eligibility rows. Elig1 updated with retro end date causing a retro gap. Elig4 is open ended.  Example ICO eligibility segments: Elig1: 20200101  20200510 (retro gap)-- eligibility stop reason code is Not for DP Elig2: 20240305  20240315-- (no elig beginning of March) Elig3: 20240316  20240320  Elig4: 20240321  22991231
+Expected Results                   : Member is being evaluated for March 2024, no eligibility at the beginning of the month being evaluated.  Member does not have full month eligibility for March , but max eligibility date is beyond the month being evaluated and is open ended.  ICO assignment NOT disenrolled
+Test Case ID for Row 5412          : 47668
+Requirement ID                     : 37813.040.030
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47668
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47668
+Finished at                        : Wed Aug 14 09:47:18 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:47:18 EDT 2024
+Creating test case for Row #       : 5413
+Validation Time(ms)                : 739
+TC Validation status               : PASS
+Short Desc                         : History ICO Where Elig Ends Before Effective Date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : Batch
+Long Desc                          : Member with future open ended ICO assignment and no elig on the effective date. Elig ends before assignment effective date. ICO assignment: 20240401  22991231
+Expected Results                   : Verify ICO assignment is historied.
+Test Case ID for Row 5413          : 47669
+Requirement ID                     : 37813.050.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47669
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47669
+Finished at                        : Wed Aug 14 09:47:24 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:47:24 EDT 2024
+Creating test case for Row #       : 5414
+Validation Time(ms)                : 733
+TC Validation status               : PASS
+Short Desc                         : History ICO Where No Elig on Effective Date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : Batch
+Long Desc                          : Member with future open ended ICO assignment and no elig on the effective date.  ICO assignment: 20240401 - 22991231
+Expected Results                   : Verify ICO assignment is historied.
+Test Case ID for Row 5414          : 47670
+Requirement ID                     : 37813.050.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47670
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47670
+Finished at                        : Wed Aug 14 09:47:31 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:47:31 EDT 2024
+Creating test case for Row #       : 5415
+Validation Time(ms)                : 721
+TC Validation status               : PASS
+Short Desc                         : History ICO Where Elig Starts After ICO Eff Date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : Batch
+Long Desc                          : Member with future open ended ICO assignment and no elig on the effective date. Elig starts after the assignment effective date. ICO assignment: 20240101 - 22991231
+Expected Results                   : Verify ICO assignment is historied.
+Test Case ID for Row 5415          : 47671
+Requirement ID                     : 37813.050.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47671
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47671
+Finished at                        : Wed Aug 14 09:47:38 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:47:38 EDT 2024
+Creating test case for Row #       : 5416
+Validation Time(ms)                : 711
+TC Validation status               : PASS
+Short Desc                         : Future Open ICO w/ Elig on Effective Date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : Batch
+Long Desc                          : Member with future open ended ICO assignment and elig on the effective date. ICO assignment: 20240101 - 22991231
+Expected Results                   : Verify ICO assignment is NOT historied.
+Test Case ID for Row 5416          : 47672
+Requirement ID                     : 37813.050.010
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47672
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47672
+Finished at                        : Wed Aug 14 09:47:45 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:47:45 EDT 2024
+Creating test case for Row #       : 5417
+Validation Time(ms)                : 733
+TC Validation status               : PASS
+Short Desc                         : Open Ended ICO w/ No Elig on the Eff Date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : Batch
+Long Desc                          : Member with current open ended ICO assignment and no elig on the effective date. ICO assignment: 20200101 - 22991231
+Expected Results                   : Verify ICO assignment remains open.
+Test Case ID for Row 5417          : 47673
+Requirement ID                     : 37813.050.020
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47673
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47673
+Finished at                        : Wed Aug 14 09:47:51 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 09:47:51 EDT 2024
+Creating test case for Row #       : 5418
+Validation Time(ms)                : 838
+TC Validation status               : PASS
+Short Desc                         : Open Ended ICO w/ Retro Elig End Date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 947
+Owner                              : THOMAS STONE
+Grouping                           : Batch
+Long Desc                          : Member with current open ended ICO assignment and no elig covering the assignment due to retro elig end date. ICO assignment: 20200101 - 22991231
+Expected Results                   : Verify ICO assignment is closed at the end of the month of the discovery date.
+Test Case ID for Row 5418          : 47674
+Requirement ID                     : 37813.050.030
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47674
+Notebook                           : 2024 September Release
+Business Function                  : 2024 September Release
+Notebook/BF linked for test case   : 47674
+Finished at                        : Wed Aug 14 09:47:58 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Aug/2024 09:47:59AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

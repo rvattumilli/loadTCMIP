@@ -1,0 +1,822 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 16/Dec/2021 08:32:44PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Started at: Thu Dec 16 20:32:52 EST 2021
+Creating test case for TC Row : 653
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MSTDA and BHCP loses and gains elig same day
+Long Desc                     : Member with MSTDA and BHCP loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls MSTDA and BHCP with elig end date and re-enrolls member to same MSTDA and BHCP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 653      : 40667
+Notebook/Business function linked for test case 40667
+Work item linked for test case 40667
+Finished at: Thu Dec 16 20:33:08 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:33:08 EST 2021
+Creating test case for TC Row : 654
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with CRPLA loses and gains elig same day
+Long Desc                     : Member with CRPLA loses elig with end date that falls on Friday and gains elig to same health plan same day with no gap.
+Expected Results              : Batch disenrolls CRPLA with elig end date and re-enrolls member to CRPLA with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 654      : 40668
+Notebook/Business function linked for test case 40668
+Work item linked for test case 40668
+Finished at: Thu Dec 16 20:33:23 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:33:23 EST 2021
+Creating test case for TC Row : 655
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOA and CP loses and gains elig same day
+Long Desc                     : Member with ACOA and CP loses elig with end date that falls on Saturday or Sunday and gains elig to same ACOA helath plan with no gap on same day.
+Expected Results              : Batch disenrolls ACOA and CP with elig end date and re-enrolls member to ACOA and CP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 655      : 40669
+Notebook/Business function linked for test case 40669
+Work item linked for test case 40669
+Finished at: Thu Dec 16 20:33:39 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:33:39 EST 2021
+Creating test case for TC Row : 656
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOA and CP loses elig in future
+Long Desc                     : Member with ACOA and CP loses elig in future and gains elig to same ACOA plan with no gap on same day.
+Expected Results              : Batch disenrolls ACOA and CP with elig end date and re-enrolls member to same ACOA and CP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 656      : 40670
+Notebook/Business function linked for test case 40670
+Work item linked for test case 40670
+Finished at: Thu Dec 16 20:33:54 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:33:54 EST 2021
+Creating test case for TC Row : 657
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MSTDA loses and gains elig same day
+Long Desc                     : Member with MSTDA loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls MSTDA with future date and re-enrolls member to same MSTDA with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 657      : 40671
+Notebook/Business function linked for test case 40671
+Work item linked for test case 40671
+Finished at: Thu Dec 16 20:34:09 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:34:09 EST 2021
+Creating test case for TC Row : 658
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MSTDA and BHCP loses and gains elig same day
+Long Desc                     : Member with MSTDA and BHCP loses elig with future date and gains elig with no gap to CRPLA on same day.
+Expected Results              : Batch disenrolls MSTDA and BHCP with future date and re-enrolls member to CRPLA and BHCP with gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 658      : 40672
+Notebook/Business function linked for test case 40672
+Work item linked for test case 40672
+Finished at: Thu Dec 16 20:34:25 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:34:25 EST 2021
+Creating test case for TC Row : 659
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MFASA and LTSS loses and gains elig same day
+Long Desc                     : Member with MFASA and LTSS loses elig with future date and gains elig to same health plan thru UI same day.Assignments are closed thru UI.
+Expected Results              : Batch disenrolls MFASA and LTSS with future date and re-enrolls member to MFASA and LTSS with gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 659      : 40673
+Notebook/Business function linked for test case 40673
+Work item linked for test case 40673
+Finished at: Thu Dec 16 20:34:41 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:34:41 EST 2021
+Creating test case for TC Row : 660
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOA loses elig retro
+Long Desc                     : Member with ACOA loses elig retro and gains retro elig to same ACOA plan with no gap on same day.
+Expected Results              : No changes to assignment as member had continuous eligibility
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 660      : 40674
+Notebook/Business function linked for test case 40674
+Work item linked for test case 40674
+Finished at: Thu Dec 16 20:34:56 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:34:56 EST 2021
+Creating test case for TC Row : 661
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOA loses elig retro
+Long Desc                     : Member with ACOA loses elig retro and gains retro elig to same ACOA plan with gap on same day.
+Expected Results              : Batch disenrolls ACOA with elig end date and re-enrolls to same ACOA with default ACOA eff date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 661      : 40675
+Notebook/Business function linked for test case 40675
+Work item linked for test case 40675
+Finished at: Thu Dec 16 20:35:12 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:35:12 EST 2021
+Creating test case for TC Row : 662
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MSTD and ACCS1 loses and gains elig same day
+Long Desc                     : Member with MSTD and ACCS1 loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls MSTD and ACCS1 with future date and re-enrolls member to same MSTD and BHCP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 662      : 40676
+Notebook/Business function linked for test case 40676
+Work item linked for test case 40676
+Finished at: Thu Dec 16 20:35:27 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:35:27 EST 2021
+Creating test case for TC Row : 663
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with CRPLS loses and gains elig same day
+Long Desc                     : Member with CRPLS loses elig with nd date that falls on Friday and gains elig to same health plan same day with no gap.
+Expected Results              : Batch disenrolls CRPLS with elig end date and re-enrolls member to CRPLS with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 663      : 40677
+Notebook/Business function linked for test case 40677
+Work item linked for test case 40677
+Finished at: Thu Dec 16 20:35:43 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:35:43 EST 2021
+Creating test case for TC Row : 664
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MCO and CP loses and gains elig same day
+Long Desc                     : Member with MCO and CP loses elig with end date that falls on Saturday or Sunday and gains elig to same MCO helath plan with no gap on same day.
+Expected Results              : Batch disenrolls MCO and CP with elig end date and re-enrolls member to ACOA and CP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 664      : 40678
+Notebook/Business function linked for test case 40678
+Work item linked for test case 40678
+Finished at: Thu Dec 16 20:35:58 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:35:58 EST 2021
+Creating test case for TC Row : 665
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MCO and CP loses elig in future
+Long Desc                     : Member with MCO and CP loses elig in future and gains elig to same ACOA plan with no gap on same day.
+Expected Results              : Batch disenrolls MCO and CP with elig end date and re-enrolls member to same ACOA and CP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 665      : 40679
+Notebook/Business function linked for test case 40679
+Work item linked for test case 40679
+Finished at: Thu Dec 16 20:36:13 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:36:13 EST 2021
+Creating test case for TC Row : 666
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MSTD loses and gains elig same day
+Long Desc                     : Member with MSTD loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls MSTD with future date and re-enrolls member to same MSTD with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 666      : 40680
+Notebook/Business function linked for test case 40680
+Work item linked for test case 40680
+Finished at: Thu Dec 16 20:36:29 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:36:29 EST 2021
+Creating test case for TC Row : 667
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MSTD and PACC1 loses and gains elig same day
+Long Desc                     : Member with MSTD and PACC1 loses elig with future date and gains elig with no gap to CRPLS on same day.
+Expected Results              : Batch disenrolls MSTD and PACC1 with future date and re-enrolls member to CRPLS and PACC1 with gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 667      : 40681
+Notebook/Business function linked for test case 40681
+Work item linked for test case 40681
+Finished at: Thu Dec 16 20:36:44 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:36:44 EST 2021
+Creating test case for TC Row : 668
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MFAS and ELTSS loses and gains elig same day
+Long Desc                     : Member with MFAS and ELTSS loses elig with future date and gains elig to same health plan thru UI same day.Assignments are closed thru UI.
+Expected Results              : Batch disenrolls MFAS and ELTSS with future date and re-enrolls member to MFAS and ELTSS with gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 668      : 40682
+Notebook/Business function linked for test case 40682
+Work item linked for test case 40682
+Finished at: Thu Dec 16 20:36:59 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:36:59 EST 2021
+Creating test case for TC Row : 669
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MCO loses elig retro
+Long Desc                     : Member with MCO loses elig retro and gains retro elig to same MCO plan with no gap on same day.
+Expected Results              : No changes to assignment as member had continuous eligibility
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 669      : 40683
+Notebook/Business function linked for test case 40683
+Work item linked for test case 40683
+Finished at: Thu Dec 16 20:37:15 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:37:15 EST 2021
+Creating test case for TC Row : 670
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MCO loses elig retro
+Long Desc                     : Member with MCO loses elig retro and gains retro elig to same MCO plan with gap on same day.
+Expected Results              : Batch disenrolls MCO with elig end date and re-enrolls to same MCO with default MCO eff date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 670      : 40684
+Notebook/Business function linked for test case 40684
+Work item linked for test case 40684
+Finished at: Thu Dec 16 20:37:30 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:37:30 EST 2021
+Creating test case for TC Row : 671
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MSTD loses and gains elig same day
+Long Desc                     : Member with MSTD/PCP/ACOC loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls MSTD/PCP/ACOC with future date and re-enrolls member to same MSTD/PCP/ACOC with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 671      : 40685
+Notebook/Business function linked for test case 40685
+Work item linked for test case 40685
+Finished at: Thu Dec 16 20:37:46 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:37:46 EST 2021
+Creating test case for TC Row : 672
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MSTD loses and gains elig same day
+Long Desc                     : Member with MSTD and non-MMIS PCP loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls MSTD with future date and re-enrolls member to same MSTD and non-MMIS PCP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 672      : 40686
+Notebook/Business function linked for test case 40686
+Work item linked for test case 40686
+Finished at: Thu Dec 16 20:38:01 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:38:01 EST 2021
+Creating test case for TC Row : 673
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with PCCP and CP loses and gains elig same day
+Long Desc                     : Member with PCCP and CP loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls PCCP and CP with future date and re-enrolls member to same PCCP and CP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 673      : 40687
+Notebook/Business function linked for test case 40687
+Work item linked for test case 40687
+Finished at: Thu Dec 16 20:38:16 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:38:16 EST 2021
+Creating test case for TC Row : 674
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with CPPCC loses and gains elig same day
+Long Desc                     : Member with CPPCC loses elig with nd date that falls on Friday and gains elig to same health plan same day with no gap.
+Expected Results              : Batch disenrolls CPPCC with elig end date and re-enrolls member to CPPCC with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 674      : 40688
+Notebook/Business function linked for test case 40688
+Work item linked for test case 40688
+Finished at: Thu Dec 16 20:38:32 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:38:32 EST 2021
+Creating test case for TC Row : 675
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with PCCP and CP loses and gains elig same day
+Long Desc                     : Member with PCCP and CP loses elig with end date that falls on Saturday or Sunday and gains elig to same PCCP helath plan with no gap on same day.
+Expected Results              : Batch disenrolls PCCP and CP with elig end date and re-enrolls member to PCCP and CP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 675      : 40689
+Notebook/Business function linked for test case 40689
+Work item linked for test case 40689
+Finished at: Thu Dec 16 20:38:47 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:38:47 EST 2021
+Creating test case for TC Row : 676
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with CPPCC and CP loses elig in future
+Long Desc                     : Member with CPPCC and CP loses elig in future and gains elig to same CPPCC plan with no gap on same day.
+Expected Results              : Batch disenrolls CPPCC and CP with elig end date and re-enrolls member to same CPPCC and CP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 676      : 40690
+Notebook/Business function linked for test case 40690
+Work item linked for test case 40690
+Finished at: Thu Dec 16 20:39:02 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:39:02 EST 2021
+Creating test case for TC Row : 677
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with PCCP loses and gains elig same day
+Long Desc                     : Member with PCCP loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls PCCP with future date and re-enrolls member to same PCCP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 677      : 40691
+Notebook/Business function linked for test case 40691
+Work item linked for test case 40691
+Finished at: Thu Dec 16 20:39:18 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:39:18 EST 2021
+Creating test case for TC Row : 678
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with CPPCC and CP loses and gains elig same day
+Long Desc                     : Member with CPPCC and CP loses elig with future date and gains elig with no gap to PCCP on same day.
+Expected Results              : Batch disenrolls CPPCC and CP with future date and re-enrolls member to PCCP and CP with gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 678      : 40692
+Notebook/Business function linked for test case 40692
+Work item linked for test case 40692
+Finished at: Thu Dec 16 20:39:33 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:39:33 EST 2021
+Creating test case for TC Row : 679
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with PCCP and CP loses and gains elig same day
+Long Desc                     : Member with PCCP and CP loses elig with future date and gains elig to same health plan thru UI same day.Assignments are closed thru UI.
+Expected Results              : Batch disenrolls PCCP and CP with future date and re-enrolls member to PCCP and CP with gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 679      : 40693
+Notebook/Business function linked for test case 40693
+Work item linked for test case 40693
+Finished at: Thu Dec 16 20:39:49 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:39:49 EST 2021
+Creating test case for TC Row : 680
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with CPPCC loses elig retro
+Long Desc                     : Member with CPPCC loses elig retro and gains retro elig to same plan with no gap on same day.
+Expected Results              : No changes to assignment as member had continuous eligibility
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 680      : 40694
+Notebook/Business function linked for test case 40694
+Work item linked for test case 40694
+Finished at: Thu Dec 16 20:40:04 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:40:04 EST 2021
+Creating test case for TC Row : 681
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with PCCP loses elig retro
+Long Desc                     : Member with PCCP loses elig retro and gains retro elig to same plan with gap on same day.
+Expected Results              : Batch disenrolls PCCP with elig end date and re-enrolls to same PCCP with default PCCP eff date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 681      : 40695
+Notebook/Business function linked for test case 40695
+Work item linked for test case 40695
+Finished at: Thu Dec 16 20:40:20 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:40:20 EST 2021
+Creating test case for TC Row : 682
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOB and BHCP loses and gains elig same day
+Long Desc                     : Member with ACOB/PCCB/BH and BHCP loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls ACOB/PCCB/BH and BHCP with future date and re-enrolls member to same ACOB/PCCB/BH and BHCP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 682      : 40696
+Notebook/Business function linked for test case 40696
+Work item linked for test case 40696
+Finished at: Thu Dec 16 20:40:36 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:40:36 EST 2021
+Creating test case for TC Row : 683
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOB loses and gains elig same day
+Long Desc                     : Member with ACOB/CPCCB/CPBH loses elig with nd date that falls on Friday and gains elig to same health plan same day with no gap.
+Expected Results              : Batch disenrolls ACOB/CPCCB/CPBH with elig end date and re-enrolls member to ACOB/CPCCB/CPBH with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 683      : 40697
+Notebook/Business function linked for test case 40697
+Work item linked for test case 40697
+Finished at: Thu Dec 16 20:40:51 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:40:51 EST 2021
+Creating test case for TC Row : 684
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOB and CP loses and gains elig same day
+Long Desc                     : Member with ACOB/PCCB/BH and CP loses elig with end date that falls on Saturday or Sunday and gains elig to same ACOB/PCCB/BH helath plan with no gap on same day.
+Expected Results              : Batch disenrolls ACOB/PCCB/BH and CP with elig end date and re-enrolls member to ACOB/PCCB/BH and CP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 684      : 40698
+Notebook/Business function linked for test case 40698
+Work item linked for test case 40698
+Finished at: Thu Dec 16 20:41:06 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:41:06 EST 2021
+Creating test case for TC Row : 685
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOB and CP loses elig in future
+Long Desc                     : Member with ACOB/CPCCB/CPBH and CP loses elig in future and gains elig to same ACOB/CPCCB/CPBH plan with no gap on same day.
+Expected Results              : Batch disenrolls ACOB/CPCCB/CPBH and CP with elig end date and re-enrolls member to same ACOB/CPCCB/CPBH and CP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 685      : 40699
+Notebook/Business function linked for test case 40699
+Work item linked for test case 40699
+Finished at: Thu Dec 16 20:41:22 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:41:22 EST 2021
+Creating test case for TC Row : 686
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOB loses and gains elig same day
+Long Desc                     : Member with ACOB/PCCB/BH loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls ACOB/PCCB/BH with future date and re-enrolls member to same ACOB/PCCB/BH with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 686      : 40700
+Notebook/Business function linked for test case 40700
+Work item linked for test case 40700
+Finished at: Thu Dec 16 20:41:40 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:41:40 EST 2021
+Creating test case for TC Row : 687
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOB and ACCS1 loses and gains elig same day
+Long Desc                     : Member with ACOB/CPCCB/CPBH and ACCS1 loses elig with future date and gains elig with no gap to ACOB/PCCB/BH on same day.
+Expected Results              : Batch disenrolls ACOB/CPCCB/CPBH and ACCS1 with future date and enrolls member to ACOB/PCCB/BH and ACCS1 with gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 687      : 40701
+Notebook/Business function linked for test case 40701
+Work item linked for test case 40701
+Finished at: Thu Dec 16 20:41:55 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:41:55 EST 2021
+Creating test case for TC Row : 688
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOB and LTSS loses and gains elig same day
+Long Desc                     : Member with ACOB/PCCB/BH and LTSS loses elig with future date and gains elig to same health plan thru UI same day.Assignments are closed thru UI.
+Expected Results              : Batch disenrolls ACOB/PCCB/BH and LTSS with future date and re-enrolls member to ACOB/PCCB/BH and LTSS with gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 688      : 40712
+Notebook/Business function linked for test case 40712
+Work item linked for test case 40712
+Finished at: Thu Dec 16 20:42:11 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:42:11 EST 2021
+Creating test case for TC Row : 689
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOB loses elig retro
+Long Desc                     : Member with ACOB/CPCCB/CPBH loses elig retro and gains retro elig to same ACOB/CPCCB/CPBH plan with no gap on same day.
+Expected Results              : No changes to assignment as member had continuous eligibility
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 689      : 40713
+Notebook/Business function linked for test case 40713
+Work item linked for test case 40713
+Finished at: Thu Dec 16 20:42:26 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:42:26 EST 2021
+Creating test case for TC Row : 690
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with ACOB loses elig retro
+Long Desc                     : Member with ACOB/PCCB/BH loses elig retro and gains retro elig to same ACOB/PCCB/BH plan with gap on same day.
+Expected Results              : Batch disenrolls ACOB/PCCB/BH with elig end date and re-enrolls to same ACOB/PCCB/BH with default ACOA eff date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 690      : 40714
+Notebook/Business function linked for test case 40714
+Work item linked for test case 40714
+Finished at: Thu Dec 16 20:42:41 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:42:41 EST 2021
+Creating test case for TC Row : 691
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with DNTL1 loses and gains elig same day
+Long Desc                     : Member with DNTL1 loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls DNTL1 with elig end date and re-enrolls to DNTL1 with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 691      : 40715
+Notebook/Business function linked for test case 40715
+Work item linked for test case 40715
+Finished at: Thu Dec 16 20:42:57 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:42:57 EST 2021
+Creating test case for TC Row : 692
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with DNTL1 loses and gains elig same day thru UI
+Long Desc                     : Member with DNTL1 loses elig with future date and gains elig to same health plan with no gap on same day. Assignment plan is closed thru UI.
+Expected Results              : Batch disenrolls DNTL1 with elig end date and re-enrolls to DNTL1 with elig eff date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 692      : 40716
+Notebook/Business function linked for test case 40716
+Work item linked for test case 40716
+Finished at: Thu Dec 16 20:43:13 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:43:13 EST 2021
+Creating test case for TC Row : 693
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with DNTL1 loses and gains DNTL2/3 elig
+Long Desc                     : Member with DNTL1 loses elig with future date and gains elig to DNTL2/DNTL3 with no gap on same day.
+Expected Results              : Batch disenrolls DNTL1 with elig end date and enrolls to DNTL2/DNTL3 with elig eff date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 693      : 40717
+Notebook/Business function linked for test case 40717
+Work item linked for test case 40717
+Finished at: Thu Dec 16 20:43:28 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:43:28 EST 2021
+Creating test case for TC Row : 694
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with DNTL loses and gains elig
+Long Desc                     : Member with DNTL 1/2/3 loses elig with future date and gains elig to same previous health plan with gap on same day
+Expected Results              : Batch disenrolls DNTL 1/2/3 with elig end date and enrolls member to DNTL 1/2/3 with elig eff date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 694      : 40718
+Notebook/Business function linked for test case 40718
+Work item linked for test case 40718
+Finished at: Thu Dec 16 20:43:43 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:43:43 EST 2021
+Creating test case for TC Row : 695
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with standalone BH loses and gains elig
+Long Desc                     : Member with standalone BH loses elig with future date and gains elig to same plan with no gap on same day.
+Expected Results              : Batch disenrolls BH with elig end date and enrolls member to BH with default BH eff date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 695      : 40719
+Notebook/Business function linked for test case 40719
+Work item linked for test case 40719
+Finished at: Thu Dec 16 20:43:58 EST 2021
+************************************************************************
+Started at: Thu Dec 16 20:43:58 EST 2021
+Creating test case for TC Row : 696
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with future ACOA loses and gains elig same day
+Long Desc                     : Member with future ACOA loses elig in future where future elig end date < ACOA eff date and gains elig to same ACOA on same day with no gap.
+Expected Results              : Batch histories ACOA and enrolls member to ACOA with default ACOA eff date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+Test Case ID for Row 696      : 40720
+Notebook/Business function linked for test case 40720
+Work item linked for test case 40720
+Finished at: Thu Dec 16 20:44:14 EST 2021
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 16/Dec/2021 08:44:14PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

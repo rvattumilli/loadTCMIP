@@ -1,0 +1,411 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 05/Aug/2021 03:25:17PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Creating test case for TC Row : 493
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify revised CC notices; old CC notices are no longer generated
+Long Desc                     : The CC notices are now revised and the old CC notices are no longer generated anymore.
+Expected Results              : The CC notices are now revised and the old CC notices are no longer generated anymore.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 493      : 40325
+Notebook/Business function linked for test case 40325
+Work item linked for test case 40325
+************************************************************************
+Creating test case for TC Row : 494
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Revised CC notices with Lang Written other than SPANIS
+Long Desc                     : The CC notices generated has the right template with no babel card and fair hearing:
+Members will receive CC notices in English based on members Language Written, which is other than SPANIS
+ARDs: will receive CC notices in English.
+Expected Results              : Member: will receive CC notices in English
+ARDs: will receive CC notices in English.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 494      : 40326
+Notebook/Business function linked for test case 40326
+Work item linked for test case 40326
+************************************************************************
+Creating test case for TC Row : 495
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Revised CC notices with Lang Written SPANIS
+Long Desc                     : The CC notices generated has the right template with no babel card and fair hearing:
+Member will receive CC notices in Spanish based on members Language Written: SPANIS
+ARDs: will receive CC notices in English.
+Expected Results              : Member: will receive CC notices in Spanish
+ARDs: will receive CC notices in English.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 495      : 40327
+Notebook/Business function linked for test case 40327
+Work item linked for test case 40327
+************************************************************************
+Creating test case for TC Row : 496
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Test the CM notices for member with Lang Written other than SPANIS
+Long Desc                     : The CM notices still generates as per the existing template with no babel card and fair hearing:
+Members will receive CM notices in English based on members Language Written, which is other than SPANIS
+ARDs: will receive CM notices in English.
+Expected Results              : Member: will receive CM notices in English
+ARDs: will receive CM notices in English
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 496      : 40328
+Notebook/Business function linked for test case 40328
+Work item linked for test case 40328
+************************************************************************
+Creating test case for TC Row : 497
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Test the CM notices for member with Lang Written SPANIS
+Long Desc                     : The CM notices still generates as per the existing template and no babel card and fair hearing:
+Members will receive CM notices in Spanish based on members Language Written: SPANIS
+ARDs: will receive CM notices in English.
+Expected Results              : Member: will receive CM notices in Spanish
+ARDs: will receive CM notices in English
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 497      : 40329
+Notebook/Business function linked for test case 40329
+Work item linked for test case 40329
+************************************************************************
+Creating test case for TC Row : 498
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify duplicate CC notices are not generated
+Long Desc                     : Verify duplicate CC notices are not generated for members if they have already been sent a letter and no changes in copay cap.
+Expected Results              : Multiple CC notices are not generated in same month
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 498      : 40331
+Notebook/Business function linked for test case 40331
+Work item linked for test case 40331
+************************************************************************
+Creating test case for TC Row : 499
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify duplicate CM notices are not generated
+Long Desc                     : Verify duplicate CM notices are not generated for members if they have already been sent a letter for the month.
+Expected Results              : duplicate CE notices are not generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 499      : 40332
+Notebook/Business function linked for test case 40332
+Work item linked for test case 40332
+************************************************************************
+Creating test case for TC Row : 500
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify duplicate CE notices are not generated
+Long Desc                     : Verify duplicate CE notices for Y or N flags are not generated for members if they have already been sent a letter and no changes to the exempt.
+Expected Results              : duplicate CE notices are not generated
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 500      : 40333
+Notebook/Business function linked for test case 40333
+Work item linked for test case 40333
+************************************************************************
+Creating test case for TC Row : 501
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify the new CE notice template  for member with Lang Written SPANIS
+Long Desc                     : The CE notice generated is as the template with no babel card and fair hearing: 
+Members will receive CE notices in Spanish based on members Language Written: SPANIS 
+ARDs: will receive CE notices in English 
+ 
+A new element is added to the XML string that is inserted into the T_LETTER_REQUEST table. This will be the DTE_SYSDATE column value from table A_T_RE_COPAY_TRACKING which is the date the member became exempt (Y) or non-exempt (N).
+Expected Results              : The CE notices generated is as the given template 
+Member: will receive CE notices in Spanish 
+ARDs: will receive CE notices in English
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 501      : 40334
+Notebook/Business function linked for test case 40334
+Work item linked for test case 40334
+************************************************************************
+Creating test case for TC Row : 502
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify the new CE notice template  for member with Lang Written other than SPANIS
+Long Desc                     : The CE notice generated is as the template with no babel card and fair hearing: 
+Members will receive CE notices in English based on members Language Written, which is other than SPANIS 
+ARDs: will receive CE notices in English 
+ 
+A new element is added to the XML string that is inserted into the T_LETTER_REQUEST table. This will be the DTE_SYSDATE column value from table A_T_RE_COPAY_TRACKING which is the date the member became exempt (Y) or non-exempt (N).
+Expected Results              : The CE notices generated is as the given template 
+Member: will receive CE notices in English 
+ARDs: will receive CE notices in English
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 502      : 40335
+Notebook/Business function linked for test case 40335
+Work item linked for test case 40335
+************************************************************************
+Creating test case for TC Row : 503
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent if member gets pregnant
+Long Desc                     : Verify CE notices for non-exempt members having copay tracking record receives the below conditions:  
+i) pregnancy indicator = Y 
+ii) pregnancy end date = next month. 
+ 
+The exempt condition of the members should change from N to Y. 
+CE notices should generate after the notice job the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 503      : 40337
+Notebook/Business function linked for test case 40337
+Work item linked for test case 40337
+************************************************************************
+Creating test case for TC Row : 504
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices if member pregnancy end date is over
+Long Desc                     : i) Verify CE notices should not get generated right away if members pregnancy end date is over before the month-end. 
+ 
+The exempt condition of the members should remain Y. 
+ 
+Ii) Verify CE notices should generate when the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month. 
+ 
+NOTE: Only exempt condition member has is the pregancy ind.
+Expected Results              : i) CE notices not generated.  
+ 
+ii) CE notices generated.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 504      : 40338
+Notebook/Business function linked for test case 40338
+Work item linked for test case 40338
+************************************************************************
+Creating test case for TC Row : 505
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent if member gets LOC
+Long Desc                     : When member receives LOC, verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 505      : 40339
+Notebook/Business function linked for test case 40339
+Work item linked for test case 40339
+************************************************************************
+Creating test case for TC Row : 506
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices if member LOC end date is over
+Long Desc                     : i) Verify CE notices should not get generated right away if members LOC end date is over before the month-end. 
+ 
+The exempt condition of the members should remain Y. 
+ 
+Ii) Verify CE notices should generate when the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month. 
+ 
+NOTE: Only exempt condition member has is the LOC.
+Expected Results              : i) CE notices not generated.  
+ 
+ii) CE notices generated.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 506      : 40340
+Notebook/Business function linked for test case 40340
+Work item linked for test case 40340
+************************************************************************
+Creating test case for TC Row : 507
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent if member gets Hospice
+Long Desc                     : When member receives Hospice assignment, verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 507      : 40341
+Notebook/Business function linked for test case 40341
+Work item linked for test case 40341
+************************************************************************
+Creating test case for TC Row : 508
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices if member no longer has Hospice
+Long Desc                     : i) Verify CE notices should not get generated right away if member no longer has Hospice before the month-end. 
+ 
+The exempt condition of the members should remain Y. 
+ 
+Ii) Verify CE notices should generate when the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month. 
+ 
+NOTE: Only exempt condition member has is the Hospice Assignment.
+Expected Results              : i) CE notices not generated.  
+ 
+ii) CE notices generated.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 508      : 40342
+Notebook/Business function linked for test case 40342
+Work item linked for test case 40342
+************************************************************************
+Creating test case for TC Row : 509
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent if member gets ICO assignment
+Long Desc                     : When member receives ICO assignment, verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 509      : 40343
+Notebook/Business function linked for test case 40343
+Work item linked for test case 40343
+************************************************************************
+Creating test case for TC Row : 510
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices if member no longer has ICO
+Long Desc                     : i) Verify CE notices should not get generated right away if member no longer has ICO before the month-end. 
+ 
+The exempt condition of the members should remain Y. 
+ 
+Ii) Verify CE notices should generate when the monthly BRE changes the exempt condition of the above member from Y to N on the last day of the month. 
+ 
+NOTE: Only exempt condition member has is the ICO Assignment.
+Expected Results              : i) CE notices not generated.  
+ 
+ii) CE notices generated.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 510      : 40344
+Notebook/Business function linked for test case 40344
+Work item linked for test case 40344
+************************************************************************
+Creating test case for TC Row : 511
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent if member gets SCO
+Long Desc                     : When member receives SCO assignment, verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 511      : 40345
+Notebook/Business function linked for test case 40345
+Work item linked for test case 40345
+************************************************************************
+Creating test case for TC Row : 512
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 807
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Verify CE notices are sent if member gets PACE
+Long Desc                     : When member receives PACE assignment, verify the exempt condition of the member changes from N to Y. And CE notices should generate after the notice job the day the change was made.
+Expected Results              : CE notices generated right away when members copay exempt flag changes from N to Y.
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35630
+Associated WI Type            : Change Order
+Test Case ID for Row 512      : 40346
+Notebook/Business function linked for test case 40346
+Work item linked for test case 40346
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 05/Aug/2021 03:33:05PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

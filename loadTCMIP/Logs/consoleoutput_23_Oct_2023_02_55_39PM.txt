@@ -1,0 +1,212 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 23/Oct/2023 02:55:39PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.DAYS_TO_RESET_PWD > 2
+Query Execution Time(ms)           : 42
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 109
+Total No.of Rows fetched           : 6
+*****************************************************************
+Started at                         : Mon Oct 23 14:55:46 EDT 2023
+Creating test case for Row #       : 4639
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.14.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 436
+Validation status                  : PASS
+Short Desc                         : res_adr_street_1
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with DSS with the field res_adr_street_1 then update the field with MHO, HIX and then PAC and so on. 2. Create a new member with MHO, HIX with the field res_adr_street_1 then update the field with PAC and then SSA so on. **(Continue with rest of the agencies from the hierarchy) Hierarchy for res_adr_street_1 1. DSS 2. MHO, HIX 3. PAC 4. SSA 5. DMH,DTA, HCF 6. DYS
+Expected Results                   : 1. New member will have field res_adr_street_1 in demo_table for DSS and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. 2. New member will have field res_adr_street_1 in demo_table for MHO, HIX and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. ** (Verify that lower agency is not changing the values) 3. Note- Check the audit;  time stamp, Source Agency that updated the field and values updated should be stored for audit purposes
+Test Case ID for Row 4639          : 46692
+Query Execution Time(ms)           : 61
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.14.001
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46692
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46692
+Finished at                        : Mon Oct 23 14:55:50 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 14:55:50 EDT 2023
+Creating test case for Row #       : 4640
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.14.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 432
+Validation status                  : PASS
+Short Desc                         : res_adr_street_2
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with DSS with the field res_adr_street_2 then update the field with MHO, HIX  and then PAC and so on. 2. Create a new member with MHO, HIX with the field res_adr_street_2 then update the field with PAC and then SSA so on. **(Continue with rest of the agencies from the hierarchy) Hierarchy for res_adr_street_2 1. DSS 2. MHO, HIX 3. PAC 4. SSA 5. DMH,DTA, HCF 6. DYS
+Expected Results                   : 1. New member will have field res_adr_street_2 in demo_table for DSS and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. 2.  New member will have field res_adr_street_2 in demo_table for MHO, HIX and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. ** (Verify that lower agency is not changing the values) 3. Note- Check the audit;  time stamp, Source Agency that updated the field and values updated should be stored for audit purposes
+Test Case ID for Row 4640          : 46693
+Query Execution Time(ms)           : 74
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.14.001
+Query Execution Time(ms)           : 27
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46693
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46693
+Finished at                        : Mon Oct 23 14:55:55 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 14:55:55 EDT 2023
+Creating test case for Row #       : 4641
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.14.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 458
+Validation status                  : PASS
+Short Desc                         : res_adr_city
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with DSS with the field res_adr_city then update the field with MHO, HIX and then PAC and so on. 2. Create a new member with MHO, HIX with the field res_adr_city then update the field with PAC and then SSA so on. **(Continue with rest of the agencies from the hierarchy) Hierarchy for res_adr_city 1. DSS 2. MHO, HIX 3. PAC 4. SSA 5. DMH,DTA, HCF 6. DYS
+Expected Results                   : 1. New member will have field res_adr_city in demo_table for DSS and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. 2.  New member will have field res_adr_city in demo_table for MHO, HIX and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. ** (Verify that lower agency is not changing the values) 3. Note- Check the audit;  time stamp, Source Agency that updated the field and values updated should be stored for audit purposes
+Test Case ID for Row 4641          : 46694
+Query Execution Time(ms)           : 90
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.14.001
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46694
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46694
+Finished at                        : Mon Oct 23 14:55:59 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 14:55:59 EDT 2023
+Creating test case for Row #       : 4642
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.14.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 438
+Validation status                  : PASS
+Short Desc                         : res_adr_state
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with DSS with the field res_adr_state then update the field with MHO, HIX and then PAC and so on. 2. Create a new member with MHO/HIX with the field res_adr_state then update the field with PAC and then SSA so on. **(Continue with rest of the agencies from the hierarchy) Hierarchy for res_adr_state 1. DSS 2. MHO, HIX 3. PAC 4. SSA 5. DMH,DTA, HCF 6. DYS
+Expected Results                   : 1. New member will have field res_adr_state in demo_table for DSS and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. 2.  New member will have field res_adr_state in demo_table for MHO, HIX and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. ** (Verify that lower agency is not changing the values) 3. Note- Check the audit;  time stamp, Source Agency that updated the field and values updated should be stored for audit purposes
+Test Case ID for Row 4642          : 46695
+Query Execution Time(ms)           : 67
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.14.001
+Query Execution Time(ms)           : 30
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46695
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46695
+Finished at                        : Mon Oct 23 14:56:04 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 14:56:04 EDT 2023
+Creating test case for Row #       : 4643
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.14.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 480
+Validation status                  : PASS
+Short Desc                         : res_adr_zip_code
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with DSS with the field res_adr_zip_code then update the field with MHO, HIX and then PAC and so on. 2. Create a new member with MHO, HIX with the field res_adr_zip_code then update the field with PAC and then SSA so on. **(Continue with rest of the agencies from the hierarchy) Hierarchy for res_adr_zip_code 1. DSS 2. MHO, HIX 3. PAC 4. SSA 5. DMH,DTA, HCF 6. DYS
+Expected Results                   : 1. New member will have field res_adr_zip_code in demo_table for DSS and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. 2.  New member will have field res_adr_zip_code in demo_table for MHO, HIX and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. ** (Verify that lower agency is not changing the values) 3. Note- Check the audit;  time stamp, Source Agency that updated the field and values updated should be stored for audit purposes
+Test Case ID for Row 4643          : 46696
+Query Execution Time(ms)           : 64
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.14.001
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46696
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46696
+Finished at                        : Mon Oct 23 14:56:09 EDT 2023
+*****************************************************************
+Started at                         : Mon Oct 23 14:56:09 EDT 2023
+Creating test case for Row #       : 4644
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36803.14.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02-P2 Member Demographics') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 477
+Validation status                  : PASS
+Short Desc                         : res_adr_zip_code_4
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : Batch
+Long Desc                          : 1.Create a new member with DSS with the field res_adr_zip_code_4 then update the field with MHO, HIX and then PAC and so on. 2. Create a new member with MHO, HIX with the field res_adr_zip_code_4 then update the field with PAC and then SSA so on. **(Continue with rest of the agencies from the hierarchy) Hierarchy for res_adr_zip_code_4 1. DSS 2. MHO, HIX 3. PAC 4. SSA 5. DMH,DTA, HCF 6. DYS
+Expected Results                   : 1. New member will have field res_adr_zip_code_4 in demo_table for DSS and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. 2.  New member will have field res_adr_zip_code_4 in demo_table for MHO, HIX and all the subsequent agencies will not be able to modify that and thus the value of higher agency in t_re_demo table will remain unchanged. ** (Verify that lower agency is not changing the values) 3. Note- Check the audit;  time stamp, Source Agency that updated the field and values updated should be stored for audit purposes
+Test Case ID for Row 4644          : 46697
+Query Execution Time(ms)           : 74
+Total No.of Columns fetched        : 1
+Requirement ID                     : 36803.14.001
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 46697
+Notebook                           : Project 24.02-P2 Member Demographics
+Business Function                  : Project 24.02-P2 Member Demographics
+Notebook/BF linked for test case   : 46697
+Finished at                        : Mon Oct 23 14:56:14 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 23/Oct/2023 02:56:14PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

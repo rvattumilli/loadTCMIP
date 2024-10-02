@@ -1,0 +1,444 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 10/Jan/2024 04:03:16PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Cred SQL                           : select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 6
+MIP URL                            : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 104
+Total No.of Rows fetched           : 14
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:21 EST 2024
+Creating test case for Row #       : 4660
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.01.010') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 424
+Validation status                  : PASS
+Short Desc                         : Disability value DA to "Determined Disabled
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : Validate member extract jobs member  ELGD057, ELGD059 and ELGD065. The description of the disability value is changed from DA to "Determined Disabled"
+Expected Results                   : Extracts ELGD057, ELGD059 and ELGD065 should have description "Determined Disabled" instead of DA.
+Test Case ID for Row 4660          : 46932
+Query Execution Time(ms)           : 67
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.01.010
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 46932
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46932
+Finished at                        : Wed Jan 10 16:03:26 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:26 EST 2024
+Creating test case for Row #       : 4661
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.01.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 436
+Validation status                  : PASS
+Short Desc                         : Name change from DA to Determined  Diasbled
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : Changing the member webservice by the user ID, who has the  role showing SSA data cannot be seen, then the description of the disabled value is shown as 'Determined Disabled' in the demographic segment. Task 1: Disabled member Task 2: Non- disabled member
+Expected Results                   : will see "Determined Disabled" in the demographic  segment as expected.
+Test Case ID for Row 4661          : 46933
+Query Execution Time(ms)           : 70
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.01.011
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Web Service
+SAK Requirement Type               : 23
+Requirement linked for test case   : 46933
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46933
+Finished at                        : Wed Jan 10 16:03:30 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:30 EST 2024
+Creating test case for Row #       : 4662
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.01.011') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 438
+Validation status                  : PASS
+Short Desc                         : No name change of 'DA'
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : Changing the member webservice by the user ID, who has the  role showing SSA data can be seen, then the description of the disabled value 'DA' is not changed in the demographic segment. Task 1: Disabled member Task 2: Non- disabled member
+Expected Results                   : DA' is not changed in the demographic segment as expected.
+Test Case ID for Row 4662          : 46934
+Query Execution Time(ms)           : 61
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.01.011
+Query Execution Time(ms)           : 28
+Total No.of Columns fetched        : 2
+Requirement Type                   : Web Service
+SAK Requirement Type               : 23
+Requirement linked for test case   : 46934
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46934
+Finished at                        : Wed Jan 10 16:03:34 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:34 EST 2024
+Creating test case for Row #       : 4663
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.01.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 414
+Validation status                  : PASS
+Short Desc                         : ELGD063 for Maximus and AHS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : Validate second version of member extract job ELGD063 send to Maximus and AHS where the description of the disability value DA is "Determined Disabled". Task 1: Active member Task 2: Inactive member Task 3: Non- disabled member
+Expected Results                   : 'Description of the disability value DA is "Determined Disabled".
+Test Case ID for Row 4663          : 46935
+Query Execution Time(ms)           : 61
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.01.020
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 46935
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46935
+Finished at                        : Wed Jan 10 16:03:38 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:38 EST 2024
+Creating test case for Row #       : 4664
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : Change agency codes DSS, DYS,  DMH, DTA, MCB, DMR, SSA and HCF to "OS "
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : After these job run ELGJD057, ELGJD059 and ELGJD065, the agency codes DSS, DYS, DMH, DTA, MCB, DMR, SSA and HCF will change to "OS " in eligibility and other segments.  Task 1: Active member Task 2: Disabled member
+Expected Results                   : All the agency codes will change to "OS" as expected.
+Test Case ID for Row 4664          : 46936
+Query Execution Time(ms)           : 59
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.02.001
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 46936
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46936
+Finished at                        : Wed Jan 10 16:03:42 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:42 EST 2024
+Creating test case for Row #       : 4665
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 405
+Validation status                  : PASS
+Short Desc                         : No change in agency codes ELD & MRC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : After these job run ELGJD057, ELGJD059 and ELGJD065, the agency codes ELD & MRC will not change in eligibility and other segments.  Task 1: Active member Task 2: Disabled member
+Expected Results                   : The agency codes will not change after the job run.
+Test Case ID for Row 4665          : 46937
+Query Execution Time(ms)           : 76
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.02.001
+Query Execution Time(ms)           : 28
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 46937
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46937
+Finished at                        : Wed Jan 10 16:03:46 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:46 EST 2024
+Creating test case for Row #       : 4666
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 425
+Validation status                  : PASS
+Short Desc                         : Webservice Update - DSS, DYS, DMH, DTA, MCB, DMR, SSA and HCF are changed to "OS "
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : For UserIds having role to access SSA data - Verify that the agencies DSS, DYS, DMH, DTA, MCB, DMR, SSA and HCF are changed to "OS" under the eligibility and other ID segments.  Validate same with NON- SSA member
+Expected Results                   : DSS, DYS, DMH, DTA, MCB, DMR, SSA and HCF are changed to "OS "
+Test Case ID for Row 4666          : 46938
+Query Execution Time(ms)           : 57
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.02.002
+Query Execution Time(ms)           : 31
+Total No.of Columns fetched        : 2
+Requirement Type                   : Web Service
+SAK Requirement Type               : 23
+Requirement linked for test case   : 46938
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46938
+Finished at                        : Wed Jan 10 16:03:50 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:50 EST 2024
+Creating test case for Row #       : 4667
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 440
+Validation status                  : PASS
+Short Desc                         : Change agency codes HIX, MHO and  PAC to "OS".
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : After these job run ELGJD057, ELGJD059 and ELGJD065, the agency codes HIX, MHO and PAC will change to "MH" in eligibility and other segments.  Task 1: Active member Task 2: Inactive member Task 3: Disabled member
+Expected Results                   : All the agency codes will change to "MH" as expected.
+Test Case ID for Row 4667          : 46939
+Query Execution Time(ms)           : 61
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.02.003
+Query Execution Time(ms)           : 32
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 46939
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46939
+Finished at                        : Wed Jan 10 16:03:55 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:55 EST 2024
+Creating test case for Row #       : 4668
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 437
+Validation status                  : PASS
+Short Desc                         : Webservice Update - HIX, MHO and PAC  are changed to "MH "
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : For UserIds having role to access SSA data - Verify that the agencies HIX, MHO and PAC  are changed to "MH" under the eligibility and other ID segments.  Validate same with NON- SSA members.
+Expected Results                   : HIX, MHO and PAC are changed to "MH "
+Test Case ID for Row 4668          : 46940
+Query Execution Time(ms)           : 59
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.02.004
+Query Execution Time(ms)           : 81
+Total No.of Columns fetched        : 2
+Requirement Type                   : Web Service
+SAK Requirement Type               : 23
+Requirement linked for test case   : 46940
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46940
+Finished at                        : Wed Jan 10 16:03:59 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:03:59 EST 2024
+Creating test case for Row #       : 4669
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 471
+Validation status                  : PASS
+Short Desc                         : Change agencies to "OS" with the job  extract ELGJD063.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : After the job run ELGJD063 for Maximus and AHS, the agency codes DSS, DYS, DMH, DTA, MCB, DMR, SSA and HCF will change to "OS " in eligibility and other segments.  Task 1: Active member Task 2: Inactive member Task 3: Disabled member
+Expected Results                   : All the agency codes will change to "OS" as expected.
+Test Case ID for Row 4669          : 46941
+Query Execution Time(ms)           : 69
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.02.020
+Query Execution Time(ms)           : 33
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 46941
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46941
+Finished at                        : Wed Jan 10 16:04:03 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:04:03 EST 2024
+Creating test case for Row #       : 4670
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.020') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 422
+Validation status                  : PASS
+Short Desc                         : No change in agency codes ELD & MRC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 967
+Owner                              : TARUN ANNE
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : After the job run ELGJD063, the agency codes ELD & MRC will not change in eligibility and other segments.  Task 1: Active member Task 2: Disabled member
+Expected Results                   : The agency codes will not change after the job change.
+Test Case ID for Row 4670          : 46942
+Query Execution Time(ms)           : 60
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.02.020
+Query Execution Time(ms)           : 36
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 46942
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46942
+Finished at                        : Wed Jan 10 16:04:07 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:04:07 EST 2024
+Creating test case for Row #       : 4671
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.040') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 65
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 485
+Validation status                  : PASS
+Short Desc                         : second version of job ELGD063- Agency Code update for  HIX, MHO and PAC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : Validate second version of member extract job ELGD063 send to Maximus and AHS where the gency codes HIX, MHO and PAC are transformed to "MH " in the Eligibility and Other ID segments
+Expected Results                   : HIX, MHO and PAC are transformed to "MH "
+Test Case ID for Row 4671          : 46943
+Query Execution Time(ms)           : 99
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.02.040
+Query Execution Time(ms)           : 53
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 46943
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46943
+Finished at                        : Wed Jan 10 16:04:11 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:04:11 EST 2024
+Creating test case for Row #       : 4672
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.02.051') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 581
+Validation status                  : PASS
+Short Desc                         : stop 063 for AHS and Maximus
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : Modify ELGD063 so that that version of the member extract does not go to AHS and Maximus.
+Expected Results                   : Verify the ELGD063 ersion of the member extract does not go to AHS and Maximus.
+Test Case ID for Row 4672          : 46944
+Query Execution Time(ms)           : 80
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.02.051
+Query Execution Time(ms)           : 56
+Total No.of Columns fetched        : 2
+Requirement Type                   : Interfaces
+SAK Requirement Type               : 18
+Requirement linked for test case   : 46944
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46944
+Finished at                        : Wed Jan 10 16:04:16 EST 2024
+*****************************************************************
+Started at                         : Wed Jan 10 16:04:16 EST 2024
+Creating test case for Row #       : 4673
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '37383.03.005') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER INTERFACES') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project 24.02 Fixes') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 433
+Validation status                  : PASS
+Short Desc                         : SSA roles
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : MEMBER INTERFACES
+Long Desc                          : Verify the SSA and non SSA user roles
+Expected Results                   : SSN and non SSA user roles need to be verified while testing.
+Test Case ID for Row 4673          : 46945
+Query Execution Time(ms)           : 61
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37383.03.005
+Query Execution Time(ms)           : 37
+Total No.of Columns fetched        : 2
+Requirement Type                   : Configuration
+SAK Requirement Type               : 27
+Requirement linked for test case   : 46945
+Notebook                           : Project 24.02 Fixes
+Business Function                  : Project 24.02 Fixes
+Notebook/BF linked for test case   : 46945
+Finished at                        : Wed Jan 10 16:04:20 EST 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 10/Jan/2024 04:04:20PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

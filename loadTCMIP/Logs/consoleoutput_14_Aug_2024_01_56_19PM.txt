@@ -1,0 +1,216 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Aug/2024 01:56:19PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 04/02/2024
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 198
+Total No.of Rows fetched           : 8
+*****************************************************************
+Started at                         : Wed Aug 14 13:56:26 EDT 2024
+Creating test case for Row #       : 5442
+Validation Time(ms)                : 748
+TC Validation status               : PASS
+Short Desc                         : CNS File Format
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : DCR
+Long Desc                          : Validate the CNS load falt file format should be separated by  pipe and should in the format as: <BR>MID|Source|PrintType|Communication Preference|Num_cell_phone|Email|Accomdation 1|Accomdation 2|Accomdation 3 |Accomdation 4|Accomdation 5|Accomdation 6|Accomdation 7|Accomdation 8|Accomdation 9 <BR>
+Expected Results                   : Verify the CNS load falt file is in the format : <BR>MID|Source|PrintType|Communication Preference|Num_cell_phone|Email|Accomdation 1|Accomdation 2|Accomdation 3 |Accomdation 4|Accomdation 5|Accomdation 6|Accomdation 7|Accomdation 8|Accomdation 9 <BR> as expected.
+Test Case ID for Row 5442          : 47698
+Requirement ID                     : 37806.01.015
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47698
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47698
+Finished at                        : Wed Aug 14 13:56:32 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:56:32 EDT 2024
+Creating test case for Row #       : 5443
+Validation Time(ms)                : 777
+TC Validation status               : PASS
+Short Desc                         : Store data as per DB field format
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : DCR
+Long Desc                          : Validate the  fields in database tables  T_RE_COMMUNICATION and T_RE_ACCOMMODATION  are in  existing field format as All Upper case or mixed case and Blank/Space/Null etc
+Expected Results                   : Verify the  fields in database tables  T_RE_COMMUNICATION and T_RE_ACCOMMODATION  are in  existing field format as All Upper case or mixed case and Blank/Space/Null etc as expected
+Test Case ID for Row 5443          : 47699
+Requirement ID                     : 37806.01.030
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47699
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47699
+Finished at                        : Wed Aug 14 13:56:38 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:56:38 EDT 2024
+Creating test case for Row #       : 5444
+Validation Time(ms)                : 757
+TC Validation status               : PASS
+Short Desc                         : CNS Error Report File Name
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : DCR
+Long Desc                          : Validate the CNS Error Report file naming convention is as below: CNS_ErrorReport_<SOURCE>_YYYYMMDDHRMISS.TXT <BR><BR>Note: - <BR>1 - Source - HIX or MA21.<BR>
+Expected Results                   : Verify  the CNS Error Report file naming convention is as below: CNS_ErrorReport_<SOURCE>_YYYYMMDDHRMISS.TXT <BR><BR>Note: - <BR>1 - Source - HIX or MA21.<BR> as expected
+Test Case ID for Row 5444          : 47700
+Requirement ID                     : 37806.01.050
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47700
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47700
+Finished at                        : Wed Aug 14 13:56:44 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:56:44 EDT 2024
+Creating test case for Row #       : 5445
+Validation Time(ms)                : 739
+TC Validation status               : PASS
+Short Desc                         : Error code 03
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : DCR
+Long Desc                          : Validate the print type on CNS Load file: If print type is REG,LRG or BRAILLE accept the record. If print type is other than REG,LRG or BRAILLE reject the record and throw error code=03-print type is invalid
+Expected Results                   : Verify  the print type on CNS Load file: If print type is REG,LRG or BRAILLE record is accepted If print type is other than REG,LRG or BRAILLE record is rejected and throws error code=03-print type is invalid as expected.
+Test Case ID for Row 5445          : 47701
+Requirement ID                     : 37806.01.065
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47701
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47701
+Finished at                        : Wed Aug 14 13:56:50 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:56:50 EDT 2024
+Creating test case for Row #       : 5446
+Validation Time(ms)                : 755
+TC Validation status               : PASS
+Short Desc                         : Error code 06
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : DCR
+Long Desc                          : Validate Communication preference TEXT\SMS on CNS load flat file: If Num_cell_phone Communication preference -TEXT\SMS  and cell phone number [10-digits] is present on CNS flat file accepts the record. If Num_cell_phone Communications preference - TEXT\SMS and cell phone number  is missing  on CNS Flat file then reject the record and throw error code=06-Num_cell_phone_missing.
+Expected Results                   : Verify Communication preference TEXT\SMS on CNS load flat file: If Num_cell_phone Communication preference -TEXT\SMS  and cell phone number[10-digits]  is present on CNS flat file record should be accepted If Num_cell_phone Communications preference - TEXT\SMS and cell phone number is missing  on CNS Flat file then record should be rejected and throw error code=06-Num_cell_phone_missing as expected. as expected.
+Test Case ID for Row 5446          : 47702
+Requirement ID                     : 37806.01.080
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47702
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47702
+Finished at                        : Wed Aug 14 13:56:57 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:56:57 EDT 2024
+Creating test case for Row #       : 5447
+Validation Time(ms)                : 749
+TC Validation status               : PASS
+Short Desc                         : Error code 09
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : DCR
+Long Desc                          : Validate CNS Load flat file email address : Email Must be in  correct format(must have Have one @ and atleast one dot(.) and something before @). If Flat file have email email address not in valid format then rejects the record and throw error code=09-Email is invalid<BR>.
+Expected Results                   : Verify  CNS Load flat file email address : Email Should be in  correct format(must have Have one @ and atleast one dot(.) and something before @). And if  Flat file have  email address in invalid format then error code=09-Email is invalid<BR> is shown as expected
+Test Case ID for Row 5447          : 47703
+Requirement ID                     : 37806.01.095
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47703
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47703
+Finished at                        : Wed Aug 14 13:57:03 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:57:03 EDT 2024
+Creating test case for Row #       : 5448
+Validation Time(ms)                : 830
+TC Validation status               : PASS
+Short Desc                         : No Error for No accommodation value
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : DCR
+Long Desc                          : Validate no error <BR><BR>MID|Source|PrintType|CommunicationPreference|Num_cell_phone|Email|||||||||<BR> is returned if there is no Accomodation field in CNS flat file.
+Expected Results                   : Verify  no error <BR><BR>MID|Source|PrintType|CommunicationPreference|Num_cell_phone|Email|||||||||<BR> should be returned if there is no Accomodation field in CNS flat file as expected.
+Test Case ID for Row 5448          : 47704
+Requirement ID                     : 37806.01.110
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47704
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47704
+Finished at                        : Wed Aug 14 13:57:09 EDT 2024
+*****************************************************************
+Started at                         : Wed Aug 14 13:57:09 EDT 2024
+Creating test case for Row #       : 5449
+Validation Time(ms)                : 1164
+TC Validation status               : PASS
+Short Desc                         : DCR 2 -Default Print Type = 'REG'
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : DCR
+Long Desc                          : Validate  active members are selected from database from T_RE_COMMUNICATION table without the CDE_PRINT_TYPE value, excluding aid cat 14 members, and insert the default value "REG" and Print Type Agency = Blank/Space.
+Expected Results                   : Verify active members are should be selected from database from T_RE_COMMUNICATION table without the CDE_PRINT_TYPE value and excluding aid cat 14 members, and insert the default value "REG" and Print Type Agency = Blank/Space as expected.
+Test Case ID for Row 5449          : 47705
+Requirement ID                     : 37806.02.005
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 47705
+Notebook                           : CNS Initial Load
+Business Function                  : CNS Initial Load
+Notebook/BF linked for test case   : 47705
+Finished at                        : Wed Aug 14 13:57:16 EDT 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Aug/2024 01:57:16PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

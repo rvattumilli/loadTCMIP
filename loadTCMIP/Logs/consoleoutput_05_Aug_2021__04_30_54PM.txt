@@ -1,0 +1,628 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 05/Aug/2021 04:30:54PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Creating test case for TC Row : 513
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to ACO/MCO with CP
+Long Desc                     : Mass transfer from ACO/MCO to non-affilated ACO/MCO with member having retro CP where eff date < disenrollment date (BHCP/LTSS/ELTSS)
+Expected Results              : Batch disenrolls CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 513      : 40355
+Notebook/Business function linked for test case 40355
+Work item linked for test case 40355
+************************************************************************
+Creating test case for TC Row : 514
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to ACO/MCO with CP
+Long Desc                     : Mass transfer from ACO/MCO to non-affilated ACO/MCO with member retro CP where eff date < disenrollment date (ACCS1/PACC1/CSA)
+Expected Results              : Batch disenrolls CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 514      : 40356
+Notebook/Business function linked for test case 40356
+Work item linked for test case 40356
+************************************************************************
+Creating test case for TC Row : 515
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to ACO/MCO with CP
+Long Desc                     : Mass transfer from ACO/MCO to non-affilated ACO/MCO with member having future CP where eff date > disenrollment date (BHCP/LTSS/ELTSS)
+Expected Results              : Batch histories CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 515      : 40357
+Notebook/Business function linked for test case 40357
+Work item linked for test case 40357
+************************************************************************
+Creating test case for TC Row : 516
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to ACO/MCO with CP
+Long Desc                     : Mass transfer from ACO/MCO to non-affilated ACO/MCO with member having future CP where eff date > disenrollment date (ACCS1/PACC1/CSA)
+Expected Results              : Batch histories CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 516      : 40358
+Notebook/Business function linked for test case 40358
+Work item linked for test case 40358
+************************************************************************
+Creating test case for TC Row : 517
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to ACO/MCO with CP
+Long Desc                     : Mass transfer from ACO/MCO to non-affilated ACO/MCO with member having future CP where eff date = disenrollment date (BHCP/LTSS/ELTSS)
+Expected Results              : Batch disenrolls CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 517      : 40359
+Notebook/Business function linked for test case 40359
+Work item linked for test case 40359
+************************************************************************
+Creating test case for TC Row : 518
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to ACO/MCO with CP
+Long Desc                     : Mass transfer from ACO/MCO to non-affilated ACO/MCO with member having future CP where eff date = disenrollment date (ACCS1/PACC1/CSA)
+Expected Results              : Batch disenrolls CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 518      : 40360
+Notebook/Business function linked for test case 40360
+Work item linked for test case 40360
+************************************************************************
+Creating test case for TC Row : 519
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to PCC with CP
+Long Desc                     : Mass transfer from ACO/MCO to  PCC with member having retro CP where eff date < disenrollment date (BHCP/LTSS/ELTSS)
+Expected Results              : Batch disenrolls CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 519      : 40361
+Notebook/Business function linked for test case 40361
+Work item linked for test case 40361
+************************************************************************
+Creating test case for TC Row : 520
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to PCC with CP
+Long Desc                     : Mass transfer from ACO/MCO to PCC with member retro CP where eff date < disenrollment date (ACCS1/PACC1/CSA)
+Expected Results              : Batch disenrolls CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 520      : 40362
+Notebook/Business function linked for test case 40362
+Work item linked for test case 40362
+************************************************************************
+Creating test case for TC Row : 521
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to PCC with CP
+Long Desc                     : Mass transfer from ACO/MCO to PCC with member having future CP where eff date > disenrollment date (BHCP/LTSS/ELTSS)
+Expected Results              : Batch histories CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 521      : 40363
+Notebook/Business function linked for test case 40363
+Work item linked for test case 40363
+************************************************************************
+Creating test case for TC Row : 522
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to PCC with CP
+Long Desc                     : Mass transfer from ACO/MCO to PCC with member having future CP where eff date > disenrollment date (ACCS1/PACC1/CSA)
+Expected Results              : Batch histories CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 522      : 40364
+Notebook/Business function linked for test case 40364
+Work item linked for test case 40364
+************************************************************************
+Creating test case for TC Row : 523
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to PCC with CP
+Long Desc                     : Mass transfer from ACO/MCO to PCC with member having future CP where eff date = disenrollment date (BHCP/LTSS/ELTSS)
+Expected Results              : Batch disenrolls CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 523      : 40365
+Notebook/Business function linked for test case 40365
+Work item linked for test case 40365
+************************************************************************
+Creating test case for TC Row : 524
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to PCC with CP
+Long Desc                     : Mass transfer from ACO/MCO to PCC with member having future CP where eff date = disenrollment date (ACCS1/PACC1/CSA)
+Expected Results              : Batch disenrolls CP along with ACO/MCO with disenrollment date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 524      : 40366
+Notebook/Business function linked for test case 40366
+Work item linked for test case 40366
+************************************************************************
+Creating test case for TC Row : 525
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to PCC with CP
+Long Desc                     : Mass transfer from ACO/MCO to PCC where member had currently ACCS1 with end date > transfer start date and open end date BHCP wih eff date > transfer start date.
+Expected Results              : Batch does not change ACCS1 and histories BHCP.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 525      : 40367
+Notebook/Business function linked for test case 40367
+Work item linked for test case 40367
+************************************************************************
+Creating test case for TC Row : 526
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to ACO/MCO with CP
+Long Desc                     : Mass transfer from ACO/MCO to non-affiliated ACO/MCO where member had currently ACCS1 with end date > transfer start date and open end date BHCP wih eff date > transfer start date.
+Expected Results              : Batch disenrolls ACCS1 with disenroll date and histories BHCP.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 526      : 40368
+Notebook/Business function linked for test case 40368
+Work item linked for test case 40368
+************************************************************************
+Creating test case for TC Row : 527
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to PCC with CP
+Long Desc                     : Mass transfer from ACO/MCO to PCC where member had currently BHCP with end date > transfer start date and open end date ACCS1 wih eff date > transfer start date.
+Expected Results              : Batch disenrolls BHCP with disenroll date and does not change ACCS1.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 527      : 40369
+Notebook/Business function linked for test case 40369
+Work item linked for test case 40369
+************************************************************************
+Creating test case for TC Row : 528
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to ACO/MCO with CP
+Long Desc                     : Mass transfer from ACO/MCO to non-affiliated ACO/MCO where member had currently BHCP with end date > transfer start date and open end date ACCS1 wih eff date > transfer start date.
+Expected Results              : Batch disenrolls ACCS1with disenroll date and histories BHCP.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 528      : 40370
+Notebook/Business function linked for test case 40370
+Work item linked for test case 40370
+************************************************************************
+Creating test case for TC Row : 529
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO/MCO to ACO/MCO with CP
+Long Desc                     : Masst transfer from ACO/MCO to affiliated ACO/MCO where member currently had BHCP/LTSS/ELTSS with end date > disenroll date but TO PMP had age/gender restrictions and member is recycled and enrolled to non-affiliated ACO/MCO/PCC.
+Expected Results              : Weekly ineligibles disenrolls CP with ACO/MCO disenroll date.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 529      : 40371
+Notebook/Business function linked for test case 40371
+Work item linked for test case 40371
+************************************************************************
+Creating test case for TC Row : 530
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 90
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO to ACO
+Long Desc                     : "Mass Transfer FROM ACO:
+Mass Transfer TO ACO:
+Member id(s) with BHCP not affiliated with the TO ACO:"
+Expected Results              : Members with BHCP not affiliated with ACO will be disenrolled the same day as the FROM provider.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 530      : 40372
+Notebook/Business function linked for test case 40372
+Work item linked for test case 40372
+************************************************************************
+Creating test case for TC Row : 531
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 90
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from MCO to MCO
+Long Desc                     : "Mass Transfer FROM MCO:
+Mass Transfer TO MCO:
+Member id(s) with LTSS not affiliated with the TO MCO:"
+Expected Results              : Members with LTSS not affiliated with MCO will be disenrolled the same day as the FROM provider.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 531      : 40373
+Notebook/Business function linked for test case 40373
+Work item linked for test case 40373
+************************************************************************
+Creating test case for TC Row : 532
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 90
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO to ACO
+Long Desc                     : "Mass Transfer FROM ACO:
+Mass Transfer TO ACO:
+Member id(s) with ELTSS not affiliated with the TO ACO:"
+Expected Results              : Members with ELTSS not affiliated with ACO will be disenrolled the same day as the FROM provider.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 532      : 40374
+Notebook/Business function linked for test case 40374
+Work item linked for test case 40374
+************************************************************************
+Creating test case for TC Row : 533
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 90
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from MCO to ACO
+Long Desc                     : "Mass Transfer FROM MCO:
+Mass Transfer TO ACO:
+Member id(s) with ACCS1 not affiliated with the TO MCO:"
+Expected Results              : Members with ACCS1 not affiliated with MCO will be disenrolled the same day as the FROM provider.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 533      : 40375
+Notebook/Business function linked for test case 40375
+Work item linked for test case 40375
+************************************************************************
+Creating test case for TC Row : 534
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 90
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from ACO to ACO
+Long Desc                     : "Mass Transfer FROM ACO:
+Mass Transfer TO ACO:
+Member id(s) with PACC1 not affiliated with the TO ACO:"
+Expected Results              : Members with PACC1 not affiliated with ACO will be disenrolled the same day as the FROM provider.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 534      : 40376
+Notebook/Business function linked for test case 40376
+Work item linked for test case 40376
+************************************************************************
+Creating test case for TC Row : 535
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 90
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from MCO to MCO
+Long Desc                     : "Mass Transfer FROM MCO:
+Mass Transfer TO MCO:
+Member id(s) with CSA  not affiliated with the TO MCO:"
+Expected Results              : Members with CSA not affiliated with MCO will be disenrolled the same day as the FROM provider.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 535      : 40377
+Notebook/Business function linked for test case 40377
+Work item linked for test case 40377
+************************************************************************
+Creating test case for TC Row : 536
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 90
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : MT from MCO to MCO
+Long Desc                     : "Mass Transfer FROM MCO:
+Mass Transfer TO MCO:
+Member id(s) with BHCP  affiliated with the TO MCO:"
+Expected Results              : BHCP members will remain open, and not disenroll since BHCP is still affiliated with the NEW TO provider.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35399
+Associated WI Type            : Work Item
+Test Case ID for Row 536      : 40378
+Notebook/Business function linked for test case 40378
+Work item linked for test case 40378
+************************************************************************
+Creating test case for TC Row : 537
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : New aid cat Z5
+Long Desc                     : New aid cat Z5 is added to added to appriopriate tables.
+Expected Results              : Verify new aid cat Z5 is added to all the appropriate tables and validate the aid cat info in those tables like description, cde_aid_cat, hierarchy, mc hierarchy, eff and end dates, benefit plan, associated sak_pub_hlth etc.
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 537      : 40379
+Notebook/Business function linked for test case 40379
+Work item linked for test case 40379
+************************************************************************
+Creating test case for TC Row : 538
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : New aid cat Z6
+Long Desc                     : New aid cat Z6 is added to added to appriopriate tables.
+Expected Results              : Verify new aid cat Z6 is added to all the appropriate tables and validate the aid cat info in those tables like description, cde_aid_cat, hierarchy, mc hierarchy, eff and end dates, benefit plan, associated sak_pub_hlth etc.
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 538      : 40380
+Notebook/Business function linked for test case 40380
+Work item linked for test case 40380
+************************************************************************
+Creating test case for TC Row : 539
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : New aid cat Z7
+Long Desc                     : New aid cat Z7 is added to added to appriopriate tables.
+Expected Results              : Verify new aid cat Z7 is added to all the appropriate tables and validate the aid cat info in those tables like description, cde_aid_cat, hierarchy, mc hierarchy, eff and end dates, benefit plan, associated sak_pub_hlth etc.
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 539      : 40381
+Notebook/Business function linked for test case 40381
+Work item linked for test case 40381
+************************************************************************
+Creating test case for TC Row : 540
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : New aid cat Z8
+Long Desc                     : New aid cat Z8 is added to added to appriopriate tables.
+Expected Results              : Verify new aid cat Z8 is added to all the appropriate tables and validate the aid cat info in those tables like description, cde_aid_cat, hierarchy, mc hierarchy, eff and end dates, benefit plan, associated sak_pub_hlth etc.
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 540      : 40382
+Notebook/Business function linked for test case 40382
+Work item linked for test case 40382
+************************************************************************
+Creating test case for TC Row : 541
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Member with Z5 and other cats
+Long Desc                     : Member with MC eligible aid cat and any of Z5 to Z8, loses MC eligible aid cat.
+Expected Results              : Verify Batch disenrolls MC assignment.
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 541      : 40383
+Notebook/Business function linked for test case 40383
+Work item linked for test case 40383
+************************************************************************
+Creating test case for TC Row : 542
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Member with Z5 to Z8 cat
+Long Desc                     : Member previously enrolled in MC in last 365 days receives Z5 to Z8 aid cat.
+Expected Results              : Verify member is not added to Potential table and not enrolled to MC assignment.
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 542      : 40384
+Notebook/Business function linked for test case 40384
+Work item linked for test case 40384
+************************************************************************
+Creating test case for TC Row : 543
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 781
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : Member receives Z5 to Z8 cat
+Long Desc                     : Member receives any of Z5 to Z8 aid cat eligibility.
+Expected Results              : Verify MH ID card is not generated.
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 543      : 40385
+Notebook/Business function linked for test case 40385
+Work item linked for test case 40385
+************************************************************************
+Creating test case for TC Row : 544
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 777
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : New Aid Category
+Long Desc                     : Add new Aid category Z5 with a proposed descritpion "Hospital PE - CHIP Children" under T_CDE_AID
+Expected Results              : "Verify 
+* New Aid Cateogiry Z5 is added to T_CDE_AID 
+* Aid Category Z5 description is ""Hospital PE - CHIP Children"" 
+* Aid Category Z5 is not enrolled for Managed Care and does not generate MassHealth Card 
+* Benefit plan for Z5 is FADC 
+* EVS messaging for Z5 should be ""MassHealth Family Assistance"" 
+"
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 544      : 40386
+Notebook/Business function linked for test case 40386
+Work item linked for test case 40386
+************************************************************************
+Creating test case for TC Row : 545
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 777
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : New Aid Category
+Long Desc                     : Add new Aid category Z6 with a proposed descritpion "SF Hospital PE - NQP CHIP Children" under T_CDE_AID
+Expected Results              : "Verify 
+* New Aid Cateogiry Z6 is added to T_CDE_AID 
+* Aid Category Z6 Description is ""SF Hospital PE - NQP CHIP Children"" 
+* Aid Category Z6 is not enrolled for Managed Care and does not generate MassHealth Card 
+* Benefit plan for Z6 is FADC. 
+* EVS messaging for Z6 should be ""MassHealth Family Assistance"" 
+"
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 545      : 40387
+Notebook/Business function linked for test case 40387
+Work item linked for test case 40387
+************************************************************************
+Creating test case for TC Row : 546
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 777
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : New Aid Category
+Long Desc                     : Add new Aid category Z7 with a proposed descritpion "Hospital PE - Disabled CHIP Children" under T_CDE_AID
+Expected Results              : "Verify 
+* New Aid Cateogiry Z7 is added to T_CDE_AID 
+* Aid Category Z7 description is ""Hospital PE - Disabled CHIP Children"" 
+* Aid Category Z7 is not enrolled for Managed Care and does not generate MassHealth Card 
+* Benefit plan for Z7 is MFP 
+* EVS messaging for Z7 should be ""MassHealth CommonHealth"" 
+"
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 546      : 40388
+Notebook/Business function linked for test case 40388
+Work item linked for test case 40388
+************************************************************************
+Creating test case for TC Row : 547
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 777
+Env                           : M
+Subsystem                     : Member Management
+Short Desc                    : New Aid Category
+Long Desc                     : Add new Aid category Z8 with a proposed descritpion "SF Hospital PE - Disabled NQP CHIP Children" under T_CDE_AID
+Expected Results              : "Verify 
+* New Aid Cateogiry Z8 is added to T_CDE_AID 
+* Aid Category Z8 Description is ""SF Hospital PE - Disabled NQP CHIP Children"". 
+* Aid Category Z8 is not enrolled for Managed Care and does not generate MassHealth Card 
+* Benefit plan for Z8 is COM 
+* EVS messaging for Z8 should be ""MassHealth CommonHealth"" 
+"
+Grouping                      : Member Management
+Associated WI/Defect/CO       : 35294
+Associated WI Type            : Change Order
+Test Case ID for Row 547      : 40389
+Notebook/Business function linked for test case 40389
+Work item linked for test case 40389
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 05/Aug/2021 04:44:27PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

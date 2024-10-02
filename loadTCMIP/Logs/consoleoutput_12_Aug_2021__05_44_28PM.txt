@@ -1,0 +1,390 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 12/Aug/2021 05:44:28PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+************************************************************************
+Started at: Thu Aug 12 17:44:35 EDT 2021
+Creating test case for TC Row : 575
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Exempt - Change Ethnicity - Mbr stay Exempt
+Long Desc                     : "Find existing member who is exempt due to aid cat and change their ethnicity other than AM_IND via XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is still exempt."
+Expected Results              : "Find existing member who is exempt due to aid cat and change their ethnicity other than AM_IND via XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is still exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 575      : 40441
+Notebook/Business function linked for test case 40441
+Work item linked for test case 40441
+Finished at: Thu Aug 12 17:44:52 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:44:52 EDT 2021
+Creating test case for TC Row : 576
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Exempt - Changes on under 21 - Mbr stay Exempt
+Long Desc                     : "Find existing member who is exempt due to age under 21 and change the DOB via UI or XML in the middle of the month to make the member 
+1. equal to 21 yrs and  
+2. above 21 yrs 
+ 
+Verify after the 370 job runs, member is still exempt."
+Expected Results              : "Find existing member who is exempt due to age under 21 and change the DOB via UI or XML in the middle of the month to make the member 
+1. equal to 21 yrs and  
+2. above 21 yrs 
+ 
+Verify after the 370 job runs, member is still exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 576      : 40442
+Notebook/Business function linked for test case 40442
+Work item linked for test case 40442
+Finished at: Thu Aug 12 17:45:09 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:45:09 EDT 2021
+Creating test case for TC Row : 577
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Exempt - 65 or above - Mbr stay Exempt
+Long Desc                     : "Find existing Member who is exempt due to age 65 and 65 above. 
+ 
+Verify after the 370 job runs, member is still exempt."
+Expected Results              : "Find existing Member who is exempt due to age 65 and 65 above. 
+ 
+Verify after the 370 job runs, member is still exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 577      : 40443
+Notebook/Business function linked for test case 40443
+Work item linked for test case 40443
+Finished at: Thu Aug 12 17:45:26 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:45:26 EDT 2021
+Creating test case for TC Row : 578
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : New Mbr - 65 or above - Mbr not Exempt
+Long Desc                     : "Create a new Member via XML with age  
+1. equal to 65 yrs 
+2. above 65 yrs 
+ 
+Verify after the 370 job runs, member is not exempt."
+Expected Results              : "Create a new Member via XML with age  
+1. equal to 65 yrs 
+2. above 65 yrs 
+ 
+Verify after the 370 job runs, member is not exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 578      : 40444
+Notebook/Business function linked for test case 40444
+Work item linked for test case 40444
+Finished at: Thu Aug 12 17:45:42 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:45:42 EDT 2021
+Creating test case for TC Row : 579
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : New Mbr - Hospice enroll - Mbr Exempt
+Long Desc                     : "Enroll non Exempt member with Hospice 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : "Enroll non Exempt member with Hospice 
+ 
+Verify after the 370 job runs, member is exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 579      : 40445
+Notebook/Business function linked for test case 40445
+Work item linked for test case 40445
+Finished at: Thu Aug 12 17:45:59 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:45:59 EDT 2021
+Creating test case for TC Row : 580
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : New Mbr - SCO enroll - Mbr Exempt
+Long Desc                     : "Enroll non Exempt member with SCO 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : "Enroll non Exempt member with SCO 
+ 
+Verify after the 370 job runs, member is exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 580      : 40446
+Notebook/Business function linked for test case 40446
+Work item linked for test case 40446
+Finished at: Thu Aug 12 17:46:16 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:46:16 EDT 2021
+Creating test case for TC Row : 581
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : New Mbr - ICO/One care enroll - Mbr Exempt
+Long Desc                     : "Enroll non Exempt member with ICO/One care 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : "Enroll non Exempt member with ICO/One care 
+ 
+Verify after the 370 job runs, member is exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 581      : 40447
+Notebook/Business function linked for test case 40447
+Work item linked for test case 40447
+Finished at: Thu Aug 12 17:46:33 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:46:33 EDT 2021
+Creating test case for TC Row : 582
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : New Mbr - PACE enroll - Mbr Exempt
+Long Desc                     : "Enroll non Exempt member with PACE care 
+ 
+Verify after the 370 job runs, member is exempt."
+Expected Results              : "Enroll non Exempt member with PACE care 
+ 
+Verify after the 370 job runs, member is exempt."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 582      : 40448
+Notebook/Business function linked for test case 40448
+Work item linked for test case 40448
+Finished at: Thu Aug 12 17:46:50 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:46:50 EDT 2021
+Creating test case for TC Row : 583
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Non Exempt Mbr - aid cat - Immediately Mbr exempt
+Long Desc                     : "Find a non exempt member and add Copay exempt aid cats to the member via XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Expected Results              : "Find a non exempt member and add Copay exempt aid cats to the member via XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 583      : 40449
+Notebook/Business function linked for test case 40449
+Work item linked for test case 40449
+Finished at: Thu Aug 12 17:47:07 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:47:07 EDT 2021
+Creating test case for TC Row : 584
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Non Exempt Mbr - Preg Flag - Immediately Mbr exempt
+Long Desc                     : "Find a non exempt member and add Preg Flag to the member via XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Expected Results              : "Find a non exempt member and add Preg Flag to the member via XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 584      : 40450
+Notebook/Business function linked for test case 40450
+Work item linked for test case 40450
+Finished at: Thu Aug 12 17:47:24 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:47:24 EDT 2021
+Creating test case for TC Row : 585
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Non Exempt Mbr - Ethnicity - Immediately Mbr exempt
+Long Desc                     : "Find a non exempt member and add the Ethnicity = AM_IND to the member via XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Expected Results              : "Find a non exempt member and add the Ethnicity = AM_IND to the member via XML in the middle of the month. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 585      : 40451
+Notebook/Business function linked for test case 40451
+Work item linked for test case 40451
+Finished at: Thu Aug 12 17:47:41 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:47:41 EDT 2021
+Creating test case for TC Row : 586
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Non Exempt Mbr - Age under 21 - Immediately Mbr exempt
+Long Desc                     : "Find a non exempt member and update the DOB equal to or above 21 via XML or UI in the middle of the month. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Expected Results              : "Find a non exempt member and update the DOB equal to or above 21 via XML or UI in the middle of the month. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 586      : 40452
+Notebook/Business function linked for test case 40452
+Work item linked for test case 40452
+Finished at: Thu Aug 12 17:47:58 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:47:58 EDT 2021
+Creating test case for TC Row : 587
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Non Exempt Mbr - Hospice enroll - Immediately Mbr exempt
+Long Desc                     : "Find a non exempt member who already has Hospice enrollment. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Expected Results              : "Find a non exempt member who already has Hospice enrollment. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 587      : 40453
+Notebook/Business function linked for test case 40453
+Work item linked for test case 40453
+Finished at: Thu Aug 12 17:48:14 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:48:14 EDT 2021
+Creating test case for TC Row : 588
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Non Exempt Mbr - SCO enroll - Immediately Mbr exempt
+Long Desc                     : "Find a non exempt member who already has SCO enrollment. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Expected Results              : "Find a non exempt member who already has SCO enrollment. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 588      : 40454
+Notebook/Business function linked for test case 40454
+Work item linked for test case 40454
+Finished at: Thu Aug 12 17:48:31 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:48:31 EDT 2021
+Creating test case for TC Row : 589
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Non Exempt Mbr - ICO/One care enroll - Immediately Mbr exempt
+Long Desc                     : "Find a non exempt member who already has ICO/One care enrollment. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Expected Results              : "Find a non exempt member who already has ICO/One care enrollment. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 589      : 40455
+Notebook/Business function linked for test case 40455
+Work item linked for test case 40455
+Finished at: Thu Aug 12 17:48:48 EDT 2021
+************************************************************************
+Started at: Thu Aug 12 17:48:48 EDT 2021
+Creating test case for TC Row : 590
+Notebook                      : Project22.02
+Business Function             : Project22.02
+SAK Participant               : 750
+Env                           : M
+Subsystem                     : Managed Care
+Short Desc                    : Non Exempt Mbr - PACE - Immediately Mbr exempt
+Long Desc                     : "Find a non exempt member who already has PACE enrollment. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Expected Results              : "Find a non exempt member who already has PACE enrollment. 
+ 
+Verify after the 370 job runs, member is exempt immediately."
+Grouping                      : CostSharing
+Associated WI/Defect/CO       : 35634
+Associated WI Type            : Change Order
+Test Case ID for Row 590      : 40456
+Notebook/Business function linked for test case 40456
+Work item linked for test case 40456
+Finished at: Thu Aug 12 17:49:05 EDT 2021
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 12/Aug/2021 05:49:05PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

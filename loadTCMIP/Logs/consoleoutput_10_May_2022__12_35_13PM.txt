@@ -1,0 +1,53 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 10/May/2022 12:35:13PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+***************************************************
+Started at                         : Tue May 10 12:35:22 EDT 2022
+Creating test case for TC Row      : 911
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MTM Pnl, From PCP w/Run Date
+Long Desc                          : When a PCP Affiliated to an ACOA has a end date equal to Run date, make sure "PCP ID" Pop-up search under PCP To PCP Mass Transfer Maintenance Panel does not display that PCP.
+Expected Results                   : PCP To PCP Mass Transfer Maintenance Panel does not display the PCP which has a end date equals to Run date  on "PCP ID" Pop-up search.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.001
+Test Case ID for Row 911           : 41372
+Requirement linked for test case   : 41372
+Notebook/BF linked for test case   : 41372
+Finished at                        : Tue May 10 12:35:31 EDT 2022
+***************************************************
+Logged out
+***************************************************
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 10/May/2022 12:35:32PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

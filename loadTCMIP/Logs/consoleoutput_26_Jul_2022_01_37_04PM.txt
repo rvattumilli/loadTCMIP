@@ -1,0 +1,53 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 26/Jul/2022 01:37:04PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Tue Jul 26 13:37:10 EDT 2022
+Creating test case for Row #       : 998
+Short Desc                         : DMH files are not dispatched in UAT/MO environment
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : After successful job run, Verify the job log that there is no step for file dispatch in UAT/MO environment. Verify the files are not moved/copied to the output directory.
+Expected Results                   : The files are not moved/copied to the output directory.
+Test Case ID for Row 998           : 41710
+Expected condition failed: waiting for alert to be present (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'EHS-QNY-W0622WP', ip: '10.195.12.69', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:47149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e7eebbd904e63ba274a30d6d331187ae
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP abended 26/Jul/2022 01:37:18PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

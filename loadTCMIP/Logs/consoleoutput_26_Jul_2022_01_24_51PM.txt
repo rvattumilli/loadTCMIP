@@ -1,0 +1,53 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 26/Jul/2022 01:24:51PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Tue Jul 26 13:25:01 EDT 2022
+Creating test case for Row #       : 997
+Short Desc                         : Modified ELGJD056- job runs successfully
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Verify the job log if the Job ran successfully without errors and dispatcher.ksh is being called
+Expected Results                   : Job ends with success and Log has steps for call to the dispatcher.ksh
+Test Case ID for Row 997           : 41708
+Expected condition failed: waiting for alert to be present (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'EHS-QNY-W0622WP', ip: '10.195.12.69', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:46866}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 252bee6d37d211916f5818a1c00db091
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP abended 26/Jul/2022 01:25:08PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

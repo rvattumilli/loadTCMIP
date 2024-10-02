@@ -1,0 +1,1157 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 07/Feb/2022 01:42:24PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+***************************************************
+Started at                         : Mon Feb 07 13:42:34 EST 2022
+Creating test case for TC Row      : 813
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update effective date on 'MHO' from CURRENT to RETRO
+Long Desc                          : Update the effective date of eligibility /aid cat rows under one benefit plan affiliated to 'MHO' from CURRENT to RETRO date thru UI panel.
+Expected Results                   : The efective date of MHO agency affiliation is updated to retro date on the UI Panel. Effective date on corresponding agency affilication row in "t_re_agency_aff " is updated to Retro date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 813           : 41126
+Notebook linked for test case      : 41126
+Work item/CO linked for test case  : 41126
+Finished at                        : Mon Feb 07 13:42:51 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:42:51 EST 2022
+Creating test case for TC Row      : 814
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update effective date on 'MHO' from RETRO to current
+Long Desc                          : Update the effective date of eligibility /aid cat rows under one benefit plan affiliated to 'MHO' from RETRO to CURRENT date thru UI panel.
+Expected Results                   : *The efective date of MHO agency affiliation is updated to Current date on the UI Panel
+*Effective date on corresponding agency affilication row in "t_re_agency_aff " is updated to Current date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 814           : 41127
+Notebook linked for test case      : 41127
+Work item/CO linked for test case  : 41127
+Finished at                        : Mon Feb 07 13:43:09 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:43:09 EST 2022
+Creating test case for TC Row      : 815
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update effective date on 'SSA' from CURRENT to FUTURE
+Long Desc                          : Update the effective date of eligibility /aid cat rows under one benefit plan affiliated to 'SSA' from CURRENT to FUTURE date thru UI panel.
+Expected Results                   : *The efective date of SSA agency affiliation is updated to FUTURE date on the UI Panel
+*Effective date on corresponding agency affilication row in "t_re_agency_aff " is updated to FUTURE date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 815           : 41128
+Notebook linked for test case      : 41128
+Work item/CO linked for test case  : 41128
+Finished at                        : Mon Feb 07 13:43:25 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:43:25 EST 2022
+Creating test case for TC Row      : 816
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update effective date on 'SSA' from RETRO to FUTURE
+Long Desc                          : Update the effective date of eligibility /aid cat rows under one benefit plan affiliated to 'SSA' from RETRO to FUTURE date thru UI panel.
+Expected Results                   : *The efective date of SSA agency affiliation is updated to FUTURE date on the UI Panel
+*Effective date on corresponding agency affilication row in "t_re_agency_aff " is updated to FUTURE date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 816           : 41129
+Notebook linked for test case      : 41129
+Work item/CO linked for test case  : 41129
+Finished at                        : Mon Feb 07 13:43:40 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:43:40 EST 2022
+Creating test case for TC Row      : 817
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Do Not Update effective date on 'HIX' from CURRENT to FUTURE
+Long Desc                          : NOT update the effective date from current to future on 'HIX' through UI Panel if there is another aid cat row associated to that agency that has retro effective date.
+Expected Results                   : *The efective date of 'HIX' agency affilication is not updated.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 817           : 41130
+Notebook linked for test case      : 41130
+Work item/CO linked for test case  : 41130
+Finished at                        : Mon Feb 07 13:43:57 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:43:57 EST 2022
+Creating test case for TC Row      : 818
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Do Not Update effective date on 'HIX' from FUTURE to CURRENT
+Long Desc                          : NOT update the effective date from future to current on 'HIX' through UI Panel if there is another aid cat row associated to that agency that has retro effective date.
+Expected Results                   : *The efective date of 'HIX' agency affilication is not updated.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 818           : 41131
+Notebook linked for test case      : 41131
+Work item/CO linked for test case  : 41131
+Finished at                        : Mon Feb 07 13:44:13 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:44:13 EST 2022
+Creating test case for TC Row      : 819
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Do not update effective date
+Long Desc                          : Do not update agency affilication if there is no manual update through UI panel
+Expected Results                   : *Agency affiliation Effective data is not updated when there is no manual update to the effective date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 819           : 41132
+Notebook linked for test case      : 41132
+Work item/CO linked for test case  : 41132
+Finished at                        : Mon Feb 07 13:44:29 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:44:29 EST 2022
+Creating test case for TC Row      : 820
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Insert New Agency Affilication
+Long Desc                          : Insert new agency affilication when the new eligibility row is added under a same benefit plan thru UI
+Expected Results                   : *A new agency affilication is reflected on UI panel.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 820           : 41133
+Notebook linked for test case      : 41133
+Work item/CO linked for test case  : 41133
+Finished at                        : Mon Feb 07 13:44:45 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:44:45 EST 2022
+Creating test case for TC Row      : 821
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Display Agency Affilication with no gaps
+Long Desc                          : Display the agency affilication from Least to highest time period when a new agency row added through via UI Panel for an exisitng agency but with no gaps in time periods.
+Expected Results                   : *Agency affilication is displayed from least to higest.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 821           : 41134
+Notebook linked for test case      : 41134
+Work item/CO linked for test case  : 41134
+Finished at                        : Mon Feb 07 13:45:02 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:45:02 EST 2022
+Creating test case for TC Row      : 822
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update end date on 'MHO' from CURRENT to RETRO
+Long Desc                          : Update the end date of eligibility /aid cat rows under one benefit plan affiliated to 'MHO' from CURRENT to RETRO date thru UI panel.
+Expected Results                   : *The end date of MHO agency affiliation is updated to retro date on the UI Panel
+*end date on corresponding agency affilication row in "t_re_agency_aff " is updated to Retro date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 822           : 41135
+Notebook linked for test case      : 41135
+Work item/CO linked for test case  : 41135
+Finished at                        : Mon Feb 07 13:45:17 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:45:17 EST 2022
+Creating test case for TC Row      : 823
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update end date on 'MHO' from RETRO to current
+Long Desc                          : Update the end date of eligibility /aid cat rows under one benefit plan affiliated to 'MHO' from RETRO to CURRENT date thru UI panel.
+Expected Results                   : *The end date of MHO agency affiliation is updated to Current date on the UI Panel
+*end date on corresponding agency affilication row in "t_re_agency_aff " is updated to Current date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 823           : 41136
+Notebook linked for test case      : 41136
+Work item/CO linked for test case  : 41136
+Finished at                        : Mon Feb 07 13:45:33 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:45:33 EST 2022
+Creating test case for TC Row      : 824
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update end date on 'SSA' from CURRENT to FUTURE
+Long Desc                          : Update the end date of eligibility /aid cat rows under one benefit plan affiliated to 'SSA' from CURRENT to FUTURE date thru UI panel.
+Expected Results                   : *The end date of SSA agency affiliation is updated to FUTURE date on the UI Panel
+*End date on corresponding agency affilication row in "t_re_agency_aff " is updated to FUTURE date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 824           : 41137
+Notebook linked for test case      : 41137
+Work item/CO linked for test case  : 41137
+Finished at                        : Mon Feb 07 13:45:48 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:45:48 EST 2022
+Creating test case for TC Row      : 825
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update end date on 'SSA' from RETRO to FUTURE
+Long Desc                          : Update the end date of eligibility /aid cat rows under one benefit plan affiliated to 'SSA' from RETRO to FUTURE date thru UI panel.
+Expected Results                   : *The end date of SSA agency affiliation is updated to FUTURE date on the UI Panel
+*End date on corresponding agency affilication row in "t_re_agency_aff " is updated to FUTURE date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 825           : 41138
+Notebook linked for test case      : 41138
+Work item/CO linked for test case  : 41138
+Finished at                        : Mon Feb 07 13:46:03 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:46:03 EST 2022
+Creating test case for TC Row      : 826
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update end date on 'SSA' from FUTURE to CURRENT
+Long Desc                          : Update the end date of eligibility /aid cat rows under one benefit plan affiliated to 'SSA' from FUTURE to CURRENT date thru UI panel.
+Expected Results                   : *The end date of SSA agency affiliation is updated to CURRENT date on the UI Panel
+*End date on corresponding agency affilication row in "t_re_agency_aff " is updated to CURRENT date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 826           : 41139
+Notebook linked for test case      : 41139
+Work item/CO linked for test case  : 41139
+Finished at                        : Mon Feb 07 13:46:19 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:46:19 EST 2022
+Creating test case for TC Row      : 827
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update end date on 'SSA' from FUTURE to RETRO
+Long Desc                          : Update the end date of eligibility /aid cat rows under one benefit plan affiliated to 'SSA' from FUTURE to RETRO date thru UI panel.
+Expected Results                   : *The end date of SSA agency affiliation is updated to RETRO date on the UI Panel
+*End date on corresponding agency affilication row in "t_re_agency_aff " is updated to RETRO date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 827           : 41140
+Notebook linked for test case      : 41140
+Work item/CO linked for test case  : 41140
+Finished at                        : Mon Feb 07 13:46:34 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:46:34 EST 2022
+Creating test case for TC Row      : 828
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 777
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update end date on 'SSA' from FUTURE to FUTURE
+Long Desc                          : Update the end date of eligibility /aid cat rows under one benefit plan affiliated to 'SSA' from FUTURE to FUTURE date thru UI panel.
+Expected Results                   : *The end date of SSA agency affiliation is updated to FUTURE date on the UI Panel
+*End date on corresponding agency affilication row in "t_re_agency_aff " is updated to FUTURE date.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 828           : 41141
+Notebook linked for test case      : 41141
+Work item/CO linked for test case  : 41141
+Finished at                        : Mon Feb 07 13:46:49 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:46:49 EST 2022
+Creating test case for TC Row      : 829
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Member Management
+Short Desc                         : Update agency on aid cat
+Long Desc                          : Update agency on aid cat to different agency.
+Expected Results                   : The efective date and end date of new agency affiliation is updated as per the aid cat dates on the UI Panel. Effective date and end date on corresponding agency affilication row in "t_re_agency_aff " is updated as per the aid cat dates. Insert new record in affiliation if it creates a gap.
+Grouping                           : Member Management
+Associated WI/Defect/CO            : 35294
+Associated WI Type                 : Change Order
+Test Case ID for Row 829           : 41142
+Notebook linked for test case      : 41142
+Work item/CO linked for test case  : 41142
+Finished at                        : Mon Feb 07 13:47:04 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:47:04 EST 2022
+Creating test case for TC Row      : 830
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/PCCB1/BH with future PCCB2
+Long Desc                          : A member currently enrolled in ACOB/PCCB1/BH and have a future PCCB2. ACOB/PCCB1 affiliation closes in the future but before  PCCB2 effective date. ACOB/PCCB2 are affiliated.
+Expected Results                   : ACOB/PCCB1/BH are disenrolled with affiliation end date and PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 830           : 41143
+Notebook linked for test case      : 41143
+Work item/CO linked for test case  : 41143
+Finished at                        : Mon Feb 07 13:47:20 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:47:20 EST 2022
+Creating test case for TC Row      : 831
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/CPCCB1/BH with future CPCCB2
+Long Desc                          : A member currently enrolled in ACOB/CPCCB1/CPBH and have a future CPCCB2. ACOB/CPCCB1 affiliation closes in the future but before  CPCCB2 effective date. ACOB/CPCCB2 are affiliated.
+Expected Results                   : ACOB/CPCCB1/BH are disenrolled with affiliation end date and CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 831           : 41144
+Notebook linked for test case      : 41144
+Work item/CO linked for test case  : 41144
+Finished at                        : Mon Feb 07 13:47:36 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:47:36 EST 2022
+Creating test case for TC Row      : 832
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/PCCB1/BH with future PCCB2
+Long Desc                          : A member currently enrolled in ACOB/PCCB1/BH and have a future PCCB2. ACOB/PCCB1 affiliation closes in the future but before PCCB2 effective date. ACOB/PCCB2 affiliation closes in the future after PCCB2 effective date.
+Expected Results                   : ACOB/PCCB1/BH are disenrolled with affiliation end date and PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 832           : 41145
+Notebook linked for test case      : 41145
+Work item/CO linked for test case  : 41145
+Finished at                        : Mon Feb 07 13:47:51 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:47:51 EST 2022
+Creating test case for TC Row      : 833
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/CPCCB1/CPBH with future CPCCB2
+Long Desc                          : A member currently enrolled in ACOB/CPCCB1/CPBH and have a future CPCCB2. ACOB/CPCCB1 affiliation closes in the future but before CPCCB2 effective date. ACOB/CPCCB2 affiliation closes in the future after CPCCB2 effective date.
+Expected Results                   : ACOB/CPCCB1/CPBH are disenrolled with affiliation end date and CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 833           : 41146
+Notebook linked for test case      : 41146
+Work item/CO linked for test case  : 41146
+Finished at                        : Mon Feb 07 13:48:06 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:48:06 EST 2022
+Creating test case for TC Row      : 834
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/PCCB1/BH with future PCCB2
+Long Desc                          : A member currently enrolled in ACOB/PCCB1/BH and have a future PCCB2. ACOB/PCCB1 affiliation closes with current date. ACOB/PCCB2 are affiliated.
+Expected Results                   : ACOB/PCCB1/BH are disenrolled with affiliation end date and PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 834           : 41147
+Notebook linked for test case      : 41147
+Work item/CO linked for test case  : 41147
+Finished at                        : Mon Feb 07 13:48:21 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:48:21 EST 2022
+Creating test case for TC Row      : 835
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/CPCCB1/BH with future CPCCB2
+Long Desc                          : A member currently enrolled in ACOB/CPCCB1/CPBH and have a future CPCCB2. ACOB/CPCCB1 affiliation with current date. ACOB/CPCCB2 are affiliated.
+Expected Results                   : ACOB/CPCCB1/BH are disenrolled with affiliation end date and CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 835           : 41148
+Notebook linked for test case      : 41148
+Work item/CO linked for test case  : 41148
+Finished at                        : Mon Feb 07 13:48:36 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:48:36 EST 2022
+Creating test case for TC Row      : 836
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/PCCB1/BH with future PCCB2
+Long Desc                          : A member currently enrolled in ACOB/PCCB1/BH and have a future PCCB2. ACOB/PCCB1 affiliation closes with current date. ACOB/PCCB2 affiliation closes in future after PCCB2 effective date.
+Expected Results                   : ACOB/PCCB1/BH are disenrolled with affiliation end date and PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 836           : 41149
+Notebook linked for test case      : 41149
+Work item/CO linked for test case  : 41149
+Finished at                        : Mon Feb 07 13:48:51 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:48:51 EST 2022
+Creating test case for TC Row      : 837
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/CPCCB1/CPBH with future CPCCB2
+Long Desc                          : A member currently enrolled in ACOB/CPCCB1/CPBH and have a future CPCCB2. ACOB/CPCCB1 affiliation closes with current date. ACOB/CPCCB2 affiliation closes in the future after CPCCB2 effective date.
+Expected Results                   : ACOB/CPCCB1/CPBH are disenrolled with affiliation end date and CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 837           : 41150
+Notebook linked for test case      : 41150
+Work item/CO linked for test case  : 41150
+Finished at                        : Mon Feb 07 13:49:06 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:49:06 EST 2022
+Creating test case for TC Row      : 838
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/PCCB1/BH with future PCCB2
+Long Desc                          : A member currently enrolled in ACOB/PCCB1/BH and have a future PCCB2. ACOB/PCCB1 affiliation closes with retro date. ACOB/PCCB2 are affiliated.
+Expected Results                   : ACOB/PCCB1/BH are disenrolled with date of discovery and PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 838           : 41151
+Notebook linked for test case      : 41151
+Work item/CO linked for test case  : 41151
+Finished at                        : Mon Feb 07 13:49:22 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:49:22 EST 2022
+Creating test case for TC Row      : 839
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/CPCCB1/BH with future CPCCB2
+Long Desc                          : A member currently enrolled in ACOB/CPCCB1/CPBH and have a future CPCCB2. ACOB/CPCCB1 affiliation with retro date. ACOB/CPCCB2 are affiliated.
+Expected Results                   : ACOB/CPCCB1/BH are disenrolled with date of discovery and CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 839           : 41152
+Notebook linked for test case      : 41152
+Work item/CO linked for test case  : 41152
+Finished at                        : Mon Feb 07 13:49:37 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:49:37 EST 2022
+Creating test case for TC Row      : 840
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/PCCB1/BH with future PCCB2
+Long Desc                          : A member currently enrolled in ACOB/PCCB1/BH and have a future PCCB2. ACOB/PCCB1 affiliation closes with retro date. ACOB/PCCB2 affiliation closes in future after PCCB2 effective date.
+Expected Results                   : ACOB/PCCB1/BH are disenrolled with date of discovery and PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 840           : 41153
+Notebook linked for test case      : 41153
+Work item/CO linked for test case  : 41153
+Finished at                        : Mon Feb 07 13:49:52 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:49:52 EST 2022
+Creating test case for TC Row      : 841
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/CPCCB1/CPBH with future CPCCB2
+Long Desc                          : A member currently enrolled in ACOB/CPCCB1/CPBH and have a future CPCCB2. ACOB/CPCCB1 affiliation closes with retro date. ACOB/CPCCB2 affiliation closes in the future after CPCCB2 effective date.
+Expected Results                   : ACOB/CPCCB1/CPBH are disenrolled with date of discovery and CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 841           : 41154
+Notebook linked for test case      : 41154
+Work item/CO linked for test case  : 41154
+Finished at                        : Mon Feb 07 13:50:07 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:50:07 EST 2022
+Creating test case for TC Row      : 842
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB/PCCB1/BH with future ACOB2/PCCB2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH and have a future ACOB2/PCCB2. ACOB1/PCCB1 affiliation closes in the future but before PCCB2 effective date. ACOB2/PCCB2 are affiliated.
+Expected Results                   : ACOB1/PCCB1/BH are disenrolled with affiliation end date and ACOB2/PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 842           : 41155
+Notebook linked for test case      : 41155
+Work item/CO linked for test case  : 41155
+Finished at                        : Mon Feb 07 13:50:22 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:50:23 EST 2022
+Creating test case for TC Row      : 843
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/BH with future ACOB2/CPCCB2
+Long Desc                          : Member currently enrolled in ACOB1/CPCCB1/CPBH and have a future ACOB2/CPCCB2. ACOB1/CPCCB1 affiliation closes in the future but before ACOB2/CPCCB2 effective date. ACOB2/CPCCB2 are affiliated.
+Expected Results                   : ACOB1/CPCCB1/BH are disenrolled with affiliation end date and CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 843           : 41156
+Notebook linked for test case      : 41156
+Work item/CO linked for test case  : 41156
+Finished at                        : Mon Feb 07 13:50:38 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:50:38 EST 2022
+Creating test case for TC Row      : 844
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH with future ACOB2/PCCB2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH and have a future ACOB2/PCCB2. ACOB1/PCCB1 affiliation closes in the future but before ACOB2/PCCB2 effective date. ACOB2/PCCB2 affiliation closes in the future after ACOB2/PCCB2 effective date.
+Expected Results                   : ACOB1/PCCB1/BH are disenrolled with affiliation end date and ACOB2/PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 844           : 41157
+Notebook linked for test case      : 41157
+Work item/CO linked for test case  : 41157
+Finished at                        : Mon Feb 07 13:50:53 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:50:53 EST 2022
+Creating test case for TC Row      : 845
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/CPBH with future ACOB2/CPCCB2
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH and have a future ACOB2/CPCCB2. ACOB1/CPCCB1 affiliation closes in the future but before ACOB2/CPCCB2 effective date. ACOB2/CPCCB2 affiliation closes in the future after ACOB2/CPCCB2 effective date.
+Expected Results                   : ACOB1/CPCCB1/CPBH are disenrolled with affiliation end date and ACOB2/CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 845           : 41158
+Notebook linked for test case      : 41158
+Work item/CO linked for test case  : 41158
+Finished at                        : Mon Feb 07 13:51:08 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:51:08 EST 2022
+Creating test case for TC Row      : 846
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH with future ACOB2/PCCB2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH and have a future ACOB2/PCCB2. ACOB1/PCCB1 affiliation closes with current date. ACOB2/PCCB2 are affiliated.
+Expected Results                   : ACOB1/PCCB1/BH are disenrolled with affiliation end date and ACOB2/PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 846           : 41159
+Notebook linked for test case      : 41159
+Work item/CO linked for test case  : 41159
+Finished at                        : Mon Feb 07 13:51:24 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:51:24 EST 2022
+Creating test case for TC Row      : 847
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/BH with future ACOB2/CPCCB2
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH and have a future ACOB2/CPCCB2. ACOB1/CPCCB1 affiliation with current date. ACOB2/CPCCB2 are affiliated.
+Expected Results                   : ACOB1/CPCCB1/BH are disenrolled with affiliation end date and ACOB2/CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 847           : 41160
+Notebook linked for test case      : 41160
+Work item/CO linked for test case  : 41160
+Finished at                        : Mon Feb 07 13:51:39 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:51:39 EST 2022
+Creating test case for TC Row      : 848
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH with future ACOB2/PCCB2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH and have a future ACOB2/PCCB2. ACOB1/PCCB1 affiliation closes with current date. ACOB2/PCCB2 affiliation closes in future after ACOB2/PCCB2 effective date.
+Expected Results                   : ACOB1/PCCB1/BH are disenrolled with affiliation end date and ACOB2/PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 848           : 41161
+Notebook linked for test case      : 41161
+Work item/CO linked for test case  : 41161
+Finished at                        : Mon Feb 07 13:51:54 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:51:54 EST 2022
+Creating test case for TC Row      : 849
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/CPBH with future ACOB2/CPCCB2
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH and have a future ACOB2/CPCCB2. ACOB1/CPCCB1 affiliation closes with current date. ACOB2/CPCCB2 affiliation closes in the future after ACOB2/CPCCB2 effective date.
+Expected Results                   : ACOB1/CPCCB1/CPBH are disenrolled with affiliation end date and ACOB2/CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 849           : 41162
+Notebook linked for test case      : 41162
+Work item/CO linked for test case  : 41162
+Finished at                        : Mon Feb 07 13:52:09 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:52:09 EST 2022
+Creating test case for TC Row      : 850
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH with future ACOB2/PCCB2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH and have a future ACOB2/PCCB2. ACOB1/PCCB1 affiliation closes with retro date. ACOB2/PCCB2 are affiliated.
+Expected Results                   : ACOB1/PCCB1/BH are disenrolled with date of discovery and ACOB2/PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 850           : 41163
+Notebook linked for test case      : 41163
+Work item/CO linked for test case  : 41163
+Finished at                        : Mon Feb 07 13:52:24 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:52:24 EST 2022
+Creating test case for TC Row      : 851
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/BH with future ACOB2/CPCCB2
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH and have a future ACOB2/CPCCB2. ACOB1/CPCCB1 affiliation with retro date. ACOB2/CPCCB2 are affiliated.
+Expected Results                   : ACOB1/CPCCB1/BH are disenrolled with date of discovery and ACOB2/CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 851           : 41164
+Notebook linked for test case      : 41164
+Work item/CO linked for test case  : 41164
+Finished at                        : Mon Feb 07 13:52:40 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:52:40 EST 2022
+Creating test case for TC Row      : 852
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH with future ACOB2/PCCB2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH and have a future ACOB2/PCCB2. ACOB1/PCCB1 affiliation closes with retro date. ACOB2/PCCB2 affiliation closes in future after ACOB2/PCCB2 effective date.
+Expected Results                   : ACOB1/PCCB1/BH are disenrolled with date of discovery and ACOB2/PCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 852           : 41165
+Notebook linked for test case      : 41165
+Work item/CO linked for test case  : 41165
+Finished at                        : Mon Feb 07 13:52:55 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:52:55 EST 2022
+Creating test case for TC Row      : 853
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/CPBH with futureACOB2/ CPCCB2
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH and have a future ACOB2/CPCCB2. ACOB1/CPCCB1 affiliation closes with retro date. ACOB2/CPCCB2 affiliation closes in the future after ACOB2/CPCCB2 effective date.
+Expected Results                   : ACOB1/CPCCB1/CPBH are disenrolled with date of discovery and ACOB2/CPCCB2 is historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 853           : 41166
+Notebook linked for test case      : 41166
+Work item/CO linked for test case  : 41166
+Finished at                        : Mon Feb 07 13:53:10 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:53:10 EST 2022
+Creating test case for TC Row      : 854
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH1 with future ACOB2/PCCB2/BH2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH1 and have a future ACOB2/PCCB2/BH2. ACOB1/PCCB1 affiliation closes in the future but before ACOB2/PCCB2 effective date. ACOB2/PCCB2 are affiliated.
+Expected Results                   : ACOB1/PCCB1/BH1 are disenrolled with affiliation end date; do not history the future assignments since they have a trio enrollment.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 854           : 41167
+Notebook linked for test case      : 41167
+Work item/CO linked for test case  : 41167
+Finished at                        : Mon Feb 07 13:53:26 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:53:26 EST 2022
+Creating test case for TC Row      : 855
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/CPBH1 with future ACOB2/CPCCB2/CPBH2
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH1 and have a future ACOB2/CPCCB2/CPBH2. ACOB1/CPCCB1 affiliation closes in the future but before ACOB2/CPCCB2 effective date. ACOB2/CPCCB2 are affiliated.
+Expected Results                   : ACOB1/CPCCB1/CPBH1 are disenrolled with affiliation end date; do not history the future assignments since they have a trio enrollment.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 855           : 41168
+Notebook linked for test case      : 41168
+Work item/CO linked for test case  : 41168
+Finished at                        : Mon Feb 07 13:53:41 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:53:41 EST 2022
+Creating test case for TC Row      : 856
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH1 with future ACOB2/PCCB2/BH2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH1 and have a future ACOB2/PCCB2/BH2. ACOB1/PCCB1 affiliation closes in the future but before ACOB2/PCCB2 effective date. ACOB2/PCCB2 affiliation closes in the future after PCCB2 effective date.
+Expected Results                   : ACOB1/PCCB1/BH1 are disenrolled with affiliation end date. ACOB2/PCCB2/BH2 are disenrolled with affiliation end date.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 856           : 41169
+Notebook linked for test case      : 41169
+Work item/CO linked for test case  : 41169
+Finished at                        : Mon Feb 07 13:53:56 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:53:56 EST 2022
+Creating test case for TC Row      : 857
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/CPBH1 with future ACOB2/CPCCB2/CPBH2
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH1 and have a future ACOB2/CPCCB2/CPBH2. ACOB1/CPCCB1 affiliation closes in the future but before ACOB2/CPCCB2 effective date. ACOB2/CPCCB2 affiliation closes in the future after CPCCB2 effective date.
+Expected Results                   : ACOB1/CPCCB1/CPBH1 are disenrolled with affiliation end date. ACOB2/CPCCB2/CPBH2 are disenrolled with affiliation end date.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 857           : 41170
+Notebook linked for test case      : 41170
+Work item/CO linked for test case  : 41170
+Finished at                        : Mon Feb 07 13:54:11 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:54:11 EST 2022
+Creating test case for TC Row      : 858
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH1 with future ACOB2/PCCB2/BH2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH1 and have a future ACOB2/PCCB2/BH2. ACOB1/PCCB1 affiliation closes in the future but before ACOB2/PCCB2 effective date. ACOB2/PCCB2 affiliation closes before PCCB2 effective date.
+Expected Results                   : ACOB1/PCCB1/BH1 are disenrolled with affiliation end date. ACOB2/PCCB2/BH2 are historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 858           : 41171
+Notebook linked for test case      : 41171
+Work item/CO linked for test case  : 41171
+Finished at                        : Mon Feb 07 13:54:26 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:54:26 EST 2022
+Creating test case for TC Row      : 859
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/CPBH1 with future ACOB2/CPCCB2/CPBH2
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH1 and have a future ACOB2/CPCCB2/CPBH2. ACOB1/CPCCB1 affiliation closes in the future but before ACOB2/CPCCB2 effective date. ACOB2/CPCCB2 affiliation closes in the future after CPCCB2 effective date.
+Expected Results                   : ACOB1/CPCCB1/CPBH1 are disenrolled with affiliation end date. ACOB2/CPCCB2/CPBH2 historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 859           : 41172
+Notebook linked for test case      : 41172
+Work item/CO linked for test case  : 41172
+Finished at                        : Mon Feb 07 13:54:41 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:54:41 EST 2022
+Creating test case for TC Row      : 860
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH1 with future ACOB2/PCCB2/BH2
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH1 and have a future ACOB2/PCCB2/BH2. ACOB1/ACOB2 and PCCB1/PCCB2 are same PMP. ACOB1/PCCB1 affiliation closes in the future but before ACOB2/PCCB2 effective date.
+Expected Results                   : ACOB1/PCCB1/BH1 are disenrolled with affiliation end date. ACOB2/PCCB2/BH2 are historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 860           : 41173
+Notebook linked for test case      : 41173
+Work item/CO linked for test case  : 41173
+Finished at                        : Mon Feb 07 13:54:57 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:54:57 EST 2022
+Creating test case for TC Row      : 861
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/CPBH1 with future ACOB2/CPCCB2/CPBH2
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH1 and have a future ACOB2/CPCCB2/CPBH2. ACOB1/ACOB2 and PCCB1/PCCB2 are same PMP. ACOB1/CPCCB1 affiliation closes in the future but before ACOB2/CPCCB2 effective date.
+Expected Results                   : ACOB1/CPCCB1/CPBH1 are disenrolled with affiliation end date. ACOB2/CPCCB2/CPBH2 historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 861           : 41174
+Notebook linked for test case      : 41174
+Work item/CO linked for test case  : 41174
+Finished at                        : Mon Feb 07 13:55:13 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:55:13 EST 2022
+Creating test case for TC Row      : 862
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/PCCB1/BH1 with future multiple PCCBs
+Long Desc                          : A member currently enrolled in ACOB1/PCCB1/BH and have a future multiple PCCBs with different PMPs. ACOB1/PCCB1 affiliation closes in the future but before future PCCBs effective date.
+Expected Results                   : ACOB1/PCCB1/BH1 are disenrolled with affiliation end date. All future PCCBs are historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 862           : 41175
+Notebook linked for test case      : 41175
+Work item/CO linked for test case  : 41175
+Finished at                        : Mon Feb 07 13:55:28 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:55:28 EST 2022
+Creating test case for TC Row      : 863
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member enrolled in ACOB1/CPCCB1/CPBH1 with future multiple CPCCBs
+Long Desc                          : A member currently enrolled in ACOB1/CPCCB1/CPBH and have a future multiple CPCCBs with different PMPs. ACOB1/CPCCB1 affiliation closes in the future but before future CPCCBs effective date.
+Expected Results                   : ACOB1/CPCCB1/CPBH1 are disenrolled with affiliation end date. All future CPCCBs are historied.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35785
+Associated WI Type                 : Work Item
+Test Case ID for Row 863           : 41176
+Notebook linked for test case      : 41176
+Work item/CO linked for test case  : 41176
+Finished at                        : Mon Feb 07 13:55:43 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:55:43 EST 2022
+Creating test case for TC Row      : 864
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : No 1st notice with Member Information
+Long Desc                          : Do not send 1st notice for member if DUAL or REGULAR one care enrollment effective date is greater than parm value set for 1st notice.
+Expected Results                   : Verify 1st notice is not sent to member if DUAL or REGULAR one care enrollment effective date is greater than parm value set for 1st notice.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 864           : 41177
+Notebook linked for test case      : 41177
+Work item/CO linked for test case  : 41177
+Finished at                        : Mon Feb 07 13:55:58 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:55:58 EST 2022
+Creating test case for TC Row      : 865
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : No 1st notice with ARD Information
+Long Desc                          : Do not send 1st notice for ARD if DUAL or REGULAR one care enrollment effective date is greater than parm value set for 1st notice.
+Expected Results                   : Verify 1st notice is not sent to ARD if DUAL or REGULAR one care enrollment effective date is greater than parm value set for 1st notice.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 865           : 41178
+Notebook linked for test case      : 41178
+Work item/CO linked for test case  : 41178
+Finished at                        : Mon Feb 07 13:56:13 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:56:13 EST 2022
+Creating test case for TC Row      : 866
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 2nd notice with Member Information
+Long Desc                          : Do not send 2nd notice for member if DUAL or REGULAR one care enrollment effective date is greater than parm value set for 2nd notice.
+Expected Results                   : Verify 2nd notice is not sent to member if DUAL or REGULAR one care enrollment effective date is greater than parm value set for 2nd notice.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 866           : 41179
+Notebook linked for test case      : 41179
+Work item/CO linked for test case  : 41179
+Finished at                        : Mon Feb 07 13:56:28 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:56:28 EST 2022
+Creating test case for TC Row      : 867
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : 2nd notice with ARD Information
+Long Desc                          : Do not send 2nd notice for ARD if DUAL or REGULAR one care enrollment effective date is greater than parm value set for 2nd notice.
+Expected Results                   : Verify 2nd notice is not sent to ARD if DUAL or REGULAR one care enrollment effective date is greater than parm value set for 2nd notice.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 867           : 41180
+Notebook linked for test case      : 41180
+Work item/CO linked for test case  : 41180
+Finished at                        : Mon Feb 07 13:56:43 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:56:43 EST 2022
+Creating test case for TC Row      : 868
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : No 40 day notice for Historied REGULAR ICO
+Long Desc                          : Do not send 40 day notice for REGULAR passive one care enrollment if member's 70 day notice is returned.
+Expected Results                   : Verify 40 day notice is not sent if 70 day notice is returned for the member.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 868           : 41181
+Notebook linked for test case      : 41181
+Work item/CO linked for test case  : 41181
+Finished at                        : Mon Feb 07 13:56:59 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:56:59 EST 2022
+Creating test case for TC Row      : 869
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : No 40 day notice for Historied DUALS ICO
+Long Desc                          : Do not send 40 day notice for DUAL passive one care enrollment if member's 70 day notice is returned.
+Expected Results                   : Verify 40 day notice is not sent if 70 day notice is returned for the member.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 869           : 41182
+Notebook linked for test case      : 41182
+Work item/CO linked for test case  : 41182
+Finished at                        : Mon Feb 07 13:57:15 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:57:15 EST 2022
+Creating test case for TC Row      : 870
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Trigger table data for notices
+Long Desc                          : T_MC_CST_TRIGGER is used to track notices for DUAL and REGULAR passive enrollments. CDE_STATUS is updated to 1 for 1st notice and 2 for 2nd notice. DU for DUALS and RG for REGULAR in CDE_LTR_TYPE.
+Expected Results                   : Verify T_MC_CST_TRIGGER is populated as expected.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 870           : 41183
+Notebook linked for test case      : 41183
+Work item/CO linked for test case  : 41183
+Finished at                        : Mon Feb 07 13:57:31 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:57:31 EST 2022
+Creating test case for TC Row      : 871
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member with no ARD info
+Long Desc                          : Member enrolled in DUAL or REGULAR passive one care enrollment does not have any ARD information.
+Expected Results                   : Verify no notice is sent to ARD and only member receives the notice.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 871           : 41184
+Notebook linked for test case      : 41184
+Work item/CO linked for test case  : 41184
+Finished at                        : Mon Feb 07 13:57:46 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:57:46 EST 2022
+Creating test case for TC Row      : 872
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Member with written language other than ENG and SPANISH
+Long Desc                          : Member enrolled in DUAL or REGULAR passive one care enrollment with written language other than ENG and SPANISH.
+Expected Results                   : Verify member and ARD receives their notice in ENG if written language is not ENG and SPANISH.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 872           : 41185
+Notebook linked for test case      : 41185
+Work item/CO linked for test case  : 41185
+Finished at                        : Mon Feb 07 13:58:02 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:58:02 EST 2022
+Creating test case for TC Row      : 873
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : ICM: =40 days from current day
+Long Desc                          : 40 days before start of assignment, and time to send 2nd notice, but 1st notice is not in trigger table.
+Expected Results                   : Job abends with information in log about member that failed and why
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 873           : 41186
+Notebook linked for test case      : 41186
+Work item/CO linked for test case  : 41186
+Finished at                        : Mon Feb 07 13:58:18 EST 2022
+***************************************************
+Started at                         : Mon Feb 07 13:58:18 EST 2022
+Creating test case for TC Row      : 874
+Notebook                           : Project22.04
+Business Function                  : Project22.04
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : ICQ: =40 days from current day
+Long Desc                          : 40 days before start of assignment, and time to send 2nd notice, but 1st notice is not in trigger table.
+Expected Results                   : Job abends with information in log about member that failed and why
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35939
+Associated WI Type                 : Work Item
+Test Case ID for Row 874           : 41187
+Notebook linked for test case      : 41187
+Work item/CO linked for test case  : 41187
+Finished at                        : Mon Feb 07 13:58:33 EST 2022
+***************************************************
+Logged out
+***************************************************
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 07/Feb/2022 01:58:34PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

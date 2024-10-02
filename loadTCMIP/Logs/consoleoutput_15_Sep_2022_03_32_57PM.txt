@@ -1,0 +1,99 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 15/Sep/2022 03:32:57PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Thu Sep 15 15:33:04 EDT 2022
+Creating test case for Row #       : 1097
+Short Desc                         : Existing Lock-in record with overlapping dates
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : One lock in record exists. A second lock in record is added with overlapping dates but different Provider ID/SL
+Expected Results                   : New record is saved successfully
+Test Case ID for Row 1097          : 41934
+Associated Req ID                  : 35599.01.002
+Requirement linked for test case   : 41934
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41934
+Finished at                        : Thu Sep 15 15:33:07 EDT 2022
+****************************************************
+Started at                         : Thu Sep 15 15:33:07 EDT 2022
+Creating test case for Row #       : 1100
+Short Desc                         : Fix overlapping records
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : Find  a member with 2 or more lock-in records where the dates overlap and provider ids are the same (existing overlapping data with same providers). Make the dates non overlapping and save
+Expected Results                   : Records are saved successfully
+Test Case ID for Row 1100          : 41935
+Associated Req ID                  : 35599.01.002
+Requirement linked for test case   : 41935
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41935
+Finished at                        : Thu Sep 15 15:33:10 EDT 2022
+****************************************************
+Started at                         : Thu Sep 15 15:33:10 EDT 2022
+Creating test case for Row #       : 1102
+Short Desc                         : Non overlapping records with same provider
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : Add 2 new records or add a new record with an existing record, not overlappping the lock in dates but keeping the provider ids same
+Expected Results                   : Records are saved successfully
+Test Case ID for Row 1102          : 41936
+Associated Req ID                  : 35599.01.002
+Requirement linked for test case   : 41936
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41936
+Finished at                        : Thu Sep 15 15:33:13 EDT 2022
+****************************************************
+Started at                         : Thu Sep 15 15:33:13 EDT 2022
+Creating test case for Row #       : 1103
+Short Desc                         : Non overlapping records with different provider
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : Add 2 new records or add a new record with an existing record, not overlappping the lock in datesand different provider ids
+Expected Results                   : Records are saved successfully
+Test Case ID for Row 1103          : 41937
+Associated Req ID                  : 35599.01.002
+Requirement linked for test case   : 41937
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41937
+Finished at                        : Thu Sep 15 15:33:15 EDT 2022
+****************************************************
+Started at                         : Thu Sep 15 15:33:15 EDT 2022
+Creating test case for Row #       : 1104
+Short Desc                         : overlapping records with same provider id but different SL
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MC PANELS
+Long Desc                          : Add 2 new records or add a new record with an existing record,  overlappping the lock in dates , same Provider IDs but different SL
+Expected Results                   : Records are saved successfully
+Test Case ID for Row 1104          : 41938
+Associated Req ID                  : 35599.01.002

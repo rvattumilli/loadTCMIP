@@ -1,0 +1,727 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 22/Jul/2022 02:15:58PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Fri Jul 22 14:16:07 EDT 2022
+Creating test case for Row #       : 970
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : ACO/MCO - regain elig- same PID/SL_CP re-enroll - Batch
+Long Desc                          : CP assignment plan (BHCP, LTSS) disenrolled due to disenrollment of ACO/MCO with code 03 via batch, member reenrolled to same ACO/MCO via batch within 90 days (inclusive of the 90th day)
+
+Example -
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP/LTSS (110128111B) - 11/01/2019 - 12/31/2299
+
+ACOA disenrolled with code (03) via batch, system auto-close BHCP/LTSS with ACOA end date and stop code.
+
+ACOA (110031449G) - 08/01/2018 - 05/31/2022
+BHCP/LTSS (110128111B) - 11/01/2019 - 05/31/2022
+
+Member re-enrolled to the ACO/MCO for the same PID/SL within the 90-day period, then the member should be auto re-enrolled to the previous CP as long as CP is affiliated with the ACO/MCO.
+
+Previous ACOA (110031449G) - 06/01/2022 - 12/31/2299
+Previous BHCP/LTSS (110128111B) - 06/01/2022 - 12/31/2299 --> re-enroll to the previous CP provider ID.
+Expected Results                   : The member should be auto-reenrolled into their previous CP plan (BHCP, LTSS) as long as the CP has an active affiliation with that ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.001
+Test Case ID for Row 970           : 41680
+Requirement linked for test case   : 41680
+Notebook/BF linked for test case   : 41680
+Finished at                        : Fri Jul 22 14:16:17 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:16:17 EDT 2022
+Creating test case for Row #       : 971
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : ACO/MCO - regain elig- same PID/SL_CP re-enroll - UI
+Long Desc                          : CP assignment plan (BHCP, LTSS) disenrolled due to disenrollment of ACO/MCO with codes (03, 62, 63, 69, 84) via UI, member reenrolled to same ACO/MCO via batch within 90 days (inclusive of the 90th day)
+
+Example -
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP/LTSS (110128111B) - 11/01/2019 - 12/31/2299
+
+ACOA disenrolled with codes (03, 62, 63, 69, 84) via UI, system auto-close BHCP/LTSS with ACOA end date and stop code.
+
+ACOA (110031449G) - 08/01/2018 - 05/31/2022
+BHCP/LTSS (110128111B) - 11/01/2019 - 05/31/2022
+
+Member re-enrolled to the ACO/MCO for the same PID/SL within the 90-day period, then the member should be auto re-enrolled to the previous CP as long as CP is affiliated with the ACO/MCO.
+
+Previous ACOA (110031449G) - 06/01/2022 - 12/31/2299
+Previous BHCP/LTSS (110128111B) - 06/01/2022 - 12/31/2299 --> re-enroll to the previous CP provider ID.
+Expected Results                   : The member should be auto-reenrolled into their previous CP plan (BHCP, LTSS) as long as the CP has an active affiliation with that ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.001
+Test Case ID for Row 971           : 41681
+Requirement linked for test case   : 41681
+Notebook/BF linked for test case   : 41681
+Finished at                        : Fri Jul 22 14:16:25 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:16:25 EDT 2022
+Creating test case for Row #       : 972
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : ACO/MCO regain elig for Diff PID/SL_CP re-enroll - Batch
+Long Desc                          : CP assignment plan (BHCP, LTSS) disenrolled due to disenrollment of ACO/MCO with code 03 via batch, member reenrolled to Different ACO/MCO via batch within 90 days (inclusive of the 90th day)
+
+Example -
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP (110128111B) - 11/01/2019 - 12/31/2299
+
+ACOA disenrolled with code (03) via batch, system auto-close BHCP with ACOA end date and stop code.
+
+ACOA (110031449G) - 08/01/2018 - 05/31/2022
+BHCP (110128111B) - 11/01/2019 - 05/31/2022
+
+Member enrolled to the ACO/MCO for the Different PID/SL within the 90-day period, then the member should be auto re-enrolled to the previous CP as long as CP is affiliated with the new ACO/MCO.
+
+New ACOA (110031464B) - 06/01/2022 - 12/31/2299
+Previous BHCP (110128111B) - 06/01/2022 - 12/31/2299 --> re-enroll to the previous CP.
+Expected Results                   : The member should be auto-reenrolled into their previous CP plan (BHCP, LTSS) as long as the CP has an active affiliation with that ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.002
+Test Case ID for Row 972           : 41682
+Requirement linked for test case   : 41682
+Notebook/BF linked for test case   : 41682
+Finished at                        : Fri Jul 22 14:16:35 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:16:35 EDT 2022
+Creating test case for Row #       : 973
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : ACO/MCO regain elig for Diff PID/SL_CP re-enroll - UI
+Long Desc                          : CP assignment plan (BHCP, LTSS) disenrolled due to disenrollment of ACO/MCO with codes (03, 62, 63, 69, 84) via UI, member reenrolled to Different ACO/MCO via batch within 90 days (inclusive of the 90th day)
+
+Example -
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP (110128111B) - 11/01/2019 - 12/31/2299
+
+ACOA disenrolled with codes (03, 62, 63, 69, 84) via UI, system auto-close BHCP with ACOA end date and stop code.
+
+ACOA (110031449G) - 08/01/2018 - 05/31/2022
+BHCP (110128111B) - 11/01/2019 - 05/31/2022
+
+Member enrolled to the ACO/MCO for the Different PID/SL within the 90-day period, then the member should be auto re-enrolled to the previous CP as long as CP is affiliated with the new ACO/MCO.
+
+New ACOA (110031464B) - 06/01/2022 - 12/31/2299
+Previous BHCP (110128111B) - 06/01/2022 - 12/31/2299 --> re-enroll to the previous CP.
+Expected Results                   : The member should be auto-reenrolled into their previous CP plan (BHCP, LTSS) as long as the CP has an active affiliation with that ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.002
+Test Case ID for Row 973           : 41683
+Requirement linked for test case   : 41683
+Notebook/BF linked for test case   : 41683
+Finished at                        : Fri Jul 22 14:16:43 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:16:43 EDT 2022
+Creating test case for Row #       : 974
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Same stop reason for ACO/MCO and CP via batch
+Long Desc                          : Member is disenrolled from ACO/MCO via batch with stop reason (03)
+
+Example-
+
+If ACO/MCO is disenrolled with 03, then CP (BHCP, LTSS) should be disenrolled with 03 as well
+Expected Results                   : The batch should auto disenrolls CP (BHCP, LTSS) with the same date and the stop reason codes as ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.003
+Test Case ID for Row 974           : 41684
+Requirement linked for test case   : 41684
+Notebook/BF linked for test case   : 41684
+Finished at                        : Fri Jul 22 14:16:50 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:16:50 EDT 2022
+Creating test case for Row #       : 975
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Transfer ACOA/MCO to ACOA/MCO_via UI - Same PID/SL
+Long Desc                          : Member transfers from one ACO/MCO to a new ACO/MCO (Same PID/SL) via SU Panel manually with codes (03, 62, 63, 69, 84).
+
+Example - Transfer from ACOA1 --> ACOA2 (same PID/SL)
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP/LTSS (110128111B) - 11/01/2019 - 12/31/2299
+
+110031449G ---> 110031449G
+
+a. 110031449G ---> 110031449G
+User enroll the member to the new ACOA - 110031449G with start reasons (03, 62, 63, 69, 84)
+New ACOA (110031449G) - 06/01/2022 - 12/31/2299
+
+Which should disenroll the member from the Old ACOA and BHCP/LTSS a day before the new ACOA start date (No Gap) and with the respective start code as new ACOA.
+
+Old ACOA (110031449G) - 08/01/2018 - 05/31/2022 
+BHCP/LTSS (110128111B) - 11/01/2019 - 05/31/2022 
+
+via batch, Member should be auto re-enrolled with the previous BHCP/LTSS with the new ACO/MCO start date as long as the CP has an active affiliation with the new ACO/MCO.
+
+BHCP/LTSS (110128111B) - 06/01/2022 - 12/31/2299
+Expected Results                   : UI should auto-disenroll the CP (BHCP, LTSS) segment with end date & stop reason codes same as of old ACO/MCO and later batch should auto re-enroll the member with the previous CP Plan (BHCP, LTSS) with the new ACO/MCO (Same PID/SL) start date as long as the CP has an active affiliation with that ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.004
+Test Case ID for Row 975           : 41685
+Requirement linked for test case   : 41685
+Notebook/BF linked for test case   : 41685
+Finished at                        : Fri Jul 22 14:16:58 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:16:58 EDT 2022
+Creating test case for Row #       : 976
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Transfer ACOA/MCO to ACOA/MCO_via UI - Diff PID/SL
+Long Desc                          : Member transfers from one ACO/MCO to a new ACO/MCO (Different PID/SL) via SU Panel manually with codes (03, 62, 63, 69, 84).
+
+Example - Transfer from ACOA1 --> ACOA2 (Different PID/SL)
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP/LTSS (110128111B) - 11/01/2019 - 12/31/2299
+
+110031449G ---> 110031464B
+
+a. 110031449G ---> 110031464B
+User enroll the member to new ACOA - 110031464B with start reasons (03, 62, 63, 69, 84)
+New ACOA (110031464B) - 06/01/2022 - 12/31/2299
+
+Which should disenroll the member from the Old ACOA and BHCP/LTSS a day before the new ACOA start date (No Gap) and with the respective start code as new ACOA.
+
+Old ACOA (110031449G) - 08/01/2018 - 05/31/2022
+BHCP/LTSS (110128111B) - 11/01/2019 - 05/31/2022 
+
+via batch, Member should be auto re-enrolled with the previous BHCP/LTSS with the new ACO/MCO start date as long as the CP has an active affiliation with the new ACO/MCO.
+
+BHCP/LTSS (110128111B) - 06/01/2022 - 12/31/2299
+Expected Results                   : UI should auto-disenroll the CP (BHCP, LTSS) segment with end date & stop reason codes same as of old ACO/MCO and later batch should auto re-enroll the member with the previous CP Plan (BHCP, LTSS) with the new ACO/MCO (Different PID/SL) start date as long as the CP has an active affiliation with that ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.004
+Test Case ID for Row 976           : 41686
+Requirement linked for test case   : 41686
+Notebook/BF linked for test case   : 41686
+Finished at                        : Fri Jul 22 14:17:07 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:17:07 EDT 2022
+Creating test case for Row #       : 977
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Transfer ACOA/MCO to ACOA/MCO_via Batch - Same PID/SL
+Long Desc                          : Member transfers from one ACO/MCO to a new ACO/MCO (Same PID/SL) via batch with code 03.
+
+Example - Batch Transfer from ACOA1 --> ACOA2 (same PID/SL)
+a. 110031449G ---> 110031449G
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP/LTSS  (110128111B) - 11/01/2019 - 12/31/2299
+
+Since Plan type change
+
+batch disenrolled the member from the Old ACOA 110031449G and BHCP/LTSS  with the date of discovery and with stop code 03.
+
+Old ACOA (110031449G) - 08/01/2018 - 05/31/2022 - It exists and should remain the same.
+BHCP (110128111B) - 11/01/2019 - 05/31/2022 - for batch, It exists and should remain the same.
+
+Via batch Member transferred from a ACOA program to a new ACOA program (Same PID/SL) with code 03.
+
+a member enrolled to new ACOA - 110031449G with start reason code (03)
+New ACOA (110031449G) - 06/01/2022 - 12/31/2299
+
+via batch, to auto re-enroll the member with the previous BHCP/LTSS  with the new ACO/MCO start date as long as the CP has an active affiliation with the new ACO/MCO.
+
+BHCP/LTSS  (110128111B) - 06/01/2022 - 12/31/2299 - new req to start the BHCP with the new ACOA start date.
+Expected Results                   : The batch should auto-disenroll the CP (BHCP, LTSS) segment with end date & stop reason codes same as of old ACO/MCO and should auto re-enroll the member with the previous CP Plan (BHCP, LTSS) with the new ACO/MCO (Same PID/SL) start date as long as the CP has an active affiliation with that ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.005
+Test Case ID for Row 977           : 41687
+Requirement linked for test case   : 41687
+Notebook/BF linked for test case   : 41687
+Finished at                        : Fri Jul 22 14:17:16 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:17:16 EDT 2022
+Creating test case for Row #       : 978
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Transfer ACOA/MCO to ACOA/MCO_via Batch - Diff PID/SL
+Long Desc                          : Member transfers from one ACO/MCO to a new ACO/MCO (Different PID/SL) via batch with code 03. 
+
+Example - Batch Transfer from ACOA1 --> ACOA2 (Different PID/SL)
+
+110031449G ---> 110031449G --> 110031464B
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP/LTSS (110128111B) - 11/01/2019 - 12/31/2299
+
+Plan type change
+
+batch disenrolled the member from the Old ACOA 110031449G and BHCP with the date of discovery and with stop code 03.
+
+Old ACOA (110031449G) - 08/01/2018 - 05/31/2022 - It exists and should remain the same.
+BHCP/LTSS  (110128111B) - 11/01/2019 - 05/31/2022 - for batch, It exists and should remain the same.
+
+Batch tries to re-enroll members to previous ACOA PID/SL but couldn't as members may not be eligible because of age/gender restrictions, panel hold, etc.
+
+Member is recycled and goes thru CF or case logic and will be enrolled to different PID/SL
+
+member enrolled to new ACOA - 110031464B with start reason code (03)
+New ACOA (110031464B) - 06/02/2022 - 12/31/2299
+
+via batch, to auto re-enroll the member with the previous BHCP/LTSS  with the new ACO/MCO start date as long as the CP has an active affiliation with the new ACO/MCO.
+
+BHCP/LTSS  (110128111B) - 06/02/2022 - 12/31/2299 - new req to start the BHCP with the new ACOA start date.
+Expected Results                   : The batch should auto-disenroll the CP (BHCP, LTSS) segment with end date & stop reason codes same as of old ACO/MCO and should auto re-enroll the member with the previous CP Plan (BHCP, LTSS) with the new ACO/MCO  Different PID/SL) start date as long as the CP has an active affiliation with that ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.005
+Test Case ID for Row 978           : 41688
+Requirement linked for test case   : 41688
+Notebook/BF linked for test case   : 41688
+Finished at                        : Fri Jul 22 14:17:24 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:17:24 EDT 2022
+Creating test case for Row #       : 979
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Change ACOA/MCO to Same/diff ACOA/MCO_Via UI
+Long Desc                          : Member disenrolled from one ACO/MCO via UI manually with stop codes (03, 62, 63, 69, 84) and enrolled to another ACO/MCO within 90 days (inclusive of the 90th day) via UI manually.
+
+Example - Change from ACOA --> ACOA (Same PID/SL/ Different PID/SL)
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP (110128111B) - 11/01/2019 - 12/31/2299
+
+110031449G ---> 110031464B
+
+User closes current ACOA with codes (03, 62, 63, 69, 84) via UI, system to auto-close BHCP with ACOA end date and stop code.
+
+Old ACOA (110031449G) - 08/01/2018 - 05/31/2022
+BHCP (110128111B) - 11/01/2019 - 05/31/2022 - (Requirement - 36034.01.003 )
+
+The user enrolls the member to new ACOA-110031464B after a few min.
+New ACOA (110031464B) - 06/01/2022 - 12/31/2299
+
+Via batch, Member should be re-enrolled with the previous BHCP with the new ACO/MCO start date as long as the CP has an active affiliation with the new ACO/MCO and the stop reason code on the Old ACO/MCO are (03, 62, 63, 69, 84).
+
+BHCP (110128111B) - 06/01/2022 - 12/31/2299
+
+---------------------------------------------
+
+Example - Transfer from ACOA1 (110031449G) --> ACOA2 (110031464B)
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP (110128111B) - 11/01/2019 - 12/31/2299
+
+110031449G ---> 110031464B
+User closes current ACOA with codes (03, 62, 63, 69, 84) via UI, system to auto-close BHCP with ACOA end date and stop code.
+
+Old ACOA (110031449G) - 08/01/2018 - 04/30/2022
+BHCP (110128111B) - 11/01/2019 - 04/30/2022
+
+User re-enrolls the member to new ACOA-110031464B with the gap of 32 days (effective date within 90 days period ).
+New ACOA (110031464B) - 06/01/2022 - 12/31/2299
+
+Via batch, Member should be re-enrolled with the previous BHCP with the new ACO/MCO start date as long as the CP has an active affiliation with the new ACO/MCO and the stop reason code on the Old ACO/MCO are (03, 62, 63, 69, 84).
+
+BHCP (110128111B) - 06/01/2022 - 12/31/2299
+Expected Results                   : 1. The system should auto-disenroll the current CP segment with the same end date & stop reason codes as of the old ACO/MCO.
+
+2. If member re enrolled to a ACO/MCO with 90 days, the batch should open a new CP segment with a start date as of the new ACO/MCO as long as the CP has an active affiliation with the new ACO/MCO.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.006
+Test Case ID for Row 979           : 41689
+Requirement linked for test case   : 41689
+Notebook/BF linked for test case   : 41689
+Finished at                        : Fri Jul 22 14:17:34 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:17:34 EDT 2022
+Creating test case for Row #       : 980
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : No CP re-enrollment for PCC Member
+Long Desc                          : Member who is Auto-disenrolled from CP assignment plan (BHCP, LTSS) because of the ACO/MCO disenrollment due to stop reason codes (03, 62, 63, 69, 84 or Z1), is enrolled in the PCC plan (PCCP/BH or CPPCC/CPBH assignment plans) within 90 days (inclusive of the 90th day)
+Expected Results                   : Member should not be auto-re enrolled into their previous Community Partner program.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.007
+Test Case ID for Row 980           : 41690
+Requirement linked for test case   : 41690
+Notebook/BF linked for test case   : 41690
+Finished at                        : Fri Jul 22 14:17:41 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:17:41 EDT 2022
+Creating test case for Row #       : 981
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : No CP re-enroll for FFS member
+Long Desc                          : Member who is auto-disenrolled from CP assignment plan (BHCP, LTSS) because of the ACO/MCO disenrollment due to stop reason codes (03, 62, 63, 69, 84 or Z1), is remained unenrolled (Fee for Service) for 90 days (inclusive of the 90th day).
+Expected Results                   : Member should not be auto re enrolled into their previous Community Partner program.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.008
+Test Case ID for Row 981           : 41691
+Requirement linked for test case   : 41691
+Notebook/BF linked for test case   : 41691
+Finished at                        : Fri Jul 22 14:17:48 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:17:48 EDT 2022
+Creating test case for Row #       : 982
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : No CP re-enroll_stop code other than CP2.0
+Long Desc                          : Member who is auto-disenrolled from CP assignment plan (BHCP, LTSS) because of the ACO/MCO disenrollment due to stop reason codes other than (03, 62, 63, 69, 84, Z1) enrolled to ACO/MCO within 90 days (inclusive of the 90th day).
+Expected Results                   : Member should not be reenrolled into their previous Community Partner program.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.009
+Test Case ID for Row 982           : 41692
+Requirement linked for test case   : 41692
+Notebook/BF linked for test case   : 41692
+Finished at                        : Fri Jul 22 14:17:56 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:17:56 EDT 2022
+Creating test case for Row #       : 983
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Suppress ACCS disenrollment notice
+Long Desc                          : Member disenrolled from CP Plan Type (ACCS1/2) with auto-disenrollment codes (BK, BH and BI)and enrolled to as new CP Plan Type (ACCS2/1) but PID/SL is same.
+Expected Results                   : Verify there is no trigger DP generated for the ACCS in table "T_MC_CST_TRIGGER" and Notices (Disenrollment) are suppressed.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.010
+Test Case ID for Row 983           : 41693
+Requirement linked for test case   : 41693
+Notebook/BF linked for test case   : 41693
+Finished at                        : Fri Jul 22 14:18:03 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:18:03 EDT 2022
+Creating test case for Row #       : 984
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Suppress PACC  disenrollment notice
+Long Desc                          : Member disenrolled from CP Plan Type (PACC/2) with auto-disenrollment codes (BK, BH and BI) and enrolled to as new CP Plan Type (PACC2/1) but PID/SL is same.
+Expected Results                   : Verify there is no trigger DP generated for the PACC in table "T_MC_CST_TRIGGER" and Notices (Disenrollment) are suppressed.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.010
+Test Case ID for Row 984           : 41694
+Requirement linked for test case   : 41694
+Notebook/BF linked for test case   : 41694
+Finished at                        : Fri Jul 22 14:18:11 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:18:11 EDT 2022
+Creating test case for Row #       : 985
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Suppress ACCS Enrollment notice
+Long Desc                          : Member disenrolled from CP Plan Type (ACCS1/2) and enrolled to as new CP Plan Type (ACCS2/1) but PID/SL is same.
+Expected Results                   : Verify there is no trigger "EB" generated for the ACCS in table "T_MC_CST_TRIGGER" and Notices (Enrollment) are suppressed.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.011
+Test Case ID for Row 985           : 41695
+Requirement linked for test case   : 41695
+Notebook/BF linked for test case   : 41695
+Finished at                        : Fri Jul 22 14:18:18 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:18:18 EDT 2022
+Creating test case for Row #       : 986
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Suppress PACC Enrollment notice
+Long Desc                          : Member disenrolled from CP Plan Type (PACC/2) and enrolled to as new CP Plan Type (PACC2/1) but PID/SL is same.
+Expected Results                   : Verify there is no trigger "EB" generated for the PACC in table "T_MC_CST_TRIGGER" and Notices (Enrollment) are suppressed.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.011
+Test Case ID for Row 986           : 41696
+Requirement linked for test case   : 41696
+Notebook/BF linked for test case   : 41696
+Finished at                        : Fri Jul 22 14:18:26 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:18:26 EDT 2022
+Creating test case for Row #       : 987
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Regression 1
+Long Desc                          : Member who is auto-disenrolled from all the assignments due to stop reason code Z1 - loss of eligibility, then regains eligibility within 90 days (inclusive of the 90th day).
+Expected Results                   : Member should be auto re-enrolled the previous CP based on the existing eligibility rules.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.012
+Test Case ID for Row 987           : 41697
+Requirement linked for test case   : 41697
+Notebook/BF linked for test case   : 41697
+Finished at                        : Fri Jul 22 14:18:33 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:18:33 EDT 2022
+Creating test case for Row #       : 988
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Regression 2
+Long Desc                          : User to disenroll the CP member with the stop reason code other the CP disenrollment codes (03, 62, 63, 69, 84).
+Expected Results                   : Throw an existing edit - "Stop reason is not valid for MC Program".
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.013
+Test Case ID for Row 988           : 41698
+Requirement linked for test case   : 41698
+Notebook/BF linked for test case   : 41698
+Finished at                        : Fri Jul 22 14:18:40 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:18:40 EDT 2022
+Creating test case for Row #       : 989
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Same stop reason for ACO/MCO and CP via UI
+Long Desc                          : Member is disenrolled from ACO/MCO via UI with stop reasons (03, 62, 63, 69, 84), 
+
+Example-
+
+If ACO/MCO is disenrolled with 03, then CP (BHCP, LTSS) should be disenrolled with 03 as well
+If ACO/MCO is disenrolled with 62, then CP (BHCP, LTSS) should be disenrolled with 62 as well
+If ACO/MCO is disenrolled with 63, then CP (BHCP, LTSS) should be disenrolled with 63 as well
+If ACO/MCO is disenrolled with 69, then CP (BHCP, LTSS) should be disenrolled with 69 as well
+If ACO/MCO is disenrolled with 84, then CP (BHCP, LTSS) should be disenrolled with 84 as well
+Expected Results                   : The system should auto disenrolls CP (BHCP, LTSS) with the same stop reason codes as ACO/MCO instead of code "B6"
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.014
+Test Case ID for Row 989           : 41699
+Requirement linked for test case   : 41699
+Notebook/BF linked for test case   : 41699
+Finished at                        : Fri Jul 22 14:18:48 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:18:48 EDT 2022
+Creating test case for Row #       : 990
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Diff stop reason for ACO/MCO and CP via UI
+Long Desc                          : Member is disenrolled from ACO/MCO via UI with stop reasons other than (03, 62, 63, 69, 84)
+Expected Results                   : The system should auto disenrolls CP (BHCP, LTSS) with B6 as it does currently.
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.014
+Test Case ID for Row 990           : 41700
+Requirement linked for test case   : 41700
+Notebook/BF linked for test case   : 41700
+Finished at                        : Fri Jul 22 14:18:55 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:18:55 EDT 2022
+Creating test case for Row #       : 991
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : ACO/MCO - regain elig- same PID/SL_CP No re-enroll - Batch
+Long Desc                          : CP assignment plan (BHCP, LTSS) disenrolled due to disenrollment of ACO/MCO with code 03 via batch, member reenrolled to same ACO/MCO via batch within 90 days (inclusive of the 90th day). CP is not affiliated to ACO/MCO on ACO/MCO eff date.
+
+Example -
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP/LTSS (110128111B) - 11/01/2019 - 12/31/2299
+
+ACOA disenrolled with code (03) via batch, system auto-close BHCP/LTSS with ACOA end date and stop code.
+
+ACOA (110031449G) - 08/01/2018 - 05/31/2022
+BHCP/LTSS (110128111B) - 11/01/2019 - 05/31/2022
+
+Member re-enrolled to the ACO/MCO for the same PID/SL within the 90-day period, then the member should be not auto re-enrolled to the previous CP.
+
+Previous ACOA (110031449G) - 06/01/2022 - 12/31/2299
+Previous BHCP/LTSS (110128111B) --> No re-enroll to the previous CP provider ID.
+Expected Results                   : The member is not auto-reenrolled into their previous CP plan (BHCP, LTSS).
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.001
+Test Case ID for Row 991           : 41701
+Requirement linked for test case   : 41701
+Notebook/BF linked for test case   : 41701
+Finished at                        : Fri Jul 22 14:19:04 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:19:04 EDT 2022
+Creating test case for Row #       : 992
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : ACO/MCO - regain elig- same PID/SL_CP No re-enroll - Batch
+Long Desc                          : CP assignment plan (BHCP, LTSS) disenrolled due to disenrollment of ACO/MCO with code 03 via batch, member reenrolled to same ACO/MCO via batch not within 90 days (inclusive of the 90th day). CP is affiliated to ACO/MCO on ACO/MCO eff date.
+
+Example -
+
+ACOA (110031449G) - 08/01/2018 - 12/31/2299
+BHCP/LTSS (110128111B) - 11/01/2019 - 12/31/2299
+
+ACOA disenrolled with code (03) via batch, system auto-close BHCP/LTSS with ACOA end date and stop code.
+
+ACOA (110031449G) - 08/01/2018 - 05/31/2022
+BHCP/LTSS (110128111B) - 11/01/2019 - 05/31/2022
+
+Member re-enrolled to the ACO/MCO for the same PID/SL not within the 90-day period, then the member should be not auto re-enrolled to the previous CP.
+
+Previous ACOA (110031449G) - 06/01/2022 - 12/31/2299
+Previous BHCP/LTSS (110128111B) --> No re-enroll to the previous CP provider ID.
+Expected Results                   : The member is not auto-reenrolled into their previous CP plan (BHCP, LTSS).
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.001
+Test Case ID for Row 992           : 41702
+Requirement linked for test case   : 41702
+Notebook/BF linked for test case   : 41702
+Finished at                        : Fri Jul 22 14:19:12 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:19:12 EDT 2022
+Creating test case for Row #       : 993
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Do not Suppress ACCS disenrollment notice
+Long Desc                          : Member disenrolled from CP Plan Type (ACCS1/2) with auto-disenrollment codes other than (BK, BH and BI)and enrolled to new CP Plan Type (ACCS2/1) but PID/SL is same.
+Expected Results                   : Verify there is  trigger DP generated for the ACCS in table "T_MC_CST_TRIGGER".
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.010
+Test Case ID for Row 993           : 41703
+Requirement linked for test case   : 41703
+Notebook/BF linked for test case   : 41703
+Finished at                        : Fri Jul 22 14:19:19 EDT 2022
+****************************************************
+Started at                         : Fri Jul 22 14:19:19 EDT 2022
+Creating test case for Row #       : 994
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Suppress PACC  disenrollment notice
+Long Desc                          : Member disenrolled from CP Plan Type (PACC/2) with auto-disenrollment codes other than (BK, BH and BI) and enrolled to new CP Plan Type (PACC2/1) but PID/SL is same.
+Expected Results                   : Verify there is trigger DP generated for the PACC in table "T_MC_CST_TRIGGER".
+Grouping                           : Batch
+Associated iWI/Defect/CO           : 36034
+Associated iWI Type                : Change Order
+Associated Req ID                  : 36034.01.010
+Test Case ID for Row 994           : 41704
+Error communicating with the remote browser. It may have died.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'EHS-QNY-W0622WP', ip: '10.195.12.69', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: driver.version: RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:20370}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4cb5da57325f9a68cdd1c13909e2d1c2
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+Configuration Failures: 1, Skips: 2
+===============================================
+

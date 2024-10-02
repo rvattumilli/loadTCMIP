@@ -1,0 +1,113 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Jun/2023 09:14:03AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 75
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' '), tc_row, trim(d.dsc) wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 101
+Total No.of Rows                   : 3
+****************************************************
+Started at                         : Wed Jun 14 09:14:12 EDT 2023
+Creating test case for Row #       : 1969
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36249.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MANAGEMENT INTERFACE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 49
+Validation Time(ms)                : 570
+Validation status                  : PASS
+Short Desc                         : Add new state code AE
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MANAGEMENT INTERFACE
+Long Desc                          : Verify state code "AE - Armed Forces Europe" exists in table T_STATE in MMIS database.
+Expected Results                   : State code "AE - Armed Forces Europe" exists in table T_STATE in MMIS database.
+Test Case ID for Row 1969          : 43317
+Query Execution Time(ms)           : 81
+Requirement ID                     : 36249.01.001
+Query Execution Time(ms)           : 38
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 43317
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43317
+Finished at                        : Wed Jun 14 09:14:17 EDT 2023
+****************************************************
+Started at                         : Wed Jun 14 09:14:17 EDT 2023
+Creating test case for Row #       : 1970
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36249.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MANAGEMENT INTERFACE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 532
+Validation status                  : PASS
+Short Desc                         : Description of state code ID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MANAGEMENT INTERFACE
+Long Desc                          : Verify the description of state code AE is  "Armed Forces Europe" in T_STATE table.
+Expected Results                   : The state code AE description should be "Armed Forces Europe"
+Test Case ID for Row 1970          : 43318
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36249.01.001
+Query Execution Time(ms)           : 29
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 43318
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43318
+Finished at                        : Wed Jun 14 09:14:21 EDT 2023
+****************************************************
+Started at                         : Wed Jun 14 09:14:21 EDT 2023
+Creating test case for Row #       : 1971
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36249.01.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Member Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'MEMBER MANAGEMENT INTERFACE') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'Project24.01') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 42
+Validation Time(ms)                : 521
+Validation status                  : PASS
+Short Desc                         : New state code value AE accepted in MMIS
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 932
+Owner                              : MEET LALAKIYA
+Grouping                           : MEMBER MANAGEMENT INTERFACE
+Long Desc                          : Verify the state code "AE" is accepted in MMIS in the eligibility feeds for all eligibility sources.
+Expected Results                   : State code "AE" is accepted in MMIS by all the eligibility sources.
+Test Case ID for Row 1971          : 43319
+Query Execution Time(ms)           : 101
+Requirement ID                     : 36249.01.002
+Query Execution Time(ms)           : 39
+Requirement Type                   : Batch
+SAK Requirement Type               : 12
+Requirement linked for test case   : 43319
+Notebook                           : Project24.01
+Business Function                  : Project24.01
+Notebook/BF linked for test case   : 43319
+Finished at                        : Wed Jun 14 09:14:26 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Jun/2023 09:14:27AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

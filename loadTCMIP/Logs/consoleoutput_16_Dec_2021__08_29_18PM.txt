@@ -1,0 +1,53 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 16/Dec/2021 08:29:18PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+no such element: Unable to locate element: {"method":"link text","selector":"DocoTool"}
+  (Session info: chrome=96.0.4664.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'EHS-QNY-W0622WP', ip: '10.195.12.69', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\RVATTU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:27311}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c48a6c3a36658e8ba6381fb937f6ace
+*** Element info: {Using=link text, value=DocoTool}
+************************************************************************
+Started at: Thu Dec 16 20:29:35 EST 2021
+Creating test case for TC Row : 653
+Notebook                      : Expedited-22.02Base
+Business Function             : Expedited-22.02Base
+SAK Participant               : 781
+Env                           : A
+Subsystem                     : Managed Care
+Short Desc                    : Member with MSTDA and BHCP loses and gains elig same day
+Long Desc                     : Member with MSTDA and BHCP loses elig with future date and gains elig to same health plan with no gap on same day.
+Expected Results              : Batch disenrolls MSTDA and BHCP with elig end date and re-enrolls member to same MSTDA and BHCP with no gap.
+Grouping                      : Batch
+Associated WI/Defect/CO       : 35819
+Associated WI Type            : Change Order
+************************************************************************
+Logged out
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 16/Dec/2021 08:29:41PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 0, Failures: 1, Skips: 0
+===============================================
+

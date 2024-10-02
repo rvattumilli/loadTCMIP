@@ -1,0 +1,2027 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 06/Mar/2023 09:08:58PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 93
+****************************************************
+Started at                         : Mon Mar 06 21:09:07 EST 2023
+Creating test case for Row #       : 1509
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_PUB_HLTH_PGM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Add new assignment plans CARES and ICC in T_PUB_HLTH_PGM.
+Expected Results                   : Verify New assignment plans CARES (Coordinating Aligned, Relationship-centered, Enhanced Support) and ICC (Intensive Care Coordination) with a start date of 07/01/2023 (01/01/1900 in lower envs) are added to T_PUB_HLTH_PGM.
+Test Case ID for Row 1509          : 42675
+Associated Req ID                  : 36157.01.010
+Requirement linked for test case   : 42675
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42675
+Finished at                        : Mon Mar 06 21:09:13 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:09:13 EST 2023
+Creating test case for Row #       : 1525
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_BENEFIT_PLAN_GROUP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm CARES and ICC were added in table T_BENEFIT_PLAN_GROUP to the new TCM assignment plans group with dte_effective 7/1/2023 (01/01/1900 in non Prod environments) and open ended dte_end.
+Expected Results                   : Confirm CARES and ICC were added in table T_BENEFIT_PLAN_GROUP to the new TCM assignment plans group with dte_effective 7/1/2023 (01/01/1900 in non Prod environments) and open ended dte_end.
+Test Case ID for Row 1525          : 42676
+Associated Req ID                  : 36157.01.010
+Requirement linked for test case   : 42676
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42676
+Finished at                        : Mon Mar 06 21:09:18 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:09:18 EST 2023
+Creating test case for Row #       : 1526
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_BENEFIT_PLAN_TYPE
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that a new group was added for TCM assignment plans CARES and ICC in table T_BENEFIT_PLAN_TYPE.
+Expected Results                   : New group was added for TCM assignment plans CARES and ICC in table T_BENEFIT_PLAN_TYPE.
+Test Case ID for Row 1526          : 42677
+Associated Req ID                  : 36157.01.010
+Requirement linked for test case   : 42677
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42677
+Finished at                        : Mon Mar 06 21:09:24 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:09:24 EST 2023
+Creating test case for Row #       : 1527
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_SYSTEM_PARM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that a new parameter was added to be used by the new CARES and ICC Daily Roster report to retrieve and set the report's last run (cycle date).
+Expected Results                   : A new parameter was added to be used by the new CARES and ICC Daily Roster report to retrieve and set the report's last run (cycle date).
+Test Case ID for Row 1527          : 42678
+Associated Req ID                  : 36157.01.010
+Requirement linked for test case   : 42678
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42678
+Finished at                        : Mon Mar 06 21:09:29 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:09:29 EST 2023
+Creating test case for Row #       : 1510
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_PGM_DEPENDENCY
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that CARES and ICC are setup as dependent on Standard, CommonHealth and Family Assistance benefit plans in T_PGM_DEPENDENCY.
+Expected Results                   : Confirm that CARES and ICC are setup as dependent on Standard, CommonHealth and Family Assistance benefit plans in T_PGM_DEPENDENCY.
+Test Case ID for Row 1510          : 42679
+Associated Req ID                  : 36157.01.020
+Requirement linked for test case   : 42679
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42679
+Finished at                        : Mon Mar 06 21:09:35 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:09:35 EST 2023
+Creating test case for Row #       : 1511
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_PUB_HLTH_AID
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm all distinct aid categories linked to benefit plans Standard, CommonHealth and Family Assistance in T_PUB_HLTH_AID are linked to CARES and ICC in the same table.
+Expected Results                   : All distinct aid categories linked to benefit plans Standard, CommonHealth and Family Assistance in T_PUB_HLTH_AID are linked to CARES and ICC in the same table.
+Test Case ID for Row 1511          : 42680
+Associated Req ID                  : 36157.01.020
+Requirement linked for test case   : 42680
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42680
+Finished at                        : Mon Mar 06 21:09:40 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:09:40 EST 2023
+Creating test case for Row #       : 1512
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_MC_PGM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that CARES and ICC were added to T_MC_PGM with AGE_MAX as 20.
+Expected Results                   : CARES and ICC were added to T_MC_PGM with AGE_MAX as 20.
+Test Case ID for Row 1512          : 42681
+Associated Req ID                  : 36157.01.030
+Requirement linked for test case   : 42681
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42681
+Finished at                        : Mon Mar 06 21:09:45 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:09:45 EST 2023
+Creating test case for Row #       : 1513
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_MC_PGM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that CARES and ICC were added to T_MC_PGM with IND_DISENROLL_ELIG as 'Y' and CDE_DEFAULT_END_DATE is 'EV'.
+Expected Results                   : CARES and ICC were added to T_MC_PGM with IND_DISENROLL_ELIG as 'Y' and CDE_DEFAULT_END_DATE is 'EV'.
+Test Case ID for Row 1513          : 42682
+Associated Req ID                  : 36157.01.050
+Requirement linked for test case   : 42682
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42682
+Finished at                        : Mon Mar 06 21:09:51 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:09:51 EST 2023
+Creating test case for Row #       : 1514
+Validation status                  : PASS
+Short Desc                         : CARES and ICC overlap
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : CARES or ICC enrollees should only have one TCM enrollment at a time, with no overlaps.
+Expected Results                   : Verify CARES or ICC enrollments overlap with each other.
+Test Case ID for Row 1514          : 42683
+Associated Req ID                  : 36157.01.080
+Requirement linked for test case   : 42683
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42683
+Finished at                        : Mon Mar 06 21:09:56 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:09:56 EST 2023
+Creating test case for Row #       : 1515
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_PGM_EXCLUSION
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that the following plans were added as mutually exclusive with CARES and vice versa:SCO, PACE, ICO, MSKSC, CARES, ICCConfirm that the following plans were added as mutually exclusive with ICC and vice versa:SCO, PACE, ICO, MSKSC, CARES, ICC
+Expected Results                   : The following plans were added as mutually exclusive with CARES and vice versa: SCO, PACE, ICO, MSKSC, CARES, ICCThe following plans were added as mutually exclusive with CARES and vice versa: SCO, PACE, ICO, MSKSC, CARES, ICC
+Test Case ID for Row 1515          : 42684
+Associated Req ID                  : 36157.01.090
+Requirement linked for test case   : 42684
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42684
+Finished at                        : Mon Mar 06 21:10:02 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:02 EST 2023
+Creating test case for Row #       : 1516
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_MC_PGM_RGN_XREF
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that CARES and ICC were added to T_MC_PGM_RGN_XREF and linked to the statewide region (ESTAT).
+Expected Results                   : CARES and ICC were added to T_MC_PGM_RGN_XREF and linked to the statewide region (ESTAT).
+Test Case ID for Row 1516          : 42685
+Associated Req ID                  : 36157.01.100
+Requirement linked for test case   : 42685
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42685
+Finished at                        : Mon Mar 06 21:10:07 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:07 EST 2023
+Creating test case for Row #       : 1517
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_MC_PGM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that CARES and ICC were added to T_MC_PGM with IND_CAP as 'N'.
+Expected Results                   : CARES and ICC were added to T_MC_PGM with IND_CAP as 'N'.
+Test Case ID for Row 1517          : 42686
+Associated Req ID                  : 36157.01.115
+Requirement linked for test case   : 42686
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42686
+Finished at                        : Mon Mar 06 21:10:13 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:13 EST 2023
+Creating test case for Row #       : 1518
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_MC_PGM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that CARES and ICC were added to T_MC_PGM with the values provided on the MC program level grid.
+Expected Results                   : CARES and ICC were added to T_MC_PGM with the values provided on the MC program level grid.
+Test Case ID for Row 1518          : 42687
+Associated Req ID                  : 36157.01.130
+Requirement linked for test case   : 42687
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42687
+Finished at                        : Mon Mar 06 21:10:18 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:18 EST 2023
+Creating test case for Row #       : 1519
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_PR_ENROLL_PGM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that CARES and ICC were added to T_PR_ENROLL_PGM using the values provided by the Commonwealth.
+Expected Results                   : CARES and ICC were added to T_PR_ENROLL_PGM using the values provided by the Commonwealth.
+Test Case ID for Row 1519          : 42688
+Associated Req ID                  : 36157.01.131
+Requirement linked for test case   : 42688
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42688
+Finished at                        : Mon Mar 06 21:10:24 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:24 EST 2023
+Creating test case for Row #       : 1520
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_PR_COVERED_PGM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that CARES and ICC were added as plans in T_PR_COVERED_PGM using the SAK_PROV_PGM from T_PR_ENROLL_PGM.
+Expected Results                   : CARES and ICC were added as plans in T_PR_COVERED_PGM using the SAK_PROV_PGM from T_PR_ENROLL_PGM.
+Test Case ID for Row 1520          : 42689
+Associated Req ID                  : 36157.01.131
+Requirement linked for test case   : 42689
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42689
+Finished at                        : Mon Mar 06 21:10:29 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:29 EST 2023
+Creating test case for Row #       : 1521
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_RE_PMP_REASON
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that new stop reason ZU was added and is set as a stop reason only.
+Expected Results                   : New stop reason ZU was added and is set as a stop reason only.
+Test Case ID for Row 1521          : 42690
+Associated Req ID                  : 36157.01.132
+Requirement linked for test case   : 42690
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42690
+Finished at                        : Mon Mar 06 21:10:35 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:35 EST 2023
+Creating test case for Row #       : 1522
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_HIPAA_ASGN_XREF
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that new stop reason ZU is added to T_HIPAA_ASGN_XREF to cross reference to HIPAA code 14-Voluntary Withdrawal.
+Expected Results                   : Confirm that new stop reason ZU is added to T_HIPAA_ASGN_XREF to cross reference to HIPAA code 14-Voluntary Withdrawal.
+Test Case ID for Row 1522          : 42691
+Associated Req ID                  : 36157.01.132
+Requirement linked for test case   : 42691
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42691
+Finished at                        : Mon Mar 06 21:10:40 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:40 EST 2023
+Creating test case for Row #       : 1523
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_MC_PGM_PMP_RSN_XREF
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that all existing start and stop reason codes including the new stop reason code ZU were linked to CARES and ICC in T_MC_PGM_PMP_RSN_XREF and ranked in alphabetical order.
+Expected Results                   : All existing start and stop reason codes including the new stop reason code ZU were linked to CARES and ICC in T_MC_PGM_PMP_RSN_XREF and ranked in alphabetical order.
+Test Case ID for Row 1523          : 42692
+Associated Req ID                  : 36157.01.132
+Requirement linked for test case   : 42692
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42692
+Finished at                        : Mon Mar 06 21:10:46 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:46 EST 2023
+Creating test case for Row #       : 1524
+Validation status                  : PASS
+Short Desc                         : Cares and ICC config for T_MC_PGM
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Confirm that CARES and ICC were added to T_MC_PGM with NUM_REENROLL_DAYS as '180'.
+Expected Results                   : CARES and ICC were added to T_MC_PGM with NUM_REENROLL_DAYS as '180'.
+Test Case ID for Row 1524          : 42693
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42693
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42693
+Finished at                        : Mon Mar 06 21:10:51 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:51 EST 2023
+Creating test case for Row #       : 1528
+Validation status                  : PASS
+Short Desc                         : Member lost and regained elig for ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member lost and regained elig for ICC within 180 days
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1528          : 42694
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42694
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42694
+Finished at                        : Mon Mar 06 21:10:57 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:10:57 EST 2023
+Creating test case for Row #       : 1529
+Validation status                  : PASS
+Short Desc                         : Member lost and regained elig for CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member lost and regained elig for CARES within 180 days
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1529          : 42695
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42695
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42695
+Finished at                        : Mon Mar 06 21:11:03 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:03 EST 2023
+Creating test case for Row #       : 1530
+Validation status                  : PASS
+Short Desc                         : Member lost and regained elig for ICC on same day
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member lost and regained elig for ICC within 180 days on same day
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1530          : 42696
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42696
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42696
+Finished at                        : Mon Mar 06 21:11:09 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:09 EST 2023
+Creating test case for Row #       : 1531
+Validation status                  : PASS
+Short Desc                         : Member lost and regained elig for CARES on same day
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member lost and regained elig for CARES within 180 days on same day
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1531          : 42697
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42697
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42697
+Finished at                        : Mon Mar 06 21:11:15 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:15 EST 2023
+Creating test case for Row #       : 1532
+Validation status                  : PASS
+Short Desc                         : Member in ICC with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with LTC where IND_DISENROLL_LTC is N and has ICC elig aid cat
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1532          : 42698
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42698
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42698
+Finished at                        : Mon Mar 06 21:11:20 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:20 EST 2023
+Creating test case for Row #       : 1533
+Validation status                  : PASS
+Short Desc                         : Member in CARES with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with LTC where IND_DISENROLL_LTC is N and has CARES elig aid cat
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1533          : 42699
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42699
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42699
+Finished at                        : Mon Mar 06 21:11:26 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:26 EST 2023
+Creating test case for Row #       : 1534
+Validation status                  : PASS
+Short Desc                         : Member in ICC with 100 days LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with LTC where IND_DISENROLL_LTC_100 is N and has ICC elig aid cat
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1534          : 42700
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42700
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42700
+Finished at                        : Mon Mar 06 21:11:32 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:32 EST 2023
+Creating test case for Row #       : 1535
+Validation status                  : PASS
+Short Desc                         : Member in CARES with 100 days LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with LTC where IND_DISENROLL_LTC_100 is N and has CARES elig aid cat
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1535          : 42701
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42701
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42701
+Finished at                        : Mon Mar 06 21:11:37 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:37 EST 2023
+Creating test case for Row #       : 1536
+Validation status                  : PASS
+Short Desc                         : Member in ICC with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with LTC where IND_DISENROLL_LTC is Y and has ICC elig aid cat
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1536          : 42702
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42702
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42702
+Finished at                        : Mon Mar 06 21:11:42 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:42 EST 2023
+Creating test case for Row #       : 1537
+Validation status                  : PASS
+Short Desc                         : Member in CARES with LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with LTC where IND_DISENROLL_LTC is Y and has CARES elig aid cat
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1537          : 42703
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42703
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42703
+Finished at                        : Mon Mar 06 21:11:48 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:48 EST 2023
+Creating test case for Row #       : 1538
+Validation status                  : PASS
+Short Desc                         : Member in ICC with 100 days LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with 100 day LTC where IND_DISENROLL_LTC_100 is Y and has ICC elig aid cat
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1538          : 42704
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42704
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42704
+Finished at                        : Mon Mar 06 21:11:53 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:53 EST 2023
+Creating test case for Row #       : 1539
+Validation status                  : PASS
+Short Desc                         : Member in CARES with 100 days LTC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with 100 day LTC where IND_DISENROLL_LTC_100 is Y and has CARES elig aid cat
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1539          : 42705
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42705
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42705
+Finished at                        : Mon Mar 06 21:11:58 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:11:58 EST 2023
+Creating test case for Row #       : 1540
+Validation status                  : PASS
+Short Desc                         : Member in ICC with Medicare
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with Medicare where IND_DISENROLL_MEDICARE is Y and has ICC elig aid cat
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1540          : 42706
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42706
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42706
+Finished at                        : Mon Mar 06 21:12:04 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:04 EST 2023
+Creating test case for Row #       : 1541
+Validation status                  : PASS
+Short Desc                         : Member in CARES with Medicare
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with Medicare where IND_DISENROLL_MEDICARE is Y and has CARES elig aid cat
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1541          : 42707
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42707
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42707
+Finished at                        : Mon Mar 06 21:12:09 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:09 EST 2023
+Creating test case for Row #       : 1542
+Validation status                  : PASS
+Short Desc                         : Member in ICC with Medicare
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with Medicare where IND_DISENROLL_MEDICARE is N and has ICC elig aid cat
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1542          : 42708
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42708
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42708
+Finished at                        : Mon Mar 06 21:12:15 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:15 EST 2023
+Creating test case for Row #       : 1543
+Validation status                  : PASS
+Short Desc                         : Member in CARES with Medicare
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with Medicare  where IND_DISENROLL_MEDICARE is N and has CARES elig aid cat
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1543          : 42709
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42709
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42709
+Finished at                        : Mon Mar 06 21:12:20 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:20 EST 2023
+Creating test case for Row #       : 1544
+Validation status                  : PASS
+Short Desc                         : Member in ICC with TPL
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with TPL where IND_DISENROLL_TPL is Y and has ICC elig aid cat
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1544          : 42710
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42710
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42710
+Finished at                        : Mon Mar 06 21:12:25 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:25 EST 2023
+Creating test case for Row #       : 1545
+Validation status                  : PASS
+Short Desc                         : Member in CARES with TPL
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with TPL where IND_DISENROLL_TPL is Y and has CARES elig aid cat
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1545          : 42711
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42711
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42711
+Finished at                        : Mon Mar 06 21:12:30 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:30 EST 2023
+Creating test case for Row #       : 1546
+Validation status                  : PASS
+Short Desc                         : Member in ICC with TPL
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with TPL where IND_DISENROLL_TPL is N and has ICC elig aid cat
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1546          : 42712
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42712
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42712
+Finished at                        : Mon Mar 06 21:12:35 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:35 EST 2023
+Creating test case for Row #       : 1547
+Validation status                  : PASS
+Short Desc                         : Member in CARES with TPL
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with TPL  where IND_DISENROLL_TPL is N and has CARES elig aid cat
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1547          : 42713
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42713
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42713
+Finished at                        : Mon Mar 06 21:12:41 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:41 EST 2023
+Creating test case for Row #       : 1548
+Validation status                  : PASS
+Short Desc                         : Member in ICC with TPL
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with TPL and TPL Exception Y where IND_DISENROLL_TPL is Y and IND_TPL_EXCEPTION is N and has ICC elig aid cat
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1548          : 42714
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42714
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42714
+Finished at                        : Mon Mar 06 21:12:46 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:46 EST 2023
+Creating test case for Row #       : 1549
+Validation status                  : PASS
+Short Desc                         : Member in CARES with TPL
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with TPL and TPL Exception Y where IND_DISENROLL_TPL is Y and IND_TPL_EXCEPTION is N and has CARES elig aid cat
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1549          : 42715
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42715
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42715
+Finished at                        : Mon Mar 06 21:12:51 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:51 EST 2023
+Creating test case for Row #       : 1550
+Validation status                  : PASS
+Short Desc                         : Member in ICC with TPL
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC with TPL and TPL Exception Y where IND_DISENROLL_TPL is Y and IND_TPL_EXCEPTION is Y and has ICC elig aid cat
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1550          : 42716
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42716
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42716
+Finished at                        : Mon Mar 06 21:12:57 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:12:57 EST 2023
+Creating test case for Row #       : 1551
+Validation status                  : PASS
+Short Desc                         : Member in CARES with TPL
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES with TPL and TPL Exception Y where IND_DISENROLL_TPL is Y and IND_TPL_EXCEPTION is Y and has CARES elig aid cat
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1551          : 42717
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42717
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42717
+Finished at                        : Mon Mar 06 21:13:02 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:02 EST 2023
+Creating test case for Row #       : 1552
+Validation status                  : PASS
+Short Desc                         : Member lost and regained elig for ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member lost and regained elig for ICC after 180 days
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1552          : 42718
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42718
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42718
+Finished at                        : Mon Mar 06 21:13:07 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:07 EST 2023
+Creating test case for Row #       : 1553
+Validation status                  : PASS
+Short Desc                         : Member lost and regained elig for CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member lost and regained elig for CARES after 180 days
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1553          : 42719
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42719
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42719
+Finished at                        : Mon Mar 06 21:13:13 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:13 EST 2023
+Creating test case for Row #       : 1554
+Validation status                  : PASS
+Short Desc                         : Member eligible for ICC re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member eligible for ICC re-enrollment but has mutual exclusive assignment
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1554          : 42720
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42720
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42720
+Finished at                        : Mon Mar 06 21:13:19 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:19 EST 2023
+Creating test case for Row #       : 1555
+Validation status                  : PASS
+Short Desc                         : Member eligible for CARES re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member eligible for CARES re-enrollment but has mutual exclusive assignment
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1555          : 42721
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42721
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42721
+Finished at                        : Mon Mar 06 21:13:24 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:24 EST 2023
+Creating test case for Row #       : 1556
+Validation status                  : PASS
+Short Desc                         : Member eligible for ICC re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member eligible for ICC re-enrollment but has non mutual exclusive assignment
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1556          : 42722
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42722
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42722
+Finished at                        : Mon Mar 06 21:13:29 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:29 EST 2023
+Creating test case for Row #       : 1557
+Validation status                  : PASS
+Short Desc                         : Member eligible for CARES re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member eligible for CARES re-enrollment but has non mutual exclusive assignment
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1557          : 42723
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42723
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42723
+Finished at                        : Mon Mar 06 21:13:35 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:35 EST 2023
+Creating test case for Row #       : 1558
+Validation status                  : PASS
+Short Desc                         : Member in ICC eligible aid cat
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in ICC eligible aid cat but doesn't have ICC in 180 days
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1558          : 42724
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42724
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42724
+Finished at                        : Mon Mar 06 21:13:40 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:40 EST 2023
+Creating test case for Row #       : 1559
+Validation status                  : PASS
+Short Desc                         : Member in CARES eligible aid cat
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member in CARES eligible aid cat but doesn't have CARES in 180 days
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1559          : 42725
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42725
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42725
+Finished at                        : Mon Mar 06 21:13:45 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:45 EST 2023
+Creating test case for Row #       : 1560
+Validation status                  : PASS
+Short Desc                         : Member in ICC eligible aid cat
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with ICC in 180 days but stop reason is not Z1
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1560          : 42726
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42726
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42726
+Finished at                        : Mon Mar 06 21:13:50 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:50 EST 2023
+Creating test case for Row #       : 1561
+Validation status                  : PASS
+Short Desc                         : Member in CARES eligible aid cat
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with CARES in 180 days but stop reason is not Z1
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1561          : 42727
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42727
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42727
+Finished at                        : Mon Mar 06 21:13:56 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:13:56 EST 2023
+Creating test case for Row #       : 1562
+Validation status                  : PASS
+Short Desc                         : Member with ICC in 180 days
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with ICC in 180 days but member has MC Exclusion indicator
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1562          : 42728
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42728
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42728
+Finished at                        : Mon Mar 06 21:14:01 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:01 EST 2023
+Creating test case for Row #       : 1563
+Validation status                  : PASS
+Short Desc                         : Member with CARES in 180 days
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with CARES in 180 days but member has MC Exclusion indicator
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1563          : 42729
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42729
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42729
+Finished at                        : Mon Mar 06 21:14:07 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:07 EST 2023
+Creating test case for Row #       : 1564
+Validation status                  : PASS
+Short Desc                         : Member with ICC in 180 days and DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with ICC in 180 days but member has DOD
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1564          : 42730
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42730
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42730
+Finished at                        : Mon Mar 06 21:14:13 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:13 EST 2023
+Creating test case for Row #       : 1565
+Validation status                  : PASS
+Short Desc                         : Member with CARES in 180 days and DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with CARES in 180 days but member has DOD
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1565          : 42731
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42731
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42731
+Finished at                        : Mon Mar 06 21:14:18 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:18 EST 2023
+Creating test case for Row #       : 1566
+Validation status                  : PASS
+Short Desc                         : Member with ICC in 180 days
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with ICC in 180 days and has potential record for CARES
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1566          : 42732
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42732
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42732
+Finished at                        : Mon Mar 06 21:14:23 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:23 EST 2023
+Creating test case for Row #       : 1567
+Validation status                  : PASS
+Short Desc                         : Member with CARES in 180 days
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with CARES in 180 days and has potential record for ICC
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1567          : 42733
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42733
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42733
+Finished at                        : Mon Mar 06 21:14:29 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:29 EST 2023
+Creating test case for Row #       : 1568
+Validation status                  : PASS
+Short Desc                         : Member with ICC in 180 days
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with ICC in 180 days and has potential record for ICC
+Expected Results                   : Verify no duplicate potential record is inserted for ICC
+Test Case ID for Row 1568          : 42734
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42734
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42734
+Finished at                        : Mon Mar 06 21:14:34 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:34 EST 2023
+Creating test case for Row #       : 1569
+Validation status                  : PASS
+Short Desc                         : Member with CARES in 180 days
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with CARES in 180 days and has potential record for CARES
+Expected Results                   : Verify no duplicate potential record is inserted for ICC
+Test Case ID for Row 1569          : 42735
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42735
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42735
+Finished at                        : Mon Mar 06 21:14:40 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:40 EST 2023
+Creating test case for Row #       : 1570
+Validation status                  : PASS
+Short Desc                         : Member with potential ICC re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with potential ICC re-enrollment and has spend down with end date > cycle date
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1570          : 42736
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42736
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42736
+Finished at                        : Mon Mar 06 21:14:45 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:45 EST 2023
+Creating test case for Row #       : 1571
+Validation status                  : PASS
+Short Desc                         : Member with potential CARES re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with potential CARES re-enrollment and has spend down with end date > cycle date
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1571          : 42737
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42737
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42737
+Finished at                        : Mon Mar 06 21:14:51 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:51 EST 2023
+Creating test case for Row #       : 1572
+Validation status                  : PASS
+Short Desc                         : Member with potential ICC re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with potential ICC re-enrollment and has spend down with end date <= cycle date
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1572          : 42738
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42738
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42738
+Finished at                        : Mon Mar 06 21:14:56 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:14:56 EST 2023
+Creating test case for Row #       : 1573
+Validation status                  : PASS
+Short Desc                         : Member with potential CARES re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with potential CARES re-enrollment and has spend down with end date <= cycle date
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1573          : 42739
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42739
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42739
+Finished at                        : Mon Mar 06 21:15:02 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:02 EST 2023
+Creating test case for Row #       : 1574
+Validation status                  : PASS
+Short Desc                         : Member with potential ICC re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with potential ICC re-enrollment and less than 21 on eff date
+Expected Results                   : Verify member is re-enrolled to ICC
+Test Case ID for Row 1574          : 42740
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42740
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42740
+Finished at                        : Mon Mar 06 21:15:08 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:08 EST 2023
+Creating test case for Row #       : 1575
+Validation status                  : PASS
+Short Desc                         : Member with potential CARES re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with potential CARES re-enrollment and less than 21 on eff date
+Expected Results                   : Verify member is re-enrolled to CARES
+Test Case ID for Row 1575          : 42741
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42741
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42741
+Finished at                        : Mon Mar 06 21:15:13 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:13 EST 2023
+Creating test case for Row #       : 1576
+Validation status                  : PASS
+Short Desc                         : Member with potential ICC re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with potential ICC re-enrollment and >= 21 on eff date
+Expected Results                   : Verify member is not re-enrolled to ICC
+Test Case ID for Row 1576          : 42742
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42742
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42742
+Finished at                        : Mon Mar 06 21:15:18 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:18 EST 2023
+Creating test case for Row #       : 1577
+Validation status                  : PASS
+Short Desc                         : Member with potential CARES re-enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with potential CARES re-enrollment and >= 21 on eff date
+Expected Results                   : Verify member is not re-enrolled to CARES
+Test Case ID for Row 1577          : 42743
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42743
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42743
+Finished at                        : Mon Mar 06 21:15:24 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:24 EST 2023
+Creating test case for Row #       : 1606
+Validation status                  : PASS
+Short Desc                         : Member with out of state address
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : AA - Member eligible for ICC/CARES and with out of state address
+Expected Results                   : Verify member is not enrolled to ICC/CARES by batch.
+Test Case ID for Row 1606          : 42744
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42744
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42744
+Finished at                        : Mon Mar 06 21:15:29 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:29 EST 2023
+Creating test case for Row #       : 1607
+Validation status                  : PASS
+Short Desc                         : Member with eligible ICC/CARES aid cat
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : AA - Member with eligible ICC/CARES and ICC/CARES in last 180 days
+Expected Results                   : Verified member is enrolled to ICC/CARES by batch.
+Test Case ID for Row 1607          : 42745
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42745
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42745
+Finished at                        : Mon Mar 06 21:15:35 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:35 EST 2023
+Creating test case for Row #       : 1608
+Validation status                  : PASS
+Short Desc                         : Member with eligible ICC/CARES aid cat
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : AA - Member with eligible ICC/CARES and PMP has exclusion restriction for member's age/gender group
+Expected Results                   : Verify member is not enrolled to ICC/CARES by batch.
+Test Case ID for Row 1608          : 42746
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42746
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42746
+Finished at                        : Mon Mar 06 21:15:40 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:40 EST 2023
+Creating test case for Row #       : 1609
+Validation status                  : PASS
+Short Desc                         : Member with eligible ICC/CARES aid cat
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : AA - Member with eligible ICC/CARES and PMP has inclusion restriction for member's age/gender group
+Expected Results                   : Verify member is enrolled to ICC/CARES by batch.
+Test Case ID for Row 1609          : 42747
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42747
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42747
+Finished at                        : Mon Mar 06 21:15:46 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:46 EST 2023
+Creating test case for Row #       : 1610
+Validation status                  : PASS
+Short Desc                         : Member with eligible ICC/CARES aid cat
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : AA - Member with eligible ICC/CARES and PMP max panel size is reached
+Expected Results                   : Verify member is not enrolled to ICC/CARES by batch.
+Test Case ID for Row 1610          : 42748
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42748
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42748
+Finished at                        : Mon Mar 06 21:15:51 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:51 EST 2023
+Creating test case for Row #       : 1611
+Validation status                  : PASS
+Short Desc                         : Member with eligible ICC/CARES aid cat
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : AA - Member with eligible ICC/CARES and member has lockout for previous provider
+Expected Results                   : Verify member is not enrolled to ICC/CARES by batch.
+Test Case ID for Row 1611          : 42749
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42749
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42749
+Finished at                        : Mon Mar 06 21:15:56 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:15:56 EST 2023
+Creating test case for Row #       : 1612
+Validation status                  : PASS
+Short Desc                         : Member with ICC/CARES potential record
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : AA - Member already has potential record for ICC/CARES but enrolled thru UI for ICC/CARES before AA runs
+Expected Results                   : Potential row is deleted and not processed for member re-enrollment.
+Test Case ID for Row 1612          : 42750
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42750
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42750
+Finished at                        : Mon Mar 06 21:16:02 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:02 EST 2023
+Creating test case for Row #       : 1613
+Validation status                  : PASS
+Short Desc                         : Member with ICC/CARES potential record
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : AA - Member already has potential record for ICC/CARES but lost eligibility before AA runs
+Expected Results                   : Potential row is deleted and not processed for member re-enrollment.
+Test Case ID for Row 1613          : 42751
+Associated Req ID                  : 36157.03.010
+Requirement linked for test case   : 42751
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42751
+Finished at                        : Mon Mar 06 21:16:07 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:07 EST 2023
+Creating test case for Row #       : 1578
+Validation status                  : PASS
+Short Desc                         : Member newly enrolled in ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member newly enrolled in ICC and doesn't have ICC in last 180 days. Member is enrolled after prior cycle run date and <= current cycle date
+Expected Results                   : Verify Member is reported on MGD-0066-D report as new enrollee.
+Test Case ID for Row 1578          : 42752
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42752
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42752
+Finished at                        : Mon Mar 06 21:16:13 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:13 EST 2023
+Creating test case for Row #       : 1579
+Validation status                  : PASS
+Short Desc                         : Member newly enrolled in CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member newly enrolled in CARES and doesn't have CARES in last 180 days. Member is enrolled after prior cycle run date and <= current cycle date
+Expected Results                   : Verify Member is reported on MGD-0066-D report as new enrollee.
+Test Case ID for Row 1579          : 42753
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42753
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42753
+Finished at                        : Mon Mar 06 21:16:19 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:19 EST 2023
+Creating test case for Row #       : 1580
+Validation status                  : PASS
+Short Desc                         : Member re-enrolled in ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member re-enrolled in ICC and has ICC in last 180 days. Member is enrolled after prior cycle run date and <= current cycle date
+Expected Results                   : Verify Member is reported on MGD-0066-D report as re-enrollee.
+Test Case ID for Row 1580          : 42754
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42754
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42754
+Finished at                        : Mon Mar 06 21:16:25 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:25 EST 2023
+Creating test case for Row #       : 1581
+Validation status                  : PASS
+Short Desc                         : Member re-enrolled in CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member re-enrolled in CARES and has CARES in last 180 days. Member is re-enrolled after prior cycle run date and <= current cycle date
+Expected Results                   : Verify Member is reported on MGD-0066-D report as re-enrollee.
+Test Case ID for Row 1581          : 42755
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42755
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42755
+Finished at                        : Mon Mar 06 21:16:30 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:30 EST 2023
+Creating test case for Row #       : 1582
+Validation status                  : PASS
+Short Desc                         : Member disenrolled from ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member disenrolled from ICC after prior cycle run date and <= current cycle date
+Expected Results                   : Verify Member is reported on MGD-0066-D report under term members.
+Test Case ID for Row 1582          : 42756
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42756
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42756
+Finished at                        : Mon Mar 06 21:16:35 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:35 EST 2023
+Creating test case for Row #       : 1583
+Validation status                  : PASS
+Short Desc                         : Member disenrolled from CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member disenrolled from CARES after prior cycle run date and <= current cycle date
+Expected Results                   : Verify Member is reported on MGD-0066-D report under term members.
+Test Case ID for Row 1583          : 42757
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42757
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42757
+Finished at                        : Mon Mar 06 21:16:41 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:41 EST 2023
+Creating test case for Row #       : 1584
+Validation status                  : PASS
+Short Desc                         : Member newly enrolled in ICC/CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member newly enrolled in ICC/CARES and doesn't have ICC/CARES in last 180 days. Member is enrolled before prior cycle run date
+Expected Results                   : Verify Member is not reported on MGD-0066-D report as new enrollee.
+Test Case ID for Row 1584          : 42758
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42758
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42758
+Finished at                        : Mon Mar 06 21:16:46 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:46 EST 2023
+Creating test case for Row #       : 1585
+Validation status                  : PASS
+Short Desc                         : Member re-enrolled in ICC/CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member re-enrolled in ICC/CARES and has ICC/CARES in last 180 days. Member is enrolled before prior cycle run date
+Expected Results                   : Verify Member is not reported on MGD-0066-D report as re-enrollee.
+Test Case ID for Row 1585          : 42759
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42759
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42759
+Finished at                        : Mon Mar 06 21:16:52 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:52 EST 2023
+Creating test case for Row #       : 1586
+Validation status                  : PASS
+Short Desc                         : Member disenrolled from ICC/CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member disenrolled from ICC/CARES before prior cycle run date
+Expected Results                   : Verify Member is not reported on MGD-0066-D report under term members.
+Test Case ID for Row 1586          : 42760
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42760
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42760
+Finished at                        : Mon Mar 06 21:16:57 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:16:57 EST 2023
+Creating test case for Row #       : 1587
+Validation status                  : PASS
+Short Desc                         : MGD-0066-D report split by provider
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGD-0066-D report should be split for each provider and sent to POSC
+Expected Results                   : Verify MGD-0066-D report is split for each provider and sent to POSC
+Test Case ID for Row 1587          : 42761
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42761
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42761
+Finished at                        : Mon Mar 06 21:17:02 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:02 EST 2023
+Creating test case for Row #       : 1588
+Validation status                  : PASS
+Short Desc                         : MGD-0066-D report to MOBIUS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGD-0066-D report is copied to MOBIUS and avaliable for viewing
+Expected Results                   : Verify MGD-0066-D report is available in MOBIUS
+Test Case ID for Row 1588          : 42762
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42762
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42762
+Finished at                        : Mon Mar 06 21:17:08 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:08 EST 2023
+Creating test case for Row #       : 1589
+Validation status                  : PASS
+Short Desc                         : MGD-0066-D report with data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGD-0066-D report has data.
+Expected Results                   : Verify MGD-0066-D report has all required fields
+Test Case ID for Row 1589          : 42763
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42763
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42763
+Finished at                        : Mon Mar 06 21:17:13 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:13 EST 2023
+Creating test case for Row #       : 1590
+Validation status                  : PASS
+Short Desc                         : MGD-0066-D report with no data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGD-0066-D report with no data
+Expected Results                   : Verify MGD-0066-D report has "NO DATA THIS RUN" along with other required headers.
+Test Case ID for Row 1590          : 42764
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42764
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42764
+Finished at                        : Mon Mar 06 21:17:19 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:19 EST 2023
+Creating test case for Row #       : 1591
+Validation status                  : PASS
+Short Desc                         : MGDJD066 abend test
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGDJD66 job abends in job steps JS010 or JS020 or JS030 or JS040
+Expected Results                   : Verify MGDJD066 job can be restarted from particular job steps.
+Test Case ID for Row 1591          : 42765
+Associated Req ID                  : 36157.04.010
+Requirement linked for test case   : 42765
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42765
+Finished at                        : Mon Mar 06 21:17:24 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:24 EST 2023
+Creating test case for Row #       : 1592
+Validation status                  : PASS
+Short Desc                         : Member newly enrolled in ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member newly enrolled in ICC and doesn't have ICC in last 180 days. Member's effective date >= first of reporting month and end date > last of reporting month
+Expected Results                   : Verify Member is reported on MGD-0065-M report as new enrollee.
+Test Case ID for Row 1592          : 42766
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42766
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42766
+Finished at                        : Mon Mar 06 21:17:31 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:31 EST 2023
+Creating test case for Row #       : 1593
+Validation status                  : PASS
+Short Desc                         : Member newly enrolled in CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member newly enrolled in CARES and doesn't have CARES in last 180 days. Member's effective date >= first of reporting month and end date > last of reporting month
+Expected Results                   : Verify Member is reported on MGD-0065-M report as new enrollee.
+Test Case ID for Row 1593          : 42767
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42767
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42767
+Finished at                        : Mon Mar 06 21:17:36 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:36 EST 2023
+Creating test case for Row #       : 1594
+Validation status                  : PASS
+Short Desc                         : Member re-enrolled in ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member re-enrolled in ICC and has ICC in last 180 days. Member's effective date >= first of reporting month and end date > last of reporting month
+Expected Results                   : Verify Member is reported on MGD-0065-M report as re-enrollee.
+Test Case ID for Row 1594          : 42768
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42768
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42768
+Finished at                        : Mon Mar 06 21:17:43 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:43 EST 2023
+Creating test case for Row #       : 1595
+Validation status                  : PASS
+Short Desc                         : Member re-enrolled in CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member re-enrolled in CARES and has CARES in last 180 days. Member's effective date >= first of reporting month and end date > last of reporting month
+Expected Results                   : Verify Member is reported on MGD-0065-M report as re-enrollee.
+Test Case ID for Row 1595          : 42769
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42769
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42769
+Finished at                        : Mon Mar 06 21:17:49 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:49 EST 2023
+Creating test case for Row #       : 1596
+Validation status                  : PASS
+Short Desc                         : Member disenrolled from ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member disenrolled from ICC during reporting month
+Expected Results                   : Verify Member is reported on MGD-0065-M report under term members.
+Test Case ID for Row 1596          : 42770
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42770
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42770
+Finished at                        : Mon Mar 06 21:17:54 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:54 EST 2023
+Creating test case for Row #       : 1597
+Validation status                  : PASS
+Short Desc                         : Member disenrolled from CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member disenrolled from CARES during reporting month
+Expected Results                   : Verify Member is reported on MGD-0065-M report under term members.
+Test Case ID for Row 1597          : 42771
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42771
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42771
+Finished at                        : Mon Mar 06 21:17:59 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:17:59 EST 2023
+Creating test case for Row #       : 1598
+Validation status                  : PASS
+Short Desc                         : Member newly enrolled in ICC/CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member newly enrolled in ICC/CARES and doesn't have ICC/CARES in last 180 days. Member is enrolled in prior reporting month
+Expected Results                   : Verify Member is not reported on MGD-0065-M report as new enrollee.
+Test Case ID for Row 1598          : 42772
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42772
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42772
+Finished at                        : Mon Mar 06 21:18:05 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:18:05 EST 2023
+Creating test case for Row #       : 1599
+Validation status                  : PASS
+Short Desc                         : Member re-enrolled in ICC/CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member re-enrolled in ICC/CARES and has ICC/CARES in last 180 days. Member is enrolled during prior reporting month
+Expected Results                   : Verify Member is not reported on MGD-0065-M report as re-enrollee.
+Test Case ID for Row 1599          : 42773
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42773
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42773
+Finished at                        : Mon Mar 06 21:18:11 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:18:11 EST 2023
+Creating test case for Row #       : 1600
+Validation status                  : PASS
+Short Desc                         : Member disenrolled from ICC/CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member disenrolled from ICC/CARES during prior reporting month.
+Expected Results                   : Verify Member is not reported on MGD-0065-M report under term members.
+Test Case ID for Row 1600          : 42774
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42774
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42774
+Finished at                        : Mon Mar 06 21:18:16 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:18:16 EST 2023
+Creating test case for Row #       : 1601
+Validation status                  : PASS
+Short Desc                         : MGD-0065-M report split by provider
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGD-0065-M report should be split for each provider and sent to POSC
+Expected Results                   : Verify MGD-0065-M report is split for each provider and sent to POSC
+Test Case ID for Row 1601          : 42775
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42775
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42775
+Finished at                        : Mon Mar 06 21:18:21 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:18:21 EST 2023
+Creating test case for Row #       : 1602
+Validation status                  : PASS
+Short Desc                         : MGD-0065-M report to MOBIUS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGD-0065-M report is copied to MOBIUS and avaliable for viewing
+Expected Results                   : Verify MGD-0065-M report is available in MOBIUS
+Test Case ID for Row 1602          : 42776
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42776
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42776
+Finished at                        : Mon Mar 06 21:18:27 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:18:27 EST 2023
+Creating test case for Row #       : 1603
+Validation status                  : PASS
+Short Desc                         : MGD-0065-M report with data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGD-0065-M report has data.
+Expected Results                   : Verify MGD-0065-M report has all required fields
+Test Case ID for Row 1603          : 42777
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42777
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42777
+Finished at                        : Mon Mar 06 21:18:32 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:18:32 EST 2023
+Creating test case for Row #       : 1604
+Validation status                  : PASS
+Short Desc                         : MGD-0065-M report with no data
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGD-0065-M report with no data
+Expected Results                   : Verify MGD-0065-M report has "NO DATA THIS RUN" along with other required headers.
+Test Case ID for Row 1604          : 42778
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42778
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42778
+Finished at                        : Mon Mar 06 21:18:38 EST 2023
+****************************************************
+Started at                         : Mon Mar 06 21:18:38 EST 2023
+Creating test case for Row #       : 1605
+Validation status                  : PASS
+Short Desc                         : MGDJM065 abend test
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : MGDJM065 job abends in job steps JS010 or JS020 or JS030 or JS040
+Expected Results                   : Verify MGDJM065 job can be restarted from particular job steps.
+Test Case ID for Row 1605          : 42779
+Associated Req ID                  : 36157.04.020
+Requirement linked for test case   : 42779
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42779
+Finished at                        : Mon Mar 06 21:18:44 EST 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 06/Mar/2023 09:18:44PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

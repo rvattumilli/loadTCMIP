@@ -1,0 +1,207 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 23/Sep/2022 09:38:42AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Fri Sep 23 09:38:51 EDT 2022
+Creating test case for Row #       : 1105
+Short Desc                         : Provider Message panel- exercise field validations for Pre-Login
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In Provider Message panel for Pre-Login, validate field validation error messages trigger properly.
+Expected Results                   : Error messages shall display appropriately.
+Test Case ID for Row 1105          : 41965
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41965
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41965
+Finished at                        : Fri Sep 23 09:38:56 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:38:56 EDT 2022
+Creating test case for Row #       : 1106
+Short Desc                         : Provider Message panel-exercise field validations for Post-Login
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In Provider Message panel for Post-Login, validate field validation error messages trigger properly.
+Expected Results                   : Error messages shall display appropriately.
+Test Case ID for Row 1106          : 41966
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41966
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41966
+Finished at                        : Fri Sep 23 09:38:59 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:38:59 EDT 2022
+Creating test case for Row #       : 1107
+Short Desc                         : Provider Message panel-exercise field validations for Letter
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In Provider Message panel for Letter, validate field validation error messages trigger properly.
+Expected Results                   : Error messages shall display appropriately.
+Test Case ID for Row 1107          : 41967
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41967
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41967
+Finished at                        : Fri Sep 23 09:39:02 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:39:02 EDT 2022
+Creating test case for Row #       : 1108
+Short Desc                         : Provider Message panel-exercise field validations for Report
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : In Provider Message panel for Report, validate field validation error messages trigger properly.
+Expected Results                   : Error messages shall display appropriately.
+Test Case ID for Row 1108          : 41968
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41968
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41968
+Finished at                        : Fri Sep 23 09:39:04 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:39:04 EDT 2022
+Creating test case for Row #       : 1109
+Short Desc                         : Provider Message panel-Pre-Login-msg to: All Providers
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Messaging Channel: Web Portal Pre-Login - send msg - to: All Providers
+Expected Results                   : Message shall be saved and available in POSC .(Before login into POSC, verify able to see messages sent to all providers)(Post login into POSC, a provider will be able to see messages sent to all providers)
+Test Case ID for Row 1109          : 41969
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41969
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41969
+Finished at                        : Fri Sep 23 09:39:07 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:39:07 EDT 2022
+Creating test case for Row #       : 1110
+Short Desc                         : Provider Message panel-Post-Login msg  To: Individual Providers
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Messaging Channel: Web Portal Post-Login - To: Individual Provider(s)
+Expected Results                   : Message shall be saved and available in POSC(Post login into POSC, a provider will be able to see messages sent to individual providers)(Login as diff. individual provider that was not sent a message - Message sent to different provider, so this provider can't see)
+Test Case ID for Row 1110          : 41970
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41970
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41970
+Finished at                        : Fri Sep 23 09:39:10 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:39:10 EDT 2022
+Creating test case for Row #       : 1111
+Short Desc                         : Msg 10 provider types via Post-Login channel
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Send to 10 provider types via Post-Login channel
+Expected Results                   : Message shall be saved and available in POSC(Verify as one of 10 provider types that received message)(Post login into POSC, a provider will be able to see messages sent to their provider types)(Post login into POSC, a provider will be able to see only one instance of message sent to two provider types that the provider is (unduplicated))(Post login into POSC, a provider will be able to see only one instance of message sent to one of their provider types, and to them individually (unduplicated))(Post login into POSC, a provider that is not of type that was sent a message can't see message)(Post login into POSC, message sent to a provider type will be seen by a POSC subordinate user, post-login, if that user is subordinate of provider of type message sent to)(Remove a Provider type from a Provider. Resend a message to provider-type that was just removed from the Provider. Provider does NOT see the message sent to their former type.)(Then log in as a subordinate account of that Provider that just had provider-type removed from the Provider and a message sent to that type that was removed; subaccount user of Provider does NOT see the message sent to Provider's former type)
+Test Case ID for Row 1111          : 41971
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41971
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41971
+Finished at                        : Fri Sep 23 09:39:14 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:39:14 EDT 2022
+Creating test case for Row #       : 1112
+Short Desc                         : Msg 15 provider types via Post-Login channel
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Send to 15 provider types via Post-Login channel
+Expected Results                   : Message shall be saved and available in POSC(Verify as one of 15 provider types that received message)
+Test Case ID for Row 1112          : 41972
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41972
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41972
+Finished at                        : Fri Sep 23 09:39:17 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:39:17 EDT 2022
+Creating test case for Row #       : 1113
+Short Desc                         : Msg 16 provider types
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Send to 16 provider types
+Expected Results                   : 16 provider types DOES NOT WORK - unable to save the message being sent - via Save All
+Test Case ID for Row 1113          : 41973
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41973
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41973
+Finished at                        : Fri Sep 23 09:39:19 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:39:19 EDT 2022
+Creating test case for Row #       : 1114
+Short Desc                         : Modify msgs sent to all (Pre-Login) & resend via same channel
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Modify messages sent to everyone via (Pre-Login) & resend via same channel (Pre-Login)
+Expected Results                   : Message shall be saved and available in POSC(Modified message is viewable by everyone, Pre-login)
+Test Case ID for Row 1114          : 41974
+Associated Req ID                  : 36029.01.001
+Requirement linked for test case   : 41974
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41974
+Finished at                        : Fri Sep 23 09:39:22 EDT 2022
+****************************************************
+Started at                         : Fri Sep 23 09:39:22 EDT 2022
+Creating test case for Row #       : 1115
+Short Desc                         : Modify msgs to everyone (Pre-Login) & resend via Post-Login
+Env                                : M
+Subsystem                          : J2EE Framework
+SAK Participant                    : 925
+Owner                              : ALLAN LEWIS
+Grouping                           : Base Panels
+Long Desc                          : Modify messages to everyone (Pre-Login) & resend via Post-Login
+Expected Results                   : Message shall be saved and available in POSC(Modified message is viewable by everyone)
+Test Case ID for Row 1115          : 41975
+Associated Req ID                  : 36029.01.001

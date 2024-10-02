@@ -1,0 +1,685 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 22/Aug/2023 11:51:31AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 41
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 96
+Total No.of Rows                   : 25
+*****************************************************************
+Started at                         : Tue Aug 22 11:51:37 EDT 2023
+Creating test case for Row #       : 4214
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 74
+Validation Time(ms)                : 576
+Validation status                  : PASS
+Short Desc                         : CBHC - CT B, medicare only
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT B, PT C4" Payer is Medicare " 1 payer present on the claim " T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line" CBHC Bundle proc cde dtl should pay $0" Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt)." Edit 2642 should be posted on the detail" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4214          : 46043
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36923.02.001
+Query Execution Time(ms)           : 81
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46043
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46043
+Finished at                        : Tue Aug 22 11:51:42 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:51:42 EDT 2023
+Creating test case for Row #       : 4215
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 467
+Validation status                  : PASS
+Short Desc                         : CBHC - CT B, medicare only, DOS span
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT B, DOS spans multiple dates, PT C4" Payer is Medicare " 1 payer present on the claim " Detail 1 has T1040, Detail 2 has CBHC bundle proc code. Detail 1 and 2 have different Dates of service" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line" CBHC Bundle proc cde dtl should pay $0" Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt)." Edit 2642 should be posted on the detail" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4215          : 46044
+Query Execution Time(ms)           : 64
+Requirement ID                     : 36923.02.001
+Query Execution Time(ms)           : 27
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46044
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46044
+Finished at                        : Tue Aug 22 11:51:47 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:51:47 EDT 2023
+Creating test case for Row #       : 4216
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 135
+Validation Time(ms)                : 484
+Validation status                  : PASS
+Short Desc                         : CBHC - CT B, medicare only, DOS span
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT B, DOS spans multiple dates, PT C4" Payer is Medicare " 1 payer present on the claim " Detail 1 has T1040, Detail 2 has CBHC bundle proc code. Detail 1 and 2 have the same Dates of service" Detail 3 has T1040, Detail 4 has CBHC bundle proc code. Detail 3 and 4 have the same Dates of service but different from details 1 and 2" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for only one T1040 dtl line" CBHC Bundle proc cde dtl should pay $0" Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt)." Edit 2642 should be posted on the detail" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4216          : 46045
+Query Execution Time(ms)           : 267
+Requirement ID                     : 36923.02.001
+Query Execution Time(ms)           : 64
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46045
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46045
+Finished at                        : Tue Aug 22 11:51:54 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:51:54 EDT 2023
+Creating test case for Row #       : 4217
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 122
+Validation Time(ms)                : 1348
+Validation status                  : PASS
+Short Desc                         : CBHC - CT B, Medicare and commercial
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT B, PT C4" 2 payers present on the claim , Medicare and commercial" Medicare is primary " T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Both the Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line" Bundle proc cde dtl should pay $0" Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt)." Edit 2642 should be posted on the detail" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4217          : 46046
+Query Execution Time(ms)           : 56
+Requirement ID                     : 36923.02.002
+Query Execution Time(ms)           : 39
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46046
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46046
+Finished at                        : Tue Aug 22 11:52:00 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:00 EDT 2023
+Creating test case for Row #       : 4218
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 52
+Validation Time(ms)                : 421
+Validation status                  : PASS
+Short Desc                         : CBHC - CT B, Medicare not primary and commercial
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT B, PT C4" 2 payers present on the claim , Medicare and commercial" Medicare is not primary " T1040 Procedure code & HA/HB  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Post edit 2654  Commercial Payer Cannot Be Primary For CBHC on details" Non-CHBC proc cde dtl should price per TPL rules" Post edit 2552  Crossover claim missing Medicare Carrier
+Test Case ID for Row 4218          : 46047
+Query Execution Time(ms)           : 102
+Requirement ID                     : 36923.02.003
+Query Execution Time(ms)           : 31
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46047
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46047
+Finished at                        : Tue Aug 22 11:52:04 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:04 EDT 2023
+Creating test case for Row #       : 4219
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.03.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 460
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, Medicare Adv primary
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 960
+Owner                              : USHA RAMINENI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT M, PT C4" 1 payer present on the claim " Medicare Advantage is primary " T1040 Procedure code & HA/HB  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line" Bundle proc cde dtl should pay $0" Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt)." Edit 2642 should be posted on the detail" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4219          : 46048
+Query Execution Time(ms)           : 173
+Requirement ID                     : 36923.03.001
+Query Execution Time(ms)           : 35
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46048
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46048
+Finished at                        : Tue Aug 22 11:52:09 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:09 EDT 2023
+Creating test case for Row #       : 4220
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.03.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 368
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, Medicare Adv primary
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 960
+Owner                              : USHA RAMINENI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT M, PT C4" 1 payer present on the claim " Enter Medicare Advantage as secondary " T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line" Bundle proc cde dtl should pay $0" Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt)." Edit 2642 should be posted on the detail" Non-CHBC proc cde dtl should price per TPL rules" Edit 2655  NO PRIMARY PAYER INDICATED CBHC will not post
+Test Case ID for Row 4220          : 46049
+Query Execution Time(ms)           : 72
+Requirement ID                     : 36923.03.001
+Query Execution Time(ms)           : 40
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46049
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46049
+Finished at                        : Tue Aug 22 11:52:14 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:14 EDT 2023
+Creating test case for Row #       : 4221
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.03.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 427
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, mlt payers, Medicare primary
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 960
+Owner                              : USHA RAMINENI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT M, PT C4" 2 payers present on the claim " Enter Medicare as Primary and has no paid amt, 2nd payer is commercial " T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line" Bundle proc cde dtl should pay $0" Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt)." Edit 2642 should be posted on the detail" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4221          : 46050
+Query Execution Time(ms)           : 90
+Requirement ID                     : 36923.03.002
+Query Execution Time(ms)           : 46
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46050
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46050
+Finished at                        : Tue Aug 22 11:52:19 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:19 EDT 2023
+Creating test case for Row #       : 4222
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.04.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 476
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, single payer, Commercial
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 960
+Owner                              : USHA RAMINENI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT M, PT C4" 1 payer present on the claim " Payer is commercial" T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Post edit 2654  Commercial Payer Cannot Be Primary For CBHC on details" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4222          : 46051
+Query Execution Time(ms)           : 78
+Requirement ID                     : 36923.04.001
+Query Execution Time(ms)           : 40
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46051
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46051
+Finished at                        : Tue Aug 22 11:52:24 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:24 EDT 2023
+Creating test case for Row #       : 4223
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.04.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 420
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, 2 payers, Both Commercial
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 960
+Owner                              : USHA RAMINENI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT M, PT C4" 2 payer present on the claim " Both payers are commercial" T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Post edit 2654  Commercial Payer Cannot Be Primary For CBHC on details" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4223          : 46052
+Query Execution Time(ms)           : 72
+Requirement ID                     : 36923.04.002
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46052
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46052
+Finished at                        : Tue Aug 22 11:52:29 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:29 EDT 2023
+Creating test case for Row #       : 4224
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.04.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 548
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, 2 payers, Commercial and Medicare Advantage, no primary
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 960
+Owner                              : USHA RAMINENI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT M, PT C4" 2 payers present on the claim " commercial and Medicare Advantage, no primary payer on claim" T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Post edit 2654  Commercial Payer Cannot Be Primary For CBHC on details" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4224          : 46053
+Query Execution Time(ms)           : 62
+Requirement ID                     : 36923.04.002
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46053
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46053
+Finished at                        : Tue Aug 22 11:52:34 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:34 EDT 2023
+Creating test case for Row #       : 4225
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.04.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 397
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, Medicare deny, commercial
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 960
+Owner                              : USHA RAMINENI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT M, PT C4" 2 payers present on the claim " Medicare is primary and deny, $0 pd at header and no PR at detail" T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line" Bundle proc cde dtl should pay $0" Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt)." Edit 2642 should be posted on the detail" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4225          : 46054
+Query Execution Time(ms)           : 79
+Requirement ID                     : 36923.04.002
+Query Execution Time(ms)           : 33
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46054
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46054
+Finished at                        : Tue Aug 22 11:52:40 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:40 EDT 2023
+Creating test case for Row #       : 4226
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 63
+Validation Time(ms)                : 438
+Validation status                  : PASS
+Short Desc                         : CBHC - CT B, No T1040
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT B, PT C4" Payer is Medicare " 1 payer present on the claim " T1040 Procedure code is not on any detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Details within CBHC Bundle proc group (201) should pay PR." Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4226          : 46055
+Query Execution Time(ms)           : 82
+Requirement ID                     : 36923.02.001
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46055
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46055
+Finished at                        : Tue Aug 22 11:52:45 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:45 EDT 2023
+Creating test case for Row #       : 4227
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.04.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 102
+Validation Time(ms)                : 572
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, No T1040
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 960
+Owner                              : USHA RAMINENI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT M, PT C4" Payer is commercial " 1 payer present on the claim " T1040 Procedure code is not on any detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Details within CBHC Bundle proc group (201) should pay PR." Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4227          : 46056
+Query Execution Time(ms)           : 60
+Requirement ID                     : 36923.04.001
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46056
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46056
+Finished at                        : Tue Aug 22 11:52:49 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:49 EDT 2023
+Creating test case for Row #       : 4228
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.01.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 420
+Validation status                  : PASS
+Short Desc                         : Configurable proc cd- modifier group
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Codes that are part of the T1040 bundle will be maintained in a configurable table (Proc cd - Modifier group table).
+Expected Results                   : Verify that the procedure-modifier group is created.
+Test Case ID for Row 4228          : 46057
+Query Execution Time(ms)           : 95
+Requirement ID                     : 36923.01.001
+Query Execution Time(ms)           : 57
+Requirement Type                   : Configuration Task (Gainwell)
+SAK Requirement Type               : 29
+Requirement linked for test case   : 46057
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46057
+Finished at                        : Tue Aug 22 11:52:54 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:52:54 EDT 2023
+Creating test case for Row #       : 4229
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 79
+Validation Time(ms)                : 622
+Validation status                  : PASS
+Short Desc                         : Test Audit 8215
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Identfy a paid claim type 'B' for Proc code S9485 with PT C4. Submit a CT B for the same member, provider and DOS.
+Expected Results                   : Deny Audit 8215-CBHC LIMIT S9485 1 UNIT PER DAY should be posted on the claim.
+Test Case ID for Row 4229          : 46058
+Query Execution Time(ms)           : 151
+Requirement ID                     : 36923.01.003
+Query Execution Time(ms)           : 31
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46058
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46058
+Finished at                        : Tue Aug 22 11:53:00 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:53:00 EDT 2023
+Creating test case for Row #       : 4230
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.01.003') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 527
+Validation status                  : PASS
+Short Desc                         : Test Audit 8216
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a CT B , PT C4. Submit HCPCS H2011 along with various modifiers at the detail for 100 units.
+Expected Results                   : Audit 8216 should be posted on the detail and the units should be cut-back to 96.
+Test Case ID for Row 4230          : 46059
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36923.01.003
+Query Execution Time(ms)           : 30
+Requirement Type                   : Informational
+SAK Requirement Type               : 24
+Requirement linked for test case   : 46059
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46059
+Finished at                        : Tue Aug 22 11:53:04 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:53:04 EDT 2023
+Creating test case for Row #       : 4231
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.01.004') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 46
+Validation Time(ms)                : 421
+Validation status                  : PASS
+Short Desc                         : Remove COB rule from DL 750
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Verify that the COB rule from DL 750 for edit 1033 is removed.
+Expected Results                   : The COB rule should be removed from DL750.
+Test Case ID for Row 4231          : 46060
+Query Execution Time(ms)           : 58
+Requirement ID                     : 36923.01.004
+Query Execution Time(ms)           : 39
+Requirement Type                   : Configuration Task (Gainwell)
+SAK Requirement Type               : 29
+Requirement linked for test case   : 46060
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46060
+Finished at                        : Tue Aug 22 11:53:09 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:53:09 EDT 2023
+Creating test case for Row #       : 4232
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.01.007') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 574
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M , DL102
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 960
+Owner                              : USHA RAMINENI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : " CT M" Payers are Medicare (primary) and Other" Add T1040 Procedure code & HA or HB mod present on at least 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Mbrs Benefit plan is not SBI" Billing PT is C4Carrier is 0085
+Expected Results                   : The claim should pass DL 102  and post Edit 2580 - DETAIL, PROFESSIONAL OVERRIDE EDIT
+Test Case ID for Row 4232          : 46061
+Query Execution Time(ms)           : 63
+Requirement ID                     : 36923.01.007
+Query Execution Time(ms)           : 34
+Requirement Type                   : Configuration Task (Gainwell)
+SAK Requirement Type               : 29
+Requirement linked for test case   : 46061
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46061
+Finished at                        : Tue Aug 22 11:53:15 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:53:15 EDT 2023
+Creating test case for Row #       : 4233
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.04.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 92
+Validation Time(ms)                : 526
+Validation status                  : PASS
+Short Desc                         : CBHC - CT B , PT 26
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 962
+Owner                              : RENUKA CHALLA
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT B, PT C4" Payer is Medicare " 1 payer present on the claim " T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " T1040 dtl line should pay $0" CBHC Bundle proc cde dtl should pay $0" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4233          : 46062
+Query Execution Time(ms)           : 59
+Requirement ID                     : 36923.04.001
+Query Execution Time(ms)           : 24
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46062
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46062
+Finished at                        : Tue Aug 22 11:53:19 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:53:19 EDT 2023
+Creating test case for Row #       : 4234
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.04.001') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 428
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M , PT 26
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT M, PT C4" Payer is commercial " 1 payer present on the claim " T1040 Procedure code & HA  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " T1040 dtl line should pay $0" CBHC Bundle proc cde dtl should pay $0" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4234          : 46063
+Query Execution Time(ms)           : 74
+Requirement ID                     : 36923.04.001
+Query Execution Time(ms)           : 46
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46063
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46063
+Finished at                        : Tue Aug 22 11:53:24 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:53:24 EDT 2023
+Creating test case for Row #       : 4235
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 56
+Validation Time(ms)                : 460
+Validation status                  : PASS
+Short Desc                         : CBHC- CT B, PIP payer, Medicare
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT B" 2 payers present on the claim , Medicare and PIP" PIP is primary " T1040 Procedure code & HA/HB  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Post edit 2654  Commercial Payer Cannot Be Primary For CBHC on details
+Test Case ID for Row 4235          : 46064
+Query Execution Time(ms)           : 54
+Requirement ID                     : 36923.02.002
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46064
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46064
+Finished at                        : Tue Aug 22 11:53:28 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:53:28 EDT 2023
+Creating test case for Row #       : 4236
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 491
+Validation status                  : PASS
+Short Desc                         : CBHC- CT B, PIP is secondary, Medicare primary
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria:" CT B" 2 payers present on the claim , Medicare and PIP" PIP is secondary " T1040 Procedure code & HA/HB  mod present on 1 detail" CBHC Bundle proc cde (grp 201) on at least 1 detail" Non-CBHC proc code on at least 1 detail
+Expected Results                   : " The PIP payer amount at the header should prorate to all the details" Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line" Bundle proc cde dtl should pay $0" Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt)." Edit 2642 should be posted on the detail" Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4236          : 46065
+Query Execution Time(ms)           : 99
+Requirement ID                     : 36923.02.002
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46065
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46065
+Finished at                        : Tue Aug 22 11:53:33 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:53:33 EDT 2023
+Creating test case for Row #       : 4237
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 430
+Validation status                  : PASS
+Short Desc                         : CBHC - Adjustment
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Identify paid CBHC claims and submit an adjustment.
+Expected Results                   : The adjusted claim should be paid and should adhere to all the CBHC processing rules.
+Test Case ID for Row 4237          : 46066
+Query Execution Time(ms)           : 51
+Requirement ID                     : 36923.02.002
+Query Execution Time(ms)           : 29
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46066
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46066
+Finished at                        : Tue Aug 22 11:53:38 EDT 2023
+*****************************************************************
+Started at                         : Tue Aug 22 11:53:38 EDT 2023
+Creating test case for Row #       : 4238
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '36923.02.002') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Claims Adjudication and Pricing') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'CLAIMS PROCESSING') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'ProjectCY23-5') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'I') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 516
+Validation status                  : PASS
+Short Desc                         : CBHC - Reprocess
+Env                                : I
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Identify denied CBHC claims and reprocess them.
+Expected Results                   : The reprocessed claim should be paid and should adhere to all the CBHC processing rules.
+Test Case ID for Row 4238          : 46067
+Query Execution Time(ms)           : 75
+Requirement ID                     : 36923.02.002
+Query Execution Time(ms)           : 25
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 46067
+Notebook                           : ProjectCY23-5
+Business Function                  : ProjectCY23-5
+Notebook/BF linked for test case   : 46067
+Finished at                        : Tue Aug 22 11:53:42 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 22/Aug/2023 11:53:43AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

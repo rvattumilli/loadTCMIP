@@ -1,0 +1,899 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 02/Aug/2022 12:52:35PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+****************************************************
+Started at                         : Tue Aug 02 12:52:44 EDT 2022
+Creating test case for Row #       : 1068
+Short Desc                         : Create new assignment plan
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Add new assignment plan CMP in T_PUB_HLTH_PGM
+Expected Results                   : Verify New assignment plan is added to T_PUB_HLTH_PGM
+Test Case ID for Row 1068          : 41791
+Associated Req ID                  : 36010.01.001
+Requirement linked for test case   : 41791
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41791
+Finished at                        : Tue Aug 02 12:52:47 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:52:47 EDT 2022
+Creating test case for Row #       : 1076
+Short Desc                         : Create new entitiy for CMP disenrollment pgm
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Create new entity for CMP disenrollment program in T_MC_ENTITY
+Expected Results                   : Verify new entity is created in T_MC_ENTITY for CMP disenrollment.
+Test Case ID for Row 1076          : 41792
+Associated Req ID                  : 36010.01.001
+Requirement linked for test case   : 41792
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41792
+Finished at                        : Tue Aug 02 12:52:50 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:52:50 EDT 2022
+Creating test case for Row #       : 1077
+Short Desc                         : Assign regions to CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Link all P* regions and ESTAT to CMP in T_MC_PGM_RGN_XREF
+Expected Results                   : Verify all P* regions and ESTAT are linked to CMP
+Test Case ID for Row 1077          : 41793
+Associated Req ID                  : 36010.01.001
+Requirement linked for test case   : 41793
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41793
+Finished at                        : Tue Aug 02 12:52:54 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:52:54 EDT 2022
+Creating test case for Row #       : 1078
+Short Desc                         : New systems parm to save last run time stamp
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Add new systems parm for MGDJDC10 to save last run date and timestamp in T_SYSTEM_PARMS
+Expected Results                   : Verify new parm is created for MGDJDC10
+Test Case ID for Row 1078          : 41794
+Associated Req ID                  : 36010.01.001
+Requirement linked for test case   : 41794
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41794
+Finished at                        : Tue Aug 02 12:52:57 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:52:57 EDT 2022
+Creating test case for Row #       : 1080
+Short Desc                         : No new PID/SLs for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Since CMP uses ACO PID/SLs, no new PID/SLs need to created
+Expected Results                   : No new PID/SLs are created for CMP.
+Test Case ID for Row 1080          : 41795
+Associated Req ID                  : 36010.01.002
+Requirement linked for test case   : 41795
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41795
+Finished at                        : Tue Aug 02 12:53:00 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:00 EDT 2022
+Creating test case for Row #       : 1069
+Short Desc                         : Add config for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Add config for CMP in T_MC_PGM
+Expected Results                   : Verify CMP configuration is added to T_MC_PGM
+Test Case ID for Row 1069          : 41796
+Associated Req ID                  : 36010.01.003
+Requirement linked for test case   : 41796
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41796
+Finished at                        : Tue Aug 02 12:53:03 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:03 EDT 2022
+Creating test case for Row #       : 1070
+Short Desc                         : Create new benefit plan group
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Create new benefit plan group with ACOs in T_BENEFIT_PLAN_TYPE and include all ACO programs
+Expected Results                   : Verify new ACO beenfit plan group is created with ACO programs
+Test Case ID for Row 1070          : 41797
+Associated Req ID                  : 36010.01.004
+Requirement linked for test case   : 41797
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41797
+Finished at                        : Tue Aug 02 12:53:06 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:06 EDT 2022
+Creating test case for Row #       : 1072
+Short Desc                         : Dependent programs for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Add dependent programs including benefit plans and assignment plans of CMP in T_PGM_DEPENDENCY
+Expected Results                   : Verify CMP depenedent programs are added in T_PGM_DEPENDENCY
+Test Case ID for Row 1072          : 41798
+Associated Req ID                  : 36010.01.004
+Requirement linked for test case   : 41798
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41798
+Finished at                        : Tue Aug 02 12:53:10 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:10 EDT 2022
+Creating test case for Row #       : 1071
+Short Desc                         : Create exclusive programs for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Add mutual exclusive programs for CMP in T_PGM_EXCLUSION
+Expected Results                   : Verify CMP excluded programs are added in T_PGM_EXCLUSION
+Test Case ID for Row 1071          : 41799
+Associated Req ID                  : 36010.01.005
+Requirement linked for test case   : 41799
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41799
+Finished at                        : Tue Aug 02 12:53:13 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:13 EDT 2022
+Creating test case for Row #       : 1074
+Short Desc                         : New stop reasons for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Add new UI stop reasons for CMP in T_RE_PMP_REASON
+Expected Results                   : Verify new CMP UI stop reasons are added to T_RE_PMP_REASON
+Test Case ID for Row 1074          : 41800
+Associated Req ID                  : 36010.01.006
+Requirement linked for test case   : 41800
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41800
+Finished at                        : Tue Aug 02 12:53:17 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:17 EDT 2022
+Creating test case for Row #       : 1075
+Short Desc                         : Link stop reason to CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Link new UI stop reason to CMP only and add ranking order to display in dropdown in T_MC_PGM_PMP_RSN_XREF.
+Expected Results                   : Verify new UI stop reasons are linked to CMP only and ranking order is assigned.
+Test Case ID for Row 1075          : 41801
+Associated Req ID                  : 36010.01.006
+Requirement linked for test case   : 41801
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41801
+Finished at                        : Tue Aug 02 12:53:20 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:20 EDT 2022
+Creating test case for Row #       : 1079
+Short Desc                         : MC program type for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Create MC Program type as OTH for CMP
+Expected Results                   : Verify CMP is create with MC program type as OTH in T_MC_PGM
+Test Case ID for Row 1079          : 41802
+Associated Req ID                  : 36010.01.007
+Requirement linked for test case   : 41802
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41802
+Finished at                        : Tue Aug 02 12:53:23 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:23 EDT 2022
+Creating test case for Row #       : 1073
+Short Desc                         : Eligible aid cats for CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Add CMP eligible aid cats  to T_PUB_HLTH_AID
+Expected Results                   : Verify CMP eligible aid cats are added in T_PUB_HLTH_AID
+Test Case ID for Row 1073          : 41803
+Associated Req ID                  : 36010.01.008
+Requirement linked for test case   : 41803
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41803
+Finished at                        : Tue Aug 02 12:53:26 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:26 EDT 2022
+Creating test case for Row #       : 1038
+Short Desc                         : Member sent more than once in spreadhseet
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member is sent more than once in spreadhseet for CMP enrollment.
+Expected Results                   : Member is not processed and reported on Assignments Not Made Report
+Test Case ID for Row 1038          : 41804
+Associated Req ID                  : 36010.03.001
+Requirement linked for test case   : 41804
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41804
+Finished at                        : Tue Aug 02 12:53:29 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:29 EDT 2022
+Creating test case for Row #       : 1040
+Short Desc                         : Member with DOD
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member had DOD which is after CPM effective date.
+Expected Results                   : Member is not processed and reported on Assignments Not Made Report
+Test Case ID for Row 1040          : 41805
+Associated Req ID                  : 36010.03.001
+Requirement linked for test case   : 41805
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41805
+Finished at                        : Tue Aug 02 12:53:33 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:33 EDT 2022
+Creating test case for Row #       : 1041
+Short Desc                         : Member already enrolled in CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member is already enrolled in CMP which overlaps with CMP dates sent in spreadsheet
+Expected Results                   : Member is not processed and reported on Assignments Not Made Report
+Test Case ID for Row 1041          : 41806
+Associated Req ID                  : 36010.03.001
+Requirement linked for test case   : 41806
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41806
+Finished at                        : Tue Aug 02 12:53:36 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:36 EDT 2022
+Creating test case for Row #       : 1047
+Short Desc                         : Verify spreadsheet layout
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : The file is a spreadsheet that will be provided by business users with four fields. 1. Member ID 2. Member's Current ACO PIDSL 3. Member's CMP Effective Date 4. Member's CMP End Date
+Expected Results                   : Verify spreadsheet has only following fields 1. Member ID 2. Member's Current ACO PIDSL 3. Member's CMP Effective Date 4. Member's CMP End Date
+Test Case ID for Row 1047          : 41807
+Associated Req ID                  : 36010.03.001
+Requirement linked for test case   : 41807
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41807
+Finished at                        : Tue Aug 02 12:53:39 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:39 EDT 2022
+Creating test case for Row #       : 1035
+Short Desc                         : Member not in MMIS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member is NOT in MMIS and sent to enroll in CMP
+Expected Results                   : Member is NOT assigned to CMP and reported on Assignment Not Made Report
+Test Case ID for Row 1035          : 41808
+Associated Req ID                  : 36010.03.002
+Requirement linked for test case   : 41808
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41808
+Finished at                        : Tue Aug 02 12:53:43 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:43 EDT 2022
+Creating test case for Row #       : 1039
+Short Desc                         : Member inactive in MMIS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Inactive member is sent in spreadsheet for CMP enrollment
+Expected Results                   : Member is not processed and reported on Assignments Not Made Report
+Test Case ID for Row 1039          : 41809
+Associated Req ID                  : 36010.03.002
+Requirement linked for test case   : 41809
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41809
+Finished at                        : Tue Aug 02 12:53:46 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:46 EDT 2022
+Creating test case for Row #       : 1037
+Short Desc                         : Member is in MMIS but  enrolled to MCO
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member is in MMIS and sent to enroll in CMP but is enrolled in MCO for date range provided.
+Expected Results                   : Member is NOT assigned to CMP and reported on Assignments not Made Report
+Test Case ID for Row 1037          : 41810
+Associated Req ID                  : 36010.03.003
+Requirement linked for test case   : 41810
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41810
+Finished at                        : Tue Aug 02 12:53:49 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:49 EDT 2022
+Creating test case for Row #       : 1042
+Short Desc                         : Member enrolled in diff ACOA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member enrolled in different ACOA PID/SL for CMP date range
+Expected Results                   : Member is NOT assigned to CMP and reported on Assignments not Made Report
+Test Case ID for Row 1042          : 41811
+Associated Req ID                  : 36010.03.003
+Requirement linked for test case   : 41811
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41811
+Finished at                        : Tue Aug 02 12:53:52 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:52 EDT 2022
+Creating test case for Row #       : 1043
+Short Desc                         : Member enrolled in diff ACOB
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member enrolled in different ACOB PID/SL for CMP date range
+Expected Results                   : Member is NOT assigned to CMP and reported on Assignments not Made Report
+Test Case ID for Row 1043          : 41812
+Associated Req ID                  : 36010.03.003
+Requirement linked for test case   : 41812
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41812
+Finished at                        : Tue Aug 02 12:53:55 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:55 EDT 2022
+Creating test case for Row #       : 1033
+Short Desc                         : Member enrolled in ACOA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member enrolled in ACOA for CMP date range
+Expected Results                   : Member successfully enrolled to CMP and reported on Assignments Made Report
+Test Case ID for Row 1033          : 41813
+Associated Req ID                  : 36010.03.005
+Requirement linked for test case   : 41813
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41813
+Finished at                        : Tue Aug 02 12:53:58 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:53:58 EDT 2022
+Creating test case for Row #       : 1034
+Short Desc                         : Member enrolled in ACOB
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member enrolled in ACOB for CMP date range
+Expected Results                   : Member successfully enrolled to CMP and reported on Assignments Made Report
+Test Case ID for Row 1034          : 41814
+Associated Req ID                  : 36010.03.005
+Requirement linked for test case   : 41814
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41814
+Finished at                        : Tue Aug 02 12:54:01 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:01 EDT 2022
+Creating test case for Row #       : 1036
+Short Desc                         : Member is in MMIS but not enrolled to ACOA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member is in MMIS and sent to enroll in CMP but is not enrolled in the ACOA for the PID/SL and date range provided.
+Expected Results                   : Member is NOT assigned to CMP and reported on Assignments not Made Report
+Test Case ID for Row 1036          : 41815
+Associated Req ID                  : 36010.03.005
+Requirement linked for test case   : 41815
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41815
+Finished at                        : Tue Aug 02 12:54:04 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:04 EDT 2022
+Creating test case for Row #       : 1044
+Short Desc                         : Member enrolled in different ACOs
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member enrolled in different ACOA/ACOB PID/SL for CMP date range.
+Expected Results                   : Member is NOT assigned to CMP and reported on Assignments not Made Report
+Test Case ID for Row 1044          : 41816
+Associated Req ID                  : 36010.03.005
+Requirement linked for test case   : 41816
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41816
+Finished at                        : Tue Aug 02 12:54:06 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:06 EDT 2022
+Creating test case for Row #       : 1045
+Short Desc                         : Member enrolled in same ACOA
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member had multiple enrollments to same ACOA PID/SL for CMP date range
+Expected Results                   : Member is assigned to CMP and reported on Assignments Made Report
+Test Case ID for Row 1045          : 41817
+Associated Req ID                  : 36010.03.005
+Requirement linked for test case   : 41817
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41817
+Finished at                        : Tue Aug 02 12:54:09 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:09 EDT 2022
+Creating test case for Row #       : 1046
+Short Desc                         : Member enrolled in same ACOB
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Member had multiple enrollments to same ACOB PID/SL for CMP date range
+Expected Results                   : Member is assigned to CMP and reported on Assignments Made Report
+Test Case ID for Row 1046          : 41818
+Associated Req ID                  : 36010.03.005
+Requirement linked for test case   : 41818
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41818
+Finished at                        : Tue Aug 02 12:54:12 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:12 EDT 2022
+Creating test case for Row #       : 1048
+Short Desc                         : Member's current ACO closed with current date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has an ACO assignment that has been end dated with current date and has an accompanying CMP assignment
+Expected Results                   : Member's accompanying CMP assignment is end dated. End date and stop reason code are same as concurrent ACO assignment
+Test Case ID for Row 1048          : 41819
+Associated Req ID                  : 36010.04.001
+Requirement linked for test case   : 41819
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41819
+Finished at                        : Tue Aug 02 12:54:15 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:15 EDT 2022
+Creating test case for Row #       : 1049
+Short Desc                         : Member's future ACO closed
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has a future ACO assignment that has been end dated and has an accompanying CMP assignment
+Expected Results                   : Member's accompanying CMP assignment is end dated. End date and stop reason code are same as concurrent ACO assignment
+Test Case ID for Row 1049          : 41820
+Associated Req ID                  : 36010.04.001
+Requirement linked for test case   : 41820
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41820
+Finished at                        : Tue Aug 02 12:54:17 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:17 EDT 2022
+Creating test case for Row #       : 1050
+Short Desc                         : Member's current ACO closed with retro date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has an ACO assignment that has been end dated with a retro date and has an accompanying CMP assignment
+Expected Results                   : Member's accompanying CMP assignment is end dated. End date and stop reason code are same as concurrent ACO assignment
+Test Case ID for Row 1050          : 41821
+Associated Req ID                  : 36010.04.001
+Requirement linked for test case   : 41821
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41821
+Finished at                        : Tue Aug 02 12:54:20 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:20 EDT 2022
+Creating test case for Row #       : 1051
+Short Desc                         : Update CMP end date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has an ACO assignment that has been end dated with a retro date and has an accompanying CMP assignment.  Process has run and accompanying CMP assignment has been end dated.   ACO end date is updated again and Process runs a second time a few minutes later.
+Expected Results                   : Member's accompanying CMP assignment should  be updated to macth ACO new end date.
+Test Case ID for Row 1051          : 41822
+Associated Req ID                  : 36010.04.001
+Requirement linked for test case   : 41822
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41822
+Finished at                        : Tue Aug 02 12:54:23 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:23 EDT 2022
+Creating test case for Row #       : 1052
+Short Desc                         : Member with multiple ACOs and CMPs
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has two ACO assignments and two accompanying CMP assignments, the second ACO assignment has been end dated the first has no change
+Expected Results                   : Member's accompanying second CMP assignment is end dated.  Member's first accompanying CMP assignment is not changed.
+Test Case ID for Row 1052          : 41823
+Associated Req ID                  : 36010.04.001
+Requirement linked for test case   : 41823
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41823
+Finished at                        : Tue Aug 02 12:54:25 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:25 EDT 2022
+Creating test case for Row #       : 1053
+Short Desc                         : Member's current ACO closed with retro date and future CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has an ACO assignment that has been end dated with a retro date and has an accompanying CMP (future) assignment with an effective date greater than ACOs assignment retro end date
+Expected Results                   : Member's accompanying CMP assignment is historied.  Stop reason code is same as concurrent ACO assignment
+Test Case ID for Row 1053          : 41824
+Associated Req ID                  : 36010.04.002
+Requirement linked for test case   : 41824
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41824
+Finished at                        : Tue Aug 02 12:54:28 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:28 EDT 2022
+Creating test case for Row #       : 1054
+Short Desc                         : Member's ACO is historied
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has an ACO assignment that has been historied and has an accompanying CMP assignment
+Expected Results                   : Member's accompanying CMP assignment is historied.  Stop reason code is same as concurrent ACO assignment
+Test Case ID for Row 1054          : 41825
+Associated Req ID                  : 36010.04.002
+Requirement linked for test case   : 41825
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41825
+Finished at                        : Tue Aug 02 12:54:31 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:31 EDT 2022
+Creating test case for Row #       : 1055
+Short Desc                         : Member's future ACO with CMP is historied
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has a future ACO assignment that has been historied and has an accompanying CMP assignment
+Expected Results                   : Member's accompanying CMP assignment is historied.  Stop reason code is same as concurrent ACO assignment
+Test Case ID for Row 1055          : 41826
+Associated Req ID                  : 36010.04.002
+Requirement linked for test case   : 41826
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41826
+Finished at                        : Tue Aug 02 12:54:34 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:34 EDT 2022
+Creating test case for Row #       : 1056
+Short Desc                         : Member's CMP is historied and no overlapping CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has an ACO assignment that has been historied and has no accompanying CMP assignment
+Expected Results                   : No change is made to existing ACO assignment after it has been historied, no change made to other CMP assignments
+Test Case ID for Row 1056          : 41827
+Associated Req ID                  : 36010.04.002
+Requirement linked for test case   : 41827
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41827
+Finished at                        : Tue Aug 02 12:54:36 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:36 EDT 2022
+Creating test case for Row #       : 1057
+Short Desc                         : No changes to member's ACO assignment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has an ACO assignment that has not been historied or end dated and has an accompanying CMP assignment
+Expected Results                   : No change is made to existing ACO assignment, no change made to accompanying CMP assignment
+Test Case ID for Row 1057          : 41828
+Associated Req ID                  : 36010.04.002
+Requirement linked for test case   : 41828
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41828
+Finished at                        : Tue Aug 02 12:54:39 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:39 EDT 2022
+Creating test case for Row #       : 1058
+Short Desc                         : No changes to CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has an ACO assignment that has been end dated with a retro date and has an accompanying CMP assignment.  Process has run and accompanying CMP assignment has been end dated.  Process runs a second time a few minutes later and no changes to member's ACO in the meantime.
+Expected Results                   : Member's accompanying CMP assignment should not be end dated a second time.   There should be no change the second time the process runs to the CMP assignment.
+Test Case ID for Row 1058          : 41829
+Associated Req ID                  : 36010.04.002
+Requirement linked for test case   : 41829
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41829
+Finished at                        : Tue Aug 02 12:54:42 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:42 EDT 2022
+Creating test case for Row #       : 1059
+Short Desc                         : Member with multiple ACOs and CMPs
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has two ACO assignments and two accompanying CMP assignments, the first ACO assignment has been historied the second has no change
+Expected Results                   : Member's accompanying first CMP assignment is historied.  Member's second accompanying CMP assignment is not changed.
+Test Case ID for Row 1059          : 41830
+Associated Req ID                  : 36010.04.002
+Requirement linked for test case   : 41830
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41830
+Finished at                        : Tue Aug 02 12:54:45 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:45 EDT 2022
+Creating test case for Row #       : 1060
+Short Desc                         : Member with multiple ACOs and CMPs
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has two ACO assignments and two accompanying CMP assignments, the first ACO assignment has been end dated and the second has been historied.  The first accompanying CMP assignment now has an effective date greater than first ACOs assignment retro end date
+Expected Results                   : Member's accompanying first CMP assignment is historied.  Member's second accompanying CMP assignment is historied.
+Test Case ID for Row 1060          : 41831
+Associated Req ID                  : 36010.04.002
+Requirement linked for test case   : 41831
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41831
+Finished at                        : Tue Aug 02 12:54:48 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:48 EDT 2022
+Creating test case for Row #       : 1061
+Short Desc                         : Member with multiple ACOs and CMPs
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member has two ACO assignments and two accompanying CMP assignments, the first ACO assignment has been historied and the second has been historied.
+Expected Results                   : Member's accompanying first CMP assignment is historied.  Member's second accompanying CMP assignment is historied.
+Test Case ID for Row 1061          : 41832
+Associated Req ID                  : 36010.04.002
+Requirement linked for test case   : 41832
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41832
+Finished at                        : Tue Aug 02 12:54:51 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:51 EDT 2022
+Creating test case for Row #       : 1062
+Short Desc                         : Mass xfer disenrollment with CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member's ACO is closed during mass xfer. Member has accompanying CMP.
+Expected Results                   : Member's CMP is disenrolled with same end date and stop reason code as ACO assignment.
+Test Case ID for Row 1062          : 41833
+Associated Req ID                  : 36010.04.003
+Requirement linked for test case   : 41833
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41833
+Finished at                        : Tue Aug 02 12:54:54 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:54 EDT 2022
+Creating test case for Row #       : 1063
+Short Desc                         : Mass xfer history by CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member's ACO is historied during mass xfer. Member has accompanying CMP.
+Expected Results                   : Member's CMP is historied with stop reason code as ACO assignment.
+Test Case ID for Row 1063          : 41834
+Associated Req ID                  : 36010.04.003
+Requirement linked for test case   : 41834
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41834
+Finished at                        : Tue Aug 02 12:54:57 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:54:57 EDT 2022
+Creating test case for Row #       : 1064
+Short Desc                         : Non std to STD disabled xfer with CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with ACO assignment (moved from non std to std disabled) and only one accompanying CMP assignment matching the ACO assignment
+Expected Results                   : Member's CMP assignment is end dated with same end date and stop reason code as ACO assignment.
+Test Case ID for Row 1064          : 41835
+Associated Req ID                  : 36010.04.004
+Requirement linked for test case   : 41835
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41835
+Finished at                        : Tue Aug 02 12:55:00 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:55:00 EDT 2022
+Creating test case for Row #       : 1065
+Short Desc                         : Plan type change xfer with CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member with ACO assignment (moved from poorer to richer aid cat)  and only one accompanying CMP assignment matching the first ACO assignment
+Expected Results                   : Member's CMP assignment is end dated with same end date and stop reason code as ACO assignment.
+Test Case ID for Row 1065          : 41836
+Associated Req ID                  : 36010.04.004
+Requirement linked for test case   : 41836
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41836
+Finished at                        : Tue Aug 02 12:55:03 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:55:03 EDT 2022
+Creating test case for Row #       : 1066
+Short Desc                         : Mmeber's ACO is historied by batch
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : Member's ACO is historied by batch in transfer. ACO has accompanying CMP.
+Expected Results                   : Member's CMP is historied. Stop reason code is same as concurrent ACO assignment
+Test Case ID for Row 1066          : 41837
+Associated Req ID                  : 36010.04.004
+Requirement linked for test case   : 41837
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41837
+Finished at                        : Tue Aug 02 12:55:06 EDT 2022
+****************************************************
+Started at                         : Tue Aug 02 12:55:06 EDT 2022
+Creating test case for Row #       : 1067
+Short Desc                         : Member lost & regain elig with CMP
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 781
+Owner                              : RAJESH VATTUMILLI
+Grouping                           : Batch
+Long Desc                          : When the member with ACOA/CMP or ACOB/CMP loses eligibility with a future date and gains eligibility with no gap on same day batch should auto disenroll the member from CMP with a future end date
+Expected Results                   : Member's CMP assignment is end dated with same end date and stop reason code as ACO assignment.
+Test Case ID for Row 1067          : 41838
+Associated Req ID                  : 36010.04.007
+Requirement linked for test case   : 41838
+Notebook                           : Project23.02
+Business Function                  : Project23.02
+Notebook/BF linked for test case   : 41838
+Finished at                        : Tue Aug 02 12:55:09 EDT 2022
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 02/Aug/2022 12:55:09PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

@@ -1,0 +1,528 @@
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP started 10/May/2022 12:39:17PM***
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+***************************************************
+Started at                         : Tue May 10 12:39:25 EDT 2022
+Creating test case for TC Row      : 913
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MTM Pnl, To PCP w/RETRO End date
+Long Desc                          : When a PCP Affiliated to an ACOA has a Retro end date (Date before the Run Date) , make sure "Transfer PCP ID" Pop-up search under PCP To PCP Mass Transfer Maintenance Panel does not display that PCP.
+Expected Results                   : PCP To PCP Mass Transfer Maintenance Panel does not display the PCP which has a Retro end date on "Transfer PCP ID" Pop-up search.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.002
+Test Case ID for Row 913           : 41374
+Requirement linked for test case   : 41374
+Notebook/BF linked for test case   : 41374
+Finished at                        : Tue May 10 12:39:34 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:39:34 EDT 2022
+Creating test case for TC Row      : 914
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MTM Pnl, To PCP w/Run Date
+Long Desc                          : When a PCP Affiliated to an ACOA has a end date equal to Run date, make sure "Transfer PCP ID" Pop-up search under PCP To PCP Mass Transfer Maintenance Panel does not display that PCP.
+Expected Results                   : PCP To PCP Mass Transfer Maintenance Panel does not display the PCP which has a end date equals to Run date on "Transfer PCP ID" Pop-up search.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.002
+Test Case ID for Row 914           : 41375
+Requirement linked for test case   : 41375
+Notebook/BF linked for test case   : 41375
+Finished at                        : Tue May 10 12:39:44 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:39:44 EDT 2022
+Creating test case for TC Row      : 915
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MTM Pnl, To PCP w/Future date
+Long Desc                          : When a PCP Affiliated to an ACOA has an end date in future (not open-ended), make sure "Transfer PCP ID" Pop-up search under PCP To PCP Mass Transfer Maintenance Panel does not display that PCP.
+Expected Results                   : PCP To PCP Mass Transfer Maintenance Panel does not display the PCP which has an end date in future on "Transfer PCP ID" Pop-up search.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.002
+Test Case ID for Row 915           : 41376
+Requirement linked for test case   : 41376
+Notebook/BF linked for test case   : 41376
+Finished at                        : Tue May 10 12:39:54 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:39:54 EDT 2022
+Creating test case for TC Row      : 916
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : REM Pnl, To PCP w/Future date
+Long Desc                          : When a PCP Affiliated to an ACOA has a Retro end date (Date before the Run Date), make sure "Transfer PCP ID" Pop-up search under Region Enrollment Maintenance Panel does not display that PCP.
+Expected Results                   : Region Enrollment Maintenance Panel does not display the PCP which has a Retro end date on "Transfer PCP ID" Pop-up search.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.004
+Test Case ID for Row 916           : 41377
+Requirement linked for test case   : 41377
+Notebook/BF linked for test case   : 41377
+Finished at                        : Tue May 10 12:40:05 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:40:05 EDT 2022
+Creating test case for TC Row      : 917
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : REM Pnl, To PCP w/Future date
+Long Desc                          : When a PCP Affiliated to an ACOA has a end date equal to Run date, make sure "Transfer PCP ID" Pop-up search under Region Enrollment Maintenance Panel does not display that PCP.
+Expected Results                   : Region Enrollment Maintenance Panel does not display the PCP which has a end date equals to Run date on "Transfer PCP ID" Pop-up search.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.004
+Test Case ID for Row 917           : 41378
+Requirement linked for test case   : 41378
+Notebook/BF linked for test case   : 41378
+Finished at                        : Tue May 10 12:40:33 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:40:33 EDT 2022
+Creating test case for TC Row      : 918
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : REM Pnl, To PCP w/Future date
+Long Desc                          : When a PCP Affiliated to an ACOA has an end date in future (not open-ended), make sure "Transfer PCP ID" Pop-up search under PCP To PCP Region Enrollment Maintenance Panel does not display that PCP.
+Expected Results                   : Region Enrollment Maintenance Panel  does not display the PCP which has an end date in future on "Transfer PCP ID" Pop-up search.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.004
+Test Case ID for Row 918           : 41379
+Requirement linked for test case   : 41379
+Notebook/BF linked for test case   : 41379
+Finished at                        : Tue May 10 12:40:51 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:40:51 EDT 2022
+Creating test case for TC Row      : 919
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MTM Pnl, From PCP w/open end date
+Long Desc                          : When a PCP Affiliated to an ACOA has a Open end date, make sure "PCP ID" Pop-up search under PCP To PCP Mass Transfer Maintenance Panel displays that PCP and user is able to save the record.
+Expected Results                   : PCP To PCP Mass Transfer Maintenance Panel displays the PCP which has an open end date on "PCP ID" Pop-up search and let the user save the record.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.004
+Test Case ID for Row 919           : 41380
+Requirement linked for test case   : 41380
+Notebook/BF linked for test case   : 41380
+Finished at                        : Tue May 10 12:41:09 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:41:09 EDT 2022
+Creating test case for TC Row      : 920
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MTM Pnl, To PCP w/open end date
+Long Desc                          : When a PCP Affiliated to an ACOA has a Open end date, make sure "transfer PCP ID" Pop-up search under PCP To PCP Mass Transfer Maintenance Panel display that PCP and user is able to save the record.
+Expected Results                   : PCP To PCP Mass Transfer Maintenance Panel displays the PCP which has an open end date on "Transfer PCP ID" Pop-up search and let the user save the record.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.004
+Test Case ID for Row 920           : 41381
+Requirement linked for test case   : 41381
+Notebook/BF linked for test case   : 41381
+Finished at                        : Tue May 10 12:41:28 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:41:28 EDT 2022
+Creating test case for TC Row      : 921
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 750
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : REM Pnl, To PCP w/open end date
+Long Desc                          : When a PCP Affiliated to an ACOA has a Open end date, make sure "PCP ID" Pop-up search under Region Enrollment Maintenance Panel display that PCP  and user is able to save the record.
+Expected Results                   : Region Enrollment Maintenance Panel  displays the PCP which has an open end date on "Transfer PCP ID" Pop-up search and let the user save the record.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.004
+Test Case ID for Row 921           : 41382
+Requirement linked for test case   : 41382
+Notebook/BF linked for test case   : 41382
+Finished at                        : Tue May 10 12:41:49 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:41:49 EDT 2022
+Creating test case for TC Row      : 922
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MTM Pnl, To PCP w/open end date
+Long Desc                          : When a PCP Affiliated to an ACOA has a Open end date, verify "transfer PCP ID" Pop-up search under PCP To PCP Mass Transfer Maintenance Panel display that PCP. PCP affiliation with ACOA is modified with end date <> open end date before saving.
+Expected Results                   : PCP To PCP Mass Transfer Maintenance Panel displays the PCP which has an open end date on "Transfer PCP ID" Pop-up search and edit is thrown without saving the record.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.004
+Test Case ID for Row 922           : 41383
+Requirement linked for test case   : 41383
+Notebook/BF linked for test case   : 41383
+Finished at                        : Tue May 10 12:42:08 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:42:08 EDT 2022
+Creating test case for TC Row      : 923
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : REM Pnl, To PCP w/open end date
+Long Desc                          : When a PCP Affiliated to an ACOA has a Open end date, verify "PCP ID" Pop-up search under Region Enrollment Maintenance Panel display that PCP. PCP affiliation with ACOA is modified with end date <> open end date before saving.
+Expected Results                   : Region Enrollment Maintenance Panel  displays the PCP which has an open end date on "Transfer PCP ID" Pop-up search and edit is thrown without saving the record.
+Grouping                           : MC PANELS
+Associated WI/Defect/CO            : 35834
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35834.01.004
+Test Case ID for Row 923           : 41384
+Requirement linked for test case   : 41384
+Notebook/BF linked for test case   : 41384
+Finished at                        : Tue May 10 12:42:27 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:42:27 EDT 2022
+Creating test case for TC Row      : 924
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Run MGDJW050 and check for issues
+Long Desc                          : Run MGDJW050 and monitor for abends and improvement in RTI
+Expected Results                   : No abend and RTI improves
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35359
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35359.01.001
+Test Case ID for Row 924           : 41385
+Requirement linked for test case   : 41385
+Notebook/BF linked for test case   : 41385
+Finished at                        : Tue May 10 12:42:43 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:42:43 EDT 2022
+Creating test case for TC Row      : 925
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : New parms added to DB
+Long Desc                          : New parms MGDJW050 and MGDJW540 added to DB with thread counts
+Expected Results                   : Verify new parms are added to DB with thread counts
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35359
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35359.01.001
+Test Case ID for Row 925           : 41386
+Requirement linked for test case   : 41386
+Notebook/BF linked for test case   : 41386
+Finished at                        : Tue May 10 12:43:02 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:43:02 EDT 2022
+Creating test case for TC Row      : 926
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : No multi thrd for Daily Ineligibles
+Long Desc                          : Daily Ineligibles MGDJD150 and MGDJD540 doesn't run in multi thread mode.
+Expected Results                   : Verify MGDJD150 and MGDJD540 doesn't run in multi thread mode
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35359
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35359.01.001
+Test Case ID for Row 926           : 41387
+Requirement linked for test case   : 41387
+Notebook/BF linked for test case   : 41387
+Finished at                        : Tue May 10 12:43:23 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:43:23 EDT 2022
+Creating test case for TC Row      : 927
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Assignment distribution across thread
+Long Desc                          : Assignments should be distributed uniformly across threads for MGDJW050 and MGDJW540 when running in multi thrd mode
+Expected Results                   : Verify assignments are distributed uniformly across threads
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35359
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35359.01.001
+Test Case ID for Row 927           : 41388
+Requirement linked for test case   : 41388
+Notebook/BF linked for test case   : 41388
+Finished at                        : Tue May 10 12:43:38 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:43:38 EDT 2022
+Creating test case for TC Row      : 928
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 781
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Run weekly ineligibles with 1 thread
+Long Desc                          : Run MGDJW050 and MGDJW540 with 1 thread and monitor run time.
+Expected Results                   : Verify only 1 thread is created and monitor run time
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35359
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35359.01.001
+Test Case ID for Row 928           : 41389
+Requirement linked for test case   : 41389
+Notebook/BF linked for test case   : 41389
+Finished at                        : Tue May 10 12:43:55 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:43:55 EDT 2022
+Creating test case for TC Row      : 929
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Generate BH for MSTDA to PCCB via Region Mass Transfer CP needs MC Enrollment
+Long Desc                          : Generate a BH if a member transfers from MSTDA to PCCB if there is an affiliated CP enrollment
+Expected Results                   : MSTDA termed; ACOB/PCCB/BH added; CP no change
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 929           : 41390
+Requirement linked for test case   : 41390
+Notebook/BF linked for test case   : 41390
+Finished at                        : Tue May 10 12:44:10 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:44:10 EDT 2022
+Creating test case for TC Row      : 930
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Generate BH for MFASA to PCCB via PCP Mass Transfer CP needs MC Enrollment
+Long Desc                          : Generate a BH if a member transfers from MFASA to PCCB if there is an affiliated CP enrollment
+Expected Results                   : MFASA termed; ACOB/PCCB/BH added; CP no change
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 930           : 41391
+Requirement linked for test case   : 41391
+Notebook/BF linked for test case   : 41391
+Finished at                        : Tue May 10 12:44:22 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:44:22 EDT 2022
+Creating test case for TC Row      : 931
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Generate BH for MFASA to PCCB via Region Mass Transfer CP does not need MC enrollment
+Long Desc                          : Generate a BH if a member transfers from MFASA to PCCB if there is an affiliated CP enrollment
+Expected Results                   : MFASA termed; ACOB/PCCB/BH added; CP no change
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 931           : 41392
+Requirement linked for test case   : 41392
+Notebook/BF linked for test case   : 41392
+Finished at                        : Tue May 10 12:44:38 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:44:38 EDT 2022
+Creating test case for TC Row      : 932
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Generate BH for MSTDA to PCCB via PCP Mass Transfer CP does not need MC Enrollment
+Long Desc                          : Generate a BH if a member transfers from MSTDA to PCCB if there is an affiliated CP enrollment
+Expected Results                   : MSTDA termed; ACOB/PCCB/BH added; CP no change
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 932           : 41393
+Requirement linked for test case   : 41393
+Notebook/BF linked for test case   : 41393
+Finished at                        : Tue May 10 12:44:58 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:44:58 EDT 2022
+Creating test case for TC Row      : 933
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Generate BH for MSTDA to PCCP/BH via Region Mass Transfer Multiple CPs may or not need MC enrollment. Member also has ACCS1 followed by a BHCP enrollment.
+Long Desc                          : Generate a BH if a member transfers from MSTDA to PCCP and history BHCP enrollement and leave ACCS1 enrollment alone.
+Expected Results                   : MSTDA termed; PCCP and BH added; BHCP historied; ACCS1 no change
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 933           : 41394
+Requirement linked for test case   : 41394
+Notebook/BF linked for test case   : 41394
+Finished at                        : Tue May 10 12:45:16 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:45:16 EDT 2022
+Creating test case for TC Row      : 934
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Generate BH for MFASA to PCCP/BH via PCP Mass Transfer Multiple CPs may or not need MC enrollment.  Member also has ACCS1 followed by a BHCP enrollment.
+Long Desc                          : Generate a BH if a member transfers from MFASA to PCCP and history BHCP enrollement and leave ACCS1 enrollment alone
+Expected Results                   : MFASA termed; PCCP and BH added; BHCP historied; ACCS1 no change
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 934           : 41395
+Requirement linked for test case   : 41395
+Notebook/BF linked for test case   : 41395
+Finished at                        : Tue May 10 12:45:34 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:45:34 EDT 2022
+Creating test case for TC Row      : 935
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Generate BH for MFASA to PCCP/BH via Region Mass Transfer Multiple CPs may or not need MC enrollment. Member also has BHCP followed by a ACCS1 enrollment.
+Long Desc                          : Generate a BH if a member transfers from MFASA to PCCP and end date BHCP enrollement and leave ACCS1 enrollment alone.
+Expected Results                   : MFASA termed; PCCP and BH added; BHCP end dated; ACCS1 no change
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 935           : 41396
+Requirement linked for test case   : 41396
+Notebook/BF linked for test case   : 41396
+Finished at                        : Tue May 10 12:45:51 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:45:51 EDT 2022
+Creating test case for TC Row      : 936
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Generate BH for MSTDA to PCCP/BH via PCP Mass Transfer Multiple CPs may or not need MC enrollment.  Member also has BHCP followed by a ACCS1 enrollment.
+Long Desc                          : Generate a BH if a member transfers from MSTDA to PCCP and end date BHCP enrollement and leave ACCS1 enrollment alone.
+Expected Results                   : MSTDA termed; PCCP and BH added; BHCP end dated; ACCS1 no change
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 936           : 41397
+Requirement linked for test case   : 41397
+Notebook/BF linked for test case   : 41397
+Finished at                        : Tue May 10 12:46:08 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:46:08 EDT 2022
+Creating test case for TC Row      : 937
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : Reenroll member with previous MSTDA.
+Long Desc                          : Member reenrolled with MSTDA provider with new PCP.
+Expected Results                   : Member reenrolled with MSTDA provider with new PCP.
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 937           : 41398
+Requirement linked for test case   : 41398
+Notebook/BF linked for test case   : 41398
+Finished at                        : Tue May 10 12:46:25 EDT 2022
+***************************************************
+Started at                         : Tue May 10 12:46:25 EDT 2022
+Creating test case for TC Row      : 938
+Notebook                           : Project23.01
+Business Function                  : Project23.01
+SAK Participant                    : 640
+Env                                : M
+Subsystem                          : Managed Care
+Short Desc                         : MSTDA to PCCP/BH transfer with ACCS1
+Long Desc                          : Member mass transfers to PCCP/BH with no change in ACCS1 enrollment
+Expected Results                   : MSTDA termed; PCCP and BH added; ACCS1 no change
+Grouping                           : Batch
+Associated WI/Defect/CO            : 35747
+Associated WI Type                 : Work Item
+Associated Req ID                  : 35747.01.001
+Test Case ID for Row 938           : 41399
+Requirement linked for test case   : 41399
+Notebook/BF linked for test case   : 41399
+Finished at                        : Tue May 10 12:46:40 EDT 2022
+***************************************************
+Logged out
+***************************************************
+
+
+
+***************************************************
+****************                   ****************
+**********                               **********
+*****                                         *****
+***Job: LoadTCMIP completed 10/May/2022 12:46:57PM*
+*****                                         *****
+**********                               **********
+****************                   ****************
+***************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

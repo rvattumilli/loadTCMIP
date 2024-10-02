@@ -1,0 +1,108 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 16/Mar/2023 12:20:45PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) wi_type, trim(a.id_req) id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.sak_csr_type = c.sak_csr_type and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 96
+****************************************************
+Started at                         : Thu Mar 16 12:20:55 EDT 2023
+Creating test case for Row #       : 1817
+Validation status                  : PASS
+Short Desc                         : SCO error if LOC segment and no MDS in POSC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : POSC Enrollments
+Long Desc                          : In POSC, verify the following error message is displayed if a member tries SCO enrollment by having level of care but no MDS assesment."Member ineligible for SCO; member has LOC/ No MDS"
+Expected Results                   : The expected error message should be displayed when the member has level of care but no MDS, and attempts to enroll for SCO
+Test Case ID for Row 1817          : 42948
+Associated Req ID                  : 36269.04.012
+Requirement linked for test case   : 42948
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42948
+Finished at                        : Thu Mar 16 12:21:00 EDT 2023
+****************************************************
+Started at                         : Thu Mar 16 12:21:00 EDT 2023
+Creating test case for Row #       : 1818
+Validation status                  : PASS
+Short Desc                         : No Error if LOC segment and MDS assesement in POSC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : POSC Enrollments
+Long Desc                          : In POSC, verify the no error message is displayed if a member tries SCO enrollment by having level of care and also MDS assesment.
+Expected Results                   : No error message should be displayed when the member has level of care also  MDS assesement, and attempts to enroll for SCO
+Test Case ID for Row 1818          : 42949
+Associated Req ID                  : 36269.04.012
+Requirement linked for test case   : 42949
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42949
+Finished at                        : Thu Mar 16 12:21:04 EDT 2023
+****************************************************
+Started at                         : Thu Mar 16 12:21:04 EDT 2023
+Creating test case for Row #       : 1819
+Validation status                  : PASS
+Short Desc                         : PACE error if LOC segment present in POSC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : POSC Enrollments
+Long Desc                          : In POSC, Verify the following error message is displayed if a member has LOC, and tried to enroll in PACE"Members must be in the community to enroll in PACE"
+Expected Results                   : The expected error message should be displayed when the member has level of care and attempts PACE enrollment.
+Test Case ID for Row 1819          : 42950
+Associated Req ID                  : 36269.04.013
+Requirement linked for test case   : 42950
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42950
+Finished at                        : Thu Mar 16 12:21:09 EDT 2023
+****************************************************
+Started at                         : Thu Mar 16 12:21:09 EDT 2023
+Creating test case for Row #       : 1820
+Validation status                  : PASS
+Short Desc                         : Allow PACE enrollment if no LOC in POSC
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 777
+Owner                              : NAGARAJU KONDISETTI
+Grouping                           : POSC Enrollments
+Long Desc                          : In POSC, Verify no error message is displayed if a meber has no LOC and tried PACE enrollment
+Expected Results                   : No Error message should be displayed when the member has no LOC and attempts PACE enrollment.
+Test Case ID for Row 1820          : 42951
+Associated Req ID                  : 36269.04.013
+Requirement linked for test case   : 42951
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42951
+Finished at                        : Thu Mar 16 12:21:13 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 16/Mar/2023 12:21:14PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

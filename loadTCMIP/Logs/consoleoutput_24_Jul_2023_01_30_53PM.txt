@@ -1,0 +1,1337 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 24/Jul/2023 01:30:53PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Query Execution Time(ms)           : 32
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' '), tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and testcase_id is null order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 90
+Total No.of Rows                   : 62
+*****************************************************************
+Started at                         : Mon Jul 24 13:30:59 EDT 2023
+Creating test case for Row #       : 2486
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 433
+Validation status                  : PASS
+Short Desc                         : PRVJD010
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD010 - Produce Daily Provider Mailing Label Data" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD010 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2486          : 44116
+Query Execution Time(ms)           : 66
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44116
+Finished at                        : Mon Jul 24 13:31:02 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:02 EDT 2023
+Creating test case for Row #       : 2487
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 437
+Validation status                  : PASS
+Short Desc                         : PRVJD010
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD010 - Produce Daily Provider Mailing Label Data" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD010 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2487          : 44117
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44117
+Finished at                        : Mon Jul 24 13:31:05 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:05 EDT 2023
+Creating test case for Row #       : 2488
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 442
+Validation status                  : PASS
+Short Desc                         : PRVJD011
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD011 - Produce Daily Provider Flexible Listing Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD011 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2488          : 44118
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44118
+Finished at                        : Mon Jul 24 13:31:08 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:08 EDT 2023
+Creating test case for Row #       : 2489
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 47
+Validation Time(ms)                : 411
+Validation status                  : PASS
+Short Desc                         : PRVJD011
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD011 - Produce Daily Provider Flexible Listing Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD011 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2489          : 44119
+Query Execution Time(ms)           : 78
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44119
+Finished at                        : Mon Jul 24 13:31:11 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:11 EDT 2023
+Creating test case for Row #       : 2490
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 33
+Validation Time(ms)                : 452
+Validation status                  : PASS
+Short Desc                         : PRVJW012
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW012 - Produce Weekly Report On HCFA (OSCAR)" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW012 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2490          : 44120
+Query Execution Time(ms)           : 64
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44120
+Finished at                        : Mon Jul 24 13:31:14 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:14 EDT 2023
+Creating test case for Row #       : 2491
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 38
+Validation Time(ms)                : 415
+Validation status                  : PASS
+Short Desc                         : PRVJR015
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJR015 - Produce On-Request Report Listing of Providers by FEIN/SSN" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJR015 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2491          : 44121
+Query Execution Time(ms)           : 119
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44121
+Finished at                        : Mon Jul 24 13:31:17 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:17 EDT 2023
+Creating test case for Row #       : 2492
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 25
+Validation Time(ms)                : 379
+Validation status                  : PASS
+Short Desc                         : PRVJR016
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJR016 - Produce On-Request Report Listing of Providers by License/Certification Number" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJR016 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2492          : 44122
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44122
+Finished at                        : Mon Jul 24 13:31:20 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:20 EDT 2023
+Creating test case for Row #       : 2493
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 373
+Validation status                  : PASS
+Short Desc                         : PRVJM500
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJM500 - Inactive Provider Report and Update" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJM500 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2493          : 44123
+Query Execution Time(ms)           : 77
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44123
+Finished at                        : Mon Jul 24 13:31:23 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:23 EDT 2023
+Creating test case for Row #       : 2494
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 386
+Validation status                  : PASS
+Short Desc                         : PRVJM500
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJM500 - Inactive Provider Report and Update" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJM500 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2494          : 44124
+Query Execution Time(ms)           : 57
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44124
+Finished at                        : Mon Jul 24 13:31:26 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:26 EDT 2023
+Creating test case for Row #       : 2495
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 392
+Validation status                  : PASS
+Short Desc                         : PRVJD210
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD210 - Provider Mass Rate Increase" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD210 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2495          : 44125
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44125
+Finished at                        : Mon Jul 24 13:31:29 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:29 EDT 2023
+Creating test case for Row #       : 2496
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 427
+Validation status                  : PASS
+Short Desc                         : PRVJD300
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD300 - Newly Enrolled Provider Daily Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD300 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2496          : 44126
+Query Execution Time(ms)           : 65
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44126
+Finished at                        : Mon Jul 24 13:31:32 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:32 EDT 2023
+Creating test case for Row #       : 2497
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 404
+Validation status                  : PASS
+Short Desc                         : PRVJM017
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJM017 - Provider Cross Reference By CLIA" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJM017 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2497          : 44127
+Query Execution Time(ms)           : 68
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44127
+Finished at                        : Mon Jul 24 13:31:35 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:35 EDT 2023
+Creating test case for Row #       : 2498
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 429
+Validation status                  : PASS
+Short Desc                         : PRVJM017
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJM017 - Provider Cross Reference By CLIA" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJM017 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2498          : 44128
+Query Execution Time(ms)           : 60
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44128
+Finished at                        : Mon Jul 24 13:31:38 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:38 EDT 2023
+Creating test case for Row #       : 2499
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 447
+Validation status                  : PASS
+Short Desc                         : PRVJW530
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW530 - Provider Weekly Table Audits" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW530 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2499          : 44129
+Query Execution Time(ms)           : 62
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44129
+Finished at                        : Mon Jul 24 13:31:41 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:41 EDT 2023
+Creating test case for Row #       : 2500
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 400
+Validation status                  : PASS
+Short Desc                         : PRVJW530
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW530 - Provider Weekly Table Audits" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW530 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2500          : 44130
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44130
+Finished at                        : Mon Jul 24 13:31:44 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:44 EDT 2023
+Creating test case for Row #       : 2501
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 410
+Validation status                  : PASS
+Short Desc                         : PRVJ9014
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9014 - Contract Recertification Letters" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9014 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2501          : 44131
+Query Execution Time(ms)           : 69
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44131
+Finished at                        : Mon Jul 24 13:31:47 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:47 EDT 2023
+Creating test case for Row #       : 2502
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 415
+Validation status                  : PASS
+Short Desc                         : PRVJM400
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJM400 - License Expiration Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJM400 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2502          : 44132
+Query Execution Time(ms)           : 73
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44132
+Finished at                        : Mon Jul 24 13:31:50 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:50 EDT 2023
+Creating test case for Row #       : 2503
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 416
+Validation status                  : PASS
+Short Desc                         : PRVJW314
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW314 - MMARS Provider/Vendor Update Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW314 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2503          : 44133
+Query Execution Time(ms)           : 62
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44133
+Finished at                        : Mon Jul 24 13:31:53 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:53 EDT 2023
+Creating test case for Row #       : 2504
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 49
+Validation Time(ms)                : 438
+Validation status                  : PASS
+Short Desc                         : PRVJW501
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW501 - Weekly Enrollment Tracking Reports" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW501 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2504          : 44134
+Query Execution Time(ms)           : 85
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44134
+Finished at                        : Mon Jul 24 13:31:56 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:56 EDT 2023
+Creating test case for Row #       : 2505
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 412
+Validation status                  : PASS
+Short Desc                         : PRVJ9040
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9040 - Selected for Recred Letter  Job" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9040 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2505          : 44135
+Query Execution Time(ms)           : 79
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44135
+Finished at                        : Mon Jul 24 13:31:59 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:31:59 EDT 2023
+Creating test case for Row #       : 2506
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 440
+Validation status                  : PASS
+Short Desc                         : PRVJD055
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD055 - POPS - Daily Provider Update Extract" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD055 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2506          : 44136
+Query Execution Time(ms)           : 60
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44136
+Finished at                        : Mon Jul 24 13:32:02 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:02 EDT 2023
+Creating test case for Row #       : 2507
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 437
+Validation status                  : PASS
+Short Desc                         : PRVJD101
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD101 - Update each provider's last claims submitted date" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD101 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2507          : 44137
+Query Execution Time(ms)           : 76
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44137
+Finished at                        : Mon Jul 24 13:32:06 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:06 EDT 2023
+Creating test case for Row #       : 2508
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 420
+Validation status                  : PASS
+Short Desc                         : PRVJ9039
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9039 - Recred Approval Letter" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9039 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2508          : 44138
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44138
+Finished at                        : Mon Jul 24 13:32:09 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:09 EDT 2023
+Creating test case for Row #       : 2509
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 40
+Validation Time(ms)                : 474
+Validation status                  : PASS
+Short Desc                         : PRVJ9054
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9054 - Provider Requests to Disenroll With 30 Days Notice." runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9054 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2509          : 44139
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44139
+Finished at                        : Mon Jul 24 13:32:12 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:12 EDT 2023
+Creating test case for Row #       : 2510
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 444
+Validation status                  : PASS
+Short Desc                         : PRVJ9053
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9053 - Letter for Provider Requests to Disenroll Without 30 Days Notice" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9053 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2510          : 44140
+Query Execution Time(ms)           : 71
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44140
+Finished at                        : Mon Jul 24 13:32:15 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:15 EDT 2023
+Creating test case for Row #       : 2511
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 442
+Validation status                  : PASS
+Short Desc                         : PRVJD360
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD360 - Process Recredentailing Batch " runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD360 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2511          : 44142
+Query Execution Time(ms)           : 62
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44142
+Finished at                        : Mon Jul 24 13:32:18 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:18 EDT 2023
+Creating test case for Row #       : 2512
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : PRVJS340
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJS340 - Builds a transmit file to send to RMV" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJS340 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2512          : 44143
+Query Execution Time(ms)           : 56
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44143
+Finished at                        : Mon Jul 24 13:32:21 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:21 EDT 2023
+Creating test case for Row #       : 2513
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 396
+Validation status                  : PASS
+Short Desc                         : PRVJD340
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD340 - RMV XML Interface - Daily RMV - VIN inbound" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD340 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2513          : 44144
+Query Execution Time(ms)           : 62
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44144
+Finished at                        : Mon Jul 24 13:32:24 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:24 EDT 2023
+Creating test case for Row #       : 2514
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 422
+Validation status                  : PASS
+Short Desc                         : PRVJM350
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJM350 - Process Data from BORIM" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJM350 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2514          : 44145
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44145
+Finished at                        : Mon Jul 24 13:32:27 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:27 EDT 2023
+Creating test case for Row #       : 2515
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 445
+Validation status                  : PASS
+Short Desc                         : PRVJW370
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW370 - Provider EFT interface" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW370 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2515          : 44146
+Query Execution Time(ms)           : 62
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44146
+Finished at                        : Mon Jul 24 13:32:30 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:30 EDT 2023
+Creating test case for Row #       : 2516
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 48
+Validation Time(ms)                : 464
+Validation status                  : PASS
+Short Desc                         : PRVJD056
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD056 - 2542 - Trading partner daily extract" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD056 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2516          : 44147
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44147
+Finished at                        : Mon Jul 24 13:32:33 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:33 EDT 2023
+Creating test case for Row #       : 2517
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 50
+Validation Time(ms)                : 435
+Validation status                  : PASS
+Short Desc                         : PRVJR160
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJR160 - Bulk Member Reassignment <On Request Only>" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJR160 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2517          : 44148
+Query Execution Time(ms)           : 51
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44148
+Finished at                        : Mon Jul 24 13:32:36 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:36 EDT 2023
+Creating test case for Row #       : 2518
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 449
+Validation status                  : PASS
+Short Desc                         : PRVJ9049
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9049 - Letter to notify a provider of the termination of his eligibility." runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9049 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2518          : 44149
+Query Execution Time(ms)           : 52
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44149
+Finished at                        : Mon Jul 24 13:32:39 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:39 EDT 2023
+Creating test case for Row #       : 2519
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 376
+Validation status                  : PASS
+Short Desc                         : PRVJ9041
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9041 - Re-credentialing Information Not Returned" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9041 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2519          : 44150
+Query Execution Time(ms)           : 69
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44150
+Finished at                        : Mon Jul 24 13:32:42 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:42 EDT 2023
+Creating test case for Row #       : 2520
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 413
+Validation status                  : PASS
+Short Desc                         : PRVJW310
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW310 - VCC XML File Generation Job" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW310 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2520          : 44151
+Query Execution Time(ms)           : 63
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44151
+Finished at                        : Mon Jul 24 13:32:45 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:45 EDT 2023
+Creating test case for Row #       : 2521
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 34
+Validation Time(ms)                : 425
+Validation status                  : PASS
+Short Desc                         : PRVJW311
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW311 - VCM XML File Generation Job" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW311 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2521          : 44152
+Query Execution Time(ms)           : 65
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44152
+Finished at                        : Mon Jul 24 13:32:48 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:48 EDT 2023
+Creating test case for Row #       : 2522
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 45
+Validation Time(ms)                : 488
+Validation status                  : PASS
+Short Desc                         : PRVJD312
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD312 - VCR interface" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD312 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2522          : 44153
+Query Execution Time(ms)           : 60
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44153
+Finished at                        : Mon Jul 24 13:32:51 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:51 EDT 2023
+Creating test case for Row #       : 2523
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 404
+Validation status                  : PASS
+Short Desc                         : PRVJW602
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW602 - Case Management Summary Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW602 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2523          : 44154
+Query Execution Time(ms)           : 67
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44154
+Finished at                        : Mon Jul 24 13:32:54 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:54 EDT 2023
+Creating test case for Row #       : 2524
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 406
+Validation status                  : PASS
+Short Desc                         : PRVJM404
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJM404 - License Activity Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJM404 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2524          : 44155
+Query Execution Time(ms)           : 99
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44155
+Finished at                        : Mon Jul 24 13:32:57 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:32:57 EDT 2023
+Creating test case for Row #       : 2525
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 462
+Validation status                  : PASS
+Short Desc                         : PRVJD330
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD330 - DPL Interface - Daily Recred" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD330 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2525          : 44156
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44156
+Finished at                        : Mon Jul 24 13:33:00 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:00 EDT 2023
+Creating test case for Row #       : 2526
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 435
+Validation status                  : PASS
+Short Desc                         : PRVJQ330
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJQ330 - DPL Inteface - Quarterly" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJQ330 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2526          : 44157
+Query Execution Time(ms)           : 52
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44157
+Finished at                        : Mon Jul 24 13:33:03 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:03 EDT 2023
+Creating test case for Row #       : 2527
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : PRVJD331
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD331 - DPL Interface - Quarterly Response" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD331 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2527          : 44158
+Query Execution Time(ms)           : 61
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44158
+Finished at                        : Mon Jul 24 13:33:06 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:06 EDT 2023
+Creating test case for Row #       : 2528
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 393
+Validation status                  : PASS
+Short Desc                         : PRVJD650
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD650 - Provider Processing Metrics Refresh" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD650 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2528          : 44159
+Query Execution Time(ms)           : 57
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44159
+Finished at                        : Mon Jul 24 13:33:09 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:09 EDT 2023
+Creating test case for Row #       : 2529
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 459
+Validation status                  : PASS
+Short Desc                         : PRVJW601
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW601 - Case Profile Tracking job" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW601 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2529          : 44160
+Query Execution Time(ms)           : 65
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44160
+Finished at                        : Mon Jul 24 13:33:12 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:12 EDT 2023
+Creating test case for Row #       : 2530
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 41
+Validation Time(ms)                : 426
+Validation status                  : PASS
+Short Desc                         : PRVJW506
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW506 - Provider Change in Ownership Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW506 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2530          : 44161
+Query Execution Time(ms)           : 61
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44161
+Finished at                        : Mon Jul 24 13:33:15 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:15 EDT 2023
+Creating test case for Row #       : 2531
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 43
+Validation Time(ms)                : 483
+Validation status                  : PASS
+Short Desc                         : PRVJ9008
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9008 - Provider Welcome Letters" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9008 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2531          : 44162
+Query Execution Time(ms)           : 57
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44162
+Finished at                        : Mon Jul 24 13:33:18 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:18 EDT 2023
+Creating test case for Row #       : 2532
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 32
+Validation Time(ms)                : 424
+Validation status                  : PASS
+Short Desc                         : PRVJ9051
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9051 - Inactive Servicing Provider Notice Letter" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9051 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2532          : 44163
+Query Execution Time(ms)           : 58
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44163
+Finished at                        : Mon Jul 24 13:33:21 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:21 EDT 2023
+Creating test case for Row #       : 2533
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 26
+Validation Time(ms)                : 408
+Validation status                  : PASS
+Short Desc                         : PRVJ9055
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9055 - PRV-90355-R -- Routine License Expiring Letter" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9055 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2533          : 44164
+Query Execution Time(ms)           : 64
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44164
+Finished at                        : Mon Jul 24 13:33:24 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:24 EDT 2023
+Creating test case for Row #       : 2534
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 406
+Validation status                  : PASS
+Short Desc                         : PRVJW018
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW018 - Provider Undeliverable Address Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW018 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2534          : 44165
+Query Execution Time(ms)           : 75
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44165
+Finished at                        : Mon Jul 24 13:33:28 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:28 EDT 2023
+Creating test case for Row #       : 2535
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 411
+Validation status                  : PASS
+Short Desc                         : PRVJM600
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJM600 - Generates the Re-credentialing Tracking Report" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJM600 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2535          : 44166
+Query Execution Time(ms)           : 62
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44166
+Finished at                        : Mon Jul 24 13:33:31 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:31 EDT 2023
+Creating test case for Row #       : 2536
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 447
+Validation status                  : PASS
+Short Desc                         : PRVJ9038
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9038 - Provider Application Requested not Received Batch Letter" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9038 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2536          : 44167
+Query Execution Time(ms)           : 53
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44167
+Finished at                        : Mon Jul 24 13:33:34 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:34 EDT 2023
+Creating test case for Row #       : 2537
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 35
+Validation Time(ms)                : 463
+Validation status                  : PASS
+Short Desc                         : PRVJD361
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD361 - Process Recredentailing Batch - Mass Updates" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD361 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2537          : 44168
+Query Execution Time(ms)           : 61
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44168
+Finished at                        : Mon Jul 24 13:33:37 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:37 EDT 2023
+Creating test case for Row #       : 2538
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : PRVJ9045
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJ9045 - PRC Approval - We are Watching w/ Notice Batch Letter" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJ9045 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2538          : 44169
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44169
+Finished at                        : Mon Jul 24 13:33:40 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:40 EDT 2023
+Creating test case for Row #       : 2539
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 419
+Validation status                  : PASS
+Short Desc                         : PRVJD700
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD700 - Nursing Home LOC Rates Update File" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD700 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2539          : 44170
+Query Execution Time(ms)           : 67
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44170
+Finished at                        : Mon Jul 24 13:33:43 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:43 EDT 2023
+Creating test case for Row #       : 2540
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 27
+Validation Time(ms)                : 409
+Validation status                  : PASS
+Short Desc                         : PRVJD710
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD710 - Inpatient Rates Update from spreadsheet" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD710 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2540          : 44171
+Query Execution Time(ms)           : 70
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44171
+Finished at                        : Mon Jul 24 13:33:46 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:46 EDT 2023
+Creating test case for Row #       : 2541
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 37
+Validation Time(ms)                : 426
+Validation status                  : PASS
+Short Desc                         : PRVJD055_ALL
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD055_ALL - POPS/Detica Daily Provider Extract" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD055_ALL runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2541          : 44172
+Query Execution Time(ms)           : 57
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44172
+Finished at                        : Mon Jul 24 13:33:49 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:49 EDT 2023
+Creating test case for Row #       : 2542
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 30
+Validation Time(ms)                : 447
+Validation status                  : PASS
+Short Desc                         : PRVJW375
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJW375 - MCO provider enrollment response file" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJW375 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2542          : 44173
+Query Execution Time(ms)           : 54
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44173
+Finished at                        : Mon Jul 24 13:33:52 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:52 EDT 2023
+Creating test case for Row #       : 2543
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 28
+Validation Time(ms)                : 428
+Validation status                  : PASS
+Short Desc                         : PRVJD020
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD020 - Home Health roster update" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD020 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2543          : 44174
+Query Execution Time(ms)           : 72
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44174
+Finished at                        : Mon Jul 24 13:33:55 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:55 EDT 2023
+Creating test case for Row #       : 2544
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 48
+Validation Time(ms)                : 432
+Validation status                  : PASS
+Short Desc                         : PRVJD055_ALL_B
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD055_ALL_B -  " runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD055_ALL_B runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2544          : 44175
+Query Execution Time(ms)           : 84
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44175
+Finished at                        : Mon Jul 24 13:33:58 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:33:58 EDT 2023
+Creating test case for Row #       : 2545
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 31
+Validation Time(ms)                : 420
+Validation status                  : PASS
+Short Desc                         : PRVJD030
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJD030 - Provider DEA update" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJD030 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2545          : 44176
+Query Execution Time(ms)           : 65
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44176
+Finished at                        : Mon Jul 24 13:34:01 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:34:01 EDT 2023
+Creating test case for Row #       : 2546
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 39
+Validation Time(ms)                : 441
+Validation status                  : PASS
+Short Desc                         : PRVJM560
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJM560 - MCE's provider affiliates." runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJM560 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2546          : 44177
+Query Execution Time(ms)           : 55
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44177
+Finished at                        : Mon Jul 24 13:34:05 EDT 2023
+*****************************************************************
+Started at                         : Mon Jul 24 13:34:05 EDT 2023
+Creating test case for Row #       : 2547
+Validate TC SQL                    : select case when (select count(*) from requirement e where trim(e.id_req) = '') = 1 then 1 else 0 end as req, case when (select count(*) from subsystem_area f where trim(f.nam) = 'Relationship Entity Management') = 1 then 1 else 0 end as subsystem, case when (select count(*) from test_case_grouping g where trim(g.nam) = 'Batch') = 1 then 1 else 0 end as grpng, case when (select count(*) from groop h where trim(h.nam_group) = 'AWS Batch') = 1 then 1 else 0 end as bf, case when (select count(*) from environment i where trim(i.ind_environment) = 'M') = 1 then 1 else 0 end as env from dual
+Query Execution Time(ms)           : 29
+Validation Time(ms)                : 439
+Validation status                  : PASS
+Short Desc                         : PRVJR161
+Env                                : M
+Subsystem                          : Relationship Entity Management
+SAK Participant                    : 953
+Owner                              : PRANITH GATTU
+Grouping                           : Batch
+Long Desc                          : Verify "Job: PRVJR161 - Bulk Member Reassignment for MDS" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                   : Verify job PRVJR161 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 2547          : 44178
+Query Execution Time(ms)           : 92
+Notebook                           : AWSCloudMigration
+Business Function                  : AWS Batch
+Notebook/BF linked for test case   : 44178
+Finished at                        : Mon Jul 24 13:34:08 EDT 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 24/Jul/2023 01:34:08PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

@@ -1,0 +1,360 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 01/Mar/2024 11:22:20AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                 : 09/13/2023
+Total No.of Columns fetched        : 6
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) order by tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 238
+Total No.of Rows fetched           : 13
+*****************************************************************
+Started at                         : Fri Mar 01 11:22:27 EST 2024
+Creating test case for Row #       : 4693
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 461
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, Medicare Adv primary - 7 digit carrier code
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria: " CT M, PT C4 " 1 payer present on the claim " Medicare Advantage is primary, use 7 digit carrier code " T1040 Procedure code & HA/HB mod present on 1 detail " CBHC Bundle proc cde (grp 201) on at least 1 detail " Non-CBHC proc code on at least 1 detail
+Expected Results                   : Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line " Bundle proc cde dtl should pay $0 " Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt). " Edit 2642 should be posted on the detail " Non-CHBC proc cde dtl should price per TPL rules COB flags will be reset  Both PPA and PR will be moved to T1040
+Test Case ID for Row 4693          : 47055
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.04.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47055
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47055
+Finished at                        : Fri Mar 01 11:22:32 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:22:32 EST 2024
+Creating test case for Row #       : 4694
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 429
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, Commercial primary -same first 4 digit as Medicare advantage
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria: " CT M, PT C4 " 1 payer present on the claim " Commercial is primary, use the first 4 digit carrier code similar to Medicare Advantage " T1040 Procedure code & HA/HB mod present on 1 detail " CBHC Bundle proc cde (grp 201) on at least 1 detail " Non-CBHC proc code on at least 1 detail
+Expected Results                   : Post edit 2654 Commercial Payer Cannot Be Primary For CBHC on details " Non-CHBC proc cde dtl should price per TPL rules
+Test Case ID for Row 4694          : 47056
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.04.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47056
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47056
+Finished at                        : Fri Mar 01 11:22:36 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:22:36 EST 2024
+Creating test case for Row #       : 4695
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 422
+Validation status                  : PASS
+Short Desc                         : CBHC - CT M, mlt payers, Medicare Adv primary
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria: " CT M, PT C4 " 2 payers present on the claim " Enter Medicare Adv as Primary and has no paid amt, 2nd payer is commercial Medicare Adv carrier should match 7 digit carrier code " T1040 Procedure code & HA mod present on 1 detail " CBHC Bundle proc cde (grp 201) on at least 1 detail " Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line " Bundle proc cde dtl should pay $0 " Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt). " Edit 2642 should be posted on the detail " Non-CHBC proc cde dtl should price per TPL rules    Both PPA and PR will be moved to T1040 line for Medicare and COB detail panel
+Test Case ID for Row 4695          : 47057
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.04.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47057
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47057
+Finished at                        : Fri Mar 01 11:22:41 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:22:41 EST 2024
+Creating test case for Row #       : 4696
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 415
+Validation status                  : PASS
+Short Desc                         : CBHC - CT B, mlt payers, Medicare  primary
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria: " CT M, PT C4 " 2 payers present on the claim " Enter Medicare Primary, 2nd payer is commercial " T1040 Procedure code & HA mod present on 1 detail " CBHC Bundle proc cde (grp 201) on at least 1 detail " Non-CBHC proc code on at least 1 detail
+Expected Results                   : " Payer paid Amt from the CBHC Bundled proc cde dtl should accumulate for the T1040 dtls line " Bundle proc cde dtl should pay $0 " Line with T1040 will have a TPL repricing method `D' (Masshealth allowed - payer paid amt). " Edit 2642 should be posted on the detail " Non-CHBC proc cde dtl should price per TPL rules    Both PPA and PR will be moved to T1040 line for Medicare and COB detail panel COB flags will be reset
+Test Case ID for Row 4696          : 47058
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.04.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47058
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47058
+Finished at                        : Fri Mar 01 11:22:45 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:22:45 EST 2024
+Creating test case for Row #       : 4697
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 454
+Validation status                  : PASS
+Short Desc                         : Post Edit 2637 - CT M
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria: " CT M " 1 payer present on the claim " Detail 2 is bundled into detail 1 and detail 2 has PPA or PR > 0
+Expected Results                   : Edit 2637 should post on details 1 and 2
+Test Case ID for Row 4697          : 47059
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47059
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47059
+Finished at                        : Fri Mar 01 11:22:49 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:22:49 EST 2024
+Creating test case for Row #       : 4698
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 433
+Validation status                  : PASS
+Short Desc                         : Post Edit 2637 - CT B
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria: " CT B " Medicare payer present on the claim " Detail 2 is bundled into detail 1 and detail 2 has PPA or PR > 0
+Expected Results                   : Edit 2637 should post on details 1 and 2
+Test Case ID for Row 4698          : 47060
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47060
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47060
+Finished at                        : Fri Mar 01 11:22:53 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:22:53 EST 2024
+Creating test case for Row #       : 4699
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 418
+Validation status                  : PASS
+Short Desc                         : Post Edit 2637 - CT C
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria: " CT C " Medicare payer present on the claim " Detail 4,5 are bundled into detail 2 and detail 4 has PPA0
+Expected Results                   : Edit 2637 should post on details 4,5 and 2
+Test Case ID for Row 4699          : 47061
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47061
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47061
+Finished at                        : Fri Mar 01 11:22:57 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:22:57 EST 2024
+Creating test case for Row #       : 4700
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 451
+Validation status                  : PASS
+Short Desc                         : Post Edit 2637 - CT C, Multi payer
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria: " CT C " Medicare and commercial payers present on the claim Medicare payer is bundled correctly " For commercial payer Detail 4,5 are bundled into detail 2 and detail 4 has PR > 0
+Expected Results                   : Edit 2637 should post on details 4,5 and 2
+Test Case ID for Row 4700          : 47062
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47062
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47062
+Finished at                        : Fri Mar 01 11:23:02 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:23:02 EST 2024
+Creating test case for Row #       : 4701
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 466
+Validation status                  : PASS
+Short Desc                         : Do not Post Edit 2637 - CT C, Multi payer
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a claim with the following criteria: " CT C " Medicare and commercial payers present on the claim Medicare payer is bundled correctly " For commercial payer Detail 4,5 are bundled into detail 2 and detail 4 has no PPA and PR
+Expected Results                   : Edit 2637 should not post
+Test Case ID for Row 4701          : 47063
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.03.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47063
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47063
+Finished at                        : Fri Mar 01 11:23:06 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:23:06 EST 2024
+Creating test case for Row #       : 4702
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 428
+Validation status                  : PASS
+Short Desc                         : CT A - Edit 2639
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : 1. Submit a CT A. The claim should have a PIP payer as primary. Medicare is secondary.  2. Submit a CT A. The claim should have a Medicare is primary. PIP is secondary.
+Expected Results                   : 1. The claim should match the correct rule in DL103 and price accordingly.  2. As PIP is the last payer, Edit 2639 should be posted.
+Test Case ID for Row 4702          : 47064
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.07.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47064
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47064
+Finished at                        : Fri Mar 01 11:23:10 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:23:10 EST 2024
+Creating test case for Row #       : 4703
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 422
+Validation status                  : PASS
+Short Desc                         : CT C - Edit 2639
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a CT C. The claim should have Medicare as primary. PIP is secondary.
+Expected Results                   : As PIP is the last payer, Edit 2639 should be posted.
+Test Case ID for Row 4703          : 47065
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.07.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47065
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47065
+Finished at                        : Fri Mar 01 11:23:15 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:23:15 EST 2024
+Creating test case for Row #       : 4704
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 695
+Validation status                  : PASS
+Short Desc                         : Edit 441 - CT C
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a CT C with multiple details. Detail 1 should have Coins =0, ded =0 and PPA = 0 Detail 2 should have Coins =0, ded =0 and PPA > 0 Detail 3 should have Coins >0, ded >0 and PPA > 0
+Expected Results                   : Detail 2 will post Edit 441. Details 1,3 should not post 441.
+Test Case ID for Row 4704          : 47066
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.05.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47066
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47066
+Finished at                        : Fri Mar 01 11:23:20 EST 2024
+*****************************************************************
+Started at                         : Fri Mar 01 11:23:20 EST 2024
+Creating test case for Row #       : 4705
+Total No.of Columns fetched        : 5
+Validation Time(ms)                : 709
+Validation status                  : PASS
+Short Desc                         : Edit 441 - CT B
+Env                                : A
+Subsystem                          : Claims Adjudication and Pricing
+SAK Participant                    : 337
+Owner                              : RAHUL YALAMANCHILI
+Grouping                           : CLAIMS PROCESSING
+Long Desc                          : Submit a CT B with multiple details. Detail 1 should have Coins =0, ded =0 and PPA = 0 Detail 2 should have Coins =0, ded =0 and PPA > 0 Detail 3 should have Coins >0, ded >0 and PPA > 0
+Expected Results                   : Detail 2 will post Edit 441. Details 1,3 should not post 441.
+Test Case ID for Row 4705          : 47067
+Total No.of Columns fetched        : 1
+Requirement ID                     : 37535.05.001
+Total No.of Columns fetched        : 2
+Requirement Type                   : Batch-Claims Engine
+SAK Requirement Type               : 13
+Requirement linked for test case   : 47067
+Notebook                           : 2023 Pre-AWS Contingency Release
+Business Function                  : 2023 Pre-AWS Contingency Release
+Notebook/BF linked for test case   : 47067
+Finished at                        : Fri Mar 01 11:23:25 EST 2024
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 01/Mar/2024 11:23:26AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

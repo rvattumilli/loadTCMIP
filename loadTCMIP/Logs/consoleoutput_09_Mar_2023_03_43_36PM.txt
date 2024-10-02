@@ -1,0 +1,140 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 09/Mar/2023 03:43:36PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+URL                                : http://mmis.techkc.ehs.state.ma.us/zMIP/utils/PortalLogin.asp
+MIP Username                       : rvattumi
+User Name                          : rvattumilli
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, replace(a.nam, CHR(9),' ') as nam, replace(a.dsc, CHR(9),' ') as dsc, replace(a.dsc_expect, CHR(9),' ') as dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 65
+****************************************************
+Started at                         : Thu Mar 09 15:45:04 EST 2023
+Creating test case for Row #       : 1812
+Validation Time(ms)                : 2780
+Validation status                  : PASS
+Short Desc                         : apcdhsnm regression test (positive)
+Env                                : M
+Subsystem                          : APCD-All Payer Claims DB
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Run job APCDHSNM using normal HSN input data.
+Expected Results                   : Job should terminate with a normal status. Specifically, program apcdmemb should terminate with a zero status.
+Test Case ID for Row 1812          : 42920
+Associated Req ID                  : 99999.02.01
+Requirement linked for test case   : 42920
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42920
+Validation Time(ms)                : 6546
+Finished at                        : Thu Mar 09 15:45:11 EST 2023
+****************************************************
+Started at                         : Thu Mar 09 15:45:11 EST 2023
+Creating test case for Row #       : 1813
+Validation Time(ms)                : 2743
+Validation status                  : PASS
+Short Desc                         : apcdhsnm negative test case
+Env                                : M
+Subsystem                          : APCD-All Payer Claims DB
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Since the remediation introduces a new edit, we need to test if the program behaves correctly with incorrect data.We will copy the input file used in Unit Test Case 641 to include invalid characters.
+Expected Results                   : The program will flag the record(s) with invalid characters by reporting them in the log file, and skipping over them for processing. We should see the error message(s) in the log file.
+Test Case ID for Row 1813          : 42921
+Associated Req ID                  : 99999.02.01
+Requirement linked for test case   : 42921
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42921
+Validation Time(ms)                : 6348
+Finished at                        : Thu Mar 09 15:45:17 EST 2023
+****************************************************
+Started at                         : Thu Mar 09 15:45:17 EST 2023
+Creating test case for Row #       : 1814
+Validation Time(ms)                : 2634
+Validation status                  : PASS
+Short Desc                         : refp0042 successful run test
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Program will be run with known, valid FDB (First Data Bank) file FDB File
+Expected Results                   : Program executes sucessfully.
+Test Case ID for Row 1814          : 42922
+Associated Req ID                  : 99999.02.01
+Requirement linked for test case   : 42922
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42922
+Validation Time(ms)                : 6146
+Finished at                        : Thu Mar 09 15:45:24 EST 2023
+****************************************************
+Started at                         : Thu Mar 09 15:45:24 EST 2023
+Creating test case for Row #       : 1815
+Validation Time(ms)                : 3080
+Validation status                  : PASS
+Short Desc                         : refp0042 second successful run test
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : Program will be run with a n empty FDB (First Data Bank) file
+Expected Results                   : Program print a message "Input File is empty!" in the log, then execute till normal completion.
+Test Case ID for Row 1815          : 42923
+Associated Req ID                  : 99999.02.01
+Requirement linked for test case   : 42923
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42923
+Validation Time(ms)                : 6643
+Finished at                        : Thu Mar 09 15:45:30 EST 2023
+****************************************************
+Started at                         : Thu Mar 09 15:45:30 EST 2023
+Creating test case for Row #       : 1816
+Validation Time(ms)                : 3045
+Validation status                  : PASS
+Short Desc                         : refp0042 failure run test
+Env                                : M
+Subsystem                          : Reference
+SAK Participant                    : 930
+Owner                              : USHA BUSANNAGARI
+Grouping                           : Batch
+Long Desc                          : : Program will be run with invalid FDB (First Data Bank) file
+Expected Results                   : Program print an error message "Invalid File!"then exit with a -1.
+Test Case ID for Row 1816          : 42924
+Associated Req ID                  : 99999.02.01
+Requirement linked for test case   : 42924
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42924
+Validation Time(ms)                : 6503
+Finished at                        : Thu Mar 09 15:45:37 EST 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 09/Mar/2023 03:45:38PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************

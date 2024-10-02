@@ -1,0 +1,1526 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 03/Mar/2023 10:36:04AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Link Notebook/Business Function    : true
+Link Requirement                   : true
+Link WI/Defect/CO                  : false
+SQL Statement                      : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, a.dsc, a.dsc_expect, a.grpng, a.wi_test_case, tc_row, trim(d.dsc) WI_TYPE, trim(a.id_req) ID_REQ from rvattumi.load_tc a, co_participant b, co c, co_type d where upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(a.owner) and c.sak_csr = a.wi_test_case and d.SAK_CSR_TYPE = c.SAK_CSR_TYPE and testcase_id is null order by id_req asc, tc_row asc
+No.of Cols                         : 14
+Query Execution Time(ms)           : 105
+****************************************************
+Started at                         : Fri Mar 03 10:36:12 EST 2023
+Creating test case for Row #       : 1298
+Short Desc                         : Verify spreadsheet file layout.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Verify spreadsheet file layout.
+Expected Results                   : The spreadsheet file should contain (1) MID (2) Prospective Program (3) Prospective PIDSL (4) Effective Date
+Test Case ID for Row 1298          : 42426
+Associated Req ID                  : 36157.02.020
+Requirement linked for test case   : 42426
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42426
+Finished at                        : Fri Mar 03 10:36:17 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:17 EST 2023
+Creating test case for Row #       : 1299
+Short Desc                         : Verify if the Input-MID is present
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the MID not present in MMIS
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1299          : 42427
+Associated Req ID                  : 36157.02.030
+Requirement linked for test case   : 42427
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42427
+Finished at                        : Fri Mar 03 10:36:21 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:21 EST 2023
+Creating test case for Row #       : 1300
+Short Desc                         : Verify if Input-MID is eligible for CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the MID that has no eligible aid cats for CARES
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1300          : 42428
+Associated Req ID                  : 36157.02.040
+Requirement linked for test case   : 42428
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42428
+Finished at                        : Fri Mar 03 10:36:24 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:24 EST 2023
+Creating test case for Row #       : 1301
+Short Desc                         : Verify if Input-MID is eligible for ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the MID that has no eligible aid cats for ICC
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1301          : 42429
+Associated Req ID                  : 36157.02.040
+Requirement linked for test case   : 42429
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42429
+Finished at                        : Fri Mar 03 10:36:28 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:28 EST 2023
+Creating test case for Row #       : 1302
+Short Desc                         : Verify the DOB of input MID
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the MID who is over 21
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1302          : 42430
+Associated Req ID                  : 36157.02.040
+Requirement linked for test case   : 42430
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42430
+Finished at                        : Fri Mar 03 10:36:31 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:31 EST 2023
+Creating test case for Row #       : 1303
+Short Desc                         : Verify if Input-MID has mutually excl enrl - CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the MID that's already enrolled in CARES
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1303          : 42431
+Associated Req ID                  : 36157.02.050
+Requirement linked for test case   : 42431
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42431
+Finished at                        : Fri Mar 03 10:36:35 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:35 EST 2023
+Creating test case for Row #       : 1304
+Short Desc                         : Verify if Input-MID has mutually excl enrl -ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the MID that's already enrolled in ICC
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1304          : 42432
+Associated Req ID                  : 36157.02.050
+Requirement linked for test case   : 42432
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42432
+Finished at                        : Fri Mar 03 10:36:39 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:39 EST 2023
+Creating test case for Row #       : 1305
+Short Desc                         : Verify if Input-MID has mutually excl enrl -other
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the MID that has mutually exclusive enrollment other than CARES & ICC
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1305          : 42433
+Associated Req ID                  : 36157.02.050
+Requirement linked for test case   : 42433
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42433
+Finished at                        : Fri Mar 03 10:36:43 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:43 EST 2023
+Creating test case for Row #       : 1306
+Short Desc                         : Verify if the input file has invalid values
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the file with invalid values
+Expected Results                   : The file will be marked as bad file
+Test Case ID for Row 1306          : 42434
+Associated Req ID                  : 36157.02.060
+Requirement linked for test case   : 42434
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42434
+Finished at                        : Fri Mar 03 10:36:46 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:46 EST 2023
+Creating test case for Row #       : 1307
+Short Desc                         : Verify if the input MID is inactive
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the file with the input MID that's in inactive status
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1307          : 42435
+Associated Req ID                  : 36157.02.065
+Requirement linked for test case   : 42435
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42435
+Finished at                        : Fri Mar 03 10:36:52 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:52 EST 2023
+Creating test case for Row #       : 1308
+Short Desc                         : Verify if the input MID has DOD present
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the file with the input MID that has a DOD present
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1308          : 42436
+Associated Req ID                  : 36157.02.065
+Requirement linked for test case   : 42436
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42436
+Finished at                        : Fri Mar 03 10:36:55 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:55 EST 2023
+Creating test case for Row #       : 1309
+Short Desc                         : Verify if there are duplicate input MIDs
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : DATA MAINTENANCE - ADD/MAINTAIN
+Long Desc                          : Submit the file with duplicate MIDS
+Expected Results                   : The member will not be processed and sent to error report
+Test Case ID for Row 1309          : 42437
+Associated Req ID                  : 36157.02.065
+Requirement linked for test case   : 42437
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42437
+Finished at                        : Fri Mar 03 10:36:59 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:36:59 EST 2023
+Creating test case for Row #       : 1310
+Short Desc                         : Auto disenrollment due to DOD - CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in CARES assignment plan and add DOD.
+Expected Results                   : A member will be disenrolled from CARES assignment plan with DOD date.
+Test Case ID for Row 1310          : 42438
+Associated Req ID                  : 36157.03.020
+Requirement linked for test case   : 42438
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42438
+Finished at                        : Fri Mar 03 10:37:03 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:03 EST 2023
+Creating test case for Row #       : 1311
+Short Desc                         : Auto disenrollment due to DOD - ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in ICC assignment plan and add DOD.
+Expected Results                   : A member will be disenrolled from ICC assignment plan with DOD date.
+Test Case ID for Row 1311          : 42439
+Associated Req ID                  : 36157.03.020
+Requirement linked for test case   : 42439
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42439
+Finished at                        : Fri Mar 03 10:37:06 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:06 EST 2023
+Creating test case for Row #       : 1312
+Short Desc                         : Auto Disenrollment due to age - CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who  is going to be 21 years old and is enrolled in CARES assignment plan
+Expected Results                   : A member will be disenrolled from CARES assignment plan one day before birthday.
+Test Case ID for Row 1312          : 42440
+Associated Req ID                  : 36157.03.030
+Requirement linked for test case   : 42440
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42440
+Finished at                        : Fri Mar 03 10:37:10 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:10 EST 2023
+Creating test case for Row #       : 1313
+Short Desc                         : Auto Disenrollment due to age - ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who  is going to be 21 years old and is enrolled in ICC assignment plan
+Expected Results                   : A member will be disenrolled from ICC assignment plan one day before birthday.
+Test Case ID for Row 1313          : 42441
+Associated Req ID                  : 36157.03.030
+Requirement linked for test case   : 42441
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42441
+Finished at                        : Fri Mar 03 10:37:13 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:13 EST 2023
+Creating test case for Row #       : 1314
+Short Desc                         : Auto Disenrollment due to loss of eligibility - CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in CARES assignment plan who loses MC eligible Aid Cat later
+Expected Results                   : A member will be disenrolled from CARES assignment plan with MC aid cat end date
+Test Case ID for Row 1314          : 42442
+Associated Req ID                  : 36157.03.040
+Requirement linked for test case   : 42442
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42442
+Finished at                        : Fri Mar 03 10:37:17 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:17 EST 2023
+Creating test case for Row #       : 1315
+Short Desc                         : Auto Disenrollment due to loss of eligibility - ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in ICC assignment plan who loses MC eligible Aid Cat later
+Expected Results                   : A member will be disenrolled from ICC assignment plan with MC aid cat end date
+Test Case ID for Row 1315          : 42443
+Associated Req ID                  : 36157.03.040
+Requirement linked for test case   : 42443
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42443
+Finished at                        : Fri Mar 03 10:37:23 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:23 EST 2023
+Creating test case for Row #       : 1316
+Short Desc                         : Member Not in Benefit Plan Group 6024
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in MCO - MSTD assignment plan (NOT in benefit Plan group 6024) and doesnt have T2023 claim payments in 6 months. Verify that the member is not disenrolled.
+Expected Results                   : A member should not be disenrolled from MSTD assignment plan.
+Test Case ID for Row 1316          : 42444
+Associated Req ID                  : 36157.03.050
+Requirement linked for test case   : 42444
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42444
+Finished at                        : Fri Mar 03 10:37:28 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:28 EST 2023
+Creating test case for Row #       : 1317
+Short Desc                         : CARES Member with No T2023 Procedure Code
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in CARES assignment plan and has NO claim payments with T2023 procedure code in the last 6 months during the enrollment period. Verify that the member is disenrolled from the CARES
+Expected Results                   : A member should be disenrolled from CARES assignment plan on discovery date with stop reason code ZU
+Test Case ID for Row 1317          : 42445
+Associated Req ID                  : 36157.03.050
+Requirement linked for test case   : 42445
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42445
+Finished at                        : Fri Mar 03 10:37:33 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:33 EST 2023
+Creating test case for Row #       : 1318
+Short Desc                         : ICC Member with No T2023 Procedure Code
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in ICC assignment plan and has NO claim payments with T2023 procedure code in the last 6 months during the enrollment period. Verify that the member is disenrolled from the ICC
+Expected Results                   : A member should be disenrolled from ICC assignment plan on discovery date with stop reason code ZU
+Test Case ID for Row 1318          : 42446
+Associated Req ID                  : 36157.03.050
+Requirement linked for test case   : 42446
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42446
+Finished at                        : Fri Mar 03 10:37:37 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:37 EST 2023
+Creating test case for Row #       : 1319
+Short Desc                         : CARES Member with claim payments in 6 months
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in CARES assignment plan and has claim payments with T2023 procedure code in the last 6 months during the enrollment period. Verify that the member is not disenrolled from the CARES
+Expected Results                   : A member should not be disenrolled from CARES assignment plan.
+Test Case ID for Row 1319          : 42447
+Associated Req ID                  : 36157.03.050
+Requirement linked for test case   : 42447
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42447
+Finished at                        : Fri Mar 03 10:37:42 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:42 EST 2023
+Creating test case for Row #       : 1320
+Short Desc                         : ICC Member with claim payments in 6 months
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in ICC assignment plan and has claim payments with T2023 procedure code in the last 6 months during the enrollment period. Verify that the member is not disenrolled from the ICC
+Expected Results                   : A member should not be disenrolled from ICC assignment plan.
+Test Case ID for Row 1320          : 42448
+Associated Req ID                  : 36157.03.050
+Requirement linked for test case   : 42448
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42448
+Finished at                        : Fri Mar 03 10:37:46 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:46 EST 2023
+Creating test case for Row #       : 1321
+Short Desc                         : CARES member with claim outside the  enrollment date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in CARES assignment plan & has claim payments, with T2023 procedure code in 6 months but the claim date is outside the enrollment period.
+Expected Results                   : A member will be disenrolled from the CARES plan on discovery date with stop reason code ZU
+Test Case ID for Row 1321          : 42449
+Associated Req ID                  : 36157.03.050
+Requirement linked for test case   : 42449
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42449
+Finished at                        : Fri Mar 03 10:37:51 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:51 EST 2023
+Creating test case for Row #       : 1322
+Short Desc                         : ICC member with claim outside the enrollment date
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in ICC assignment plan & has claim payments, with T2023 procedure code in 6 months but the claim date is outside the enrollment period.
+Expected Results                   : A member will be disenrolled from the ICC plan on discovery date with stop reason code ZU
+Test Case ID for Row 1322          : 42450
+Associated Req ID                  : 36157.03.050
+Requirement linked for test case   : 42450
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42450
+Finished at                        : Fri Mar 03 10:37:56 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:37:56 EST 2023
+Creating test case for Row #       : 1323
+Short Desc                         : CARES Member gaining TPL/Medicare
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in CARES assigment plan later gains TPL/Medicare.
+Expected Results                   : A member should not be disenrolled from CARES assignment plan.
+Test Case ID for Row 1323          : 42451
+Associated Req ID                  : 36157.03.050
+Requirement linked for test case   : 42451
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42451
+Finished at                        : Fri Mar 03 10:38:01 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:01 EST 2023
+Creating test case for Row #       : 1324
+Short Desc                         : ICC Member gaining TPL/Medicare
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Select a member who is enrolled in ICC assigment plan later gains TPL/Medicare.
+Expected Results                   : A member should not be disenrolled from ICC assignment plan.
+Test Case ID for Row 1324          : 42452
+Associated Req ID                  : 36157.03.050
+Requirement linked for test case   : 42452
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42452
+Finished at                        : Fri Mar 03 10:38:06 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:06 EST 2023
+Creating test case for Row #       : 1335
+Short Desc                         : Donot display CARES in MC dropdown - Regular panel
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the CARES assignment plan is not displayed in MC dropdown lists in Regular Panel
+Expected Results                   : The CARES program should not be shown in MC program dropdown
+Test Case ID for Row 1335          : 42453
+Associated Req ID                  : 36157.06.005
+Requirement linked for test case   : 42453
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42453
+Finished at                        : Fri Mar 03 10:38:12 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:12 EST 2023
+Creating test case for Row #       : 1336
+Short Desc                         : Donot display ICC in MC dropdown-Regular panel
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the ICC assignment plan is not displayed in MC dropdown lists in Regular Panel
+Expected Results                   : The ICC program should not be shown in MC program dropdown
+Test Case ID for Row 1336          : 42454
+Associated Req ID                  : 36157.06.005
+Requirement linked for test case   : 42454
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42454
+Finished at                        : Fri Mar 03 10:38:16 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:16 EST 2023
+Creating test case for Row #       : 1337
+Short Desc                         : Disable CARES stop reason in regular panel
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that all the fields including Stop Reason in the "Regular Panel" are disabled when CARES program is selected from the assignment lists.
+Expected Results                   : All the fields  including Stop Reason  should be disabled.
+Test Case ID for Row 1337          : 42455
+Associated Req ID                  : 36157.06.007
+Requirement linked for test case   : 42455
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42455
+Finished at                        : Fri Mar 03 10:38:22 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:22 EST 2023
+Creating test case for Row #       : 1338
+Short Desc                         : Disable ICC stop reason in regular panel
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that all the fields including Stop Reason in the "Regular Panel" are disabled when ICC program is selected from the assignment lists.
+Expected Results                   : All the fields  including Stop Reason  should be disabled.
+Test Case ID for Row 1338          : 42456
+Associated Req ID                  : 36157.06.007
+Requirement linked for test case   : 42456
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42456
+Finished at                        : Fri Mar 03 10:38:29 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:29 EST 2023
+Creating test case for Row #       : 1339
+Short Desc                         : Display CARES in MC program dropdown -SU Panel
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          :  Verify that the new CARES program is displayed as an option in MC program dropdown.
+Expected Results                   : The CARES program should be displayed as an option in the MC program dropdown
+Test Case ID for Row 1339          : 42457
+Associated Req ID                  : 36157.06.015
+Requirement linked for test case   : 42457
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42457
+Finished at                        : Fri Mar 03 10:38:35 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:35 EST 2023
+Creating test case for Row #       : 1340
+Short Desc                         : Display ICC in MC program dropdown -SU Panel
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          :  Verify that the new ICC program is displayed as an option in MC program dropdown.
+Expected Results                   : The ICC program should be displayed as an option in the MC program dropdown
+Test Case ID for Row 1340          : 42458
+Associated Req ID                  : 36157.06.015
+Requirement linked for test case   : 42458
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42458
+Finished at                        : Fri Mar 03 10:38:42 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:42 EST 2023
+Creating test case for Row #       : 1341
+Short Desc                         : Save CARES Record
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the user is able to save the CARES record successfully once all the criterias are met
+Expected Results                   : NEW CARES record should be created
+Test Case ID for Row 1341          : 42459
+Associated Req ID                  : 36157.06.025
+Requirement linked for test case   : 42459
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42459
+Finished at                        : Fri Mar 03 10:38:47 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:47 EST 2023
+Creating test case for Row #       : 1342
+Short Desc                         : Save  ICC Record
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the user is able to save the ICC record successfully once all the criterias are met
+Expected Results                   : NEW ICC record should be created
+Test Case ID for Row 1342          : 42460
+Associated Req ID                  : 36157.06.025
+Requirement linked for test case   : 42460
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42460
+Finished at                        : Fri Mar 03 10:38:52 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:52 EST 2023
+Creating test case for Row #       : 1343
+Short Desc                         : Verify provider search icon
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the PMP ID/Svc Loc field pop-up search button is functioning
+Expected Results                   : The search result should return eligible provider Ids.
+Test Case ID for Row 1343          : 42461
+Associated Req ID                  : 36157.06.035
+Requirement linked for test case   : 42461
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42461
+Finished at                        : Fri Mar 03 10:38:58 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:38:58 EST 2023
+Creating test case for Row #       : 1344
+Short Desc                         : Validate Effective and End date fields
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that default Effective and End dates are auto populated
+Expected Results                   : The date field should be auto populated appropriately when CARES or ICC programs are selected in MC program dropdown.
+Test Case ID for Row 1344          : 42462
+Associated Req ID                  : 36157.06.045
+Requirement linked for test case   : 42462
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42462
+Finished at                        : Fri Mar 03 10:39:03 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:03 EST 2023
+Creating test case for Row #       : 1345
+Short Desc                         : Verify member above 20 - CARES
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who is over 20 and try to enroll him/her into a CARES program
+Expected Results                   : UI edit should be triggered. No CARES record should be created
+Test Case ID for Row 1345          : 42463
+Associated Req ID                  : 36157.06.070
+Requirement linked for test case   : 42463
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42463
+Finished at                        : Fri Mar 03 10:39:09 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:09 EST 2023
+Creating test case for Row #       : 1346
+Short Desc                         : Verify member above 20 - ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who is over 20 and try to enroll him/her into a ICC program
+Expected Results                   : UI edit should be triggered. No ICC record should be created
+Test Case ID for Row 1346          : 42464
+Associated Req ID                  : 36157.06.070
+Requirement linked for test case   : 42464
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42464
+Finished at                        : Fri Mar 03 10:39:15 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:15 EST 2023
+Creating test case for Row #       : 1347
+Short Desc                         : Verify member below 20
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who is below 20 and try to enroll him/her into a CARES/ICC program
+Expected Results                   : A NEW CARES/ICC record should be created once all the validation pass
+Test Case ID for Row 1347          : 42465
+Associated Req ID                  : 36157.06.070
+Requirement linked for test case   : 42465
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42465
+Finished at                        : Fri Mar 03 10:39:21 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:21 EST 2023
+Creating test case for Row #       : 1348
+Short Desc                         : Verify member below 20-FUTURE CARES/ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who is below 20 at the time of enrollment but try to enroll into CARES/ICC to future dates that makes a member over 20
+Expected Results                   : UI edit should be triggered. No CARES/ICC record should be created
+Test Case ID for Row 1348          : 42466
+Associated Req ID                  : 36157.06.070
+Requirement linked for test case   : 42466
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42466
+Finished at                        : Fri Mar 03 10:39:26 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:26 EST 2023
+Creating test case for Row #       : 1349
+Short Desc                         : Verify member above 20-RETRO CARES/ICC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who is above 20 at the time of enrollment but try to enroll into CARES/ICC to Retro dates that makes a member below 20
+Expected Results                   : No UI edit should be triggered and a CARES/ICC record should be created successfully once all the validation pass
+Test Case ID for Row 1349          : 42467
+Associated Req ID                  : 36157.06.070
+Requirement linked for test case   : 42467
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42467
+Finished at                        : Fri Mar 03 10:39:32 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:32 EST 2023
+Creating test case for Row #       : 1350
+Short Desc                         : Verify DOD error message is triggered
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who has DOD present and try to enroll him/her into a CARES or ICC programs
+Expected Results                   : UI edit should be triggered. No CARES/ICC record should be created
+Test Case ID for Row 1350          : 42468
+Associated Req ID                  : 36157.06.080
+Requirement linked for test case   : 42468
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42468
+Finished at                        : Fri Mar 03 10:39:37 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:37 EST 2023
+Creating test case for Row #       : 1351
+Short Desc                         : Verify NO DOD error message is triggered
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who has DOD present but try to enroll a him/her into ICC/CARES program before DOD date
+Expected Results                   : NO UI edit should be triggered. ICC/CARES record should be created sucessfully once all the validation pass
+Test Case ID for Row 1351          : 42469
+Associated Req ID                  : 36157.06.080
+Requirement linked for test case   : 42469
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42469
+Finished at                        : Fri Mar 03 10:39:42 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:42 EST 2023
+Creating test case for Row #       : 1352
+Short Desc                         : Validate error message with same PMP ID
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Trigger the UI edits if the user tries to enroll a member into CARES or ICC when there is already an existing CARES or ICC with same PMP ID
+Expected Results                   : A validation message will be displayed.
+Test Case ID for Row 1352          : 42470
+Associated Req ID                  : 36157.06.100
+Requirement linked for test case   : 42470
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42470
+Finished at                        : Fri Mar 03 10:39:47 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:47 EST 2023
+Creating test case for Row #       : 1353
+Short Desc                         : Validate mutually exclusive programs
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who is in CARES and try to transfer a member to ICC plan
+Expected Results                   : The member should be able to transfer to new program.
+Test Case ID for Row 1353          : 42471
+Associated Req ID                  : 36157.06.110
+Requirement linked for test case   : 42471
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42471
+Finished at                        : Fri Mar 03 10:39:52 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:52 EST 2023
+Creating test case for Row #       : 1354
+Short Desc                         : Validate overlapping dates during update
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Select a member who is in CARES or ICC plans and try to update the dates (Eff & End dates) that overlaps with mutually exclusive programs.
+Expected Results                   : An error message should be triggered and no updates should be saved.
+Test Case ID for Row 1354          : 42472
+Associated Req ID                  : 36157.06.110
+Requirement linked for test case   : 42472
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42472
+Finished at                        : Fri Mar 03 10:39:57 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:39:57 EST 2023
+Creating test case for Row #       : 1355
+Short Desc                         : Validate aid cats
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Try to enroll a member into CARES or ICC assignment plan when the member has no supporting eligible aid cats.
+Expected Results                   : The UI edit should be triggered and no CARES/ICC records should be created
+Test Case ID for Row 1355          : 42473
+Associated Req ID                  : 36157.06.130
+Requirement linked for test case   : 42473
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42473
+Finished at                        : Fri Mar 03 10:40:02 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:02 EST 2023
+Creating test case for Row #       : 1356
+Short Desc                         : Update CARES/ICC segments
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the users are allowed to update the CARES and ICC enrollment data. The users should be able to udpate the Eff date, End date, start & stop reasons code.
+Expected Results                   : The records should be updated successfully.
+Test Case ID for Row 1356          : 42474
+Associated Req ID                  : 36157.06.140
+Requirement linked for test case   : 42474
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42474
+Finished at                        : Fri Mar 03 10:40:07 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:07 EST 2023
+Creating test case for Row #       : 1357
+Short Desc                         : History the CARES/ICC  segment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the users are allowe to set the status of CARES & ICC enrollment to HISTORY.
+Expected Results                   : The CARES & ICC records should be set to HISTORY.
+Test Case ID for Row 1357          : 42475
+Associated Req ID                  : 36157.06.150
+Requirement linked for test case   : 42475
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42475
+Finished at                        : Fri Mar 03 10:40:12 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:12 EST 2023
+Creating test case for Row #       : 1358
+Short Desc                         : Allow CARES/ICC to use CP start/stop reasons
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : MC ENROLLMENTS
+Long Desc                          : Verify that the users are allowed  to use the Community Partners Enrollment and Disenrollment codes for CARES and ICC.
+Expected Results                   : The users should be able to use and save CP start and stop reasons for CARES & ICC enrollment.
+Test Case ID for Row 1358          : 42476
+Associated Req ID                  : 36157.06.165
+Requirement linked for test case   : 42476
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42476
+Finished at                        : Fri Mar 03 10:40:19 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:19 EST 2023
+Creating test case for Row #       : 1359
+Short Desc                         : Verify that daily & monthly reports available in POSC
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Reports
+Long Desc                          : Verify that the daily enrollment/re-enrollment/disenrollment report is available in POSC for the CARES & ICC providers to download
+Expected Results                   : CARES and ICC  reports should be available and the providers should be able to download the daily report
+Test Case ID for Row 1359          : 42477
+Associated Req ID                  : 36157.07.010
+Requirement linked for test case   : 42477
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42477
+Finished at                        : Fri Mar 03 10:40:24 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:24 EST 2023
+Creating test case for Row #       : 1325
+Short Desc                         : CARES Record in Active MID.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDs where the ACTIVE MID has CARES record and INACTIVE has none
+Expected Results                   : The CARES record on  ACTIVE MID should stay as is
+Test Case ID for Row 1325          : 42478
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42478
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42478
+Finished at                        : Fri Mar 03 10:40:29 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:29 EST 2023
+Creating test case for Row #       : 1326
+Short Desc                         : ICC Record in Active MID.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDs where the ACTIVE MID has ICC record and INACTIVE has none
+Expected Results                   : The ICC record on  ACTIVE MID should stay as is
+Test Case ID for Row 1326          : 42479
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42479
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42479
+Finished at                        : Fri Mar 03 10:40:35 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:35 EST 2023
+Creating test case for Row #       : 1327
+Short Desc                         : CARES Record in Inactive MID.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDs where the INACTIVE MID has CARES record and INACTIVE has none
+Expected Results                   : The CARES record from the INACTIVE MID should be transferred over to ACTIVE MID
+Test Case ID for Row 1327          : 42480
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42480
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42480
+Finished at                        : Fri Mar 03 10:40:39 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:39 EST 2023
+Creating test case for Row #       : 1328
+Short Desc                         : ICC Record in Inactive MID.
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDs where the INACTIVE MID has ICC record and INACTIVE has none
+Expected Results                   : The ICC record from the INACTIVE MID should be transferred over to ACTIVE MID
+Test Case ID for Row 1328          : 42481
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42481
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42481
+Finished at                        : Fri Mar 03 10:40:44 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:44 EST 2023
+Creating test case for Row #       : 1329
+Short Desc                         : CARES Record in ACTIVE & INACTIVE MID -Non overlapping
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDS where both the INACTIVE & ACTIVE MID has CARES records which do not overlap
+Expected Results                   : The CARES record from the INACTIVE MID should be transferred over to ACTIVE MID
+Test Case ID for Row 1329          : 42482
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42482
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42482
+Finished at                        : Fri Mar 03 10:40:50 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:50 EST 2023
+Creating test case for Row #       : 1330
+Short Desc                         : ICC Record in ACTIVE & INACTIVE MID -Non overlapping
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDS where both the INACTIVE & ACTIVE MID has ICC records which do not overlap
+Expected Results                   : The ICC record from the INACTIVE MID should be transferred over to ACTIVE MID
+Test Case ID for Row 1330          : 42483
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42483
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42483
+Finished at                        : Fri Mar 03 10:40:55 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:55 EST 2023
+Creating test case for Row #       : 1331
+Short Desc                         : CARES Record in ACTIVE & INACTIVE MID -Overlapping
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDS where both the INACTIVE & ACTIVE MID has CARES records which overlap
+Expected Results                   : The CARES record from the INACTIVE MID should not be transferred over to ACTIVE MID & be sent to Link Request Error report
+Test Case ID for Row 1331          : 42484
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42484
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42484
+Finished at                        : Fri Mar 03 10:40:59 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:40:59 EST 2023
+Creating test case for Row #       : 1332
+Short Desc                         : ICC Record in ACTIVE & INACTIVE MID -Overlapping
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDS where both the INACTIVE & ACTIVE MID has ICC records which overlap
+Expected Results                   : The ICC record from the INACTIVE MID should not be transferred over to ACTIVE MID & be sent to Link Request Error report
+Test Case ID for Row 1332          : 42485
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42485
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42485
+Finished at                        : Fri Mar 03 10:41:04 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:04 EST 2023
+Creating test case for Row #       : 1333
+Short Desc                         : CARES in Inactive MID overlaps with mutually exclusive plan in ACITVE MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDs where the Inactive MID has CARES record that overlaps with mutually exclusive plans that exists in ACTIVE MID
+Expected Results                   : The CARES record from the INACTIVE MID should not be transferred over to ACTIVE MID & be sent to Link Request Error report
+Test Case ID for Row 1333          : 42486
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42486
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42486
+Finished at                        : Fri Mar 03 10:41:10 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:10 EST 2023
+Creating test case for Row #       : 1334
+Short Desc                         : ICC in Inactive MID overlaps with mutually exclusive plan in ACTIVE MID
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : Batch
+Long Desc                          : Link 2 MIDs where the Inactive MID has ICC record that overlaps with mutually exclusive plans that exists in ACTIVE MID
+Expected Results                   : The ICC record from the INACTIVE MID should not be transferred over to ACTIVE MID & be sent to Link Request Error report
+Test Case ID for Row 1334          : 42487
+Associated Req ID                  : 36157.08.010
+Requirement linked for test case   : 42487
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42487
+Finished at                        : Fri Mar 03 10:41:15 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:15 EST 2023
+Creating test case for Row #       : 1360
+Short Desc                         : Verify CARES/ICC EVS messages
+Env                                : M
+Subsystem                          : Member Management
+SAK Participant                    : 644
+Owner                              : SUNITA LAMA
+Grouping                           : ELIGIBILITY VERIFICATION
+Long Desc                          : Submit an eligbility inquiry for a member who has CARES/ICC enrollment during the DOS searched
+Expected Results                   : The appropriate EVS messages should be triggered  specific to the CARES/ICC assignment plans.
+Test Case ID for Row 1360          : 42488
+Associated Req ID                  : 36157.09.010
+Requirement linked for test case   : 42488
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42488
+Finished at                        : Fri Mar 03 10:41:20 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:20 EST 2023
+Creating test case for Row #       : 1276
+Short Desc                         : DSS Newborn remains in FFS
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : DSS eligible MC Newborn remain in FFS for the configured number of days.
+Expected Results                   : The DSS eligible MC newborn to remain in FFS for the configured number of days.
+Test Case ID for Row 1276          : 42489
+Associated Req ID                  : 36341.020.010
+Requirement linked for test case   : 42489
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42489
+Finished at                        : Fri Mar 03 10:41:27 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:27 EST 2023
+Creating test case for Row #       : 1277
+Short Desc                         : DSS Newborn received BH only enrollment
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : DSS eligible MC Newborn receives BH enrollment.
+Expected Results                   : The DSS eligible MC newborn should receive a BH only enrollment immediately.
+Test Case ID for Row 1277          : 42490
+Associated Req ID                  : 36341.020.020
+Requirement linked for test case   : 42490
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42490
+Finished at                        : Fri Mar 03 10:41:33 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:33 EST 2023
+Creating test case for Row #       : 1278
+Short Desc                         : Eligible DSS Newborn Assigned to Sibing's Provider (1 sibling)
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Eligible DSS Newborn is assigned to the sibling's provider.
+Expected Results                   : The eligible DSS newborn should be assigned to the sibling's provider.
+Test Case ID for Row 1278          : 42491
+Associated Req ID                  : 36341.030.010
+Requirement linked for test case   : 42491
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42491
+Finished at                        : Fri Mar 03 10:41:38 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:38 EST 2023
+Creating test case for Row #       : 1279
+Short Desc                         : Eligible DSS Newborn Assigned to Sibing's Provider (>1 sibling)
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Eligible DSS Newborn is assigned to the youngest sibling's provider.
+Expected Results                   : The eligible DSS newborn should be assigned to the youngest sibling's provider.
+Test Case ID for Row 1279          : 42492
+Associated Req ID                  : 36341.030.010
+Requirement linked for test case   : 42492
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42492
+Finished at                        : Fri Mar 03 10:41:43 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:43 EST 2023
+Creating test case for Row #       : 1280
+Short Desc                         : Eligible DSS Newborn Assigned to Mother's Provider (only mother on case)
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Eligible DSS Newborn is assigned to the mother's provider.
+Expected Results                   : The eligible DSS newborn should be assigned to the mother's provider.
+Test Case ID for Row 1280          : 42493
+Associated Req ID                  : 36341.040.010
+Requirement linked for test case   : 42493
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42493
+Finished at                        : Fri Mar 03 10:41:51 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:51 EST 2023
+Creating test case for Row #       : 1281
+Short Desc                         : Eligible DSS Newborn Assigned to a  provider (no mother and no siblings)
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Eligible DSS Newborn is assigned via choice factor.
+Expected Results                   : The eligible DSS newborn should be assigned via choice factor.
+Test Case ID for Row 1281          : 42494
+Associated Req ID                  : 36341.050.010
+Requirement linked for test case   : 42494
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42494
+Finished at                        : Fri Mar 03 10:41:56 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:41:56 EST 2023
+Creating test case for Row #       : 1282
+Short Desc                         : Non-DSS Newborn Assigned to a  provider.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Non-DSS Newborn Assigned to a provider.
+Expected Results                   : Non-DSS Newborn Assigned to a provider using normal newborn logic.
+Test Case ID for Row 1282          : 42495
+Associated Req ID                  : 36341.050.010
+Requirement linked for test case   : 42495
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42495
+Finished at                        : Fri Mar 03 10:42:02 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:02 EST 2023
+Creating test case for Row #       : 1283
+Short Desc                         : Report DSS Newborn if there are multiple siblings in multiple providers on case.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Report DSS newborn on MGD-7200-D if there are multiple siblings in multiple providers on case.
+Expected Results                   : The DSS newborn will be on the MGD-7200-D Report.
+Test Case ID for Row 1283          : 42496
+Associated Req ID                  : 36341.055.010
+Requirement linked for test case   : 42496
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42496
+Finished at                        : Fri Mar 03 10:42:08 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:08 EST 2023
+Creating test case for Row #       : 1284
+Short Desc                         : Report DSS Newborn if the mother is enrolled in inappropriate provider if the identified mother is on the case.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Report DSS newborn if the mother is enrolled in inappropriate provider if the identified mother is on the case.
+Expected Results                   : The DSS newborn will be on the MGD-7200-D Report.
+Test Case ID for Row 1284          : 42497
+Associated Req ID                  : 36341.055.020
+Requirement linked for test case   : 42497
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42497
+Finished at                        : Fri Mar 03 10:42:13 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:13 EST 2023
+Creating test case for Row #       : 1285
+Short Desc                         : Report DSS Newborn if the DSS Newborn is the only member in the case.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Report DSS newborn if the DSS newborn is the only member in the case.
+Expected Results                   : The DSS newborn will be on the MGD-7200-D Report.
+Test Case ID for Row 1285          : 42498
+Associated Req ID                  : 36341.055.030
+Requirement linked for test case   : 42498
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42498
+Finished at                        : Fri Mar 03 10:42:19 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:19 EST 2023
+Creating test case for Row #       : 1286
+Short Desc                         : Report DSS Newborn if the DSS Newborn is adopted.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Report DSS newborn if the DSS newborn is adopted.
+Expected Results                   : The DSS newborn will be on the MGD-7200-D Report.
+Test Case ID for Row 1286          : 42499
+Associated Req ID                  : 36341.055.040
+Requirement linked for test case   : 42499
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42499
+Finished at                        : Fri Mar 03 10:42:25 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:25 EST 2023
+Creating test case for Row #       : 1287
+Short Desc                         : Add MC Opt Out record.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Add MC Opt Out record for a member.
+Expected Results                   : A MC Opt Out record will be added.
+Test Case ID for Row 1287          : 42500
+Associated Req ID                  : 36341.070.010
+Requirement linked for test case   : 42500
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42500
+Finished at                        : Fri Mar 03 10:42:30 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:30 EST 2023
+Creating test case for Row #       : 1288
+Short Desc                         : Validate MC Opt Out record on file.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Add MC Opt Out record for a member on the panel and verify an MC Opt Out Record is added.
+Expected Results                   : An MC Opt Out record is added.
+Test Case ID for Row 1288          : 42501
+Associated Req ID                  : 36341.070.015
+Requirement linked for test case   : 42501
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42501
+Finished at                        : Fri Mar 03 10:42:36 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:36 EST 2023
+Creating test case for Row #       : 1289
+Short Desc                         : Retro MC Opt Out record not allowed.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Edit will prevent retro effective date for MC Opt Out record.
+Expected Results                   : Edit will prevent retro effective date for MC Opt Out record.
+Test Case ID for Row 1289          : 42502
+Associated Req ID                  : 36341.070.025
+Requirement linked for test case   : 42502
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42502
+Finished at                        : Fri Mar 03 10:42:42 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:42 EST 2023
+Creating test case for Row #       : 1290
+Short Desc                         : Do not allow UI MC enrollment if MC Opt Out is active.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Do not allow UI MC enrollment if MC Opt Out is active.
+Expected Results                   : Edit will prevent MC enrollment if MC Opt Out is active.
+Test Case ID for Row 1290          : 42503
+Associated Req ID                  : 36341.070.030
+Requirement linked for test case   : 42503
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42503
+Finished at                        : Fri Mar 03 10:42:46 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:46 EST 2023
+Creating test case for Row #       : 1291
+Short Desc                         : Do not allow batch MC enrollment if MC Opt Out is active.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Do not allow UI MC enrollment if MC Opt Out is active.
+Expected Results                   : Member will not be enrolled in MC if MC Opt out is active.
+Test Case ID for Row 1291          : 42504
+Associated Req ID                  : 36341.080.010
+Requirement linked for test case   : 42504
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42504
+Finished at                        : Fri Mar 03 10:42:50 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:50 EST 2023
+Creating test case for Row #       : 1292
+Short Desc                         : Check 834 for HIPAA code 14.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Check 834 for HIPAA  code 14 for members that opted out of MC enrollment.
+Expected Results                   : HIPAA code 14 for members that opted out of MC enrollment should display on 834.
+Test Case ID for Row 1292          : 42505
+Associated Req ID                  : 36341.080.015
+Requirement linked for test case   : 42505
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42505
+Finished at                        : Fri Mar 03 10:42:56 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:42:56 EST 2023
+Creating test case for Row #       : 1293
+Short Desc                         : Reenroll DSS member if MC Opt out ends.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : DSS member MC Opt out expires. The member should reenroll.
+Expected Results                   : DSS member reenrolls into Managed Care.
+Test Case ID for Row 1293          : 42506
+Associated Req ID                  : 36341.080.020
+Requirement linked for test case   : 42506
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42506
+Finished at                        : Fri Mar 03 10:43:00 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:43:00 EST 2023
+Creating test case for Row #       : 1294
+Short Desc                         : Do not allow DSS member to enrollment in MC program on exclusion list if MC Opt Out is active.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Do not allow DSS member to enrollment in MC program on exclusion list if MC Opt Out is active.
+Expected Results                   : DSS member is not allowed to enroll in MC program on exclusion list if MC Opt Out is active.
+Test Case ID for Row 1294          : 42507
+Associated Req ID                  : 36341.080.030
+Requirement linked for test case   : 42507
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42507
+Finished at                        : Fri Mar 03 10:43:05 EST 2023
+****************************************************
+Started at                         : Fri Mar 03 10:43:05 EST 2023
+Creating test case for Row #       : 1295
+Short Desc                         : Allow DSS member to enrollment in MC program on exclusion list if MC Opt Out is active.
+Env                                : M
+Subsystem                          : Managed Care
+SAK Participant                    : 640
+Owner                              : MARK MERLET
+Grouping                           : Batch
+Long Desc                          : Allow DSS member to enrollment in MC program not on exclusion list if MC Opt Out is active.
+Expected Results                   : DSS member is  allowed to enroll in MC program not on exclusion list if MC Opt Out is active.
+Test Case ID for Row 1295          : 42508
+Associated Req ID                  : 36341.080.030
+Requirement linked for test case   : 42508
+Notebook                           : Project23.04
+Business Function                  : Project23.04
+Notebook/BF linked for test case   : 42508
+Finished at                        : Fri Mar 03 10:43:12 EST 2023
+****************************************************
+                     Logged out                     
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 03/Mar/2023 10:43:13AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
