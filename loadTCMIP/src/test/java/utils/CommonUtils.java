@@ -231,7 +231,6 @@ public class CommonUtils {
 	/*                returns boolean value                                 */
 	/*                                                                      */
 	/*    Parameters: idReq, subsystemTC, groupingTC, bFunctionTC, envTC,   */
-	/*                linkReqToTC                                           */
 	/*                                                                      */
 	/*       Returns: boolean                                               */
 	/*                                                                      */

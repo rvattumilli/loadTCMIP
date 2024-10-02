@@ -4,7 +4,7 @@
 	<parameter name="emailRecips" value="false" />
 	<parameter name="browser" value="chrome" />
 	<parameter name="logDebugMsgs" value="false" />
-	<parameter name="lastModifiedDate" value="09/17/2024" />
+	<parameter name="lastModifiedDate" value="10/02/2024" />
 	<test name="Load TC in MIP" preserve-order="true">
 		<classes>
 			<class name="loadTCMIP.LoadTCMIP">
