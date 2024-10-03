@@ -167,6 +167,8 @@ public class CommonUtils {
 	/* --------  --------------  ------------------------------------------ */
 	/* 11/19/22  R.Vattumilli    Initial Creation of validateTCData()       */
 	/*                                                                      */
+	/* 09/05/24  R.Vattumilli    Modified Validation                        */
+	/*                                                                      */
 	/************************************************************************/
 	
 	public static boolean validateTCData(String idReq, String subsystemTC, String groupingTC, String bFunctionTC, String envTC) throws Exception {
