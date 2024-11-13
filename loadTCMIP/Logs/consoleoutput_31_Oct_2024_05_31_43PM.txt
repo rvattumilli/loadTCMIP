@@ -1,0 +1,147 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 31/Oct/2024 05:31:43PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 10/03/2024
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 87
+Total No.of Rows fetched              : 43
+*****************************************************************
+Started at                            : Thu Oct 31 17:31:55 EDT 2024
+Creating requirement for Row #        : 40
+Validation Time(ms)                   : 590
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.010
+Requirement Name                      : E1 - Enrollment Confirmation Notice - PCC--No Handbook
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Keep the existing batch/business rule that generates/triggers E1- Enrollment Confirmation Notice - PCC--No Handbook. This letter should go to the member regardless of age & to the active ARD contact types (ERDI, ERDII, ERDIII) if the member has any.  NOTE: E1 letter is triggered when the member is re-assigned to a same PCC or changes to a different PCC within 365 days. This could be voluntary or system assigned and it could be due to a PCC conversion.
+SAK Req for Row 40                    : 14252
+Finished at                           : Thu Oct 31 17:31:59 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:31:59 EDT 2024
+Creating requirement for Row #        : 41
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 554
+Requirement Validation status         : FAIL
+Finished at                           : Thu Oct 31 17:32:00 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:00 EDT 2024
+Creating requirement for Row #        : 42
+Validation Time(ms)                   : 610
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.030
+Requirement Name                      : Create E1 - META DATA object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "Metadata" object to identify the E1 -  Enrollment Confirmation Notice - PCC--No Handbook. Include the following data elements in JSON format. {The document is uploaded with expected data objects. Please refer to the uploaded document}  id #New Sequential Notice ID# type (cde_letter_type ="E1" ) Language priority (Use NORMAL) noticetobe replaced (optional field. MMIS can leave it off)
+SAK Req for Row 42                    : 14253
+Finished at                           : Thu Oct 31 17:32:05 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:05 EDT 2024
+Creating requirement for Row #        : 43
+Requirement Name                      : Metadata object - Notice language
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 529
+Requirement Validation status         : FAIL
+Finished at                           : Thu Oct 31 17:32:06 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:06 EDT 2024
+Creating requirement for Row #        : 44
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 523
+Requirement Validation status         : FAIL
+Finished at                           : Thu Oct 31 17:32:08 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:08 EDT 2024
+Creating requirement for Row #        : 45
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 533
+Requirement Validation status         : FAIL
+Finished at                           : Thu Oct 31 17:32:09 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:09 EDT 2024
+Creating requirement for Row #        : 46
+Validation Time(ms)                   : 547
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.050
+Requirement Name                      : Create E1 - RECIPIENT object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "RECIPIENT" object to identify the E1 recipient. Include the following data elements in JSON format. {The document will be uploaded with expected data objects.}  firstName  {NOTE: Pass the full contact name in the recipient first name element if the member has active ARD contact types (please see notice specific requirement for other contact types)} lastName middleName id (NOTE: Send the MMIS id) suffix type (NOTE: This is delivery type. A notice can be delivered via print, email, SMS or not delivered at all(allowable values for CNS "print", "email", "sms", "noDelivery") printType emailAddress phoneNumber  Address (NOTE : Send member's or Active contact's mailing address) line1 line 2 city state zipcode city  NOTE: For MMIS zip codes without the zip+4 value, send only the 5-character value ("11111"). Where the zip+4 value is available, send all nine characters with the hyphen separator ("11111-2345").
+SAK Req for Row 46                    : 14254
+Finished at                           : Thu Oct 31 17:32:14 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:14 EDT 2024
+Creating requirement for Row #        : 47
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 514
+Requirement Validation status         : FAIL
+Finished at                           : Thu Oct 31 17:32:15 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:15 EDT 2024
+Creating requirement for Row #        : 48
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 513
+Requirement Validation status         : FAIL
+Finished at                           : Thu Oct 31 17:32:16 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:16 EDT 2024
+Creating requirement for Row #        : 49
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 510
+Requirement Validation status         : FAIL
+Finished at                           : Thu Oct 31 17:32:18 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:18 EDT 2024
+Creating requirement for Row #        : 50
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 514
+Requirement Validation status         : FAIL
+Finished at                           : Thu Oct 31 17:32:19 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:32:19 EDT 2024
+Creating requirement for Row #        : 51
+Screenshot Path                       : C:\Users\RVattumilli\git\repository\loadTCMIP\Screenshots\
+ORA-00936: missing expression
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP abended 31/Oct/2024 05:32:20PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

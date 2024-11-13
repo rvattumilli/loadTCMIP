@@ -60,7 +60,7 @@ public class LoadTCMIP {
 	private final String selectTestCaseSql = "select * from load_tc where tc_row = ";
 	private final String selectReqSql = "select * from load_req where req_row = ";
 	private final String credQuery = "select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from "
-			 						+ "v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2"; 
+			 						+ "v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2";
 	private final String testCaseSql = "select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, "
 										+ "a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, "
 										+ "nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where "
@@ -98,10 +98,11 @@ public class LoadTCMIP {
 		try {
 			System.out.println("****************************************************");
 			dataList = CommonUtils.getTCReqData(testCaseSql, 14, CommonUtils.getDBConnection(), "            NO TC DATA THIS RUN           ");
-			if (dataList != null) {				
+			if (dataList != null) {
+				CommonUtils.setReplaceType("tc");
 				System.out.println(String.format(outputFormat, "Link Notebook/Business Function", linkNBToTC));
 				System.out.println(String.format(outputFormat, "Link Requirement", linkReqToTC));
-				System.out.println(String.format(outputFormat, "Link WI/Defect/CO", linkTCToWI));				
+				System.out.println(String.format(outputFormat, "Link WI/Defect/CO", linkTCToWI));
 				driver.findElement(By.linkText("Testing")).click();
 				String noteBook, businessFunction, sakParticipant, owner, env, subsystemTc, nam, dsc, dscExpect, grpng, wiTestCase, tcRow, wiType, idReq, reqType, sakReqType, SelSql, UpdSql;
 				Alert alert;
@@ -206,7 +207,7 @@ public class LoadTCMIP {
 							if (linkTCToWI && (!wiTestCase.equals(""))) {
 								System.out.println(String.format(outputFormat, "iWI/Defect/CO", wiTestCase));
 								System.out.println(String.format(outputFormat, "iWI Type", wiType));
-								if (((wiType.equals("Work Item")) || (wiType.equals("Change Order")))) {									
+								if (((wiType.equals("Work Item")) || (wiType.equals("Change Order")))) {
 									driver.findElement(By.linkText("Work Item")).click();
 									driver.findElement(By.xpath("//input[contains(@name,'CoId')]")).sendKeys(wiTestCase);
 									driver.findElement(By.xpath("//input[@value = 'Search Work Items']")).click();
@@ -269,6 +270,7 @@ public class LoadTCMIP {
 			driver.findElement(By.linkText("Requirements")).click();
 			dataList = CommonUtils.getTCReqData(reqSql, 8, CommonUtils.getDBConnection(), "           NO REQ DATA THIS RUN           ");
 			if (dataList != null) {
+				CommonUtils.setReplaceType("req");
 				String reqRow, idReq, nameReq, typeReq, subsystemReq, rtmReq, narrativeReq, namOwnerReq, SelSql, UpdSql;
 				Alert alert;
 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -308,21 +310,21 @@ public class LoadTCMIP {
 							driver.findElement(By.xpath("//textarea[contains(@name,'ReqDsc')]")).sendKeys(narrativeReq);
 							System.out.println(String.format(outputFormat, "Requirement Narrative", narrativeReq));
 							driver.findElement(By.xpath("//input[@value = 'Add Requirement']")).click();
-							Thread.sleep(250);
+							Thread.sleep(150);
 							wait.until(ExpectedConditions.alertIsPresent());
 							alert = driver.switchTo().alert();
 							alert.accept();
 							sakReq = driver.findElement(By.xpath("//td[contains(@id,'contentWindow')]//table/tbody/tr[2]/td[4]")).getText().trim();
 							System.out.println(String.format(outputFormat, "SAK Req for Row " + reqRow, sakReq));
 							SelSql = selectReqSql + reqRow;
-							UpdSql = "update load_req set ind_status = 'P', sak_req = '" + sakReq + "' where req_row = " + reqRow;
+							UpdSql = "update load_req set ind_status = 'P', dte_loaded = to_char(sysdate, 'yyyymmdd'), sak_req = " + sakReq + " where req_row = " + reqRow;
 							CommonUtils.updateLoadTableData(SelSql, "REQ_ROW", UpdSql);
 							driver.findElement(By.partialLinkText("Status")).click();
 							driver.findElement(By.xpath("//img[@src='../../images/edit16.gif']")).click();
 							driver.switchTo().frame("dot_editForm");
 							new Select(driver.findElement(By.xpath("//select[contains(@name,'StatusOwnerSak')]"))).selectByVisibleText(namOwnerReq);
 							driver.findElement(By.xpath("//input[@value = 'Update Status']")).click();
-							Thread.sleep(250);
+							Thread.sleep(150);
 							wait.until(ExpectedConditions.alertIsPresent());
 							alert = driver.switchTo().alert();
 							alert.accept();
@@ -343,7 +345,7 @@ public class LoadTCMIP {
 		} catch (Exception e) {
 			CommonUtils.setJobAbend(true);
 			CommonUtils.sshot(driver);
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -368,12 +370,13 @@ public class LoadTCMIP {
 	/*                                                                      */
 	/************************************************************************/
 
-	@Parameters({ "browser", "logDebugMsgs", "lastModifiedDate" })
+	@Parameters({ "browser", "logDebugMsgs", "lastModifiedDate", "overrideValidation" })
 	@BeforeTest
-	private void beforeTest(String browser, boolean logDebugMsgs, String lastModifiedDate) {
+	private void beforeTest(String browser, boolean logDebugMsgs, String lastModifiedDate, boolean overrideValidation) {
 
 		try {
 			CommonUtils.setLogDebugMsgs(logDebugMsgs);
+			CommonUtils.setOverrideValidation(overrideValidation);
 			System.out.println(String.format(outputFormat, "Last Modified Date", lastModifiedDate));
 			colNames.add("HOST_URL");
 			colNames.add("USER_ID");

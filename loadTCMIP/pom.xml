@@ -6,7 +6,7 @@
 	<artifactId>loadTCMIP</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>LoadTCMIP</name>
-	<description>This project will load test cases and requirements to MIP and link test cases to WI/Defect/Req/NB/BF</description>
+	<description>This app will load test cases and requirements to MIP and link test cases to WI/Defect/Req/NB/BF</description>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>

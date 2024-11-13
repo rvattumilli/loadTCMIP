@@ -1,0 +1,113 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 01/Nov/2024 10:25:22AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 11/01/2024
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 39
+Total No.of Rows fetched              : 6
+*****************************************************************
+Started at                            : Fri Nov 01 10:25:30 EDT 2024
+Creating requirement for Row #        : 83
+Validation Time(ms)                   : 463
+Requirement Validation status         : PASS
+Requirement ID                        : 38361.01.001
+Requirement Name                      : Stop EC & DP Notice from going out to CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create a new process to filter/determine when to stop EC & DP from going out to CNS. If both EC [Community Partners Member Enrollment Confirmation Letter for (LTSS CP - ACCS2 & PACC2)] & DP [Community Partners Member Disenrollment Confirmation Letter (BHCP, LTSS, ACCS1, ACCS2, PACC1, PACC2, ELTSS)] notices get triggered on the same day for the same member with same PMP ID, stop both the EC & DP notices from going out to the CNS as JSON request.
+SAK Req for Row 83                    : 14340
+Finished at                           : Fri Nov 01 10:25:34 EDT 2024
+*****************************************************************
+Started at                            : Fri Nov 01 10:25:34 EDT 2024
+Creating requirement for Row #        : 84
+Validation Time(ms)                   : 484
+Requirement Validation status         : PASS
+Requirement ID                        : 38361.02.001
+Requirement Name                      : Stop EB & DP Notice from going out to CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create a new process to filter/determine when to stop EB & DP from going out to CNS. If both EB [Community Partners Member Enrollment Confirmation Letter for Behavioral Health (BHCP, CSA, LTSS, ACCS1, PACC1, ELTSS) & DP [Community Partners Member Disenrollment Confirmation Letter (BHCP, LTSS, ACCS1, ACCS2, PACC1, PACC2, ELTSS)] notices get triggered on the same day for the same member with same PMP ID, stop both the EB & DP notices from going out to the  CNS as JSON request.
+SAK Req for Row 84                    : 14341
+Finished at                           : Fri Nov 01 10:25:37 EDT 2024
+*****************************************************************
+Started at                            : Fri Nov 01 10:25:37 EDT 2024
+Creating requirement for Row #        : 85
+Validation Time(ms)                   : 500
+Requirement Validation status         : PASS
+Requirement ID                        : 38361.03.001
+Requirement Name                      : Stop E1 Notice from going out to CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create a new process to filter/determine when to stop E1 notice from going out to CNS. If the E1-( Enrollment Confirmation Notice - PCC--No Handbook)  notice gets triggered after the member''s enrollment effective date is more than 15 calendar days in the past from the run date, stop E1 notice from going out to CNS. For instance -This scenario could occur when a member is linked. There could be other possible scnearios which could result this situation.
+SAK Req for Row 85                    : 14342
+Finished at                           : Fri Nov 01 10:25:41 EDT 2024
+*****************************************************************
+Started at                            : Fri Nov 01 10:25:41 EDT 2024
+Creating requirement for Row #        : 86
+Validation Time(ms)                   : 739
+Requirement Validation status         : PASS
+Requirement ID                        : 38361.04.001
+Requirement Name                      : Stop EA Notice from going out to CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create a new process to filter/determine when to stop EA notice from going out to CNS. If the EA - (ACOB/PCCB Enrollment Confirmation Notice with(out) PCC Handbook)  notice gets triggered after the members enrollment effective date is more than 15 calendar days in the past from the run date, stop EA notice from going out to CNS.  For instance -This scenario could occur when a member is linked. There could be other possible scenarios which could result this situation.
+SAK Req for Row 86                    : 14343
+Finished at                           : Fri Nov 01 10:25:46 EDT 2024
+*****************************************************************
+Started at                            : Fri Nov 01 10:25:46 EDT 2024
+Creating requirement for Row #        : 87
+Validation Time(ms)                   : 477
+Requirement Validation status         : PASS
+Requirement ID                        : 38361.05.001
+Requirement Name                      : Able to create audit report of filtered Notice
+Requirement Type                      : Reports
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create a new process to capture the audit trail of notices that are not sent due to print filtering logic. Businesses should be able to request a report of these notices as needed.
+SAK Req for Row 87                    : 14344
+Finished at                           : Fri Nov 01 10:25:49 EDT 2024
+*****************************************************************
+Started at                            : Fri Nov 01 10:25:49 EDT 2024
+Creating requirement for Row #        : 88
+Validation Time(ms)                   : 508
+Requirement Validation status         : PASS
+Requirement ID                        : 38361.06.001
+Requirement Name                      : Stop filtered notices from being displayed in UI
+Requirement Type                      : UI-Base System
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Stop filtered notices from being displayed on the MMIS UI or in MyServices.
+SAK Req for Row 88                    : 14345
+Finished at                           : Fri Nov 01 10:25:53 EDT 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 01/Nov/2024 10:25:53AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

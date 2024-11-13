@@ -1,0 +1,473 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 31/Oct/2024 06:02:19PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 10/03/2024
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 90
+Total No.of Rows fetched              : 32
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:24 EDT 2024
+Creating requirement for Row #        : 51
+Requirement Name                      : RECIPIENT-Send default print type ''Regular''
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 542
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.075
+Requirement Name                      : RECIPIENT-Send default print type ''Regular''
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the default print type as Regular if there is no print type available from source systems for a member. In addition, regular should be sent if the letter is being sent to a valid contact type.
+SAK Req for Row 51                    : 14263
+Finished at                           : Thu Oct 31 18:02:28 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:28 EDT 2024
+Creating requirement for Row #        : 52
+Requirement Name                      : Recipient object - ARD contact types
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 565
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.080
+Requirement Name                      : Recipient object - ARD contact types
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send E1 to all the active ARD contacts types (ERDI, II, & III). Member can have multiple active ERD I/II/III contacts at a time. In this scenario, the notice needs to be sent to all the active ERD I/II/III Contacts.
+SAK Req for Row 52                    : 14264
+Finished at                           : Thu Oct 31 18:02:32 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:32 EDT 2024
+Creating requirement for Row #        : 53
+Validation Time(ms)                   : 518
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.095
+Requirement Name                      : Same Notice Template for Member/Contact
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Member/Contact will have the same notice template. Member/contact will trigger the same notice template.
+SAK Req for Row 53                    : 14265
+Finished at                           : Thu Oct 31 18:02:35 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:35 EDT 2024
+Creating requirement for Row #        : 54
+Validation Time(ms)                   : 547
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.096
+Requirement Name                      : Create E1 - PAYLOAD Object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "PAYLOAD" object to identify the E1 recipient & include the data elements in JSON Format. Since the template is driving what the dynamic fields are needed in PAYLOAD, Please refer to the attached E1 template for the data elements.  NOTE: At the top of the template will have the mailing information (which will show in the envelope window).  [Mailing Name] {NOTE: This will include Member/ARD information listed as a) Member Name (listed as FirstName MiddleName LastName Suffix) b) ARD Name (listed as Contact Name)} [Address Line 1] [Address Line 2] [City, State Zip code]  Date: [Month DD, YYYY of Notice creation] Notice ID: [New Sequential Notice ID] / [Notice Type] Member ID: [MMIS ID] SSN: [XXX-XX- last four digits] [NOTE: If the member does not have any SSN in MMIS, it will be sent as (xxx-xx-blank). CNS will display the value as "Not Available"]  Attn: [ARD/PSI Name] Re: Notice sent to [ARD/PSI representee's Name] { NOTE: The representee is the member that they are representing. Send "FirstName MiddleName LastName Suffix" for this field with different tag name} [FirstName MiddleName LastName Suffix] [#EffectiveDateEng#] [#PmpNameTitleCase#] Start Date: [#EffectiveDateEng#] Member: [#FirstName MiddleName LastName Suffix] [Masked DOB - XX/XX/YYYY] MassHealth ID: [MMIS ID] Enrollment: [#PmpNameTitleCase#] [#PmpStreetAddress#] [#PmpAddressLastLine#] [#PmpPhoneHash#] [NOTE: Send this value in this format (999) 999-9999] Health Plan:[#Healthplan#]  (NOTE: Send this value "Primary Care Clinician (PCC) Plan" in the payload)
+SAK Req for Row 54                    : 14266
+Finished at                           : Thu Oct 31 18:02:40 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:40 EDT 2024
+Creating requirement for Row #        : 55
+Requirement Name                      : Payload - ARD/contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 547
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.100
+Requirement Name                      : Payload - ARD/contacts
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Do not send any tag in the payload for contacts if the member has no active contacts i.e.,  effective date NOT between t_re_contact.con_eff_date and t_re_contact.con_end_date. (NOTE: Notices should be sent on the effective date and/or the end date as well)
+SAK Req for Row 55                    : 14267
+Finished at                           : Thu Oct 31 18:02:44 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:44 EDT 2024
+Creating requirement for Row #        : 56
+Requirement Name                      : Send notice to contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 536
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.105
+Requirement Name                      : Send notice to contacts
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Add logic to check if the member has any active ARD contacts assigned i.e., eff date between t_re_contact.con_eff_date and t_re_contact.con_end_date . If there is information, send the notice to active ARD contacts (ERDI, II & III) along with the member. In this scenario, 2 or more letter requests should be sent to CNS. One addressing member & other addressing  contacts. Send the delivery "type" as "PAPER", print Type as "Regular" & "Language" as "English". (Default)  NOTE: Notices should be sent on the effective date and/or the end date as well)
+SAK Req for Row 56                    : 14268
+Finished at                           : Thu Oct 31 18:02:48 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:48 EDT 2024
+Creating requirement for Row #        : 57
+Requirement Name                      : Make contact types configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 619
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.110
+Requirement Name                      : Make contact types configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make the contact types configurable so that other contact types can be added in the future as per business needs.   NOTE:  EC Notice will be sent to active ARDs (ERDI, II & III)
+SAK Req for Row 57                    : 14269
+Finished at                           : Thu Oct 31 18:02:52 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:52 EDT 2024
+Creating requirement for Row #        : 58
+Validation Time(ms)                   : 523
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.115
+Requirement Name                      : Create [E1]- INSERTS object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "INSERTS" object to identify the E1 recipient's insert. Include the following data element:  inserts (group#) Group# 2 - (Babel + Fair Hearing Form)  (NOTE: The final insert group number will be provided by MH Business)
+SAK Req for Row 58                    : 14270
+Finished at                           : Thu Oct 31 18:02:55 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:55 EDT 2024
+Creating requirement for Row #        : 59
+Requirement Name                      : Make Inserts Groups configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 555
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.115A
+Requirement Name                      : Make Inserts Groups configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make Inserts Groups a configurable change so the new groups can be added in the future as per business needs
+SAK Req for Row 59                    : 14271
+Finished at                           : Thu Oct 31 18:02:59 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:02:59 EDT 2024
+Creating requirement for Row #        : 60
+Requirement Name                      : Make delivery type configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 545
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.120
+Requirement Name                      : Make delivery type configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make delivery types configurable. If delivery type is edelivery (EMAIL/SMS) or there is no delivery type selected by a member then use the default value of PAPER.  NOTE:  edelivery will be implemented post Group 4 CNS implementation so default will change
+SAK Req for Row 60                    : 14272
+Finished at                           : Thu Oct 31 18:03:03 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:03 EDT 2024
+Creating requirement for Row #        : 61
+Validation Time(ms)                   : 535
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.010
+Requirement Name                      : EC - Community Partners Member Enrollment Confirmation Letter for LTSS CP
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Keep the existing batch/business rule that generates EC - Community Partners Member Enrollment Confirmation Letter for LTSS CP.  This letter should go to the member regardless of age & to the active ARD contact types (ERDI, ERDII, ERDIII) if the member has any.   NOTE: EC letter is triggered  when the member is enrolled to CP (Community Partner) plans ACCS2 & PACC2.
+SAK Req for Row 61                    : 14273
+Finished at                           : Thu Oct 31 18:03:07 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:07 EDT 2024
+Creating requirement for Row #        : 62
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 618
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.020
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Stop sending the notice through the exisiting noticing solution (Maximus/EOTTS/SM) as soon as the configuration is turned ON to send the notice via CNS.
+SAK Req for Row 62                    : 14274
+Finished at                           : Thu Oct 31 18:03:11 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:11 EDT 2024
+Creating requirement for Row #        : 63
+Validation Time(ms)                   : 540
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.030
+Requirement Name                      : Create EC - META DATA object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "Metadata" object to identify the Notice Type and include the following data elements in JSON format. {The document will be uploaded with expected data objects.}  id #New Sequential Notice ID# type (cde_letter_type ="EC" ) Language priority (Use NORMAL) noticetobe replaced (optional field. MMIS can leave it off)
+SAK Req for Row 63                    : 14275
+Finished at                           : Thu Oct 31 18:03:14 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:14 EDT 2024
+Creating requirement for Row #        : 64
+Requirement Name                      : Metadata object - Notice language
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 524
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.035
+Requirement Name                      : Metadata object - Notice language
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the default value as EN for English language if the member has language preference other than "en" for English, "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese. This defines the language in which the notice should be  generated.
+SAK Req for Row 64                    : 14276
+Finished at                           : Thu Oct 31 18:03:18 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:18 EDT 2024
+Creating requirement for Row #        : 65
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 597
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.040
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : In a case where a member has selected one of these languages (""es"" for Spanish, ""pt"" for Portuguese, ""zh"" for Simplified Chinese, ""ht"" for Haitian Creole, ""vi"" for Vietnamese) as a preferred language other than English, send 2 or more notice generation requests for worker and contact types. 1) one will have preferred language= Foreign language (example-Spanish), delivery type = Print (for example) & print type = (Regular, Large Print or Braille) 2) second will have preferred language = English, delivery Type = NoDelivery which means #2 will not go out to the member and is for worker reference only & print type = Regular 3) third or more will be for  the active contact types (specific to the notice types, except active ARD's who receive copies of all notices). The preferred language = English, delivery Type = Print & print type = Regular
+SAK Req for Row 65                    : 14277
+Finished at                           : Thu Oct 31 18:03:22 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:22 EDT 2024
+Creating requirement for Row #        : 66
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 551
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.045
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : MMIS stores both Primary language & Written language for a member. When sending this data in JSON, "Written Language" should be selected. (T_CDE_LANG_WRITTEN)
+SAK Req for Row 66                    : 14278
+Finished at                           : Thu Oct 31 18:03:26 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:26 EDT 2024
+Creating requirement for Row #        : 67
+Validation Time(ms)                   : 544
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.050
+Requirement Name                      : Create EC - RECIPIENT object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "RECIPIENT" object to identify the EC recipient. Include the following data elements in JSON format. {The document will be uploaded with expected data objects.}  firstName  {NOTE: Pass the full contact name in the recipient first name element if the member has active ARD contact types (please see notice specific requirement for other contact types)} lastName middleName id (NOTE: Send the MMIS id) suffix type (NOTE: This is delivery type. A notice can be delivered via print, email, SMS or not delivered at all(allowable values for CNS "print", "email", "sms", "noDelivery") printType emailAddress phoneNumber  Address (NOTE : Send member's or Active contact's mailing address) line1 line 2 city state zipcode city  NOTE: For MMIS zip codes without the zip+4 value, send only the 5-character value ("11111"). Where the zip+4 value is available, send all nine characters with the hyphen separator ("11111-2345").
+SAK Req for Row 67                    : 14279
+Finished at                           : Thu Oct 31 18:03:30 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:30 EDT 2024
+Creating requirement for Row #        : 68
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 544
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.055
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If members communication preference is "TEXT\SMS", send the default value `PRINT' as type for (communication preference 'PAPER'). For the print type it is possible that a member would have selected regular, large print or braille accommodations for edelivery(sms/text/email) so the print type should be sent according to the preference the member has selected.  NOTE: Based on the information shared by business, edelivery will not be implemented until after Group 4 CNS implementation. Hence, if a member has selected edelivery (sms/ text/email) communication preference, MMIS should send the PAPER as default value up until that time. Please refer to requirement id 38355.EC.120 for further details. eDelivery should not be sent for any contact types because they will not get electronic notice.
+SAK Req for Row 68                    : 14280
+Finished at                           : Thu Oct 31 18:03:34 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:34 EDT 2024
+Creating requirement for Row #        : 69
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 568
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.060
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If members communication preference is "EMAIL",  send the default value `PRINT' as type for (communication preference 'PAPER'). For the print type it is possible that a member would have selected regular, large print or braille accommodations for edelivery(sms/text/email) so the print type should be sent according to the preference the member has selected  NOTE: Based on the information shared by business, edelivery will not be implemented until after Group 4 CNS implementation. Hence, if a member has selected edelivery (sms/ text/email) communication preference, MMIS should send the PAPER as default value up until that time. Please refer to requirement id 38355.EC.120 for further details.
+SAK Req for Row 69                    : 14281
+Finished at                           : Thu Oct 31 18:03:38 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:38 EDT 2024
+Creating requirement for Row #        : 70
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 518
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.065
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the print type (Regular, Large Print or Braille) if the member has selected the communication preference as PAPER/email/sms/text. Send the default value "Regular" for valid ARD contact types (ARD-ERDI, II, & III). Note: Please see notice specific requirement for other contact types
+SAK Req for Row 70                    : 14282
+Finished at                           : Thu Oct 31 18:03:42 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:42 EDT 2024
+Creating requirement for Row #        : 71
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 538
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.070
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send default to communication preference (delivery type) as paper if there is no communication preference available from source systems for a member. In addition, paper should be sent if the letter is being sent to a valid contact type.
+SAK Req for Row 71                    : 14283
+Finished at                           : Thu Oct 31 18:03:45 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:45 EDT 2024
+Creating requirement for Row #        : 72
+Requirement Name                      : RECIPIENT-Send default print type ''Regular''
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 535
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.075
+Requirement Name                      : RECIPIENT-Send default print type ''Regular''
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the default print type as Regular if there is no print type available from source systems for a member. In addition, regular should be sent if the letter is being sent to a valid contact type.
+SAK Req for Row 72                    : 14284
+Finished at                           : Thu Oct 31 18:03:49 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:49 EDT 2024
+Creating requirement for Row #        : 73
+Requirement Name                      : Recipient object - ARD contact types
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 573
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.080
+Requirement Name                      : Recipient object - ARD contact types
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send EC to all the active ARD contacts types (ERDI, II, & III). Member can have multiple active ERD I/II/III contacts at a time. In this scenario, the notice needs to be sent to all the active ERD I/II/III Contacts.
+SAK Req for Row 73                    : 14285
+Finished at                           : Thu Oct 31 18:03:53 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:53 EDT 2024
+Creating requirement for Row #        : 74
+Requirement Name                      : Same Notice Template for Member/ARD
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 585
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.095
+Requirement Name                      : Same Notice Template for Member/ARD
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Member/Contact will all have the same notice template. Member/contact will trigger the same notice template.
+SAK Req for Row 74                    : 14286
+Finished at                           : Thu Oct 31 18:03:56 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:03:56 EDT 2024
+Creating requirement for Row #        : 75
+Validation Time(ms)                   : 538
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.096
+Requirement Name                      : Create EC - PAYLOAD Object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "PAYLOAD" object to identify the EC recipient & include the data elements in JSON Format. Since the template is driving what the dynamic fields are needed in PAYLOAD, please refer to the attached EC template for the data elements.  NOTE: At the top of the template will have the mailing information (which will show in the envelope window). [Mailing Name] {NOTE: This will include Member/ARD information listed as a) Member Name (listed as FirstName MiddleName LastName Suffix) b) ARD Name (listed as Contact Name)} [Address Line 1] [Address Line 2] [City, State Zip code]  Date: [Month DD, YYYY of Notice creation] Notice ID: [New Sequential Notice ID] / [Notice Type]  Member ID: [MMIS ID] SSN: [XXX-XX- last four digits] [NOTE: If the member does not have any SSN in MMIS, it will be sent as (xxx-xx-blank). CNS will display the value as "Not Available"]  Attn: [ARD/PSI Name] Re: Notice sent to [ARD/PSI representee's Name] { NOTE: The representee is the member that they are representing. Send "FirstName MiddleName LastName Suffix" for this field with different tag name}  [FirstName MiddleName LastName Suffix] [#PmpNameTitleCase#] [#PmpNameTitleCase#] [#PmpNameTitleCase#] [#PmpPhoneHash#]. [NOTE: Send this value in this format (999) 999-9999] [#PmpNameTitleCase#] [#PmpNameTitleCase#] [#PmpPhoneHash#]
+SAK Req for Row 75                    : 14287
+Finished at                           : Thu Oct 31 18:04:01 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:04:01 EDT 2024
+Creating requirement for Row #        : 76
+Requirement Name                      : Payload - ARD/contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 524
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.100
+Requirement Name                      : Payload - ARD/contacts
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Do not send any tag in the payload for contacts if the member has no active contacts i.e.,  effective date NOT between t_re_contact.con_eff_date and t_re_contact.con_end_date. (NOTE: Notices should be sent on the effective date and/or the end date as well)
+SAK Req for Row 76                    : 14288
+Finished at                           : Thu Oct 31 18:04:04 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:04:04 EDT 2024
+Creating requirement for Row #        : 77
+Requirement Name                      : Send notice to contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 526
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.105
+Requirement Name                      : Send notice to contacts
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Add logic to check if the member has active ARD contacts assigned i.e., eff date between t_re_contact.con_eff_date and t_re_contact.con_end_date . If there is information, send the notice to active ARD contactslong with the member. In this scenario, 2 or more letter requests should be sent to CNS. One addressing member & other addressing  contacts. Send the delivery "type" as "PAPER", print Type as "Regular" & "Language" as "English". (Default) (Notices should be sent on the effective date and/or the end date as well) Note: Please see notice specific requirement for other contact types
+SAK Req for Row 77                    : 14289
+Finished at                           : Thu Oct 31 18:04:08 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:04:08 EDT 2024
+Creating requirement for Row #        : 78
+Requirement Name                      : Make contact types configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 536
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.110
+Requirement Name                      : Make contact types configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make the contact types configurable so that other contact types can be added in the future as per business needs.   NOTE:  EC Notice will be sent to active ARDs (ERDI, II & III)
+SAK Req for Row 78                    : 14290
+Finished at                           : Thu Oct 31 18:04:12 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:04:12 EDT 2024
+Creating requirement for Row #        : 79
+Validation Time(ms)                   : 520
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.115
+Requirement Name                      : Create [EC]- INSERTS object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "INSERTS" object to identify the [notice type] recipient's insert. Include the following data element:  inserts (group#) Group# 2 - (Babel + Fair Hearing Form)  (NOTE: The final insert group number will be provided by MH Business)
+SAK Req for Row 79                    : 14291
+Finished at                           : Thu Oct 31 18:04:16 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:04:16 EDT 2024
+Creating requirement for Row #        : 80
+Requirement Name                      : Make Inserts Groups configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 557
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.115A
+Requirement Name                      : Make Inserts Groups configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make Inserts Groups a configurable change so the new groups can be added in the future as per business needs
+SAK Req for Row 80                    : 14292
+Finished at                           : Thu Oct 31 18:04:19 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:04:19 EDT 2024
+Creating requirement for Row #        : 81
+Requirement Name                      : Make delivery type configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 539
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.120
+Requirement Name                      : Make delivery type configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make delivery types configurable. If delivery type is edelivery (EMAIL/SMS) or there is no delivery type selected by a member then use the default value of PAPER.  NOTE:  edelivery will be implemented post Group 4 CNS implementation so default will change
+SAK Req for Row 81                    : 14293
+Finished at                           : Thu Oct 31 18:04:23 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 18:04:23 EDT 2024
+Creating requirement for Row #        : 82
+Requirement Name                      : Handle the error received from the CNS
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 571
+Requirement Validation status         : PASS
+Requirement ID                        : 38355.EC.125
+Requirement Name                      : Handle the error received from the CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Handle the error received from the CNS. What action is required from the MMIS is uploaded in the interface item 37817 under this requirement id 37817-05-002.
+SAK Req for Row 82                    : 14294
+Finished at                           : Thu Oct 31 18:04:27 EDT 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 31/Oct/2024 06:04:27PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

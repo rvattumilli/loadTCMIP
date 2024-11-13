@@ -1,0 +1,159 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 31/Oct/2024 05:48:48PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 10/03/2024
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 81
+Total No.of Rows fetched              : 40
+*****************************************************************
+Started at                            : Thu Oct 31 17:48:53 EDT 2024
+Creating requirement for Row #        : 41
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 529
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.020
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Stop sending the notice through the exisiting noticing solution (Maximus/EOTTS/SM) as soon as the configuration is turned ON to send the notice via CNS.
+SAK Req for Row 41                    : 14255
+Finished at                           : Thu Oct 31 17:48:56 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:48:56 EDT 2024
+Creating requirement for Row #        : 43
+Requirement Name                      : Metadata object - Notice language
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 510
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.035
+Requirement Name                      : Metadata object - Notice language
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the default value as EN for English language if the member has language preference other than "en" for English, "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese. This defines the language in which the notice should be generated.
+SAK Req for Row 43                    : 14256
+Finished at                           : Thu Oct 31 17:49:00 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:49:00 EDT 2024
+Creating requirement for Row #        : 44
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 517
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.040
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : "In a case where a member has selected one of these languages (""es"" for Spanish, ""pt"" for Portuguese, ""zh"" for Simplified Chinese, ""ht"" for Haitian Creole, ""vi"" for Vietnamese) as a preferred language other than English, send 2 or more notice generation requests for worker and contact types. 1) one will have preferred language= Foreign language (example-Spanish), delivery type = Print (for example) & print type = (Regular, Large Print or Braille) 2) second will have preferred language = English, delivery Type = NoDelivery which means #2 will not go out to the member and is for worker reference only & print type = Regular 3) third or more will be for  the active contact types (specific to the notice types, except active ARD's who receive copies of all notices). The preferred language = English, delivery Type = Print & print type = Regular
+SAK Req for Row 44                    : 14257
+Finished at                           : Thu Oct 31 17:49:04 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:49:04 EDT 2024
+Creating requirement for Row #        : 45
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 510
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.045
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : MMIS stores both Primary language & Written language for a member. When sending this data in JSON, "Written Language" should be selected. (T_CDE_LANG_WRITTEN)
+SAK Req for Row 45                    : 14258
+Finished at                           : Thu Oct 31 17:49:08 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:49:08 EDT 2024
+Creating requirement for Row #        : 47
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 550
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.055
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If members communication preference is "TEXT\SMS", send the default value `PRINT' as type for (communication preference 'PAPER'). For the print type it is possible that a member would have selected regular, large print or braille accommodations for edelivery(sms/text/email) so the print type should be sent according to the preference the member has selected.  NOTE: Based on the information shared by business, edelivery will not be implemented until after Group 4 CNS implementation. Hence, if a member has selected edelivery (sms/ text/email) communication preference, MMIS should send the PAPER as default value up until that time. Please refer to requirement id 38354.E1.120 for further details. eDelivery should not be sent for any contact types because they will not get electronic notice.
+SAK Req for Row 47                    : 14259
+Finished at                           : Thu Oct 31 17:49:12 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:49:12 EDT 2024
+Creating requirement for Row #        : 48
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 546
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.060
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If members communication preference is "EMAIL",  send the default value `PRINT' as type for (communication preference 'PAPER'). For the print type it is possible that a member would have selected regular, large print or braille accommodations for edelivery(sms/text/email) so the print type should be sent according to the preference the member has selected  NOTE: Based on the information shared by business, edelivery will not be implemented until after Group 4 CNS implementation. Hence, if a member has selected edelivery (sms/ text/email) communication preference, MMIS should send the PAPER as default value up until that time. Please refer to requirement id 38354.E1.120 for further details.
+SAK Req for Row 48                    : 14260
+Finished at                           : Thu Oct 31 17:49:16 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:49:16 EDT 2024
+Creating requirement for Row #        : 49
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 535
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.065
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the print type (Regular, Large Print or Braille) if the member has selected the communication preference as PAPER/email/sms/text. Send the default value "Regular" for valid ARD contact types (ARD-ERDI, II, & III).
+SAK Req for Row 49                    : 14261
+Finished at                           : Thu Oct 31 17:49:19 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:49:19 EDT 2024
+Creating requirement for Row #        : 50
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 515
+Requirement Validation status         : PASS
+Requirement ID                        : 38354.E1.070
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send default to communication preference (delivery type) as paper if there is no communication preference available from source systems for a member. In addition, paper should be sent if the letter is being sent to a valid contact type.
+SAK Req for Row 50                    : 14262
+Finished at                           : Thu Oct 31 17:49:23 EDT 2024
+*****************************************************************
+Started at                            : Thu Oct 31 17:49:23 EDT 2024
+Creating requirement for Row #        : 51
+Screenshot Path                       : C:\Users\RVattumilli\git\repository\loadTCMIP\Screenshots\
+ORA-00936: missing expression
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP abended 31/Oct/2024 05:49:24PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

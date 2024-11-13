@@ -37,7 +37,7 @@ import org.openqa.selenium.WebDriver;
 public class CommonUtils {
 
 	private static Connection connection1 = null;
-	private static boolean emailHighImp = false, jobAbend = false, logDebugMsgs;
+	private static boolean emailHighImp = false, jobAbend = false, logDebugMsgs, overrideValidation;
 	private static final String outputFormat = "%-38s: %s";
 	private static final String reqTCValidationMessage = "Verify Requirement ID for the Test case";
 	private static final String subsystemTCValidationMessage = "Verify Subsystem for the Test case";
@@ -59,9 +59,26 @@ public class CommonUtils {
 	private static final String dbDriver = "oracle.jdbc.OracleDriver";
 	private static final String sshotPath = System.getProperty("user.dir") + "\\Screenshots\\";
 	private static Instant start, finish;
+	private static String replaceType;
 
 	private static boolean isEmailHighImp() {
 		return emailHighImp;
+	}
+
+	private static String getReplaceType() {
+		return replaceType;
+	}
+
+	public static void setReplaceType(String replaceType) {
+		CommonUtils.replaceType = replaceType;
+	}
+
+	private static boolean isOverrideValidation() {
+		return overrideValidation;
+	}
+
+	public static void setOverrideValidation(boolean overrideValidation) {
+		CommonUtils.overrideValidation = overrideValidation;
 	}
 
 	public static void setEmailHighImp(boolean setEmailHigh) {
@@ -183,7 +200,7 @@ public class CommonUtils {
 								+ "case when (select count(*) from subsystem_area f where trim(f.nam) = '" + subsystemTC + "') = 1 then 1 else 0 end as subsystem, "
 								+ "case when (select count(*) from test_case_grouping g where trim(g.nam) = '" + groupingTC + "') = 1 then 1 else 0 end as grpng, "
 								+ "case when (select count(*) from groop h where trim(h.nam_group) = '" + bFunctionTC + "') = 1 then 1 else 0 end as bf, "
-								+ "case when (select count(*) from environment i where trim(i.ind_environment) = '" + envTC + "') = 1 then 1 else 0 end as env from dual";
+								+ "case when (select count(*) from test_case_env i where trim(i.ind_environment) = '" + envTC + "') = 1 then 1 else 0 end as env from dual";
 		if(isLogDebugMsgs()) {
 			System.out.println(String.format(outputFormat, "Validate TC SQL", validateTCInfo));
 		}
@@ -229,7 +246,9 @@ public class CommonUtils {
 			envStatus = true;
 		}
 		if(reqStatus || subsystemStatus || groupingStatus || bfStatus || envStatus) {
-			return false;
+			if(!isOverrideValidation()) {
+				return false;
+			}
 		}
 		return true;
 	}
@@ -322,7 +341,9 @@ public class CommonUtils {
 			namOwnerReqStatus = true;
 		}
 		if(idReqStatus || nameReqStatus || typeReqStatus || subsystemReqStatus || rtmReqStatus || namOwnerReqStatus) {
-			return false;
+			if(!isOverrideValidation()) {
+				return false;
+			}			
 		}
 		return true;
 	}
@@ -676,7 +697,12 @@ public class CommonUtils {
 	
 	public static String replaceChars(String origString) {
 		
-		String replacedString = origString.replaceAll("\t", "").replaceAll(System.lineSeparator(), " ").replaceAll("\n", " ").trim();
+		String replacedString;
+		if(getReplaceType() == "req" ) {
+			replacedString = origString.replaceAll("\t", " ").replaceAll("'", "''").trim();
+		} else {
+			replacedString = origString.replaceAll("\t", "").replaceAll(System.lineSeparator(), " ").replaceAll("\n", " ").replaceAll("'", "''").trim();
+		}
 		return replacedString;
 	}
 }
