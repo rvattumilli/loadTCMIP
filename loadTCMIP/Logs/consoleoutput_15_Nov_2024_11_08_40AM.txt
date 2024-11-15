@@ -1,0 +1,265 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 15/Nov/2024 11:08:40AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 11/01/2024
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 113
+Total No.of Rows fetched              : 10
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Fri Nov 15 11:08:54 EST 2024
+Creating test case for Row #          : 5626
+Validation Time(ms)                   : 455
+TC Validation status                  : PASS
+Short Desc                            : Aid Category EB
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : Update aid category "EB"with a proposed descritpion "Standard" under T_CDE_AID
+Expected Results                      : Verify aid Category "EB" description is "Standard" Drop XML file with aid cat "EB" via the base application and see if the file is successful.
+Test Case ID for Row 5626             : 47922
+Requirement ID                        : 38265.01.001
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47922
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47922
+Finished at                           : Fri Nov 15 11:08:58 EST 2024
+*****************************************************************
+Started at                            : Fri Nov 15 11:08:58 EST 2024
+Creating test case for Row #          : 5627
+Validation Time(ms)                   : 462
+TC Validation status                  : PASS
+Short Desc                            : Aid Category EF
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : Update aid category "EF"with a proposed descritpion "Standard Aged" under T_CDE_AID
+Expected Results                      : Verify aid Category "EF" description is "Standard Aged" Drop the XML file with aid cat "EF" via the base application and see if the file is successful.
+Test Case ID for Row 5627             : 47923
+Requirement ID                        : 38265.01.005
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47923
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47923
+Finished at                           : Fri Nov 15 11:09:04 EST 2024
+*****************************************************************
+Started at                            : Fri Nov 15 11:09:04 EST 2024
+Creating test case for Row #          : 5628
+Validation Time(ms)                   : 1982
+TC Validation status                  : PASS
+Short Desc                            : EB and EF DNTL1
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : Aid cats EB and EF rows to tables T_MC_AID_GRP_XREF and T_PUB_HLTH_AID for DNTL1
+Expected Results                      : Validate aid cats EB and EF are added to tables T_MC_AID_GRP_XREF and T_PUB_HLTH_AID for DNTL1.  FIRST_SVC = 20241224  DTE_LAST_SVC = 22991231  IND_MANAGE_CARE  =  B=Auto-Assign(No Out-Reach)
+Test Case ID for Row 5628             : 47924
+Requirement ID                        : 38265.01.010
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47924
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47924
+Finished at                           : Fri Nov 15 11:09:10 EST 2024
+*****************************************************************
+Started at                            : Fri Nov 15 11:09:10 EST 2024
+Creating test case for Row #          : 5629
+Validation Time(ms)                   : 472
+TC Validation status                  : PASS
+Short Desc                            : EB and EF ID card
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : Aid Cats ''EB'' & ''EF eligible for a Member ID Card
+Expected Results                      : Validate ''EB'' & ''EF'' are eligible for Member ID Card (IND_ID_CARD =''Y'')
+Test Case ID for Row 5629             : 47925
+Requirement ID                        : 38265.01.015
+Requirement Type                      : Informational
+SAK Requirement Type                  : 24
+Requirement linked for test case      : 47925
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47925
+Finished at                           : Fri Nov 15 11:09:15 EST 2024
+*****************************************************************
+Started at                            : Fri Nov 15 11:09:15 EST 2024
+Creating test case for Row #          : 5630
+Validation Time(ms)                   : 476
+TC Validation status                  : PASS
+Short Desc                            : HIERARCHY for aid cat "EB"
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : HIERARCHY for "EB" CDE_AID_HIERARCHY is 28 CDE_AID_HEIRARCY_MC for EB is 106
+Expected Results                      : Validate HIERARCHY for "EB" CDE_AID_HIERARCHY for "EB" CDE_AID_HEIRARCY_MC for EB is 106
+Test Case ID for Row 5630             : 47926
+Requirement ID                        : 38265.01.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47926
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47926
+Finished at                           : Fri Nov 15 11:09:19 EST 2024
+*****************************************************************
+Started at                            : Fri Nov 15 11:09:19 EST 2024
+Creating test case for Row #          : 5631
+Validation Time(ms)                   : 481
+TC Validation status                  : PASS
+Short Desc                            : HIERARCHY for aid cat "EF"
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : HIERARCHY for "EF" CDE_AID_HIERARCHY is 30 CDE_AID_HEIRARCY_MC for EB is 108
+Expected Results                      : Validate HIERARCHY for "EF" CDE_AID_HIERARCHY is 30 CDE_AID_HEIRARCY_MC for EB is 108
+Test Case ID for Row 5631             : 47927
+Requirement ID                        : 38265.01.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47927
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47927
+Finished at                           : Fri Nov 15 11:09:24 EST 2024
+*****************************************************************
+Started at                            : Fri Nov 15 11:09:24 EST 2024
+Creating test case for Row #          : 5632
+Validation Time(ms)                   : 1542
+TC Validation status                  : PASS
+Short Desc                            : EB and EF for non-cap programs
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : Delete EB and EF rows on both tables T_MC_AID_GRP_XREF and T_PUB_HLTH_AID for non-cap programs
+Expected Results                      : Validate EB and EF rows are deleted on both tables T_MC_AID_GRP_XREF and T_PUB_HLTH_AID for non-cap programs   List of non-cap Programs: ACCS1, ACCS2, BHCP, CSA, ELTSS, LTSS, PACC1, PACC2, CARES, CCM,HBRW, HSPC, ICC
+Test Case ID for Row 5632             : 47928
+Requirement ID                        : 38265.01.022
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47928
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47928
+Finished at                           : Fri Nov 15 11:09:30 EST 2024
+*****************************************************************
+Started at                            : Fri Nov 15 11:09:30 EST 2024
+Creating test case for Row #          : 5633
+Validation Time(ms)                   : 505
+TC Validation status                  : PASS
+Short Desc                            : Aid cats EB and EF  in defunct cap programs
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : Aid cats EB and EF are in defunct cap programs CBHI, MAID, and MSD should not be deleted.
+Expected Results                      : validate Aid cats EB and EF are in defunct cap programs CBHI, MAID, and MSD should remain as is.
+Test Case ID for Row 5633             : 47929
+Requirement ID                        : 38265.01.023
+Requirement Type                      : Informational
+SAK Requirement Type                  : 24
+Requirement linked for test case      : 47929
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47929
+Finished at                           : Fri Nov 15 11:09:34 EST 2024
+*****************************************************************
+Started at                            : Fri Nov 15 11:09:34 EST 2024
+Creating test case for Row #          : 5634
+Validation Time(ms)                   : 478
+TC Validation status                  : PASS
+Short Desc                            : Delete EF/CBHI2
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : Delete EF/CBHI2 rows from T_PUB_HLTH_AID and T_MC_AID_GRP_XREF
+Expected Results                      : Validate CBHI2 rows are deleted from T_PUB_HLTH_AID and T_MC_AID_GRP_XREF for aid cat EF.
+Test Case ID for Row 5634             : 47930
+Requirement ID                        : 38265.01.024
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47930
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47930
+Finished at                           : Fri Nov 15 11:09:39 EST 2024
+*****************************************************************
+Started at                            : Fri Nov 15 11:09:39 EST 2024
+Creating test case for Row #          : 5635
+Validation Time(ms)                   : 1354
+TC Validation status                  : PASS
+Short Desc                            : Fund codes for ''EB'' & ''EF''
+Env                                   : A
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : Member Management
+Long Desc                             : The fund codes for aid cats for ''EB'' & ''EF''  EB:  STANDARD 4000-0500 EF: STANDARD Aged 4000-0601
+Expected Results                      : Validate the fund codes for aid cat ''EB'' and ''EF'' EB:  STANDARD 4000-0500 EF: STANDARD Aged 4000-0601
+Test Case ID for Row 5635             : 47931
+Requirement ID                        : 38265.01.025
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47931
+Notebook                              : WI 38265
+Business Function                     : WI 38265
+Notebook/BF linked for test case      : 47931
+Finished at                           : Fri Nov 15 11:09:44 EST 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 15/Nov/2024 11:09:44AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

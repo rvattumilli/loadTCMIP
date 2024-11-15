@@ -699,9 +699,9 @@ public class CommonUtils {
 		
 		String replacedString;
 		if(getReplaceType() == "req" ) {
-			replacedString = origString.replaceAll("\t", " ").replaceAll("'", "''").trim();
+			replacedString = origString.replaceAll("\t", " ").replaceAll("'", "\"").trim();
 		} else {
-			replacedString = origString.replaceAll("\t", "").replaceAll(System.lineSeparator(), " ").replaceAll("\n", " ").replaceAll("'", "''").trim();
+			replacedString = origString.replaceAll("\t", "").replaceAll(System.lineSeparator(), " ").replaceAll("\n", " ").replaceAll("'", "\"").trim();
 		}
 		return replacedString;
 	}
