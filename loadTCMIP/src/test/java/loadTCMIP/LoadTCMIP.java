@@ -59,6 +59,8 @@ public class LoadTCMIP {
 	private final String systemUserName = "rvattumilli";
 	private final String selectTestCaseSql = "select * from load_tc where tc_row = ";
 	private final String selectReqSql = "select * from load_req where req_row = ";
+	private final String testCaseDataMessage = "            NO TC DATA THIS RUN           ";
+	private final String reqDataMessage = "           NO REQ DATA THIS RUN           ";
 	private final String credQuery = "select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from "
 			 						+ "v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2";
 	private final String testCaseSql = "select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, "
@@ -97,7 +99,7 @@ public class LoadTCMIP {
 
 		try {
 			System.out.println("****************************************************");
-			dataList = CommonUtils.getTCReqData(testCaseSql, 14, CommonUtils.getDBConnection(), "            NO TC DATA THIS RUN           ");
+			dataList = CommonUtils.getTCReqData(testCaseSql, 14, CommonUtils.getDBConnection(), testCaseDataMessage);
 			if (dataList != null) {
 				CommonUtils.setReplaceType("tc");
 				System.out.println(String.format(outputFormat, "Link Notebook/Business Function", linkNBToTC));
@@ -268,7 +270,7 @@ public class LoadTCMIP {
 
 		try {
 			driver.findElement(By.linkText("Requirements")).click();
-			dataList = CommonUtils.getTCReqData(reqSql, 8, CommonUtils.getDBConnection(), "           NO REQ DATA THIS RUN           ");
+			dataList = CommonUtils.getTCReqData(reqSql, 8, CommonUtils.getDBConnection(), reqDataMessage);
 			if (dataList != null) {
 				CommonUtils.setReplaceType("req");
 				String reqRow, idReq, nameReq, typeReq, subsystemReq, rtmReq, narrativeReq, namOwnerReq, SelSql, UpdSql;

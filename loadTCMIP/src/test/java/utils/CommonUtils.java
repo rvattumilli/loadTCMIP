@@ -186,6 +186,8 @@ public class CommonUtils {
 	/*                                                                      */
 	/* 09/05/24  R.Vattumilli    Modified Validation                        */
 	/*                                                                      */
+	/* 10/31/24  R.Vattumilli    Added override switch for validation       */
+	/*                                                                      */
 	/************************************************************************/
 	
 	public static boolean validateTCData(String idReq, String subsystemTC, String groupingTC, String bFunctionTC, String envTC) throws Exception {
@@ -271,6 +273,8 @@ public class CommonUtils {
 	/* Date      A.E. Name       Description                                */
 	/* --------  --------------  ------------------------------------------ */
 	/* 02/15/24  R.Vattumilli    Initial Creation of validateReqData()      */
+	/*                                                                      */
+	/* 10/31/24  R.Vattumilli    Added override switch for validation       */
 	/*                                                                      */
 	/************************************************************************/
 	
@@ -417,11 +421,11 @@ public class CommonUtils {
 	/* Function Name: getTCReqData()                                        */
 	/*                                                                      */
 	/*   Description: This function executes sql query and returns list of  */
-	/*                values for fields in the query else null              */
+	/*                values for fields in the query else returns null      */
 	/*                                                                      */
 	/*    Parameters: sqlStatement, noOfCols, conn                          */
 	/*                                                                      */
-	/*       Returns: ArrayList<String[]>                                   */
+	/*       Returns: ArrayList<String[]> or null                           */
 	/*                                                                      */
 	/************************************************************************/
 	/*                       MODIFICATION LOG                               */
@@ -692,6 +696,8 @@ public class CommonUtils {
 	/* Date      A.E. Name       Description                                */
 	/* --------  --------------  ------------------------------------------ */
 	/* 12/05/21  R.Vattumilli    Initial creation of replaceChars()         */
+	/*                                                                      */
+	/* 10/31/24  R.Vattumilli    Added replace chars for requirements       */
 	/*                                                                      */
 	/************************************************************************/
 	
