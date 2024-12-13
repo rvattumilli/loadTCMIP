@@ -1,0 +1,201 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 12/Dec/2024 04:24:13PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 11/18/2024
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 46
+Total No.of Rows fetched              : 13
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:18 EST 2024
+Creating requirement for Row #        : 89
+Validation Time(ms)                   : 482
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.01.001
+Requirement Name                      : Create a DCR to move the dentaquest members
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create a DCR script to identify the members who are enrolled to Dentaquest (PID/SL 110111117A) & transfer those members to a new dental provider "Benecare" with PID/SL 110211392A with effective XX/XX/2025.
+SAK Req for Row 89                    : 14598
+Finished at                           : Thu Dec 12 16:24:22 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:22 EST 2024
+Creating requirement for Row #        : 90
+Validation Time(ms)                   : 473
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.02.005
+Requirement Name                      : CW & Maximus will do the needed config changes
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Before assignment transfers can happen there will  be a need of other configurations changes which will be done by CW for the new dental provider Benecare (PIDSL- 10211392A).  CW will esnure that the provider has the appropriate set up in MMIS before the DCR is run.
+1. CW will ensure Benecare PIDSL is  configured on these tables T_PMP_SVC_LOC/ T_PMP_PANEL_SIZE/T_MC_PMP_ENRL_RGN etc for the enrollments to work 
+2. CW will setup the Benecare PIDSL-10211392A to receive 834s.
+SAK Req for Row 90                    : 14599
+Finished at                           : Thu Dec 12 16:24:26 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:26 EST 2024
+Creating requirement for Row #        : 91
+Validation Time(ms)                   : 466
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.03.010
+Requirement Name                      : DNTL assignment plans
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : For the members moving from Dentaquest to Benecare, member should move to the DNTL assignment plan that maps to their richest aid cat. 
+NOTE: There could be a scenario where the eligbility could have changed during the day DCR runs. Ensure that the member gets transferred to correct DNTL plan based on the current active benefit plan.
+SAK Req for Row 91                    : 14600
+Finished at                           : Thu Dec 12 16:24:30 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:30 EST 2024
+Creating requirement for Row #        : 92
+Validation Time(ms)                   : 466
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.03.015
+Requirement Name                      : Dentaquest member with open end date
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : When inserting a DNTL row with new Benecare PIDSL , end date the previous dentaquest DNTL row with   XX/XX/2025 date (One day prior start date XX/XX/2025) if the member has existing DNTL row with 12/31/2299.
+NOTE: Consider the daily activity that could have occurred to those existing Dental members prior inserting the new row. For e.g - Member could have lost the eligbility. Please refer to reqs 38221.04.040, 38221.04.045 & 38221.04.050 for additional conditions that could occur & expected actions in those events.
+SAK Req for Row 92                    : 14601
+Finished at                           : Thu Dec 12 16:24:34 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:34 EST 2024
+Creating requirement for Row #        : 93
+Validation Time(ms)                   : 445
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.03.020
+Requirement Name                      : Dentaquest member with future end date
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member enrolled to Dentaquest has future end date (greater than NEW Start date XX/XX/2025), the current Dentaquest plan should be end dated with XX/XX/2025(one day prior NEW start date) & the new Benecare dental plan should have XX/XX/2025 as a NEW start date & end date should match the current end date.
+SAK Req for Row 93                    : 14602
+Finished at                           : Thu Dec 12 16:24:38 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:38 EST 2024
+Creating requirement for Row #        : 94
+Validation Time(ms)                   : 455
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.03.025
+Requirement Name                      : Dentaquest member with end date < XX/XX/2025
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member has  end date prior XX/XX/2025, keep as is. No new DNTL row should be added.
+SAK Req for Row 94                    : 14603
+Finished at                           : Thu Dec 12 16:24:41 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:41 EST 2024
+Creating requirement for Row #        : 95
+Validation Time(ms)                   : 560
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.03.030
+Requirement Name                      : Use ZM - Auto-Disenroll - Mass Transfer code as STOP reason
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Use ZM - Auto-Disenroll - Mass Transfer  as STOP reason code for the existing Dentaquest plans.
+SAK Req for Row 95                    : 14604
+Finished at                           : Thu Dec 12 16:24:45 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:45 EST 2024
+Creating requirement for Row #        : 96
+Validation Time(ms)                   : 602
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.03.035
+Requirement Name                      : Use default AA code as START Reason.
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Use default AA code as START Reason code for the new Benecare dental plans
+SAK Req for Row 96                    : 14605
+Finished at                           : Thu Dec 12 16:24:49 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:49 EST 2024
+Creating requirement for Row #        : 97
+Validation Time(ms)                   : 453
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.04.040
+Requirement Name                      : Edit 1 - Validate that the member has Active Eligibility
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Validate that the member has active/future end dated eligibility on the day DCR  runs. If there is no active/future end dated eligibility row, don"t insert the new Benecare DNTL(I, II, III) plan segment.
+SAK Req for Row 97                    : 14606
+Finished at                           : Thu Dec 12 16:24:53 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:53 EST 2024
+Creating requirement for Row #        : 98
+Validation Time(ms)                   : 496
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.04.045
+Requirement Name                      : Edit 2-Validate that the member has no DOD
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Validate that the member has no DOD present on the day DCR runs. If the member has DOD present, don"t insert the new Benecare DNTL(I, II, III) plan segment.
+SAK Req for Row 98                    : 14607
+Finished at                           : Thu Dec 12 16:24:56 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:24:56 EST 2024
+Creating requirement for Row #        : 99
+Validation Time(ms)                   : 495
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.04.050
+Requirement Name                      : Edit 3- Validate that the MID is active
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Valdiate that  the MID is active on the day DCR runs. If the MID is not active, don"t insert the new benecare plan segment.
+SAK Req for Row 99                    : 14608
+Finished at                           : Thu Dec 12 16:25:00 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:25:00 EST 2024
+Creating requirement for Row #        : 100
+Validation Time(ms)                   : 454
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.05.055
+Requirement Name                      : Generate Report
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Generate the report outlining the number of members that got successfully transferred to New Benecare provider & the number that got errored out including the error reason.
+SAK Req for Row 100                   : 14609
+Finished at                           : Thu Dec 12 16:25:04 EST 2024
+*****************************************************************
+Started at                            : Thu Dec 12 16:25:04 EST 2024
+Creating requirement for Row #        : 101
+Validation Time(ms)                   : 462
+Requirement Validation status         : PASS
+Requirement ID                        : 38221.06.060
+Requirement Name                      : Generate 834
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Validate that the 834 gets generated for the new Benecare provider.
+SAK Req for Row 101                   : 14610
+Finished at                           : Thu Dec 12 16:25:07 EST 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 12/Dec/2024 04:25:07PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

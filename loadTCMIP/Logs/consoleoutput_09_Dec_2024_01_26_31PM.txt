@@ -1,0 +1,1189 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 09/Dec/2024 01:26:31PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 11/18/2024
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 143
+Total No.of Rows fetched              : 52
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Mon Dec 09 13:26:38 EST 2024
+Creating test case for Row #          : 5676
+Validation Time(ms)                   : 517
+TC Validation status                  : PASS
+Short Desc                            : E7 Notices for non-English written language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E7 notices requests should be generated in tables T_CNS_NOTICE and T_CNS_NOTICE_RECIP one for member in chosen written language (Ex-SPANISH) and one for worker in English (no delivery). Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify non-English written language has two E7 notices requests generated in tables T_CNS_NOTICE and T_CNS_NOTICE_RECIP one for member in chosen written language (SPANISH) and one for worker in English (no delivery).
+Test Case ID for Row 5676             : 47974
+Requirement ID                        : 37818.E7.030B
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47974
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47974
+Finished at                           : Mon Dec 09 13:26:44 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:26:44 EST 2024
+Creating test case for Row #          : 5677
+Validation Time(ms)                   : 473
+TC Validation status                  : PASS
+Short Desc                            : communication preference default as PAPER
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the communication preference is set as deafult PAPER if the member has not selected any communication preference type
+Expected Results                      : Verify  communication preference it is set as default paper if the member has not selected any preference as expected.
+Test Case ID for Row 5677             : 47975
+Requirement ID                        : 37818.E7.040D
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47975
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47975
+Finished at                           : Mon Dec 09 13:26:49 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:26:49 EST 2024
+Creating test case for Row #          : 5678
+Validation Time(ms)                   : 482
+TC Validation status                  : PASS
+Short Desc                            : Delivery type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the delivery types: Delivery type is selected as edelivery for EMAIL/SMS  If no delivery type is selected by a member, then set default value as PAPER.
+Expected Results                      : Verify the delivery types are set as expected
+Test Case ID for Row 5678             : 47976
+Requirement ID                        : 37818.E7.100
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47976
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47976
+Finished at                           : Mon Dec 09 13:26:54 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:26:54 EST 2024
+Creating test case for Row #          : 5679
+Validation Time(ms)                   : 482
+TC Validation status                  : PASS
+Short Desc                            : No Tag in payload for ARD
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if the member has no active ARD ,then no tag should be sent in Payload file for ARD or any of the contacts.
+Expected Results                      : Verify for member with Inactive  ARD  haven"t sent any tag to payload file  for ARD or any of the contacts as expected.
+Test Case ID for Row 5679             : 47977
+Requirement ID                        : 37818.E7.050D
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47977
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47977
+Finished at                           : Mon Dec 09 13:26:59 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:26:59 EST 2024
+Creating test case for Row #          : 5680
+Validation Time(ms)                   : 497
+TC Validation status                  : PASS
+Short Desc                            : communication preference default as PAPER
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if the communication preference is set as TEXT/SMS (edelivery) then PAPER should be sent as default value. The default value PAPER is sent for edelivery  until CNS Group-4 is implemented.
+Expected Results                      : Verify for edelivery(TEXT/SMS) communication preference default  PAPER is sent as expected until CNS Group-4 implementation.
+Test Case ID for Row 5680             : 47978
+Requirement ID                        : 37818.E7.040A
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47978
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47978
+Finished at                           : Mon Dec 09 13:27:05 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:05 EST 2024
+Creating test case for Row #          : 5681
+Validation Time(ms)                   : 515
+TC Validation status                  : PASS
+Short Desc                            : Ind_submit_cns set to Y
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate before changes to the data from table T_MC_CST_TRIGGER have only active E7 notice triggers. The E7 notice type should be added to the table T_CDE_NOTICE_TYPE and ind_submit_cns is set to Y. The output file mgd06761.xml before changes should have members with the E7 notice triggers updated in T_MC_CST_TRIGGER by job MGDJD676. Validate after changes E7 notices are not written to the output file mgd06761.xml and E7 notice triggers should not be updated in T_MC_TRIGGER.
+Expected Results                      : Verify for ind_submit_cms is set to Y  The output file mgd06761.xml before changes have members with E7 notice triggers updated in T_MC_CST_TRIGGER After changes the output file mgd06761.xml  has no E7 notices written and E7 notice triggers should not be updated in T_MC_CST_TRIGGER.
+Test Case ID for Row 5681             : 47979
+Requirement ID                        : 37818.E7.015
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47979
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47979
+Finished at                           : Mon Dec 09 13:27:10 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:10 EST 2024
+Creating test case for Row #          : 5682
+Validation Time(ms)                   : 454
+TC Validation status                  : PASS
+Short Desc                            : Ind_submit_cns set to N
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the data from table T_MC_CST_TRIGGER have only active E7 notice triggers. The E7 notice type should be added to the table T_CDE_NOTICE_TYPE and ind_submit_cns is set to N. Validate after changes E7 notices are written to the output file mgd06761.xml and E7 notice triggers should be  updated in T_MC_CST_TRIGGER by job MGDJD676.
+Expected Results                      : Verify for ind_submit_cms is set to N  After changes the output file mgd06761.xml  has  E7 notices written and E7 notice triggers should be updated in T_MC_CST_TRIGGER.
+Test Case ID for Row 5682             : 47980
+Requirement ID                        : 37818.E7.015
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47980
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47980
+Finished at                           : Mon Dec 09 13:27:16 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:16 EST 2024
+Creating test case for Row #          : 5683
+Validation Time(ms)                   : 499
+TC Validation status                  : PASS
+Short Desc                            : E7 Payload object-member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created has E7 recipient and included data elements related to members in JSON format. "mmisID", "lastFourSSN", "memberName", "EffDateEng", "maskedDOB",                          "Member"s health plan description "           Member                               SSN- "Members last 4 digit of SSN  XXX-XX-9999           Member id   "MMIS Id of the Member           DOB- Member"s date of birth. Date and month will be masked XX/XX/9999.            Members name-"Member"s full name             EffDateEng - "Member"s assignment effective date.             "healthPlan"-"Member"s health plan description " The template should have all dynamic fields related to member in PAYLOAD.
+Expected Results                      : Verify all data elements related to members are in PAYLOAD file in JSON format and printed out in Notice as expected
+Test Case ID for Row 5683             : 47981
+Requirement ID                        : 37818.E7.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47981
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47981
+Finished at                           : Mon Dec 09 13:27:21 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:21 EST 2024
+Creating test case for Row #          : 5684
+Validation Time(ms)                   : 495
+TC Validation status                  : PASS
+Short Desc                            : E7 Payload object-Notice
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created has E7 recipient and included data elements related to notice in JSON format.   noticeCreationDate",    "noticeID",    "noticeType",                              "noticeCreationDate"-"Date notice requested - Month DD, YYYY",            "noticeID"-"Internal MMIS unique system assigned key (SAK) for each notice request"            "noticeType"-"Abbreviation of the MMIS Notice type. The template should have all dynamic fields related to notice in PAYLOAD.
+Expected Results                      : Verify all data elements related to notice are in PAYLOAD file in JSON format and print out notice as expected.
+Test Case ID for Row 5684             : 47982
+Requirement ID                        : 37818.E7.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47982
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47982
+Finished at                           : Mon Dec 09 13:27:27 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:27 EST 2024
+Creating test case for Row #          : 5685
+Validation Time(ms)                   : 446
+TC Validation status                  : PASS
+Short Desc                            : E7 Payload object-PMP
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created has E7 recipient and included data elements related to PMP in JSON format. "pmpNameTitleCase", "pmpStreetAddress", "pmpAddressLastLine", "pmpPhoneHash",   "pmpNameTitleCase"- "Member"s PMP Provider name.      "pmpStreetAddress",- Provider"s street address.     "pmpAddressLastLine",-  "Provider"s address City, State, Zipcode and 4-digit zipcode extension. ",                                                        "pmpPhoneHash",-  Provider Phone number (999) 999-9999 ",          The template should have dynamic fields related to PMP in PAYLOAD as required.
+Expected Results                      : Verify  data elements related to PMP are in PAYLOAD file as required in JSON format and print out notice as expected.
+Test Case ID for Row 5685             : 47983
+Requirement ID                        : 37818.E7.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47983
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47983
+Finished at                           : Mon Dec 09 13:27:33 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:33 EST 2024
+Creating test case for Row #          : 5686
+Validation Time(ms)                   : 440
+TC Validation status                  : PASS
+Short Desc                            : E7 Payload object-Mailing Address
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created has E7 recipient and included data elements related to Mailing Address in JSON format. "mailingName", "addressLine1",    "addressLine2", "cityStateZipcode"                   "mailingName, -"Name of the Member or ARD that will receive the notice", "addressLine1"- "Address line 1",   "addressLine2"-"Address line 1", "cityStateZipcode"- "City, State and Zipcode + 4-digit zipcode extension (99999-9999) of the address where the notice must be sent",  The template should have dynamic fields related to Mailing Address as required in PAYLOAD.
+Expected Results                      : Verify data elements related to Mailing Address are in PAYLOAD file as required in JSON format and print notice as expected.
+Test Case ID for Row 5686             : 47984
+Requirement ID                        : 37818.E7.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47984
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47984
+Finished at                           : Mon Dec 09 13:27:38 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:38 EST 2024
+Creating test case for Row #          : 5687
+Validation Time(ms)                   : 451
+TC Validation status                  : PASS
+Short Desc                            : E7 Payload object-member SSN
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate If there is no SSN present for the E7notice receipient/member, send the value  XXX-XX-blank
+Expected Results                      : Verify the JSON request file is be submitted successfully as expected
+Test Case ID for Row 5687             : 47985
+Requirement ID                        : 37818.E7.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47985
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47985
+Finished at                           : Mon Dec 09 13:27:43 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:43 EST 2024
+Creating test case for Row #          : 5688
+Validation Time(ms)                   : 444
+TC Validation status                  : PASS
+Short Desc                            : Active ARD Member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if the member has active ARD ,then  tag should be sent in Payload file for ARD or any of the contacts.
+Expected Results                      : Verify Active ARD Member JSON request is submitted successully with tag in Payload file as expected
+Test Case ID for Row 5688             : 47986
+Requirement ID                        : 37818.E7.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47986
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47986
+Finished at                           : Mon Dec 09 13:27:48 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:48 EST 2024
+Creating test case for Row #          : 5689
+Validation Time(ms)                   : 470
+TC Validation status                  : PASS
+Short Desc                            : E7 Meta Data Object Format
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : The E7 Notice - Meta Data Object will have the following format: notice id #New Sequential Notice ID# notice type (cde_letter_type ="E7" ) notice Language priority (Use NORMAL) noticetobe replaced (optional field. MMIS can leave it off)
+Expected Results                      : Verify that the E7 Notice Type - Meta Data Object is formatted correctly.
+Test Case ID for Row 5689             : 47987
+Requirement ID                        : 37818.E7.030
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47987
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47987
+Finished at                           : Mon Dec 09 13:27:53 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:53 EST 2024
+Creating test case for Row #          : 5690
+Validation Time(ms)                   : 479
+TC Validation status                  : PASS
+Short Desc                            : Primary Language in JSON
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : MMIS stores both Primary language & Written language for a member. When sending this data in JSON, "Primary Language" should be selected.
+Expected Results                      : Verify that the JSON file is using the member"s Primary Language.
+Test Case ID for Row 5690             : 47988
+Requirement ID                        : 37818.E7.030C
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47988
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47988
+Finished at                           : Mon Dec 09 13:27:58 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:27:58 EST 2024
+Creating test case for Row #          : 5691
+Validation Time(ms)                   : 514
+TC Validation status                  : PASS
+Short Desc                            : Send Paper as Default Value
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : If a member"s communication preference is "EMAIL", "PAPER" should be used as the default value. This will occur until edelivery is implemented with CNS Group 4.
+Expected Results                      : Verify that the member is sent using "PAPER" as the member"s default value for the Recipient object.
+Test Case ID for Row 5691             : 47989
+Requirement ID                        : 37818.E7.040b
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47989
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47989
+Finished at                           : Mon Dec 09 13:28:03 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:03 EST 2024
+Creating test case for Row #          : 5692
+Validation Time(ms)                   : 500
+TC Validation status                  : PASS
+Short Desc                            : Send Default Print Type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : If a member has not selected a communication preference type, send the default print type (Regular).
+Expected Results                      : Verify that the default print type, "Regular", is sent for a member without a communication preference selected.
+Test Case ID for Row 5692             : 47990
+Requirement ID                        : 37818.E7.040E
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47990
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47990
+Finished at                           : Mon Dec 09 13:28:08 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:08 EST 2024
+Creating test case for Row #          : 5693
+Validation Time(ms)                   : 472
+TC Validation status                  : PASS
+Short Desc                            : Payload - #EffectiveDateEng#
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Send the date [#EffectiveDateEng#] expected in written date. Example: July 12, 2024.
+Expected Results                      : Verify that the date is present and in the example format.
+Test Case ID for Row 5693             : 47991
+Requirement ID                        : 37818.E7.050B
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47991
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47991
+Finished at                           : Mon Dec 09 13:28:13 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:13 EST 2024
+Creating test case for Row #          : 5694
+Validation Time(ms)                   : 449
+TC Validation status                  : PASS
+Short Desc                            : No Request for Notice Suppression Table
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : No JSON Payload request should go out to CNS for the members in the new Notice Suppression Table
+Expected Results                      : Verify that requests are not sent to CNS for members found in the new Notice Suppression Table.
+Test Case ID for Row 5694             : 47992
+Requirement ID                        : 38381.02.100
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47992
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47992
+Finished at                           : Mon Dec 09 13:28:17 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:17 EST 2024
+Creating test case for Row #          : 5695
+Validation Time(ms)                   : 465
+TC Validation status                  : PASS
+Short Desc                            : Send value "EN"
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select a member receiving E7 notice who has the language preference excluding English, Spanish, Portuguese, Simplified Chinese, Haitian Creole and Vietnamese, like  French, Ethiopian or German should send the value "EN" for English Language.
+Expected Results                      : Value "EN"  will be sent for the preference language English as expected.
+Test Case ID for Row 5695             : 47993
+Requirement ID                        : 37818.E7.030A
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47993
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47993
+Finished at                           : Mon Dec 09 13:28:22 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:22 EST 2024
+Creating test case for Row #          : 5696
+Validation Time(ms)                   : 478
+TC Validation status                  : PASS
+Short Desc                            : Send value "EN"
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select a member receiving E7 notice who has the language preference  English.
+Expected Results                      : Value "en"  will be sent for the preference language English as expected.
+Test Case ID for Row 5696             : 47994
+Requirement ID                        : 37818.E7.030A
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47994
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47994
+Finished at                           : Mon Dec 09 13:28:26 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:26 EST 2024
+Creating test case for Row #          : 5697
+Validation Time(ms)                   : 450
+TC Validation status                  : PASS
+Short Desc                            : Send value "EN"
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select a member receiving E7 notice who has the language preference Spanish, Portuguese, Simplified Chinese, Haitian Creole and Vietnamese, should not send the value "EN" for English Language.
+Expected Results                      : "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese should be sent as expected.
+Test Case ID for Row 5697             : 47995
+Requirement ID                        : 37818.E7.030A
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47995
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47995
+Finished at                           : Mon Dec 09 13:28:31 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:31 EST 2024
+Creating test case for Row #          : 5698
+Validation Time(ms)                   : 510
+TC Validation status                  : PASS
+Short Desc                            : Verify Recipient object
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Create the new member and check with existing member with all the below fields. nam_first (firstName) nam_last(lastName) nam_middle_init(middleName) id_medicaid (id) nam_suffix (suffix) CDE_COMMUNICATION_PREF(type) CDE_PRINT_TYPE (printType) EMAIL_ADDR (emailAddress) NUM_CELL_PHONE (phoneNumber ) mail_adr_strt_1 (Address) mail_adr_strt_1(line1) mail_adr_strt_2(line 2) mail_adr_city(city) mail_adr_state(state) mail_adr_zip (zipcode) mail_adr_zip_4
+Expected Results                      : Recipient Object is created successfully.
+Test Case ID for Row 5698             : 47996
+Requirement ID                        : 37818.E7.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47996
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47996
+Finished at                           : Mon Dec 09 13:28:36 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:36 EST 2024
+Creating test case for Row #          : 5699
+Validation Time(ms)                   : 465
+TC Validation status                  : PASS
+Short Desc                            : Verify Recipient object without mid name
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Create the new member and check with existing member with all the below fields with missing middle name. nam_first (firstName) nam_last(lastName) id_medicaid (id) nam_suffix (suffix) CDE_COMMUNICATION_PREF(type) CDE_PRINT_TYPE (printType) EMAIL_ADDR (emailAddress) NUM_CELL_PHONE (phoneNumber ) mail_adr_strt_1 (Address) mail_adr_strt_1(line1) mail_adr_strt_2(line 2) mail_adr_city(city) mail_adr_state(state) mail_adr_zip (zipcode) mail_adr_zip_4
+Expected Results                      : Recipient Object is created successfully.
+Test Case ID for Row 5699             : 47997
+Requirement ID                        : 37818.E7.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47997
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47997
+Finished at                           : Mon Dec 09 13:28:42 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:42 EST 2024
+Creating test case for Row #          : 5700
+Validation Time(ms)                   : 560
+TC Validation status                  : PASS
+Short Desc                            : Verify Recipient object without suffix
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Create the new member and check with existing member with all the below fields with missing name suffix. nam_first (firstName) nam_last(lastName) nam_middle_init(middleName) id_medicaid (id) CDE_COMMUNICATION_PREF(type) CDE_PRINT_TYPE (printType) EMAIL_ADDR (emailAddress) NUM_CELL_PHONE (phoneNumber ) mail_adr_strt_1 (Address) mail_adr_strt_1(line1) mail_adr_strt_2(line 2) mail_adr_city(city) mail_adr_state(state) mail_adr_zip (zipcode) mail_adr_zip_4
+Expected Results                      : Recipient Object is created successfully.
+Test Case ID for Row 5700             : 47998
+Requirement ID                        : 37818.E7.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47998
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47998
+Finished at                           : Mon Dec 09 13:28:48 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:48 EST 2024
+Creating test case for Row #          : 5701
+Validation Time(ms)                   : 490
+TC Validation status                  : PASS
+Short Desc                            : Verify Recipient object without address line 2
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Create the new member and check with existing member with all the below fields with missing address lane 2. nam_first (firstName) nam_last(lastName) nam_middle_init(middleName) id_medicaid (id) nam_suffix (suffix) CDE_COMMUNICATION_PREF(type) CDE_PRINT_TYPE (printType) EMAIL_ADDR (emailAddress) NUM_CELL_PHONE (phoneNumber ) mail_adr_strt_1 (Address) mail_adr_strt_1(line1) mail_adr_city(city) mail_adr_state(state) mail_adr_zip (zipcode) mail_adr_zip_4
+Expected Results                      : Recipient Object is created successfully.
+Test Case ID for Row 5701             : 47999
+Requirement ID                        : 37818.E7.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 47999
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 47999
+Finished at                           : Mon Dec 09 13:28:53 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:53 EST 2024
+Creating test case for Row #          : 5702
+Validation Time(ms)                   : 464
+TC Validation status                  : PASS
+Short Desc                            : Comm pref is PAPER & print type is Regular
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having Regular print type and communication preference as paper/print.
+Expected Results                      : Delivery type will be sent as Print & print type as Regular.
+Test Case ID for Row 5702             : 48000
+Requirement ID                        : 37818.E7.040F
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48000
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48000
+Finished at                           : Mon Dec 09 13:28:58 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:28:58 EST 2024
+Creating test case for Row #          : 5703
+Validation Time(ms)                   : 452
+TC Validation status                  : PASS
+Short Desc                            : Comm pref is PAPER & print type is Large
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having Large print type and communication preference as paper/print.
+Expected Results                      : Delivery type will be sent as Print & print type as Large.
+Test Case ID for Row 5703             : 48001
+Requirement ID                        : 37818.E7.040F
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48001
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48001
+Finished at                           : Mon Dec 09 13:29:03 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:03 EST 2024
+Creating test case for Row #          : 5704
+Validation Time(ms)                   : 468
+TC Validation status                  : PASS
+Short Desc                            : Comm pref is PAPER & print type is Braille
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having Braille print type and communication preference as paper/print.
+Expected Results                      : Delivery type will be sent as Print & print type as Braille.
+Test Case ID for Row 5704             : 48002
+Requirement ID                        : 37818.E7.040F
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48002
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48002
+Finished at                           : Mon Dec 09 13:29:08 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:08 EST 2024
+Creating test case for Row #          : 5705
+Validation Time(ms)                   : 468
+TC Validation status                  : PASS
+Short Desc                            : Comm Pref "EMAIL" & Regular print type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having communication preference "EMAIL" and print type Regular.
+Expected Results                      : Delivery type will be sent as paper/print and print type as Regular successfully in the JSON request file.
+Test Case ID for Row 5705             : 48003
+Requirement ID                        : 37818.E7.040F
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48003
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48003
+Finished at                           : Mon Dec 09 13:29:13 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:13 EST 2024
+Creating test case for Row #          : 5706
+Validation Time(ms)                   : 481
+TC Validation status                  : PASS
+Short Desc                            : Comm Pref "EMAIL" & Large print type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having communication preference "EMAIL" and print type Large.
+Expected Results                      : Delivery type will be sent as paper/print and print type as Large successfully in the JSON request file.
+Test Case ID for Row 5706             : 48004
+Requirement ID                        : 37818.E7.040F
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48004
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48004
+Finished at                           : Mon Dec 09 13:29:18 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:18 EST 2024
+Creating test case for Row #          : 5707
+Validation Time(ms)                   : 536
+TC Validation status                  : PASS
+Short Desc                            : Comm Pref "EMAIL" & Braille print type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having communication preference "EMAIL" and print type Braille.
+Expected Results                      : Delivery type will be sent as paper/print and print type as Braille successfully in the JSON request file.
+Test Case ID for Row 5707             : 48005
+Requirement ID                        : 37818.E7.040F
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48005
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48005
+Finished at                           : Mon Dec 09 13:29:23 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:23 EST 2024
+Creating test case for Row #          : 5708
+Validation Time(ms)                   : 454
+TC Validation status                  : PASS
+Short Desc                            : Comm Pref "SMS/TEXT" & Regular print type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having communication preference "SMS/TEXT" and print type Regular.
+Expected Results                      : Delivery type will be sent as paper/print and print type as Regular successfully in the JSON request file.
+Test Case ID for Row 5708             : 48006
+Requirement ID                        : 37818.E7.040F
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48006
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48006
+Finished at                           : Mon Dec 09 13:29:28 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:28 EST 2024
+Creating test case for Row #          : 5709
+Validation Time(ms)                   : 471
+TC Validation status                  : PASS
+Short Desc                            : Comm Pref "SMS/TEXT" & Large print type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having communication preference "SMS/TEXT" and print type Large.
+Expected Results                      : Delivery type will be sent as paper/print and print type as Large successfully in the JSON request file.
+Test Case ID for Row 5709             : 48007
+Requirement ID                        : 37818.E7.040F
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48007
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48007
+Finished at                           : Mon Dec 09 13:29:34 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:34 EST 2024
+Creating test case for Row #          : 5710
+Validation Time(ms)                   : 473
+TC Validation status                  : PASS
+Short Desc                            : Comm Pref "SMS/TEXT" & Braille print type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having communication preference "SMS/TEXT" and print type Braille.
+Expected Results                      : Delivery type will be sent as paper/print and print type as Braille successfully in the JSON request file.
+Test Case ID for Row 5710             : 48008
+Requirement ID                        : 37818.E7.040F
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48008
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48008
+Finished at                           : Mon Dec 09 13:29:39 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:39 EST 2024
+Creating test case for Row #          : 5711
+Validation Time(ms)                   : 480
+TC Validation status                  : PASS
+Short Desc                            : Insert group "23"
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID receiving the E7 notice, which has the active Standard coverage.
+Expected Results                      : Send the value "23" as an insert group.
+Test Case ID for Row 5711             : 48009
+Requirement ID                        : 38338.E7.005
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48009
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48009
+Finished at                           : Mon Dec 09 13:29:44 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:44 EST 2024
+Creating test case for Row #          : 5712
+Validation Time(ms)                   : 434
+TC Validation status                  : PASS
+Short Desc                            : Insert group "23"
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID receiving the E7 notice, which has the active CommHealth coverage.
+Expected Results                      : Send the value "23" as an insert group.
+Test Case ID for Row 5712             : 48010
+Requirement ID                        : 38338.E7.005
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48010
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48010
+Finished at                           : Mon Dec 09 13:29:49 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:49 EST 2024
+Creating test case for Row #          : 5713
+Validation Time(ms)                   : 509
+TC Validation status                  : PASS
+Short Desc                            : Insert group "24"
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID receiving the E7 notice, which has the active Careplus coverage.
+Expected Results                      : Send the value "24" as an insert group.
+Test Case ID for Row 5713             : 48011
+Requirement ID                        : 38338.E7.010
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48011
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48011
+Finished at                           : Mon Dec 09 13:29:54 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:54 EST 2024
+Creating test case for Row #          : 5714
+Validation Time(ms)                   : 478
+TC Validation status                  : PASS
+Short Desc                            : Insert group "25"
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID receiving the E7 notice, which has the active Family Assistance coverage.
+Expected Results                      : Send the value "25" as an insert group.
+Test Case ID for Row 5714             : 48012
+Requirement ID                        : 38338.E7.015
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48012
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48012
+Finished at                           : Mon Dec 09 13:29:59 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:29:59 EST 2024
+Creating test case for Row #          : 5715
+Validation Time(ms)                   : 479
+TC Validation status                  : PASS
+Short Desc                            : Multiple Benfit Plan
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active standard and Careplus, insert group 23 should be considered.
+Expected Results                      : Insert group 23 is taken as expected while sending the notices.
+Test Case ID for Row 5715             : 48013
+Requirement ID                        : 38338.E7.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48013
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48013
+Finished at                           : Mon Dec 09 13:30:04 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:04 EST 2024
+Creating test case for Row #          : 5716
+Validation Time(ms)                   : 497
+TC Validation status                  : PASS
+Short Desc                            : Multiple Benfit Plan
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active standard and Family Assistance, insert group 23 should be considered.
+Expected Results                      : Insert group 23 is taken as expected while sending the notices.
+Test Case ID for Row 5716             : 48014
+Requirement ID                        : 38338.E7.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48014
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48014
+Finished at                           : Mon Dec 09 13:30:09 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:09 EST 2024
+Creating test case for Row #          : 5717
+Validation Time(ms)                   : 452
+TC Validation status                  : PASS
+Short Desc                            : Multiple Benfit Plan
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active CommonHealth and Careplus, insert group 23 should be considered.
+Expected Results                      : Insert group 23 is taken as expected while sending the notices.
+Test Case ID for Row 5717             : 48015
+Requirement ID                        : 38338.E7.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48015
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48015
+Finished at                           : Mon Dec 09 13:30:14 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:14 EST 2024
+Creating test case for Row #          : 5718
+Validation Time(ms)                   : 478
+TC Validation status                  : PASS
+Short Desc                            : Multiple Benfit Plan
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active CommonHealth and Family Assistance, insert group 23 should be considered.
+Expected Results                      : Insert group 23 is taken as expected while sending the notices.
+Test Case ID for Row 5718             : 48016
+Requirement ID                        : 38338.E7.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48016
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48016
+Finished at                           : Mon Dec 09 13:30:19 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:19 EST 2024
+Creating test case for Row #          : 5719
+Validation Time(ms)                   : 463
+TC Validation status                  : PASS
+Short Desc                            : Multiple Benfit Plan
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active Careplus and Family Assistance, insert group 24 should be considered.
+Expected Results                      : Insert group 24 is taken as expected while sending the notices.
+Test Case ID for Row 5719             : 48017
+Requirement ID                        : 38338.E7.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48017
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48017
+Finished at                           : Mon Dec 09 13:30:24 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:24 EST 2024
+Creating test case for Row #          : 5720
+Validation Time(ms)                   : 468
+TC Validation status                  : PASS
+Short Desc                            : MID with active ARDcontact - ERDI & English Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active ARD contact type as ERD I & written language as English.
+Expected Results                      : Two letter requests should be generated & sent to CNS with delivery type paper, print type regular and languange as english as expected for both the member & Active ERDI.
+Test Case ID for Row 5720             : 48018
+Requirement ID                        : 37818.E7.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48018
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48018
+Finished at                           : Mon Dec 09 13:30:29 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:29 EST 2024
+Creating test case for Row #          : 5721
+Validation Time(ms)                   : 494
+TC Validation status                  : PASS
+Short Desc                            : MID with active ARDcontact - ERDII & English Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active ARD contact type as ERD II & written language as English.
+Expected Results                      : Two letter requests should be generated & sent to CNS with delivery type paper, print type regular and languange as english as expected for both the member & Active ERDII.
+Test Case ID for Row 5721             : 48019
+Requirement ID                        : 37818.E7.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48019
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48019
+Finished at                           : Mon Dec 09 13:30:34 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:34 EST 2024
+Creating test case for Row #          : 5722
+Validation Time(ms)                   : 480
+TC Validation status                  : PASS
+Short Desc                            : MID with active ARDcontact - ERDIII & English Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active ARD contact type as ERD III & written language as English.
+Expected Results                      : Two letter requests should be generated & sent to CNS with delivery type paper, print type regular and languange as english as expected for both the member & Active ERDIII.
+Test Case ID for Row 5722             : 48020
+Requirement ID                        : 37818.E7.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48020
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48020
+Finished at                           : Mon Dec 09 13:30:39 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:39 EST 2024
+Creating test case for Row #          : 5723
+Validation Time(ms)                   : 499
+TC Validation status                  : PASS
+Short Desc                            : MID with active ARDcontact - ERDII & Foreign Language CNS
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active ARD contact type as ERD II & written language as Spanish.
+Expected Results                      : Three letter requests should be generated & sent to CNS with delivery type paper, print type regular and languange as english for Active ERD II, delivery type paper, print type regular and languange as Spanish for member & another request with delivery type nodelivery, languange as English for worker.
+Test Case ID for Row 5723             : 48021
+Requirement ID                        : 37818.E7.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48021
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48021
+Finished at                           : Mon Dec 09 13:30:44 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:44 EST 2024
+Creating test case for Row #          : 5724
+Validation Time(ms)                   : 465
+TC Validation status                  : PASS
+Short Desc                            : MID with multiple active ARD contacts & English Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active ARD contact type as ERD I and ERD II & written language as English.
+Expected Results                      : Three letter requests should be generated & sent to CNS with delivery type paper, print type regular and languange as english as expected for the member & Active ERD I & ERD II.
+Test Case ID for Row 5724             : 48022
+Requirement ID                        : 37818.E7.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48022
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48022
+Finished at                           : Mon Dec 09 13:30:49 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:49 EST 2024
+Creating test case for Row #          : 5725
+Validation Time(ms)                   : 479
+TC Validation status                  : PASS
+Short Desc                            : MID with multiple active ARD contacts & Foreign Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active ARD contact type as ERD II and ERD III & written language as Portuguese.
+Expected Results                      : Four letter requests should be generated & sent to CNS with delivery type paper, print type regular and languange as english for Active ERDI,delivery type paper, print type regular and languange as english for Active ERD IL, delivery type paper, print type regular and languange as Portuguese for member & another request with delivery type nodelivery, languange as English for worker.
+Test Case ID for Row 5725             : 48023
+Requirement ID                        : 37818.E7.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48023
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48023
+Finished at                           : Mon Dec 09 13:30:54 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:54 EST 2024
+Creating test case for Row #          : 5726
+Validation Time(ms)                   : 484
+TC Validation status                  : PASS
+Short Desc                            : MID with multiple active ARD contacts & English Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active ARD contact type as ERD III and ERD III & written language as English.
+Expected Results                      : Three letter requests should be generated & sent to CNS with delivery type paper, print type regular and languange as english as expected for the member & two Active ERD III.
+Test Case ID for Row 5726             : 48024
+Requirement ID                        : 37818.E7.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48024
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48024
+Finished at                           : Mon Dec 09 13:30:58 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 09 13:30:58 EST 2024
+Creating test case for Row #          : 5727
+Validation Time(ms)                   : 468
+TC Validation status                  : PASS
+Short Desc                            : MID with multiple active ARD contacts & Foreign Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the MID having the active ARD contact type as ERD I, ERD II, ERD II & ERD III written language as Vietnamese.
+Expected Results                      : Six letter requests should be generated & sent to CNS with delivery type paper, print type regular and languange as english for Active ERD I,  ERD II, ERD II & ERD III , delivery type paper, print type regular and languange as Vietnamese for member & another request with delivery type nodelivery, languange as English for worker.
+Test Case ID for Row 5727             : 48025
+Requirement ID                        : 37818.E7.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48025
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48025
+Finished at                           : Mon Dec 09 13:31:03 EST 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 09/Dec/2024 01:31:03PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

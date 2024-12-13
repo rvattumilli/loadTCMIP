@@ -1,0 +1,1017 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 13/Dec/2024 09:12:22AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 11/18/2024
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 148
+Total No.of Rows fetched              : 54
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Fri Dec 13 09:12:28 EST 2024
+Creating test case for Row #          : 5728
+Validation Time(ms)                   : 514
+TC Validation status                  : PASS
+Short Desc                            : CLHJR_LIST
+Env                                   : M
+Subsystem                             : Finance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLHJR_LIST - Extract claims sak file" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLHJR_LIST runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5728             : 48057
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48057
+Finished at                           : Fri Dec 13 09:12:32 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:12:32 EST 2024
+Creating test case for Row #          : 5729
+Validation Time(ms)                   : 537
+TC Validation status                  : PASS
+Short Desc                            : CLM030DD
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLM030DD - History Request - Summary Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLM030DD runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5729             : 48058
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48058
+Finished at                           : Fri Dec 13 09:12:36 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:12:36 EST 2024
+Creating test case for Row #          : 5730
+Validation Time(ms)                   : 526
+TC Validation status                  : PASS
+Short Desc                            : CLM115CW
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLM115CW - Prepayment Claims Suspended To Contractor" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLM115CW runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5730             : 48059
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48059
+Finished at                           : Fri Dec 13 09:12:39 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:12:39 EST 2024
+Creating test case for Row #          : 5731
+Validation Time(ms)                   : 559
+TC Validation status                  : PASS
+Short Desc                            : CLM155AW
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLM155AW - Claims Over 30 Days Summary Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLM155AW runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5731             : 48060
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48060
+Finished at                           : Fri Dec 13 09:12:43 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:12:43 EST 2024
+Creating test case for Row #          : 5732
+Validation Time(ms)                   : 516
+TC Validation status                  : PASS
+Short Desc                            : CLMD210A
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMD210A - Medicaid Daily Activity Control Report Payroll Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMD210A runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5732             : 48061
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48061
+Finished at                           : Fri Dec 13 09:12:47 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:12:47 EST 2024
+Creating test case for Row #          : 5733
+Validation Time(ms)                   : 497
+TC Validation status                  : PASS
+Short Desc                            : CLMD46CD
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMD46CD - Weekly Activity Evaluation Prov Type Clm Type Med" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMD46CD runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5733             : 48062
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48062
+Finished at                           : Fri Dec 13 09:12:51 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:12:51 EST 2024
+Creating test case for Row #          : 5734
+Validation Time(ms)                   : 523
+TC Validation status                  : PASS
+Short Desc                            : CLMJ2003
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJ2003 - Date Of Receipt To Date Of Suspension" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJ2003 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5734             : 48063
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48063
+Finished at                           : Fri Dec 13 09:12:55 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:12:55 EST 2024
+Creating test case for Row #          : 5735
+Validation Time(ms)                   : 522
+TC Validation status                  : PASS
+Short Desc                            : CLMJD027
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJD027 - Adjudicated Claim Daily Exception Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJD027 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5735             : 48064
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48064
+Finished at                           : Fri Dec 13 09:12:59 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:12:59 EST 2024
+Creating test case for Row #          : 5736
+Validation Time(ms)                   : 534
+TC Validation status                  : PASS
+Short Desc                            : CLMJD029
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJD029 - Claims GPCS Interface Errors Log Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJD029 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5736             : 48065
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48065
+Finished at                           : Fri Dec 13 09:13:03 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:03 EST 2024
+Creating test case for Row #          : 5737
+Validation Time(ms)                   : 528
+TC Validation status                  : PASS
+Short Desc                            : CLMJD052
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJD052 - Claim Submission Statistics Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJD052 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5737             : 48066
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48066
+Finished at                           : Fri Dec 13 09:13:07 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:07 EST 2024
+Creating test case for Row #          : 5738
+Validation Time(ms)                   : 553
+TC Validation status                  : PASS
+Short Desc                            : CLMJD210
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJD210 - Multiple Provider Mass Rate Adjustments" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJD210 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5738             : 48067
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48067
+Finished at                           : Fri Dec 13 09:13:10 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:10 EST 2024
+Creating test case for Row #          : 5739
+Validation Time(ms)                   : 554
+TC Validation status                  : PASS
+Short Desc                            : CLMJD211
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJD211 - Single Provider Mass Rate Adjustments" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJD211 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5739             : 48068
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48068
+Finished at                           : Fri Dec 13 09:13:14 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:14 EST 2024
+Creating test case for Row #          : 5740
+Validation Time(ms)                   : 544
+TC Validation status                  : PASS
+Short Desc                            : CLMJD300
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJD300 - Daemon Process to Kick Off Sendclms" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJD300 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5740             : 48069
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48069
+Finished at                           : Fri Dec 13 09:13:17 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:17 EST 2024
+Creating test case for Row #          : 5741
+Validation Time(ms)                   : 542
+TC Validation status                  : PASS
+Short Desc                            : CLMJD415
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJD415 - Reprocess Request Update" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJD415 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5741             : 48070
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48070
+Finished at                           : Fri Dec 13 09:13:21 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:21 EST 2024
+Creating test case for Row #          : 5742
+Validation Time(ms)                   : 512
+TC Validation status                  : PASS
+Short Desc                            : CLMJD416
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJD416 - Mass Adj Request Update" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJD416 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5742             : 48071
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48071
+Finished at                           : Fri Dec 13 09:13:25 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:25 EST 2024
+Creating test case for Row #          : 5743
+Validation Time(ms)                   : 566
+TC Validation status                  : PASS
+Short Desc                            : CLMJDA01
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDA01 - Create audit driver tables" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDA01 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5743             : 48072
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48072
+Finished at                           : Fri Dec 13 09:13:28 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:28 EST 2024
+Creating test case for Row #          : 5744
+Validation Time(ms)                   : 539
+TC Validation status                  : PASS
+Short Desc                            : CLMJDA99
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDA99 - Remove Adjusted Claims" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDA99 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5744             : 48073
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48073
+Finished at                           : Fri Dec 13 09:13:32 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:32 EST 2024
+Creating test case for Row #          : 5745
+Validation Time(ms)                   : 504
+TC Validation status                  : PASS
+Short Desc                            : CLMJDADJD
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDADJD - TPL History Only Adjustment" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDADJD runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5745             : 48074
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48074
+Finished at                           : Fri Dec 13 09:13:35 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:35 EST 2024
+Creating test case for Row #          : 5746
+Validation Time(ms)                   : 503
+TC Validation status                  : PASS
+Short Desc                            : CLMJDATP
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDATP - ATP/PAPE Void and Mass Adjustments" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDATP runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5746             : 48075
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48075
+Finished at                           : Fri Dec 13 09:13:39 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:39 EST 2024
+Creating test case for Row #          : 5747
+Validation Time(ms)                   : 533
+TC Validation status                  : PASS
+Short Desc                            : CLMJDDBG
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify Job: CLMJDDBG - Spenddown Utilization" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>"
+Expected Results                      : Verify job CLMJDDBG runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5747             : 48076
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48076
+Finished at                           : Fri Dec 13 09:13:42 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:42 EST 2024
+Creating test case for Row #          : 5748
+Validation Time(ms)                   : 538
+TC Validation status                  : PASS
+Short Desc                            : CLMJDJWT
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDJWT - CLMJDJWT" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDJWT runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5748             : 48077
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48077
+Finished at                           : Fri Dec 13 09:13:46 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:46 EST 2024
+Creating test case for Row #          : 5749
+Validation Time(ms)                   : 515
+TC Validation status                  : PASS
+Short Desc                            : CLMJDM_PROV_RATE
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDM_PROV_RATE - Call the adjustment routine for claims Mass Adjustment requests." runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDM_PROV_RATE runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5749             : 48078
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48078
+Finished at                           : Fri Dec 13 09:13:49 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:49 EST 2024
+Creating test case for Row #          : 5750
+Validation Time(ms)                   : 511
+TC Validation status                  : PASS
+Short Desc                            : CLMJDPRM
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDPRM - Predictive Modeling Monitor" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDPRM runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5750             : 48079
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48079
+Finished at                           : Fri Dec 13 09:13:53 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:53 EST 2024
+Creating test case for Row #          : 5751
+Validation Time(ms)                   : 534
+TC Validation status                  : PASS
+Short Desc                            : CLMJDR02
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDR02 - Batch job to recycle suspended claims" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDR02 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5751             : 48080
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48080
+Finished at                           : Fri Dec 13 09:13:56 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:13:56 EST 2024
+Creating test case for Row #          : 5752
+Validation Time(ms)                   : 531
+TC Validation status                  : PASS
+Short Desc                            : CLMJDRGER
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDRGER - Claims Region Error Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDRGER runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5752             : 48081
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48081
+Finished at                           : Fri Dec 13 09:14:00 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:00 EST 2024
+Creating test case for Row #          : 5753
+Validation Time(ms)                   : 529
+TC Validation status                  : PASS
+Short Desc                            : CLMJDRST
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify Job: CLMJDRST - Spenddown Utilization" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>"
+Expected Results                      : Verify job CLMJDRST runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5753             : 48082
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48082
+Finished at                           : Fri Dec 13 09:14:04 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:04 EST 2024
+Creating test case for Row #          : 5754
+Validation Time(ms)                   : 533
+TC Validation status                  : PASS
+Short Desc                            : CLMJDSHMC
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDSHMC - Update claims shared memory config file" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDSHMC runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5754             : 48083
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48083
+Finished at                           : Fri Dec 13 09:14:07 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:07 EST 2024
+Creating test case for Row #          : 5755
+Validation Time(ms)                   : 529
+TC Validation status                  : PASS
+Short Desc                            : CLMJDSHML
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJDSHML - Load Shared Memory for Claims" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJDSHML runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5755             : 48084
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48084
+Finished at                           : Fri Dec 13 09:14:11 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:11 EST 2024
+Creating test case for Row #          : 5756
+Validation Time(ms)                   : 507
+TC Validation status                  : PASS
+Short Desc                            : CLMJM921
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify Job: CLMJM921 - Spenddown Utilization" runs successfully without fail. <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>"
+Expected Results                      : Verify job CLMJM921 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5756             : 48086
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48086
+Finished at                           : Fri Dec 13 09:14:14 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:14 EST 2024
+Creating test case for Row #          : 5757
+Validation Time(ms)                   : 521
+TC Validation status                  : PASS
+Short Desc                            : CLMJMA00
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJMA00 - Adjustment Request Update" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJMA00 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5757             : 48087
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48087
+Finished at                           : Fri Dec 13 09:14:18 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:18 EST 2024
+Creating test case for Row #          : 5758
+Validation Time(ms)                   : 503
+TC Validation status                  : PASS
+Short Desc                            : CLMJMACF
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJMACF - Mass Adjustment File Upload" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJMACF runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5758             : 48088
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48088
+Finished at                           : Fri Dec 13 09:14:21 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:21 EST 2024
+Creating test case for Row #          : 5759
+Validation Time(ms)                   : 489
+TC Validation status                  : PASS
+Short Desc                            : CLMJMACR
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJMACR - Mass Adjustment Claim Select" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJMACR runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5759             : 48089
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48089
+Finished at                           : Fri Dec 13 09:14:25 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:25 EST 2024
+Creating test case for Row #          : 5760
+Validation Time(ms)                   : 502
+TC Validation status                  : PASS
+Short Desc                            : CLMJMACV
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJMACV - Mass Void File Upload" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJMACV runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5760             : 48090
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48090
+Finished at                           : Fri Dec 13 09:14:29 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:29 EST 2024
+Creating test case for Row #          : 5761
+Validation Time(ms)                   : 507
+TC Validation status                  : PASS
+Short Desc                            : CLMJRAPG
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJRAPG - APG Pricing" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJRAPG runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5761             : 48091
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48091
+Finished at                           : Fri Dec 13 09:14:32 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:32 EST 2024
+Creating test case for Row #          : 5762
+Validation Time(ms)                   : 519
+TC Validation status                  : PASS
+Short Desc                            : CLMJRAPR
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJRAPR - APG Pricing Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJRAPR runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5762             : 48092
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48092
+Finished at                           : Fri Dec 13 09:14:36 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:36 EST 2024
+Creating test case for Row #          : 5763
+Validation Time(ms)                   : 494
+TC Validation status                  : PASS
+Short Desc                            : CLMJSTRT
+Env                                   : M
+Subsystem                             : Unknown - (delete) Finance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMJSTRT - Starts the Claims Engine" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMJSTRT runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5763             : 48093
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48093
+Finished at                           : Fri Dec 13 09:14:39 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:39 EST 2024
+Creating test case for Row #          : 5764
+Validation Time(ms)                   : 559
+TC Validation status                  : PASS
+Short Desc                            : CLMPDEXDJ
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMPDEXDJ - CLMPDEXDJ" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMPDEXDJ runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5764             : 48094
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48094
+Finished at                           : Fri Dec 13 09:14:43 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:43 EST 2024
+Creating test case for Row #          : 5765
+Validation Time(ms)                   : 552
+TC Validation status                  : PASS
+Short Desc                            : CLMPDFIN
+Env                                   : M
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLMPDFIN - CLMPDFIN" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLMPDFIN runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5765             : 48095
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48095
+Finished at                           : Fri Dec 13 09:14:46 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:46 EST 2024
+Creating test case for Row #          : 5766
+Validation Time(ms)                   : 524
+TC Validation status                  : PASS
+Short Desc                            : CLRJD001
+Env                                   : M
+Subsystem                             : General System
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: CLRJD001 - Update daily claims report parms" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job CLRJD001 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5766             : 48096
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48096
+Finished at                           : Fri Dec 13 09:14:50 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:50 EST 2024
+Creating test case for Row #          : 5767
+Validation Time(ms)                   : 513
+TC Validation status                  : PASS
+Short Desc                            : TPLJD017
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJD017 - Produce Carriers By Employer Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJD017 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5767             : 48097
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48097
+Finished at                           : Fri Dec 13 09:14:53 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:53 EST 2024
+Creating test case for Row #          : 5768
+Validation Time(ms)                   : 510
+TC Validation status                  : PASS
+Short Desc                            : TPLJD250
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJD250 - Update AR Julian and Sequence" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJD250 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5768             : 48098
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48098
+Finished at                           : Fri Dec 13 09:14:57 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:14:57 EST 2024
+Creating test case for Row #          : 5769
+Validation Time(ms)                   : 525
+TC Validation status                  : PASS
+Short Desc                            : TPLJD800
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJD800 - Generate Daily Reports" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJD800 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5769             : 48099
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48099
+Finished at                           : Fri Dec 13 09:15:00 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:00 EST 2024
+Creating test case for Row #          : 5770
+Validation Time(ms)                   : 515
+TC Validation status                  : PASS
+Short Desc                            : TPLJD912
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJD912 - Mass Updates Selection" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJD912 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5770             : 48100
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48100
+Finished at                           : Fri Dec 13 09:15:04 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:04 EST 2024
+Creating test case for Row #          : 5771
+Validation Time(ms)                   : 511
+TC Validation status                  : PASS
+Short Desc                            : TPLJD919
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJD919 - SOHEMA TPL Resource driver job" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJD919 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5771             : 48101
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48101
+Finished at                           : Fri Dec 13 09:15:07 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:07 EST 2024
+Creating test case for Row #          : 5772
+Validation Time(ms)                   : 486
+TC Validation status                  : PASS
+Short Desc                            : TPLJD975
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJD975 - TPL Resource and Coverage Deletion Reports" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJD975 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5772             : 48102
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48102
+Finished at                           : Fri Dec 13 09:15:10 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:10 EST 2024
+Creating test case for Row #          : 5773
+Validation Time(ms)                   : 507
+TC Validation status                  : PASS
+Short Desc                            : TPLJM010
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJM010 - Active Members with Open TPL Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJM010 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5773             : 48103
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48103
+Finished at                           : Fri Dec 13 09:15:14 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:14 EST 2024
+Creating test case for Row #          : 5774
+Validation Time(ms)                   : 532
+TC Validation status                  : PASS
+Short Desc                            : TPLJM604
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJM604 - Generate Part B Repricing Reports" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJM604 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5774             : 48104
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48104
+Finished at                           : Fri Dec 13 09:15:17 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:17 EST 2024
+Creating test case for Row #          : 5775
+Validation Time(ms)                   : 512
+TC Validation status                  : PASS
+Short Desc                            : TPLJM607
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJM607 - Generate Cost Avoidance for Crossover Pharmacy Exception" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJM607 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5775             : 48105
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48105
+Finished at                           : Fri Dec 13 09:15:21 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:21 EST 2024
+Creating test case for Row #          : 5776
+Validation Time(ms)                   : 551
+TC Validation status                  : PASS
+Short Desc                            : TPLJM627
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJM627 - Active Members with Open TPL Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJM627 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5776             : 48106
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48106
+Finished at                           : Fri Dec 13 09:15:24 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:24 EST 2024
+Creating test case for Row #          : 5777
+Validation Time(ms)                   : 511
+TC Validation status                  : PASS
+Short Desc                            : TPLJM692
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJM692 - Active Members with Open TPL Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJM692 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5777             : 48107
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48107
+Finished at                           : Fri Dec 13 09:15:28 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:28 EST 2024
+Creating test case for Row #          : 5778
+Validation Time(ms)                   : 527
+TC Validation status                  : PASS
+Short Desc                            : TPLJR900
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJR900 - Provider data to MassHealth Contractor" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJR900 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5778             : 48108
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48108
+Finished at                           : Fri Dec 13 09:15:31 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:31 EST 2024
+Creating test case for Row #          : 5779
+Validation Time(ms)                   : 553
+TC Validation status                  : PASS
+Short Desc                            : TPLJR909
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJR909 - Member Paid Claims Extract to ARTS" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJR909 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5779             : 48109
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48109
+Finished at                           : Fri Dec 13 09:15:35 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:35 EST 2024
+Creating test case for Row #          : 5780
+Validation Time(ms)                   : 519
+TC Validation status                  : PASS
+Short Desc                            : TPLJW112
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJW112 - Generate Accident Trauma MA21 Report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJW112 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5780             : 48110
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48110
+Finished at                           : Fri Dec 13 09:15:38 EST 2024
+*****************************************************************
+Started at                            : Fri Dec 13 09:15:38 EST 2024
+Creating test case for Row #          : 5781
+Validation Time(ms)                   : 522
+TC Validation status                  : PASS
+Short Desc                            : TPLJW201
+Env                                   : M
+Subsystem                             : Third Party Liability
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Verify "Job: TPLJW201 - Generate Multiple Recovery Claims report" runs successfully without fail.  <b> Note: If the job accepts input file, verify input file is processed by the job. If the job produces an output file or report, verify that the file is generated.</b>
+Expected Results                      : Verify job TPLJW201 runs successfully without fail. Verify job log is generated.
+Test Case ID for Row 5781             : 48111
+Notebook                              : AWSMigration
+Business Function                     : AWS Batch
+Notebook/BF linked for test case      : 48111
+Finished at                           : Fri Dec 13 09:15:42 EST 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 13/Dec/2024 09:15:42AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
