@@ -1,0 +1,69 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 16/Dec/2024 11:19:58AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 11/18/2024
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 330
+Total No.of Rows fetched              : 3
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Mon Dec 16 11:20:21 EST 2024
+Creating test case for Row #          : 5794
+Grouping                              : Notice Panel
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 1138
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 11:20:25 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 11:20:25 EST 2024
+Creating test case for Row #          : 5795
+Grouping                              : Notice Panel
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 1326
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 11:20:28 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 11:20:28 EST 2024
+Creating test case for Row #          : 5796
+Grouping                              : Notice Panel
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 1389
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 11:20:32 EST 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 16/Dec/2024 11:20:32AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

@@ -1,0 +1,309 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 16/Dec/2024 09:29:53AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 11/18/2024
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 155
+Total No.of Rows fetched              : 12
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Mon Dec 16 09:29:58 EST 2024
+Creating test case for Row #          : 5782
+Validation Time(ms)                   : 505
+TC Validation status                  : PASS
+Short Desc                            : Validate Notice Req for new member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : External Interfaces
+Long Desc                             : Create a brand-new member  with PCC enrolled Plan for  E7 pilot notice. Verify after job ran the member got picked up and REQUEST got created in JSON format and sent to CNS. Validate  the callback response  is sent from CNS as Acknowledgement. Validate the callback response is sent with generated status Validate the Notice is generated successfully.
+Expected Results                      : Validate for brand new PCC enrolled member ,Notice is generated successfully as expected
+Test Case ID for Row 5782             : 48113
+Requirement ID                        : 37817-01-002
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48113
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48113
+Finished at                           : Mon Dec 16 09:30:03 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:03 EST 2024
+Creating test case for Row #          : 5783
+Validation Time(ms)                   : 485
+TC Validation status                  : PASS
+Short Desc                            : Validate Notice Req for existing member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : External Interfaces
+Long Desc                             : Select already existing member with PCC enrolled Plan  for E7 pilot notice with. Verify after job ran the member got picked up and REQUEST got created in JSON format and sent to CNS. Verify the callback is sent from CNS as Acknowledgement. Validate the callback response is sent with generated status Verify the Notice is generated successfully.
+Expected Results                      : Validate the for existing PCC enrolled member ,Notice is generated successfully as expected.
+Test Case ID for Row 5783             : 48114
+Requirement ID                        : 37817-01-002
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48114
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48114
+Finished at                           : Mon Dec 16 09:30:08 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:08 EST 2024
+Creating test case for Row #          : 5784
+Validation Time(ms)                   : 497
+TC Validation status                  : PASS
+Short Desc                            : Validate Notice View Request
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : External Interfaces
+Long Desc                             : Validate the callback received from CNS has document id and response is in generated status. Validate the request was sent from CNS to EDM with object id. Validate from UI-notice id link is available so EDM object id is created, then View PDF format file and request should be viewed successfully. Note: Notice Request can be viewed from Webservices using notice-id.
+Expected Results                      : Verify notice View request is processed successfully.
+Test Case ID for Row 5784             : 48115
+Requirement ID                        : 37817-03-002
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48115
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48115
+Finished at                           : Mon Dec 16 09:30:14 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:14 EST 2024
+Creating test case for Row #          : 5785
+Validation Time(ms)                   : 502
+TC Validation status                  : PASS
+Short Desc                            : Validate no ICD version and Payload version in JSON
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : External Interfaces
+Long Desc                             : Validate the JSON request created doesnt include elements-ICD version and Payload version.
+Expected Results                      : Verify JSON request created without ICD version and Payload version successfully.
+Test Case ID for Row 5785             : 48116
+Requirement ID                        : 37817-01-003
+Requirement Type                      : Informational
+SAK Requirement Type                  : 24
+Requirement linked for test case      : 48116
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48116
+Finished at                           : Mon Dec 16 09:30:19 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:19 EST 2024
+Creating test case for Row #          : 5786
+Validation Time(ms)                   : 503
+TC Validation status                  : PASS
+Short Desc                            : Response for Valid Creds
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : External Interfaces
+Long Desc                             : Create a member with PCCP in order to trigger E7 notice. Verify that a request has been made and the request is in JSON format. Validate that the callback response is received from CNS is ACCEPTED (202).
+Expected Results                      : Verify that the callback response is ACCEPTED (202) indicating valid credentials and the notice is generated successfully.
+Test Case ID for Row 5786             : 48117
+Requirement ID                        : 37817-02-001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48117
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48117
+Finished at                           : Mon Dec 16 09:30:24 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:24 EST 2024
+Creating test case for Row #          : 5787
+Validation Time(ms)                   : 817
+TC Validation status                  : PASS
+Short Desc                            : Conn B/W MMIS & CNS
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : External Interfaces
+Long Desc                             : Select the existing MID and enroll it to PCC program, after the MGDJDCNS batch run, notice request sent to CNS. Verify the batch logs for sent confirmation.
+Expected Results                      : Logs are generated and connection is successful between the MMIS and CNS as expected.
+Test Case ID for Row 5787             : 48118
+Requirement ID                        : 37817-01-001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48118
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48118
+Finished at                           : Mon Dec 16 09:30:30 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:30 EST 2024
+Creating test case for Row #          : 5788
+Validation Time(ms)                   : 582
+TC Validation status                  : PASS
+Short Desc                            : Conn B/W MMIS & CNS
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : External Interfaces
+Long Desc                             : Create the new MID and enroll it to PCC program, after the MGDJDCNS batch run, notice request sent to CNS. Verify the batch logs for sent confirmation.
+Expected Results                      : Logs are generated and connection is successful between the MMIS and CNS as expected.
+Test Case ID for Row 5788             : 48119
+Requirement ID                        : 37817-01-001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48119
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48119
+Finished at                           : Mon Dec 16 09:30:35 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:35 EST 2024
+Creating test case for Row #          : 5789
+Validation Time(ms)                   : 852
+TC Validation status                  : PASS
+Short Desc                            : Over 100 Notices
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : External Interfaces
+Long Desc                             : Enroll into PCCP for the 101 and above MIDs, then bulk request will be generated in multiples of 100 each. For example if the 125 MIDs are transferred to PCCP, then 100 notices will be sent as one bulk request and remaining 25 notices will be sent in second bulk request.
+Expected Results                      : Case of 100 notices in each bulk request are sent as requested.
+Test Case ID for Row 5789             : 48120
+Requirement ID                        : 37817-01-001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48120
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48120
+Finished at                           : Mon Dec 16 09:30:41 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:41 EST 2024
+Creating test case for Row #          : 5790
+Validation Time(ms)                   : 550
+TC Validation status                  : PASS
+Short Desc                            : Generated State
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : External Interfaces
+Long Desc                             : Generated state notification is stored in the MMIS database. Task1: Existing member Task2: New Member
+Expected Results                      : Generated state notification stored in the DB as expected.
+Test Case ID for Row 5790             : 48121
+Requirement ID                        : 37817-05-001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48121
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48121
+Finished at                           : Mon Dec 16 09:30:46 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:46 EST 2024
+Creating test case for Row #          : 5791
+Validation Time(ms)                   : 529
+TC Validation status                  : PASS
+Short Desc                            : Supressed State
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : External Interfaces
+Long Desc                             : Request CNS to change the Sent for Delivery state to Supressed State.Supressed state notification is stored in the MMIS database. Task1: Existing member Task2: New Member
+Expected Results                      : Supressed state notification stored in the DB as expected.
+Test Case ID for Row 5791             : 48122
+Requirement ID                        : 37817-05-001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48122
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48122
+Finished at                           : Mon Dec 16 09:30:51 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:51 EST 2024
+Creating test case for Row #          : 5792
+Validation Time(ms)                   : 535
+TC Validation status                  : PASS
+Short Desc                            : Sent for Delivery
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : External Interfaces
+Long Desc                             : Paper notice Sent for Delivery stored in MMIS DB, check the audit table for validation. Task1: Existing member Task2: New Member
+Expected Results                      : Sent for Delivery notification is stored in DB as expected.
+Test Case ID for Row 5792             : 48123
+Requirement ID                        : 37817-05-001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48123
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48123
+Finished at                           : Mon Dec 16 09:30:55 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:30:55 EST 2024
+Creating test case for Row #          : 5793
+Validation Time(ms)                   : 540
+TC Validation status                  : PASS
+Short Desc                            : NotForDelivery
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : External Interfaces
+Long Desc                             : Set up the data, where the notice need to be sent to the Worker and after the batch run, NotForDelivery state is stored in the MMIS database for the Worker Notice.
+Expected Results                      : NotForDelivery state can be seen in the database table for the worker notice as expected.
+Test Case ID for Row 5793             : 48124
+Requirement ID                        : 37817-05-001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48124
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48124
+Finished at                           : Mon Dec 16 09:31:00 EST 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 16/Dec/2024 09:31:01AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

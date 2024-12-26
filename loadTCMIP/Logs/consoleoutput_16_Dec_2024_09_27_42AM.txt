@@ -1,0 +1,141 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 16/Dec/2024 09:27:42AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 11/18/2024
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 267
+Total No.of Rows fetched              : 12
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Mon Dec 16 09:27:48 EST 2024
+Creating test case for Row #          : 5782
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 523
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:27:50 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:27:50 EST 2024
+Creating test case for Row #          : 5783
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 473
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:27:52 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:27:52 EST 2024
+Creating test case for Row #          : 5784
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 807
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:27:54 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:27:54 EST 2024
+Creating test case for Row #          : 5785
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 732
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:27:56 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:27:56 EST 2024
+Creating test case for Row #          : 5786
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 499
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:27:58 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:27:58 EST 2024
+Creating test case for Row #          : 5787
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 509
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:28:00 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:28:00 EST 2024
+Creating test case for Row #          : 5788
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 476
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:28:02 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:28:02 EST 2024
+Creating test case for Row #          : 5789
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 516
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:28:04 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:28:04 EST 2024
+Creating test case for Row #          : 5790
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 513
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:28:05 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:28:05 EST 2024
+Creating test case for Row #          : 5791
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 549
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:28:07 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:28:07 EST 2024
+Creating test case for Row #          : 5792
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 493
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:28:08 EST 2024
+*****************************************************************
+Started at                            : Mon Dec 16 09:28:08 EST 2024
+Creating test case for Row #          : 5793
+Grouping                              : Interfaces
+Grouping Validation                   : Verify Grouping for the Test case
+Validation Time(ms)                   : 480
+TC Validation status                  : FAIL
+Finished at                           : Mon Dec 16 09:28:10 EST 2024
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 16/Dec/2024 09:28:10AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
