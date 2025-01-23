@@ -62,7 +62,7 @@ public class LoadTCMIP {
 	private final String testCaseDataMessage = "            NO TC DATA THIS RUN           ";
 	private final String reqDataMessage = "           NO REQ DATA THIS RUN           ";
 	private final String credQuery = "select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from "
-			 						+ "v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'System' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2";
+			 						+ "v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'User' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2";
 	private final String testCaseSql = "select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, "
 										+ "a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, "
 										+ "nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where "

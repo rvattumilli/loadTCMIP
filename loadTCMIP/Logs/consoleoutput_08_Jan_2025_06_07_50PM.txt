@@ -1,0 +1,106 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 08/Jan/2025 06:07:50PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 50
+Total No.of Rows fetched              : 5
+*****************************************************************
+Started at                            : Wed Jan 08 18:07:55 EST 2025
+Creating requirement for Row #        : 156
+Validation Time(ms)                   : 554
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.02.002
+Requirement Name                      : Subordinates SearchResults -Indicate Primary user
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel, subordinate search results should place the Primary provider identifier at the right side of the currently-named "Subordinate" column, as shown in the attached image. The identifier must be the same number of characters from the left-edge of the "Subordinate" column for all who should have it. If technically easier to have the indicator just to the right of the right side of the "Subordinate" column, that"s ok.
+SAK Req for Row 156                   : 14852
+Finished at                           : Wed Jan 08 18:08:00 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:08:00 EST 2025
+Creating requirement for Row #        : 166
+Validation Time(ms)                   : 538
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.005
+Requirement Name                      : See subordinates having certain role(s)
+Requirement Type                      : Informational
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In the standard (default) view showing linked subordinates, the Primary provider needs the capability to be able to see and manage the displayed subordinates based on whether each has in effect one or multiple role(s)/service(s).
+SAK Req for Row 166                   : 14853
+Finished at                           : Wed Jan 08 18:08:04 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:08:04 EST 2025
+Creating requirement for Row #        : 168
+Validation Time(ms)                   : 550
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.010
+Requirement Name                      : Subordinates Search panel select 1 or more roles
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The Manage Subordinates panel should have a new user-activated control somewhere in the (top) Subordinates Search panel that allows the Primary provider to specify one or multiple role(s)/service(s) to see and manage just those subordinates.
+SAK Req for Row 168                   : 14854
+Finished at                           : Wed Jan 08 18:08:09 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:08:09 EST 2025
+Creating requirement for Row #        : 170
+Validation Time(ms)                   : 579
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.008
+Requirement Name                      : Subordinates - indicator of having individual role
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Add to Manage Subordinates panel "s search results an indicator of whether a subordinate has an individual role/service (e.g., Claims Submission or Status) or AT LEAST ONE OF multiple roles/services (if more than one are specified) .
+SAK Req for Row 170                   : 14855
+Finished at                           : Wed Jan 08 18:08:13 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:08:13 EST 2025
+Creating requirement for Row #        : 172
+Validation Time(ms)                   : 573
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.007
+Requirement Name                      : Sort subordinates by indicator of having role(s)
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : This indicator can be used to sort by. When sorted by the indicator, use a secondary sort of the "Subordinate" column (which is their name.)
+SAK Req for Row 172                   : 14856
+Finished at                           : Wed Jan 08 18:08:18 EST 2025
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 08/Jan/2025 06:08:18PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

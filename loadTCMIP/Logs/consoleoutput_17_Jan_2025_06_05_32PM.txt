@@ -1,0 +1,133 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 17/Jan/2025 06:05:32PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 277
+Total No.of Rows fetched              : 4
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Fri Jan 17 18:05:58 EST 2025
+Creating test case for Row #          : 5805
+Validation Time(ms)                   : 603
+TC Validation status                  : PASS
+Short Desc                            : Fix 38539 TC1
+Env                                   : 9
+Subsystem                             : Managed Care
+SAK Participant                       : 92
+Owner                                 : SUSAN MATTES
+Grouping                              : Batch
+Long Desc                             : Business test file member 100019523024 has closed ACOB with BH/PCCB followed by contiguous CPBH/CPCCB that spans OOS date 20210813.
+Expected Results                      : Using OOS Batch Disenroll code, OOS batch process disenrolls ACOB and CPCCB/BH as of 20210813, creates Member Date Specific 20220101 -20220228.
+Test Case ID for Row 5805             : 48148
+Requirement ID                        : 36881.20.027
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48148
+Notebook                              : PostAWS-Project 25.03
+Business Function                     : PostAWS-Project 25.03
+Notebook/BF linked for test case      : 48148
+Finished at                           : Fri Jan 17 18:06:05 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 17 18:06:05 EST 2025
+Creating test case for Row #          : 5806
+Validation Time(ms)                   : 559
+TC Validation status                  : PASS
+Short Desc                            : Fix 38539 TC2
+Env                                   : 9
+Subsystem                             : Managed Care
+SAK Participant                       : 92
+Owner                                 : SUSAN MATTES
+Grouping                              : Batch
+Long Desc                             : Business test file member 100025492248 has ACOB/PCCB/BH with two contiguous CPCCBs and one contiguous CPBH and OOS date 20220211 spans the last CPCCB.
+Expected Results                      : Using OOS Batch Disenroll code, OOS batch process disenrolls ACOB, CPBH and the last CPCCB as of 20220211, create Member Date Specific 20220101 - 20220831.
+Test Case ID for Row 5806             : 48149
+Requirement ID                        : 36881.20.027
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48149
+Notebook                              : PostAWS-Project 25.03
+Business Function                     : PostAWS-Project 25.03
+Notebook/BF linked for test case      : 48149
+Finished at                           : Fri Jan 17 18:06:10 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 17 18:06:10 EST 2025
+Creating test case for Row #          : 5807
+Validation Time(ms)                   : 612
+TC Validation status                  : PASS
+Short Desc                            : Fix 38539 TC3 With Contiguous
+Env                                   : 9
+Subsystem                             : Managed Care
+SAK Participant                       : 92
+Owner                                 : SUSAN MATTES
+Grouping                              : Batch
+Long Desc                             : Business test file member 100043812071 has closed ACOB with PCCB/BH followed by contiguous CPCCB/CPBH, where the CPCCB/CPBH spans OOS date 20210813, followed by contiguous closed ACOB.
+Expected Results                      : Using OOS Batch Disenroll code, OOS batch process disenrolls ACOB and CPCCB/CPBH as of 20210813, histories ACOB, create Member Date Specific 20220101 - 20220228.
+Test Case ID for Row 5807             : 48150
+Requirement ID                        : 36881.20.027
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48150
+Notebook                              : PostAWS-Project 25.03
+Business Function                     : PostAWS-Project 25.03
+Notebook/BF linked for test case      : 48150
+Finished at                           : Fri Jan 17 18:06:16 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 17 18:06:16 EST 2025
+Creating test case for Row #          : 5808
+Validation Time(ms)                   : 546
+TC Validation status                  : PASS
+Short Desc                            : Fix 38539 TC4
+Env                                   : 9
+Subsystem                             : Managed Care
+SAK Participant                       : 92
+Owner                                 : SUSAN MATTES
+Grouping                              : Batch
+Long Desc                             : Business test file member 100047989783  has closed ACOB with PCCB/BH followed by contiguous CPCCB/CPBH, where the CPCCB/CPBH spans OOS date 20211112.
+Expected Results                      : Using OOS Batch Disenroll code, OOS batch process disenrolls ACOB and CPCCB/BH as of 20211112, creates Member Date Specific 20220101 -20220131.
+Test Case ID for Row 5808             : 48151
+Requirement ID                        : 36881.20.027
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48151
+Notebook                              : PostAWS-Project 25.03
+Business Function                     : PostAWS-Project 25.03
+Notebook/BF linked for test case      : 48151
+Finished at                           : Fri Jan 17 18:06:23 EST 2025
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 17/Jan/2025 06:06:24PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

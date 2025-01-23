@@ -1,0 +1,635 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 08/Jan/2025 05:58:08PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 100
+Total No.of Rows fetched              : 47
+*****************************************************************
+Started at                            : Wed Jan 08 17:59:47 EST 2025
+Creating requirement for Row #        : 144
+Validation Time(ms)                   : 536
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.001
+Requirement Name                      : Primary Providers search for PIDSL by ID
+Requirement Type                      : Informational
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Improve the way Primary providers are able to search for, and select, specific PID/Sls in the Manage Subordinates panel. This is needed because some users have thousands of PID/SLs. Prior discussion with UI team leader said that cannot have a "dynamic" search capability that when typing in some characters would automatically present a filtered list that would continue to filter displayed list as more characters are entered. But UI team leader said could add separate fields to accept partial search text for both PID/SL ID and PID/SL name.
+SAK Req for Row 144                   : 14810
+Finished at                           : Wed Jan 08 17:59:52 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 17:59:52 EST 2025
+Creating requirement for Row #        : 145
+Validation Time(ms)                   : 545
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.002
+Requirement Name                      : PIDSL search results returns ID and Name
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL new PID/SL search functionality, search results must include both the PID/SL ID and name. E.g., 110000089A Medical Associates.
+SAK Req for Row 145                   : 14811
+Finished at                           : Wed Jan 08 17:59:57 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 17:59:57 EST 2025
+Creating requirement for Row #        : 146
+Validation Time(ms)                   : 506
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.003
+Requirement Name                      : PIDSL search NAME results details
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL new PID/SL search functionality, for the name use T_PR_NAM.NAME, but where this name is an individual"s name, remove spaces before and after FN & LN, with one space between. So: "SMITH DAVID Z", not ""SMITH DAVID Z". (May want to refer to the 38194_Design Document which used the rTrimPlus function.)
+SAK Req for Row 146                   : 14812
+Finished at                           : Wed Jan 08 18:00:01 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:01 EST 2025
+Creating requirement for Row #        : 147
+Validation Time(ms)                   : 572
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.004
+Requirement Name                      : PIDSL search results returns NPI if exists
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL search functionality, if there is an NPI for the PID/SL, results must also include the NPI, along with the PID/SL ID and name. This is how the PID/SLs appear currently in the dropdown list. E.g., 1013280346-110091547A-PIDSL NAME.
+SAK Req for Row 147                   : 14813
+Finished at                           : Wed Jan 08 18:00:05 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:05 EST 2025
+Creating requirement for Row #        : 148
+Validation Time(ms)                   : 534
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.005
+Requirement Name                      : PIDSL search results displays entered data
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL search functionality, when results are displayed, the entered data used for the search, must remain displayed, and editable, allowing for easy fine-tuning of the results by changing supplied data. This is regardless of whether searching for a PID/SL ID or Name.
+SAK Req for Row 148                   : 14814
+Finished at                           : Wed Jan 08 18:00:09 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:09 EST 2025
+Creating requirement for Row #        : 149
+Validation Time(ms)                   : 537
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.006
+Requirement Name                      : Null PIDSL search results clearly says none found
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL search functionality: if the search did not find any matches, then no PID/SLs would be displayed. It must be made clear to the user that nothing matched by displaying something like "No results found" or "0 found".
+SAK Req for Row 149                   : 14815
+Finished at                           : Wed Jan 08 18:00:13 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:13 EST 2025
+Creating requirement for Row #        : 150
+Validation Time(ms)                   : 560
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.007
+Requirement Name                      : PIDSL ID search sorts results same as dropdown
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL search functionality: when searching by PID/SL ID (e.g.,110055555B), PID/SL results must be sorted by the PID/SL ID. (Believe this is different than current sorting; see attached image.).
+SAK Req for Row 150                   : 14816
+Finished at                           : Wed Jan 08 18:00:18 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:18 EST 2025
+Creating requirement for Row #        : 151
+Validation Time(ms)                   : 558
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.008
+Requirement Name                      : PIDSL search ignores alphabet character case
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL search functionality: the search results should be CASE independent of the submitted data; submitting "110217294a" for an ID will find "110217294A", and when searching for a PID/SL name, entering "spot on" will find "SPOT ON THERAPY".
+SAK Req for Row 151                   : 14817
+Finished at                           : Wed Jan 08 18:00:22 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:22 EST 2025
+Creating requirement for Row #        : 152
+Validation Time(ms)                   : 545
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.009
+Requirement Name                      : PIDSL Name search accepts 15 non-ALPHA characters
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL search functionality: the allowed characters in search data for PID/SL names include alphabet and the 15 characters mentioned in WI 37274: 
+ / & , . - # ( ) ; + ! $ \ " SPACE (" ")
+SAK Req for Row 152                   : 14818
+Finished at                           : Wed Jan 08 18:00:26 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:26 EST 2025
+Creating requirement for Row #        : 153
+Validation Time(ms)                   : 558
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.010
+Requirement Name                      : PIDSL ID search accepts partial ID
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL search functionality: when searching by PID/SL ID, leading and ending characters should not be required in the input, in order to be presented with a list to select from, as if wildcard characters were entered. For example, submitting "2173" (excluding the apostrophe characters shown here) would present the following PID/SLs if they were a stored): "110217301A","110217303A","110217316A","110217325A","110217326A","110217350A","110217350B","110217350C","110217354A","110217361A","110217362A".
+SAK Req for Row 153                   : 14819
+Finished at                           : Wed Jan 08 18:00:30 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:30 EST 2025
+Creating requirement for Row #        : 154
+Validation Time(ms)                   : 523
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.01.011
+Requirement Name                      : PIDSL Name search accepts partial
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s PID/SL search functionality: when searching by PID/SL Name, leading and ending characters should not be required in the input in order to be presented with a list to select from, as if wildcard characters were entered. For example, submitting "MASS" (excluding the apostrophe characters shown here) for PID/SL Name would present the following PID/SLs if they were a stored: BOSTON HEALTH CARE FOR THE HOMELESS AT MASS GENER, BRIGHAM AND WOMENS MASS GENERAL HEALTH CARE CENTER, CENT MASS FOOTSPECIALISTS, CENTMASS IMAGING INC, CENTRAL MASS DERMATOLOGY PC, CENTRAL MASS NEPHROLOGY, MASS ASSOCIATION FOR BLIND, MASS BAY SPINE & SPORT PT, SHIELDS MRI AT UMASS MEMORIAL-SHREWSBURY STREET, SPECIALTY IC MASS LLC.
+SAK Req for Row 154                   : 14820
+Finished at                           : Wed Jan 08 18:00:34 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:34 EST 2025
+Creating requirement for Row #        : 155
+Validation Time(ms)                   : 596
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.02.001
+Requirement Name                      : Subordinates SearchResults -Indicate Primary users
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel, once selected the PID/SL, subordinate search results must clearly identify any Primary provider users in the panel; use an * or consistent other identifier.
+SAK Req for Row 155                   : 14821
+Finished at                           : Wed Jan 08 18:00:38 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:38 EST 2025
+Creating requirement for Row #        : 156
+Requirement Name                      : Subordinates SearchResults -Indicate Primary users
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 557
+Requirement Validation status         : FAIL
+Finished at                           : Wed Jan 08 18:00:40 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:40 EST 2025
+Creating requirement for Row #        : 157
+Validation Time(ms)                   : 552
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.03.001
+Requirement Name                      : SubordinateSearchResults- DateCreated & DateLinked
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s search results of subordinates linked to the PID/SL, include the Date Created & Date Linked (as defined in immediate following requirements) just to the right of the Subordinate column, before the Username column.
+SAK Req for Row 157                   : 14822
+Finished at                           : Wed Jan 08 18:00:44 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:44 EST 2025
+Creating requirement for Row #        : 158
+Validation Time(ms)                   : 534
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.03.002
+Requirement Name                      : Subordinate Search Results- date Created details
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The new Date Created column is the date that the subordinate user was created (created users were entered via the New Subordinate panel for the selected PID/SL, not the Link Subordinate panel) under heading Created, just to the right of the Subordinate column (and to the right of the indicator that someone is a Primary for the PID/SL.)
+SAK Req for Row 158                   : 14823
+Finished at                           : Wed Jan 08 18:00:48 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:48 EST 2025
+Creating requirement for Row #        : 159
+Validation Time(ms)                   : 555
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.03.003
+Requirement Name                      : Subordinate Search Results- date Linked details
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : List the date recorded, when Subordinates who are not "created" for the PID/SL but instead are linked to the PID/SL via the Linked Subordinate panel, under a Linked" column heading to the right of Created.. Obviously, each subordinate cannot have both Created and Linked dates; it"s one or the other.
+SAK Req for Row 159                   : 14824
+Finished at                           : Wed Jan 08 18:00:53 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:53 EST 2025
+Creating requirement for Row #        : 160
+Validation Time(ms)                   : 527
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.03.004
+Requirement Name                      : Subordinates Search Results - De-Linked /End-dated
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The Manage Subordinates panel should have a new user-activated control somewhere JUST UNDER the horizontal blue banner that displays the words: Subordinates Search Results. Potential labeling for the control might be: Switch to Delinked Subordinates.
+SAK Req for Row 160                   : 14825
+Finished at                           : Wed Jan 08 18:00:57 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:00:57 EST 2025
+Creating requirement for Row #        : 161
+Validation Time(ms)                   : 539
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.03.005
+Requirement Name                      : Selecting control displays delinked ManageSub view
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : When that control is selected, the panel must immediately switch to showing "delinked" users, instead of the default display of currently linked users, which will include the additional field mentioned in the next requirement.(Delinked users had their T_ANALYST_PROVIDERS rows deleted either when the Security team deletes a PID/SL or when a Primary provider user unlinks a subordinate.)
+SAK Req for Row 161                   : 14826
+Finished at                           : Wed Jan 08 18:01:01 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:01 EST 2025
+Creating requirement for Row #        : 162
+Validation Time(ms)                   : 573
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.03.006
+Requirement Name                      : Delinked Manage Subord view includes End-dated
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Just to the right of the new "Linked" date, Display the date that the user ID is de-linked under heading End-dated. For this view, there would be three date columns: Created, Linked & End-dated.
+SAK Req for Row 162                   : 14827
+Finished at                           : Wed Jan 08 18:01:05 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:05 EST 2025
+Creating requirement for Row #        : 163
+Validation Time(ms)                   : 544
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.03.007
+Requirement Name                      : Delinked view has control back to default view
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The Delinked view needs to have a control to allow switching back to the default view that does not have the End-dated field.
+SAK Req for Row 163                   : 14828
+Finished at                           : Wed Jan 08 18:01:09 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:09 EST 2025
+Creating requirement for Row #        : 164
+Validation Time(ms)                   : 537
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.03.009
+Requirement Name                      : Subordinates Search Results -default to linked
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The Manage Subordinates panel "s search results display of subordinates, after the user clicks the SEARCH button, should default to showing currently linked users, rather than de-linked, when the panel opens.
+SAK Req for Row 164                   : 14829
+Finished at                           : Wed Jan 08 18:01:12 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:12 EST 2025
+Creating requirement for Row #        : 165
+Validation Time(ms)                   : 541
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.001
+Requirement Name                      : Subordinates search results - sortable fields
+Requirement Type                      : Informational
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Manage Subordinates panel "s listing of subordinates, after clicking the SEARCH button, will include in the search results the following fields that can all be used to sort on: Subordinate (made up of LN, FN,) and the following date fields; not all date fields appear at the same time: Created date, Linked date, and when in the delinked user view, End-dated. (This Informational requirement is a summary of the detailed following requirements.)
+SAK Req for Row 165                   : 14830
+Finished at                           : Wed Jan 08 18:01:16 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:16 EST 2025
+Creating requirement for Row #        : 166
+Requirement ID                        : 38329.04.001
+Requirement ID Validation             : Requirement ID already exists
+Validation Time(ms)                   : 550
+Requirement Validation status         : FAIL
+Finished at                           : Wed Jan 08 18:01:18 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:18 EST 2025
+Creating requirement for Row #        : 167
+Validation Time(ms)                   : 553
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.002
+Requirement Name                      : Symbol that a column is sortable
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : If MMIS usually displays visually that a column is sortable, as compared to columns that are not sortable, mimic such a standard display using that standard. If the UI team knows that there is not such a standard but feels that, based on the number of requested sortable columns that it would be beneficial to indicate each visually, then please do that.
+SAK Req for Row 167                   : 14831
+Finished at                           : Wed Jan 08 18:01:22 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:22 EST 2025
+Creating requirement for Row #        : 168
+Requirement ID                        : 38329.04.002
+Requirement ID Validation             : Requirement ID already exists
+Validation Time(ms)                   : 507
+Requirement Validation status         : FAIL
+Finished at                           : Wed Jan 08 18:01:24 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:24 EST 2025
+Creating requirement for Row #        : 169
+Validation Time(ms)                   : 580
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.003
+Requirement Name                      : Column sorted on has triangle indicator
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : When sorted on a column, use a triangle to indicate if the data sorted on that column is sorted ascending or descending.
+SAK Req for Row 169                   : 14832
+Finished at                           : Wed Jan 08 18:01:28 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:28 EST 2025
+Creating requirement for Row #        : 170
+Requirement ID                        : 38329.04.003
+Requirement ID Validation             : Requirement ID already exists
+Validation Time(ms)                   : 547
+Requirement Validation status         : FAIL
+Finished at                           : Wed Jan 08 18:01:29 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:29 EST 2025
+Creating requirement for Row #        : 171
+Validation Time(ms)                   : 599
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.004
+Requirement Name                      : Subordinates - sort by last name
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In Manage Subordinates panel "s search results, allow the Primary user to sort the list of subordinate users by the current column headed by "Subordinate", which is made up of their LN, FN.
+SAK Req for Row 171                   : 14833
+Finished at                           : Wed Jan 08 18:01:33 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:33 EST 2025
+Creating requirement for Row #        : 172
+Requirement ID                        : 38329.04.004
+Requirement ID Validation             : Requirement ID already exists
+Validation Time(ms)                   : 570
+Requirement Validation status         : FAIL
+Finished at                           : Wed Jan 08 18:01:35 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:35 EST 2025
+Creating requirement for Row #        : 173
+Validation Time(ms)                   : 527
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.006
+Requirement Name                      : Secondary sort of Subordinate
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : When sorted on the indicator of whether a subordinate has an individual role/service column or any of the date fields, use a secondary sort of the current column headed by "Subordinate", which is made up of their LN, FN.
+SAK Req for Row 173                   : 14834
+Finished at                           : Wed Jan 08 18:01:38 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:38 EST 2025
+Creating requirement for Row #        : 174
+Validation Time(ms)                   : 520
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.04.009
+Requirement Name                      : Subordinate SearchMockups before considering Roles
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Mockups of the revised default view and the new view that lists de-linked users. These are BEFORE taking into consideration how to display which subordinates have certain roles (services) and to manage who has those roles.
+SAK Req for Row 174                   : 14835
+Finished at                           : Wed Jan 08 18:01:42 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:42 EST 2025
+Creating requirement for Row #        : 175
+Validation Time(ms)                   : 541
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.001
+Requirement Name                      : New Primary provider report
+Requirement Type                      : Informational
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Allow any Primary provider user (as defined below) in req. 38329.07.012, to request, via an online POSC control, a report with the details described in the following requirements about the report process and the report contents. We realize that this will be the first POSC user requested report.
+SAK Req for Row 175                   : 14836
+Finished at                           : Wed Jan 08 18:01:46 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:46 EST 2025
+Creating requirement for Row #        : 176
+Validation Time(ms)                   : 527
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.005
+Requirement Name                      : Report is to be in an Excel-readable format
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The report must be in an Excel-readable format
+SAK Req for Row 176                   : 14837
+Finished at                           : Wed Jan 08 18:01:50 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:50 EST 2025
+Creating requirement for Row #        : 177
+Validation Time(ms)                   : 691
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.006
+Requirement Name                      : Requesting report
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Since this report will usually be about multiple PID/SLs, the control for the user to request it does not have to be in the Manage Subordinates panel (where work is done one PID/SL at a time.) It can be triggered by a new left-hand menu choice or some other logical place if this is found to be the best option.
+SAK Req for Row 177                   : 14838
+Finished at                           : Wed Jan 08 18:01:55 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:55 EST 2025
+Creating requirement for Row #        : 178
+Validation Time(ms)                   : 532
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.007
+Requirement Name                      : Primary providers can download the report file
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The report must be able to be downloadable by the requestor.
+SAK Req for Row 178                   : 14839
+Finished at                           : Wed Jan 08 18:01:58 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:01:58 EST 2025
+Creating requirement for Row #        : 179
+Validation Time(ms)                   : 579
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.008
+Requirement Name                      : Confirmation of successful request
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Once the request is submitted, if it seems that the report will generally not be available for download within a minute by an automatic popup of a browser download window, it is desired that there be some feedback on the submission screen that the request has been received.
+SAK Req for Row 179                   : 14840
+Finished at                           : Wed Jan 08 18:02:02 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:02 EST 2025
+Creating requirement for Row #        : 180
+Validation Time(ms)                   : 518
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.009
+Requirement Name                      : Report ready for download
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : There is no stated time requirement of when the report is ready to be downloaded once requested. But the request should be acted on by POSC immediately after requested. Based on modern technology experiences with many websites, the response that the report is ready to be downloaded should be with just a few minutes. If this seems technically hard to do that fast, ideally the requesting Primary provider can navigate to a different panel and be able to come back somewhere to retrieve the report once it is complete.
+SAK Req for Row 180                   : 14841
+Finished at                           : Wed Jan 08 18:02:06 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:06 EST 2025
+Creating requirement for Row #        : 181
+Validation Time(ms)                   : 575
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.010
+Requirement Name                      : Failure notification
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : If for some reason POSC is unable to provide the report when requested, some feedback is desired about this so the requestor will know this. Don"t want to build a table of reason codes for failure, but if any explanation for a failure were able to provided without much effort, that would be helpful.
+SAK Req for Row 181                   : 14842
+Finished at                           : Wed Jan 08 18:02:10 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:10 EST 2025
+Creating requirement for Row #        : 182
+Validation Time(ms)                   : 548
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.011
+Requirement Name                      : Losing connectivity/logged-out recovery
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : If report requestor received a confirmation that the report request was received, and then lost connectivity, it would be ideal if when they logged back in there would be some way to retrieve the report upon logging back in.
+SAK Req for Row 182                   : 14843
+Finished at                           : Wed Jan 08 18:02:14 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:14 EST 2025
+Creating requirement for Row #        : 183
+Validation Time(ms)                   : 537
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.012
+Requirement Name                      : Definition of eligible report requestors
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Since iWI 37069, the definition of who is a Primary provider user for a PID/SL is that the user"s PID/SL has an in-effect security role of type 507 (Primary User & Secondary User). In-effect means that the date of the request - trunc(SYSDATE) - is greater than or equal to the effective date of the PID/SL role and that the end date is after trunc(SYSDATE.) It is preferable that this official definition is used rather than using the T_ANALYST_PROVIDERS parameter column indicating that the user/PIDSL is a Primary user, because there are no dates associated with T_ANALYST_PROVIDERS and we have some work to do still to clean up the data for users who have the mentioned-parameter and not the mentioned role.
+SAK Req for Row 183                   : 14844
+Finished at                           : Wed Jan 08 18:02:18 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:18 EST 2025
+Creating requirement for Row #        : 184
+Validation Time(ms)                   : 561
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.013
+Requirement Name                      : Feedback/deny ineligible report requestors
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Someone ineligible to request the report (Req. 38329.07.012) clicks requesting control, feedback should be provided about their ineligibility. If control isnt in left-hand menu, not authorized page doesnt have to be method. Also, prevent the report from being produced.
+SAK Req for Row 184                   : 14845
+Finished at                           : Wed Jan 08 18:02:22 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:22 EST 2025
+Creating requirement for Row #        : 185
+Validation Time(ms)                   : 548
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.014
+Requirement Name                      : Report contents
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The report contents should:
+" List all active PID/SLs that the requesting Primary provider user is primary for. 
+" Within each of these active PID/SLs, a list of all active users for that PID/SL (User ID & Name)
+" Within each active user under these active PID/SLs:
+ o All active PID/SLs for that user 
+ o Within each active PID/SL for a user: 
+" What roles/services they have, and 
+" Who the Primary user(s) is/are for that PID/SL. Include the Primarys name and email address. If multiple Primaries, each must be listed.
+SAK Req for Row 185                   : 14846
+Finished at                           : Wed Jan 08 18:02:26 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:26 EST 2025
+Creating requirement for Row #        : 186
+Validation Time(ms)                   : 580
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.07.020
+Requirement Name                      : MOCKUP-
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : MOCKUP-still in process
+SAK Req for Row 186                   : 14847
+Finished at                           : Wed Jan 08 18:02:30 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:30 EST 2025
+Creating requirement for Row #        : 187
+Validation Time(ms)                   : 523
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.08.001
+Requirement Name                      : All POSC users can see detailed role descriptions
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : In POSC, provide a way for any authorized, logged-in user (Primary and Subordinate provider users) to view detailed descriptions of the POSC security roles (these are called services on the Manage Subordinates panel.) They will have to click a control to request this functionality. So, the control must be somewhere that all authorized, logged-in users can get to.
+SAK Req for Row 187                   : 14848
+Finished at                           : Wed Jan 08 18:02:34 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:34 EST 2025
+Creating requirement for Row #        : 188
+Validation Time(ms)                   : 530
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.08.002
+Requirement Name                      : POSC detailed role descriptions from BSI  loaded
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The security role definitions will be created by BSI and need to be entered into the Security Role table"s description field, presumably by a DCR. Currently, these descriptions only store the roles" names.
+SAK Req for Row 188                   : 14849
+Finished at                           : Wed Jan 08 18:02:37 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:37 EST 2025
+Creating requirement for Row #        : 189
+Validation Time(ms)                   : 565
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.09.001
+Requirement Name                      : Subordinates see their Primaries incl EmailAddress
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : Provide the ability for subordinate users to view the Primary user(s) for each of their active PID/SLs; perhaps add to the left navigation an option for logged-in users to view this information; open to other options proposed by MMIS.
+SAK Req for Row 189                   : 14850
+Finished at                           : Wed Jan 08 18:02:41 EST 2025
+*****************************************************************
+Started at                            : Wed Jan 08 18:02:41 EST 2025
+Creating requirement for Row #        : 190
+Validation Time(ms)                   : 540
+Requirement Validation status         : PASS
+Requirement ID                        : 38329.09.002
+Requirement Name                      : Primary users full name & email address listed.
+Requirement Type                      : UI-POSC
+Requirement Subsystem                 : Relationship Entity Management
+Requirement RTM                       : 74
+Requirement Narrative                 : The primary users will have their full name (LN, FN (Optional MI.) and email address listed. E.g.: SMITH, ROBERT C. or JONES, SALLY (who has no middle initial in Db)
+SAK Req for Row 190                   : 14851
+Finished at                           : Wed Jan 08 18:02:45 EST 2025
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 08/Jan/2025 06:02:45PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
