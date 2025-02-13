@@ -1,0 +1,632 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 24/Jan/2025 11:04:38AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 166
+Total No.of Rows fetched              : 18
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Fri Jan 24 11:04:45 EST 2025
+Creating test case for Row #          : 5809
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 516
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:04:46 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:04:46 EST 2025
+Creating test case for Row #          : 5810
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 508
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:04:48 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:04:48 EST 2025
+Creating test case for Row #          : 5811
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 512
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:04:50 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:04:50 EST 2025
+Creating test case for Row #          : 5812
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 516
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:04:52 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:04:52 EST 2025
+Creating test case for Row #          : 5813
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 544
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:04:53 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:04:53 EST 2025
+Creating test case for Row #          : 5814
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 554
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:04:55 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:04:55 EST 2025
+Creating test case for Row #          : 5815
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 539
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:04:57 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:04:57 EST 2025
+Creating test case for Row #          : 5816
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 770
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:04:59 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:04:59 EST 2025
+Creating test case for Row #          : 5817
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 1145
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:01 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:01 EST 2025
+Creating test case for Row #          : 5818
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 514
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:03 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:03 EST 2025
+Creating test case for Row #          : 5819
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 1069
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:05 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:05 EST 2025
+Creating test case for Row #          : 5820
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 550
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:07 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:07 EST 2025
+Creating test case for Row #          : 5821
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 539
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:08 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:08 EST 2025
+Creating test case for Row #          : 5822
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 845
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:10 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:10 EST 2025
+Creating test case for Row #          : 5823
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 502
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:12 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:12 EST 2025
+Creating test case for Row #          : 5824
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 533
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:14 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:14 EST 2025
+Creating test case for Row #          : 5825
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 519
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:15 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:15 EST 2025
+Creating test case for Row #          : 5826
+Subsystem                             : Managed care
+Subsystem Validation                  : Verify Subsystem for the Test case
+Validation Time(ms)                   : 508
+TC Validation status                  : FAIL
+Finished at                           : Fri Jan 24 11:05:18 EST 2025
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 90
+Total No.of Rows fetched              : 39
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:19 EST 2025
+Creating requirement for Row #        : 191
+Validation Time(ms)                   : 561
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.010
+Requirement Name                      : D3 - Disenrollment Confirmation Notice - TPL
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Modify the batch/business rule that generates/triggers D3- Disenrollment Confirmation Notice - TPL. This letter should go to the member regardless of age & to the active ARD contact types (ERDI, ERDII, ERDIII) if the member has any.
+NOTE: D3 letter is triggered when the member gets disenrolled from ACO/MCO or PCC due to an identified TPL. Business has also requested to update the D3 trigger to include the members with CarePlus coverage, so that we can discontinue the DI notice. DI letter is triggered when the member gets disenrolled from CarePlus MCO/ACO or PCC due to identified TPL. This change will require an update to the trigger logic which will be handled by WI 38554.
+SAK Req for Row 191                   : 15187
+Finished at                           : Fri Jan 24 11:05:24 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:24 EST 2025
+Creating requirement for Row #        : 192
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 772
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:26 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:26 EST 2025
+Creating requirement for Row #        : 193
+Validation Time(ms)                   : 556
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.030
+Requirement Name                      : Create D3 - META DATA object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "Metadata" object to identify the D3- Disenrollment Confirmation Notice - TPL.
+Include the following data elements in JSON format. {The document is uploaded with expected data objects. Please refer to the uploaded document}
+
+id #New Sequential Notice ID#
+type (cde_letter_type ="D3" )
+Language
+priority (Use NORMAL)
+noticetobe replaced (optional field. MMIS can leave it off)
+SAK Req for Row 193                   : 15188
+Finished at                           : Fri Jan 24 11:05:30 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:30 EST 2025
+Creating requirement for Row #        : 194
+Requirement Name                      : Metadata object - Notice language
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 520
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:31 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:31 EST 2025
+Creating requirement for Row #        : 195
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 539
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:33 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:33 EST 2025
+Creating requirement for Row #        : 196
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 1421
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:35 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:35 EST 2025
+Creating requirement for Row #        : 197
+Validation Time(ms)                   : 521
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.050
+Requirement Name                      : Create D3 - RECIPIENT object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "RECIPIENT" object to identify the D3 recipient.
+Include the following data elements in JSON format. {The document will be uploaded with expected data objects.}
+
+firstName  {NOTE: Pass the full contact name in the recipient first name element if the member has active ARD contact types (ERDI, ERDII, ERDIII)}
+lastName
+middleName
+id (NOTE: Send the MMIS id)
+suffix
+type {NOTE: This is delivery type. A notice can be delivered via print, email, SMS or not delivered at all(allowable values for CNS "print", "email", "sms", "noDelivery"}
+printType
+emailAddress
+phoneNumber 
+Address {NOTE : Send member"s or Active contact"s mailing address}
+line1
+line 2
+city
+state
+zipcode
+city
+
+NOTE: For MMIS zip codes without the zip+4 value, send only the 5-character value ("11111"). Where the zip+4 value is available, send all nine characters with the hyphen separator ("11111-2345").
+SAK Req for Row 197                   : 15189
+Finished at                           : Fri Jan 24 11:05:41 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:41 EST 2025
+Creating requirement for Row #        : 198
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 532
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:43 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:43 EST 2025
+Creating requirement for Row #        : 199
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 547
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:44 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:44 EST 2025
+Creating requirement for Row #        : 200
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 531
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:46 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:46 EST 2025
+Creating requirement for Row #        : 201
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 535
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:47 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:47 EST 2025
+Creating requirement for Row #        : 202
+Validation Time(ms)                   : 519
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.075
+Requirement Name                      : RECIPIENT-Send default print type "Regular"
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the default print type as Regular if there is no print type available from source systems for a member. In addition, regular should be sent if the letter is being sent to a valid contact type.
+SAK Req for Row 202                   : 15190
+Finished at                           : Fri Jan 24 11:05:51 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:51 EST 2025
+Creating requirement for Row #        : 203
+Requirement Name                      : Recipient object - ARD contact types
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 585
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:53 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:53 EST 2025
+Creating requirement for Row #        : 204
+Requirement Name                      : Recipient Object -Address Line 2 (Member)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 550
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:54 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:54 EST 2025
+Creating requirement for Row #        : 205
+Requirement Name                      : Recipient Object -Address Line 2 (Contact Types)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 574
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:56 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:56 EST 2025
+Creating requirement for Row #        : 206
+Requirement Name                      : Recipient Object -Address Line 2 (Worker)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 593
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:05:58 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:05:58 EST 2025
+Creating requirement for Row #        : 207
+Validation Time(ms)                   : 577
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.090
+Requirement Name                      : Create D3 - PAYLOAD Object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "PAYLOAD" object to identify the D3 recipient & include the data elements in JSON Format. Since the template is driving what the dynamic fields are needed in PAYLOAD, Please refer to the attached D3 template for the data elements.
+
+NOTE: At the top of the template will have the mailing information (which will show in the envelope window). 
+[Mailing Name] {NOTE: This will include Member/ARD information listed as
+a) Member Name (listed as FirstName MiddleName LastName Suffix)
+b) ARD Name (listed as Contact Name)}
+[Address Line 1]
+[Address Line 2]
+[City, State Zip code]
+
+Date: [Month DD, YYYY of Notice creation]
+Notice ID: [New Sequential Notice ID] / [Notice Type]
+Member ID: [MMIS ID]
+SSN: [XXX-XX- last four digits] {NOTE: If the member does not have any SSN in MMIS, it will be sent as (xxx-xx-blank). CNS will display the value as "Not Available"}
+
+Attn: [ARD/PSI Name]
+Re: Notice sent to [ARD/PSI representee"s Name] { NOTE: The representee is the member that they are representing. Send "FirstName MiddleName LastName Suffix" for this field with different tag name}
+
+[#FirstName MiddleName LastName Suffix#]  
+[Name of Enrollment Plan]  and  [Name of Behavioral  Health Plan]
+[#DateDisenroll_eng#]
+SAK Req for Row 207                   : 15191
+Finished at                           : Fri Jan 24 11:06:03 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:03 EST 2025
+Creating requirement for Row #        : 208
+Requirement Name                      : PAYLOAD Object -addressLine2 (Member)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 569
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:06:04 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:04 EST 2025
+Creating requirement for Row #        : 209
+Requirement Name                      : PAYLOAD Object -addressLine2 (Contact Types)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 532
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:06:06 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:06 EST 2025
+Creating requirement for Row #        : 210
+Requirement Name                      : PAYLOAD Object -addressLine2 (Worker)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 841
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:06:08 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:08 EST 2025
+Creating requirement for Row #        : 211
+Requirement Name                      : Same Notice Template for Member/Contact
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 536
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:06:09 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:09 EST 2025
+Creating requirement for Row #        : 212
+Requirement Name                      : Payload - ARD/contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 561
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:06:11 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:11 EST 2025
+Creating requirement for Row #        : 213
+Validation Time(ms)                   : 554
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.101
+Requirement Name                      : Payload - #DateDisenroll_eng#
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the date [#DateDisenroll_eng#] expected in written date. Example: July 12, 2024.
+SAK Req for Row 213                   : 15192
+Finished at                           : Fri Jan 24 11:06:15 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:15 EST 2025
+Creating requirement for Row #        : 214
+Validation Time(ms)                   : 553
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.102A
+Requirement Name                      : Payload - #Name of Enrollment Plan# (MCO/ACO)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member gets disenrolled from MCO/ACO plan including CarePlus (MSTD,MFAS, CRPLS, MSTDA, MFASA, CRPLA) due to TPL, send the MCO/ACO provider name.
+SAK Req for Row 214                   : 15193
+Finished at                           : Fri Jan 24 11:06:19 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:19 EST 2025
+Creating requirement for Row #        : 215
+Validation Time(ms)                   : 564
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.102B
+Requirement Name                      : Payload - #Name of Enrollment Plan# (PCC)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member gets disenrolled from PCC plan including CarePlus ((PCCP, CPPCC) due to TPL, send the value as "Primary Care Clinician (PCC) Plan
+SAK Req for Row 215                   : 15194
+Finished at                           : Fri Jan 24 11:06:24 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:24 EST 2025
+Creating requirement for Row #        : 216
+Validation Time(ms)                   : 544
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.103A
+Requirement Name                      : Payload -#Name of Behavioral  Health Plan# A
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member gets disenrolled from BH & CPBH (Along with PCC plan) due to TPL, send this value "Massachusetts Behavioral Health Partnership (MBHP)"
+SAK Req for Row 216                   : 15195
+Finished at                           : Fri Jan 24 11:06:28 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:28 EST 2025
+Creating requirement for Row #        : 217
+Validation Time(ms)                   : 558
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.103B
+Requirement Name                      : Payload -#Name of Behavioral  Health Plan# B
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Do not send this tag if the member gets disenrolled from MCO/ACO assignment plans or CAREPLUS MCO/ACO assignment plans.
+NOTE: This is conditional fragment. CNS will suppress it from appearing if we don"t send this tag in JSON request.
+SAK Req for Row 217                   : 15196
+Finished at                           : Fri Jan 24 11:06:32 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:32 EST 2025
+Creating requirement for Row #        : 218
+Validation Time(ms)                   : 678
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.103C
+Requirement Name                      : Conditional Verbiage
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Since ACO/MCO plan does not have corresponding behavioral health assignment plan the verbiage in the template is conditional.
+ "You may remain in the [Name of Behavioral Health Plan] for behavioral health services if you are a dependent or young adult."
+NOTE:  It is our understanding that the CNS will be able to suppress this from appearing if we don"t send the tag.
+SAK Req for Row 218                   : 15197
+Finished at                           : Fri Jan 24 11:06:37 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:37 EST 2025
+Creating requirement for Row #        : 219
+Requirement Name                      : Send notice to contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 586
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:06:38 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:38 EST 2025
+Creating requirement for Row #        : 220
+Requirement Name                      : Make contact types configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 588
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:06:40 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:40 EST 2025
+Creating requirement for Row #        : 221
+Validation Time(ms)                   : 555
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.115
+Requirement Name                      : Create [D3]- INSERTS object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "INSERTS" object to identify the D3 recipient"s insert.
+Include the following data element:
+
+inserts (group#)
+Group# 2 - (Babel + Fair Hearing Form)
+SAK Req for Row 221                   : 15198
+Finished at                           : Fri Jan 24 11:06:46 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:46 EST 2025
+Creating requirement for Row #        : 222
+Requirement Name                      : Make Inserts Groups configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 588
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:06:47 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:47 EST 2025
+Creating requirement for Row #        : 223
+Requirement Name                      : Make delivery type configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 539
+Requirement Validation status         : FAIL
+Finished at                           : Fri Jan 24 11:06:49 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:49 EST 2025
+Creating requirement for Row #        : 224
+Validation Time(ms)                   : 543
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.130
+Requirement Name                      : Notice Type "D3" Suppression via intake process
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : MMIS shall implement a logic to exclude members from the CNS Notice Trigger table based on the new Notice Suppression Table before executing the Notice generation job for Notice type "D3". No JSON Payload request should go out to CNS for the members in the new Notice Suppression Table.
+SAK Req for Row 224                   : 15199
+Finished at                           : Fri Jan 24 11:06:53 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:53 EST 2025
+Creating requirement for Row #        : 225
+Validation Time(ms)                   : 580
+Requirement Validation status         : PASS
+Requirement ID                        : 38554.01.001
+Requirement Name                      : Modify D3 Trigger Logic
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Modify D3 Trigger logic to include the members who are enrolled into CAREPLUS assignment plans. Currently, D3 gets triggered when the member gets disenrolled from MCO/ACO or PCC due to identified TPL. With the new change request, D3 logic should include the CarePlus MCO/ACO or PCC members.
+SAK Req for Row 225                   : 15200
+Finished at                           : Fri Jan 24 11:06:57 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:06:57 EST 2025
+Creating requirement for Row #        : 226
+Validation Time(ms)                   : 558
+Requirement Validation status         : PASS
+Requirement ID                        : 38554.01.001A
+Requirement Name                      : Include CAREPLUS members
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : When members get disenrolled from CPPCC, CPCCB/ACOB/CPBH & CRPLA due to identified TPL, it should be added as D3 trigger instead of DI.
+SAK Req for Row 226                   : 15201
+Finished at                           : Fri Jan 24 11:07:01 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:07:01 EST 2025
+Creating requirement for Row #        : 227
+Validation Time(ms)                   : 547
+Requirement Validation status         : PASS
+Requirement ID                        : 38554.01.005
+Requirement Name                      : Discontinue DI trigger
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Discontinue sending DI trigger to both CST & CNS once it"s incorporated into D3
+SAK Req for Row 227                   : 15202
+Finished at                           : Fri Jan 24 11:07:06 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:07:06 EST 2025
+Creating requirement for Row #        : 228
+Validation Time(ms)                   : 559
+Requirement Validation status         : PASS
+Requirement ID                        : 38554.01.010
+Requirement Name                      : Same Template
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Same Template will be used once the DI members are included in the D3 trigger.
+SAK Req for Row 228                   : 15203
+Finished at                           : Fri Jan 24 11:07:09 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:07:09 EST 2025
+Creating requirement for Row #        : 229
+Validation Time(ms)                   : 540
+Requirement Validation status         : PASS
+Requirement ID                        : 38554.01.015
+Requirement Name                      : JSON Request Requirements
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Since DI will be incorporated with D3, please refer to the D3 JSON request requirements captured under WI 38467 for additional details regarding the data we will send to CNS.
+SAK Req for Row 229                   : 15204
+Finished at                           : Fri Jan 24 11:07:13 EST 2025
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 24/Jan/2025 11:07:13AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
+===============================================
+

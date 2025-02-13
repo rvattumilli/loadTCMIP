@@ -237,6 +237,7 @@ public class LoadTCMIP {
 					System.out.println(String.format(outputFormat, "Finished at", new Date().toString()));
 				}
 			}
+			System.out.println("****************************************************");
 		} catch (Exception e) {
 			CommonUtils.setJobAbend(true);
 			CommonUtils.sshot(driver);
@@ -270,6 +271,7 @@ public class LoadTCMIP {
 
 		try {
 			driver.findElement(By.linkText("Requirements")).click();
+			System.out.println("*****************************************************************");
 			dataList = CommonUtils.getTCReqData(reqSql, 8, CommonUtils.getDBConnection(), reqDataMessage);
 			if (dataList != null) {
 				CommonUtils.setReplaceType("req");

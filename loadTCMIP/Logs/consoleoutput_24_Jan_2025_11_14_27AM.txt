@@ -1,0 +1,738 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 24/Jan/2025 11:14:27AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 140
+Total No.of Rows fetched              : 18
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Fri Jan 24 11:14:32 EST 2025
+Creating test case for Row #          : 5809
+Validation Time(ms)                   : 533
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for English Lang - Print type- REG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for English language as Print type REGULAR Using JAWS. Validate different elements-Tables,forms,list,Images and Paragraph etc are reading in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5809             : 48155
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48155
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48155
+Finished at                           : Fri Jan 24 11:14:42 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:14:42 EST 2025
+Creating test case for Row #          : 5810
+Validation Time(ms)                   : 513
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for English Lang - Print type- LRG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for English language as Print type LARGE Using JAWS. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5810             : 48156
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48156
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48156
+Finished at                           : Fri Jan 24 11:14:53 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:14:53 EST 2025
+Creating test case for Row #          : 5811
+Validation Time(ms)                   : 540
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for English Lang - Print type- BRAILLE
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for English language as Print type BRAILLE Using JAWS. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5811             : 48157
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48157
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48157
+Finished at                           : Fri Jan 24 11:15:03 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:15:03 EST 2025
+Creating test case for Row #          : 5812
+Validation Time(ms)                   : 526
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for SPANISH Lang - Print type- REG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for Spanish language as Print type REGULAR Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5812             : 48158
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48158
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48158
+Finished at                           : Fri Jan 24 11:15:14 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:15:14 EST 2025
+Creating test case for Row #          : 5813
+Validation Time(ms)                   : 544
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for SPANISH Lang - Print type- LRG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for Spanish language as Print type LARGE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5813             : 48159
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48159
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48159
+Finished at                           : Fri Jan 24 11:15:24 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:15:24 EST 2025
+Creating test case for Row #          : 5814
+Validation Time(ms)                   : 506
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for SPANISH Lang - Print type- BRAILLE
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for Spanish language as Print type BRAILLE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5814             : 48160
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48160
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48160
+Finished at                           : Fri Jan 24 11:15:35 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:15:35 EST 2025
+Creating test case for Row #          : 5815
+Validation Time(ms)                   : 578
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for CHINESE Lang - Print type- REG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for Chinese language as Print type REGULAR Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5815             : 48161
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48161
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48161
+Finished at                           : Fri Jan 24 11:15:46 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:15:46 EST 2025
+Creating test case for Row #          : 5816
+Validation Time(ms)                   : 617
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for CHINESE Lang - Print type- LRG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for Chinese  language as Print type LARGE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5816             : 48162
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48162
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48162
+Finished at                           : Fri Jan 24 11:15:56 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:15:56 EST 2025
+Creating test case for Row #          : 5817
+Validation Time(ms)                   : 553
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for CHINESE Lang - Print type- BRAILLE
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for Chinese  language as Print type BRAILLE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5817             : 48163
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48163
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48163
+Finished at                           : Fri Jan 24 11:16:07 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:16:07 EST 2025
+Creating test case for Row #          : 5818
+Validation Time(ms)                   : 524
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for portuguese Lang - Print type- REG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for portuguese language as Print type REGULAR Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5818             : 48164
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48164
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48164
+Finished at                           : Fri Jan 24 11:16:18 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:16:18 EST 2025
+Creating test case for Row #          : 5819
+Validation Time(ms)                   : 709
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for portuguese Lang - Print type- LRG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for portuguese language as Print type LARGE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5819             : 48165
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48165
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48165
+Finished at                           : Fri Jan 24 11:16:28 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:16:28 EST 2025
+Creating test case for Row #          : 5820
+Validation Time(ms)                   : 564
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for portuguese Lang - Print type- BRAILLE
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for portuguese language as Print type BRAILLE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5820             : 48166
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48166
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48166
+Finished at                           : Fri Jan 24 11:16:38 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:16:38 EST 2025
+Creating test case for Row #          : 5821
+Validation Time(ms)                   : 611
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for vietnamese Lang - Print type- REG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for vietnamese language as Print type REGULAR Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5821             : 48167
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48167
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48167
+Finished at                           : Fri Jan 24 11:16:50 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:16:50 EST 2025
+Creating test case for Row #          : 5822
+Validation Time(ms)                   : 1526
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for vietnamese Lang - Print type- LRG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for vietnamese language as Print type LARGE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5822             : 48168
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48168
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48168
+Finished at                           : Fri Jan 24 11:17:02 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:17:02 EST 2025
+Creating test case for Row #          : 5823
+Validation Time(ms)                   : 564
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for vietnamese Lang - Print type- BRAILLE
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for vietnamese language as Print type BRAILLE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5823             : 48169
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48169
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48169
+Finished at                           : Fri Jan 24 11:17:13 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:17:13 EST 2025
+Creating test case for Row #          : 5824
+Validation Time(ms)                   : 520
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for haitian Lang - Print type- REG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for haitian language as Print type REGULAR Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5824             : 48170
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48170
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48170
+Finished at                           : Fri Jan 24 11:17:23 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:17:23 EST 2025
+Creating test case for Row #          : 5825
+Validation Time(ms)                   : 548
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for haitian Lang - Print type- LRG
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for haitian language as Print type LARGE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5825             : 48171
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48171
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48171
+Finished at                           : Fri Jan 24 11:17:34 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:17:34 EST 2025
+Creating test case for Row #          : 5826
+Validation Time(ms)                   : 517
+TC Validation status                  : PASS
+Short Desc                            : E7 Notice for haitian Lang - Print type- BRAILLE
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 785
+Owner                                 : CHANDRA VALLURUPALLI
+Grouping                              : ADA Testing
+Long Desc                             : Validate E7 Notice for haitian language as Print type BRAILLE Using Adobe Pro. Access Notice PDF Document in Adobe Pro. Validate different elements-Tables,forms,list,Images and Paragraph etc are navigating  in correct order without missing any  elements in document.  Navigation for notice to View and download: Member-RPTS & LETTERS-Notices-CNS Notice Request Search-Enter Search Criteria for Notice -Click Hyperlink to view notice  and download.
+Expected Results                      : Verify all elements are navigating in notice without missing any elements as expected
+Test Case ID for Row 5826             : 48172
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot ADA Testing
+Notebook/BF linked for test case      : 48172
+iWI/Defect/CO                         : 37518
+iWI Type                              : Change Order
+Change Order linked for test case     : 48172
+Finished at                           : Fri Jan 24 11:17:44 EST 2025
+****************************************************
+*****************************************************************
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 100
+Total No.of Rows fetched              : 21
+*****************************************************************
+Started at                            : Fri Jan 24 11:17:45 EST 2025
+Creating requirement for Row #        : 192
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 586
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.020
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Stop sending the notice through the exisiting noticing solution (Maximus/EOTTS/SM) as soon as the configuration is turned ON to send the notice via CNS.
+SAK Req for Row 192                   : 15205
+Finished at                           : Fri Jan 24 11:17:49 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:17:49 EST 2025
+Creating requirement for Row #        : 194
+Requirement Name                      : Metadata object - Notice language
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 546
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.035
+Requirement Name                      : Metadata object - Notice language
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the default value as EN for English language if the member has language preference other than "en" for English, "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese. This defines the language in which the notice should be generated.
+SAK Req for Row 194                   : 15206
+Finished at                           : Fri Jan 24 11:17:53 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:17:53 EST 2025
+Creating requirement for Row #        : 195
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 544
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.040
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : In a case where a member has selected one of these languages (""es"" for Spanish, ""pt"" for Portuguese, ""zh"" for Simplified Chinese, ""ht"" for Haitian Creole, ""vi"" for Vietnamese) as a preferred language other than English, send 2 or more notice generation requests for worker and contact types.
+1) one will have preferred language= Foreign language (example-Spanish), delivery type = Print (for example) & print type = (Regular, Large Print or Braille)
+2) second will have preferred language = English, delivery Type = NoDelivery which means #2 will not go out to the member and is for worker reference only
+3) third or more will be for  the active contact types (ERDI, ERDII, ERDIII). The preferred language = English, delivery Type = Print & print type = Regular
+SAK Req for Row 195                   : 15207
+Finished at                           : Fri Jan 24 11:17:57 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:17:57 EST 2025
+Creating requirement for Row #        : 196
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 539
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.045
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : MMIS stores both Primary language & Written language for a member. When sending this data in JSON, "Written Language" should be selected.
+(T_CDE_LANG_WRITTEN)
+SAK Req for Row 196                   : 15208
+Finished at                           : Fri Jan 24 11:18:01 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:01 EST 2025
+Creating requirement for Row #        : 198
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 826
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.055
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If members communication preference is "TEXT\SMS", send the default value `PRINT" as type for (communication preference "PAPER"). For the print type it is possible that a member would have selected regular, large print or braille accommodations for edelivery(sms/text/email) so the print type should be sent according to the preference the member has selected.
+
+NOTE: Based on the information shared by business, edelivery will not be implemented until after Group 4 CNS implementation. Hence, if a member has selected edelivery (sms/ text/email) communication preference, MMIS should send the PAPER as default value up until that time. Please refer to requirement id 38467.D3.120 for further details. eDelivery should not be sent for any contact types because they will not get electronic notice.
+SAK Req for Row 198                   : 15209
+Finished at                           : Fri Jan 24 11:18:06 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:06 EST 2025
+Creating requirement for Row #        : 199
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 533
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.060
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If members communication preference is "EMAIL",  send the default value `PRINT" as type for (communication preference "PAPER"). For the print type it is possible that a member would have selected regular, large print or braille accommodations for edelivery(sms/text/email) so the print type should be sent according to the preference the member has selected
+
+NOTE: Based on the information shared by business, edelivery will not be implemented until after Group 4 CNS implementation. Hence, if a member has selected edelivery (sms/ text/email) communication preference, MMIS should send the PAPER as default value up until that time. Please refer to requirement id 38467.D3.120 for further details.
+SAK Req for Row 199                   : 15210
+Finished at                           : Fri Jan 24 11:18:10 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:10 EST 2025
+Creating requirement for Row #        : 200
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 599
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.065
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the print type (Regular, Large Print or Braille) if the member has selected the communication preference as PAPER/email/sms/text. Send the default value "Regular" for valid ARD contact types (ARD-ERDI, II, & III).
+SAK Req for Row 200                   : 15211
+Finished at                           : Fri Jan 24 11:18:15 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:15 EST 2025
+Creating requirement for Row #        : 201
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 650
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.070
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send default to communication preference (delivery type) as paper if there is no communication preference available from source systems for a member. In addition, paper should be sent if the letter is being sent to a valid contact type.
+SAK Req for Row 201                   : 15212
+Finished at                           : Fri Jan 24 11:18:19 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:19 EST 2025
+Creating requirement for Row #        : 203
+Requirement Name                      : Recipient object - ARD contact types
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 564
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.080
+Requirement Name                      : Recipient object - ARD contact types
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send D3 to all the active ARD contacts types (ERDI, II, & III). Member can have multiple active ERD I/II/III contacts at a time. In this scenario, the notice needs to be sent to all the active ERD I/II/III Contacts.
+SAK Req for Row 203                   : 15213
+Finished at                           : Fri Jan 24 11:18:24 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:24 EST 2025
+Creating requirement for Row #        : 204
+Requirement Name                      : Recipient Object -Address Line 2 (Member)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 822
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.085
+Requirement Name                      : Recipient Object -Address Line 2 (Member)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member receiving notice does not have address line 2 information, do not send the line 2 tag in the JSON recipient object.
+SAK Req for Row 204                   : 15214
+Finished at                           : Fri Jan 24 11:18:28 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:28 EST 2025
+Creating requirement for Row #        : 205
+Requirement Name                      : Recipient Object -Address Line 2 (Contact Types)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 541
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.086
+Requirement Name                      : Recipient Object -Address Line 2 (Contact Types)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the active ARD contacts [ERDI, ERDII, ERDIII] receiving notice do not have address line 2 information, do not send the line 2 tag in the JSON recipient object.
+SAK Req for Row 205                   : 15215
+Finished at                           : Fri Jan 24 11:18:32 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:32 EST 2025
+Creating requirement for Row #        : 206
+Requirement Name                      : Recipient Object -Address Line 2 (Worker)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 544
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.087
+Requirement Name                      : Recipient Object -Address Line 2 (Worker)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member does not have address line 2 information, do not send the line 2 tag in the JSON recipient object for the worker copy.
+SAK Req for Row 206                   : 15216
+Finished at                           : Fri Jan 24 11:18:37 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:37 EST 2025
+Creating requirement for Row #        : 208
+Requirement Name                      : PAYLOAD Object -addressLine2 (Member)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 541
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.092
+Requirement Name                      : PAYLOAD Object -addressLine2 (Member)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member receiving D3 notice does not have address line 2 information, do not send the line 2 tag in the JSON PAYLOAD object.
+SAK Req for Row 208                   : 15217
+Finished at                           : Fri Jan 24 11:18:41 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:41 EST 2025
+Creating requirement for Row #        : 209
+Requirement Name                      : PAYLOAD Object -addressLine2 (Contact Types)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 521
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.093
+Requirement Name                      : PAYLOAD Object -addressLine2 (Contact Types)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the active contacts [ERDI, ERDII, ERDIII] receiving D3 notice do not have address line 2 information, do not send the line 2 tag in the JSON PAYLOAD object.
+SAK Req for Row 209                   : 15218
+Finished at                           : Fri Jan 24 11:18:45 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:45 EST 2025
+Creating requirement for Row #        : 210
+Requirement Name                      : PAYLOAD Object -addressLine2 (Worker)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 525
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.094
+Requirement Name                      : PAYLOAD Object -addressLine2 (Worker)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member does not have address line 2 information, do not send the line 2 tag in the JSON PAYLOAD object for the worker copy.
+SAK Req for Row 210                   : 15219
+Finished at                           : Fri Jan 24 11:18:49 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:49 EST 2025
+Creating requirement for Row #        : 211
+Requirement Name                      : Same Notice Template for Member/Contact
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 843
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.095
+Requirement Name                      : Same Notice Template for Member/Contact
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Member/Contact will have the same notice template. Member/contact will trigger the same notice template.
+SAK Req for Row 211                   : 15220
+Finished at                           : Fri Jan 24 11:18:53 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:53 EST 2025
+Creating requirement for Row #        : 212
+Requirement Name                      : Payload - ARD/contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 558
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.100
+Requirement Name                      : Payload - ARD/contacts
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Do not send any tag in the payload for contacts if the member has no active contacts i.e.,  effective date NOT between t_re_contact.con_eff_date and t_re_contact.con_end_date.
+(NOTE: Notices should be sent on the effective date and/or the end date as well)
+SAK Req for Row 212                   : 15221
+Finished at                           : Fri Jan 24 11:18:57 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:18:57 EST 2025
+Creating requirement for Row #        : 219
+Requirement Name                      : Send notice to contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 517
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.105
+Requirement Name                      : Send notice to contacts
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Add logic to check if the member has any active ARD contacts assigned i.e., eff date between t_re_contact.con_eff_date and t_re_contact.con_end_date . If there is information, send the notice to active ARD contacts (ERDI, II & III) along with the member. In this scenario, 2 or more letter requests should be sent to CNS. One addressing member & other addressing  contacts. Send the delivery "type" as "PAPER", print Type as "Regular" & "Language" as "English". (Default)
+
+NOTE: Notices should be sent on the effective date and/or the end date as well)
+SAK Req for Row 219                   : 15222
+Finished at                           : Fri Jan 24 11:19:02 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:19:02 EST 2025
+Creating requirement for Row #        : 220
+Requirement Name                      : Make contact types configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 577
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.110
+Requirement Name                      : Make contact types configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make the contact types configurable so that other contact types can be added in the future as per business needs. 
+
+NOTE:  D3 Notice will be sent to active ARDs (ERDI, II & III)
+SAK Req for Row 220                   : 15223
+Finished at                           : Fri Jan 24 11:19:07 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:19:07 EST 2025
+Creating requirement for Row #        : 222
+Requirement Name                      : Make Inserts Groups configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 548
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.115A
+Requirement Name                      : Make Inserts Groups configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make Inserts Groups a configurable change so the new groups can be added in the future as per business needs.
+SAK Req for Row 222                   : 15224
+Finished at                           : Fri Jan 24 11:19:11 EST 2025
+*****************************************************************
+Started at                            : Fri Jan 24 11:19:11 EST 2025
+Creating requirement for Row #        : 223
+Requirement Name                      : Make delivery type configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 515
+Requirement Validation status         : PASS
+Requirement ID                        : 38467.D3.120
+Requirement Name                      : Make delivery type configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make delivery types configurable. If delivery type is edelivery (EMAIL/SMS) or there is no delivery type selected by a member then use the default value of PAPER.
+
+NOTE:  edelivery will be implemented post Group 4 CNS implementation so default will change.
+SAK Req for Row 223                   : 15225
+Finished at                           : Fri Jan 24 11:19:16 EST 2025
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 24/Jan/2025 11:19:16AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
+===============================================
+

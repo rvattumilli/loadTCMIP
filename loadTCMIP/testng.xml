@@ -4,7 +4,7 @@
 	<parameter name="emailRecips" value="false" />
 	<parameter name="browser" value="chrome" />
 	<parameter name="logDebugMsgs" value="false" />
-	<parameter name="overrideValidation" value="false" />
+	<parameter name="overrideValidation" value="true" />
 	<parameter name="lastModifiedDate" value="01/08/2025" />
 	<test name="Load TC in MIP" preserve-order="true">
 		<classes>
