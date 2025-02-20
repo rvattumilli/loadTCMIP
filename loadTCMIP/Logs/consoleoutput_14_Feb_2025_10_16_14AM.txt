@@ -1,0 +1,134 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Feb/2025 10:16:14AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 278
+Total No.of Rows fetched              : 4
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Fri Feb 14 10:16:22 EST 2025
+Creating test case for Row #          : 5827
+Validation Time(ms)                   : 697
+TC Validation status                  : PASS
+Short Desc                            : Disability value DA  description to "Determined Disabled"
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Validate member extract jobs  ELGJD055. The description of the disability value is changed from "SSA Determined Disability" to "Determined Disabled".Where cde_disability="DA". 1. Create a new member ID with cde_disability_stat="DA" 2. Make some changes to the existing Member ID where cde_disability="DA"
+Expected Results                      : Extracts ELGJD055 should have description "Determined Disabled" instead of "SSA Determined Disability".Where cde_disability="DA" 1. After the job run the description of "DA" should be  "Determined Disabled" 2. After the job run the description of "DA" should be  "Determined Disabled".
+Test Case ID for Row 5827             : 48184
+Requirement ID                        : 38270.01.001
+Requirement Type                      : Interfaces
+SAK Requirement Type                  : 18
+Requirement linked for test case      : 48184
+Notebook                              : Project 25.04
+Business Function                     : Project 25.04
+Notebook/BF linked for test case      : 48184
+Finished at                           : Fri Feb 14 10:16:29 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 14 10:16:29 EST 2025
+Creating test case for Row #          : 5828
+Validation Time(ms)                   : 672
+TC Validation status                  : PASS
+Short Desc                            : Change agency codes DSS, DYS,  DMH, DTA, MCB, DMR, SSA and HCF to "OS "
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Member extract job ELGJD055 the agency codes DSS, DYS, DMH, DTA, MCB, DMR, SSA and HCF will change to "OS " in eligibility segments (cde_agency).  1. Create a new member ID"s with agency as DSS, DYS, DMH, DTA, MCB, DMR, SSA and HCF. 2. Make some changes to the existing Member ID"s where (cde_agency) is DSS, DYS, DMH, DTA, MCB, DMR, SSA and HCF
+Expected Results                      : The agency codes DSS, DYS, DMH, DTA, MCB, DMR, SSA and HCF will change to "OS " in eligibility segments (cde_agency) after the job run.
+Test Case ID for Row 5828             : 48185
+Requirement ID                        : 38270.01.005
+Requirement Type                      : Interfaces
+SAK Requirement Type                  : 18
+Requirement linked for test case      : 48185
+Notebook                              : Project 25.04
+Business Function                     : Project 25.04
+Notebook/BF linked for test case      : 48185
+Finished at                           : Fri Feb 14 10:16:36 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 14 10:16:36 EST 2025
+Creating test case for Row #          : 5829
+Validation Time(ms)                   : 686
+TC Validation status                  : PASS
+Short Desc                            : No change in agency codes ELD & MRC
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Member extract job ELGJD055 the agency codes ELD & MRC will not change in eligibility segments(cde_agency).   Note: Test this condition if you can find any MID with these agencies.
+Expected Results                      : The agency codes will not change after the job run.
+Test Case ID for Row 5829             : 48186
+Requirement ID                        : 38270.01.005
+Requirement Type                      : Interfaces
+SAK Requirement Type                  : 18
+Requirement linked for test case      : 48186
+Notebook                              : Project 25.04
+Business Function                     : Project 25.04
+Notebook/BF linked for test case      : 48186
+Finished at                           : Fri Feb 14 10:16:42 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 14 10:16:42 EST 2025
+Creating test case for Row #          : 5830
+Validation Time(ms)                   : 721
+TC Validation status                  : PASS
+Short Desc                            : Change agency codes HIX, MHO and  PAC to "OS".
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 777
+Owner                                 : NAGARAJU KONDISETTI
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Member extract job ELGJD055 the agency codes HIX, MHO and PAC will change to "MH" in eligibility segments (cde_agency).  1. Create a new member ID"s with agency as HIX, MHO and PAC 2. Make some changes to the existing Member ID"s where (cde_agency) is HIX, MHO and PAC
+Expected Results                      : The agency codes HIX, MHO and PAC  will change to "MH " in eligibility segments (cde_agency).
+Test Case ID for Row 5830             : 48187
+Requirement ID                        : 38270.01.010
+Requirement Type                      : Interfaces
+SAK Requirement Type                  : 18
+Requirement linked for test case      : 48187
+Notebook                              : Project 25.04
+Business Function                     : Project 25.04
+Notebook/BF linked for test case      : 48187
+Finished at                           : Fri Feb 14 10:16:49 EST 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Feb/2025 10:16:49AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

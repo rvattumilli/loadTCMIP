@@ -1,0 +1,112 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 18/Feb/2025 06:07:40PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 247
+Total No.of Rows fetched              : 3
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Tue Feb 18 18:07:51 EST 2025
+Creating test case for Row #          : 5831
+Validation Time(ms)                   : 548
+TC Validation status                  : PASS
+Short Desc                            : Member without Line 2 address info
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 644
+Owner                                 : SUNITA LAMA
+Grouping                              : Batch
+Long Desc                             : Select a member receiving E7 notice who does not have address line 2 information.
+Expected Results                      : The line 2 tag should not be sent in the JSON Recipient  & Payload object  in the member copy. There should not be a space in between the address line 1 and the city, State, zip code in the NOTICE PDF
+Test Case ID for Row 5831             : 48219
+Requirement ID                        : 38513.01.001
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48219
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48219
+Finished at                           : Tue Feb 18 18:07:56 EST 2025
+*****************************************************************
+Started at                            : Tue Feb 18 18:07:56 EST 2025
+Creating test case for Row #          : 5832
+Validation Time(ms)                   : 500
+TC Validation status                  : PASS
+Short Desc                            : ADRS without line 2 address info
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 644
+Owner                                 : SUNITA LAMA
+Grouping                              : Batch
+Long Desc                             : Select a member receiving E7 notice who has active ARD contact types that does not have address line 2 information.
+Expected Results                      : The line 2 tag should not be sent in the JSON Recipient  & Payload object  in the ARDs copy. There should not be a space in between the address line 1 and the city, State, zip code in the NOTICE PDF
+Test Case ID for Row 5832             : 48220
+Requirement ID                        : 38513.01.005
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48220
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48220
+Finished at                           : Tue Feb 18 18:08:01 EST 2025
+*****************************************************************
+Started at                            : Tue Feb 18 18:08:01 EST 2025
+Creating test case for Row #          : 5833
+Validation Time(ms)                   : 545
+TC Validation status                  : PASS
+Short Desc                            : Worker copy without line 2 address info
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 644
+Owner                                 : SUNITA LAMA
+Grouping                              : Batch
+Long Desc                             : Select an E7 receiving member with foreign language supported by CNS (For e.g. SPANISH) who does not have address line 2 information.
+Expected Results                      : The line 2 tag should not be sent in the JSON Recipient  & Payload object  in the worker copy. There should not be a space in between the address line 1 and the city, State, zip code in the NOTICE PDF .
+Test Case ID for Row 5833             : 48221
+Requirement ID                        : 38513.01.010
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48221
+Notebook                              : 2025 CNS Pilot
+Business Function                     : 2025 CNS Pilot
+Notebook/BF linked for test case      : 48221
+Finished at                           : Tue Feb 18 18:08:06 EST 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 18/Feb/2025 06:08:07PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

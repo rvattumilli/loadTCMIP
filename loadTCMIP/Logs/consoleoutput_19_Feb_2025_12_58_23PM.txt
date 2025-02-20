@@ -1,0 +1,728 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 19/Feb/2025 12:58:23PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 104
+Total No.of Rows fetched              : 31
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Wed Feb 19 12:58:30 EST 2025
+Creating test case for Row #          : 5834
+Validation Time(ms)                   : 468
+TC Validation status                  : PASS
+Short Desc                            : Do not disenroll from ICO if the mbr loses eligibility.
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not disenroll a member from ICO if the member loses MassHealth eligibility.
+Expected Results                      : Member to remain enrolled in ICO even if the member loses ICO eligibility.
+Test Case ID for Row 5834             : 48222
+Requirement ID                        : 37999.010
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48222
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48222
+Finished at                           : Wed Feb 19 12:58:35 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:58:35 EST 2025
+Creating test case for Row #          : 5835
+Validation Time(ms)                   : 496
+TC Validation status                  : PASS
+Short Desc                            : Do not disenroll from ICO if the  deemed period ends.
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not disenroll a member from ICO if the member deemed enrollment period ends.
+Expected Results                      : Member to remain enrolled in ICO even if the member"s deemed enrollment period ends.
+Test Case ID for Row 5835             : 48223
+Requirement ID                        : 37999.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48223
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48223
+Finished at                           : Wed Feb 19 12:58:39 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:58:39 EST 2025
+Creating test case for Row #          : 5836
+Validation Time(ms)                   : 460
+TC Validation status                  : PASS
+Short Desc                            : Do not disenroll a member from ICO if the member turns 65.
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not disenroll a member from ICO if the member turns 65.
+Expected Results                      : Member does not get disenrolled from ICO if the member turns 65.
+Test Case ID for Row 5836             : 48224
+Requirement ID                        : 37999.030
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48224
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48224
+Finished at                           : Wed Feb 19 12:58:44 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:58:44 EST 2025
+Creating test case for Row #          : 5837
+Validation Time(ms)                   : 462
+TC Validation status                  : PASS
+Short Desc                            : Do not disenroll a member from ICO if the member gains TPL
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not disenroll a member from ICO if the member gains Comprehensive Verified TPL
+Expected Results                      : Member does not get disenrolled from ICO if the member gains  Comprehensive Verified TPL
+Test Case ID for Row 5837             : 48225
+Requirement ID                        : 37999.035.010
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48225
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48225
+Finished at                           : Wed Feb 19 12:58:48 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:58:48 EST 2025
+Creating test case for Row #          : 5838
+Validation Time(ms)                   : 458
+TC Validation status                  : PASS
+Short Desc                            : Do not disenroll a member from ICO if the member gains Excluded
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not disenroll a member from ICO if the member gains Excluded from Managed Care
+Expected Results                      : Member does not get disenrolled from ICO if the member gains  Excluded from Manage Care
+Test Case ID for Row 5838             : 48226
+Requirement ID                        : 37999.035.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48226
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48226
+Finished at                           : Wed Feb 19 12:58:53 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:58:53 EST 2025
+Creating test case for Row #          : 5839
+Validation Time(ms)                   : 499
+TC Validation status                  : PASS
+Short Desc                            : Do not disenroll a member from ICO if the member is under age
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not disenroll a member from ICO if the member is under age.
+Expected Results                      : Member does not get disenrolled from ICO if the member under the minimum age of ICO.
+Test Case ID for Row 5839             : 48227
+Requirement ID                        : 37999.035.030
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48227
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48227
+Finished at                           : Wed Feb 19 12:58:57 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:58:57 EST 2025
+Creating test case for Row #          : 5840
+Validation Time(ms)                   : 490
+TC Validation status                  : PASS
+Short Desc                            : Disenroll a member from ICO if the member gains ICF-MR Admission
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Disenroll a member from ICO if the member gains ICF-MR Admission at the end of the succeeding month.
+Expected Results                      : Member gets disenrolled from ICO if the member gains ICF-MR Admission at the end of the succeeding month.
+Test Case ID for Row 5840             : 48228
+Requirement ID                        : 37999.035.040C
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48228
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48228
+Finished at                           : Wed Feb 19 12:59:02 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:02 EST 2025
+Creating test case for Row #          : 5841
+Validation Time(ms)                   : 502
+TC Validation status                  : PASS
+Short Desc                            : Do not disenroll a member from ICO if the member loses A/B
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not disenroll a member from ICO if the member loses Medicare A and/or Medicare B
+Expected Results                      : Member does not get disenrolled from ICO if the member loses Medicare A and/or Medicare B.
+Test Case ID for Row 5841             : 48229
+Requirement ID                        : 37999.035.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48229
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48229
+Finished at                           : Wed Feb 19 12:59:07 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:07 EST 2025
+Creating test case for Row #          : 5842
+Validation Time(ms)                   : 499
+TC Validation status                  : PASS
+Short Desc                            : Do not disenroll a member from ICO if the member loses C
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not disenroll a member from ICO if the member loses Medicare C
+Expected Results                      : Member does not get disenrolled from ICO if the member loses Medicare C
+Test Case ID for Row 5842             : 48230
+Requirement ID                        : 37999.035.060
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48230
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48230
+Finished at                           : Wed Feb 19 12:59:12 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:12 EST 2025
+Creating test case for Row #          : 5843
+Validation Time(ms)                   : 488
+TC Validation status                  : PASS
+Short Desc                            : Disenroll a member from ICO if the member gains HCBS Waiver
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Disenroll a member from ICO if the member gains HCBS Waiver at the end of the succeeding month.
+Expected Results                      : Member gets disenrolled from ICO if the member gains HCBS Waiver at the end of the succeeding month.
+Test Case ID for Row 5843             : 48231
+Requirement ID                        : 37999.035.070A
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48231
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48231
+Finished at                           : Wed Feb 19 12:59:16 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:16 EST 2025
+Creating test case for Row #          : 5844
+Validation Time(ms)                   : 461
+TC Validation status                  : PASS
+Short Desc                            : Disenroll a member from SCO if the member gains HCBS Waiver
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Disenroll a member from SCO if the member gains non frail elder waiver HCBS Waiver at the end of the succeeding month.
+Expected Results                      : Member gets disenrolled from SCO if the member gains non frail elder HCBS waiver at the end of the succeeding month.
+Test Case ID for Row 5844             : 48232
+Requirement ID                        : 37999.035.070B
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48232
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48232
+Finished at                           : Wed Feb 19 12:59:21 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:21 EST 2025
+Creating test case for Row #          : 5845
+Validation Time(ms)                   : 548
+TC Validation status                  : PASS
+Short Desc                            : Send DS trigger if the member gains HCBS Waiver
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Send DS trigger if the member gains HCBS Waiver
+Expected Results                      : Member gets DS trigger if the member gains a non frail elder HCBS waiver.
+Test Case ID for Row 5845             : 48233
+Requirement ID                        : 37999.035.070B2
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48233
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48233
+Finished at                           : Wed Feb 19 12:59:26 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:26 EST 2025
+Creating test case for Row #          : 5846
+Validation Time(ms)                   : 1022
+TC Validation status                  : PASS
+Short Desc                            : Disenroll member from ICO if member gains DOD
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Disenroll member from ICO if member gains DOD.
+Expected Results                      : Member get disenrolled from ICO at the end of the current month if the member gains a DOD. This is existing logic so this is a regression test.
+Test Case ID for Row 5846             : 48234
+Requirement ID                        : 37999.040
+Requirement Type                      : Informational
+SAK Requirement Type                  : 24
+Requirement linked for test case      : 48234
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48234
+Finished at                           : Wed Feb 19 12:59:33 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:33 EST 2025
+Creating test case for Row #          : 5847
+Validation Time(ms)                   : 534
+TC Validation status                  : PASS
+Short Desc                            : Disenroll member from SCO if member gains DOD
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Disenroll member from SCO if member gains DOD.
+Expected Results                      : Member get disenrolled from SCO at the end of the current month if the member gains a DOD. This is a change from existing log to disenroll the member as of the date of death instead of end of month.
+Test Case ID for Row 5847             : 48235
+Requirement ID                        : 37999.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48235
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48235
+Finished at                           : Wed Feb 19 12:59:38 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:38 EST 2025
+Creating test case for Row #          : 5848
+Validation Time(ms)                   : 452
+TC Validation status                  : PASS
+Short Desc                            : ICO Member do not auto-reenroll
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : ICO members do not reenroll if they regain eligibility.
+Expected Results                      : Member regains ICO eligibility and does not reenroll.
+Test Case ID for Row 5848             : 48236
+Requirement ID                        : 37999.055
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48236
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48236
+Finished at                           : Wed Feb 19 12:59:42 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:42 EST 2025
+Creating test case for Row #          : 5849
+Validation Time(ms)                   : 453
+TC Validation status                  : PASS
+Short Desc                            : Do not send POSC Transactions to Infocrossing
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not send any ICO POSC Transactions to Infocrossing.
+Expected Results                      : ICO enrollments, ICO disenrollment, ICO cancel disenrollments, ICO Opt-out, and ICO Address Change transaction do not get sent to Infocrossing if the enrollment was initiated from the POSC.
+Test Case ID for Row 5849             : 48237
+Requirement ID                        : 37999.070.030
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48237
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48237
+Finished at                           : Wed Feb 19 12:59:47 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:47 EST 2025
+Creating test case for Row #          : 5850
+Validation Time(ms)                   : 458
+TC Validation status                  : PASS
+Short Desc                            : Do not send triggers for decommissioned notices
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not send triggers for decommissioned ICO notices (DC, E5, E6)
+Expected Results                      : Notice triggers for decommissioned notices are not generated.
+Test Case ID for Row 5850             : 48238
+Requirement ID                        : 37999.080
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48238
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48238
+Finished at                           : Wed Feb 19 12:59:51 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:51 EST 2025
+Creating test case for Row #          : 5851
+Validation Time(ms)                   : 461
+TC Validation status                  : PASS
+Short Desc                            : Validate SCO Loss Elig Report
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Validate SCO Loss Elig Report
+Expected Results                      : The  SCO Loss Elig Report is in the CSV format, downloadable from the correct provider on the POSC, and the report is in the correct format.
+Test Case ID for Row 5851             : 48239
+Requirement ID                        : 37999.090.010
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48239
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48239
+Finished at                           : Wed Feb 19 12:59:56 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 12:59:56 EST 2025
+Creating test case for Row #          : 5852
+Validation Time(ms)                   : 438
+TC Validation status                  : PASS
+Short Desc                            : Validate SCO Loss Elig Report
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Validate SCO Loss Elig Report
+Expected Results                      : The  SCO Loss Elig Report is in the CSV format, downloadable from the correct provider on the POSC, and the report is in the correct format.
+Test Case ID for Row 5852             : 48240
+Requirement ID                        : 37999.090.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48240
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48240
+Finished at                           : Wed Feb 19 13:00:00 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:00 EST 2025
+Creating test case for Row #          : 5853
+Validation Time(ms)                   : 470
+TC Validation status                  : PASS
+Short Desc                            : Validate SCO Loss Elig Report
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Portal Panels
+Long Desc                             : Validate SCO Loss Elig Report
+Expected Results                      : The  SCO Loss Elig Report is in the CSV format, downloadable from the correct provider on the POSC, and the report is in the correct format.
+Test Case ID for Row 5853             : 48241
+Requirement ID                        : 37999.090.030
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48241
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48241
+Finished at                           : Wed Feb 19 13:00:05 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:05 EST 2025
+Creating test case for Row #          : 5854
+Validation Time(ms)                   : 459
+TC Validation status                  : PASS
+Short Desc                            : Validate ICO Loss Elig Report
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Validate ICO Loss Elig Report
+Expected Results                      : The  ICO Loss Elig Report is in the CSV format, downloadable from the correct provider on the POSC, and the report is in the correct format.
+Test Case ID for Row 5854             : 48242
+Requirement ID                        : 37999.100.010
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48242
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48242
+Finished at                           : Wed Feb 19 13:00:10 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:10 EST 2025
+Creating test case for Row #          : 5855
+Validation Time(ms)                   : 477
+TC Validation status                  : PASS
+Short Desc                            : Validate ICO Loss Elig Report
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Validate ICO Loss Elig Report
+Expected Results                      : The  ICO Loss Elig Report is in the CSV format, downloadable from the correct provider on the POSC, and the report is in the correct format.
+Test Case ID for Row 5855             : 48243
+Requirement ID                        : 37999.100.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48243
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48243
+Finished at                           : Wed Feb 19 13:00:14 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:14 EST 2025
+Creating test case for Row #          : 5856
+Validation Time(ms)                   : 482
+TC Validation status                  : PASS
+Short Desc                            : Validate ICO Loss Elig Report
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Portal Panels
+Long Desc                             : Validate ICO Loss Elig Report
+Expected Results                      : The  ICO Loss Elig Report is in the CSV format, downloadable from the correct provider on the POSC, and the report is in the correct format.
+Test Case ID for Row 5856             : 48244
+Requirement ID                        : 37999.100.030
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48244
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48244
+Finished at                           : Wed Feb 19 13:00:19 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:19 EST 2025
+Creating test case for Row #          : 5857
+Validation Time(ms)                   : 450
+TC Validation status                  : PASS
+Short Desc                            : Validate Deemed Enrollment Panel Changes
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : MEMBER PANELS
+Long Desc                             : Validate Deemed Enrollment Panel Changes
+Expected Results                      : Text "Not Tracking Deemed Enrollments in MMIS after 12/31/2025" Shows at top of the panel and that no deemed enrollment period records are generated and displayed but old deemed period still display on panel.
+Test Case ID for Row 5857             : 48245
+Requirement ID                        : 37999.110
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48245
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48245
+Finished at                           : Wed Feb 19 13:00:23 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:23 EST 2025
+Creating test case for Row #          : 5858
+Validation Time(ms)                   : 466
+TC Validation status                  : PASS
+Short Desc                            : Allow ICO POSC Enrollment
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Allow valid ICO POSC Enrollments on the POSC
+Expected Results                      : Allow valid ICO enrollments on the POSC. The provider must be an ICO and the member must pass all data edits to be allowed to be enrolled in ICO. Entity code must be WEB.
+Test Case ID for Row 5858             : 48246
+Requirement ID                        : 37999.120.010
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48246
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48246
+Finished at                           : Wed Feb 19 13:00:28 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:28 EST 2025
+Creating test case for Row #          : 5859
+Validation Time(ms)                   : 455
+TC Validation status                  : PASS
+Short Desc                            : Allow ICO POSC Enrollment
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Allow valid ICO POSC Enrollments on the POSC
+Expected Results                      : Allow valid ICO enrollments on the POSC. The provider must be an ICO and the member must pass all data edits to be allowed to be enrolled in ICO. Entity code must be WEB. Display the appropriate edits if the member does not qualify for ICO and do not allow the enrollment. Error == Error Message Age == Members must be 21 years to 64 years of age or older for One Care. Aid Category == Members must have active One Care eligible aid category. Comprehensive Verified TPL == Members must not be enrolled in verified comprehensive TPL for One Care. ICF-MR == Members must not be enrolled in ICF-MR for One Care. Medicare A and B == Members must be enrolled in Medicare A and B for One Care. Medicare C == Members must not be enrolled in Medicare C for One Care. HCBS Waiver == Members must not be enrolled in a HCBS Waiver for One Care.
+Test Case ID for Row 5859             : 48247
+Requirement ID                        : 37999.120.030
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48247
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48247
+Finished at                           : Wed Feb 19 13:00:33 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:33 EST 2025
+Creating test case for Row #          : 5860
+Validation Time(ms)                   : 443
+TC Validation status                  : PASS
+Short Desc                            : Retire Current SCO Stop Reasons
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Retire all current SCO Stop Reasons on the POSC as of June 2025. Only allow the new stop reason codes starting June 2025.  New reason codes are:  Involuntary - Loss or downgrade Medicaid Eligibility (IC Plan Only) - XA Loss or downgrade of MassHealth - XB Involuntary - Loss of Medicare Eligibility (IC Plan Only) - XC Involuntary - Incarceration (IC Plan Only) - XD Involuntary - Death (IC Plan Only) - XE Involuntary - Does not meet program requirements (IC plan Only) - XF Involuntary - Permanently Moved out of State (IC Plan Only) - XG Voluntary - Enrolling in different MassHealth Integrated Care Plan (PACE, SCO, or One Care) (IC Plan Only) - XH Voluntary - Enrolling in different Medicare Advantage plan (IC Plan Only) - XJ Voluntary - Enrolling in Original Medicare and Part D plan - XK Voluntary - Not satisfied (IC Plan Only) - XM
+Expected Results                      : Only the new stop reason codes are allowed starting June 2025 and the old stop reason codes are not allowed as of June 2025.
+Test Case ID for Row 5860             : 48248
+Requirement ID                        : 37999.130.010
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48248
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48248
+Finished at                           : Wed Feb 19 13:00:39 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:39 EST 2025
+Creating test case for Row #          : 5861
+Validation Time(ms)                   : 448
+TC Validation status                  : PASS
+Short Desc                            : Retire Current SCO Stop Reasons
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Retire all current SCO Stop Reasons on the POSC as of June 2025. Only allow the new stop reason codes starting June 2025.  New reason codes are:  Involuntary - Loss or downgrade Medicaid Eligibility (IC Plan Only) - XA Loss or downgrade of MassHealth - XB Involuntary - Loss of Medicare Eligibility (IC Plan Only) - XC Involuntary - Incarceration (IC Plan Only) - XD Involuntary - Death (IC Plan Only) - XE Involuntary - Does not meet program requirements (IC plan Only) - XF Involuntary - Permanently Moved out of State (IC Plan Only) - XG Voluntary - Enrolling in different MassHealth Integrated Care Plan (PACE, SCO, or One Care) (IC Plan Only) - XH Voluntary - Enrolling in different Medicare Advantage plan (IC Plan Only) - XJ Voluntary - Enrolling in Original Medicare and Part D plan - XK Voluntary - Not satisfied (IC Plan Only) - XM
+Expected Results                      : Only the new stop reason codes are allowed starting June 2025 and the old stop reason codes are not allowed as of June 2025.
+Test Case ID for Row 5861             : 48249
+Requirement ID                        : 37999.130.020
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48249
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48249
+Finished at                           : Wed Feb 19 13:00:44 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:44 EST 2025
+Creating test case for Row #          : 5862
+Validation Time(ms)                   : 462
+TC Validation status                  : PASS
+Short Desc                            : Do Not Allow New SCO ICO Stop Reasons in MMIS
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : MC ENROLLMENTS
+Long Desc                             : Do Not Allow New SCO ICO Stop Reasons in MMIS an edit will prevent the new reason codes for being used. The new stop reasons are: Involuntary - Loss or downgrade Medicaid Eligibility (IC Plan Only) - XA Loss or downgrade of MassHealth - XB Involuntary - Loss of Medicare Eligibility (IC Plan Only) - XC Involuntary - Incarceration (IC Plan Only) - XD Involuntary - Death (IC Plan Only) - XE Involuntary - Does not meet program requirements (IC plan Only) - XF Involuntary - Permanently Moved out of State (IC Plan Only) - XG Voluntary - Enrolling in different MassHealth Integrated Care Plan (PACE, SCO, or One Care) (IC Plan Only) - XH Voluntary - Enrolling in different Medicare Advantage plan (IC Plan Only) - XJ Voluntary - Enrolling in Original Medicare and Part D plan - XK Voluntary - Not satisfied (IC Plan Only) - XM
+Expected Results                      : An edit will occur if one of the new stop reason codes are used in the PMP panels for ICO or SCO enrollments.
+Test Case ID for Row 5862             : 48250
+Requirement ID                        : 37999.130.030
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48250
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48250
+Finished at                           : Wed Feb 19 13:00:50 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:50 EST 2025
+Creating test case for Row #          : 5863
+Validation Time(ms)                   : 458
+TC Validation status                  : PASS
+Short Desc                            : Block SCO Enrollments for a Provider
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Block enrollments into a SCO provider if the SCO provider is on table within the given date range.
+Expected Results                      : Enrollments into the SCO provider are blocked. Disenrollments are still allowed.
+Test Case ID for Row 5863             : 48251
+Requirement ID                        : 37999.140.010
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48251
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48251
+Finished at                           : Wed Feb 19 13:00:54 EST 2025
+*****************************************************************
+Started at                            : Wed Feb 19 13:00:54 EST 2025
+Creating test case for Row #          : 5864
+Validation Time(ms)                   : 463
+TC Validation status                  : PASS
+Short Desc                            : Block ICO Enrollments for a Provider
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Block enrollments into a ICO provider if the ICO provider is on table within the given date range.
+Expected Results                      : Enrollments into the ICO provider are blocked. Disenrollments are still allowed.
+Test Case ID for Row 5864             : 48252
+Requirement ID                        : 37999.140.020
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48252
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48252
+Finished at                           : Wed Feb 19 13:00:59 EST 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 19/Feb/2025 01:00:59PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

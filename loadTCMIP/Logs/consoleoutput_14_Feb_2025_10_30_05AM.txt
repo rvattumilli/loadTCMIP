@@ -1,0 +1,114 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 14/Feb/2025 10:30:05AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+*****************************************************************
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 65
+Total No.of Rows fetched              : 6
+*****************************************************************
+Started at                            : Fri Feb 14 10:30:11 EST 2025
+Creating requirement for Row #        : 230
+Validation Time(ms)                   : 702
+Requirement Validation status         : PASS
+Requirement ID                        : 38504.01.010
+Requirement Name                      : Stop processing closed Dentaquest assignments
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Stop processing closed assignments for DentaQuest once BeneCare assignment plan is active.
+SAK Req for Row 230                   : 15392
+Finished at                           : Fri Feb 14 10:30:15 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 14 10:30:15 EST 2025
+Creating requirement for Row #        : 231
+Validation Time(ms)                   : 930
+Requirement Validation status         : PASS
+Requirement ID                        : 38504.01.015
+Requirement Name                      : Process closed BeneCare assignments
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : The process should review and update any previous/closed Benecare assignments impacted by changes in eligibility or other relevant scenarios.
+SAK Req for Row 231                   : 15393
+Finished at                           : Fri Feb 14 10:30:20 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 14 10:30:20 EST 2025
+Creating requirement for Row #        : 232
+Validation Time(ms)                   : 677
+Requirement Validation status         : PASS
+Requirement ID                        : 38504.01.020
+Requirement Name                      : Ensure BeneCare never have eff date prior the provider"s start date
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Ensure Benecare Dental Assignments never have effective date prior the BeneCare provider"s start date.
+SAK Req for Row 232                   : 15394
+Finished at                           : Fri Feb 14 10:30:25 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 14 10:30:25 EST 2025
+Creating requirement for Row #        : 233
+Validation Time(ms)                   : 683
+Requirement Validation status         : PASS
+Requirement ID                        : 38504.01.025
+Requirement Name                      : Ensure DentaQuest does not go beyond PID end date
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Ensure enrollments in the assignment plan for DentaQuest should not go beyond the provider end date.
+SAK Req for Row 233                   : 15395
+Finished at                           : Fri Feb 14 10:30:30 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 14 10:30:30 EST 2025
+Creating requirement for Row #        : 234
+Validation Time(ms)                   : 698
+Requirement Validation status         : PASS
+Requirement ID                        : 38504.01.030
+Requirement Name                      : Stop 6 year backdating for DentaQuest Assignments
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Stop 6 year backdating for DentaQuest Assignments.
+SAK Req for Row 234                   : 15396
+Finished at                           : Fri Feb 14 10:30:35 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 14 10:30:35 EST 2025
+Creating requirement for Row #        : 235
+Validation Time(ms)                   : 699
+Requirement Validation status         : PASS
+Requirement ID                        : 38504.01.035
+Requirement Name                      : Keep the 6year backdating  BeneCare Assignments
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Keep the 6-year backdating in place for BeneCare assignments once we are past 6 years since BeneCare started.
+SAK Req for Row 235                   : 15397
+Finished at                           : Fri Feb 14 10:30:39 EST 2025
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 14/Feb/2025 10:30:40AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
