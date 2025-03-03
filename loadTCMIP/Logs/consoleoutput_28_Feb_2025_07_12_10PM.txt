@@ -1,0 +1,376 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 28/Feb/2025 07:12:10PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 132
+Total No.of Rows fetched              : 15
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:17 EST 2025
+Creating test case for Row #          : 5865
+Validation Time(ms)                   : 475
+TC Validation status                  : PASS
+Short Desc                            : Transfer DCR
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Find members currently enrolled to Dentaquest (PID/SL 110111117A) and request the DCR run for them to be transferred to a new dental provider "Benecare" with PID/SL 110211392A with effective 04/01/2025.
+Expected Results                      : Verify that the members are transferred successfully to BeneCare (PID/SL 110211392A) with effective date of 04/01/2025
+Test Case ID for Row 5865             : 48307
+Requirement ID                        : 38221.01.001
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48307
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48307
+Finished at                           : Fri Feb 28 19:12:21 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:21 EST 2025
+Creating test case for Row #          : 5866
+Validation Time(ms)                   : 453
+TC Validation status                  : PASS
+Short Desc                            : DQ Open End Date
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Find current DentaQuest members with an open date and end date the previous DentaQuest DNTL row with 03/31/2025 date (One day prior start date 04/01/2025)
+Expected Results                      : Verify that the members" open DentaQuest DNTL segment receives end date of 03/31/2025
+Test Case ID for Row 5866             : 48308
+Requirement ID                        : 38221.03.015
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48308
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48308
+Finished at                           : Fri Feb 28 19:12:26 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:26 EST 2025
+Creating test case for Row #          : 5867
+Validation Time(ms)                   : 438
+TC Validation status                  : PASS
+Short Desc                            : DQ Prior End Date
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Find a current DentaQuest member with a DNTL segment end date prior to 04/01/2025. The DCR should not add a new DNTL row
+Expected Results                      : Verify that the members do not receive a new DNTL row
+Test Case ID for Row 5867             : 48309
+Requirement ID                        : 38221.03.025
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48309
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48309
+Finished at                           : Fri Feb 28 19:12:30 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:30 EST 2025
+Creating test case for Row #          : 5868
+Validation Time(ms)                   : 466
+TC Validation status                  : PASS
+Short Desc                            : History DQ - 2
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Find a dentaquest member with a FUTURE effective date that"s greater than the NEW BeneCare Start Date. It should history the old dentaquest row & add a new Benecare assignment plan that matches the previous historied Dentaquest row.  For e.g. NEW Benecare Start date is 04/01/2025  Before: Dentaquest 1(DNTL2) : 01/01/2024 - 04/27/2025 Dentaquest 2(DNTL1) : 04/28/2025 - 12/31/2299  After: Dentaquest 1(DNTL2) : 01/01/2024 - 03/31/2025 [The old dentaquest end date should be updated to one day prior NEW Benecare Start date (04/01/2025). This scenario will be handled by the req id 38221.03.020] Dentaquest 2(DNTL1) : 04/28/2025 - 12/31/2299 "H" [This row should be set to HISTORY status] Benecare row 1 (DNTL2) : 04/01/2025 - 04/27/2025 [Add NEW row that matches with old dentaquest 1 row] Benecare row 2 (DNTL1) : 04/28/2025 - 12/31/2299 [Add NEW row that matches with old dentaquest 2 row]
+Expected Results                      : Verify that the old DentaQuest row is historied and a new BeneCare segment is created that matches the previous historied DentaQuest row
+Test Case ID for Row 5868             : 48310
+Requirement ID                        : 38221.03.027
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48310
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48310
+Finished at                           : Fri Feb 28 19:12:35 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:35 EST 2025
+Creating test case for Row #          : 5869
+Validation Time(ms)                   : 482
+TC Validation status                  : PASS
+Short Desc                            : ZM - Auto Disenroll
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : The ZM - Auto-Disenroll - Mass Transfer as STOP reason code should be used for the existing DentaQuest plans
+Expected Results                      : Verify that the existing DentaQuest plans receive STOP reason code ZM - Auto-Disenroll - Mass Transfer
+Test Case ID for Row 5869             : 48311
+Requirement ID                        : 38221.03.030
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48311
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48311
+Finished at                           : Fri Feb 28 19:12:39 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:39 EST 2025
+Creating test case for Row #          : 5870
+Validation Time(ms)                   : 494
+TC Validation status                  : PASS
+Short Desc                            : Active Eligibility
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Find a member that has an active/future end-dated eligibility segment. BeneCare segment should be added.
+Expected Results                      : Verify that BeneCare segment is added for members with active/future end-dated eligibility
+Test Case ID for Row 5870             : 48312
+Requirement ID                        : 38221.04.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48312
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48312
+Finished at                           : Fri Feb 28 19:12:44 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:44 EST 2025
+Creating test case for Row #          : 5871
+Validation Time(ms)                   : 436
+TC Validation status                  : PASS
+Short Desc                            : Inactive Elgibility
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Find a member that does not have an active/future end-dated eligibility. BeneCare segment should NOT be added.
+Expected Results                      : Verify that BeneCare segment is not added for members that do NOT have an active/future end-dated eligibility segment
+Test Case ID for Row 5871             : 48313
+Requirement ID                        : 38221.04.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48313
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48313
+Finished at                           : Fri Feb 28 19:12:48 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:48 EST 2025
+Creating test case for Row #          : 5872
+Validation Time(ms)                   : 472
+TC Validation status                  : PASS
+Short Desc                            : Inactive MID
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Find a member with an inactive MID. A new BeneCare segment should NOT be inserted for that member by DCR.
+Expected Results                      : Verify that new BeneCare segment is not added for the member with inactive MID.
+Test Case ID for Row 5872             : 48314
+Requirement ID                        : 38221.04.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48314
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48314
+Finished at                           : Fri Feb 28 19:12:52 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:52 EST 2025
+Creating test case for Row #          : 5873
+Validation Time(ms)                   : 433
+TC Validation status                  : PASS
+Short Desc                            : Eligibility change on DCR run date
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Set up the data with two different DNTL assignment plans with one eligibility starts from the day DCR runs.
+Expected Results                      : Member should go to the error report as expected.
+Test Case ID for Row 5873             : 48315
+Requirement ID                        : 38221.03.010
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48315
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48315
+Finished at                           : Fri Feb 28 19:12:56 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:12:56 EST 2025
+Creating test case for Row #          : 5874
+Validation Time(ms)                   : 433
+TC Validation status                  : PASS
+Short Desc                            : Dentaquest Future end date
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select the Member enrolled to Dentaquest has future end date(on or after 04/01/2025), after the DCR run, the dentaquest plan should be ended with end date 03/31/2025 and Benecare plan should start with 04/01/2025 and end with the end date of current Dentaquest. Note: Perform with DNTL1, DNTL2 & DNTL3
+Expected Results                      : The start date for the Benecare plan will be 04/01/2025 and end date with the end date of current Dentaquest plan as expected.
+Test Case ID for Row 5874             : 48316
+Requirement ID                        : 38221.03.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48316
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48316
+Finished at                           : Fri Feb 28 19:13:00 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:13:00 EST 2025
+Creating test case for Row #          : 5875
+Validation Time(ms)                   : 450
+TC Validation status                  : PASS
+Short Desc                            : Dentaquest Future start date
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select or setup the member with Dentaquest start date on 04/01/2025 and after the DCR run, the Benecare plan starts with the Dentaquest plan and the Dentaquest will be historied. Note: Perform with DNTL1, DNTL2 & DNTL3
+Expected Results                      : Benecare Plan starts from 04/01/2025 with the previous dentaquest plan and Dentaquest plan will be historied as expected.
+Test Case ID for Row 5875             : 48317
+Requirement ID                        : 38221.03.026
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48317
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48317
+Finished at                           : Fri Feb 28 19:13:05 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:13:05 EST 2025
+Creating test case for Row #          : 5876
+Validation Time(ms)                   : 433
+TC Validation status                  : PASS
+Short Desc                            : Dentaquest end date 04/01/2025
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Select or setup the member with Dentaquest end date on 04/01/2025 and after the DCR run, the Benecare plan starts and end with the 04/01/2025 and Dentaquest plan end with 03/31/2025. Note: Perform with DNTL1, DNTL2 & DNTL3
+Expected Results                      : The Benecare plan starts and end with the 04/01/2025 and Dentaquest plan end with 03/31/2025 as expected.
+Test Case ID for Row 5876             : 48318
+Requirement ID                        : 38221.03.028
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48318
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48318
+Finished at                           : Fri Feb 28 19:13:09 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:13:09 EST 2025
+Creating test case for Row #          : 5877
+Validation Time(ms)                   : 452
+TC Validation status                  : PASS
+Short Desc                            : Start reason for Benecare
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : After the DCR, the start reason for all bencare members should be defaulted to AA.
+Expected Results                      : The start reason will be AA for all Benecare Members as expected.
+Test Case ID for Row 5877             : 48319
+Requirement ID                        : 38221.03.035
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48319
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48319
+Finished at                           : Fri Feb 28 19:13:14 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:13:14 EST 2025
+Creating test case for Row #          : 5878
+Validation Time(ms)                   : 577
+TC Validation status                  : PASS
+Short Desc                            : DOD checking on DCR rundate
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Set up the member with DOD date equal to DCR run date with active Dentaquest eligibility, after the DCR, new Benecare plan will not be inserted. Note: Perform with DNTL1, DNTL2 & DNTL3
+Expected Results                      : new Benecare plan will not be inserted for the DOD members on the day DCR runs as expected.
+Test Case ID for Row 5878             : 48320
+Requirement ID                        : 38221.04.045
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48320
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48320
+Finished at                           : Fri Feb 28 19:13:18 EST 2025
+*****************************************************************
+Started at                            : Fri Feb 28 19:13:18 EST 2025
+Creating test case for Row #          : 5879
+Validation Time(ms)                   : 440
+TC Validation status                  : PASS
+Short Desc                            : Generating two reports
+Env                                   : 7
+Subsystem                             : Managed Care
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Two reports will be generated, one with the Successful dentaquest disenrollments, Historied Dentaquest Assignments, Benecare enrollments, future benecare assignments and unsuccessful Dentaquest disenrollments, Second one with the list of members, which are not transferred.
+Expected Results                      : Two reports will be generated as expected.
+Test Case ID for Row 5879             : 48321
+Requirement ID                        : 38221.05.055
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48321
+Notebook                              : Benecare Testing
+Business Function                     : Benecare Testing
+Notebook/BF linked for test case      : 48321
+Finished at                           : Fri Feb 28 19:13:23 EST 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 28/Feb/2025 07:13:23PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
