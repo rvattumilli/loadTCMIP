@@ -1,0 +1,1443 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 13/Mar/2025 04:38:54PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/05/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 121
+Total No.of Rows fetched              : 64
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:14 EDT 2025
+Creating test case for Row #          : 5919
+Validation Time(ms)                   : 393
+TC Validation status                  : PASS
+Short Desc                            : EB-Validate notices sent via CNS
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate when the configuration is turned ON ,the notices should be  sent via CNS and stop sending through the existing noticing solution (MAXIMUS/EOTTS/SM).
+Expected Results                      : Verify when configuration turned ON Notices are sent via CNS as expected.
+Test Case ID for Row 5919             : 48458
+Requirement ID                        : 38356.EB.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48458
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48458
+Finished at                           : Thu Mar 13 16:39:19 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:19 EDT 2025
+Creating test case for Row #          : 5920
+Validation Time(ms)                   : 431
+TC Validation status                  : PASS
+Short Desc                            : EB-Meta data object format
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the EB notice has Meta Data Object in the following format: notice id #New Sequential Notice ID# notice type (cde_letter_type ="EB") notice Language priority (Use NORMAL) noticetobe replaced (optional field. MMIS can leave it off)
+Expected Results                      : Verify for EB Notice Type - Meta Data Object is formatted correctly and  Meta data objects are present and stored in T_CNS_NOTICE as expected.
+Test Case ID for Row 5920             : 48459
+Requirement ID                        : 38356.EB.030
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48459
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48459
+Finished at                           : Thu Mar 13 16:39:23 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:23 EDT 2025
+Creating test case for Row #          : 5921
+Validation Time(ms)                   : 374
+TC Validation status                  : PASS
+Short Desc                            : EB-Send default value en for non cns languages
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate a member receiving EB notice who has the language preference excluding English, Spanish, Portuguese, Simplified Chinese, Haitian Creole and Vietnamese, and has language preference as  French, Ethiopian or German then default  value English as "EN"  should be sent.
+Expected Results                      : Verify default Value for english as "EN" as expected.
+Test Case ID for Row 5921             : 48460
+Requirement ID                        : 38356.EB.035
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48460
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48460
+Finished at                           : Thu Mar 13 16:39:27 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:27 EDT 2025
+Creating test case for Row #          : 5922
+Validation Time(ms)                   : 438
+TC Validation status                  : PASS
+Short Desc                            : EB-Value en for English
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate a member receiving EB notice who has the language preference as English then Value "en" Should be  sent
+Expected Results                      : Value "en" is sent for the preference language English as expected.
+Test Case ID for Row 5922             : 48461
+Requirement ID                        : 38356.EB.035
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48461
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48461
+Finished at                           : Thu Mar 13 16:39:32 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:32 EDT 2025
+Creating test case for Row #          : 5923
+Validation Time(ms)                   : 447
+TC Validation status                  : PASS
+Short Desc                            : EB-Send preferred value for non-English CNS- languages
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate a member receiving EB notice who has the language preference Spanish, Portuguese, Simplified Chinese, Haitian Creole and Vietnamese, should not send the value "en".  The value "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese should be sent
+Expected Results                      : Verify for value "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese is sent as expected.
+Test Case ID for Row 5923             : 48462
+Requirement ID                        : 38356.EB.035
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48462
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48462
+Finished at                           : Thu Mar 13 16:39:36 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:36 EDT 2025
+Creating test case for Row #          : 5924
+Validation Time(ms)                   : 374
+TC Validation status                  : PASS
+Short Desc                            : EB- Notices for non-English written language-Spanish(es)
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E7 notices requests should be generated one for member in chosen written language SPANISH (for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg).  For any Active contact types (ERDI, ERDII &ERDIII) notices Should be generated  in English lang with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify for non-English written language Spanish has two E7 notices generated one for member in chosen written language (SPANISH) and one for worker in English (no delivery-REG) and active ERDs(REG) as expected.
+Test Case ID for Row 5924             : 48463
+Requirement ID                        : 38356.EB.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48463
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48463
+Finished at                           : Thu Mar 13 16:39:40 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:40 EDT 2025
+Creating test case for Row #          : 5925
+Validation Time(ms)                   : 404
+TC Validation status                  : PASS
+Short Desc                            : EB -Notices for non-English written language- Portuguese (pt)
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E7 notices requests should be generated one for member in chosen written language PORTUGUESE (for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg). For any Active contact types (ERDI, ERDII &ERDIII) notices should be generated in English lang  with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify for non-English written language Portuguese has two E7 notices generated one for member in chosen written language (PORTUGUESE) and one for worker in English (no delivery-REG) and active ERDS(REG)as expected.
+Test Case ID for Row 5925             : 48464
+Requirement ID                        : 38356.EB.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48464
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48464
+Finished at                           : Thu Mar 13 16:39:45 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:45 EDT 2025
+Creating test case for Row #          : 5926
+Validation Time(ms)                   : 417
+TC Validation status                  : PASS
+Short Desc                            : EB- Notices for non-English written language- Chinese (zh)
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E7 notices requests should be generated one for member in chosen written language Chinese (for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg). For any Active contact types (ERDI, ERDII &ERDIII) notices should generate in English lang  with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify for non-English written language Chinese has two E7 notices generated one for member in chosen written language (Chinese) and one for worker in English (no delivery) and active ERDS(REG)as expected.
+Test Case ID for Row 5926             : 48465
+Requirement ID                        : 38356.EB.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48465
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48465
+Finished at                           : Thu Mar 13 16:39:50 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:50 EDT 2025
+Creating test case for Row #          : 5927
+Validation Time(ms)                   : 405
+TC Validation status                  : PASS
+Short Desc                            : EB Notices for non-English written language- Haitian Creole (ht)
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E7 notices requests should be generated one for member in chosen written language Haitian(for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg). For any Active contact types (ERDI, ERDII &ERDIII) notices should generate in English lang  with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify for non-English written language Haitian has two E7 notices requests generated one for member in chosen written language (Haitian) and one for worker in English (no delivery) and active ERDS(REG)as expected
+Test Case ID for Row 5927             : 48466
+Requirement ID                        : 38356.EB.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48466
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48466
+Finished at                           : Thu Mar 13 16:39:54 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:54 EDT 2025
+Creating test case for Row #          : 5928
+Validation Time(ms)                   : 410
+TC Validation status                  : PASS
+Short Desc                            : EB -Notices for non-English written language-Vietnamese(vi)
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E7 notices requests should be generated one for member in chosen written language Vietnamese (for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg). For any Active contact types (ERDI, ERDII &ERDIII) notices should generate in English lang  with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify non-English written language Vietnamese has two E7 notices requests generated one for member in chosen written language (Vietnamese) and one for worker in English (no delivery).
+Test Case ID for Row 5928             : 48467
+Requirement ID                        : 38356.EB.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48467
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48467
+Finished at                           : Thu Mar 13 16:39:59 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:39:59 EDT 2025
+Creating test case for Row #          : 5929
+Validation Time(ms)                   : 494
+TC Validation status                  : PASS
+Short Desc                            : EB-Written language in JSON
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the members written Language is sending in JSON request not as primary language.  Note:MMIS stores both primary and written language
+Expected Results                      : Verify members written language is sent in JSON as expected
+Test Case ID for Row 5929             : 48468
+Requirement ID                        : 38356.EB.045
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48468
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48468
+Finished at                           : Thu Mar 13 16:40:03 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:03 EDT 2025
+Creating test case for Row #          : 5930
+Validation Time(ms)                   : 477
+TC Validation status                  : PASS
+Short Desc                            : EB- Verify Recipient object
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate Recipient object has data elements in JSON format : firstName { nam_middle_init(middleName) middleName id (NOTE: Send the MMIS id) suffix type (NOTE: This is delivery type. A notice can be delivered via print, email, SMS or not delivered at all (allowable values for CNS "print", "email", "sms", "noDelivery") printType emailAddress phoneNumber Address  line1 line 2 city state zipcode city
+Expected Results                      : Verify Recipient object has data elements in JSON format
+Test Case ID for Row 5930             : 48469
+Requirement ID                        : 38356.EB.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48469
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48469
+Finished at                           : Thu Mar 13 16:40:08 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:08 EDT 2025
+Creating test case for Row #          : 5931
+Validation Time(ms)                   : 425
+TC Validation status                  : PASS
+Short Desc                            : EB- Recipient object with middle name , prefix and suffix for member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate Recipient object has data elements in JSON format for member with First name ,Last name,middlename ,Prefix and Suffix
+Expected Results                      : Verify Recipient object has member data elements in JSON format
+Test Case ID for Row 5931             : 48470
+Requirement ID                        : 38356.EB.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48470
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48470
+Finished at                           : Thu Mar 13 16:40:13 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:13 EDT 2025
+Creating test case for Row #          : 5932
+Validation Time(ms)                   : 944
+TC Validation status                  : PASS
+Short Desc                            : EB- Recipient object without middle name , prefix and suffix for member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate Recipient object has data elements in JSON format for member with First name ,Last name and with out middlename,Prefix and Suffix Note:Middle name,suffix and prefix are not required fields
+Expected Results                      : Verify Recipient object has member data elements in JSON format
+Test Case ID for Row 5932             : 48471
+Requirement ID                        : 38356.EB.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48471
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48471
+Finished at                           : Thu Mar 13 16:40:18 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:18 EDT 2025
+Creating test case for Row #          : 5933
+Validation Time(ms)                   : 400
+TC Validation status                  : PASS
+Short Desc                            : EB- Last Name for ERDI, II, III
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate in the JSON Recipient Object, last name for the ARD (ERDI, II, III) should be "Unavailable"  Note: Last name is a required field for ERDs ERD full contact name is sent in recipient first name element itself.
+Expected Results                      : Verify last name for the ARD (ERDI, II, III) is shown as "Unavailable
+Test Case ID for Row 5933             : 48472
+Requirement ID                        : 38356.EB.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48472
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48472
+Finished at                           : Thu Mar 13 16:40:22 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:22 EDT 2025
+Creating test case for Row #          : 5934
+Validation Time(ms)                   : 408
+TC Validation status                  : PASS
+Short Desc                            : EB- communication preference default as PAPER for edelivery(TEXT/SMS)
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member, if the communication preference is set as TEXT/SMS (edelivery) then PAPER should be sent as default value.   The print type value can be REG,BRAILLE&LARGE for a member for edelivery (TEXT/SMS)  The default value PAPER is sent for edelivery until CNS Group-4 is implemented.
+Expected Results                      : Verify members communication preference is set default value as PAPER for edelivery (TEXT/SMS).
+Test Case ID for Row 5934             : 48473
+Requirement ID                        : 38356.EB.055
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48473
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48473
+Finished at                           : Thu Mar 13 16:40:26 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:26 EDT 2025
+Creating test case for Row #          : 5935
+Validation Time(ms)                   : 409
+TC Validation status                  : PASS
+Short Desc                            : EB- communication preference default as PAPER for edelivery (EMAIL)
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as EMAIL (edelivery) then PAPER should be sent as default value.   The print type value can be REG, BRAILLE&LARGE for a member for edelivery(EMAIL)  The default value PAPER is sent for edelivery until CNS Group-4 is implemented.
+Expected Results                      : Verify members communication preference is set default value as PAPER for edelivery (EMAIL).
+Test Case ID for Row 5935             : 48474
+Requirement ID                        : 38356.EB.060
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48474
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48474
+Finished at                           : Thu Mar 13 16:40:32 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:32 EDT 2025
+Creating test case for Row #          : 5936
+Validation Time(ms)                   : 410
+TC Validation status                  : PASS
+Short Desc                            : EB- Comm pref is PAPER/PRINT & print type is Regular
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as PAPER & Print type as Regular,then  send value as PAPER/PRINT and REG
+Expected Results                      : Verify members delivery type is sent as Print & print type as REG as expected.
+Test Case ID for Row 5936             : 48475
+Requirement ID                        : 38356.EB.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48475
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48475
+Finished at                           : Thu Mar 13 16:40:36 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:36 EDT 2025
+Creating test case for Row #          : 5937
+Validation Time(ms)                   : 416
+TC Validation status                  : PASS
+Short Desc                            : EB- Comm pref is PAPER/PRINT & print type is Large
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as PAPER & Print type as LARGE,then send values as PAPER/PRINT and LRG
+Expected Results                      : Verify members delivery type is sent as Print & print type as LRG as expected.
+Test Case ID for Row 5937             : 48476
+Requirement ID                        : 38356.EB.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48476
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48476
+Finished at                           : Thu Mar 13 16:40:40 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:40 EDT 2025
+Creating test case for Row #          : 5938
+Validation Time(ms)                   : 353
+TC Validation status                  : PASS
+Short Desc                            : EB- Comm pref is PAPER/PRINT & print type is Braille
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as PAPER & Print type as BRAILLE  ,then  send values as PAPER/PRINT and BRAILLE
+Expected Results                      : Verify members delivery type is sent as Print & print type as BRAILLE as expected.
+Test Case ID for Row 5938             : 48477
+Requirement ID                        : 38356.EB.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48477
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48477
+Finished at                           : Thu Mar 13 16:40:44 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:44 EDT 2025
+Creating test case for Row #          : 5939
+Validation Time(ms)                   : 394
+TC Validation status                  : PASS
+Short Desc                            : EB-Comm Pref is "EMAIL" & print type is regular
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as EMAIL & Print type as Regular,then send values as PAPER/PRINT and REG
+Expected Results                      : Verify members delivery type is sent as Print & print type as REG as expected.
+Test Case ID for Row 5939             : 48478
+Requirement ID                        : 38356.EB.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48478
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48478
+Finished at                           : Thu Mar 13 16:40:48 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:48 EDT 2025
+Creating test case for Row #          : 5940
+Validation Time(ms)                   : 391
+TC Validation status                  : PASS
+Short Desc                            : EB-Comm Pref is "EMAIL" & print type is LARGE
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as EMAIL & Print type as LARGE,then send values as PAPER/PRINT and LRG
+Expected Results                      : Verify members delivery type is sent as Print & print type as LRG as expected.
+Test Case ID for Row 5940             : 48479
+Requirement ID                        : 38356.EB.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48479
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48479
+Finished at                           : Thu Mar 13 16:40:52 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:52 EDT 2025
+Creating test case for Row #          : 5941
+Validation Time(ms)                   : 365
+TC Validation status                  : PASS
+Short Desc                            : EB-Comm Pref is "EMAIL" & print type is BRAILLE
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as EMAIL & Print type as BRAILLE,then send values as PAPER/PRINT and BRAILLE
+Expected Results                      : Verify members delivery type is sent as Print & print type as BRAILLE as expected.
+Test Case ID for Row 5941             : 48480
+Requirement ID                        : 38356.EB.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48480
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48480
+Finished at                           : Thu Mar 13 16:40:56 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:40:56 EDT 2025
+Creating test case for Row #          : 5942
+Validation Time(ms)                   : 371
+TC Validation status                  : PASS
+Short Desc                            : EB-Comm Pref "SMS/TEXT" & print type is REGULAR
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as SMS/TEXT & Print type as REG,then send values as PAPER/PRINT and REG
+Expected Results                      : Verify members delivery type is sent as Print & print type as REG as expected.
+Test Case ID for Row 5942             : 48481
+Requirement ID                        : 38356.EB.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48481
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48481
+Finished at                           : Thu Mar 13 16:41:02 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:02 EDT 2025
+Creating test case for Row #          : 5943
+Validation Time(ms)                   : 363
+TC Validation status                  : PASS
+Short Desc                            : EB-Comm Pref "SMS/TEXT" & print type is LRG
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as SMS/TEXT & Print type as LARGE,then send value as PAPER/PRINT and LRG
+Expected Results                      : Verify members delivery type is sent as Print & print type as LRG as expected.
+Test Case ID for Row 5943             : 48482
+Requirement ID                        : 38356.EB.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48482
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48482
+Finished at                           : Thu Mar 13 16:41:06 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:06 EDT 2025
+Creating test case for Row #          : 5944
+Validation Time(ms)                   : 365
+TC Validation status                  : PASS
+Short Desc                            : EB-Comm Pref "SMS/TEXT" & print type is BRAILLE
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as SMS/TEXT & Print type as BRAILLE,then send value as PAPER/PRINT and BRAILLE
+Expected Results                      : Verify members delivery type is sent as Print & print type as BRAILLE as expected.
+Test Case ID for Row 5944             : 48483
+Requirement ID                        : 38356.EB.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48483
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48483
+Finished at                           : Thu Mar 13 16:41:10 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:10 EDT 2025
+Creating test case for Row #          : 5945
+Validation Time(ms)                   : 434
+TC Validation status                  : PASS
+Short Desc                            : EB-Communication preference set default as PAPER
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if there is no communication preference available from source system for a member then set default value as PAPER
+Expected Results                      : Verify communication preference  is set as default paper if member has not selected any communication preference as expected.
+Test Case ID for Row 5945             : 48484
+Requirement ID                        : 38356.EB.070
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48484
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48484
+Finished at                           : Thu Mar 13 16:41:15 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:15 EDT 2025
+Creating test case for Row #          : 5946
+Validation Time(ms)                   : 417
+TC Validation status                  : PASS
+Short Desc                            : EB- Print type set default as REGULAR
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if there is no Print type available from source system for a member then set default value as REGULAR. Validate for any Active ERD contact types default print type value is REGULAR.
+Expected Results                      : Verify print type is set as default as REGULAR if member has not selected any print type as expected.
+Test Case ID for Row 5946             : 48485
+Requirement ID                        : 38356.EB.075
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48485
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48485
+Finished at                           : Thu Mar 13 16:41:19 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:19 EDT 2025
+Creating test case for Row #          : 5947
+Validation Time(ms)                   : 393
+TC Validation status                  : PASS
+Short Desc                            : EB-Send notices to all active contact types
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate EB notice is sent for all active ERD contact types
+Expected Results                      : Verify EB notice is delivered to all active ERD contacts as expected.
+Test Case ID for Row 5947             : 48486
+Requirement ID                        : 38356.EB.085
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48486
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48486
+Finished at                           : Thu Mar 13 16:41:22 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:22 EDT 2025
+Creating test case for Row #          : 5948
+Validation Time(ms)                   : 387
+TC Validation status                  : PASS
+Short Desc                            : EB- Recipient object-Tag for Address line-2 for member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving EB notice have address line 2 information, then tag should be sent in JSON recipient object.
+Expected Results                      : Verify  tag is sent in JSON recipient object for a member if there is address line -2 as expected.
+Test Case ID for Row 5948             : 48487
+Requirement ID                        : 38356.EB.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48487
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48487
+Finished at                           : Thu Mar 13 16:41:27 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:27 EDT 2025
+Creating test case for Row #          : 5949
+Validation Time(ms)                   : 1006
+TC Validation status                  : PASS
+Short Desc                            : EB-Recipient object-Tag for Address line-2 for active ERDs
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if active ERDs receiving EB notice have address line 2 information, then tag should  be sent in JSON recipient object.
+Expected Results                      : Verify tag is sent in JSON recipient object for active ARDS if there is address line -2 as expected.
+Test Case ID for Row 5949             : 48488
+Requirement ID                        : 38356.EB.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48488
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48488
+Finished at                           : Thu Mar 13 16:41:31 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:31 EDT 2025
+Creating test case for Row #          : 5950
+Validation Time(ms)                   : 375
+TC Validation status                  : PASS
+Short Desc                            : EB-Recipient object-Tag for Address line-2 for Worker copy
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving EB notice does have address line 2 information, then tag should  be sent in JSON recipient object for worker copy.
+Expected Results                      : Verify tag is sent in JSON recipient object for worker copy if there is address line -2  for member as expected.
+Test Case ID for Row 5950             : 48489
+Requirement ID                        : 38356.EB.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48489
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48489
+Finished at                           : Thu Mar 13 16:41:35 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:35 EDT 2025
+Creating test case for Row #          : 5951
+Validation Time(ms)                   : 371
+TC Validation status                  : PASS
+Short Desc                            : EB-Recipient object-No tag for Address line-2 for member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving EB notice does not have address line 2 information, then tag shouldnt be sent in JSON recipient object.
+Expected Results                      : Verify tag is sent in JSON recipient object for a member if there is no address line -2 as expected.
+Test Case ID for Row 5951             : 48490
+Requirement ID                        : 38356.EB.086
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48490
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48490
+Finished at                           : Thu Mar 13 16:41:39 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:39 EDT 2025
+Creating test case for Row #          : 5952
+Validation Time(ms)                   : 373
+TC Validation status                  : PASS
+Short Desc                            : EB-Recipient object-No tag for Address line-2 for active ERDs
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if active ERDs receiving EB notice does not have address line 2 information, then tag shouldnt be sent in JSON recipient object.
+Expected Results                      : Verify no tag is sent in JSON recipient object for active ARDS if there is no address line -2 as expected.
+Test Case ID for Row 5952             : 48491
+Requirement ID                        : 38356.EB.087
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48491
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48491
+Finished at                           : Thu Mar 13 16:41:43 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:43 EDT 2025
+Creating test case for Row #          : 5953
+Validation Time(ms)                   : 415
+TC Validation status                  : PASS
+Short Desc                            : EB-Recipient object-No tag for Address line-2 for Worker copy
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving EB notice does not have address line 2 information, then tag shouldnt be sent in JSON recipient object for worker copy.
+Expected Results                      : Verify no tag is sent in JSON recipient object for worker copy if there is no address line -2  for member as expected.
+Test Case ID for Row 5953             : 48492
+Requirement ID                        : 38356.EB.088
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48492
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48492
+Finished at                           : Thu Mar 13 16:41:47 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:47 EDT 2025
+Creating test case for Row #          : 5954
+Validation Time(ms)                   : 384
+TC Validation status                  : PASS
+Short Desc                            : EB- Payload object-member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created for EB recipient has data elements related to members in JSON format.  Member Name (listed as FirstName MiddleName LastName Suffix) [Address Line 1] [Address Line 2] [City, State Zip code] Member ID: [MMIS ID] SSN: [XXX-XX- last four digits [MemberNameTitleCase]
+Expected Results                      : Verify all data elements related to members are in PAYLOAD file in JSON format and printed out in Notice as expected
+Test Case ID for Row 5954             : 48493
+Requirement ID                        : 38356.EB.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48493
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48493
+Finished at                           : Thu Mar 13 16:41:52 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:52 EDT 2025
+Creating test case for Row #          : 5955
+Validation Time(ms)                   : 392
+TC Validation status                  : PASS
+Short Desc                            : EB- Payload object-Notice
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created for EB recipient has data elements related to notice in JSON format. noticeCreationDate", "noticeID", "noticeType"
+Expected Results                      : Verify all data elements related to notice are in PAYLOAD file in JSON format and printed out in Notice as expected.
+Test Case ID for Row 5955             : 48494
+Requirement ID                        : 38356.EB.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48494
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48494
+Finished at                           : Thu Mar 13 16:41:56 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:41:56 EDT 2025
+Creating test case for Row #          : 5956
+Validation Time(ms)                   : 446
+TC Validation status                  : PASS
+Short Desc                            : EB- Payload object-PMP
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created for EB recipient has data elements related to PMP in JSON format. [PMPNameTitleCase] [CP Program Type] [Enrollment Start Date]  [PMPNameTitleCase] [PMPNameTitleCase] [PMPPhoneHash]  [CP Program Type] [PMPNameTitleCase] [CP Program Type] [PMPNameTitleCase] [PMPPhoneHash]
+Expected Results                      : Verify all data elements related to PMP are in PAYLOAD file in JSON format and printed out in Notice as expected
+Test Case ID for Row 5956             : 48495
+Requirement ID                        : 38356.EB.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48495
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48495
+Finished at                           : Thu Mar 13 16:42:00 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:00 EDT 2025
+Creating test case for Row #          : 5957
+Validation Time(ms)                   : 409
+TC Validation status                  : PASS
+Short Desc                            : EB- Payload object-Mailing address
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created for EB recipient has data elements related to Mailing address in JSON format. [Mailing Name] [Address Line 1] [Address Line 2] [City, State Zip code]
+Expected Results                      : Verify all data elements related to Mailing address are in PAYLOAD file in JSON format and printed out in Notice as expected.
+Test Case ID for Row 5957             : 48496
+Requirement ID                        : 38356.EB.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48496
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48496
+Finished at                           : Thu Mar 13 16:42:04 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:04 EDT 2025
+Creating test case for Row #          : 5958
+Validation Time(ms)                   : 360
+TC Validation status                  : PASS
+Short Desc                            : EB- Payload object-member SSN
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate If there is no SSN present for the EB notice receipient/member, send the value as XXX-XX-blank
+Expected Results                      : Verify the JSON request file is be submitted successfully as expected
+Test Case ID for Row 5958             : 48497
+Requirement ID                        : 38356.EB.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48497
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48497
+Finished at                           : Thu Mar 13 16:42:09 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:09 EDT 2025
+Creating test case for Row #          : 5959
+Validation Time(ms)                   : 412
+TC Validation status                  : PASS
+Short Desc                            : EB-Payload object- tag  for member for address line-2 in payload
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving notice have address line-2 information, then tag should be sent in JSON PAYLOAD object for  member
+Expected Results                      : Verify if a member have  address line-2 then tag should  be sent in payload object.
+Test Case ID for Row 5959             : 48498
+Requirement ID                        : 38356.EB.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48498
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48498
+Finished at                           : Thu Mar 13 16:42:13 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:13 EDT 2025
+Creating test case for Row #          : 5960
+Validation Time(ms)                   : 381
+TC Validation status                  : PASS
+Short Desc                            : EB-Payload object- tag  for active ARD"S for address line-2
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if ERDs receiving notice have address line-2 information, tag should be sent in JSON PAYLOAD object.
+Expected Results                      : Verify if active ERDs have  address line-2, then tag should  be sent in payload object.
+Test Case ID for Row 5960             : 48499
+Requirement ID                        : 38356.EB.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48499
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48499
+Finished at                           : Thu Mar 13 16:42:17 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:17 EDT 2025
+Creating test case for Row #          : 5961
+Validation Time(ms)                   : 395
+TC Validation status                  : PASS
+Short Desc                            : EB-Payload object- tag for worker copy for address line-2 in payload
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving notice have address line-2 information, then tag should be sent in JSON PAYLOAD object for worker copy
+Expected Results                      : Verify if member  have addressline-2 then tag should be sent for worker copy in JSON PAYLOAD object.
+Test Case ID for Row 5961             : 48500
+Requirement ID                        : 38356.EB.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48500
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48500
+Finished at                           : Thu Mar 13 16:42:21 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:21 EDT 2025
+Creating test case for Row #          : 5962
+Validation Time(ms)                   : 418
+TC Validation status                  : PASS
+Short Desc                            : EB- Active ERD Contact
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if the member has an active ERD, then tag should be sent in Payload file for ARD or any of the contacts.
+Expected Results                      : Verify for Active ERD contact member JSON request is submitted successfully with tag in Payload file as expected
+Test Case ID for Row 5962             : 48501
+Requirement ID                        : 38356.EB.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48501
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48501
+Finished at                           : Thu Mar 13 16:42:25 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:25 EDT 2025
+Creating test case for Row #          : 5963
+Validation Time(ms)                   : 363
+TC Validation status                  : PASS
+Short Desc                            : EB- CP program type for ACCS1(BHCP)enrolled member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member is enrolled in ACCS1 with provider type A7, then send the value for "Behavioral Health Community Partners (BH CP)"  as a CP Program Type.
+Expected Results                      : Verify CP program type is received for ACCS1(BHCP)enrolled member
+Test Case ID for Row 5963             : 48502
+Requirement ID                        : 38356.EB.091A
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48502
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48502
+Finished at                           : Thu Mar 13 16:42:29 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:29 EDT 2025
+Creating test case for Row #          : 5964
+Validation Time(ms)                   : 390
+TC Validation status                  : PASS
+Short Desc                            : EB- CP program type for ACCS1(LTTS CP) enrolled member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member is enrolled in ACCS1 with provider type A6, then send the value for Long-Term Services and supports community Partners(LTSS CP)as a CP Program Type.
+Expected Results                      : Verify CP program type is received for  ACCS1(LTTS CP) enrolled member
+Test Case ID for Row 5964             : 48503
+Requirement ID                        : 38356.EB.091A
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48503
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48503
+Finished at                           : Thu Mar 13 16:42:33 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:33 EDT 2025
+Creating test case for Row #          : 5965
+Validation Time(ms)                   : 395
+TC Validation status                  : PASS
+Short Desc                            : EB- CP program type for PACC1 (LTTS CP)enrolled member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member is enrolled in PACC1 with provider type A6, then send the value for Long-Term Services and supports community Partners (LTSS CP)as a CP Program Type.
+Expected Results                      : Verify CP program type is received for PACC1 (LTTS CP)enrolled member
+Test Case ID for Row 5965             : 48504
+Requirement ID                        : 38356.EB.091B
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48504
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48504
+Finished at                           : Thu Mar 13 16:42:37 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:37 EDT 2025
+Creating test case for Row #          : 5966
+Validation Time(ms)                   : 379
+TC Validation status                  : PASS
+Short Desc                            : EB- CP program type for PACC1 (BHCP)enrolled member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member is enrolled in PACC1 with provider type A7, then send the value for "Behavioral Health Community Partners (BH CP)" as a CP program type
+Expected Results                      : Verify CP program type is received for PACC1 (BHCP) enrolled member.
+Test Case ID for Row 5966             : 48505
+Requirement ID                        : 38356.EB.091B
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48505
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48505
+Finished at                           : Thu Mar 13 16:42:41 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:41 EDT 2025
+Creating test case for Row #          : 5967
+Validation Time(ms)                   : 411
+TC Validation status                  : PASS
+Short Desc                            : EB-CP Program type value for BHCP enrolled member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member is enrolled in BHCP send the value for  "Behavioral Health Community Partners (BH CP)" as CP program type.
+Expected Results                      : Verify for BHCP enrolled member, value for program type is sent as CP as expected.
+Test Case ID for Row 5967             : 48506
+Requirement ID                        : 38356.EB.091C
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48506
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48506
+Finished at                           : Thu Mar 13 16:42:46 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:46 EDT 2025
+Creating test case for Row #          : 5968
+Validation Time(ms)                   : 373
+TC Validation status                  : PASS
+Short Desc                            : EB-CP Program type value for LTSS enrolled member
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member is enrolled in LTSS send the value for Long-Term Services and Supports Community Partners (LTSS CP)" as CP program type.
+Expected Results                      : Verify for LTSS enrolled member value for program type is sent as CP as expected.
+Test Case ID for Row 5968             : 48507
+Requirement ID                        : 38356.EB.091D
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48507
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48507
+Finished at                           : Thu Mar 13 16:42:50 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:50 EDT 2025
+Creating test case for Row #          : 5969
+Validation Time(ms)                   : 379
+TC Validation status                  : PASS
+Short Desc                            : EB-No tag  for member for address line-2 in payload
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving notice does not have address line-2 information, tag shouldnt be sent in JSON PAYLOAD object.
+Expected Results                      : Verify if a member doesnt have  address line-2 then tag shouldnt be sent in payload object.
+Test Case ID for Row 5969             : 48508
+Requirement ID                        : 38356.EB.092
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48508
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48508
+Finished at                           : Thu Mar 13 16:42:54 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:54 EDT 2025
+Creating test case for Row #          : 5970
+Validation Time(ms)                   : 362
+TC Validation status                  : PASS
+Short Desc                            : EB-  No tag  for ERDS  for address line-2 in payload
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if ERDs receiving notice does not have address line-2 information, tag shouldnt be sent in JSON PAYLOAD object.
+Expected Results                      : Verify if ERDs doesnt have  address line-2, then tag shouldnt be sent in payload object.
+Test Case ID for Row 5970             : 48509
+Requirement ID                        : 38356.EB.093
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48509
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48509
+Finished at                           : Thu Mar 13 16:42:58 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:42:58 EDT 2025
+Creating test case for Row #          : 5971
+Validation Time(ms)                   : 627
+TC Validation status                  : PASS
+Short Desc                            : EB- No tag for worker copy for address line-2 in payload
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving notice does not have address line-2 information, then tag shouldnt be sent in JSON PAYLOAD object for worker copy
+Expected Results                      : Verify if member doesnt have addressline-2 then no tag should be sent for worker copy in JSON PAYLOAD object.
+Test Case ID for Row 5971             : 48510
+Requirement ID                        : 38356.EB.094
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48510
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48510
+Finished at                           : Thu Mar 13 16:43:02 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:02 EDT 2025
+Creating test case for Row #          : 5972
+Validation Time(ms)                   : 367
+TC Validation status                  : PASS
+Short Desc                            : EB- No tag for Inactive ERDs
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if a member has inactive ERD Contacts, then tag shouldnt be sent in Payload file.
+Expected Results                      : Verify a tag is not sent for inactive ERD Contacts as expected.
+Test Case ID for Row 5972             : 48511
+Requirement ID                        : 38356.EB.100
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48511
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48511
+Finished at                           : Thu Mar 13 16:43:06 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:06 EDT 2025
+Creating test case for Row #          : 5973
+Validation Time(ms)                   : 388
+TC Validation status                  : PASS
+Short Desc                            : EB-Active ARDcontact - ERDI & English Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate two notices are generated one for member in eng and one for active ERDI in eng
+Expected Results                      : Verify notices are generated for member and two ERDI
+Test Case ID for Row 5973             : 48512
+Requirement ID                        : 38356.EB.105
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48512
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48512
+Finished at                           : Thu Mar 13 16:43:10 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:10 EDT 2025
+Creating test case for Row #          : 5974
+Validation Time(ms)                   : 387
+TC Validation status                  : PASS
+Short Desc                            : EB-Active ARDcontact - ERDII & English Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate two notices are generated one for member in eng  and one for active ERDII in eng
+Expected Results                      : Verify notices are generated for member and ERDII
+Test Case ID for Row 5974             : 48513
+Requirement ID                        : 38356.EB.105
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48513
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48513
+Finished at                           : Thu Mar 13 16:43:14 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:14 EDT 2025
+Creating test case for Row #          : 5975
+Validation Time(ms)                   : 371
+TC Validation status                  : PASS
+Short Desc                            : EB-Active ARDcontact - ERDIII & English Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate two notices are generated one for member and one for active ERDIII
+Expected Results                      : Verify notices are generated for member and ERDIII
+Test Case ID for Row 5975             : 48514
+Requirement ID                        : 38356.EB.105
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48514
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48514
+Finished at                           : Thu Mar 13 16:43:18 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:18 EDT 2025
+Creating test case for Row #          : 5976
+Validation Time(ms)                   : 360
+TC Validation status                  : PASS
+Short Desc                            : EB-Multiple active ARD contacts & English Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate three notices are generated one for member in eng and two for active ERD"s in eng
+Expected Results                      : Verify notices are generated for member and two active ERD"s
+Test Case ID for Row 5976             : 48515
+Requirement ID                        : 38356.EB.105
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48515
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48515
+Finished at                           : Thu Mar 13 16:43:22 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:22 EDT 2025
+Creating test case for Row #          : 5977
+Validation Time(ms)                   : 366
+TC Validation status                  : PASS
+Short Desc                            : EB- Multiple active ARD contacts & cns Foreign Language
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate five notices are generated one for member in cns prefered languages(spanish,haitian,chinese,vietnamese&portuguese),one for worker (no-delivery) and three for active ERD"s(ERDI,ERDII &ERDIII) in eng.
+Expected Results                      : Verify notices are generated for member,worker and three for ERD"s
+Test Case ID for Row 5977             : 48516
+Requirement ID                        : 38356.EB.105
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48516
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48516
+Finished at                           : Thu Mar 13 16:43:26 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:26 EDT 2025
+Creating test case for Row #          : 5978
+Validation Time(ms)                   : 389
+TC Validation status                  : PASS
+Short Desc                            : EB- Configure contact type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : If new contact types(PSI/DSS/DYS etc) are to be added, then DCR should be run to add new values and description in database as required. Note:  Default EB notice sends to contacts types(ERDI,ERDII &ERDIII)
+Expected Results                      : Verify new contact types are added to the database as expected.
+Test Case ID for Row 5978             : 48517
+Requirement ID                        : 38356.EB.110
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48517
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48517
+Finished at                           : Thu Mar 13 16:43:30 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:30 EDT 2025
+Creating test case for Row #          : 5979
+Validation Time(ms)                   : 380
+TC Validation status                  : PASS
+Short Desc                            : EB-Insert group-2
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate insert group-2 is sent for all EB type Notices
+Expected Results                      : Verify all EB Notices sent insert group as 2
+Test Case ID for Row 5979             : 48518
+Requirement ID                        : 38356.EB.115
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48518
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48518
+Finished at                           : Thu Mar 13 16:43:34 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:34 EDT 2025
+Creating test case for Row #          : 5980
+Validation Time(ms)                   : 393
+TC Validation status                  : PASS
+Short Desc                            : EB- Configure insert groups
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : If new insert groups are to be added, DCR should be run to add new values and description in database as required. Note: EB notice sends default insert group-2(Babel + Fair Hearing Form)
+Expected Results                      : Verify new insert groups are added to the database as expected.
+Test Case ID for Row 5980             : 48519
+Requirement ID                        : 38356.EB.116
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48519
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48519
+Finished at                           : Thu Mar 13 16:43:38 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:38 EDT 2025
+Creating test case for Row #          : 5981
+Validation Time(ms)                   : 372
+TC Validation status                  : PASS
+Short Desc                            : EB- Configure delivery type
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : If new delivery types are to be added, DCR should be run to add new values and description in database as required. Note: EB notice sends default paper/print, edelivery will not be implemented until after Group 4 CNS implementation
+Expected Results                      : Verify new delivery types are added to the database as expected.
+Test Case ID for Row 5981             : 48520
+Requirement ID                        : 38356.EB.120
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48520
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48520
+Finished at                           : Thu Mar 13 16:43:42 EDT 2025
+*****************************************************************
+Started at                            : Thu Mar 13 16:43:42 EDT 2025
+Creating test case for Row #          : 5982
+Requirement                           : 38356.EB.130
+Requirement Validation                : Verify Requirement ID for the Test case
+Validation Time(ms)                   : 406
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 13 16:43:43 EDT 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 13/Mar/2025 04:43:44PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

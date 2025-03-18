@@ -1,0 +1,354 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 03/Mar/2025 06:00:53PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 251
+Total No.of Rows fetched              : 14
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Mon Mar 03 18:00:58 EST 2025
+Creating test case for Row #          : 5880
+Validation Time(ms)                   : 389
+TC Validation status                  : PASS
+Short Desc                            : Base req vs req
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test baseapp by entering PA request with details same as existing requested PA request with same assignment code.
+Expected Results                      : Duplicate Error
+Test Case ID for Row 5880             : 48346
+Requirement ID                        : 37596.002.010
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48346
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48346
+Finished at                           : Mon Mar 03 18:01:02 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:02 EST 2025
+Creating test case for Row #          : 5881
+Validation Time(ms)                   : 406
+TC Validation status                  : PASS
+Short Desc                            : Base req vs Auth
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test baseapp by entering PA request with details same as existing Authorized PA request with same assignment code.
+Expected Results                      : Duplicate Error
+Test Case ID for Row 5881             : 48347
+Requirement ID                        : 37596.002.010
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48347
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48347
+Finished at                           : Mon Mar 03 18:01:06 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:06 EST 2025
+Creating test case for Row #          : 5882
+Validation Time(ms)                   : 386
+TC Validation status                  : PASS
+Short Desc                            : POSC Req vs Req
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test POSC by entering PA request with details same as existing requested PA request with same assignment code.
+Expected Results                      : Duplicate Error
+Test Case ID for Row 5882             : 48348
+Requirement ID                        : 37596.001.010
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48348
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48348
+Finished at                           : Mon Mar 03 18:01:10 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:10 EST 2025
+Creating test case for Row #          : 5883
+Validation Time(ms)                   : 386
+TC Validation status                  : PASS
+Short Desc                            : POSC Req vs Auth
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test POSC by entering PA request with details same as existing authorized PA request with same assignment code.
+Expected Results                      : Duplicate Error
+Test Case ID for Row 5883             : 48349
+Requirement ID                        : 37596.001.010
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48349
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48349
+Finished at                           : Mon Mar 03 18:01:14 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:14 EST 2025
+Creating test case for Row #          : 5884
+Validation Time(ms)                   : 360
+TC Validation status                  : PASS
+Short Desc                            : BASE Auth vs Auth
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test baseapp by entering PA request and authorizing with details same as existing Authorizeded  PA request with same assignment code.
+Expected Results                      : Duplicate Error
+Test Case ID for Row 5884             : 48350
+Requirement ID                        : 37596.002.010
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48350
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48350
+Finished at                           : Mon Mar 03 18:01:18 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:18 EST 2025
+Creating test case for Row #          : 5885
+Validation Time(ms)                   : 372
+TC Validation status                  : PASS
+Short Desc                            : Base Auth vs REQ
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test base by entering PA request and authorizing with details same as different requested PA request with same assignment code.
+Expected Results                      : Duplicate Error
+Test Case ID for Row 5885             : 48351
+Requirement ID                        : 37596.002.010
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48351
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48351
+Finished at                           : Mon Mar 03 18:01:22 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:22 EST 2025
+Creating test case for Row #          : 5886
+Validation Time(ms)                   : 342
+TC Validation status                  : PASS
+Short Desc                            : POSC Auth vs Auth
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test POSC by entering PA request and authorizing with details same as different authorized PA request with same assignment code.
+Expected Results                      : Duplicate Error
+Test Case ID for Row 5886             : 48352
+Requirement ID                        : 37596.001.010
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48352
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48352
+Finished at                           : Mon Mar 03 18:01:26 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:26 EST 2025
+Creating test case for Row #          : 5887
+Validation Time(ms)                   : 387
+TC Validation status                  : PASS
+Short Desc                            : Base req vs req
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test baseapp by entering PA request with details same as existing requested PA request with different assignment code.
+Expected Results                      : No error
+Test Case ID for Row 5887             : 48353
+Requirement ID                        : 37596.002.010
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48353
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48353
+Finished at                           : Mon Mar 03 18:01:30 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:30 EST 2025
+Creating test case for Row #          : 5888
+Validation Time(ms)                   : 454
+TC Validation status                  : PASS
+Short Desc                            : Base req vs Auth
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test baseapp by entering PA request with details same as existing Authorized PA request with different assignment code.
+Expected Results                      : No error
+Test Case ID for Row 5888             : 48354
+Requirement ID                        : 37596.002.010
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48354
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48354
+Finished at                           : Mon Mar 03 18:01:34 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:34 EST 2025
+Creating test case for Row #          : 5889
+Validation Time(ms)                   : 389
+TC Validation status                  : PASS
+Short Desc                            : POSC Req vs Req
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test POSC by entering PA request with details same as existing requested PA request with different assignment code.
+Expected Results                      : No error
+Test Case ID for Row 5889             : 48355
+Requirement ID                        : 37596.001.010
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48355
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48355
+Finished at                           : Mon Mar 03 18:01:38 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:38 EST 2025
+Creating test case for Row #          : 5890
+Validation Time(ms)                   : 386
+TC Validation status                  : PASS
+Short Desc                            : POSC Req vs Auth
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test POSC by entering PA request with details same as existing authorized PA request with different assignment code.
+Expected Results                      : No error
+Test Case ID for Row 5890             : 48356
+Requirement ID                        : 37596.001.010
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48356
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48356
+Finished at                           : Mon Mar 03 18:01:42 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:42 EST 2025
+Creating test case for Row #          : 5891
+Validation Time(ms)                   : 438
+TC Validation status                  : PASS
+Short Desc                            : BASE Auth vs Auth
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test baseapp by entering PA request and authorizing with details same as existing Authorizeded  PA request with different assignment code.
+Expected Results                      : No error
+Test Case ID for Row 5891             : 48357
+Requirement ID                        : 37596.002.010
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48357
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48357
+Finished at                           : Mon Mar 03 18:01:46 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:46 EST 2025
+Creating test case for Row #          : 5892
+Validation Time(ms)                   : 388
+TC Validation status                  : PASS
+Short Desc                            : Base Auth vs REQ
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test base by entering PA request and authorizing with details same as different requested PA request with different assignment code.
+Expected Results                      : No error
+Test Case ID for Row 5892             : 48358
+Requirement ID                        : 37596.002.010
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48358
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48358
+Finished at                           : Mon Mar 03 18:01:50 EST 2025
+*****************************************************************
+Started at                            : Mon Mar 03 18:01:50 EST 2025
+Creating test case for Row #          : 5893
+Validation Time(ms)                   : 402
+TC Validation status                  : PASS
+Short Desc                            : POSC Auth vs Auth
+Env                                   : 7
+Subsystem                             : Prior Auth
+SAK Participant                       : 180
+Owner                                 : KEN ADGATE
+Grouping                              : PA MAINTENANCE
+Long Desc                             : Test POSC by entering PA request and authorizing with details same as different authorized PA request with different assignment code.
+Expected Results                      : No error
+Test Case ID for Row 5893             : 48359
+Requirement ID                        : 37596.001.010
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48359
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48359
+Finished at                           : Mon Mar 03 18:01:53 EST 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 03/Mar/2025 06:01:54PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

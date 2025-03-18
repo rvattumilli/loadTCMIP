@@ -1,0 +1,71 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 13/Mar/2025 04:47:24PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/05/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 73
+Total No.of Rows fetched              : 1
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Thu Mar 13 16:47:28 EDT 2025
+Creating test case for Row #          : 5982
+Validation Time(ms)                   : 373
+TC Validation status                  : PASS
+Short Desc                            : EB- Notice Suppression
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 962
+Owner                                 : RENUKA CHALLA
+Grouping                              : Batch
+Long Desc                             : Validate if members are in new Notice suppression table, then the members should be excluded from CNS trigger table and JSON payload request shouldnt be sent to CNS for members in new suppression table.
+Expected Results                      : Verify members are in suppression table as expected .
+Test Case ID for Row 5982             : 48521
+Requirement ID                        : 38381.02.130
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48521
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48521
+Finished at                           : Thu Mar 13 16:47:32 EDT 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 13/Mar/2025 04:47:32PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

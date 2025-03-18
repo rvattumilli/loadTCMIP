@@ -37,7 +37,7 @@ import org.openqa.selenium.WebDriver;
 public class CommonUtils {
 
 	private static Connection connection1 = null;
-	private static boolean emailHighImp = false, jobAbend = false, logDebugMsgs, overrideValidation;
+	private static boolean emailHighImp = false, jobAbend = false, logDebugMsgs, testCaseOverrideValidation, reqOverrideValidation;
 	private static final String outputFormat = "%-38s: %s";
 	private static final String reqTCValidationMessage = "Verify Requirement ID for the Test case";
 	private static final String subsystemTCValidationMessage = "Verify Subsystem for the Test case";
@@ -73,12 +73,20 @@ public class CommonUtils {
 		CommonUtils.replaceType = replaceType;
 	}
 
-	private static boolean isOverrideValidation() {
-		return overrideValidation;
+	private static boolean isTestCaseOverrideValidation() {
+		return testCaseOverrideValidation;
 	}
 
-	public static void setOverrideValidation(boolean overrideValidation) {
-		CommonUtils.overrideValidation = overrideValidation;
+	public static void setTestCaseOverrideValidation(boolean testCaseOverrideValidation) {
+		CommonUtils.testCaseOverrideValidation = testCaseOverrideValidation;
+	}
+	
+	private static boolean isReqOverrideValidation() {
+		return reqOverrideValidation;
+	}
+
+	public static void setReqOverrideValidation(boolean reqOverrideValidation) {
+		CommonUtils.reqOverrideValidation = reqOverrideValidation;
 	}
 
 	public static void setEmailHighImp(boolean setEmailHigh) {
@@ -188,6 +196,8 @@ public class CommonUtils {
 	/*                                                                      */
 	/* 10/31/24  R.Vattumilli    Added override switch for validation       */
 	/*                                                                      */
+	/* 03/05/24  R.Vattumilli    Added TC specific override variable        */
+	/*                                                                      */
 	/************************************************************************/
 	
 	public static boolean validateTCData(String idReq, String subsystemTC, String groupingTC, String bFunctionTC, String envTC) throws Exception {
@@ -248,7 +258,7 @@ public class CommonUtils {
 			envStatus = true;
 		}
 		if(reqStatus || subsystemStatus || groupingStatus || bfStatus || envStatus) {
-			if(!isOverrideValidation()) {
+			if(!isTestCaseOverrideValidation()) {
 				return false;
 			}
 		}
@@ -275,6 +285,8 @@ public class CommonUtils {
 	/* 02/15/24  R.Vattumilli    Initial Creation of validateReqData()      */
 	/*                                                                      */
 	/* 10/31/24  R.Vattumilli    Added override switch for validation       */
+	/*                                                                      */
+	/* 03/05/24  R.Vattumilli    Added Req specific override variable       */
 	/*                                                                      */
 	/************************************************************************/
 	
@@ -345,9 +357,9 @@ public class CommonUtils {
 			namOwnerReqStatus = true;
 		}
 		if(idReqStatus || nameReqStatus || typeReqStatus || subsystemReqStatus || rtmReqStatus || namOwnerReqStatus) {
-			if(!isOverrideValidation()) {
+			if(!isReqOverrideValidation()) {
 				return false;
-			}			
+			}
 		}
 		return true;
 	}
@@ -545,7 +557,7 @@ public class CommonUtils {
 	/*                                                                      */
 	/* 12/05/21 R.Vattumilli   sends Email with attachment to Receiver(s)   */
 	/*                         when it is called                            */
-	/*                                                                      */
+	/*                                                                      */	
 	/************************************************************************/
 
 	public static void sendEmail(String filePath) {

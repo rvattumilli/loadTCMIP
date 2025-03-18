@@ -1,0 +1,313 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 06/Mar/2025 10:51:03AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/05/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 72
+Total No.of Rows fetched              : 12
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:07 EST 2025
+Creating test case for Row #          : 5907
+Validation Time(ms)                   : 284
+TC Validation status                  : PASS
+Short Desc                            : Allow 65 mbr to reenroll ICO 365 Days POSC
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Allow member to reenroll into ICO as long as the member qualifies for ICO and if the new enrollment effective date is equal to or less than 365 days if the member is 65.
+Expected Results                      : Member reenrolled into ICO
+Test Case ID for Row 5907             : 48439
+Requirement ID                        : 38569.ICO.020
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48439
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48439
+Finished at                           : Thu Mar 06 10:51:10 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:10 EST 2025
+Creating test case for Row #          : 5908
+Validation Time(ms)                   : 308
+TC Validation status                  : PASS
+Short Desc                            : Allow 65 mbr to transfer ICO 365 Days POSC
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Allow member to transfer into ICO as long as the member qualifies for ICO and if the new enrollment effective date is equal to or less than 365 days if the member is 65.
+Expected Results                      : Member transfers into ICO
+Test Case ID for Row 5908             : 48440
+Requirement ID                        : 38569.ICO.030
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48440
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48440
+Finished at                           : Thu Mar 06 10:51:14 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:14 EST 2025
+Creating test case for Row #          : 5909
+Validation Time(ms)                   : 275
+TC Validation status                  : PASS
+Short Desc                            : Don"t allow 65 mbr into ICO gt 365 Days POSC
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Do not allow member to reenroll or transfer into ICO as long as the member qualifies for ICO and if the new enrollment effective date greater than 365 days if the member is 65.
+Expected Results                      : Member not allowed to reenroll or transfer into ICO
+Test Case ID for Row 5909             : 48441
+Requirement ID                        : 38569.ICO.040
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48441
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48441
+Finished at                           : Thu Mar 06 10:51:17 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:17 EST 2025
+Creating test case for Row #          : 5910
+Validation Time(ms)                   : 273
+TC Validation status                  : PASS
+Short Desc                            : Allow 65 mbr into ICO 365 Days SU
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : MC ENROLLMENTS
+Long Desc                             : Allow member to reenroll or transfer into ICO as long as the member qualifies for ICO and if the new enrollment effective date is equal to or less than 365 days on the SU panel if the member is 65.
+Expected Results                      : Member reenrolled or transfers into ICO on SU Panel.
+Test Case ID for Row 5910             : 48442
+Requirement ID                        : 38569.ICO.050
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48442
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48442
+Finished at                           : Thu Mar 06 10:51:21 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:21 EST 2025
+Creating test case for Row #          : 5911
+Validation Time(ms)                   : 285
+TC Validation status                  : PASS
+Short Desc                            : Allow 65 mbr into ICO 365 Days Non-SU
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : MC ENROLLMENTS
+Long Desc                             : Allow member to reenroll or transfer into ICO as long as the member qualifies for ICO and if the new enrollment effective date is equal to or less than 365 days on the non-SU panel if the member is 65.
+Expected Results                      : Member reenrolled or transfers into ICO on non-SU Panel.
+Test Case ID for Row 5911             : 48443
+Requirement ID                        : 38569.ICO.055
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48443
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48443
+Finished at                           : Thu Mar 06 10:51:24 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:24 EST 2025
+Creating test case for Row #          : 5912
+Validation Time(ms)                   : 276
+TC Validation status                  : PASS
+Short Desc                            : No D8 trigger
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not generated a D8 trigger if the member losses eligibility.
+Expected Results                      : No D8 trigger in trigger table.
+Test Case ID for Row 5912             : 48444
+Requirement ID                        : 38569.ICO.060
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48444
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48444
+Finished at                           : Thu Mar 06 10:51:27 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:27 EST 2025
+Creating test case for Row #          : 5913
+Validation Time(ms)                   : 279
+TC Validation status                  : PASS
+Short Desc                            : No D9 trigger
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not generated a D9 trigger if the member gains Comprehensive Verified TPL.
+Expected Results                      : No D9 trigger in trigger table.
+Test Case ID for Row 5913             : 48445
+Requirement ID                        : 38569.ICO.070
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48445
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48445
+Finished at                           : Thu Mar 06 10:51:31 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:31 EST 2025
+Creating test case for Row #          : 5914
+Validation Time(ms)                   : 274
+TC Validation status                  : PASS
+Short Desc                            : No DF trigger
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Do not generated a DF trigger if the member loses Medicare D coverage.
+Expected Results                      : No DF trigger in trigger table.
+Test Case ID for Row 5914             : 48446
+Requirement ID                        : 38569.ICO.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48446
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48446
+Finished at                           : Thu Mar 06 10:51:34 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:34 EST 2025
+Creating test case for Row #          : 5915
+Validation Time(ms)                   : 276
+TC Validation status                  : PASS
+Short Desc                            : DA Trigger
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Generate a DA trigger if the member gains HCBS Waiver.
+Expected Results                      : DA trigger in trigger table.
+Test Case ID for Row 5915             : 48447
+Requirement ID                        : 38569.ICO.100
+Requirement Type                      : Informational
+SAK Requirement Type                  : 24
+Requirement linked for test case      : 48447
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48447
+Finished at                           : Thu Mar 06 10:51:37 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:37 EST 2025
+Creating test case for Row #          : 5916
+Validation Time(ms)                   : 272
+TC Validation status                  : PASS
+Short Desc                            : "ICO" to "One Care" Text
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : POSC Enrollments
+Long Desc                             : Verify "ICO" is change to "One Care" in the links, all titles, all help text, and "program type" on the verification panel.
+Expected Results                      : All text changed from "ICO" to "One Care".
+Test Case ID for Row 5916             : 48448
+Requirement ID                        : 38569.ICO.110
+Requirement Type                      : UI-POSC
+SAK Requirement Type                  : 16
+Requirement linked for test case      : 48448
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48448
+Finished at                           : Thu Mar 06 10:51:41 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:41 EST 2025
+Creating test case for Row #          : 5917
+Validation Time(ms)                   : 279
+TC Validation status                  : PASS
+Short Desc                            : Do not allow DP Stop Reason
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : MC ENROLLMENTS
+Long Desc                             : Do not allow the DP stop reason to be selected in the drop-down list in the "PMP Assignment History" panel or the "PMP Assignment History - SU" panel.
+Expected Results                      : DP stop reason blocked with standard edit message preventing DP stop reason from being selected.
+Test Case ID for Row 5917             : 48449
+Requirement ID                        : 38569.ICO.120
+Requirement Type                      : UI-Base System
+SAK Requirement Type                  : 17
+Requirement linked for test case      : 48449
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48449
+Finished at                           : Thu Mar 06 10:51:44 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:51:44 EST 2025
+Creating test case for Row #          : 5918
+Validation Time(ms)                   : 279
+TC Validation status                  : PASS
+Short Desc                            : Allow CommonHealth mbrs to enroll in SCO
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 640
+Owner                                 : MARK MERLET
+Grouping                              : Batch
+Long Desc                             : Allow members with CommonHealth aid categories are 50, 52, 53, H9, and J8 (CommonHealth) to enroll into SCO plans from the POSC and  "PMP Assignment History" panel or the "PMP Assignment History - SU" panel. Capitation is also paid for these members.
+Expected Results                      : Members enrolled into SCO and capitation is paid for these members.
+Test Case ID for Row 5918             : 48450
+Requirement ID                        : 38569.SCO.030
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48450
+Notebook                              : Project26.01
+Business Function                     : Project26.01
+Notebook/BF linked for test case      : 48450
+Finished at                           : Thu Mar 06 10:51:48 EST 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 06/Mar/2025 10:51:48AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

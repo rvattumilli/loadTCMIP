@@ -1,0 +1,222 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 04/Mar/2025 11:13:21AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 01/08/2025
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 249
+Total No.of Rows fetched              : 8
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Tue Mar 04 11:13:28 EST 2025
+Creating test case for Row #          : 5894
+Validation Time(ms)                   : 406
+TC Validation status                  : PASS
+Short Desc                            : CT A, delay reason code is 1, days BETWEEN 95 and 533 days
+Env                                   : 7
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : CLAIMS PROCESSING
+Long Desc                             : Submit a CT A, with the delay reason code is 1, 4 or 8 and the day span between the claim header last date of service and the ICN date is BETWEEN 95 and 533 days.
+Expected Results                      : Set edit 818
+Test Case ID for Row 5894             : 48377
+Requirement ID                        : 38254.01.001
+Requirement Type                      : Batch-Claims Engine
+SAK Requirement Type                  : 13
+Requirement linked for test case      : 48377
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48377
+Finished at                           : Tue Mar 04 11:13:32 EST 2025
+*****************************************************************
+Started at                            : Tue Mar 04 11:13:32 EST 2025
+Creating test case for Row #          : 5895
+Validation Time(ms)                   : 384
+TC Validation status                  : PASS
+Short Desc                            : CT B, delay reason code is 1, days BETWEEN 95 and 533 days
+Env                                   : 7
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : CLAIMS PROCESSING
+Long Desc                             : Submit a CT B, with the delay reason code is 1, 4 or 8 and the day span between the claim header last date of service and the ICN date is BETWEEN 95 and 533 days.
+Expected Results                      : Set edit 818
+Test Case ID for Row 5895             : 48378
+Requirement ID                        : 38254.01.001
+Requirement Type                      : Batch-Claims Engine
+SAK Requirement Type                  : 13
+Requirement linked for test case      : 48378
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48378
+Finished at                           : Tue Mar 04 11:13:36 EST 2025
+*****************************************************************
+Started at                            : Tue Mar 04 11:13:36 EST 2025
+Creating test case for Row #          : 5896
+Validation Time(ms)                   : 366
+TC Validation status                  : PASS
+Short Desc                            : CT C, delay reason code is 1, days BETWEEN 95 and 533 days
+Env                                   : 7
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : CLAIMS PROCESSING
+Long Desc                             : Submit a CT C, with the delay reason code is 1, 4 or 8 and the day span between the claim header last date of service and the ICN date is BETWEEN 95 and 533 days.
+Expected Results                      : Set edit 818
+Test Case ID for Row 5896             : 48379
+Requirement ID                        : 38254.01.001
+Requirement Type                      : Batch-Claims Engine
+SAK Requirement Type                  : 13
+Requirement linked for test case      : 48379
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48379
+Finished at                           : Tue Mar 04 11:13:40 EST 2025
+*****************************************************************
+Started at                            : Tue Mar 04 11:13:40 EST 2025
+Creating test case for Row #          : 5897
+Validation Time(ms)                   : 355
+TC Validation status                  : PASS
+Short Desc                            : CT A, no delay reason code , days BETWEEN 95 and 533 days
+Env                                   : 7
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : CLAIMS PROCESSING
+Long Desc                             : Submit a CT A, with no delay reason code and the day span between the claim header last date of service and the ICN date is BETWEEN 95 and 533 days.
+Expected Results                      : Do not set edit 818
+Test Case ID for Row 5897             : 48380
+Requirement ID                        : 38254.01.001
+Requirement Type                      : Batch-Claims Engine
+SAK Requirement Type                  : 13
+Requirement linked for test case      : 48380
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48380
+Finished at                           : Tue Mar 04 11:13:44 EST 2025
+*****************************************************************
+Started at                            : Tue Mar 04 11:13:44 EST 2025
+Creating test case for Row #          : 5898
+Validation Time(ms)                   : 355
+TC Validation status                  : PASS
+Short Desc                            : CT B, delay reason code is 1, days = 95 days
+Env                                   : 7
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : CLAIMS PROCESSING
+Long Desc                             : Submit a CT B, with the delay reason code is 1, 4 or 8 and the day span between the claim header last date of service and the ICN date is = 95
+Expected Results                      : Do not set edit 818
+Test Case ID for Row 5898             : 48381
+Requirement ID                        : 38254.01.001
+Requirement Type                      : Batch-Claims Engine
+SAK Requirement Type                  : 13
+Requirement linked for test case      : 48381
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48381
+Finished at                           : Tue Mar 04 11:13:48 EST 2025
+*****************************************************************
+Started at                            : Tue Mar 04 11:13:48 EST 2025
+Creating test case for Row #          : 5899
+Validation Time(ms)                   : 370
+TC Validation status                  : PASS
+Short Desc                            : CT C, delay reason code is 1, days BETWEEN 95 and 533 days
+Env                                   : 7
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : CLAIMS PROCESSING
+Long Desc                             : Submit a CT C, with the delay reason code is 1, 4 or 8 and the day span between the claim header last date of service and the ICN date < 95
+Expected Results                      : Do not set edit 818
+Test Case ID for Row 5899             : 48382
+Requirement ID                        : 38254.01.001
+Requirement Type                      : Batch-Claims Engine
+SAK Requirement Type                  : 13
+Requirement linked for test case      : 48382
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48382
+Finished at                           : Tue Mar 04 11:13:52 EST 2025
+*****************************************************************
+Started at                            : Tue Mar 04 11:13:52 EST 2025
+Creating test case for Row #          : 5900
+Validation Time(ms)                   : 357
+TC Validation status                  : PASS
+Short Desc                            : CT A , Special handling code
+Env                                   : 7
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : CLAIMS PROCESSING
+Long Desc                             : Submit a CT A  with a special handling code AND The special handling code is valid in the t_cde_special_handle table AND The code is in the 90 Day Waiver group (group 200)
+Expected Results                      : Post edit 818
+Test Case ID for Row 5900             : 48383
+Requirement ID                        : 38254.01.001
+Requirement Type                      : Batch-Claims Engine
+SAK Requirement Type                  : 13
+Requirement linked for test case      : 48383
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48383
+Finished at                           : Tue Mar 04 11:13:56 EST 2025
+*****************************************************************
+Started at                            : Tue Mar 04 11:13:56 EST 2025
+Creating test case for Row #          : 5901
+Validation Time(ms)                   : 465
+TC Validation status                  : PASS
+Short Desc                            : CT O, delay reason code is 1, days BETWEEN 95 and 533 days
+Env                                   : 7
+Subsystem                             : Claims Adjudication and Pricing
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : CLAIMS PROCESSING
+Long Desc                             : Submit a CT O, with the delay reason code is 1, 4 or 8 and the day span between the claim header last date of service and the ICN date is BETWEEN 95 and 533 days.
+Expected Results                      : Do not set edit 818
+Test Case ID for Row 5901             : 48384
+Requirement ID                        : 38254.01.001
+Requirement Type                      : Batch-Claims Engine
+SAK Requirement Type                  : 13
+Requirement linked for test case      : 48384
+Notebook                              : CY25-2
+Business Function                     : CY25-2
+Notebook/BF linked for test case      : 48384
+Finished at                           : Tue Mar 04 11:14:01 EST 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 04/Mar/2025 11:14:01AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

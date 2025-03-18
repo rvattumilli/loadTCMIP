@@ -50,9 +50,11 @@ public class LoadTCMIP {
 	private ArrayList<String> colNames   = new ArrayList<String>();
 	private ArrayList<String[]> dataList = new ArrayList<String[]>();
 	private String url, mipUname, mipPwd, userPwd, consoleLogFileName, consoleLogFilePath, tcID, sakReq;
-	private boolean linkTCToWI = false; 
+	private boolean linkTCToWI = false;
 	private boolean linkReqToTC = true;
 	private final boolean linkNBToTC = true;
+	private boolean submitData;
+	private static Instant startLoadingTestCases, finishLoadingTestCases;
 	private final DateFormat dateFormat2 = new SimpleDateFormat("dd/MMM/yyyy hh:mm:ssaa");
 	private final String logsDirectory = System.getProperty("user.dir") + File.separator + "Logs";
 	private final String outputFormat = "%-38s: %s";
@@ -70,6 +72,14 @@ public class LoadTCMIP {
 										+ "upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc";
 	private final String reqSql = "select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, "
 								+ "trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc";
+
+	public boolean isSubmitData() {
+		return submitData;
+	}
+
+	public void setSubmitData(boolean submitData) {
+		this.submitData = submitData;
+	}
 
 	/************************************************************************/
 	/*                                                                      */
@@ -92,15 +102,17 @@ public class LoadTCMIP {
 	/*                                                                      */
 	/* 11/19/22  R.Vattumilli    Add validateTCData() to validate data      */
 	/*                                                                      */
+	/* 03/05/24  R.Vattumilli    Added switch to submit data                */
+	/*                                                                      */
 	/************************************************************************/
 
 	@Test
 	private void enterTC() {
 
 		try {
-			System.out.println("****************************************************");
+			System.out.println("*****************************************************************");
 			dataList = CommonUtils.getTCReqData(testCaseSql, 14, CommonUtils.getDBConnection(), testCaseDataMessage);
-			if (dataList != null) {
+			if (dataList != null && isSubmitData()) {
 				CommonUtils.setReplaceType("tc");
 				System.out.println(String.format(outputFormat, "Link Notebook/Business Function", linkNBToTC));
 				System.out.println(String.format(outputFormat, "Link Requirement", linkReqToTC));
@@ -237,7 +249,10 @@ public class LoadTCMIP {
 					System.out.println(String.format(outputFormat, "Finished at", new Date().toString()));
 				}
 			}
-			System.out.println("****************************************************");
+			System.out.println("*****************************************************************");
+			System.out.println();
+			System.out.println();
+			System.out.println();
 		} catch (Exception e) {
 			CommonUtils.setJobAbend(true);
 			CommonUtils.sshot(driver);
@@ -264,6 +279,8 @@ public class LoadTCMIP {
 	/* --------  --------------  ------------------------------------------ */
 	/* 02/15/24  R.Vattumilli    Initial Creation of enterReq()             */
 	/*                                                                      */
+	/* 03/05/24  R.Vattumilli    Added switch to submit data                */
+	/*                                                                      */
 	/************************************************************************/
 	
 	@Test
@@ -273,7 +290,7 @@ public class LoadTCMIP {
 			driver.findElement(By.linkText("Requirements")).click();
 			System.out.println("*****************************************************************");
 			dataList = CommonUtils.getTCReqData(reqSql, 8, CommonUtils.getDBConnection(), reqDataMessage);
-			if (dataList != null) {
+			if (dataList != null && isSubmitData()) {
 				CommonUtils.setReplaceType("req");
 				String reqRow, idReq, nameReq, typeReq, subsystemReq, rtmReq, narrativeReq, namOwnerReq, SelSql, UpdSql;
 				Alert alert;
@@ -346,6 +363,10 @@ public class LoadTCMIP {
 					System.out.println(String.format(outputFormat, "Finished at", new Date().toString()));
 				}
 			}
+			System.out.println("*****************************************************************");
+			System.out.println();
+			System.out.println();
+			System.out.println();
 		} catch (Exception e) {
 			CommonUtils.setJobAbend(true);
 			CommonUtils.sshot(driver);
@@ -372,16 +393,27 @@ public class LoadTCMIP {
 	/* --------  --------------  ------------------------------------------ */
 	/* 08/04/20  R.Vattumilli    Initial Creation of beforeTest()           */
 	/*                                                                      */
+	/* 03/05/24  R.Vattumilli    Added switch to submit data                */
+	/*                                                                      */
+	/* 03/05/24  R.Vattumilli    Added override validations for TC and Req  */
+	/*                                                                      */
+	/* 03/05/24  R.Vattumilli    Get override validation from testng.xml    */
+	/*                                                                      */
 	/************************************************************************/
 
-	@Parameters({ "browser", "logDebugMsgs", "lastModifiedDate", "overrideValidation" })
+	@Parameters({ "browser", "logDebugMsgs", "lastModifiedDate", "testCaseOverrideValidation", "reqOverrideValidation", "submitData" })
 	@BeforeTest
-	private void beforeTest(String browser, boolean logDebugMsgs, String lastModifiedDate, boolean overrideValidation) {
+	private void beforeTest(String browser, boolean logDebugMsgs, String lastModifiedDate, boolean testCaseOverrideValidation, boolean reqOverrideValidation, boolean submitData) {
 
 		try {
 			CommonUtils.setLogDebugMsgs(logDebugMsgs);
-			CommonUtils.setOverrideValidation(overrideValidation);
+			CommonUtils.setTestCaseOverrideValidation(testCaseOverrideValidation);
+			CommonUtils.setReqOverrideValidation(reqOverrideValidation);
+			setSubmitData(submitData);
 			System.out.println(String.format(outputFormat, "Last Modified Date", lastModifiedDate));
+			System.out.println(String.format(outputFormat, "Override TC Validation", testCaseOverrideValidation));
+			System.out.println(String.format(outputFormat, "Override Req Validation", reqOverrideValidation));
+			System.out.println(String.format(outputFormat, "Submit Data", submitData));
 			colNames.add("HOST_URL");
 			colNames.add("USER_ID");
 			colNames.add("MIP_KEY");
@@ -466,8 +498,9 @@ public class LoadTCMIP {
 	/*                                                                      */
 	/* 12/05/21  R.Vattumilli    Add sendEmail(consoleLogFilePath)          */
 	/*                                                                      */
-	/* 11/19/22  R.Vattumilli    Commented send message line to skip sending*/
-	/*                           email as it needs MFA                      */
+	/* 11/19/22  R.Vattumilli    Added boolean to send email                */	
+	/*                                                                      */
+	/* 03/18/25  R.Vattumilli    Added total time took for loading to log   */
 	/*                                                                      */
 	/************************************************************************/
 
@@ -482,6 +515,9 @@ public class LoadTCMIP {
 			}
 		});
 		logout.click();
+		finishLoadingTestCases = Instant.now();
+		long execTime = Duration.between(startLoadingTestCases, finishLoadingTestCases).toMillis();
+		System.out.println(String.format(outputFormat, "Total time for loading(ms)", execTime));
 		System.out.println("****************************************************");
 		System.out.println("*****************                  *****************");
 		System.out.println("***********                              ***********");
@@ -531,11 +567,14 @@ public class LoadTCMIP {
 	/* --------  --------------  ------------------------------------------ */
 	/* 08/04/20  R.Vattumilli    Initial Creation of beforeSuite()          */
 	/*                                                                      */
+	/* 03/18/25  R.Vattumilli    Calculate test case loading start time     */
+	/*                                                                      */
 	/************************************************************************/
 
 	@BeforeSuite
 	private void beforeSuite() throws IOException {
 
+		startLoadingTestCases = Instant.now();
 		DateFormat dateFormat = new SimpleDateFormat("dd_MMM_yyyy_hh_mm_ssaa");
 		File logsFolder = new File(logsDirectory);
 		if (!logsFolder.exists()) {

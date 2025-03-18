@@ -1,0 +1,145 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 06/Mar/2025 10:48:56AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/05/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 229
+Total No.of Rows fetched              : 12
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:01 EST 2025
+Creating test case for Row #          : 5907
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 290
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:02 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:02 EST 2025
+Creating test case for Row #          : 5908
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 280
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:03 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:03 EST 2025
+Creating test case for Row #          : 5909
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 316
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:04 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:04 EST 2025
+Creating test case for Row #          : 5910
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 297
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:04 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:04 EST 2025
+Creating test case for Row #          : 5911
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 285
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:05 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:05 EST 2025
+Creating test case for Row #          : 5912
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 286
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:06 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:06 EST 2025
+Creating test case for Row #          : 5913
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 294
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:07 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:07 EST 2025
+Creating test case for Row #          : 5914
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 281
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:08 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:08 EST 2025
+Creating test case for Row #          : 5915
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 280
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:09 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:09 EST 2025
+Creating test case for Row #          : 5916
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 399
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:10 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:10 EST 2025
+Creating test case for Row #          : 5917
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 285
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:11 EST 2025
+*****************************************************************
+Started at                            : Thu Mar 06 10:49:11 EST 2025
+Creating test case for Row #          : 5918
+Business Function                     : Project26.01
+Business Function Validation          : Verify Business Function for the Test case
+Validation Time(ms)                   : 291
+TC Validation status                  : FAIL
+Finished at                           : Thu Mar 06 10:49:12 EST 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 06/Mar/2025 10:49:14AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

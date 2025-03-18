@@ -1,0 +1,137 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 05/Mar/2025 10:15:43AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/05/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 84
+Total No.of Rows fetched              : 4
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Wed Mar 05 10:15:48 EST 2025
+Creating test case for Row #          : 5903
+Validation Time(ms)                   : 397
+TC Validation status                  : PASS
+Short Desc                            : SOT DOD = MMIS DOD 2
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 92
+Owner                                 : SUSAN MATTES
+Grouping                              : Batch
+Long Desc                             : For member 100011979299, 20220502 is the MMIS and SOT DOD.
+Expected Results                      : Member months 202401 through 202412 are added to table T_MC_SOT_ADJUST.  Correct detail is added to table T_MC_SOT_DOD_STATUS. Member is added to the Source of Truth DOD Activity Report. Member and month 202501 appear on the Source of Truth DOD Unrecouped Payments Report.
+Test Case ID for Row 5903             : 48417
+Requirement ID                        : 37620.01.001
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48417
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48417
+Finished at                           : Wed Mar 05 10:15:52 EST 2025
+*****************************************************************
+Started at                            : Wed Mar 05 10:15:52 EST 2025
+Creating test case for Row #          : 5904
+Validation Time(ms)                   : 434
+TC Validation status                  : PASS
+Short Desc                            : SOT DOD > MMIS DOD 1
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 92
+Owner                                 : SUSAN MATTES
+Grouping                              : Batch
+Long Desc                             : Add member 100005434021 to sot_dod_37620 with SOT DOD 20241130.  Member has MMIS DOD 20241123 and cap pmts from 202412 through 202502.
+Expected Results                      : Member months 202412 is added to table T_MC_SOT_ADJUST.  Correct detail is added to table T_MC_SOT_DOD_STATUS. Member is added to the Source of Truth DOD Activity Report. Member and months 202501 through 202502 appear on the Source of Truth DOD Unrecouped Payments Report.
+Test Case ID for Row 5904             : 48418
+Requirement ID                        : 37620.01.003
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48418
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48418
+Finished at                           : Wed Mar 05 10:15:57 EST 2025
+*****************************************************************
+Started at                            : Wed Mar 05 10:15:57 EST 2025
+Creating test case for Row #          : 5905
+Validation Time(ms)                   : 430
+TC Validation status                  : PASS
+Short Desc                            : SOT DOD > MMIS DOD 2
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 92
+Owner                                 : SUSAN MATTES
+Grouping                              : Batch
+Long Desc                             : Add member 100002845236 to sot_dod_37620 with SOT DOD 20240415.  Member has MMIS DOD 20230414 and cap pmts from 202401 through 202409.
+Expected Results                      : Member months 202405 through 202409 are added to table T_MC_SOT_ADJUST.  Member months 202401 through 202404 are not added to table T_MC_SOT_ADJUST.   Correct detail is added to table T_MC_SOT_DOD_STATUS.  Member is added to the Source of Truth DOD Activity Report. Member and months 202401 through 202404 appear on the Source of Truth DOD Unrecouped Payments Report.
+Test Case ID for Row 5905             : 48419
+Requirement ID                        : 37620.01.003
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48419
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48419
+Finished at                           : Wed Mar 05 10:16:02 EST 2025
+*****************************************************************
+Started at                            : Wed Mar 05 10:16:02 EST 2025
+Creating test case for Row #          : 5906
+Validation Time(ms)                   : 411
+TC Validation status                  : PASS
+Short Desc                            : Error Report Modification
+Env                                   : 8
+Subsystem                             : Managed Care
+SAK Participant                       : 92
+Owner                                 : SUSAN MATTES
+Grouping                              : Batch
+Long Desc                             : Member 100001236545 errors as Error 1 Member Id Not Found on MMIS, reports to error report MGD-0721-A, and Error 6, Member Source of Truth DOD is greater than or equal to MMIS DoD has been removed from the legend.
+Expected Results                      : MGD-0721A reports 100001236545 as Member Id Not Found on MMIS and Error 6 does not display or is deprecated.
+Test Case ID for Row 5906             : 48420
+Requirement ID                        : 37620.01.007
+Requirement Type                      : Reports
+SAK Requirement Type                  : 20
+Requirement linked for test case      : 48420
+Notebook                              : Project25.04
+Business Function                     : Project25.04
+Notebook/BF linked for test case      : 48420
+Finished at                           : Wed Mar 05 10:16:06 EST 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 05/Mar/2025 10:16:07AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

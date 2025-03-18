@@ -1,0 +1,863 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 18/Mar/2025 09:57:18AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/05/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+****************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 265
+Total No.of Rows fetched              : 37
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Tue Mar 18 09:57:25 EDT 2025
+Creating test case for Row #          : 5983
+Validation Time(ms)                   : 434
+TC Validation status                  : PASS
+Short Desc                            : E1-Validate notices sent via CNS
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate when the configuration is turned ON ,the notices should be  sent via CNS and stop sending through the existing noticing solution (MAXIMUS/EOTTS/SM).
+Expected Results                      : Verify when configuration turned ON Notices are sent via CNS as expected.
+Test Case ID for Row 5983             : 48524
+Requirement ID                        : 38354.E1.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48524
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48524
+Finished at                           : Tue Mar 18 09:57:30 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:57:30 EDT 2025
+Creating test case for Row #          : 5984
+Validation Time(ms)                   : 390
+TC Validation status                  : PASS
+Short Desc                            : E1 - Meta Data Object
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate that the following meta data object fields are present: id #New Sequential Notice ID# type (cde_letter_type ="E1" ) Language priority (Use NORMAL) noticetobe replaced (optional field. MMIS can leave it off)
+Expected Results                      : Verify that the Meta Data Object is in the correct format and fields are present
+Test Case ID for Row 5984             : 48525
+Requirement ID                        : 38354.E1.030
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48525
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48525
+Finished at                           : Tue Mar 18 09:57:34 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:57:34 EDT 2025
+Creating test case for Row #          : 5985
+Validation Time(ms)                   : 377
+TC Validation status                  : PASS
+Short Desc                            : E1 - Non-CNS Languages
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : If a member is receiving an E1 notice and has a language other than "en" for English, "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese, then they should have default language preference of "en" for English.
+Expected Results                      : Verify that the default language is set to "en"
+Test Case ID for Row 5985             : 48526
+Requirement ID                        : 38354.E1.035
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48526
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48526
+Finished at                           : Tue Mar 18 09:57:38 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:57:38 EDT 2025
+Creating test case for Row #          : 5986
+Validation Time(ms)                   : 376
+TC Validation status                  : PASS
+Short Desc                            : E1 - Default English
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : If a member has language preference set to "English", then "en" should be sent
+Expected Results                      : Verify that "en" is sent for members with English language preference
+Test Case ID for Row 5986             : 48527
+Requirement ID                        : 38354.E1.035
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48527
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48527
+Finished at                           : Tue Mar 18 09:57:43 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:57:43 EDT 2025
+Creating test case for Row #          : 5987
+Validation Time(ms)                   : 400
+TC Validation status                  : PASS
+Short Desc                            : E1 - Non-English
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate a member receiving E1 notice who has the language preference Spanish, Portuguese, Simplified Chinese, Haitian Creole and Vietnamese, should not send the value "en".  The value "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese should be sent
+Expected Results                      : Verify for value "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese is sent as expected.
+Test Case ID for Row 5987             : 48528
+Requirement ID                        : 38354.E1.035
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48528
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48528
+Finished at                           : Tue Mar 18 09:57:47 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:57:47 EDT 2025
+Creating test case for Row #          : 5988
+Validation Time(ms)                   : 417
+TC Validation status                  : PASS
+Short Desc                            : E1 - Spanish Language
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E1 notices requests should be generated one for member in chosen written language SPANISH (for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg).  For any Active contact types (ERDI, ERDII &ERDIII) notices Should be generated  in English lang with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify for non-English written language Spanish has two E1 notices generated one for member in chosen written language (SPANISH) and one for worker in English (no delivery-REG) and active ERDs(REG) as expected.
+Test Case ID for Row 5988             : 48529
+Requirement ID                        : 38354.E1.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48529
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48529
+Finished at                           : Tue Mar 18 09:57:52 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:57:52 EDT 2025
+Creating test case for Row #          : 5989
+Validation Time(ms)                   : 342
+TC Validation status                  : PASS
+Short Desc                            : E1 - PT Language
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E1 notices requests should be generated one for member in chosen written language PORTUGUESE (for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg). For any Active contact types (ERDI, ERDII &ERDIII) notices should be generated in English lang  with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify for non-English written language Portuguese has two E1 notices generated one for member in chosen written language (PORTUGUESE) and one for worker in English (no delivery-REG) and active ERDS(REG)as expected.
+Test Case ID for Row 5989             : 48530
+Requirement ID                        : 38354.E1.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48530
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48530
+Finished at                           : Tue Mar 18 09:57:56 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:57:56 EDT 2025
+Creating test case for Row #          : 5990
+Validation Time(ms)                   : 386
+TC Validation status                  : PASS
+Short Desc                            : E1 - ZH Language
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E1 notices requests should be generated one for member in chosen written language Chinese (for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg). For any Active contact types (ERDI, ERDII &ERDIII) notices should generate in English lang  with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify for non-English written language Chinese has two E1 notices generated one for member in chosen written language (Chinese) and one for worker in English (no delivery) and active ERDS(REG)as expected.
+Test Case ID for Row 5990             : 48531
+Requirement ID                        : 38354.E1.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48531
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48531
+Finished at                           : Tue Mar 18 09:58:01 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:01 EDT 2025
+Creating test case for Row #          : 5991
+Validation Time(ms)                   : 372
+TC Validation status                  : PASS
+Short Desc                            : E1 - HT Language
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E1 notices requests should be generated one for member in chosen written language Haitian(for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg). For any Active contact types (ERDI, ERDII &ERDIII) notices should generate in English lang  with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify for non-English written language Haitian has two E1 notices requests generated one for member in chosen written language (Haitian) and one for worker in English (no delivery) and active ERDS(REG)as expected
+Test Case ID for Row 5991             : 48532
+Requirement ID                        : 38354.E1.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48532
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48532
+Finished at                           : Tue Mar 18 09:58:05 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:05 EDT 2025
+Creating test case for Row #          : 5992
+Validation Time(ms)                   : 401
+TC Validation status                  : PASS
+Short Desc                            : E1 - VI Language
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for non-English written language two E1 notices requests should be generated one for member in chosen written language Vietnamese (for print types of REG, LRG and BRAILLE) and one for worker in English (no delivery and print type reg). For any Active contact types (ERDI, ERDII &ERDIII) notices should generate in English lang  with print type REG. Non-English Languages-Spanish, Portuguese, Chinese, Haitian Creole, Vietnamese
+Expected Results                      : Verify non-English written language Spanish has two E1 notices requests generated one for member in chosen written language (SPANISH) and one for worker in English (no delivery).
+Test Case ID for Row 5992             : 48533
+Requirement ID                        : 38354.E1.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48533
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48533
+Finished at                           : Tue Mar 18 09:58:09 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:09 EDT 2025
+Creating test case for Row #          : 5993
+Validation Time(ms)                   : 373
+TC Validation status                  : PASS
+Short Desc                            : E1 - Written Language
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate the members written Language is sending in JSON request not as primary language.  Note:MMIS stores both primary and written language
+Expected Results                      : Verify members written language is sent in JSON as expected
+Test Case ID for Row 5993             : 48534
+Requirement ID                        : 38354.E1.045
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48534
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48534
+Finished at                           : Tue Mar 18 09:58:14 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:14 EDT 2025
+Creating test case for Row #          : 5994
+Validation Time(ms)                   : 373
+TC Validation status                  : PASS
+Short Desc                            : E1 - Recipient Object
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate Recipient object has data elements in JSON format : firstName { nam_middle_init(middleName) middleName id (NOTE: Send the MMIS id) suffix type (NOTE: This is delivery type. A notice can be delivered via print, email, SMS or not delivered at all (allowable values for CNS "print", "email", "sms", "noDelivery") printType emailAddress phoneNumber Address  line1 line 2 city state zipcode city
+Expected Results                      : Verify Recipient object has data elements in JSON format
+Test Case ID for Row 5994             : 48535
+Requirement ID                        : 38354.E1.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48535
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48535
+Finished at                           : Tue Mar 18 09:58:18 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:18 EDT 2025
+Creating test case for Row #          : 5995
+Validation Time(ms)                   : 452
+TC Validation status                  : PASS
+Short Desc                            : E1- Paper for Text/SMS
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for a member, if the communication preference is set as TEXT/SMS (edelivery) then PAPER should be sent as default value.   The print type value can be REG,BRAILLE&LARGE for a member for edelivery (TEXT/SMS)  The default value PAPER is sent for edelivery until CNS Group-4 is implemented.
+Expected Results                      : Verify members communication preference is set default value as PAPER for edelivery (TEXT/SMS).
+Test Case ID for Row 5995             : 48536
+Requirement ID                        : 38354.E1.055
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48536
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48536
+Finished at                           : Tue Mar 18 09:58:23 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:23 EDT 2025
+Creating test case for Row #          : 5996
+Validation Time(ms)                   : 418
+TC Validation status                  : PASS
+Short Desc                            : E1 - Paper for Email
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as EMAIL (edelivery) then PAPER should be sent as default value.   The print type value can be REG, BRAILLE&LARGE for a member for edelivery(EMAIL)  The default value PAPER is sent for edelivery until CNS Group-4 is implemented.
+Expected Results                      : Verify members communication preference is set default value as PAPER for edelivery (EMAIL).
+Test Case ID for Row 5996             : 48537
+Requirement ID                        : 38354.E1.060
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48537
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48537
+Finished at                           : Tue Mar 18 09:58:27 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:27 EDT 2025
+Creating test case for Row #          : 5997
+Validation Time(ms)                   : 389
+TC Validation status                  : PASS
+Short Desc                            : E1- Print Type REG
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as PAPER & Print type as Regular,then  send value as PAPER/PRINT and REG
+Expected Results                      : Verify members delivery type is sent as Print & print type as REG as expected.
+Test Case ID for Row 5997             : 48538
+Requirement ID                        : 38354.E1.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48538
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48538
+Finished at                           : Tue Mar 18 09:58:31 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:31 EDT 2025
+Creating test case for Row #          : 5998
+Validation Time(ms)                   : 434
+TC Validation status                  : PASS
+Short Desc                            : E1 - Print Type LRG
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as PAPER & Print type as LARGE,then send values as PAPER/PRINT and LRG
+Expected Results                      : Verify members delivery type is sent as Print & print type as LRG as expected.
+Test Case ID for Row 5998             : 48539
+Requirement ID                        : 38354.E1.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48539
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48539
+Finished at                           : Tue Mar 18 09:58:36 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:36 EDT 2025
+Creating test case for Row #          : 5999
+Validation Time(ms)                   : 527
+TC Validation status                  : PASS
+Short Desc                            : E1 - Print Type BRAILLE
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate for a member if the communication preference is set as PAPER & Print type as BRAILLE  ,then  send values as PAPER/PRINT and BRAILLE
+Expected Results                      : Verify members delivery type is sent as Print & print type as BRAILLE as expected.
+Test Case ID for Row 5999             : 48540
+Requirement ID                        : 38354.E1.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48540
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48540
+Finished at                           : Tue Mar 18 09:58:46 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:46 EDT 2025
+Creating test case for Row #          : 6000
+Validation Time(ms)                   : 377
+TC Validation status                  : PASS
+Short Desc                            : E1 - Default Paper
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate if there is no communication preference available from source system for a member then set default value as PAPER
+Expected Results                      : Verify communication preference  is set as default paper if member has not selected any communication preference as expected.
+Test Case ID for Row 6000             : 48541
+Requirement ID                        : 38354.E1.070
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48541
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48541
+Finished at                           : Tue Mar 18 09:58:50 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:50 EDT 2025
+Creating test case for Row #          : 6001
+Validation Time(ms)                   : 389
+TC Validation status                  : PASS
+Short Desc                            : E1 - Default Print Type REG
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate if there is no Print type available from source system for a member then set default value as REGULAR. Validate for any Active ERD contact types default print type value is REGULAR.
+Expected Results                      : Verify print type is set as default as REGULAR if member has not selected any print type as expected.
+Test Case ID for Row 6001             : 48542
+Requirement ID                        : 38354.E1.075
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48542
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48542
+Finished at                           : Tue Mar 18 09:58:54 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:54 EDT 2025
+Creating test case for Row #          : 6002
+Validation Time(ms)                   : 399
+TC Validation status                  : PASS
+Short Desc                            : E1 - All ARD Contact Types
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate that an E1 notice is sent to all ARD contact types (ERD1, II, & III)
+Expected Results                      : Verify that member"s ARD contacts receive an E1 notice as expected
+Test Case ID for Row 6002             : 48543
+Requirement ID                        : 38354.E1.080
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48543
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48543
+Finished at                           : Tue Mar 18 09:58:58 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:58:58 EDT 2025
+Creating test case for Row #          : 6003
+Validation Time(ms)                   : 436
+TC Validation status                  : PASS
+Short Desc                            : E1 - ADR Line 2 Member
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving E1 notice have address line 2 information, then tag should be sent in JSON recipient object.
+Expected Results                      : Verify  tag is sent in JSON recipient object for a member if there is address line -2 as expected.
+Test Case ID for Row 6003             : 48544
+Requirement ID                        : 38354.E1.085
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48544
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48544
+Finished at                           : Tue Mar 18 09:59:03 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:03 EDT 2025
+Creating test case for Row #          : 6004
+Validation Time(ms)                   : 465
+TC Validation status                  : PASS
+Short Desc                            : E1 - ADR Line 2 ERD"s
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate if active ERDs receiving E1 notice have address line 2 information, then tag should  be sent in JSON recipient object.
+Expected Results                      : Verify tag is sent in JSON recipient object for active ARDS if there is address line -2 as expected.
+Test Case ID for Row 6004             : 48545
+Requirement ID                        : 38354.E1.086
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48545
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48545
+Finished at                           : Tue Mar 18 09:59:08 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:08 EDT 2025
+Creating test case for Row #          : 6005
+Validation Time(ms)                   : 370
+TC Validation status                  : PASS
+Short Desc                            : E1 - ADR Line 2 Worker
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving E1 notice does have address line 2 information, then tag should  be sent in JSON recipient object for worker copy.
+Expected Results                      : Verify tag is sent in JSON recipient object for worker copy if there is address line -2  for member as expected.
+Test Case ID for Row 6005             : 48546
+Requirement ID                        : 38354.E1.087
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48546
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48546
+Finished at                           : Tue Mar 18 09:59:12 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:12 EDT 2025
+Creating test case for Row #          : 6006
+Validation Time(ms)                   : 402
+TC Validation status                  : PASS
+Short Desc                            : E1 - Payload Object Member
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created for E1 recipient has data elements related to members in JSON format.  Member Name (listed as FirstName MiddleName LastName Suffix) [Address Line 1] [Address Line 2] [City, State Zip code] Member ID: [MMIS ID] SSN: [XXX-XX- last four digits [MemberNameTitleCase]
+Expected Results                      : Verify all data elements related to members are in PAYLOAD file in JSON format and printed out in Notice as expected
+Test Case ID for Row 6006             : 48547
+Requirement ID                        : 38354.E1.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48547
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48547
+Finished at                           : Tue Mar 18 09:59:16 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:16 EDT 2025
+Creating test case for Row #          : 6007
+Validation Time(ms)                   : 391
+TC Validation status                  : PASS
+Short Desc                            : E1 - Payload Object Notice
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created for E1 recipient has data elements related to notice in JSON format. noticeCreationDate", "noticeID", "noticeType"
+Expected Results                      : Verify all data elements related to notice are in PAYLOAD file in JSON format and printed out in Notice as expected.
+Test Case ID for Row 6007             : 48548
+Requirement ID                        : 38354.E1.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48548
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48548
+Finished at                           : Tue Mar 18 09:59:23 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:23 EDT 2025
+Creating test case for Row #          : 6008
+Validation Time(ms)                   : 356
+TC Validation status                  : PASS
+Short Desc                            : E1 - Payload Object PMP
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created for E1 recipient has data elements related to PMP in JSON format. [PMPNameTitleCase] [CP Program Type] [Enrollment Start Date]  [PMPNameTitleCase] [PMPNameTitleCase] [PMPPhoneHash]  [CP Program Type] [PMPNameTitleCase] [CP Program Type] [PMPNameTitleCase] [PMPPhoneHash]
+Expected Results                      : Verify all data elements related to PMP are in PAYLOAD file in JSON format and printed out in Notice as expected
+Test Case ID for Row 6008             : 48549
+Requirement ID                        : 38354.E1.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48549
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48549
+Finished at                           : Tue Mar 18 09:59:28 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:28 EDT 2025
+Creating test case for Row #          : 6009
+Validation Time(ms)                   : 392
+TC Validation status                  : PASS
+Short Desc                            : E1 - Payload Mailing ADR
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created for E1 recipient has data elements related to Mailing address in JSON format. [Mailing Name] [Address Line 1] [Address Line 2] [City, State Zip code]
+Expected Results                      : Verify all data elements related to Mailing address are in PAYLOAD file in JSON format and printed out in Notice as expected.
+Test Case ID for Row 6009             : 48550
+Requirement ID                        : 38354.E1.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48550
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48550
+Finished at                           : Tue Mar 18 09:59:31 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:31 EDT 2025
+Creating test case for Row #          : 6010
+Validation Time(ms)                   : 387
+TC Validation status                  : PASS
+Short Desc                            : E1 - Payload No SSN
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate If there is no SSN present for the E1 notice receipient/member, send the value as XXX-XX-blank
+Expected Results                      : Verify that XXX-XX is used for members with no SSN  Note: should be printed as Unavailable in the NOTICE
+Test Case ID for Row 6010             : 48551
+Requirement ID                        : 38354.E1.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48551
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48551
+Finished at                           : Tue Mar 18 09:59:35 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:35 EDT 2025
+Creating test case for Row #          : 6011
+Validation Time(ms)                   : 374
+TC Validation status                  : PASS
+Short Desc                            : E1 - Payload ADR 2
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate if a member receiving notice have address line-2 information, then tag should be sent in JSON PAYLOAD object for  member  Perform test for ARD and Worker Copy
+Expected Results                      : Verify if a member have  address line-2 then tag should  be sent in payload object.
+Test Case ID for Row 6011             : 48552
+Requirement ID                        : 38354.E1.091
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48552
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48552
+Finished at                           : Tue Mar 18 09:59:40 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:40 EDT 2025
+Creating test case for Row #          : 6012
+Validation Time(ms)                   : 457
+TC Validation status                  : PASS
+Short Desc                            : E1 - Payload No ADR 2
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : If there is no line 2 information present for member or active contacts, ensure line 2 tag is not sent in the JSON request. There should not be any space in between address line & zip code in the NOTICE. The PDF should be validated.
+Expected Results                      : Verify that address line 2 is not present for the member or contact notices and there are no spaces present in the notice/PDF document
+Test Case ID for Row 6012             : 48553
+Requirement ID                        : 38354.E1.091
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48553
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48553
+Finished at                           : Tue Mar 18 09:59:45 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:45 EDT 2025
+Creating test case for Row #          : 6013
+Validation Time(ms)                   : 371
+TC Validation status                  : PASS
+Short Desc                            : E1 - No ARD/Contact
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate that no tag sent in the notice payload for members with no ARD contact
+Expected Results                      : Verify that no tag is present in payload for members without an ARD contact
+Test Case ID for Row 6013             : 48554
+Requirement ID                        : 38354.E1.100
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48554
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48554
+Finished at                           : Tue Mar 18 09:59:49 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:49 EDT 2025
+Creating test case for Row #          : 6014
+Validation Time(ms)                   : 375
+TC Validation status                  : PASS
+Short Desc                            : E1 - Notice to Contacts
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate that at least 2 notices are sent to all contacts for members with ARD contacts present. One for the member and one for each contact present
+Expected Results                      : Validate that the correct number of notices is sent for member and contacts
+Test Case ID for Row 6014             : 48555
+Requirement ID                        : 38354.E1.105
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48555
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48555
+Finished at                           : Tue Mar 18 09:59:53 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:53 EDT 2025
+Creating test case for Row #          : 6015
+Validation Time(ms)                   : 373
+TC Validation status                  : PASS
+Short Desc                            : E1- Configure Contact
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : If new contact types(PSI/DSS/DYS etc) are to be added, then DCR should be run to add new values and description in database as required. Note:  Default E1 notice sends to contacts types(ERDI,ERDII &ERDIII)
+Expected Results                      : Verify new contact types are added to the database as expected.
+Test Case ID for Row 6015             : 48556
+Requirement ID                        : 38354.E1.110
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48556
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48556
+Finished at                           : Tue Mar 18 09:59:57 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 09:59:57 EDT 2025
+Creating test case for Row #          : 6016
+Validation Time(ms)                   : 378
+TC Validation status                  : PASS
+Short Desc                            : E1 - Insert Group 2
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate insert group-2 is sent for all E1 type Notices
+Expected Results                      : Verify all E1 Notices sent insert group as 2
+Test Case ID for Row 6016             : 48557
+Requirement ID                        : 38354.E1.115
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48557
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48557
+Finished at                           : Tue Mar 18 10:00:01 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 10:00:01 EDT 2025
+Creating test case for Row #          : 6017
+Validation Time(ms)                   : 408
+TC Validation status                  : PASS
+Short Desc                            : E1 - Configure Insert Groups
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : If new insert groups are to be added, DCR should be run to add new values and description in database as required. Note: E1 notice sends default insert group-2(Babel + Fair Hearing Form)
+Expected Results                      : Verify new insert groups are added to the database as expected.
+Test Case ID for Row 6017             : 48558
+Requirement ID                        : 38354.E1.115A
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48558
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48558
+Finished at                           : Tue Mar 18 10:00:05 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 10:00:05 EDT 2025
+Creating test case for Row #          : 6018
+Validation Time(ms)                   : 408
+TC Validation status                  : PASS
+Short Desc                            : E1 - Configure Delivery Type
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : When edelivery is implemented with Group 4, verify that the delivery type for members with "TEXT/SMS" or "EMAIL" communication preference can be switched from the default "PAPER/PRINT". Note: E1 notice sends default paper/print, edelivery will not be implemented until after Group 4 CNS implementation
+Expected Results                      : Verify delivery type can be changed from "PAPER/PRINT" to "TEXT/SMS" or "EMAIL" when needed once edelivery is implemented.
+Test Case ID for Row 6018             : 48559
+Requirement ID                        : 38354.E1.120
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48559
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48559
+Finished at                           : Tue Mar 18 10:00:09 EDT 2025
+*****************************************************************
+Started at                            : Tue Mar 18 10:00:09 EDT 2025
+Creating test case for Row #          : 6019
+Validation Time(ms)                   : 369
+TC Validation status                  : PASS
+Short Desc                            : E1 - Notice Suppression
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 947
+Owner                                 : THOMAS STONE
+Grouping                              : Batch
+Long Desc                             : Validate if members are in new Notice suppression table, then the members should be excluded from CNS trigger table and JSON payload request shouldnt be sent to CNS for members in new suppression table.
+Expected Results                      : Verify members are in suppression table as expected .
+Test Case ID for Row 6019             : 48560
+Requirement ID                        : 38381.02.110
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48560
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48560
+Finished at                           : Tue Mar 18 10:00:13 EDT 2025
+****************************************************
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 18/Mar/2025 10:00:13AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
