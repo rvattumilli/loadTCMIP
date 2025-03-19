@@ -1,0 +1,126 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 19/Mar/2025 02:43:07PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/19/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 64
+Total No.of Rows fetched              : 0
+*****************************************************************
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****            NO TC DATA THIS RUN           *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+*****************************************************************
+
+
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 28
+Total No.of Rows fetched              : 4
+*****************************************************************
+*****************************************************************
+Started at                            : Wed Mar 19 14:43:12 EDT 2025
+Creating requirement for Row #        : 293
+Requirement ID                        : 38654.01.001A
+Requirement ID Validation             : Requirement ID already exists
+Requirement Name                      : Include CAREPLUS members in D2
+Requirement Name Validation           : Requirement name already exists
+Requirement ID                        : 38654.01.001A
+Requirement Name                      : Include CAREPLUS members in D2
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : When member is disenrolled from CAREPLUS assignment plans (CPPCC, CPCCB/ACOB/CPBH, CRPLS & CRPLA) on the 55th day before the 65th birthday, it should be added as D2 trigger instead of DH.
+SAK Req for Row 293                   : 15489
+Finished at                           : Wed Mar 19 14:43:16 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 14:43:16 EDT 2025
+Creating requirement for Row #        : 294
+Requirement ID                        : 38654.01.005
+Requirement ID Validation             : Requirement ID already exists
+Requirement Name                      : Discontinue DH trigger
+Requirement Name Validation           : Requirement name already exists
+Requirement ID                        : 38654.01.005
+Requirement Name                      : Discontinue DH trigger
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Discontinue sending DH trigger to both CST & CNS once it has been incorporated into D2.
+SAK Req for Row 294                   : 15490
+Finished at                           : Wed Mar 19 14:43:20 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 14:43:20 EDT 2025
+Creating requirement for Row #        : 295
+Requirement ID                        : 38654.01.010
+Requirement ID Validation             : Requirement ID already exists
+Requirement Name                      : Same Template
+Requirement Name Validation           : Requirement name already exists
+Requirement ID                        : 38654.01.010
+Requirement Name                      : Same Template
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Same Template will be used once the DH members are included in the D2 trigger.
+SAK Req for Row 295                   : 15491
+Finished at                           : Wed Mar 19 14:43:24 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 14:43:24 EDT 2025
+Creating requirement for Row #        : 296
+Requirement ID                        : 38654.01.015
+Requirement ID Validation             : Requirement ID already exists
+Requirement Name                      : JSON Request Requirements
+Requirement Name Validation           : Requirement name already exists
+Requirement ID                        : 38654.01.015
+Requirement Name                      : JSON Request Requirements
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Since DH will be integrated with D2, please refer to the D2 JSON request requirements detailed under WI 38647 for additional information regarding the data MMIS will send to CNS.
+SAK Req for Row 296                   : 15492
+Finished at                           : Wed Mar 19 14:43:28 EDT 2025
+*****************************************************************
+
+
+Total time for loading(ms)            : 21142
+Total time for loading(sec)           : 21
+Total time for loading(min)           : 0Min21Sec
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 19/Mar/2025 02:43:28PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
+===============================================
+

@@ -1,0 +1,910 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 19/Mar/2025 11:27:01AM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/19/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+*****************************************************************
+SQL Statement                         : select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc
+No.of Cols                            : 8
+Query Execution Time(ms)              : 26
+Total No.of Rows fetched              : 59
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:06 EDT 2025
+Creating requirement for Row #        : 292
+Requirement ID                        : 38654.01.001
+Requirement ID Validation             : Requirement ID already exists
+Requirement Name                      : Modify D2 Trigger Logic
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 384
+Requirement Validation status         : FAIL
+Finished at                           : Wed Mar 19 11:27:07 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:07 EDT 2025
+Creating requirement for Row #        : 293
+Requirement ID                        : 38654.01.001A
+Requirement ID Validation             : Requirement ID already exists
+Requirement Name                      : Include CAREPLUS members in D2
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 433
+Requirement Validation status         : FAIL
+Finished at                           : Wed Mar 19 11:27:08 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:08 EDT 2025
+Creating requirement for Row #        : 294
+Requirement ID                        : 38654.01.005
+Requirement ID Validation             : Requirement ID already exists
+Requirement Name                      : Discontinue DH trigger
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 402
+Requirement Validation status         : FAIL
+Finished at                           : Wed Mar 19 11:27:09 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:09 EDT 2025
+Creating requirement for Row #        : 295
+Requirement ID                        : 38654.01.010
+Requirement ID Validation             : Requirement ID already exists
+Requirement Name                      : Same Template
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 417
+Requirement Validation status         : FAIL
+Finished at                           : Wed Mar 19 11:27:10 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:10 EDT 2025
+Creating requirement for Row #        : 296
+Requirement ID                        : 38654.01.015
+Requirement ID Validation             : Requirement ID already exists
+Requirement Name                      : JSON Request Requirements
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 424
+Requirement Validation status         : FAIL
+Finished at                           : Wed Mar 19 11:27:12 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:12 EDT 2025
+Creating requirement for Row #        : 297
+Validation Time(ms)                   : 397
+Requirement Validation status         : PASS
+Requirement ID                        : 38656.01.001
+Requirement Name                      : Modify E2 Trigger Logic
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Modify E2 Trigger logic to include the EA &  E8 members. Currently, E2 is triggered when the member is assigned to a new MCO/ACOA(MSTD, MFAS, MSTDA, MFASA) or changes to a different MCO/ACOA. With the new change request, E2 logic should include the CarePlus MCO/ACOA{CRPLS/CRPLA}-(E8)  & ACOB/PCCB/CPCCB - (EA) members.
+SAK Req for Row 297                   : 15673
+Finished at                           : Wed Mar 19 11:27:16 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:16 EDT 2025
+Creating requirement for Row #        : 298
+Validation Time(ms)                   : 420
+Requirement Validation status         : PASS
+Requirement ID                        : 38656.01.001A
+Requirement Name                      : Include CAREPLUS ACOA/MCO (E8)  members
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : When member is assigned to new ACOA/MCO assigment plans (CRPLS & CRPLA) it should be added as E2 trigger instead of E8.
+SAK Req for Row 298                   : 15674
+Finished at                           : Wed Mar 19 11:27:19 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:19 EDT 2025
+Creating requirement for Row #        : 299
+Validation Time(ms)                   : 418
+Requirement Validation status         : PASS
+Requirement ID                        : 38656.01.001B
+Requirement Name                      : Include ACOB/PCCB (EA) members
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : When member is assigned to new ACOB/PCCB/CPCCB/ BH it should be added as E2 trigger instead of EA.
+SAK Req for Row 299                   : 15675
+Finished at                           : Wed Mar 19 11:27:22 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:22 EDT 2025
+Creating requirement for Row #        : 300
+Validation Time(ms)                   : 390
+Requirement Validation status         : PASS
+Requirement ID                        : 38656.01.005
+Requirement Name                      : Discontinue EA & E8 triggers
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Discontinue sending EA & E8 triggers to both CST & CNS once it"s incorporated into E2
+SAK Req for Row 300                   : 15676
+Finished at                           : Wed Mar 19 11:27:26 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:26 EDT 2025
+Creating requirement for Row #        : 301
+Requirement Name                      : Same Template
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 394
+Requirement Validation status         : PASS
+Requirement ID                        : 38656.01.010
+Requirement Name                      : Same Template
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Same Template will be used once the EA & E8 members are included in the E2 trigger.
+SAK Req for Row 301                   : 15677
+Finished at                           : Wed Mar 19 11:27:29 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:29 EDT 2025
+Creating requirement for Row #        : 302
+Requirement Name                      : JSON Request Requirements
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 441
+Requirement Validation status         : PASS
+Requirement ID                        : 38656.01.015
+Requirement Name                      : JSON Request Requirements
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Since EA & E8 will be integrated with E2, please refer to the JSON request requirements detailed under WI 38653 for additional details regarding the data that will be sent to CNS.
+SAK Req for Row 302                   : 15678
+Finished at                           : Wed Mar 19 11:27:32 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:32 EDT 2025
+Creating requirement for Row #        : 303
+Validation Time(ms)                   : 413
+Requirement Validation status         : PASS
+Requirement ID                        : 38658.E2.001
+Requirement Name                      : Do not send E2 Notice to CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create a new process to filter/determine when to stop "E2 -Enrollment confirmation notice - ACO, MCO, and ACOB/PCCB" from going out to CNS. If the E2 notice gets triggered after the member"s enrollment effective date is more than 15 calendar days (NOTE: The no. of days can change in future. Number of days should be configurable.) in the past from the run date, do not send E2 notice from going out to CNS.
+
+Example: Member Link Scenarios AND/OR ACOA/ACOB/MCO enrollment with retro eff date greater than 15 calendar days in the past from the run date via SU Panel and this notice should NOT be sent to CNS.
+SAK Req for Row 303                   : 15679
+Finished at                           : Wed Mar 19 11:27:35 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:35 EDT 2025
+Creating requirement for Row #        : 304
+Requirement Name                      : Able to create audit report of filtered Notice
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 407
+Requirement Validation status         : PASS
+Requirement ID                        : 38658.E2.005
+Requirement Name                      : Able to create audit report of filtered Notice
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Business should be able to request a report of this notice that is not sent due to print filtering logic as needed.
+
+NOTE: No regular reporting is needed. The ask here is to have a query that can pull these filtered notices as a report in a spreadsheet file when requested by the business.
+
+Following are the data that needs to be included in the spreadsheet file.
+
+MID, Letter Type, Date, Status code {NOTE: DATE request on the spreadsheet is status date (i.e. when the notice was filtered)}
+For e.g. 100000000000, E7, 20240117, Filtered
+SAK Req for Row 304                   : 15680
+Finished at                           : Wed Mar 19 11:27:39 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:39 EDT 2025
+Creating requirement for Row #        : 305
+Requirement Name                      : Do not show the notice in MMIS UI
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 404
+Requirement Validation status         : PASS
+Requirement ID                        : 38658.E2.010
+Requirement Name                      : Do not show the notice in MMIS UI
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Do not show the filtered notice in MMIS UI.
+SAK Req for Row 305                   : 15681
+Finished at                           : Wed Mar 19 11:27:42 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:42 EDT 2025
+Creating requirement for Row #        : 306
+Requirement Name                      : Do not show the notice in MY Services
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 388
+Requirement Validation status         : PASS
+Requirement ID                        : 38658.E2.015
+Requirement Name                      : Do not show the notice in MY Services
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Do not show the filtered notice in MY Services.
+SAK Req for Row 306                   : 15682
+Finished at                           : Wed Mar 19 11:27:45 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:45 EDT 2025
+Creating requirement for Row #        : 307
+Validation Time(ms)                   : 392
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.010
+Requirement Name                      : E2 - Enrollment confirmation notice - ACO, MCO, and ACOB/PCCB
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Modify the batch/business rule that generates/triggers "E2- Enrollment confirmation notice - ACO, MCO, and ACOB/PCCB". This letter should be addressed to the member regardless of age & to the active ARD contact types (ERDI, ERDII, ERDIII) if the member has any.
+
+NOTE: E2 letter is triggered when the member is assigned to a new MCO/ACOA (MSTD/MFAS/MSTDA/MFASA) plans or changes to a different MCO/ACOA.  This could be voluntary or system assigned and it could be due to a new assignment or a PCC or MCO/ACOA conversion. Business has also requested that  EA, E8 & E2  be merged into 1 template. EA is triggered when the member is assigned  to new ACOB/PCCB/CPCCB plan & E8 is triggered when the member is assigned to CAREPLUS ACOA/MCO (CRPLA/CRPLS) plans. This change will require an update to the E2 trigger logic which will be handled by WI 38656.
+SAK Req for Row 307                   : 15683
+Finished at                           : Wed Mar 19 11:27:49 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:49 EDT 2025
+Creating requirement for Row #        : 308
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 668
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.020
+Requirement Name                      : Turn on switch to send notices via CNS
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Stop sending the notice through the exisiting noticing solution (Maximus/EOTTS/SM) as soon as the configuration is turned ON to send the notice via CNS.
+SAK Req for Row 308                   : 15684
+Finished at                           : Wed Mar 19 11:27:53 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:53 EDT 2025
+Creating requirement for Row #        : 309
+Validation Time(ms)                   : 380
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.030
+Requirement Name                      : Create E2 - META DATA object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "Metadata" object to identify the E2- Disenrollment Confirmation Notice - TPL.
+Include the following data elements in JSON format. {The document is uploaded with expected data objects. Please refer to the uploaded document}
+
+id #New Sequential Notice ID#
+type (cde_letter_type ="E2" )
+Language
+priority (Use NORMAL)
+noticetobe replaced (optional field. MMIS can leave it off)
+SAK Req for Row 309                   : 15685
+Finished at                           : Wed Mar 19 11:27:56 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:56 EDT 2025
+Creating requirement for Row #        : 310
+Requirement Name                      : Metadata object - Notice language
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 376
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.035
+Requirement Name                      : Metadata object - Notice language
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the default value as "en" for English language if the member has language preference other than "en" for English, "es" for Spanish, "pt" for Portuguese, "zh" for Simplified Chinese, "ht" for Haitian Creole, "vi" for Vietnamese. This defines the language in which the notice should be generated.
+SAK Req for Row 310                   : 15686
+Finished at                           : Wed Mar 19 11:27:59 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:27:59 EDT 2025
+Creating requirement for Row #        : 311
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 406
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.040
+Requirement Name                      : Send 2 or more notice generation requests
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : In a case where a member has selected one of these languages (""es"" for Spanish, ""pt"" for Portuguese, ""zh"" for Simplified Chinese, ""ht"" for Haitian Creole, ""vi"" for Vietnamese) as a preferred language other than English, send 2 or more notice generation requests for worker and contact types.
+1) one will have preferred language= Foreign language (example-Spanish), delivery type = Print (for example) & print type = (Regular, Large Print or Braille)
+2) second will have preferred language = English, delivery Type = NoDelivery which means #2 will not go out to the member and is for worker reference only
+3) third or more will be for  the active contact types (ERDI, ERDII, ERDIII). The preferred language = English, delivery Type = Print & print type = Regular
+SAK Req for Row 311                   : 15687
+Finished at                           : Wed Mar 19 11:28:03 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:03 EDT 2025
+Creating requirement for Row #        : 312
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 410
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.045
+Requirement Name                      : Send Written Language in the JSON request
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : MMIS stores both Primary language & Written language for a member. When sending this data in JSON, "Written Language" should be selected.
+(T_CDE_LANG_WRITTEN)
+SAK Req for Row 312                   : 15688
+Finished at                           : Wed Mar 19 11:28:07 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:07 EDT 2025
+Creating requirement for Row #        : 313
+Validation Time(ms)                   : 419
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.050
+Requirement Name                      : Create E2 - RECIPIENT object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "RECIPIENT" object to identify the E2 recipient.
+Include the following data elements in JSON format. {The document will be uploaded with expected data objects.}
+
+firstName  {NOTE: Pass the full contact name in the recipient first name element if the member has active ARD contact types (ERDI, ERDII, ERDIII)}
+lastName
+middleName
+id (NOTE: Send the MMIS id)
+suffix
+type {NOTE: This is delivery type. A notice can be delivered via print, email, SMS or not delivered at all(allowable values for CNS "print", "email", "sms", "noDelivery"}
+printType
+emailAddress
+phoneNumber 
+Address {NOTE : Send member"s or Active contact"s mailing address}
+line1
+line 2
+city
+state
+zipcode
+city
+
+NOTE: For MMIS zip codes without the zip+4 value, send only the 5-character value ("11111"). Where the zip+4 value is available, send all nine characters with the hyphen separator ("11111-2345").
+SAK Req for Row 313                   : 15689
+Finished at                           : Wed Mar 19 11:28:11 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:11 EDT 2025
+Creating requirement for Row #        : 314
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 419
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.055
+Requirement Name                      : RECIPIENT object- num_cell_phone
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If members communication preference is "TEXT\SMS", send the default value `PRINT" as type for (communication preference "PAPER"). For the print type it is possible that a member would have selected regular, large print or braille accommodations for edelivery(sms/text/email) so the print type should be sent according to the preference the member has selected.
+
+NOTE: Based on the information shared by business, edelivery will not be implemented until after Group 4 CNS implementation. Hence, if a member has selected edelivery (sms/ text/email) communication preference, MMIS should send the PAPER as default value up until that time. Please refer to requirement id 38653.E2.120 for further details. eDelivery should not be sent for any contact types because they will not get electronic notice.
+SAK Req for Row 314                   : 15690
+Finished at                           : Wed Mar 19 11:28:15 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:15 EDT 2025
+Creating requirement for Row #        : 315
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 439
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.060
+Requirement Name                      : RECIPIENT object - EMAIL_ADDR
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If members communication preference is "EMAIL",  send the default value `PRINT" as type for (communication preference "PAPER"). For the print type it is possible that a member would have selected regular, large print or braille accommodations for edelivery(sms/text/email) so the print type should be sent according to the preference the member has selected
+
+NOTE: Based on the information shared by business, edelivery will not be implemented until after Group 4 CNS implementation. Hence, if a member has selected edelivery (sms/ text/email) communication preference, MMIS should send the PAPER as default value up until that time. Please refer to requirement id 38653.E2.120 for further details.
+SAK Req for Row 315                   : 15691
+Finished at                           : Wed Mar 19 11:28:19 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:19 EDT 2025
+Creating requirement for Row #        : 316
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 377
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.065
+Requirement Name                      : RECIPIENT object-printType Reg/large/braille
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the print type (Regular, Large Print or Braille) if the member has selected the communication preference as PAPER/email/sms/text. Send the default value "Regular" for valid ARD contact types (ERDI, II, & III).
+SAK Req for Row 316                   : 15692
+Finished at                           : Wed Mar 19 11:28:22 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:22 EDT 2025
+Creating requirement for Row #        : 317
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 386
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.070
+Requirement Name                      : RECIPIENT-Send default PAPER
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send default to communication preference (delivery type) as paper if there is no communication preference available from source systems for a member. In addition, paper should be sent if the letter is being sent to a valid contact type.
+SAK Req for Row 317                   : 15693
+Finished at                           : Wed Mar 19 11:28:25 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:25 EDT 2025
+Creating requirement for Row #        : 318
+Requirement Name                      : RECIPIENT-Send default print type "Regular"
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 417
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.075
+Requirement Name                      : RECIPIENT-Send default print type "Regular"
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the default print type as Regular if there is no print type available from source systems for a member. In addition, regular should be sent if the letter is being sent to a valid contact type.
+SAK Req for Row 318                   : 15694
+Finished at                           : Wed Mar 19 11:28:28 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:28 EDT 2025
+Creating requirement for Row #        : 319
+Requirement Name                      : Recipient object - ARD contact types
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 392
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.080
+Requirement Name                      : Recipient object - ARD contact types
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send E2 to all the active ARD contacts types (ERDI, II, & III). Member can have multiple active ERD I/II/III contacts at a time. In this scenario, the notice needs to be sent to all the active ERD I/II/III Contacts.
+SAK Req for Row 319                   : 15695
+Finished at                           : Wed Mar 19 11:28:32 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:32 EDT 2025
+Creating requirement for Row #        : 320
+Requirement Name                      : Recipient Object -Address Line 2 (Member)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 451
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.085
+Requirement Name                      : Recipient Object -Address Line 2 (Member)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member receiving notice does not have address line 2 information, do not send the line 2 tag in the JSON recipient object.
+SAK Req for Row 320                   : 15696
+Finished at                           : Wed Mar 19 11:28:35 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:35 EDT 2025
+Creating requirement for Row #        : 321
+Requirement Name                      : Recipient Object -Address Line 2 (Contact Types)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 426
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.086
+Requirement Name                      : Recipient Object -Address Line 2 (Contact Types)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the active ARD contacts [ERDI, ERDII, ERDIII] receiving notice do not have address line 2 information, do not send the line 2 tag in the JSON recipient object.
+SAK Req for Row 321                   : 15697
+Finished at                           : Wed Mar 19 11:28:39 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:39 EDT 2025
+Creating requirement for Row #        : 322
+Requirement Name                      : Recipient Object -Address Line 2 (Worker)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 706
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.087
+Requirement Name                      : Recipient Object -Address Line 2 (Worker)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member does not have address line 2 information, do not send the line 2 tag in the JSON recipient object for the worker copy.
+SAK Req for Row 322                   : 15698
+Finished at                           : Wed Mar 19 11:28:42 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:42 EDT 2025
+Creating requirement for Row #        : 323
+Validation Time(ms)                   : 391
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.090
+Requirement Name                      : Create E2 - PAYLOAD Object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "PAYLOAD" object to identify the E2 recipient & include the data elements in JSON Format. Since the template is driving what the dynamic fields are needed in PAYLOAD, Please refer to the attached E2 template for the data elements.
+
+NOTE: At the top of the template will have the mailing information (which will show in the envelope window). 
+[Mailing Name] {NOTE: This will include Member/ARD information listed as
+a) Member Name (listed as FirstName MiddleName LastName Suffix)
+b) ARD Name (listed as Contact Name)}
+[Address Line 1]
+[Address Line 2]
+[City, State Zip code]
+
+Date: [Month DD, YYYY of Notice creation]
+Notice ID: [New Sequential Notice ID] / [Notice Type]
+Member ID: [MMIS ID]
+SSN: [XXX-XX- last four digits] {NOTE: If the member does not have any SSN in MMIS, it will be sent as (xxx-xx-blank). CNS will display the value as "Not Available"}
+
+Attn: [ARD/PSI Name]
+Re: Notice sent to [ARD/PSI representee"s Name] { NOTE: The representee is the member that they are representing. Send "FirstName MiddleName LastName Suffix" for this field with different tag name}
+
+[FirstName MiddleName LastName Suffix],/ 
+[#EffectiveDateEng#]
+[#Healthplan#] 
+Member: [#FirstName MiddleName LastName Suffix#] NOTE: No need to send twice)
+[Masked DOB] {Send the DOB in this format XX/XX/YYYY}
+MassHealth ID: [MMIS ID ] (NOTE: No need to send twice)
+Health Plan: [#Healthplan#] 
+Start Date: [#EffectiveDateEng#] 
+Primary Care Provider: [#PmpNameTitleCase#] 
+[#PmpStreetAddress#] 
+[#PmpAddressLastLine#] 
+[#PmpPhoneHash#] 
+[#HealthplanPhoneNumber#]
+SAK Req for Row 323                   : 15699
+Finished at                           : Wed Mar 19 11:28:47 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:47 EDT 2025
+Creating requirement for Row #        : 324
+Requirement Name                      : PAYLOAD Object -addressLine2 (Member)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 386
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.092
+Requirement Name                      : PAYLOAD Object -addressLine2 (Member)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member receiving E2 notice does not have address line 2 information, do not send the line 2 tag in the JSON PAYLOAD object.
+SAK Req for Row 324                   : 15700
+Finished at                           : Wed Mar 19 11:28:50 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:50 EDT 2025
+Creating requirement for Row #        : 325
+Requirement Name                      : PAYLOAD Object -addressLine2 (Contact Types)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 397
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.093
+Requirement Name                      : PAYLOAD Object -addressLine2 (Contact Types)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the active contacts [ERDI, ERDII, ERDIII] receiving E2 notice do not have address line 2 information, do not send the line 2 tag in the JSON PAYLOAD object.
+SAK Req for Row 325                   : 15701
+Finished at                           : Wed Mar 19 11:28:53 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:53 EDT 2025
+Creating requirement for Row #        : 326
+Requirement Name                      : PAYLOAD Object -addressLine2 (Worker)
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 419
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.094
+Requirement Name                      : PAYLOAD Object -addressLine2 (Worker)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : If the member does not have address line 2 information, do not send the line 2 tag in the JSON PAYLOAD object for the worker copy.
+SAK Req for Row 326                   : 15702
+Finished at                           : Wed Mar 19 11:28:57 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:28:57 EDT 2025
+Creating requirement for Row #        : 327
+Requirement Name                      : Same Notice Template for Member/Contact
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 393
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.095
+Requirement Name                      : Same Notice Template for Member/Contact
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Member/Contact will have the same notice template. Member/contact will trigger the same notice template.
+SAK Req for Row 327                   : 15703
+Finished at                           : Wed Mar 19 11:29:00 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:00 EDT 2025
+Creating requirement for Row #        : 328
+Requirement Name                      : Payload - ARD/contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 420
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.100
+Requirement Name                      : Payload - ARD/contacts
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Do not send any tag in the payload for contacts if the member has no active contacts i.e.,  effective date NOT between t_re_contact.con_eff_date and t_re_contact.con_end_date.
+(NOTE: Notices should be sent on the effective date and/or the end date as well)
+SAK Req for Row 328                   : 15704
+Finished at                           : Wed Mar 19 11:29:03 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:03 EDT 2025
+Creating requirement for Row #        : 329
+Validation Time(ms)                   : 398
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.101
+Requirement Name                      : Payload - [#EffectiveDateEng#]
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the date [#EffectiveDateEng#] expected in this format MM/DD/YYYY. For e.g. 02/01/2025
+NOTE: Send the assignment effective date.
+SAK Req for Row 329                   : 15705
+Finished at                           : Wed Mar 19 11:29:06 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:06 EDT 2025
+Creating requirement for Row #        : 330
+Validation Time(ms)                   : 390
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.102
+Requirement Name                      : Payload - [#Healthplan#]  (MCO/ACO)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the MCO/ACO provider"s name for [healthplan] if the member is assigned to new MCO/ACO plans or transferred to different MCO/ACO plans including CarePlus (MSTD, MFAS, CRPLS, MSTDA, MFASA, CRPLA, ACOB/PCCB/CPCCB).
+SAK Req for Row 330                   : 15706
+Finished at                           : Wed Mar 19 11:29:09 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:09 EDT 2025
+Creating requirement for Row #        : 331
+Validation Time(ms)                   : 396
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.103
+Requirement Name                      : Payload - [#PmpNameTitleCase#] (PCP)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the PCP information in this tag if the member assigned to ACOA/MCO has PCP information.
+SAK Req for Row 331                   : 15707
+Finished at                           : Wed Mar 19 11:29:12 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:12 EDT 2025
+Creating requirement for Row #        : 332
+Validation Time(ms)                   : 395
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.103A
+Requirement Name                      : Payload - [#PmpNameTitleCase#] (PCCB/CPCCB)
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the PCCB/CPCCB provider"s information in this tag if the member is assigned to new ACOB plan or changed to different ACOB plan.
+SAK Req for Row 332                   : 15708
+Finished at                           : Wed Mar 19 11:29:15 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:15 EDT 2025
+Creating requirement for Row #        : 333
+Validation Time(ms)                   : 417
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.103B
+Requirement Name                      : Payload -[#PmpStreetAddress#]
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send  the PCP/PCCB/CPCCB provider"s street address in this tag. For e.g - 450 Montvale Ave
+SAK Req for Row 333                   : 15709
+Finished at                           : Wed Mar 19 11:29:18 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:18 EDT 2025
+Creating requirement for Row #        : 334
+Validation Time(ms)                   : 388
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.103C
+Requirement Name                      : Payload -[#PmpAddressLastLine#]
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send  the PCP/PCCB/CPCCB provider"s city, state &  zipcode. For e.g - Woburn, MA 01801
+SAK Req for Row 334                   : 15710
+Finished at                           : Wed Mar 19 11:29:22 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:22 EDT 2025
+Creating requirement for Row #        : 335
+Validation Time(ms)                   : 382
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.103D
+Requirement Name                      : Payload -[#PmpPhoneHash#]
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the PCP/PCCB/CPCCB provider"s number in this format e.g. (978) 544-7800
+SAK Req for Row 335                   : 15711
+Finished at                           : Wed Mar 19 11:29:25 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:25 EDT 2025
+Creating requirement for Row #        : 336
+Validation Time(ms)                   : 409
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.104
+Requirement Name                      : Do not send the tags
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Do not send the following tags in the JSON request, if the member enrolled to new ACOA & MCO plan does not have PCP assigned to him/her for CNS to be able to identify whether or not to display this section. Do not display the "Primary Care Section" if these tags are not included in the notice generation request.
+
+[#PmpNameTitleCase#] 
+[#PmpStreetAddress#] 
+[#PmpAddressLastLine#] 
+[#PmpPhoneHash#]
+SAK Req for Row 336                   : 15712
+Finished at                           : Wed Mar 19 11:29:28 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:28 EDT 2025
+Creating requirement for Row #        : 337
+Validation Time(ms)                   : 393
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.105
+Requirement Name                      : Payload - [#HealthplanPhoneNumber#]
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send ACOA/ACOB/MCO provider"s  phone number in this format e.g. (978) 544-7800
+SAK Req for Row 337                   : 15713
+Finished at                           : Wed Mar 19 11:29:32 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:32 EDT 2025
+Creating requirement for Row #        : 338
+Validation Time(ms)                   : 420
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.106
+Requirement Name                      : Create & send ACOA/MCO/ACOB identifier
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create and send identifiers "ACOA", "MCO", and "ACOB" for CNS to determine whether to display the conditional fragments wherever applicable.
+
+If the member is assigned to new ACOA, send ACOA identifier.
+If the member is assigned to new MCO, send MCO identifier.
+If the member is assigned to new ACOB, send ACOB identifier.
+
+NOTE: These are just the identifiers & should not be printed in the Notice.
+SAK Req for Row 338                   : 15714
+Finished at                           : Wed Mar 19 11:29:35 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:35 EDT 2025
+Creating requirement for Row #        : 339
+Validation Time(ms)                   : 412
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.106A
+Requirement Name                      : Display conditional fragment - ACOB
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Display the fragment below if the member is enrolled in an ACOB & there is an identifier "ACOB" present in the JSON request. 
+[a Primary Care Accountable Care Organization, a type of accountable care organization (ACO)]
+
+NOTE: The rest of the other 2 conditional fragments should not be printed in the NOTICE.
+SAK Req for Row 339                   : 15715
+Finished at                           : Wed Mar 19 11:29:38 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:38 EDT 2025
+Creating requirement for Row #        : 340
+Validation Time(ms)                   : 404
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.106B
+Requirement Name                      : Display conditional fragment - ACOA
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Display the fragment below if the member is enrolled in an ACOA & there is an identifier "ACOA" present in the JSON request. 
+[an Accountable Care Partnership Plan, a type of accountable care organization (ACO)]
+
+NOTE: The rest of the other 2 conditional fragments should not be printed in the NOTICE.
+SAK Req for Row 340                   : 15716
+Finished at                           : Wed Mar 19 11:29:41 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:41 EDT 2025
+Creating requirement for Row #        : 341
+Validation Time(ms)                   : 369
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.106C
+Requirement Name                      : Display conditional fragment - MCO
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Display the fragment below if the member is enrolled in an MCO & there is an identifier "MCO" present in the JSON request. 
+[a managed care organization (MCO)]. 
+
+NOTE: The rest of the other 2 conditional fragments should not be printed in the NOTICE.
+SAK Req for Row 341                   : 15717
+Finished at                           : Wed Mar 19 11:29:45 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:45 EDT 2025
+Creating requirement for Row #        : 342
+Validation Time(ms)                   : 460
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.107
+Requirement Name                      : PAYLOAD - [#PmpPhoneHash#] special condition
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Send the ACOA/MCO provider"s phone number in this tag [#PmpPhoneHash#] if the member enrolled to ACOA or MCO does not have PCP assigned to him/her & ensure it is populated in this section only.
+SAK Req for Row 342                   : 15718
+Finished at                           : Wed Mar 19 11:29:48 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:48 EDT 2025
+Creating requirement for Row #        : 343
+Validation Time(ms)                   : 427
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.108A
+Requirement Name                      : Display conditional verbiage #1 (ACOA/MCO)
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Display condition text about changing your PCP if the member is in an ACOA/MCO plan.
+SAK Req for Row 343                   : 15719
+Finished at                           : Wed Mar 19 11:29:51 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:51 EDT 2025
+Creating requirement for Row #        : 344
+Validation Time(ms)                   : 419
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.108B
+Requirement Name                      : Display conditional verbiage #2 (ACOB)
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Display condition text about changing your PCP if the member is enrolled into ACOB plan & the identifier "ACOB" is present in the JSON request.
+SAK Req for Row 344                   : 15720
+Finished at                           : Wed Mar 19 11:29:54 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:54 EDT 2025
+Creating requirement for Row #        : 345
+Requirement Name                      : Send notice to contacts
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 400
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.109
+Requirement Name                      : Send notice to contacts
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Add logic to check if the member has any active ARD contacts assigned i.e., eff date between t_re_contact.con_eff_date and t_re_contact.con_end_date . If there is information, send the notice to active ARD contacts (ERDI, II & III) along with the member. In this scenario, 2 or more letter requests should be sent to CNS. One addressing member & other addressing  contacts. Send the delivery "type" as "PAPER", print Type as "Regular" & "Language" as "English". (Default)
+
+NOTE: Notices should be sent on the effective date and/or the end date as well)
+SAK Req for Row 345                   : 15721
+Finished at                           : Wed Mar 19 11:29:58 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:29:58 EDT 2025
+Creating requirement for Row #        : 346
+Requirement Name                      : Make contact types configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 417
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.110
+Requirement Name                      : Make contact types configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make the contact types configurable so that other contact types can be added in the future as per business needs. 
+
+NOTE:  E2 Notice will be sent to active ARDs (ERDI, II & III)
+SAK Req for Row 346                   : 15722
+Finished at                           : Wed Mar 19 11:30:02 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:30:02 EDT 2025
+Creating requirement for Row #        : 347
+Validation Time(ms)                   : 473
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.115
+Requirement Name                      : Create [E2]- INSERTS object
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Create "INSERTS" object to identify the E2 recipient"s insert.
+Include the following data element:
+
+inserts (group#)
+Group# 2 - (Babel + Fair Hearing Form)
+SAK Req for Row 347                   : 15723
+Finished at                           : Wed Mar 19 11:30:06 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:30:06 EDT 2025
+Creating requirement for Row #        : 348
+Requirement Name                      : Make Inserts Groups configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 421
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.115A
+Requirement Name                      : Make Inserts Groups configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make Inserts Groups a configurable change so the new groups can be added in the future as per business needs.
+SAK Req for Row 348                   : 15724
+Finished at                           : Wed Mar 19 11:30:09 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:30:09 EDT 2025
+Creating requirement for Row #        : 349
+Requirement Name                      : Make delivery type configurable
+Requirement Name Validation           : Requirement name already exists
+Validation Time(ms)                   : 413
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.120
+Requirement Name                      : Make delivery type configurable
+Requirement Type                      : Batch
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : Make delivery types configurable. If delivery type is edelivery (EMAIL/SMS) or there is no delivery type selected by a member then use the default value of PAPER.
+
+NOTE:  edelivery will be implemented post Group 4 CNS implementation so default will change.
+SAK Req for Row 349                   : 15725
+Finished at                           : Wed Mar 19 11:30:12 EDT 2025
+*****************************************************************
+Started at                            : Wed Mar 19 11:30:12 EDT 2025
+Creating requirement for Row #        : 350
+Validation Time(ms)                   : 443
+Requirement Validation status         : PASS
+Requirement ID                        : 38653.E2.130
+Requirement Name                      : Notice Type "E2" Suppression via intake process
+Requirement Type                      : Informational
+Requirement Subsystem                 : Managed Care
+Requirement Narrative                 : MMIS shall implement a logic to exclude members from the CNS Notice Trigger table based on the new Notice Suppression Table before executing the Notice generation job for Notice type "E2". No JSON Payload request should go out to CNS for the members in the new Notice Suppression Table.
+SAK Req for Row 350                   : 15726
+Finished at                           : Wed Mar 19 11:30:15 EDT 2025
+*****************************************************************
+
+
+
+Total time for loading(ms)            : 194446
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 19/Mar/2025 11:30:16AM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

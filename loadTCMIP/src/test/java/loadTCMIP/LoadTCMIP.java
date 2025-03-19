@@ -54,7 +54,7 @@ public class LoadTCMIP {
 	private boolean linkReqToTC = true;
 	private final boolean linkNBToTC = true;
 	private boolean submitData;
-	private static Instant startLoadingTestCases, finishLoadingTestCases;
+	private static Instant startMIPLoading, finishMIPLoading;
 	private final DateFormat dateFormat2 = new SimpleDateFormat("dd/MMM/yyyy hh:mm:ssaa");
 	private final String logsDirectory = System.getProperty("user.dir") + File.separator + "Logs";
 	private final String outputFormat = "%-38s: %s";
@@ -109,10 +109,10 @@ public class LoadTCMIP {
 	@Test
 	private void enterTC() {
 
-		try {
-			System.out.println("*****************************************************************");
+		try {			
 			dataList = CommonUtils.getTCReqData(testCaseSql, 14, CommonUtils.getDBConnection(), testCaseDataMessage);
 			if (dataList != null && isSubmitData()) {
+				System.out.println("*****************************************************************");
 				CommonUtils.setReplaceType("tc");
 				System.out.println(String.format(outputFormat, "Link Notebook/Business Function", linkNBToTC));
 				System.out.println(String.format(outputFormat, "Link Requirement", linkReqToTC));
@@ -248,11 +248,10 @@ public class LoadTCMIP {
 					linkTCToWI = linkWIToTC;
 					System.out.println(String.format(outputFormat, "Finished at", new Date().toString()));
 				}
-			}
-			System.out.println("*****************************************************************");
-			System.out.println();
-			System.out.println();
-			System.out.println();
+				System.out.println("*****************************************************************");
+				System.out.println();
+				System.out.println();
+			}			
 		} catch (Exception e) {
 			CommonUtils.setJobAbend(true);
 			CommonUtils.sshot(driver);
@@ -288,9 +287,9 @@ public class LoadTCMIP {
 
 		try {
 			driver.findElement(By.linkText("Requirements")).click();
-			System.out.println("*****************************************************************");
 			dataList = CommonUtils.getTCReqData(reqSql, 8, CommonUtils.getDBConnection(), reqDataMessage);
 			if (dataList != null && isSubmitData()) {
+				System.out.println("*****************************************************************");
 				CommonUtils.setReplaceType("req");
 				String reqRow, idReq, nameReq, typeReq, subsystemReq, rtmReq, narrativeReq, namOwnerReq, SelSql, UpdSql;
 				Alert alert;
@@ -350,23 +349,72 @@ public class LoadTCMIP {
 							alert = driver.switchTo().alert();
 							alert.accept();
 						} else {
-							Instant finish = Instant.now();
-							long execTime = Duration.between(start, finish).toMillis();
-							System.out.println(String.format(outputFormat, "Validation Time(ms)", execTime));
-							SelSql = selectReqSql + reqRow;
-							UpdSql = "update load_req set ind_status = 'F' where req_row = " + reqRow;
-							CommonUtils.updateLoadTableData(SelSql, "REQ_ROW", UpdSql);
-							System.out.println(String.format(outputFormat, "Requirement Validation status", "FAIL"));
+							if(!CommonUtils.isReqIDExist()) {
+								Instant finish = Instant.now();
+								long execTime = Duration.between(start, finish).toMillis();
+								System.out.println(String.format(outputFormat, "Validation Time(ms)", execTime));
+								SelSql = selectReqSql + reqRow;
+								UpdSql = "update load_req set ind_status = 'F' where req_row = " + reqRow;
+								CommonUtils.updateLoadTableData(SelSql, "REQ_ROW", UpdSql);
+								System.out.println(String.format(outputFormat, "Requirement Validation status", "FAIL"));
+							} else {
+								driver.findElement(By.linkText("Search")).click();
+								driver.findElement(By.xpath("//input[contains(@name,'ReqId') and @size = '20']")).clear();
+								driver.findElement(By.xpath("//input[contains(@name,'ReqId') and @size = '20']")).sendKeys(idReq);
+								driver.findElement(By.xpath("//input[contains(@name,'ReqName') and @size = '40']")).clear();
+								driver.findElement(By.xpath("//input[contains(@name,'ReqName') and @size = '40']")).sendKeys(nameReq);
+								driver.findElement(By.xpath("//input[@value = 'Search' and @type = 'submit']")).click();
+								driver.switchTo().frame("dot_ReqQuery");
+								driver.findElement(By.xpath("//a[text() = '" + idReq + "']")).click();
+								driver.switchTo().defaultContent();
+								driver.findElement(By.xpath("//input[contains(@name,'ReqIdUpd') and @type = 'text' and @size = '20']")).clear();
+								driver.findElement(By.xpath("//input[contains(@name,'ReqIdUpd') and @type = 'text' and @size = '20']")).sendKeys(idReq);
+								System.out.println(String.format(outputFormat, "Requirement ID", idReq));
+								driver.findElement(By.xpath("//input[contains(@name,'ReqNameUpd')]")).clear();
+								driver.findElement(By.xpath("//input[contains(@name,'ReqNameUpd')]")).sendKeys(nameReq);
+								System.out.println(String.format(outputFormat, "Requirement Name", nameReq));
+								new Select(driver.findElement(By.xpath("//select[contains(@name,'ReqTypeSak')]"))).selectByVisibleText(typeReq);
+								System.out.println(String.format(outputFormat, "Requirement Type", typeReq));
+								new Select(driver.findElement(By.xpath("//select[contains(@name,'SubsystemSak')]"))).selectByVisibleText(subsystemReq);
+								System.out.println(String.format(outputFormat, "Requirement Subsystem", subsystemReq));
+								if(!rtmReq.equals("")) {
+									new Select(driver.findElement(By.xpath("//select[contains(@name,'RtmSak')]"))).selectByValue(rtmReq);
+									System.out.println(String.format(outputFormat, "Requirement RTM", rtmReq));
+								}
+								driver.findElement(By.xpath("//textarea[contains(@name,'ReqDsc')]")).clear();
+								driver.findElement(By.xpath("//textarea[contains(@name,'ReqDsc')]")).sendKeys(narrativeReq);
+								System.out.println(String.format(outputFormat, "Requirement Narrative", narrativeReq));
+								driver.findElement(By.xpath("//input[@value = 'Update Requirement']")).click();
+								Thread.sleep(150);
+								wait.until(ExpectedConditions.alertIsPresent());
+								alert = driver.switchTo().alert();
+								alert.accept();
+								sakReq = driver.findElement(By.xpath("//td[contains(@id,'contentWindow')]//table/tbody/tr[2]/td[4]")).getText().trim();
+								System.out.println(String.format(outputFormat, "SAK Req for Row " + reqRow, sakReq));
+								SelSql = selectReqSql + reqRow;
+								UpdSql = "update load_req set ind_status = 'P', dte_loaded = to_char(sysdate, 'yyyymmdd'), sak_req = " + sakReq + " where req_row = " + reqRow;
+								CommonUtils.updateLoadTableData(SelSql, "REQ_ROW", UpdSql);
+								driver.findElement(By.partialLinkText("Status")).click();
+								driver.findElement(By.xpath("//img[@src='../../images/edit16.gif']")).click();
+								driver.switchTo().frame("dot_editForm");
+								new Select(driver.findElement(By.xpath("//select[contains(@name,'StatusOwnerSak')]"))).selectByVisibleText(namOwnerReq);
+								driver.findElement(By.xpath("//input[@value = 'Update Status']")).click();
+								Thread.sleep(150);
+								wait.until(ExpectedConditions.alertIsPresent());
+								alert = driver.switchTo().alert();
+								alert.accept();
+							}
 						}
 						driver.switchTo().defaultContent();
 					}
+					
 					System.out.println(String.format(outputFormat, "Finished at", new Date().toString()));
 				}
+				System.out.println("*****************************************************************");
+				System.out.println();
+				System.out.println();
+				CommonUtils.insertCoReqXref();
 			}
-			System.out.println("*****************************************************************");
-			System.out.println();
-			System.out.println();
-			System.out.println();
 		} catch (Exception e) {
 			CommonUtils.setJobAbend(true);
 			CommonUtils.sshot(driver);
@@ -413,7 +461,7 @@ public class LoadTCMIP {
 			System.out.println(String.format(outputFormat, "Last Modified Date", lastModifiedDate));
 			System.out.println(String.format(outputFormat, "Override TC Validation", testCaseOverrideValidation));
 			System.out.println(String.format(outputFormat, "Override Req Validation", reqOverrideValidation));
-			System.out.println(String.format(outputFormat, "Submit Data", submitData));
+			System.out.println(String.format(outputFormat, "Submit Data", submitData));			
 			colNames.add("HOST_URL");
 			colNames.add("USER_ID");
 			colNames.add("MIP_KEY");
@@ -515,9 +563,16 @@ public class LoadTCMIP {
 			}
 		});
 		logout.click();
-		finishLoadingTestCases = Instant.now();
-		long execTime = Duration.between(startLoadingTestCases, finishLoadingTestCases).toMillis();
-		System.out.println(String.format(outputFormat, "Total time for loading(ms)", execTime));
+		finishMIPLoading = Instant.now();
+		long execTimeMilliSecs = Duration.between(startMIPLoading, finishMIPLoading).toMillis();
+		Duration d = Duration.between(startMIPLoading, finishMIPLoading);
+		long execTimeMinPart =  d.toMinutesPart();
+		long execTimeSecsPart = d.minusMinutes(execTimeMinPart).getSeconds();
+		System.out.println(String.format(outputFormat, "Total time for loading(ms)", execTimeMilliSecs));
+		System.out.println(String.format(outputFormat, "Total time for loading(sec)", d.getSeconds()));
+		System.out.println(String.format(outputFormat, "Total time for loading(min)", execTimeMinPart + "Min" + execTimeSecsPart + "Sec"));
+		System.out.println();
+		System.out.println();
 		System.out.println("****************************************************");
 		System.out.println("*****************                  *****************");
 		System.out.println("***********                              ***********");
@@ -574,7 +629,7 @@ public class LoadTCMIP {
 	@BeforeSuite
 	private void beforeSuite() throws IOException {
 
-		startLoadingTestCases = Instant.now();
+		startMIPLoading = Instant.now();
 		DateFormat dateFormat = new SimpleDateFormat("dd_MMM_yyyy_hh_mm_ssaa");
 		File logsFolder = new File(logsDirectory);
 		if (!logsFolder.exists()) {

@@ -37,7 +37,7 @@ import org.openqa.selenium.WebDriver;
 public class CommonUtils {
 
 	private static Connection connection1 = null;
-	private static boolean emailHighImp = false, jobAbend = false, logDebugMsgs, testCaseOverrideValidation, reqOverrideValidation;
+	private static boolean emailHighImp = false, jobAbend = false, logDebugMsgs, testCaseOverrideValidation, reqOverrideValidation, reqIDExist;
 	private static final String outputFormat = "%-38s: %s";
 	private static final String reqTCValidationMessage = "Verify Requirement ID for the Test case";
 	private static final String subsystemTCValidationMessage = "Verify Subsystem for the Test case";
@@ -60,6 +60,14 @@ public class CommonUtils {
 	private static final String sshotPath = System.getProperty("user.dir") + "\\Screenshots\\";
 	private static Instant start, finish;
 	private static String replaceType;
+
+	public static boolean isReqIDExist() {
+		return reqIDExist;
+	}
+
+	public static void setReqIDExist(boolean reqIDExist) {
+		CommonUtils.reqIDExist = reqIDExist;
+	}
 
 	private static boolean isEmailHighImp() {
 		return emailHighImp;
@@ -231,9 +239,9 @@ public class CommonUtils {
 		boolean subsystemStatus = false;
 		boolean groupingStatus = false;
 		boolean bfStatus = false;
-		boolean envStatus = false;
+		boolean envStatus = false;		
 		if(req != 1 && !(idReq.equals(""))) {
-			System.out.println(String.format(outputFormat, "Requirement", idReq));
+			System.out.println(String.format(outputFormat, "Requirement", idReq));			
 			System.out.println(String.format(outputFormat, "Requirement Validation", reqTCValidationMessage));
 			reqStatus = true;
 		}
@@ -326,6 +334,7 @@ public class CommonUtils {
 		boolean subsystemReqStatus = false;
 		boolean rtmReqStatus = false;
 		boolean namOwnerReqStatus = false;
+		setReqIDExist(false);
 		if(idReqCount != 0 && !(idReq.equals(""))) {
 			System.out.println(String.format(outputFormat, "Requirement ID", idReq));
 			System.out.println(String.format(outputFormat, "Requirement ID Validation", idReqValidationMessage));
@@ -355,11 +364,15 @@ public class CommonUtils {
 			System.out.println(String.format(outputFormat, "Requirement Owner", rtmReq));
 			System.out.println(String.format(outputFormat, "Requirement Owner Validation", namOwnerReqValidationMessage));
 			namOwnerReqStatus = true;
-		}
-		if(idReqStatus || nameReqStatus || typeReqStatus || subsystemReqStatus || rtmReqStatus || namOwnerReqStatus) {
+		}				
+		if(nameReqStatus || typeReqStatus || subsystemReqStatus || rtmReqStatus || namOwnerReqStatus) {
 			if(!isReqOverrideValidation()) {
 				return false;
 			}
+		}
+		if(idReqStatus) {
+			setReqIDExist(true);
+			return false;
 		}
 		return true;
 	}
@@ -423,6 +436,7 @@ public class CommonUtils {
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			System.out.println(String.format(outputFormat, "Screenshot Path", sshotPath));
 			FileUtils.copyFile(scrFile, new File(sshotPath + dateFormat.format(new Date()) + ".png"));
+			System.out.println("*****************************************************************");
 		} catch (Exception e) {
 			e.getMessage();
 		}
@@ -458,6 +472,7 @@ public class CommonUtils {
 		ResultSet resultSet = null;
 		conn.setReadOnly(true);
 		statement = conn.createStatement();
+		System.out.println("*****************************************************************");
 		System.out.println(String.format(outputFormat, "SQL Statement", sqlStatement));
 		System.out.println(String.format(outputFormat, "No.of Cols", noOfCols));
 		start = Instant.now();
@@ -469,6 +484,7 @@ public class CommonUtils {
 		int i, counter = 0;
 		if (!(resultSet.isBeforeFirst())) {
 			System.out.println(String.format(outputFormat, "Total No.of Rows fetched", counter));
+			System.out.println("*****************************************************************");
 			System.out.println();
 			System.out.println("****************************************************");
 			System.out.println("*****************                  *****************");
@@ -491,6 +507,7 @@ public class CommonUtils {
 			counter++;
 		}
 		System.out.println(String.format(outputFormat, "Total No.of Rows fetched", counter));
+		System.out.println();
 		statement.close();
 		resultSet.close();
 		return rowList;
@@ -534,6 +551,40 @@ public class CommonUtils {
 		if (!(colValues.get(0).equals("null"))) {
 			statement.executeUpdate(UpdSql);
 		}
+		statement.close();
+	}
+	
+	/************************************************************************/
+	/*                                                                      */
+	/* Function Name: insertCoReqXref()                                     */
+	/*                                                                      */
+	/*   Description: This function links requirements to work items        */
+	/*                                                                      */
+	/*    Parameters: None                                                  */
+	/*                                                                      */
+	/*       Returns: None                                                  */
+	/*                                                                      */
+	/************************************************************************/
+	/*                       MODIFICATION LOG                               */
+	/************************************************************************/
+	/* Date      A.E. Name       Description                                */
+	/* --------  --------------  ------------------------------------------ */
+	/* 03/19/25  R.Vattumilli    Initial Creation of insertCoReqXref()      */
+	/*                                                                      */
+	/************************************************************************/
+	
+	public static void insertCoReqXref() throws SQLException {
+
+		Connection connection = getDBConnection();
+		Statement statement = connection.createStatement();
+		String insertSql = "insert into co_req_xref select wi_req, sak_req, null, null, null from load_req a where ind_status = 'P' and "
+						+ "dte_loaded = to_char(sysdate, 'yyyymmdd') and not exists (select 1 from co_req_xref where sak_req = a.sak_req and sak_csr = a.wi_req)";
+		if(isLogDebugMsgs()) {
+			System.out.println(String.format(outputFormat, "Function", "insertCoReqXref()"));
+			System.out.println(String.format(outputFormat, "Insert SQL", insertSql));
+		}
+		int rowsInserted = statement.executeUpdate(insertSql);
+		System.out.println(String.format(outputFormat, "Rows Inserted", rowsInserted));
 		statement.close();
 	}
 
