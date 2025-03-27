@@ -3,17 +3,16 @@
 <suite name="LoadTCMIP">
 	<parameter name = "emailRecips" value = "false" />
 	<parameter name = "browser" value = "chrome" />
-	<parameter name = "logDebugMsgs" value = "false" />
+	<parameter name = "logDebugMsgs" value = "true" />
 	<parameter name = "reqOverrideValidation" value = "true" />
 	<parameter name = "testCaseOverrideValidation" value = "false" />
 	<parameter name = "submitData" value = "true" />
-	<parameter name = "lastModifiedDate" value = "03/19/2025" />
+	<parameter name = "lastModifiedDate" value = "03/27/2025" />
 	<test name="Load TC in MIP" preserve-order="true">
 		<classes>
 			<class name="loadTCMIP.LoadTCMIP">
 				<methods>
-					<include name="enterTC" />
-					<include name="enterReq" />
+					<include name="enterTCReq" />
 				</methods> <!-- Method -->
 			</class> <!-- Class -->
 		</classes> <!-- Classes -->

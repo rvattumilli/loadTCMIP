@@ -109,7 +109,7 @@ public class CommonUtils {
 		CommonUtils.jobAbend = jobAbend;
 	}
 	
-	private static boolean isLogDebugMsgs() {
+	public static boolean isLogDebugMsgs() {
 		return logDebugMsgs;
 	}
 
@@ -365,7 +365,12 @@ public class CommonUtils {
 			System.out.println(String.format(outputFormat, "Requirement Owner Validation", namOwnerReqValidationMessage));
 			namOwnerReqStatus = true;
 		}				
-		if(nameReqStatus || typeReqStatus || subsystemReqStatus || rtmReqStatus || namOwnerReqStatus) {
+		/*if(nameReqStatus || typeReqStatus || subsystemReqStatus || rtmReqStatus || namOwnerReqStatus) {
+			if(!isReqOverrideValidation()) {
+				return false;
+			}
+		}*/
+		if(nameReqStatus) {
 			if(!isReqOverrideValidation()) {
 				return false;
 			}
@@ -462,7 +467,7 @@ public class CommonUtils {
 	/*                                                                      */
 	/************************************************************************/
 
-	public static ArrayList<String[]> getTCReqData(String sqlStatement, int noOfCols, Connection conn, String message) throws Exception {
+	public static ArrayList<String[]> getTCReqData(String sqlStatement, int noOfCols, Connection conn) throws Exception {
 
 		if(isLogDebugMsgs()) {
 			System.out.println(String.format(outputFormat, "Function", "getTCReqData()"));
@@ -486,14 +491,6 @@ public class CommonUtils {
 			System.out.println(String.format(outputFormat, "Total No.of Rows fetched", counter));
 			System.out.println("*****************************************************************");
 			System.out.println();
-			System.out.println("****************************************************");
-			System.out.println("*****************                  *****************");
-			System.out.println("***********                              ***********");
-			System.out.println("*****" + message + "*****");
-			System.out.println("***********                              ***********");
-			System.out.println("*****************                  *****************");
-			System.out.println("****************************************************");
-			System.out.println();
 			statement.close();
 			resultSet.close();
 			return null;
@@ -507,10 +504,22 @@ public class CommonUtils {
 			counter++;
 		}
 		System.out.println(String.format(outputFormat, "Total No.of Rows fetched", counter));
-		System.out.println();
 		statement.close();
 		resultSet.close();
 		return rowList;
+	}
+	
+	public static void printNoDataMessage (String message) {
+
+		System.out.println();
+		System.out.println("****************************************************");
+		System.out.println("*****************                  *****************");
+		System.out.println("***********                              ***********");
+		System.out.println("*****" + message + "*****");
+		System.out.println("***********                              ***********");
+		System.out.println("*****************                  *****************");
+		System.out.println("****************************************************");
+		System.out.println();
 	}
 
 	/************************************************************************/
@@ -558,7 +567,7 @@ public class CommonUtils {
 	/*                                                                      */
 	/* Function Name: insertCoReqXref()                                     */
 	/*                                                                      */
-	/*   Description: This function links requirements to work items        */
+	/*   Description: This function links requirements to WI/Defect/CO      */
 	/*                                                                      */
 	/*    Parameters: None                                                  */
 	/*                                                                      */
@@ -577,14 +586,14 @@ public class CommonUtils {
 
 		Connection connection = getDBConnection();
 		Statement statement = connection.createStatement();
-		String insertSql = "insert into co_req_xref select wi_req, sak_req, null, null, null from load_req a where ind_status = 'P' and "
-						+ "dte_loaded = to_char(sysdate, 'yyyymmdd') and not exists (select 1 from co_req_xref where sak_req = a.sak_req and sak_csr = a.wi_req)";
+		String insertSql = "insert into doco.co_req_xref select wi_req, sak_req, null, null, null from load_req a where ind_status = 'P' and "
+						+ "dte_loaded = to_char(sysdate, 'yyyymmdd') and not exists (select 1 from doco.co_req_xref where sak_req = a.sak_req and sak_csr = a.wi_req)";
 		if(isLogDebugMsgs()) {
 			System.out.println(String.format(outputFormat, "Function", "insertCoReqXref()"));
 			System.out.println(String.format(outputFormat, "Insert SQL", insertSql));
 		}
 		int rowsInserted = statement.executeUpdate(insertSql);
-		System.out.println(String.format(outputFormat, "Rows Inserted", rowsInserted));
+		System.out.println(String.format(outputFormat, "Total Reqs linked to WI/Defect/CO", rowsInserted));
 		statement.close();
 	}
 

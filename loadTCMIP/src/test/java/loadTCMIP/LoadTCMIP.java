@@ -72,6 +72,8 @@ public class LoadTCMIP {
 										+ "upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc";
 	private final String reqSql = "select a.req_row, replace(a.id_req, CHR(9),'') id_req, replace(a.name_req, CHR(9),'') name_req, a.type_req, a.subsystem_req, nvl(a.rtm_req, ' '), replace(a.narrative_req, CHR(9),'') narrative_req, "
 								+ "trim(b.nam_owner) nam_owner from load_req a, object_owner b where a.sak_req is null and upper(b.nam_owner) = upper(a.owner_req) and a.ind_status != 'P' order by a.req_row asc";
+	private final String getTestCaseCountSql = "select count(*) count from load_tc where testcase_id is null and ind_status != 'P'";
+	private final String getReqCountSql = "select count(*) count from load_req where sak_req is null and ind_status != 'P'";
 
 	public boolean isSubmitData() {
 		return submitData;
@@ -106,11 +108,10 @@ public class LoadTCMIP {
 	/*                                                                      */
 	/************************************************************************/
 
-	@Test
 	private void enterTC() {
 
-		try {			
-			dataList = CommonUtils.getTCReqData(testCaseSql, 14, CommonUtils.getDBConnection(), testCaseDataMessage);
+		try {
+			dataList = CommonUtils.getTCReqData(testCaseSql, 14, CommonUtils.getDBConnection());
 			if (dataList != null && isSubmitData()) {
 				System.out.println("*****************************************************************");
 				CommonUtils.setReplaceType("tc");
@@ -171,7 +172,7 @@ public class LoadTCMIP {
 							wait.until(ExpectedConditions.alertIsPresent());
 							alert = driver.switchTo().alert();
 							alert.accept();
-							tcID = driver.findElement(By.xpath("//input[contains(@name,'TcSak')]")).getAttribute("value").trim();
+							tcID = driver.findElement(By.xpath("//input[contains(@name,'TcSak')]")).getDomAttribute("value").trim();
 							System.out.println(String.format(outputFormat, "Test Case ID for Row " + tcRow, tcID));
 							SelSql = selectTestCaseSql + tcRow;
 							UpdSql = "update load_tc set ind_status = 'P', testcase_id = '" + tcID + "' where tc_row = " + tcRow;
@@ -251,14 +252,14 @@ public class LoadTCMIP {
 				System.out.println("*****************************************************************");
 				System.out.println();
 				System.out.println();
-			}			
+			}
 		} catch (Exception e) {
 			CommonUtils.setJobAbend(true);
 			CommonUtils.sshot(driver);
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	/************************************************************************/
 	/*                                                                      */
 	/* Function Name: enterReq()                                            */
@@ -281,13 +282,12 @@ public class LoadTCMIP {
 	/* 03/05/24  R.Vattumilli    Added switch to submit data                */
 	/*                                                                      */
 	/************************************************************************/
-	
-	@Test
+
 	private void enterReq() {
 
 		try {
 			driver.findElement(By.linkText("Requirements")).click();
-			dataList = CommonUtils.getTCReqData(reqSql, 8, CommonUtils.getDBConnection(), reqDataMessage);
+			dataList = CommonUtils.getTCReqData(reqSql, 8, CommonUtils.getDBConnection());
 			if (dataList != null && isSubmitData()) {
 				System.out.println("*****************************************************************");
 				CommonUtils.setReplaceType("req");
@@ -308,10 +308,10 @@ public class LoadTCMIP {
 					System.out.println(String.format(outputFormat, "Started at", new Date().toString()));
 					if (dataList.size() > 0) {
 						System.out.println(String.format(outputFormat, "Creating requirement for Row #", reqRow));
-						Instant start = Instant.now();
+						Instant startValidation = Instant.now();
 						if(CommonUtils.validateReqData(idReq, nameReq, typeReq, subsystemReq, rtmReq, namOwnerReq)) {
-							Instant finish = Instant.now();
-							long execTime = Duration.between(start, finish).toMillis();
+							Instant finishValidation = Instant.now();
+							long execTime = Duration.between(startValidation, finishValidation).toMillis();
 							System.out.println(String.format(outputFormat, "Validation Time(ms)", execTime));
 							System.out.println(String.format(outputFormat, "Requirement Validation status", "PASS"));
 							driver.findElement(By.linkText("Add")).click();
@@ -350,14 +350,17 @@ public class LoadTCMIP {
 							alert.accept();
 						} else {
 							if(!CommonUtils.isReqIDExist()) {
-								Instant finish = Instant.now();
-								long execTime = Duration.between(start, finish).toMillis();
+								Instant finishValidation = Instant.now();
+								long execTime = Duration.between(startValidation, finishValidation).toMillis();
 								System.out.println(String.format(outputFormat, "Validation Time(ms)", execTime));
 								SelSql = selectReqSql + reqRow;
 								UpdSql = "update load_req set ind_status = 'F' where req_row = " + reqRow;
 								CommonUtils.updateLoadTableData(SelSql, "REQ_ROW", UpdSql);
 								System.out.println(String.format(outputFormat, "Requirement Validation status", "FAIL"));
 							} else {
+								Instant finishValidation = Instant.now();
+								long execTime = Duration.between(startValidation, finishValidation).toMillis();
+								System.out.println(String.format(outputFormat, "Validation Time(ms)", execTime));
 								driver.findElement(By.linkText("Search")).click();
 								driver.findElement(By.xpath("//input[contains(@name,'ReqId') and @size = '20']")).clear();
 								driver.findElement(By.xpath("//input[contains(@name,'ReqId') and @size = '20']")).sendKeys(idReq);
@@ -421,6 +424,67 @@ public class LoadTCMIP {
 			e.printStackTrace();
 		}
 	}
+	
+	/************************************************************************/
+	/*                                                                      */
+	/* Function Name: enterTCReq()                                          */
+	/*                                                                      */
+	/*   Description: This function gets count of test cases & reqs to load */
+	/*                and calls methods based on counts.                    */
+	/*                                                                      */
+	/*    Parameters: None                                                  */
+	/*                                                                      */
+	/*       Returns: None                                                  */
+	/*                                                                      */
+	/************************************************************************/
+	/*                       MODIFICATION LOG                               */
+	/************************************************************************/
+	/*                                                                      */
+	/* Date      A.E. Name       Description                                */
+	/* --------  --------------  ------------------------------------------ */
+	/* 03/20/25  R.Vattumilli    Initial Creation of enterTCReq()           */
+	/*                                                                      */		
+	/************************************************************************/
+	
+	@Test
+	private void enterTCReq() {
+
+		try {
+			int testCaseCount, reqCount;
+			ArrayList<String> colValues = new ArrayList<String>();
+			ArrayList<String> colNames = new ArrayList<String>();
+			colNames.add("COUNT");
+			colValues = CommonUtils.executeQuery(getTestCaseCountSql, colNames);
+			testCaseCount  = Integer.parseInt(colValues.get(0));
+			if (testCaseCount > 0) {
+				enterTC();
+			} else {
+				if (CommonUtils.isLogDebugMsgs()) {
+					System.out.println("****************************************************");
+					System.out.println(String.format(outputFormat, "Total No.of TC Rows fetched", testCaseCount));
+					System.out.println("****************************************************");
+					System.out.println();
+					CommonUtils.printNoDataMessage(testCaseDataMessage);
+				}
+			}
+			colNames.add("COUNT");
+			colValues = CommonUtils.executeQuery(getReqCountSql, colNames);
+			reqCount  = Integer.parseInt(colValues.get(0));
+			if (reqCount > 0) {
+				enterReq();
+			} else {
+				if (CommonUtils.isLogDebugMsgs()) {
+					System.out.println("****************************************************");
+					System.out.println(String.format(outputFormat, "Total No.of Req Rows fetched", reqCount));
+					System.out.println("****************************************************");
+					CommonUtils.printNoDataMessage(reqDataMessage);
+				}
+			}
+		} catch (Exception e) {
+			CommonUtils.setJobAbend(true);
+			e.printStackTrace();
+		}
+	}
 
 	/************************************************************************/
 	/*                                                                      */
@@ -461,7 +525,8 @@ public class LoadTCMIP {
 			System.out.println(String.format(outputFormat, "Last Modified Date", lastModifiedDate));
 			System.out.println(String.format(outputFormat, "Override TC Validation", testCaseOverrideValidation));
 			System.out.println(String.format(outputFormat, "Override Req Validation", reqOverrideValidation));
-			System.out.println(String.format(outputFormat, "Submit Data", submitData));			
+			System.out.println(String.format(outputFormat, "Submit Data", submitData));
+			System.out.println(String.format(outputFormat, "Log Debug Messages", logDebugMsgs));
 			colNames.add("HOST_URL");
 			colNames.add("USER_ID");
 			colNames.add("MIP_KEY");
@@ -546,7 +611,7 @@ public class LoadTCMIP {
 	/*                                                                      */
 	/* 12/05/21  R.Vattumilli    Add sendEmail(consoleLogFilePath)          */
 	/*                                                                      */
-	/* 11/19/22  R.Vattumilli    Added boolean to send email                */	
+	/* 11/19/22  R.Vattumilli    Added boolean to send email                */
 	/*                                                                      */
 	/* 03/18/25  R.Vattumilli    Added total time took for loading to log   */
 	/*                                                                      */
@@ -570,7 +635,8 @@ public class LoadTCMIP {
 		long execTimeSecsPart = d.minusMinutes(execTimeMinPart).getSeconds();
 		System.out.println(String.format(outputFormat, "Total time for loading(ms)", execTimeMilliSecs));
 		System.out.println(String.format(outputFormat, "Total time for loading(sec)", d.getSeconds()));
-		System.out.println(String.format(outputFormat, "Total time for loading(min)", execTimeMinPart + "Min" + execTimeSecsPart + "Sec"));
+		System.out.println(String.format(outputFormat, "Total time for loading(min)", execTimeMinPart + "Min " + execTimeSecsPart + "Sec"));
+		System.out.println("****************************************************");
 		System.out.println();
 		System.out.println();
 		System.out.println("****************************************************");
