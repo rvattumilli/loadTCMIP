@@ -111,6 +111,9 @@ public class LoadTCMIP {
 	private void enterTC() {
 
 		try {
+			if(CommonUtils.isLogDebugMsgs()) {
+				System.out.println(String.format(outputFormat, "Function", "enterTC()"));
+			}
 			dataList = CommonUtils.getTCReqData(testCaseSql, 14, CommonUtils.getDBConnection());
 			if (dataList != null && isSubmitData()) {
 				System.out.println("*****************************************************************");
@@ -286,6 +289,9 @@ public class LoadTCMIP {
 	private void enterReq() {
 
 		try {
+			if(CommonUtils.isLogDebugMsgs()) {
+				System.out.println(String.format(outputFormat, "Function", "enterReq()"));
+			}
 			driver.findElement(By.linkText("Requirements")).click();
 			dataList = CommonUtils.getTCReqData(reqSql, 8, CommonUtils.getDBConnection());
 			if (dataList != null && isSubmitData()) {
@@ -450,6 +456,9 @@ public class LoadTCMIP {
 	private void enterTCReq() {
 
 		try {
+			if(CommonUtils.isLogDebugMsgs()) {
+				System.out.println(String.format(outputFormat, "Function", "enterTCReq()"));
+			}
 			int testCaseCount, reqCount;
 			ArrayList<String> colValues = new ArrayList<String>();
 			ArrayList<String> colNames = new ArrayList<String>();
@@ -517,16 +526,20 @@ public class LoadTCMIP {
 	@BeforeTest
 	private void beforeTest(String browser, boolean logDebugMsgs, String lastModifiedDate, boolean testCaseOverrideValidation, boolean reqOverrideValidation, boolean submitData) {
 
-		try {
-			CommonUtils.setLogDebugMsgs(logDebugMsgs);
+		try {			
+			CommonUtils.setLogDebugMsgs(logDebugMsgs);			
 			CommonUtils.setTestCaseOverrideValidation(testCaseOverrideValidation);
 			CommonUtils.setReqOverrideValidation(reqOverrideValidation);
 			setSubmitData(submitData);
+			if(CommonUtils.isLogDebugMsgs()) {
+				System.out.println(String.format(outputFormat, "Function", "beforeTest()"));
+			}
 			System.out.println(String.format(outputFormat, "Last Modified Date", lastModifiedDate));
 			System.out.println(String.format(outputFormat, "Override TC Validation", testCaseOverrideValidation));
 			System.out.println(String.format(outputFormat, "Override Req Validation", reqOverrideValidation));
 			System.out.println(String.format(outputFormat, "Submit Data", submitData));
 			System.out.println(String.format(outputFormat, "Log Debug Messages", logDebugMsgs));
+			System.out.println("*****************************************************************");
 			colNames.add("HOST_URL");
 			colNames.add("USER_ID");
 			colNames.add("MIP_KEY");
@@ -621,6 +634,9 @@ public class LoadTCMIP {
 	@AfterTest
 	private void afterTest(boolean emailRecips) {
 
+		if(CommonUtils.isLogDebugMsgs()) {
+			System.out.println(String.format(outputFormat, "Function", "afterTest()"));
+		}
 		Wait<WebDriver> fluentWait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
 		WebElement logout = fluentWait.until(new Function<WebDriver, WebElement>() {
 			public WebElement apply(WebDriver driver) {
@@ -694,7 +710,7 @@ public class LoadTCMIP {
 
 	@BeforeSuite
 	private void beforeSuite() throws IOException {
-
+		
 		startMIPLoading = Instant.now();
 		DateFormat dateFormat = new SimpleDateFormat("dd_MMM_yyyy_hh_mm_ssaa");
 		File logsFolder = new File(logsDirectory);
@@ -742,6 +758,9 @@ public class LoadTCMIP {
 	@AfterSuite
 	private void afterSuite() throws SQLException {
 
+		if(CommonUtils.isLogDebugMsgs()) {
+			System.out.println(String.format(outputFormat, "Function", "afterSuite()"));
+		}
 		CommonUtils.closeConnection();
 	}
 }

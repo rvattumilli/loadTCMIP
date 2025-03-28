@@ -220,10 +220,7 @@ public class CommonUtils {
 								+ "case when (select count(*) from subsystem_area f where trim(f.nam) = '" + subsystemTC + "') = 1 then 1 else 0 end as subsystem, "
 								+ "case when (select count(*) from test_case_grouping g where trim(g.nam) = '" + groupingTC + "') = 1 then 1 else 0 end as grpng, "
 								+ "case when (select count(*) from groop h where trim(h.nam_group) = '" + bFunctionTC + "') = 1 then 1 else 0 end as bf, "
-								+ "case when (select count(*) from test_case_env i where trim(i.ind_environment) = '" + envTC + "') = 1 then 1 else 0 end as env from dual";
-		if(isLogDebugMsgs()) {
-			System.out.println(String.format(outputFormat, "Validate TC SQL", validateTCInfo));
-		}
+								+ "case when (select count(*) from test_case_env i where trim(i.ind_environment) = '" + envTC + "') = 1 then 1 else 0 end as env from dual";		
 		colNames.add("REQ");
 		colNames.add("SUBSYSTEM");
 		colNames.add("GRPNG");
@@ -311,10 +308,7 @@ public class CommonUtils {
 								+ "case when (select count(*) from requirement_type c where trim(c.nam) = '" + typeReq + "') = 1 then 1 else 0 end as TYPEREQSTATUS, "
 								+ "case when (select count(*) from subsystem_area d where trim(d.nam) = '" + subsystemReq + "') = 1 then 1 else 0 end as SUBSYSTEMREQSTATUS, "
 								+ "case when (select count(*) from rtm e where trim(e.sak_rtm) = '" + rtmReq + "') = 1 then 1 else 0 end as RTMREQSTATUS, "
-								+ "case when (select count(*) from object_owner f where ind_req_status = 'Y' and trim(f.nam_owner) = '" + namOwnerReq + "') = 1 then 1 else 0 end as NAMOWNERREQSTATUS from dual";
-		if(isLogDebugMsgs()) {
-			System.out.println(String.format(outputFormat, "Validate Req SQL", validateReqInfo));
-		}
+								+ "case when (select count(*) from object_owner f where ind_req_status = 'Y' and trim(f.nam_owner) = '" + namOwnerReq + "') = 1 then 1 else 0 end as NAMOWNERREQSTATUS from dual";		
 		colNames.add("IDREQSTATUS");
 		colNames.add("NAMEREQSTATUS");
 		colNames.add("TYPEREQSTATUS");
@@ -468,16 +462,16 @@ public class CommonUtils {
 	/************************************************************************/
 
 	public static ArrayList<String[]> getTCReqData(String sqlStatement, int noOfCols, Connection conn) throws Exception {
-
-		if(isLogDebugMsgs()) {
-			System.out.println(String.format(outputFormat, "Function", "getTCReqData()"));
-		}
+		
 		ArrayList<String[]> rowList = new ArrayList<String[]>();
 		Statement statement = null;
 		ResultSet resultSet = null;
 		conn.setReadOnly(true);
 		statement = conn.createStatement();
 		System.out.println("*****************************************************************");
+		if(isLogDebugMsgs()) {
+			System.out.println(String.format(outputFormat, "Function", "getTCReqData()"));
+		}
 		System.out.println(String.format(outputFormat, "SQL Statement", sqlStatement));
 		System.out.println(String.format(outputFormat, "No.of Cols", noOfCols));
 		start = Instant.now();
@@ -622,6 +616,9 @@ public class CommonUtils {
 
 	public static void sendEmail(String filePath) {
 
+		if(CommonUtils.isLogDebugMsgs()) {
+			System.out.println(String.format(outputFormat, "Function", "sendEmail()"));
+		}
 		ArrayList<String> colValues = new ArrayList<String>();
 		ArrayList<String> colNames = new ArrayList<String>();
 		ArrayList<String> suiteCompleteToRecipients = new ArrayList<String>();
