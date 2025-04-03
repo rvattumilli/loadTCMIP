@@ -1,0 +1,720 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 01/Apr/2025 01:28:10PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/28/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+Log Debug Messages                    : false
+*****************************************************************
+*****************************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 119
+Total No.of Rows fetched              : 30
+*****************************************************************
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Tue Apr 01 13:28:19 EDT 2025
+Creating test case for Row #          : 6206
+Validation Time(ms)                   : 429
+TC Validation status                  : PASS
+Short Desc                            : Send notice to CNS-T_CDE_NOTICE_TYPE
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : In table T_CDE_NOTICE_TYPE.ind_submit_cns is set to Y for ELG-6701-M  notice type.
+Expected Results                      : ELG-6701-M notices are written to CNS tables.
+Test Case ID for Row 6206             : 48784
+Requirement ID                        : 38185.BPD.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48784
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48784
+Finished at                           : Tue Apr 01 13:28:24 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:28:24 EDT 2025
+Creating test case for Row #          : 6207
+Validation Time(ms)                   : 391
+TC Validation status                  : PASS
+Short Desc                            : Send notice to Maximus
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : In table T_CDE_NOTICE_TYPE.ind_submit_cns is set to N for ELG-6701-M  notice type.
+Expected Results                      : No notices written to the CNS tables. Data written to T_LETTER_REQUEST table. Generate and validate the letter format in the base panel.
+Test Case ID for Row 6207             : 48785
+Requirement ID                        : 38185.BPD.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48785
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48785
+Finished at                           : Tue Apr 01 13:28:29 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:28:29 EDT 2025
+Creating test case for Row #          : 6208
+Validation Time(ms)                   : 407
+TC Validation status                  : PASS
+Short Desc                            : ELG-6701-M notice type does not exist in table T_CDE_NOTICE_TYPE.
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : In table T_CDE_NOTICE_TYPE there is no entry for  ELG-6701-M  notice type.
+Expected Results                      : No notices written to the CNS tables. Data written to T_LETTER_REQUEST table
+Test Case ID for Row 6208             : 48786
+Requirement ID                        : 38185.BPD.020
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48786
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48786
+Finished at                           : Tue Apr 01 13:28:35 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:28:35 EDT 2025
+Creating test case for Row #          : 6209
+Validation Time(ms)                   : 416
+TC Validation status                  : PASS
+Short Desc                            : Validate Metadata object
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Validate the following JSON data elements in the Metadata object.  notice id #New Sequential Notice ID# notice type (""ELG-6701-M"" ) Language priority (Use NORMAL) noticetobe replaced (optional field. MMIS can leave it off)
+Expected Results                      : JSON data elements in the Metadata object are populated correctly.
+Test Case ID for Row 6209             : 48787
+Requirement ID                        : 38185.BPD.030
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48787
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48787
+Finished at                           : Tue Apr 01 13:28:39 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:28:39 EDT 2025
+Creating test case for Row #          : 6210
+Validation Time(ms)                   : 440
+TC Validation status                  : PASS
+Short Desc                            : Metadata - Test default value as "en" for English language
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : The member should have a language preference of French or German.
+Expected Results                      : The Language JSON data element in the Metadata object should be "en" (English) as default.
+Test Case ID for Row 6210             : 48788
+Requirement ID                        : 38185.BPD.035
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48788
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48788
+Finished at                           : Tue Apr 01 13:28:44 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:28:44 EDT 2025
+Creating test case for Row #          : 6211
+Validation Time(ms)                   : 450
+TC Validation status                  : PASS
+Short Desc                            : Metadata - member language is spanish and worker
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Member preferred language is "es" (Spanish). Member has no active ARD.
+Expected Results                      : Verify non-English written language has two notice requests generated in tables T_CNS_NOTICE and T_CNS_NOTICE_RECIP one for member in chosen written language (SPANISH) , delivery type = Print , print type = Regular and one for worker in English (no delivery).
+Test Case ID for Row 6211             : 48789
+Requirement ID                        : 38185.BPD.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48789
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48789
+Finished at                           : Tue Apr 01 13:28:49 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:28:49 EDT 2025
+Creating test case for Row #          : 6212
+Validation Time(ms)                   : 477
+TC Validation status                  : PASS
+Short Desc                            : Metadata - member language is spanish and active contact
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Member preferred language is "es" (Spanish). Member has  active ARD (ERD I,II or III)
+Expected Results                      : Verify non-English written language has 3 notice requests generated in tables T_CNS_NOTICE and T_CNS_NOTICE_RECIP. 1. One for member in chosen written language (SPANISH) , delivery type = Print , print type = Regular  2. One for worker in English (no delivery). 3. One or more will be for the active contact types with preferred language = English, delivery Type = Print & print type = Regular
+Test Case ID for Row 6212             : 48790
+Requirement ID                        : 38185.BPD.040
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48790
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48790
+Finished at                           : Tue Apr 01 13:28:57 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:28:57 EDT 2025
+Creating test case for Row #          : 6213
+Validation Time(ms)                   : 643
+TC Validation status                  : PASS
+Short Desc                            : Written Language in the JSON request
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 960
+Owner                                 : USHA RAMINENI
+Grouping                              : Batch
+Long Desc                             : Validate that the language sent in the JSON request is Written Language from T_CDE_LANG_WRITTEN. Member should have different Primary language & Written language
+Expected Results                      : The language sent in the JSON request is Written Language from T_CDE_LANG_WRITTEN.
+Test Case ID for Row 6213             : 48791
+Requirement ID                        : 38185.BPD.045
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48791
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48791
+Finished at                           : Tue Apr 01 13:29:02 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:02 EDT 2025
+Creating test case for Row #          : 6214
+Validation Time(ms)                   : 401
+TC Validation status                  : PASS
+Short Desc                            : Verify Recipient Object
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : "Create ""RECIPIENT"" object to identify the [Notice Type] recipient. Include the following data elements in JSON format.  firstName {NOTE: Pass the full contact name in the recipient first name element if the member has active ARD (ERD I, ERD II, and ERD III)contact types (please see notice specific requirement for other contact types)} lastName {NOTE: Since last name is a required field, in case of other contact types (ERDI, II, III), send common value under recipient.lastName (e.g., "Unavailable")} middleName id (NOTE: Send the MMIS id) suffix type (NOTE: This is delivery type. A notice can be delivered via print, email, SMS or not delivered at all(allowable values for CNS ""print"", ""email"", ""sms"", ""noDelivery"") printType emailAddress phoneNumber Address (NOTE : Send member"s or Active contact"s mailing address) line1 line 2 city state zipcode
+Expected Results                      : Recipient Object is created successfully.
+Test Case ID for Row 6214             : 48792
+Requirement ID                        : 38185.BPD.050
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48792
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48792
+Finished at                           : Tue Apr 01 13:29:08 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:08 EDT 2025
+Creating test case for Row #          : 6215
+Validation Time(ms)                   : 460
+TC Validation status                  : PASS
+Short Desc                            : RECIPIENT object- num_cell_phone
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : If members communication preference is ""TEXT\SMS"", send the default value `PRINT" for type  (communication preference "PAPER"). The print type should be sent according to the preference the member has selected.
+Expected Results                      : Recipient Object "Type" JSON should be set to "PRINT" and printType should be set to the member preference.
+Test Case ID for Row 6215             : 48793
+Requirement ID                        : 38185.BPD.055
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48793
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48793
+Finished at                           : Tue Apr 01 13:29:13 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:13 EDT 2025
+Creating test case for Row #          : 6216
+Validation Time(ms)                   : 488
+TC Validation status                  : PASS
+Short Desc                            : RECIPIENT object - EMAIL_ADDR
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : If members communication preference is ""EMAIL"", send the default value `PRINT" for type  (communication preference "PAPER"). The print type should be sent according to the preference the member has selected.
+Expected Results                      : Recipient Object "Type" JSON should be set to "PRINT" and printType should be set to the member preference.
+Test Case ID for Row 6216             : 48794
+Requirement ID                        : 38185.BPD.060
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48794
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48794
+Finished at                           : Tue Apr 01 13:29:18 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:18 EDT 2025
+Creating test case for Row #          : 6217
+Validation Time(ms)                   : 473
+TC Validation status                  : PASS
+Short Desc                            : RECIPIENT object-printType Reg/large/braille
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : The member has selected the communication preference as PAPER/email/sms/text. The  print type should be (Regular, Large Print or Braille) based on the member preference.  Member has  active ARD (ERD I,II or III).
+Expected Results                      : The   default value for printType  should be "Regular" for valid ARD contact types (ARD-ERDI, II, & III)
+Test Case ID for Row 6217             : 48795
+Requirement ID                        : 38185.BPD.065
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48795
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48795
+Finished at                           : Tue Apr 01 13:29:24 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:24 EDT 2025
+Creating test case for Row #          : 6218
+Validation Time(ms)                   : 441
+TC Validation status                  : PASS
+Short Desc                            : RECIPIENT-Send default type PAPER, printType Regular
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : The member does not have a communication preference in the system.  There is no print type available from source systems for a member Member has  active ARD (ERD I,II or III).
+Expected Results                      : Recipient Object "Type" JSON should be set to "PRINT" for both member and ARD contacts. printType is set to "Regular" for both member and contact.
+Test Case ID for Row 6218             : 48796
+Requirement ID                        : 38185.BPD.070
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48796
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48796
+Finished at                           : Tue Apr 01 13:29:29 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:29 EDT 2025
+Creating test case for Row #          : 6219
+Validation Time(ms)                   : 428
+TC Validation status                  : PASS
+Short Desc                            : Recipient object - ARD contact types
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : na
+Expected Results                      : na
+Test Case ID for Row 6219             : 48797
+Requirement ID                        : 38185.BPD.085
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48797
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48797
+Finished at                           : Tue Apr 01 13:29:33 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:33 EDT 2025
+Creating test case for Row #          : 6220
+Validation Time(ms)                   : 489
+TC Validation status                  : PASS
+Short Desc                            : Recipient Object & PAYLOAD Object -Address Line 2 (Member) does not exist
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : The member receiving notice does not have address line 2 information.
+Expected Results                      : Do not send the line 2 tag in the JSON recipient object. Do not send the line 2 tag in the JSON PAYLOAD object.
+Test Case ID for Row 6220             : 48798
+Requirement ID                        : 38185.BPD.086
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48798
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48798
+Finished at                           : Tue Apr 01 13:29:38 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:38 EDT 2025
+Creating test case for Row #          : 6221
+Validation Time(ms)                   : 423
+TC Validation status                  : PASS
+Short Desc                            : Recipient Object & PAYLOAD Object -Address Line 2 (ARDs)
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : The active ARDs receiving notice do not have address line 2 information
+Expected Results                      : Do not send the line 2 tag in the JSON recipient object. Do not send the line 2 tag in the JSON PAYLOAD object.
+Test Case ID for Row 6221             : 48799
+Requirement ID                        : 38185.BPD.087
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48799
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48799
+Finished at                           : Tue Apr 01 13:29:44 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:44 EDT 2025
+Creating test case for Row #          : 6222
+Validation Time(ms)                   : 457
+TC Validation status                  : PASS
+Short Desc                            : Recipient Object  & PAYLOAD Object -Address Line 2 (Worker)
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : The member receiving notice does not have address line 2 information. Member preferred language is "es" (Spanish).
+Expected Results                      : Do not send the line 2 tag in the JSON recipient object for worker copy. Do not send the line 2 tag in the JSON PAYLOAD object for worker copy.
+Test Case ID for Row 6222             : 48800
+Requirement ID                        : 38185.BPD.088
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48800
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48800
+Finished at                           : Tue Apr 01 13:29:49 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:49 EDT 2025
+Creating test case for Row #          : 6223
+Validation Time(ms)                   : 444
+TC Validation status                  : PASS
+Short Desc                            : Recipient Object & PAYLOAD Object -Address Line 2 (Member, ARD, Worker)
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : The member receiving notice have address line 2 information. Member language is Spanish. Member has  active ARD (ERD I,II or III) with address line 2 information.
+Expected Results                      : Send the line 2 tag in the JSON recipient object for Member, ARD, Worker notices. Send the line 2 tag in the JSON PAYLOAD object for Member, ARD, Worker notices.
+Test Case ID for Row 6223             : 48801
+Requirement ID                        : 38185.BPD.086
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48801
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48801
+Finished at                           : Tue Apr 01 13:29:54 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:54 EDT 2025
+Creating test case for Row #          : 6224
+Validation Time(ms)                   : 436
+TC Validation status                  : PASS
+Short Desc                            : Create ELG-6701-M - PAYLOAD Object
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created has ELG-6701-M recipient and included data elements related to members in JSON format.  a) Member Name (listed as FirstName MiddleName LastName Suffix) b) ARD Name (listed as Contact Name)} [Address Line 1] [Address Line 2] [City, State Zip code]  Date: [Month DD, YYYY of Notice creation] Notice ID: [New Sequential Notice ID] / [Notice Type] Member ID: [MMIS ID] SSN: [XXX-XX- last four digits] {NOTE: If the member does not have any SSN in MMIS, it will be sent as (xxx-xx-blank). CNS will display the value as ""Not Available""}  [Medicare Start date] [Future/Retro Indicator]{Value is F or R}"
+Expected Results                      : Verify all data elements related to members are in PAYLOAD file in JSON format and printed out in Notice as expected. Validate payload from t_cns_notice_recip.
+Test Case ID for Row 6224             : 48802
+Requirement ID                        : 38185.BPD.090
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48802
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48802
+Finished at                           : Tue Apr 01 13:29:59 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:29:59 EDT 2025
+Creating test case for Row #          : 6225
+Validation Time(ms)                   : 417
+TC Validation status                  : PASS
+Short Desc                            : ELG-6701-M Payload - Future/retro Indicator
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : The member Medicare-Start-Date (DTE_EFFECTIVE) from the Input File is on or before Notice Date
+Expected Results                      : [Future/Retro Indicator] value should be "R"
+Test Case ID for Row 6225             : 48803
+Requirement ID                        : 38185.BPD.091
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48803
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48803
+Finished at                           : Tue Apr 01 13:30:04 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:04 EDT 2025
+Creating test case for Row #          : 6226
+Validation Time(ms)                   : 446
+TC Validation status                  : PASS
+Short Desc                            : ELG-6701-M Payload - Future/retro Indicator
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : The member Medicare-Start-Date (DTE_EFFECTIVE) from the Input File is after Notice Date
+Expected Results                      : [Future/Retro Indicator] value should be "F"
+Test Case ID for Row 6226             : 48804
+Requirement ID                        : 38185.BPD.091
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48804
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48804
+Finished at                           : Tue Apr 01 13:30:10 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:10 EDT 2025
+Creating test case for Row #          : 6227
+Validation Time(ms)                   : 478
+TC Validation status                  : PASS
+Short Desc                            : ELG-6701-M Payload - No contacts
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : Validate the payload object created does not have any Payload tags for contacts when the member does not have any contacts.
+Expected Results                      : The Payload Json should not have any tags for conntacts.
+Test Case ID for Row 6227             : 48805
+Requirement ID                        : 38185.BPD.100
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48805
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48805
+Finished at                           : Tue Apr 01 13:30:15 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:15 EDT 2025
+Creating test case for Row #          : 6228
+Validation Time(ms)                   : 435
+TC Validation status                  : PASS
+Short Desc                            : Send notices to active ARD contacts
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : Member has 3 active ARD (ERD I, ERD II, and ERD III) contacts.
+Expected Results                      : Send the notice to the 3 active ARD contacts along with the member. In this case 4 notices should be sent.
+Test Case ID for Row 6228             : 48806
+Requirement ID                        : 38185.BPD.105
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48806
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48806
+Finished at                           : Tue Apr 01 13:30:20 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:20 EDT 2025
+Creating test case for Row #          : 6229
+Validation Time(ms)                   : 456
+TC Validation status                  : PASS
+Short Desc                            : Do not send notices to inactive ARD contacts
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : Member has  inactive ARD (ERD I, ERD II, and ERD III) contacts. The eff date is not between t_re_contact.con_eff_date and t_re_contact.con_end_date.
+Expected Results                      : The notices should not be sent to ARD contacts.
+Test Case ID for Row 6229             : 48807
+Requirement ID                        : 38185.BPD.105
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48807
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48807
+Finished at                           : Tue Apr 01 13:30:25 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:25 EDT 2025
+Creating test case for Row #          : 6230
+Validation Time(ms)                   : 475
+TC Validation status                  : PASS
+Short Desc                            : Configure Contacts
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : If new contact types(PSI/DSS/DYS etc) are to be added, then DCR should be run to add new values and description in database as required.
+Expected Results                      : Verify new contact types are added to the database as expected.
+Test Case ID for Row 6230             : 48808
+Requirement ID                        : 38185.BPD.110
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48808
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48808
+Finished at                           : Tue Apr 01 13:30:30 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:30 EDT 2025
+Creating test case for Row #          : 6231
+Validation Time(ms)                   : 438
+TC Validation status                  : PASS
+Short Desc                            : Validate ELG-6701-M- INSERTS object
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : Member has 3 active ARD (ERD I, ERD II, and ERD III) contacts. Validate the inserts object
+Expected Results                      : The inserts group should have Group# = 2 (Babel + Fair Hearing Form)
+Test Case ID for Row 6231             : 48809
+Requirement ID                        : 38185.BPD.115
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48809
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48809
+Finished at                           : Tue Apr 01 13:30:36 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:36 EDT 2025
+Creating test case for Row #          : 6232
+Validation Time(ms)                   : 444
+TC Validation status                  : PASS
+Short Desc                            : Configure Insert Groups
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : If new insert groups are to be added, DCR should be run to add new values and description in database as required. Note: ELG notice sends default insert group-2(Babel + Fair Hearing Form)
+Expected Results                      : Verify new insert groups are added to the database as expected.
+Test Case ID for Row 6232             : 48810
+Requirement ID                        : 38185.BPD.115A
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48810
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48810
+Finished at                           : Tue Apr 01 13:30:41 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:41 EDT 2025
+Creating test case for Row #          : 6233
+Validation Time(ms)                   : 500
+TC Validation status                  : PASS
+Short Desc                            : Configure Delivery Types
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : When edelivery is implemented with Group 4, verify that the delivery type for members with "TEXT/SMS" or "EMAIL" communication preference can be switched from the default "PAPER/PRINT".
+Expected Results                      : Verify delivery type can be changed from "PAPER/PRINT" to "TEXT/SMS" or "EMAIL" when needed once edelivery is implemented.
+Test Case ID for Row 6233             : 48811
+Requirement ID                        : 38185.BPD.120
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48811
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48811
+Finished at                           : Tue Apr 01 13:30:47 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:47 EDT 2025
+Creating test case for Row #          : 6234
+Validation Time(ms)                   : 443
+TC Validation status                  : PASS
+Short Desc                            : ELG-0670-M report generation
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : Generate ELG-6701-M notices. ELG-0670-M report also should be generated.
+Expected Results                      : In the report  the count of Future and Retro notices should be present. The count of English and Spanish notices generated is removed.
+Test Case ID for Row 6234             : 48812
+Requirement ID                        : 38185.BPD.130
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48812
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48812
+Finished at                           : Tue Apr 01 13:30:52 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 13:30:52 EDT 2025
+Creating test case for Row #          : 6235
+Validation Time(ms)                   : 495
+TC Validation status                  : PASS
+Short Desc                            : Elg-6701-M notice suppression
+Env                                   : 8
+Subsystem                             : Buy-In Data Maintenance
+SAK Participant                       : 337
+Owner                                 : RAHUL YALAMANCHILI
+Grouping                              : Batch
+Long Desc                             : Validate if members are in new Notice suppression table, then the members should be excluded from CNS trigger table and JSON payload request should not be sent to CNS for members in new suppression table.
+Expected Results                      : Verify members are in suppression table as expected .
+Test Case ID for Row 6235             : 48813
+Requirement ID                        : 38381.02.210
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48813
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48813
+Finished at                           : Tue Apr 01 13:30:57 EDT 2025
+*****************************************************************
+
+
+Total time for loading(ms)            : 168281
+Total time for loading(sec)           : 168
+Total time for loading(min)           : 2Min 48Sec
+****************************************************
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 01/Apr/2025 01:30:58PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

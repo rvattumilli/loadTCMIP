@@ -1,0 +1,390 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 01/Apr/2025 06:21:43PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 04/01/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+Log Debug Messages                    : false
+*****************************************************************
+*****************************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, nvl(replace(a.dsc, CHR(9),''), ' ') as dsc, nvl(replace(a.dsc_expect, CHR(9),''), ' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 97
+Total No.of Rows fetched              : 15
+*****************************************************************
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Tue Apr 01 18:21:54 EDT 2025
+Creating test case for Row #          : 6236
+Validation Time(ms)                   : 414
+TC Validation status                  : PASS
+Short Desc                            : Error handling MMIS-Myservices
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 945
+Owner                                 : EKTA MATHUR
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Ensure that any technical error with MMIS and myservices connection is handled successfully.
+Expected Results                      : MMIS should return the error code when the connection between MMIS and myservices fails.
+Test Case ID for Row 6236             : 48818
+Requirement ID                        : 38127.01.005
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48818
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48818
+Finished at                           : Tue Apr 01 18:21:59 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:21:59 EDT 2025
+Creating test case for Row #          : 6237
+Validation Time(ms)                   : 421
+TC Validation status                  : PASS
+Short Desc                            : MMIS to receive MyServices API Calls
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 977
+Owner                                 : BINDUSHA REDDY BOTTA
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify successful receipt of Notice Request API call.Ensure MMIS successfully receives the API call from MyServices with the required parameters.
+Expected Results                      : MMIS successfully receives the API call containing MemberID and Notice start date and the parameters match the request.
+Test Case ID for Row 6237             : 48819
+Requirement ID                        : 38127.02.001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48819
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48819
+Finished at                           : Tue Apr 01 18:22:05 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:05 EDT 2025
+Creating test case for Row #          : 6238
+Validation Time(ms)                   : 479
+TC Validation status                  : PASS
+Short Desc                            : Error Handling for missing Notice Start date
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 977
+Owner                                 : BINDUSHA REDDY BOTTA
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify Error Handling for missing Notice Start DateEnsure MMIS handles cases where the API request is missing Notice Start Date.
+Expected Results                      : MMIS rejects the request and provides an appropriate error message indicating missing Notice Start Date.
+Test Case ID for Row 6238             : 48820
+Requirement ID                        : 38127.02.001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48820
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48820
+Finished at                           : Tue Apr 01 18:22:11 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:11 EDT 2025
+Creating test case for Row #          : 6239
+Validation Time(ms)                   : 407
+TC Validation status                  : PASS
+Short Desc                            : Error Handling for invalid Notice Start Date Format.
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 977
+Owner                                 : BINDUSHA REDDY BOTTA
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify validation of Notice Start Date Format Ensure MMIS validates the format of the Notice Start Date in the API request.
+Expected Results                      : MMIS rejects the request and provides an appropriate error message indicating invalid Notice Start Date Format.
+Test Case ID for Row 6239             : 48821
+Requirement ID                        : 38127.02.001
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48821
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48821
+Finished at                           : Tue Apr 01 18:22:16 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:16 EDT 2025
+Creating test case for Row #          : 6240
+Validation Time(ms)                   : 421
+TC Validation status                  : PASS
+Short Desc                            : Member ID received not found in MMIS
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 945
+Owner                                 : EKTA MATHUR
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify member ID received from myservices callback is not found in MMIS DB.
+Expected Results                      : Error code and message "member ID not found" should be send to myservices.
+Test Case ID for Row 6240             : 48822
+Requirement ID                        : 38127.02.005
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48822
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48822
+Finished at                           : Tue Apr 01 18:22:22 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:22 EDT 2025
+Creating test case for Row #          : 6241
+Validation Time(ms)                   : 423
+TC Validation status                  : PASS
+Short Desc                            : Member ID received invalid
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 945
+Owner                                 : EKTA MATHUR
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify member ID received from myservices callback is not 12 digits.
+Expected Results                      : Error code  and message "member ID is not valid" should be send to myservices.
+Test Case ID for Row 6241             : 48823
+Requirement ID                        : 38127.02.005
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48823
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48823
+Finished at                           : Tue Apr 01 18:22:27 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:27 EDT 2025
+Creating test case for Row #          : 6242
+Validation Time(ms)                   : 417
+TC Validation status                  : PASS
+Short Desc                            : Member ID received valid & found in MMIS
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 945
+Owner                                 : EKTA MATHUR
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify a valid member ID received from myservices callback and found in MMIS DB.
+Expected Results                      : MMIS should successfully return the notices to myservices for the valid member ID.
+Test Case ID for Row 6242             : 48824
+Requirement ID                        : 38127.02.005
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48824
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48824
+Finished at                           : Tue Apr 01 18:22:33 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:33 EDT 2025
+Creating test case for Row #          : 6243
+Validation Time(ms)                   : 437
+TC Validation status                  : PASS
+Short Desc                            : MMIS to share CNS Notices from Notice Start Date
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 977
+Owner                                 : BINDUSHA REDDY BOTTA
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : verify MMIS sends CNS Notices from the Notice Start Date.Ensure MMIS sends only CNS Notices from the specified Notice Start Date.Validate MMIS database contains CNS notices with dates before and after the notice start date. Validate API callback request is received with notice start date.
+Expected Results                      : Only CNS notices with dates greater than or equal to the Notice Start Date are sent to MyServices in the API response.
+Test Case ID for Row 6243             : 48825
+Requirement ID                        : 38127.02.010
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48825
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48825
+Finished at                           : Tue Apr 01 18:22:39 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:39 EDT 2025
+Creating test case for Row #          : 6244
+Validation Time(ms)                   : 396
+TC Validation status                  : PASS
+Short Desc                            : Error Handling CNS Notices - Empty/No Notices
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 977
+Owner                                 : BINDUSHA REDDY BOTTA
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify No Notices are sent when none match the Notice Start Date.Ensure MMIS sends an empty response if no CNS Notices are availablefrom the Notice Start Date.
+Expected Results                      : MMIS sends an empty response or a response indicating no CNS Notices are available.
+Test Case ID for Row 6244             : 48826
+Requirement ID                        : 38127.02.010
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48826
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48826
+Finished at                           : Tue Apr 01 18:22:44 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:44 EDT 2025
+Creating test case for Row #          : 6245
+Validation Time(ms)                   : 437
+TC Validation status                  : PASS
+Short Desc                            : Ensure non-CNS Notices to be removed from response.
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 977
+Owner                                 : BINDUSHA REDDY BOTTA
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify MMIS filters non-CNS Notices.Ensure MMIS excludes non-CNS notices from the API response.
+Expected Results                      : Only CNS notices are included in the API response.
+Test Case ID for Row 6245             : 48827
+Requirement ID                        : 38127.02.010
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48827
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48827
+Finished at                           : Tue Apr 01 18:22:50 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:50 EDT 2025
+Creating test case for Row #          : 6246
+Validation Time(ms)                   : 453
+TC Validation status                  : PASS
+Short Desc                            : print status= printed & notice receiver= member
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 945
+Owner                                 : EKTA MATHUR
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify if CNS notice has print status printed and notice receiver member.
+Expected Results                      : MMIS should successfully return the notices to myservices for the member ID.
+Test Case ID for Row 6246             : 48828
+Requirement ID                        : 38127.02.010a
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48828
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48828
+Finished at                           : Tue Apr 01 18:22:55 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:22:55 EDT 2025
+Creating test case for Row #          : 6247
+Validation Time(ms)                   : 374
+TC Validation status                  : PASS
+Short Desc                            : print status= printed & notice receiver= casehead
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 945
+Owner                                 : EKTA MATHUR
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify if CNS notice has print status printed and notice receiver casehead.  Can"t validate not applicable for group 1
+Expected Results                      : MMIS should successfully return the notices to myservices for the member ID.
+Test Case ID for Row 6247             : 48829
+Requirement ID                        : 38127.02.010a
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48829
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48829
+Finished at                           : Tue Apr 01 18:23:01 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:23:01 EDT 2025
+Creating test case for Row #          : 6248
+Validation Time(ms)                   : 484
+TC Validation status                  : PASS
+Short Desc                            : Successful Data elements on the response
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 977
+Owner                                 : BINDUSHA REDDY BOTTA
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify that MMIS successfullly shares the list of Notice IDs along with the aassociated data elements to Myservices via the webservice.
+Expected Results                      : The webservice response contains the list of Notice Ids with associated data elements.Data format and content
+Test Case ID for Row 6248             : 48830
+Requirement ID                        : 38127.02.015
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48830
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48830
+Finished at                           : Tue Apr 01 18:23:07 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:23:07 EDT 2025
+Creating test case for Row #          : 6249
+Validation Time(ms)                   : 481
+TC Validation status                  : PASS
+Short Desc                            : Error handling for Invalid request format of data elements.
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 977
+Owner                                 : BINDUSHA REDDY BOTTA
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : validate Response for Invalid Notice Request. Verify the MMIS handles invalid notice requests .
+Expected Results                      : MMIS returns an error response indicating invalid request format or missing fields. No notice IDs or data elements are shared.
+Test Case ID for Row 6249             : 48831
+Requirement ID                        : 38127.02.015
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48831
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48831
+Finished at                           : Tue Apr 01 18:23:13 EDT 2025
+*****************************************************************
+Started at                            : Tue Apr 01 18:23:13 EDT 2025
+Creating test case for Row #          : 6250
+Validation Time(ms)                   : 838
+TC Validation status                  : PASS
+Short Desc                            : no CNS notices for MH ID
+Env                                   : 8
+Subsystem                             : General System
+SAK Participant                       : 945
+Owner                                 : EKTA MATHUR
+Grouping                              : MEMBER INTERFACES
+Long Desc                             : Verify if myservices callback is received with a valid MH member ID (member/casehead) but member doesn"t have any CNS notices for a notice start date. Can"t validate casehead not applicable for group 1
+Expected Results                      : Error code and message "No notices found" should be send to myservices.
+Test Case ID for Row 6250             : 48832
+Requirement ID                        : 38127.02.020
+Requirement Type                      : Web Service
+SAK Requirement Type                  : 23
+Requirement linked for test case      : 48832
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48832
+Finished at                           : Tue Apr 01 18:23:19 EDT 2025
+*****************************************************************
+
+
+Total time for loading(ms)            : 96530
+Total time for loading(sec)           : 96
+Total time for loading(min)           : 1Min 36Sec
+****************************************************
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 01/Apr/2025 06:23:20PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

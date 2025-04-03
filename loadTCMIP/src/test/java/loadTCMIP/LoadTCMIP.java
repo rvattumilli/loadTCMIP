@@ -66,7 +66,7 @@ public class LoadTCMIP {
 	private final String credQuery = "select a.host_url, a.user_id, a.passkey MIP_KEY, a.password MIP_PWD, b.passkey USER_KEY, b.password USER_PWD from "
 			 						+ "v_user_login a, v_user_login b where a.type = 'MIP' and b.type = 'User' and a.days_to_reset_pwd > 2 and b.days_to_reset_pwd > 2";
 	private final String testCaseSql = "select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, "
-										+ "a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, "
+										+ "a.nam, nvl(replace(a.dsc, CHR(9),''), ' ') as dsc, nvl(replace(a.dsc_expect, CHR(9),''), ' ') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, "
 										+ "nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where "
 										+ "c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and "
 										+ "upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc";

@@ -1,0 +1,126 @@
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP started 31/Mar/2025 12:54:24PM****
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+Last Modified Date                    : 03/28/2025
+Override TC Validation                : false
+Override Req Validation               : true
+Submit Data                           : true
+Log Debug Messages                    : false
+*****************************************************************
+*****************************************************************
+SQL Statement                         : select a.nb, a.nb_bf, b.sak_participant, upper(trim(b.nam_first)||' '||trim(b.nam_last)) owner, a.env, a.subsystem_tc, a.nam, replace(a.dsc, CHR(9),'') as dsc, replace(a.dsc_expect, CHR(9),'') as dsc_expect, a.grpng, nvl(trim(a.wi_test_case), ' ') wi_test_case, tc_row, nvl(trim(d.dsc), ' ') wi_type, nvl(trim(a.id_req), ' ') id_req from rvattumi.load_tc a, co_participant b, co c, co_type d where c.sak_csr(+) = a.wi_test_case and d.sak_csr_type(+) = c.sak_csr_type and testcase_id is null and upper(trim(b.nam_first)||' '||trim(b.nam_last)) = upper(trim(a.owner)) and a.ind_status != 'P' order by tc_row asc
+No.of Cols                            : 14
+Query Execution Time(ms)              : 89
+Total No.of Rows fetched              : 3
+*****************************************************************
+Link Notebook/Business Function       : true
+Link Requirement                      : true
+Link WI/Defect/CO                     : false
+*****************************************************************
+Started at                            : Mon Mar 31 12:54:29 EDT 2025
+Creating test case for Row #          : 6179
+Validation Time(ms)                   : 459
+TC Validation status                  : PASS
+Short Desc                            : DP-Member/Contact Template
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : Member/Contact will have the same notice template and should trigger same.
+Expected Results                      : Member/Contact will have the same notice template and should trigger same as expected.
+Test Case ID for Row 6179             : 48781
+Requirement ID                        : 38357.DP.095
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48781
+Notebook                              : 2026 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48781
+Finished at                           : Mon Mar 31 12:54:33 EDT 2025
+*****************************************************************
+Started at                            : Mon Mar 31 12:54:33 EDT 2025
+Creating test case for Row #          : 6181
+Validation Time(ms)                   : 443
+TC Validation status                  : PASS
+Short Desc                            : DP Disenrollment date
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : select the members with CP Disenrollment date NOT between eff_date and end_date, tag will not sent to the payload.
+Expected Results                      : Tag will not be there in the payload as expected.
+Test Case ID for Row 6181             : 48782
+Requirement ID                        : 38357.DP.101
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48782
+Notebook                              : 2026 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48782
+Finished at                           : Mon Mar 31 12:54:38 EDT 2025
+*****************************************************************
+Started at                            : Mon Mar 31 12:54:38 EDT 2025
+Creating test case for Row #          : 6186
+Validation Time(ms)                   : 430
+TC Validation status                  : PASS
+Short Desc                            : DP - Configure Delivery Types
+Env                                   : 8
+Subsystem                             : Member Management
+SAK Participant                       : 967
+Owner                                 : TARUN ANNE
+Grouping                              : Batch
+Long Desc                             : When edelivery is implemented with Group 4, verify that the delivery type for members with "TEXT/SMS" or "EMAIL" communication preference can be switched from the default "PAPER/PRINT". Note: EC notice sends default paper/print, edelivery will not be implemented until after Group 4 CNS implementation
+Expected Results                      : Verify delivery type can be changed from "PAPER/PRINT" to "TEXT/SMS" or "EMAIL" when needed once edelivery is implemented.
+Test Case ID for Row 6186             : 48783
+Requirement ID                        : 38357.DP.120
+Requirement Type                      : Batch
+SAK Requirement Type                  : 12
+Requirement linked for test case      : 48783
+Notebook                              : 2025 CNS Group 1
+Business Function                     : 2025 CNS Group 1
+Notebook/BF linked for test case      : 48783
+Finished at                           : Mon Mar 31 12:54:42 EDT 2025
+*****************************************************************
+
+
+Total time for loading(ms)            : 19003
+Total time for loading(sec)           : 19
+Total time for loading(min)           : 0Min 19Sec
+****************************************************
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+*****                Logged out                *****
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+
+
+****************************************************
+*****************                  *****************
+***********                              ***********
+******                                        ******
+***Job: LoadTCMIP completed 31/Mar/2025 12:54:43PM**
+******                                        ******
+***********                              ***********
+*****************                  *****************
+****************************************************
+
+===============================================
+LoadTCMIP
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
